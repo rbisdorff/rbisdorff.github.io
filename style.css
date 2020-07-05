@@ -1,0 +1,156 @@
+/* Based on a template by Ben Meadowcroft, see http://www.benmeadowcroft.com/webdev/  for more info */
+body
+{
+	color : black;
+	background-color : rgb(255,255,255);
+	background-image : url(images/background2.png);
+	background-attachment : fixed;
+	background-position : top left;
+	background-repeat : repeat;
+	font-family: Verdana,sans-serif;
+	font-size: 11pt;	
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin:0px;
+	padding:0px;
+}
+
+/* Bisi */
+
+h2	{color:rgb(25,15,116); } /* dark blue*/
+h3	{color:rgb(127,43,92); } /* dark red*/       
+b.blue 	{color:rgb(25,15,116); } /* dark blue*/
+b.red 	{color:rgb(127,43,92); } /* dark red*/
+p.abstract, span.abstract, ul.abstract	{font-size:75%; color:rgb(25,25,112); margin-left:15px; }
+p.resume 	{margin-left:15px; color:rgb(25,25,112);}
+p.abstract:first-letter 	{font-size:125%; color:rgb(139,26,26); }
+em.abstract:first-letter 	{font-size:125%; color:rgb(139,26,26); }
+em.abstract 	{color:rgb(25,15,116); }
+p.resume:first-letter 		{font-size:125%; color:rgb(139,26,26); }
+p.keywords:first-line 		{font-weight:bold; }
+p.keywords:first-letter 	{font-size:125% ; color:rgb(25,25,112);}
+hr.sep50 {width:50%; }
+hr.sep25 {width:25%; }
+p.tty { font-family:courier }
+b.tty { font-family:courier }
+.sc  { font-variant:small-caps }
+
+/* hide abstracts */
+a.hid {color:#000; text-decoration:none; outline-style:none;}
+a.hid em.abstract {display:none;}
+a.hid:hover {text-decoration:none;}
+a.hid:active, a.hid:focus {background:rgb(255,248,220);}
+a.hid:active span.abstract, a.hid:focus span.abstract {display:none;}
+a.hid:active em.abstract, a.hid:focus em.abstract {display:block; color:rgb(25,15,116); width:100%; font-style:normal; cursor:default;}
+
+input.button {
+color : rgb(25,25,112);
+/*background: rgb(204,255,255)*/
+  background: rgb(255,248,220);
+  /*color: #fff; background: #0034D0;*/
+  font-size: .8em;
+  font-weight:bold;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  /*border: solid 1px #ffcf31;*/
+  border: 0px;
+}
+
+/*
+ * This ensures that text in paragraphs doesn't
+ * stretch right across the screen. This only works
+ * in more advanced browsers.
+ */
+
+.contentText p
+{
+	max-width:55em;
+}
+.contentText ul li
+{
+	max-width:55em;
+}
+
+
+
+ul.menu
+{
+	list-style:none;
+	margin:0px;
+}
+
+ul.menu li
+{
+	display:inline;
+}
+
+.title img
+{
+	border : thin solid rgb(0,0,0);
+}
+.menu
+{
+	/*position : fixed ;*/
+	text-align : center;
+	background-attachment : fixed;
+	background-position : top left;
+	/*background-color : rgb(255,255,255);*/
+	background-image : url(images/yellowfilter.gif);
+	border : thin solid rgb(150,0,0);
+	font-weight : bold;
+	color : rgb(150,0,50);
+}
+
+.menu a
+{
+	color : rgb(100,0,50);
+	background-color : inherit;
+}
+
+.menu a:hover
+{
+	color : rgb(255,64,64);
+	background-color : rgb(230,230,250);
+}
+
+
+.menu strong
+{
+	font-size : large;
+}
+
+.other
+{
+	/*position: fixed;*/
+	text-align : center;
+	background-image : url(images/redfilter.gif);
+	border : thin solid rgb(0,0,0);
+	background-color : inherit;
+	color : rgb(0,0,180);
+	font-weight : bold;
+}
+
+.contentText
+{
+	color : rgb(0,0,0);
+	background-color : rgb(255,248,220);
+	/*background-image : url(images/yellowfilter.gif);*/
+	border : thin solid;
+}
+
+.footer
+{
+	position : fixed;
+	z-index: 3;
+	top : 100%;
+	left : 5%;
+	width : 100%;	
+	background-image : url(images/yellowfilter.gif);
+}
+
+.footer a:link
+{
+	color: rgb(0,0,0);
+	background-color:transparent;
+}

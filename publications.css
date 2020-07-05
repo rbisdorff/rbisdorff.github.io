@@ -1,0 +1,58 @@
+/* Based on a template by Ben Meadowcroft, see http://www.benmeadowcroft.com/webdev/  for more info */
+html, body, #content
+{
+	min-height: 100%;
+	width: 100%;
+	height: 100%; /* Hack for IE5+ */
+}
+
+.title
+{
+	position:fixed;
+	top: 0.5em;
+	left:12.65em;
+	height:3em;
+	margin-left : auto;
+	margin-right: auto;
+	padding: 0.5em;
+	z-index : 2;
+	background-color : rgb(204,255,255);
+	border : thin solid rgb(150,0,0);
+}
+
+.sidebar
+{
+	position : fixed;
+	top : -30px;
+	left : 1%;
+	width : 10em;
+	z-index : 1;
+	padding : 0.3em;
+}
+
+.menu
+{
+	padding : 0em;
+	margin-bottom : 0.5em;
+}
+
+.menu a
+{
+	display : block;
+}
+
+.other
+{
+	padding :0.5em;
+	margin-top : 0.5em;
+}
+
+.contentText
+{
+	position : absolute;
+	margin-top : 4.5em;
+	margin-left : 12em;
+	padding : 1em;
+	/*margin-right : 10%;*/
+	width : 59em;
+}

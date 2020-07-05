@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rubisOutrankingDigraph SYSTEM "http://localhost/rubisServer/Schemas/rubisOutrankingDigraph-1.0/rubisOutrankingDigraph.dtd">
+<?xml-stylesheet type="text/xsl" href="rubisOutrankingDigraph.xsl"?>
+<rubisOutrankingDigraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rubisOutrankingDigraph.xsd" category="Outranking" subcategory="Rubis choice">
+<header>
+<comment>header declaration </comment>
+<name>demoGraph.xml</name>
+<author>Raymond Bisdorff</author>
+<reference>Example problem from Bouyssou, Marchant, Pirlot et al., Evaluations and decision models with multiple criteria. Springer 2006, p.358</reference>
+</header><actions>
+<comment>Potential decision actions </comment>
+<action id="a">
+<name>a</name>
+<comment>No comment</comment>
+</action>
+<action id="b">
+<name>b</name>
+<comment>No comment</comment>
+</action>
+<action id="c">
+<name>c</name>
+<comment>No comment</comment>
+</action>
+<action id="d">
+<name>d</name>
+<comment>No comment</comment>
+</action>
+</actions>
+<criteria>
+<comment>List of performance criteria </comment>
+<criterion id="g1" category="performance">
+<name>g1</name>
+<comment>No comment</comment>
+<scale><min>0.00</min><max>8.00</max></scale>
+<thresholds>
+<indifference>(0.00,0.00)</indifference>
+<preference>(1.00,0.00)</preference>
+</thresholds><weight>1.00</weight></criterion>
+<criterion id="g2" category="performance">
+<name>g2</name>
+<comment>No comment</comment>
+<scale><min>0.00</min><max>8.00</max></scale>
+<thresholds>
+<indifference>(0.00,0.00)</indifference>
+<preference>(1.00,0.00)</preference>
+</thresholds><weight>2.00</weight></criterion>
+<criterion id="g3" category="performance">
+<name>g3</name>
+<comment>No comment</comment>
+<scale><min>0.00</min><max>8.00</max></scale>
+<thresholds>
+<indifference>(0.00,0.00)</indifference>
+<preference>(1.00,0.00)</preference>
+</thresholds><weight>2.50</weight></criterion>
+</criteria>
+<evaluations>
+<comment>performance table </comment>
+<evaluation>
+<criterionID>g1</criterionID>
+<performance>
+<actionID>a</actionID>
+<value>8.00</value>
+</performance>
+<performance>
+<actionID>b</actionID>
+<value>6.00</value>
+</performance>
+<performance>
+<actionID>c</actionID>
+<value>4.00</value>
+</performance>
+<performance>
+<actionID>d</actionID>
+<value>2.00</value>
+</performance>
+</evaluation>
+<evaluation>
+<criterionID>g2</criterionID>
+<performance>
+<actionID>a</actionID>
+<value>4.00</value>
+</performance>
+<performance>
+<actionID>b</actionID>
+<value>2.00</value>
+</performance>
+<performance>
+<actionID>c</actionID>
+<value>8.00</value>
+</performance>
+<performance>
+<actionID>d</actionID>
+<value>6.00</value>
+</performance>
+</evaluation>
+<evaluation>
+<criterionID>g3</criterionID>
+<performance>
+<actionID>a</actionID>
+<value>6.00</value>
+</performance>
+<performance>
+<actionID>b</actionID>
+<value>4.00</value>
+</performance>
+<performance>
+<actionID>c</actionID>
+<value>2.00</value>
+</performance>
+<performance>
+<actionID>d</actionID>
+<value>8.00</value>
+</performance>
+</evaluation>
+</evaluations>
+<valuationDomain category="bipolar" subcategory="not normalized">
+<comment>valuation domain declaration </comment><min>-5.50</min>
+<med>0.00</med>
+<max>5.50</max>
+</valuationDomain>
+<relation>
+<comment>valued outranking relation declaration. </comment><arc>
+<initialActionID>a</initialActionID>
+<terminalActionID>a</terminalActionID>
+<value>0.00</value>
+</arc>
+<arc>
+<initialActionID>a</initialActionID>
+<terminalActionID>b</terminalActionID>
+<value>5.50</value>
+</arc>
+<arc>
+<initialActionID>a</initialActionID>
+<terminalActionID>c</terminalActionID>
+<value>1.50</value>
+</arc>
+<arc>
+<initialActionID>a</initialActionID>
+<terminalActionID>d</terminalActionID>
+<value>-3.50</value>
+</arc>
+<arc>
+<initialActionID>b</initialActionID>
+<terminalActionID>a</terminalActionID>
+<value>-5.50</value>
+</arc>
+<arc>
+<initialActionID>b</initialActionID>
+<terminalActionID>b</terminalActionID>
+<value>0.00</value>
+</arc>
+<arc>
+<initialActionID>b</initialActionID>
+<terminalActionID>c</terminalActionID>
+<value>1.50</value>
+</arc>
+<arc>
+<initialActionID>b</initialActionID>
+<terminalActionID>d</terminalActionID>
+<value>-3.50</value>
+</arc>
+<arc>
+<initialActionID>c</initialActionID>
+<terminalActionID>a</terminalActionID>
+<value>-1.50</value>
+</arc>
+<arc>
+<initialActionID>c</initialActionID>
+<terminalActionID>b</terminalActionID>
+<value>-1.50</value>
+</arc>
+<arc>
+<initialActionID>c</initialActionID>
+<terminalActionID>c</terminalActionID>
+<value>0.00</value>
+</arc>
+<arc>
+<initialActionID>c</initialActionID>
+<terminalActionID>d</terminalActionID>
+<value>0.50</value>
+</arc>
+<arc>
+<initialActionID>d</initialActionID>
+<terminalActionID>a</terminalActionID>
+<value>3.50</value>
+</arc>
+<arc>
+<initialActionID>d</initialActionID>
+<terminalActionID>b</terminalActionID>
+<value>3.50</value>
+</arc>
+<arc>
+<initialActionID>d</initialActionID>
+<terminalActionID>c</terminalActionID>
+<value>-0.50</value>
+</arc>
+<arc>
+<initialActionID>d</initialActionID>
+<terminalActionID>d</terminalActionID>
+<value>0.00</value>
+</arc>
+</relation>
+<vetos>
+<comment>Effective and potential weto situations.</comment></vetos>
+<choiceRecommendation category="Rubis">
+<comment>List of good and bad choices following the Rubis methodology.</comment>
+<cocaActions><comment>weak COCA digraph actions' declaration </comment>
+<cocaAction id="_d_a_c_">
+<name>chordless odd circuit</name>
+<comment>Rubis construction</comment>
+</cocaAction>
+<cocaAction id="_d_b_c_">
+<name>chordless odd circuit</name>
+<comment>Rubis construction</comment>
+</cocaAction>
+</cocaActions><goodChoices><choiceSet independence="5.50" outranking="5.50" outranked="1.50" determinateness="100.00"><choiceActions>
+<actionID>_d_a_c_</actionID>
+</choiceActions>
+</choiceSet>
+</goodChoices>
+<badChoices><choiceSet independence="5.50" outranking="3.50" outranked="5.50" determinateness="100.00"><choiceActions>
+<actionID>_d_b_c_</actionID>
+</choiceActions>
+</choiceSet>
+</badChoices>
+</choiceRecommendation></rubisOutrankingDigraph>

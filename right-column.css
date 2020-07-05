@@ -1,0 +1,47 @@
+/* Based on a template by Ben Meadowcroft, see http://www.benmeadowcroft.com/webdev/  for more info */
+.title
+{
+	position:absolute;
+	top:0px;
+	left:0.5em;
+	height:1em;
+	margin-left : auto;
+	margin-right: auto;
+	padding: 5px;
+	z-index : 0;
+}
+
+.sidebar
+{
+	position : fixed;
+	top : -2.4em;
+	right : 1%;
+	width : 10em;
+	z-index : 1;
+	padding : 0em;
+}
+
+.menu
+{
+	padding : 0.5em;
+	margin-bottom : 0.5em;
+}
+
+.menu a
+{
+	display : block;
+}
+
+.other
+{
+	padding :0.5em;
+	margin-top : 0.5em;
+}
+
+.contentText
+{
+	margin-top : 1em;
+	margin-right : 12em;
+	padding : 1em;
+	margin-left : 1em;
+}

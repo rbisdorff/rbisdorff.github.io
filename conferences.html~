@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- Based on a template by Ben Meadowcroft, see https://www.benmeadowcroft.com/webdev/  for more info-->
+<title>Pr. Dr. Raymond BISDORFF</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="printlayout.css" media="print" />
+<link rel="stylesheet" media="screen" type="text/css" href="publications.css" />
+
+</head>
+<body>
+<p><a name="2017t"></a></p>
+<div class="title">
+<h2>Recent presentations at conferences and seminars</h2>
+    Year: <a href="#2017t">2017</a>, <a href="#2016">2016</a>, <a href="#2015">2015</a>, <a href="#2014">2014</a>, <a href="#2013">2013</a>, <a href="#2012">2012</a>, <a href="#2011">2011</a>, <a href="#2010">2010</a>, <a href="#2009">2009</a>.
+    <!-- Year:  <a href="#2010t">2010</a>,<a href="#2009">2009</a>, <a href="#2008t">2008</a>, <a href="#2007">2007</a>, <a href="#2006">2006</a>, <a href="#2004">2004</a>, <a href="#2003">2003</a>, <a href="#2002">2002</a>, <a href="#2000">2000</a>. -->
+</div>
+
+<div class="contentText">
+    <p><a name="2017"></a></p>
+    <h3>2017</h3>
+    <p>R. Bisdorff, <em>Algorithmic Decision Theory for solving complex decision problems</em>. Distinguished <a href="https://wwwen.uni.lu/recherche/fstc/interdisciplinary_lab_for_intelligent_and_adaptive_systems_ilias/" target="_blank">ILIAS</a> <em>Interdisciplinary Lab for Intelligent and Adaptive Systems</em> Lecture IV, FSTC, University of Luxembourg, 3 May, 2017 (handout: <a href="documents/adtIntro-2x2.pdf" target="_blank">PDF file 1.1 MB</a>).</p>
+    <p class="abstract">
+        <em class="abstract">Today's decision makers in fields ranging from engineering to psychology, from medicine to economics and/or homeland security are faced with remarkable new technologies, huge amounts of information to help them in reaching good decisions, and the ability to share information at unprecedented speeds and quantities. These tools and resources should lead to better decisions. Yet, the tools bring with them daunting new problems: the massive amounts of data available are often incomplete, unreliable and/or distributed and there is great uncertainty in them; interoperating/distributed decision makers and decision making devices need to be coordinated; many sources of data need to be fused into a good decision; information sharing under new cooperation/competition arrangements raises security problems. When faced with such issues, there are few highly efficient algorithms available to support decision makers. The objective of Algorithmic Decision Theory (ADT) is to improve the ability of decision makers to perform well when facing these new challenges and problems through the use of methods from theoretical computer science, in particular algorithmic methods. The primary goal of ADT is hence to explore and develop algorithmic approaches for solving decision problems arising in a variety of applications areas. Examples include, but are not limited to:<br/><a name="2016"></a>
+- Computational tractability/intractability of social consensus and multiple criteria compromise functions;<br/>
+- Improvement of decision support and recommender systems;<br/>
+- Development of automatic decision devices including on-line decision procedures;<br/>
+- Robust decision making;<br/>
+- Learning for multi-agent systems and other on-line decision devices.<br/>
+This presentation will focus more specifically on multiple criteria decision aiding methodology, the actual research field of the author.</em>
+    </p> 
+    <br/>  
+    <hr align="left" width="10%" />
+    <p><a name="2016"></a></p>
+    <h3>2016</h3>
+    <p>R. Bisdorff, <em>Computing linear rankings from trillions of pairwise outranking situations</em>. <a href="https://homepages.uni-paderborn.de/kiudee/about/" target="_blank">DA2PL'2016</a> From Multiple Criteria Decision Aid to Preference Learning, Mini-EURO Conference, Paderborn (Germany), 7-8 November, 2016 ((see <a href="https://homepages.uni-paderborn.de/kiudee/attendance/program/" target="_blank">Programme</a>, paper <a href="documents/DA2PL-RB-2016.pdf">PDF file 451.4 kB</a>, handout: <a href="documents/paderborn-2x2.pdf" target="_blank">PDF file 464.9.8 kB</a>). </p>
+    <p class="abstract">
+        <em class="abstract">We illustrate in this presentation a sparse HPC implementation for outranking digraphs of huge orders, up to several millions of decision alternatives. The proposed outranking digraph model is based on a quantiles equivalence class decomposition of the underlying multicriteria performance tableau. When locally ranking each of these ordered components, we may readily obtain an overall linear ranking of big sets of decision alternatives. For the local rankings, both, Copeland's as well as the Net-Flows ranking rules, appear to give  the best compromise between, on the one side, the fitness of the overall ranking with respect to the given global outranking relation and, on the other side, computational tractability for very big outranking digraphs modelling up to several trillions of pairwise outranking situations.</em>
+    </p> 
+    <br/>  
+    <p>R. Bisdorff, <em>A sparse outranking digraph model for HPC-ranking of big performance tableaux</em>. <a href="https://www.euro2016.poznan.pl/" target="_blank">EURO 2016</a> 28<sup>th</sup> European Conference on Operational Research, Poznan (Poland), 3-6 July, 2016 (see handout: <a href="documents/euro2016-2x2.pdf" target="_blank">PDF file 471.8 kB</a>). </p>
+    <p class="abstract">
+        <em class="abstract">In the context of the ongoing GDRI-Algodec "Algorithmic Decision Theory", supported o.a. by the CNRS (France) and the FNR (Luxembourg), we develop multicriteria ranking HPC algorithms for large sets of potential decision alternatives: up to several thousand of alternatives evaluated on multiple incommensurable ordinal performance criteria. By using Python3.5 multiprocessing resources and the <a href="https://leopold-loewenheim.uni.lu/docDigraph3/" target="_blank">Digraph3 multicriteria software library</a>, we could linearly rank without ties on the <a href="https://hpc.uni.lu/" target="_blank">UL HPC</a> gaia-80 machine with 120 single threaded cores and a CPU memory of 2.0 TB, in about two hours (2h17') a huge set of 1'732'051 decision alternatives evaluated on 13 performance criteria by balancing economic, ecological and societal decision objectives. Data input is, on the one side, a 1'732'051 x 13 performance tableau of size 2.6GB, and on the other side, a theoretical outranking space consisting of three trillions (3 x 10<sup>12</sup>) of pairwise outranking situations. A "small" set of 1000 decision alternatives,  on a standard laptop with 8caores, may thus be ranked typically in less than 2 seconds.</em>
+    </p> 
+    <br/>  
+   <p><a name="2015">R. Bisdorff, <em>Ranking big performance tableaux with multiple incommensurable criteria and missing data</em>. <a href="https://www.orbel.be/orbel30" target="_blank">ORBEL30</a> 30<sup>th</sup> Belgian Conference on Operations Research, Louvain-la-Neuve, 28-29 January, 2016 (see <a href="https://www.orbel.be/orbel30/ORBEL30-program.pdf" target="_blank">Programme</a>, extended abstract: <a href="documents/orbel30absBisdorff.pdf">PDF file 254.7 kB</a>, handout: <a href="documents/orbel30-2x2.pdf" target="_blank">PDF file 499.3 kB</a>). </p>
+    <p class="abstract">
+        <em class="abstract">In the context of the ongoing GDRI-Algodec "Algorithmic Decision Theory", supported o.a. by the CNRS (France) and the FNR (Luxembourg), we develop multicriteria ranking HPC algorithms for large sets of potential decision alternatives: up to several thousand of alternatives evaluated on multiple incommensurable ordinal performance criteria. This research is motivated by the development of a visualization tool - a heat map - for performance tables showing the decision alternatives linearly ordered form the best to the worst, and the individual performances colored by quantiles equivalence classes.</em>
+    </p> 
+    <br/>  
+    <hr align="left" width="10%" />
+    <p><a name="2015"></a></p>
+    <h3>2015</h3>
+    <p><a name="2014">R. Bisdorff, <em>On boosting Kohler's ranking-by-choosing rule with a quantiles preordering</em>. <a href="https://www.orbel29.be/" target="_blank">ORBEL29</a> 29<sup>th</sup> Belgian Conference on Operations Research, Antwerp, 5-6 February, 2015 (see <a href="https://www.orbel29.be/what-is-OR" target="_blank">Programme</a>, extended abstract: <a href="documents/orbel29RBabs.pdf">PDF file 129.4 kB</a>, handout: <a href="documents/orbel29-2x2.pdf" target="_blank">PDF file 536.0 kB</a>). </p>
+    <p class="abstract">
+        <em class="abstract">Several ranking methods, like Tideman's rule, have been proposed for ranking decision actions with multiple incommensurable performance criteria. Of these, Kohler's rule is by far the fastest ranking heuristic, yet also the less satisfactory in terms of ordinal correlation with a corresponding pairwise outranking relation. We show that preordering the decision actions to be ranked along quantiles, and then locally applying Kohler's rule on each equivalence class, greatly enhances this correlation without adding any essential algorithmic complexity. The combination of both, hence, becomes efficient for tackling large scale multiple criteria ranking problems. </em>
+    </p> 
+    <br/>  
+    <hr align="left" width="10%" />
+    <p><a name="2014"></a></p>
+    <h3>2014</h3>
+    <p>R. Bisdorff, <em>On confident outrankings with multiple criteria of uncertain significance</em>. <a href="https://www.lgi.ecp.fr/~mousseau/DA2PL-2014/pmwiki.php" target="_blank">DA2PL'2014</a> from Multiple Criteria Decision Aid to Preference Learning, Ecole Centrale Paris, 20-21 November, 2014 (see <a href="https://www.lgi.ecp.fr/~mousseau/DA2PL-2014/pmwiki.php/Main/Program" target="_blank">Programme</a>, downladable presentation: <a href="documents/da2plRB-2x2.pdf">PDF file 479.8 kB</a>). </p>
+    <p class="abstract">
+        <em class="abstract">When modelling preferences following the outranking approach, the sign of the majority margins do sharply distribute validation and invalidation of pairwise outranking situations. How can we be confident in the resulting outranking digraph, when we acknowledge the usual imprecise knowledge of criteria significance weights and a small majority margin? To answer this question, we propose to model the significance weights as random variables following more less widespread distributions around an average weight value that corresponds to the given deterministic weight. As the bipolarly valued random credibility of an outranking statement results from a simple sum of positive or negative independent and similarly distributed random variables, we may apply the CLT for computing likelihoods that a given majority margin is indeed positive, respectively negative. To test the effective convergence of the CLT likelihoods, we apply Monte Carlo simulations of outranking digraph constructions. Our computational results confirm a satisfactory convergence even for a random performance tableau with only seven criteria. </em>
+    </p> 
+    <p>R. Bisdorff, <em>On ranking-by-choosing with bipolar outranking digraphs of large orders</em>. Conference <a href="https://leopold-loewenheim.uni.lu/GraphsDecisions/" target="_blank">Graphs & Decisions</a>, GDRI "<i>Algorithmic Decision Theory</i>", Luxembourg, 27-29 October, 2014 (see <a href="https://leopold-loewenheim.uni.lu/GraphsDecisions/program.html" target="_blank">Programme</a>, downladable presentation: <a href="documents/graphsDecisions-2x2.pdf">PDF file 489.6 kB</a>). </p>
+    <p class="abstract">
+        <em class="abstract">Ranking-by-choosing decision alternatives with possibly a small number of ties, when dealing with pairwise bipolarly-valued outranking situations, is a computational difficult problem that could until now only be genuinely solved for tiny outranking digraph orders; up to 40 alternatives. In this lecture we present a HPC two-stages decomposition of large outranking digraphs, which allows us to solve such ranking-by-choosing problems for larger outranking digraph orders; up to several thousands of decision alternatives. In a first stage, all alternatives are sorted into a prefixed set of multiple criteria quantile classes. Each resulting quantile equivalence class is then, in a second stage, locally ranked-by-choosing on the basis of the restricted outranking digraph. Operational results will be illustrated with Monte Carlo simulations of large scale Cost-Benefit performance tableaux. </em>
+    </p> 
+        <p>R. Bisdorff, <em>On weakly ordering by choosing from valued pairwise outranking situations</em>. <a href="https://www.orbel.be/orbel28/" target="_blank">ORBEL28</a>, 28th Annual Conference of the Belgian Operations Research Society, Mons, January 30-31, 2014 (see <a href="https://www.orbel.be/orbel28/progdetail.php" target="_blank">Programme</a>, downladable presentation: <a href="documents/orbel28-2x2.pdf">PDF file 319.0 kB</a>). </p>
+    <p class="abstract">
+        <em class="abstract"><a name="2013"/>Polarised outrankings with considerable performance differences (weighted majority margins with vetoes and counter-vetoes) appear as weakly complete (and reflexive) relations (Bisdorff 2013). Constructing weak orderings (rankings with potential ties) from such outranking relations consists in computing, hence, a transitive closure of the given outranking relation. Determining optimal transitive closures is a computational difficult problem ( (Hudry 2013). However, global heuristic scoring methods based on average ranks (like Borda scores) or average net flows like in the PROMETHEE approach, may easily deliver such a transitive closure. Now, weak orderings may also naturally result from the iterated application of a certain choice procedure, an approach called "ranking-by-choosing" (Bouyssou 2004). In this contribution we shall present such a new ranking-by-choosing approach based on the Rubis best choice method (Bisdorff et al. 2008). A practical application concerns the weak ordering of 41 German universities following from the Spiegel magazine's on-line 50000 students survey from 2004 (see <a href="https://charles-sanders-peirce.uni.lu/bisdorff/documents/studentenSpiegelxmcda2.xml" target="-blank">survey data</a> and <a href="https://charles-sanders-peirce.uni.lu/bisdorff/documents/studentenSpiegelRanking.pdf" target="_blank">final ranking</a>).</em>
+    </p> 
+    <br/>  
+    <hr align="left" width="10%" />
+    <h3>2013</h3>
+    <p>R. Bisdorff, <em>On measuring and testing the ordinal correlation between
+valued outranking relations</em>. International Year Of Statistics Conference<a href="https://www.iys2013.lu/" target="_blank"> www.iys2013.lu</a>, Luxembourg, November 26<sup>th</sup> - 27<sup>th</sup>, 2013 (See presentation <a href="documents/iStatYear13RB-2x2.pdf">handout (PDF 383.7 kB)</a>).</p>    
+        <p class="abstract">We generalize Kendall's rank correlation measure &tau; to valued binary relations. Motivation for this work comes from the need to measure the
+level of approximation that is required when replacing a given valued outranking relation with a convenient crisp ordering recommendation.</p>
+
+<p>A. Olteanu, P. Meyer and R. Bisdorff, <em>Descriptive profiles for sets of alternatives in MCDA</em>. 3<sup>rd</sup> International Conference on Algorithmic Decision Theory <a href="https://www.adt2013.org/" target="_blank">ADT 20113</a>, Universit&eacute; Libre de Bruxelles, November 13<sup>th</sup> - 15<sup>th</sup>, 2013 (See presentation <a href="documents/ADT2013Slides-nup.pdf">handout (PDF 1.6Mb)</a>).</p>    
+        <p class="abstract">In the context of Multiple Criteria Decision Aid, a decision-maker may be faced at any time with the task of analysing one or several
+sets of alternatives, irrespective of the decision he is about to make. As in this case the alternatives may express contrasting gains and losses on the criteria on which they are evaluated, and while the sets that are presented to the decision-maker may potentially be large, the task of analysing them becomes a difficult one. Therefore the need to reduce these sets to a more concise representation is very important. Classically, profiles that describe sets of alternatives may be found in the context of the sorting problem, however they are either given beforehand by the decision-maker or determined from a set of assignment examples. We would therefore like to extend such profiles, as well as propose new ones, in order to characterise any set of alternatives. For each of them, we present several approaches for extracting them, which we then compare with respect to their performance.</p>
+        
+        <p>A. Olteanu and R. Bisdorff, <em>Mining preferential datasets in MCDA</em>. <a href="https://gfkl2013.lu/" target="_blank">European Conference on Data Analysis 2013</a>, University of Luxembourg, July 10<sup>th</sup> - 12<sup>th</sup>, 2013 (See presentation <a href="documents/AOlteanuECDA.pdf"> handout (PDF 1.3 MB)</a>).</p>    
+        <p class="abstract">We shortly present first the field of multiple criteria decision aid and its preference modelling tradition, before introducing clustering procedures that group decision alternatives, not on the basis of their similarity or dissimilarity, but, instead, on the basis of their being indifferent or not. In order to illustrate the approach, we present a real large scale case study that concerns preferential clustering of 22000 toxic chemicals release practices in the US.</p>
+
+    <p>R. Bisdorff, <em>The Electre like outranking approach to MCDA</em>. Invited lectures, <a href="https://www2.hsu-hh.de/logistik/summer-school-2013/" target="_blank">11<sup>th</sup> MCDA|M Summer School</a>, Helmut-Schmidt-Universit&auml;t, Hamburg, July 22<sup>nd</sup> - August 2<sup>nd</sup>, 2013. See lecture I <a href="documents/outranking-I-2x2.pdf">handout (PDF 435.0Kb)</a> and lecture II <a href="documents/outranking-II-2x2.pdf">handout (PDF 342.1 kB)</a>. Further course material on algorithmic decision theory a.o. is <a href="https://leopold-loewenheim.uni.lu/MCDAMHamburg2013" target="_blank">available here</a>. </p>    
+        <p class="abstract"><a name="2012">The lectures introduces to the outranking approach when tackling multiple criteria decision problems following the traditional Electre methods. In lecture I, a first section introduces the concepts of outranking situation and preference discrimination thresholds. And, the usefulness of taking into account large performance differences is discussed. The second section is concerned with the theoretical formulation of the outranking approach. Overall preference concorcance and vetoes are introduced in order to eventually define bipolarly-valued outranking relations. A third section is devoted to solving the decision aid problem. We give algorithms for computing best choice recommendations, ranking recommendations and supervised sorting recommendations. Lecture II discusses the measurement of the robustness of the Condorcet graph and discusses criteria significance elicitation issues which result from inverse decision aid analysis based on this robustness concept.</p>
+    <br/>
+    <hr align="left" width="10%" />
+    <h3>2012</h3>
+    <p>R. Bisdorff, <em>Algorithmic Decision Theory</em>. Invited speaker, <a href="https://www.orsi.in/convention/" target="_blank">ICOCBA2012</a> International Conference on "<em>Optimization, Computing and Busisness Analytics</em>", 45<sup>th</sup> Annual Convention of the Operational Research Society of India, Kolkata, December 20-22, 2012 (See <a href="https://www.orsi.in/convention/" target="_blank">Conference web site</a> and <a href="documents/icocba2012-2x2.pdf">presentation (PDF 1.3 MB)</a>).</p>    
+        <p class="abstract"> Today's decision makers in fields ranging from engineering to psychology to medicine to economics to homeland security are faced with remarkable new technologies, huge amounts of information to help them in reaching good decisions, and the ability to share information at unprecedented speeds and quantities. These tools and resources should lead to better decisions. Yet, the tools bring with them daunting new problems: the massive amounts of data available are often incomplete or unreliable or distributed and there is great uncertainty in them; interoperating/distributed decision makers and decision making devices need to be coordinated; many sources of data need to be fused into a good decision; information sharing under new cooperation/competition arrangements raises security problems. When faced with such issues, there are few highly efficient algorithms available to support decisions. The objective of Algorithmic Decision Theory (ADT) is to improve the ability of decision makers to perform in the face of these new challenges and problems through the use of methods of theoretical computer science, in particular algorithmic methods. The primary goal of ADT is to explore and develop algorithmic approaches to decision problems arising in a variety of applications areas. Examples include, but are not limited to: - Computational tractability/intractability of consensus functions; - Improvement of decision support and recommender systems; - Development of automatic decision devices including on-line decision procedures; - Robust Decision Making;- Learning for Multi-Agent Systems and other on-line decision devices.</p>
+
+    <p>R. Bisdorff, <em>On measuring and testing the ordinal correlation between bipolar outranking relations</em>. Algodec Workshop <a href="https://www.lgi.ecp.fr/DA2PL" target="_blank">DA2PL'2012</a> "From Multiple Criteria Decision Aid to Preference Learning", University of Mons, November 15-16, 2012 (See <a href="https://www.lgi.ecp.fr/~mousseau/DA2PL/pmwiki.php/Main/Program" target="_blank">Program</a>, downloadable presentation<a href="documents/da2pl-12-2x2.pdf"> PDF file 408.6 kB</a>).</p>    
+        <p class="abstract"> We generalize Kendall's rank correlation measure &tau; to bipolarly valued relations. Motivation for this work comes from the need to measure the level of ordinal approximation that is required when replacing a given bipolar outranking with a convenient weak ordering recommendation.</p>
+ 
+    <p><a name="2011">R. Bisdorff, <em>On polarizing outranking relations with large performance differences</em>. <a href="https://www.orbel.be/orbel26/" target="_blank">ORBEL26</a>, 26th Annual Conference of the Belgian Operations Research Society, Bruxelles, February 2-3, 2012 (see <a href="https://www.orbel.be/orbel26/?page_id=32" target="_blank">Programme</a> and downladable presentation: <a href="documents/orbel26-2x2.pdf">PDF file 119.6 kB).</a> </p>
+    <p class="abstract">
+        <em class="abstract">We introduce a bipolarly extended veto principle – a positive, as well as negative, large performance differences polarization – which allows us to extend the definition of the classical outranking relation in such a way that the identity between its asymmetric part and its codual relation is preserved.</em>
+    </p>   
+    <br/>
+    <hr align="left" width="10%" />
+    <h3>2011</h3>
+    <p>R. Bisdorff, P. Meyer and A. Olteanu <em>A Clustering Approach using Weighted
+Similarity Majority Margins</em>. <a href="https://allserv.kahosl.be/bnaic2011/" target="_blank">BNAIC 2011</a>, The 23rd Benelux Conference on Artificial Intelligence Gent November 3-4 2011 (see <a href="https://allserv.kahosl.be/bnaic2011/programme">Programme</a> and downladable presentation: <a href="documents/BNAIC2011.pdf">PDF file 218.6 kB).</a> </p>
+    <p class="abstract">
+        <em class="abstract">We propose a meta-heuristic algorithm for clustering objects that are described on multiple incommensurable attributes defined on different scale types. We make use of a bipolar-valued dual similarity-dissimilarity relation and perform the clustering process by first finding a set of cluster cores and then building a final partition by adding the objects left out to a core in a way which best fits the initial bipolar-valued similarity relation.</em>
+    </p>   
+    
+    <p>R. Bisdorff, <em>Aide &agrave; la D&eacute;cision Concentr&eacute;e sur l'Expertise Humaine</em>. <a href="https://www.infres.enst.fr/~hudry/JPB/" target="_blank">Journ&eacute;e en hommage &agrave; Jean-Pierre Barth&eacute;lemy</a>, TELECOM ParisTech, Soci&eacute;t&eacute; Fran&ccedil;aise de Classification, 21 juin 2011 (see <a href="https://www.infres.enst.fr/~hudry/JPB/Programme_journee_JPB.pdf">Programme</a> and downladable presentation: <a href="documents/HomBarthRB.pdf">PDF file 495.5 kB).</a> </p>
+    <p class="abstract">
+        <em class="abstract">Au printemps 1993, lors d'une r&eacute;union du groupe EURO-MCDA &agrave; Chania (Cr&egrave;te), Jean-Pierre Barth&eacute;lemy m'a convaincu de l'int&eacute;r&ecirc;t qu'il peut y avoir en aide &agrave; la d&eacute;cision de s'int&eacute;resser tr&egrave;s particuli&egrave;rement &agrave; l'expertise d&eacute;cisionnelle humaine. Deux projets industriels superbes allaient s'en suivre. Le premier, appel&eacute; &laquo; Syst&egrave;mes cognitifs en industrie &raquo; (1993-1995), donna lieu &agrave; la conception d'un laboratoire cognitif d'aide, d'un c&ocirc;t&eacute;, &agrave; la formulation et d&eacute;limitation (&laquo; l'art de la d&eacute;coupe &raquo;) et, de l'autre c&ocirc;t&eacute;, &agrave; l'extraction des strat&eacute;gies cognitives de r&eacute;solution mises en oeuvre par un op&eacute;rateur expert dans un probl&egrave;me hebdomadaire d'ordonnancement d'une installation complexe de patentage-laitonnage de fils d'acier. Fort de ces premiers r&eacute;sultats encourageants, le second projet, le fameux projet Brite-Euram COMAPS (1997-2000), donna lieu &agrave; la conception d'un syst&egrave;me g&eacute;n&eacute;ral d'archivage, de v&eacute;rification (&laquo; check as you decide &raquo;), et de maintenance en temps r&eacute;el d'une expertise d&eacute;cisionnelle quotidienne en industrie manufacturi&egarve;re. Tr&egrave;s en avance sur son temps, le projet COMAPS marqua en fait la naissance d'un courant sp&eacute;cifique de l'aide &agrave; la d&eacute;cision.</em>
+    </p>   
+    
+    <p>R. Bisdorff, <em>Starting a new COST Action called: <b class="red">The Internet of Decisions</b></em>. Last workshop of the <a href="https://ohttps://cost-ic0602.org">COST Action IC0602</a> &ldquo;Algorithmic Decision Theory&rdquo;, Manchester Business School, April 14-15, 2011 (see <a href="https://www.lamsade.dauphine.fr/~projet_cost/docs/programme01.doc">Programme</a> and downladable presentation: <a href="documents/IoDpreProposal23Ma11.pdf">PDF file 90.1 kB).</a> </p>
+    <p class="abstract">
+        <em class="abstract">There is a need to change from systems thinking to infrastructural thinking about decision support systems (DSSs). Decision makers (citizens, policy makers, business managers) do not benefit nor add value to the data and data infrastructures on Inter/intranet because of lack of DSS Infrastructure (DSSI). Reasons are heterogeneity and non-interoperability, lack of standards and easily reconfigurable and adaptable DSSs as well as scattered scientific and industrial communities. Main objectives of the new COST Action are: <br />
+- to support development of new distributed inter-operable DSSI (e.g. standards, policies, ontologies, opensource software, discovery and work flow tools), and <br />
+- to develop decision fusion and aiding methodologies especially for spatial data handling, and easily scalable and interoperable DSSs,<br /> 
+- and to link dispersed research and practice communities.<br />
+Benefits are an integrated European development of DSSI, and fair conditions for industry to add value to data for decision makers.</em>
+    </p>   
+    
+    <p><a name="2010" />R. Bisdorff, <em><b class="red">K-Sorting</b> with multiple ordinal criteria</em>. <a href="https://orbel25.ugent.be/">25<sup>th</sup> ORBEL Conference</a>, University of Ghent, February 10-11, 2011 (see <a href="https://orbel25.ugent.be/drupal6/?q=/system/files/detailedprogramme.pdf">Programme</a> and downladable presentation: <a href="documents/orbel25-2x2.pdf">PDF file 2.1 MB).</a> </p>
+    <p class="abstract">
+    <em class="abstract">We present a new k-sorting algorithm based on the bipolar extension of the classic <span style="font-variant:small-caps">Electre Tri</span> approach. By the way we present the latest software tool from the <span style="font-variant:small-caps">Decision Deck</span> project.</em>
+    </p>
+    <br/>
+    <hr align="left" width="10%" />
+<h3>2010</h3>
+    <p>R. Bisdorff and Michel Zam, <em>Agile MCDA Modelling: D<sup>4</sup> meets XMCDA</em>. <a href="https://www.lgi.ecp.fr/~mousseau/D2Workshop/pmwiki-2.2.7/pmwiki.php/Main/HomePage">7<sup>th</sup><span style="font-variant:small-caps">Decision Deck</span> Workshop</a>, Universit&eacute; Paris-Dauphine, October 6, 2010 (see <a href="https://www.lgi.ecp.fr/~mousseau/D2Workshop/pmwiki-2.2.7/pmwiki.php/Main/Program">Programme</a> and downladable presentation: <a href="documents/Presentation-6Oct10c-2x2.pdf">PDF file 2.1 MB).</a> </p>
+    <p class="abstract">
+       <em class="abstract">We show needs and opportunities for using the XMCDA standard within D4. What is the right granularity of practical XMCDA formulated problems? Does XMCDA need UML profiling and stereotyping mechanisms?</em>
+    </p>
+
+    <p>R. Bisdorff, <em>The <span class="sc">Decision Deck Project</span></em>. <a href="https://www.gi.ecp.fr/mcda-ss">ECP MCD{A|M} Summer School 2010</a>, 25<sup>th</sup>Ecole Centrale Paris, June 27- July 9, 2010 (see <a href="https://www.lgi.ecp.fr/~mousseau/mcda-ss/pmwiki-2.1.27/pmwiki.php/Main/Program">Programme</a> and downladable presentation: <a href="documents/decisionDeck-2x2.pdf">PDF file 1.5 MB).</a> </p>
+    <p class="abstract">
+<em class="abstract">In this presentation we present the <span class="sc">Decision Deck Project</span>. After a historical review of the ongoing 6 initiaves (de client, d3, MCDA web services, XMCDA, diviz and d4), main focus is given to the XMCDA standard encoding of MCD{A|M} data, the MCDA web services, and the diviz server.</em>
+    </p>
+    
+    
+    <p>R. Bisdorff, <em>On a bipolar foundation of the outranking concept</em>. <a href="https://www.inescc.pt/urpdm2010/">URPDM-2010</a>, 25<sup>th</sup> Mini EURO Conference <em>Uncertainty and Robustness in Planning and Decision Making</em>. University of Coimbra (Portugal), April 14-16, 2010 (see <a href="https://www.inescc.pt/urpdm2010/Program.pdf">Programme</a> and downladable presentation: <a href="documents/coimbra2010-2x2.pdf">PDF file 100.8 kB).</a> </p>
+    <p class="abstract">
+<em class="abstract">In this paper we introduce a bipolarly extended veto principle which allows us to extend the definition of the classic outranking relation in such a way that the identity between the asymmetric part and bipolar codual of the latter outranking relation is given.</em>
+    </p>
+    
+    <p>R. Bisdorff, G. Godinet and M. Zam, <em>The D<sup>4</sup> Platform</em>. <a href="https://www.inescc.pt/ddws6/">6<sup>th</sup> Descision Deck Workshop</a>, University of Coimbra (Portugal), April 13-14, 2010 (see <a href="https://www.inescc.pt/ddws6/program.html">Programme</a> and downladable presentation: <a href="documents/D4Coimbra20100411a-2x2.pdf">PDF file 1.4 MM</a>). </p>
+    <p class="abstract">
+<em class="abstract">In this presentation we show the actuial state of the development of D<sup>4</sup>, the Distributed Designer for Decision Deck Applications.</em>
+    </p>
+    
+    <p>R. Bisdorff, <em>Enumerating chordless circuits in directed graphs</em>. <a href="https://www.orbel24.ulg.ac.be/">ORBEL24-2010</a>, 24<sup>th</sup> Annual Conference of the Belgian Operational Research Society (<a href="https://www.orbel.be/">ORBEL aka Sogesci-B.V.W.B.</a>). Li&egrave;ge (BE), January 28-29, 2010 (see <a href="https://www.orbel24.ulg.ac.be/progdetail.php">Programme extract</a> and downladable presentation: <a href="documents/orbel24-2x2.pdf">PDF file 208.8 kB</a> ). </p>
+    <p class="abstract">
+<em class="abstract">We introduce and discuss an algorithm using <i>O</i>(<i>p</i>) time and <i>O</i>(<i>n</i>(<i>n</i>+<i>m</i>)) space for enumerating the <i>m</i> >= 0 chordless circuits in a digraph of order <i>n</i> and containing <i>p</i> pre-chordless-circuits. Running it on random digraphs yields some statistical insight into its practical performance.</em></a> </p>
+    
+    <p><a name="2009" />R. Bisdorff, <em>ROAD development perspectives</em>. UGR GreatRoad, 3<sup>rd</sup> meeting of the network on Operational Research and Decision Aid of the <a href="https://www.uni-gr.eu/">Unversity of the Great Region</a>. Luxembourg (LU), January 21, 2010 (downladable presentation: <a href="documents/UGRGreatRoad21Jan10.pdf">PDF file 86.6 kB</a> ). </p>
+    
+    <br/>
+    <hr align="left" width="10%" />
+<h3>2009</h3>
+<p>R. Bisdorff, P. Meyer and Th. Veneziano, <em>Inverse analysis from a <span style="font-variant: small-caps;">Condorcet</span> robustness denotation of valued outranking relations</em>. <a href="https://events.math.unipd.it/adt2009/">ADT 2009</a>, 1<sup>st</sup> Conference on Algorithmic Decision Theory. Venice (IT), October 21-23, 2009 (see <a href="https://events.math.unipd.it/adt2009/?q=node/13">Programme extract</a> and downladable presentation: <a href="documents/PresentationADT2009_2x2.pdf">PDF file 140.0 kB</a> ). </p>
+
+<p class="abstract">
+<em class="abstract">In this presentation we develop an indirect approach for assessing criteria significance weights from the robustness of the significance that a decision maker acknowledges for his pairwise outranking statements in a Multiple Criteria Decision Aiding process. The main result consists in showing that with the help of a mixed integer linear programming model this kind of a priori knowledge is sufficient for estimating adequate numerical significance weights.</em></a></p>
+
+<p>R. Bisdorff and M. Zam, <em>D4: rationale, concept and implementation of a distributed MCDA application designer</em>. Presentation at the <a href="https://www.euro-2009.de/">5th Decision Deck Workshop</a> Brest (FR), September 17-18, 2009 (see <a href="https://conferences.telecom-bretagne.eu/ddws5/program/">Programme extract</a> and downloadable presentation: <a href="documents/D4BrestPreview.pdf">PDF file 331.1 kB</a>). </p>
+
+<p class="abstract"><em class="abstract">
+Content:
+    <ol>
+<li>Rationale</li>
+<li>Decision Deck software short story</li>
+<li>High hopes and limitations</li>
+<li>D4 architecture / bricks</li>
+<li>D2/D3/D4/Dz interchange overview</li>
+</ol></em>
+</a></p>
+
+<p>R. Bisdorff and P. Meyer, <em>The Decision Deck Project</em>. Invited session at the <a href="https://www.euro-2009.de/">23rd European Conference on Operational Research</a> Bonn (DE), July  5-8, 2009 (see <a href="images/D2EURO09.jpeg">Program extract</a>). </p>
+
+<p class="abstract"><em class="abstract"><ol>
+<li>News and perspectives from the Decision-Deck Project by Vincent Mousseau, Marc Pirlot and Raymond Bisdorff</li>
+<li>XMCDA: a standard XML encoding of MCDA Data by Raymond Bisdorff, Patrick Meyer and Thomas Veneziano</li>
+<li>DIVIZ: an MCDA components workflow execution engine by Thomas Veneziano, Patrick Meyer and Sebastien Bigaret</li>
+</ol>
+</em></a></p>
+
+<p>R. Bisdorff, P. Meyer and Th. Veneziano, <em>XMCDA: a standard XML encoding of MCDA data</em>. Invited presentation at the <a href="https://www.euro-2009.de/">23rd European Conference on Operational Research</a> Bonn (DE), July  5-8, 2009 (downloadable presentation: <a href="documents/decisionDeckHandouts2x2.pdf">PDF file 331.1 kB</a>)</p>
+
+<p class="abstract"><em class="abstract">XMCDA is a structured XML proposal for encoding objects and data from the field of Multiple Criteria Decision Analysis (MCDA). Its main objectives are to allow different MCDA algorithms to interact and to be easily callable from within a common software platform like Decision Deck diviz. We present this XML standard and detail the underlying data types via illustrative coding examples.</em></a></p>
+
+<p>R. Bisdorff, <em>Random outranking digraphs</em>. <a href="https://meetings.informs.org/Toronto09/">Joint International Meeting</a> of the Canadian Operational Research Socity (CORS) and the Institute for Operations Research &amp; Management Sciences (INFORMS), Toronto (CA) June 14-17 2009 (downloadable presentation: <a href="https://charles-sanders-peirce.uni.lu/bisdorff/documents/Toronto09-2x2.pdf">PDF file 342.4Kb</a>). </p>
+
+<p class="abstract"><em class="abstract">In order to advance the empirical knowledge concerning outranking digraph instances, we presented a model of outranking digraphs generated from random performance tableaux. Comparison with standard random digraphs illustrates the specific characteristics of genuine outranking digraphs. Our results are meaningful for discussing algorithmic complexity issues when exploiting outranking relations for selecting, ranking and sorting decision problems.</em></a></p>
+
+
+<p>R. Bisdorff, <em>Generating random performance tableaux</em>. <a href="https://leopold-loewenheim.uni.lu/d2cms/tiki-index.php?page=4th+DECISION-DECK+Workshop">4th DECISION-DECK Workshop</a>, Mons (BE), March 30-31 2009 (downloadable presentation: <a href="https://charles-sanders-peirce.uni.lu/bisdorff/documents/Mons09-2x2.pdf">PDF file 250.7Kb</a>). </p>
+
+<p class="abstract"><em class="abstract">In this presentation we wanted to illustrate the use of the Decision Deck Universal MCDA Modelling Language XMCDA and the D3 server at the University of Luxembourg for generating random multiple criteria performance tableaux. Such random generators are useful on the one hand for the necessary testing of implemented MCDA methods, especially the Decision Deck webservices, and on the other hand, in the study of the general statistical properties of random outranking digraphs.</em></a></p>
+
+
+<p>R. Bisdorff, <em>Random outranking digraphs</em>. <a href="https://www.mech.kuleuven.be/orbel09/">ORBEL'09</a> - the 23rd Belgian Conference on Operations Research, Leuven (BE) February 5-7 2009 (downloadable presentation: <a href="https://charles-sanders-peirce.uni.lu/bisdorff/documents/ORBEL09-2x2.pdf">PDF file 375.2Kb</a>). </p>
+
+<p class="abstract"><em class="abstract">In order to advance the empirical knowledge concerning outranking digraph instances, we presented a model of outranking digraphs generated from random cost benefit performance tableaux.</em></a></p>
+
+<!-- <hr class="sep50"/> -->
+    
+    <hr />
+    <p><a rel="license" href="https://creativecommons.org/licenses/by/3.0/lu/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/lu/80x15.png"/></a><br/><span xmlns:dc="https://purl.org/dc/elements/1.1/" href="https://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">This Web Site, designed </span> by <a xmlns:cc="https://creativecommons.org/ns#" href="https://leopold-loewenheim.uni.lu/bisdorff/" property="cc:attributionName" rel="cc:attributionURL">Raymond Bisdorff</a>, is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/3.0/lu/">Creative Commons Attribution 3.0 Luxembourg License</a>. <i>Best seen with <a href="https://support.mozilla.org/en-US/kb/get-started-firefox-overview-main-features">Firefox</a></i></p>
+    
+</div>
+
+
+
+<div class="sidebar">
+	        <p>&nbsp;</p>
+		<ul class="menu">
+		<li><a href="https://www.uni.lu/"><img src="images/logonom_100x90.jpg"  alt="University of Luxembourg" border="0" /></a></li>
+		<li><strong>R. Bisdorff<br/>Site Index</strong></li>
+		<li><a href="main.html">Home</a></li>
+		<li><a href="cv.html">Short CV</a></li>
+		<li><a href="publications.html">Publications</a></li>
+		<li><a href="researchNotes.html">Research Notes</a></li>
+		<li><a href="conferences.html">Conferences</a></li>
+		<li><a href="research.html">Research</a></li>
+		<li>- - - - -<br/></li>
+		<li><b>Digraph3</b></li>
+        <li><a href="https://leopold-loewenheim.uni.lu/Digraph3/docSphinx/html/index.html" target="_blank">Documentation</a></li>
+		<li><a href="https://leopold-loewenheim.uni.lu/Digraph3/docSphinx/html/tutorial.html" target="_blank">Tutorials</a></li>
+		<li><a href="https://leopold-loewenheim.uni.lu/Digraph3/docSphinx/html/techDoc.html" target="_blank">Reference</a></li>
+		<li><a href="https://leopold-loewenheim.uni.lu/GraphDataSets" target="_blank">Archives</a></li>
+<!--		<li><a href="https://ernst-schroeder.uni.lu/Digraph/docSphinx/html/index.html" target="_blank">Py2 doc</a></li>-->
+		<li>- - - - -</li>
+<!--		<li>- - - - -</li>-->
+<!--		<li><a href="https://leopold-loewenheim.uni.lu/Digraph3/">Digraph ressources</a></li>-->
+<!--		<li><a href="https://leopold-loewenheim.uni.lu/sma/">SMA Archives</a></li>-->
+<!--		<li><a href="https://leopold-loewenheim.uni.lu/bisdorffOld/RubyDataSets/">Rubis Archives</a></li>-->
+<!--		<li>- - - - -</li>-->
+		<!-- <li><a href="jobPositionF2-040004.html"><b><blink>Open Position</blink></b></a></li> -->
+		<li>&nbsp;</li>
+		</ul>
+		<div class="other">
+		<p>Past<br/> Events:<br/><a href="https://leopold-loewenheim.uni.lu/adt2017/">ADT 2017</a><br/><a href="https://leopold-loewenheim.uni.lu/GraphsDecisions/">Graphs-Decisions</a></p>
+<!--		<p>The <a href="https://www.decision-deck.org">Decision Deck</a> project on the <a href="https://charles-sanders-peirce.uni.lu/d2cms">D<sup>2</sup> wiki site</a> </p>-->
+		<p>RIA Server:<br/> 
+ 		                 <a href="https://leopold-loewenheim.uni.lu" target="_blank">Leopold-Loewenheim</a><br/>
+<!--		                 <a href="https://ernst-schroeder.uni.lu" target="_blank">Ernst-Schroeder</a><br/> -->
+		</p>
+		</div>
+</div>
+
+</body>
+</html>
