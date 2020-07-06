@@ -16,12 +16,10 @@
 	<div class="contentText">
 	<h1>Latest Research Activities</h1>
 	<!--<img src="images/underConstruction.gif" alt="Under construction" />-->
-	<!--  <p><a href="documents/CSUTalkHandouts.pdf">Survey presented to the Colorada State University visitors, Thursday, May 22 2008</a></p> 
-	-->
 	<br/>
 		<h2>Contributions to Algorithmic Decision Theory</h2>
 		<br/>
-	<h3>The <a href="https://leopold-loewenheim.uni.lu/docDigraph3/" target="_blank"><b>Digraph3</b></a> collection of Python3 modules</h3> 
+	<h3>The <a href="https://digraph3.readthedocs.io/en/latest/index.html" target="_blank"><b>Digraph3</b></a> collection of Python3 modules</h3> 
 	<p>All our algorithmic research is actually implemented in Python3.6+ and published with an extensive technical documentation and tutorials covering various topics like: 
 	<ul>
 	<li><a href="https://digraph3.readthedocs.io/en/latest/tutorial.html#computing-the-winner-of-an-election" target="_blank">Computing the winner of an election</a>,</li>
@@ -40,13 +38,13 @@
 	
 	<h3>UL HPC big data ranking records</h3>
 	<table>
-<tr><td><p>In the context of the <a href="https://www.algodec.org/" target="_blank">GDRI-Algodec</a> "Algorithmic Decision Theory", supported by the CNRS and the FNR, we developped multicriteria ranking algorithms for large sets of potential decision alternatives: up to several millions of alternatives evaluated on multiple incommensurable ordinal performance criteria. This research is motivated by the development of a visualization tool - a <b>heat map</b> - for performance tables showing the decision alternatives linearly ordered form the best to the worst, and the individual performances colored by quantiles equivalence classes (see picture below).</p></td></tr>
-<tr><td align="center"><img src="images/RB_Figure_1.png" height="250" alt="heat map example" /><br><i>Example heat map from a CloudCom 2015 conference paper by <a href="https://leopold-loewenheim.uni.lu/bisdorff/publications.html" target="_blank">Shyam Wagele et al.</a></i></td></tr>
+<tr><td><p>In the context of the <i>GDRI-Algodec</i> "Algorithmic Decision Theory", supported by the CNRS and the FNR, we developped multicriteria ranking algorithms for large sets of potential decision alternatives: up to several millions of alternatives evaluated on multiple incommensurable ordinal performance criteria. This research is motivated by the development of a visualization tool - a <b>heat map</b> - for performance tables showing the decision alternatives linearly ordered form the best to the worst, and the individual performances colored by quantiles equivalence classes (see picture below).</p></td></tr>
+<tr><td align="center"><img src="images/RB_Figure_1.png" height="250" alt="heat map example" /><br><i>Example heat map from a CloudCom 2015 conference paper by <a href="http://hdl.handle.net/10993/24793" target="_blank">Shyam Wagele et al.</a></i></td></tr>
 <tr><td><p>
 By using cythonized Python3 multiprocessing resources and the <a href="https://digraph3.readthedocs.io/en/latest/index.html" target="_blank">Digraph3 multicriteria software library</a>, we may <b>linearly rank without ties in less than 3 minutes</b> on the <a href="https://hpc.uni.lu/" target="_blank">UL HPC</a> Iris skylake machines with 28 single threaded cores with a CPU memory of about 30GB, <b>a million of decision alternatives</b> evaluated on 21 incommensurable performance criteria by balancing an economic, an ecological and a societal decision objective. The theoretical outranking space consists of <b>1 trillion (10<sup>12</sup>)</b> of pairwise comparisons.
 <!--Data input is, on the one side, a 2500000x21 performance tableau of size 5GB, and on the other side, a --> A "<em>small</em>" set of <b>1000 decision alternatives</b>, in a similar setting, may thus be ranked typically in <b>less than a tenth of a second</b>.</p>
 </td></tr>
-<tr><td><p>R. Bisdorff (2016). <i>Computing linear rankings from trillions of pairwise outranking situations</i>. In Proceedings of DA2PL'2016 <i>From Multiple Criteria Decision Aid to Preference Learning</i>, R. Busa-Fekete, E. Hüllermeier, V. Mousseau and K. Pfannschmidt (Eds.), University of Paderborn (Germany), Nov. 7-8 2016: 1-6 (downloadable full text <a href="https://leopold-loewenheim.uni.lu/bisdorff/documents/DA2PL-RB-2016.pdf">PDF file 451.4 kB</a>).
+<tr><td><p>R. Bisdorff (2016). <i>Computing linear rankings from trillions of pairwise outranking situations</i>. In Proceedings of DA2PL'2016 <i>From Multiple Criteria Decision Aid to Preference Learning</i>, R. Busa-Fekete, E. Hüllermeier, V. Mousseau and K. Pfannschmidt (Eds.), University of Paderborn (Germany), Nov. 7-8 2016: 1-6 (downloadable full text <a href="documents/DA2PL-RB-2016.pdf">PDF file 451.4 kB</a>).
     </p></td></tr>
 <!--<tr><td align="center"><img src="images/gaia80Record2.png" height="350" alt="UL HCP node gaia-80 connected" /></td></tr>-->
 </table></br>
@@ -65,32 +63,12 @@ By using cythonized Python3 multiprocessing resources and the <a href="https://d
 <td>
 	
 	<h3>The <a href="documents/RubisHandouts.pdf"><b class="sc">Rubis</b></a> progressive best choice recommendation</h3> 
-	<!--<p>The background image of this web site illustrates our <b class="sc">Rubis</b> choice recommendation for the example outranking digraph proposed by Bouyssou, Marchant, Pirlot et al., <em>Evaluation and decision models with multiple criteria</em>. Springer 2006, chapter 7 p.358. A detailed description of this result obtained from the <a href="https://leopold-loewenheim.uni.lu/cawa/p/demo"><b class="sc">Rubis</b> D<sup>4</sup> server</a> (user=demo, password=D4_Demo) is given <a href="documents/demoGraph.html">here</a>.</p>-->
 	<p>The main concern of the RUBIS method is tackling the choice problem in the context of multiple criteria decision aiding. Its genuine purpose is to help a decision maker to determine a single best decision alternative. Methodologically we focus on pairwise comparisons of these alternatives which lead to the concept of bipolar-valued outranking digraph. The work is centred around a set of five pragmatic principles which are required in the context of a progressive decision aiding methodology. Their thorough study and implementation in the outranking digraph lead us to define a choice recommendation as an extension of the classical digraph kernel concept.</p>
 </td>
 </tr></table>
 
 	<h3><a href="documents/orbel25-2x2.pdf">K-Sorting</a>: A multiple ordinal criteria approach for supervised categorical sorting</h3>
 		<p>Practical applications concern European University Rankings, FNR foresight topics ranking, Selection of Master students, etc.</p>
-
-<!--	<h3>Prudent multiple criteria ranking recommendations</h3>
-		<p>Comparison of the Ranked Pairs (Tideman) rule with the Leximin rule (Dias-Lamboray) for effectively generating linear orders from weighted majoriry margins valued outranking relations.</p>-->
-		
-<!--		
-		<br/>
-		<h2>Contributions to the international Decision Deck Project</h2>
-		<br/>
-		
-	<h3>The Universal Multiple Criteria Decision Analysis - Modelling Language <a href="https://ernst-schroeder.uni.lu/UMCDA-ML-2.0/doc/">XMCDA 2.0</a></h3> 
-	
-<p>The <b class="sc">Rubis</b> D<sup>3</sup> services use an XMCDA 2.0 <a href="documents/testXMCDA2OutrankingDigraph.xml">representation</a> of <b class="sc">Rubis</b> problems and solutions (Use Ctrl U in Firefox for visualising the XML source code).</p>
-		
-	<h3>The <a href="https://leopold-loewenheim.uni.lu/cawa/login.jsp">D4</a> Web Application Server for MCDA</h3>
-	<p>Username: <b>demo</b> (D4_Demo) gives access to a demonstration of our agile MCDA Web Application server.</p>
-		<!--	<h3>Bibliography</h3>
-			
-			<p>R. Bisdorff, P. Meyer and M. Roubens (2007), <b class="red"><b class="sc">Rubis</b></b>: a bipolar-valued outranking method for the choice problem. <b>4OR</b>, <em>A Quarterly Journal of Operations Research</em>, Springer-Verlag. (Online)] Electronic version: <a href="https://dx.doi.org/10.1007/s10288-007-0045-5">DOI: 10.1007/s10288-007-0045-5</a> (downloadable preliminary version <a href="https://charles-sanders-peirce.uni.lu/bisdorff/documents/HyperKernels.pdf">PDF file 271.5Kb</a>), pp 1 - 27.</p>
-			<p>R. Bisdorff (2008), The <b class="red"><b class="sc">Digraph</b></b><em> Python module: User manual</em>, FSTC/CSC, University of Luxembourg, <a href="https://ernst-schroeder.uni.lu/Digraph/">https://ernst-schroeder.uni.lu/Digraph/</a></p>-->
 			
 		<br/>
 		<h2>Luxembourg Decision Sciences</h2>
@@ -139,17 +117,6 @@ By using cythonized Python3 multiprocessing resources and the <a href="https://d
 		<li>- - - - -<br/></li>
 		<li><b>Digraph3</b></li>
         <li><a href="https://digraph3.readthedocs.io/en/latest/index.html" target="_blank">Documentation</a></li>
-<!-- 		<li><a href="https://leopold-loewenheim.uni.lu/Digraph3/docSphinx/html/tutorial.html" target="_blank">Tutorials</a></li> -->
-<!-- 		<li><a href="https://leopold-loewenheim.uni.lu/Digraph3/docSphinx/html/techDoc.html" target="_blank">Reference</a></li> -->
-<!-- 		<li><a href="https://leopold-loewenheim.uni.lu/GraphDataSets" target="_blank">Archives</a></li> -->
-<!-- <\!--		<li><a href="https://ernst-schroeder.uni.lu/Digraph/docSphinx/html/index.html" target="_blank">Py2 doc</a></li>-\-> -->
-<!--		<li>- - - - -</li>-->
-<!--		<li><a href="https://leopold-loewenheim.uni.lu/Digraph3/" target="_blank">Digraph3 ressources</a></li>-->
-<!--		<li><a href="https://leopold-loewenheim.uni.lu/sma/" target="_blank">SMA Archives</a></li>-->
-<!--		<li><a href="https://leopold-loewenheim.uni.lu/bisdorffOld/RubyDataSets/" target="_blank">Rubis Archives</a></li>-->
-<!--		<li><a href="https://ernst-schroeder.uni.lu/Digraph/doc">Python ressources</a></li>-->
-<!--		<li>- - - - -</li>-->
-		<!-- <li><a href="jobPositionF2-040004.html"><b>Open Position</b></a></li> -->
 		<li>&nbsp;</li>
 		</ul>
 		</div>
