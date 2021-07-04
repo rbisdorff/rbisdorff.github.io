@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox,envcountchap,sectrefs]{svmono}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{courier}
+%
+\usepackage{type1cm}         
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+% see the list of further useful packages
+% in the Reference Guide
+\usepackage{amsmath,stmaryrd,amssymb,bbm}
+\usepackage{tabularx}
+\usepackage{natbib}
+% \usepackage{chapterbib}
+% \usepackage{minitoc}
+\usepackage{pst-all}
+\usepackage{latexsym}
+\usepackage{euscript}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{ifthen}
+\usepackage{xspace}
+\usepackage[official,right]{eurosym}
+\usepackage{url}
+\usepackage{epstopdf}
+\usepackage{listings}
+%\usepackage{lstlinebgrd}
+%\usepackage{minted}
+%\usemintedstyle{borland}
+%\usepackage{rotating}
+%\usepackage[usenames]{color}
+\usepackage{ascii}
+%\usepackage{array}
+\usepackage{pifont}
+%\usepackage{colortbl}
+\usepackage{multirow}
+%\usepackage{stmaryrd}
+%\usepackage{dcolumn}
+
+\usepackage[pdftex,
+	draft = false,				% Mettre true pour ne pas générer les liens! 
+	bookmarks = true,			% Signets
+	bookmarksnumbered = true,	% Signets numérotés
+% 	pdfpagemode = None,			% Signets/vignettes fermé à l'ouverture
+	pdfstartview = FitV,			% La page prend toute la hauteur (remplacer V par H pour la largeur)
+	pdfpagelayout = SinglePage,	% Vue par page
+	colorlinks = true,			% Liens en couleur
+	urlcolor = blue,			% Couleur des liens externes
+	linkcolor = blue,			% Couleur des liens normaux
+	citecolor = blue,			% couleur des citations
+%	pdfborder = {0 0 0},			% Style de bordure : ici, pas de bordure
+ 	plainpages = false,			% necessaire si on veut des liens retour
+								% corrects vers les citations
+%	pagebackref,					% des liens retour vers 
+								% l'endroit ou la citation a eu lieu
+	pdfpagelabels = false
+%	hypertexnames=false
+	]{hyperref}
+
+% to set the bookmarks in the pdf right
+%\usepackage{bookmark}
+%\makeatletter
+%\providecommand*{\toclevel@titlech}{0} 
+%\edef\toclevel@authorch{\the\numexpr\toclevel@titlech+1} 
+%\edef\toclevel@authorch{1000} 
+%\makeatother
+
+
+\newcommand{\Condorcet}{{\sc Condorcet}\xspace}
+\newcommand{\Borda}{{\sc Borda}\xspace}    
+\newcommand{\Digraph}{{\sc Digraph3}\xspace}
+\newcommand{\Copeland}{{\sc Copeland}\xspace}
+\newcommand{\NetFlows}{{\sc NetFlows}\xspace}
+\newcommand{\Kendall}{{\sc Kendall}\xspace}
+\newcommand{\Kemeny}{{\sc Kemeny}\xspace}
+\newcommand{\Slater}{{\sc Slater}\xspace}
+\newcommand{\Rubis}{{\sc Rubis}\xspace}
+\newcommand{\Kohler}{{\sc Kohler}\xspace}
+\newcommand{\RankedPairs}{{\sc RankedPairs}\xspace}
+\newcommand{\Berge}{{\sc Berge}\xspace}
+\newcommand{\Pruefer}{{\sc Prüfer}\xspace}
+\newcommand{\Kruskal}{{\sc Kruskal}\xspace}
+\newcommand{\Wilson}{{\sc Wilson}\xspace}
+
+\definecolor{LightGray}{rgb}{0.92,0.92,0.92}
+% \definecolor{codegreen}{rgb}{0,0.6,0}
+% \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+% \definecolor{codepurple}{rgb}{0.58,0,0.82}
+% \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+% \lstdefinestyle{mystyle}{
+%     backgroundcolor=\color{backcolour},   
+%     commentstyle=\color{codegreen},
+%     keywordstyle=\color{magenta},
+%     numberstyle=\tiny\color{codegray},
+%     stringstyle=\color{codepurple},
+%     basicstyle=\ttfamily\footnotesize,
+%     breakatwhitespace=false,         
+%     breaklines=true,                 
+%     captionpos=b,                    
+%     keepspaces=true,                 
+%     numbers=left,                    
+%     numbersep=5pt,                  
+%     showspaces=false,                
+%     showstringspaces=false,
+%     showtabs=false,                  
+%     tabsize=2
+% }
+
+\setcounter{tocdepth}{1}
+%level -1: part, 0: chapter, 1: section, etc.
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\author{Raymond BISDORFF}
+\title{Algorithmic Decision Making with Python Resources}
+\subtitle{Tutorials and Advanced Topics}
+\maketitle
+
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\include{01-frontMatters/dedic}
+%\include{01-frontMatters/foreword}
+%\include{01-frontMatters/preface}
+%\include{01-fromtMatters/acknow}
+
+\tableofcontents
+
+%\include{01-frontMatters/acronym}
+
+
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lstset{style=mystyle}
+\lstset{language=Python,
+       backgroundcolor=\color{LightGray},
+       basicstyle=\ttfamily\footnotesize,
+       breaklines=true,
+       %commentstyle=\bf,
+       keywordstyle=\tt,
+       numbers=left,
+       numberstyle=\tiny,
+       %stepnumber=5,
+       numbersep=5pt,
+       breakatwhitespace=true,
+       %frame=tlBR
+       showspaces=false,                
+       showstringspaces=false,
+       showtabs=false,        
+       }
+
+% \include{02-mainMatters/part1}
+% \include{02-mainMatters/01-chapterIntroduction}
+% \include{02-mainMatters/02-chapterDigraphs}
+% \include{02-mainMatters/03-chapterOutrankingDigraphs}
+
+% \include{02-mainMatters/part2}
+% \include{02-mainMatters/04-chapterNewPerfTab}
+% \include{02-mainMatters/05-chapterRandomPerfTabs}
+% \include{02-mainMatters/06-chapterBestChoice}
+% \include{02-mainMatters/07-chapterWinnerElection}
+% \include{02-mainMatters/08-chapterRankings}
+% \include{02-mainMatters/09-chapterRelativeRating}
+% \include{02-mainMatters/10-chapterAbsoluteRating}
+% \include{02-mainMatters/11-chapterHPCRanking}
+
+% \include{02-mainMatters/part3}
+% \include{02-mainMatters/12-chapterAliceChoice}
+% \include{02-mainMatters/13-chapterBestCSDpts}
+% \include{02-mainMatters/14-chapterBestStudents}
+% \include{02-mainMatters/15-chapterExercises}
+
+% \include{02-mainMatters/part4}
+% \include{02-mainMatters/16-chapterCorrelation}
+% \include{02-mainMatters/17-chapterKernels}
+% \include{02-mainMatters/18-chapterConfidentOutrankings}
+% \include{02-mainMatters/19-chapterRobustOutrankings}
+% \include{02-mainMatters/20-chapterMultipartisan}
+% \include{02-mainMatters/21-chapterTemperingPlurality}
+
+% \include{02-mainMatters/part5}
+% \include{02-mainMatters/22-chapterGraphs}
+% \include{02-mainMatters/23-chapterTreeGraphs}
+% \include{02-mainMatters/24-chapterIsomorphicMIS}
+\include{02-mainMatters/25-chapterPerfectGraphs}
+
+
+%\include{appendix}
+
+\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{03-backMatters/glossary}
+%\include{03-backMatters/reference}
+%\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+
+
+
