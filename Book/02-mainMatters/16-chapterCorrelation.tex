@@ -12,8 +12,7 @@ In a stubborn keeping with a two-valued logic, where every argument can only be 
 
 In social choice problems like elections, abstentions are, however, frequently observed and represent a social expression that may be significant for revealing non represented social preferences. And, in marketing studies, interviewees will not always respond to all the submitted questions. Again, such abstentions do sometimes contain nevertheless valid information concerning consumer preferences.
 
-Let us consider such a performance tableau in file \texttt{graffiti07.py} Footnote[] gathering a Movie Magazine's rating of some movies that could actually be seen in town Footnote[1] (see Fig. \ref{fig:16.1}).
-
+Let us consider such a performance tableau in file \texttt{graffiti07.py} \footnote{The file \texttt{graffiti07.py} may be found in the \texttt{examples} directory of the \Digraph resources.} gathering a Movie Magazine's rating of some movies that could actually be seen in town \footnote{\emph{Graffiti}, Edition Revue Luxembourg, September 2007, p. 30. The data file \texttt{graffiti07.py} (\texttt{PerformanceTableau} format) may be found in the \texttt{examples} directory of the \Digraph resources.} (see Fig. \ref{fig:16.1}).
 \begin{lstlisting}
 >>> from outrankingDigraphs import\
 ...     PerformanceTableau 
@@ -28,7 +27,6 @@ Let us consider such a performance tableau in file \texttt{graffiti07.py} Footno
 \caption{\emph{Graffiti} magazine's movie ratings from September 2007.}
 \label{fig:16.1}       % Give a unique label
 \end{figure}
-
 15 journalists and movie critics provide here their rating of 25 movies: 5 stars (\emph{masterpiece}), 4 stars (\emph{must be seen}), 3 stars (\emph{excellent}), 2 stars (\emph{good}), 1 star (\emph{could be seen}), -1 star (\emph{I do not like}), -2 (\emph{I hate}), \texttt{NA} (\emph{not seen}).
 
 To aggregate all the critics' rating opinions, the \emph{Graffiti} magazine provides for each movie a global score computed as an average grade, just ignoring the \emph{not seen} data. These averages are thus not computed on comparable denominators; some critics do indeed use a more or less extended range of grades. The movies not seen by critic $SJ$, for instance, are favored, as this critic is more severe than others in her grading. Dropping the movies that were not seen by all the critics is here not possible either, as no one of the 25 movies was actually seen by all the critics. Providing any value for the missing data will as well always somehow falsify any global value scoring. What to do ?
@@ -347,7 +345,7 @@ The valued relational equivalence index gives us a further measure for studying 
 
 It is remarkable to notice here that, due to the quite numerous missing data, all pairwise valued ordinal correlation indexes $r(x\Leftrightarrow y)$ appear to be of low value, except the diagonal ones. These reflexive indexes $r(x\Leftrightarrow x)$ would trivially all amount to $+1.0$ in a plainly determined case. Here they indicate a reflexive normalized determination score $d$, i.e. the proportion of pairs of movies each critic did evaluate. Critic 'JPT' (the editor of the Graffiti magazine), for instance, evaluated all but one ($d = 24\times23/600 = 0.92$), whereas critic 'FG' evaluated only 10 movies among the 25 in discussion ($d = 10\times9/600 = 0.15$).
 
-To get a picture of the actual divergence of rating opinions concerning jointly seen pairs of movies, we may develop a Principal Component Analysis Footnote[2] of the corresponding $\tau$ correlation matrix. The 3D plot of the first 3 principal axes is shown in Fig. \ref{fig:16.2}.
+To get a picture of the actual divergence of rating opinions concerning jointly seen pairs of movies, we may develop a Principal Component Analysis of the corresponding $\tau$ correlation matrix\footnote{The 3D PCA plot method requires a running R statistics software  (https://www.r-project.org/) installation and the Calmat matrix calculator (see the \texttt{calmat} directory in the \Digraph resources)}. The 3D plot of the first 3 principal axes is shown in Fig. \ref{fig:16.2}.
 
 \begin{lstlisting}
 >>> g.export3DplotOfCriteriaCorrelation(ValuedCorrelation=False)
@@ -394,7 +392,7 @@ We notice here that the \NetFlows ranking rule inverts in fact just three ``\emp
 \caption{Symmetric part of \emph{graffiti07} digraph}
 \label{fig:16.9}       % Give a unique label
 \end{figure}
-Such a preordering of the movies may, for instance, be computed with the \texttt{computeRankingByChoosing()} method, where we iteratively extract dominant kernels --best remaining choices-- and absorbent kernels --worst remaining choices-- (see the next Chapter). We operate therefore on the asymmetric ``\emph{better rated than}'' opinions, i.e. the codual (Footnote[3]) of the ``\emph{at least as well rated as}'' opinions (see Listing \ref{list:16.9} Line 2).
+Such a preordering of the movies may, for instance, be computed with the \texttt{computeRankingByChoosing()} method, where we iteratively extract dominant kernels --best remaining choices-- and absorbent kernels --worst remaining choices-- (see the next Chapter). We operate therefore on the asymmetric ``\emph{better rated than}'' opinions, i.e. the codual of the ``\emph{at least as well rated as}'' opinions \footnote{A kernel in a digraph $g$ is a clique in the dual digraph $-g$.} (see Listing \ref{list:16.9} Line 2).
 
 \begin{lstlisting}[caption={Bipolar ranking-by-choosing the Grafitti movies},label=list:16.9]
 >>> from transitiveDigraphs import RankingByChoosingDigraph

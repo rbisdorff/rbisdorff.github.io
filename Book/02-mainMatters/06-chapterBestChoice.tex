@@ -41,7 +41,7 @@ Three \textbf{decision objectives} are guiding the CEO's choice:
 \item \emph{maximize} the new working conditions.
 \end{enumerate}
 
-The decision consequences to take into account for evaluating the potential new office sites with respect to each of the three objectives are modelled by the following \textbf{coherent family of criteria} Footnote [26].
+The decision consequences to take into account for evaluating the potential new office sites with respect to each of the three objectives are modelled by the following \textbf{coherent family of criteria} \footnote{A coherent family of performance criteria verifies: a) \emph{Exhaustiveness}: No argument acceptable to all stakeholders can be put forward to justify a preference in favour of action $x$ versus action $y$  when $x$ and $y$ have the same performance level on each of the criteria of the family; b) \emph{Cohesiveness}: Stakeholders unanimously recognize that action $x$ must be preferred to action $y$ whenever the performance level of $x$ is significantly better than that of $y$ on one of the criteria of positive weight, performance levels of $x$ and $y$ being the same on each of the other criteria; c) \emph{Nonredundancy}: One of the above requirements is violated if one of the criteria is left out from the family. \emph{Source}: European Working Group \emph{Multicriteria Aid for Decisions}, Series 3, no1, Spring, 2000.}.
 
 \begin{table}[h]
 \caption{The coherent family of performance criteria}
@@ -379,7 +379,7 @@ Yet, we must as well notice that the cheapest alternative $C$ is in fact \textbf
     Valuation in range: -145.00 to +145.00; global concordance: +15.00/-15.00
 \end{lstlisting}
   
-To model these \emph{strict outranking} situations, we may recompute the best choice recommendation on the \textbf{codual}, the converse ($\sim$) of the dual ($-$) Footnote[14], of the outranking digraph instance $g$ (see [BIS-2013]), as follows:
+To model these \emph{strict outranking} situations, we may recompute the best choice recommendation on the \textbf{codual}, the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance $g$ (see [BIS-2013]), as follows:
 
 \begin{lstlisting}[caption={Computing the strict best choice recommendation},label=list:6.6]
 >>> g.showBestChoiceRecommendation(\

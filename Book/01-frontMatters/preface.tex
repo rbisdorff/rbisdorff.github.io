@@ -8,14 +8,42 @@
 \preface
 
 %% Please write your preface here
-Use the template \emph{preface.tex} together with the Springer document class SVMono (monograph-type books) or SVMult (edited books) to style your preface in the Springer layout.
+% Use the template \emph{preface.tex} together with the Springer document class SVMono (monograph-type books) or SVMult (edited books) to style your preface in the Springer layout.
 
-A preface\index{preface} is a book's preliminary statement, usually written by the \textit{author or editor} of a work, which states its origin, scope, purpose, plan, and intended audience, and which sometimes includes afterthoughts and acknowledgments of assistance. 
+% A preface\index{preface} is a book's preliminary statement, usually written by the \textit{author or editor} of a work, which states its origin, scope, purpose, plan, and intended audience, and which sometimes includes afterthoughts and acknowledgments of assistance. 
 
-When written by a person other than the author, it is called a foreword. The preface or foreword is distinct from the introduction, which deals with the subject of the work.
+% When written by a person other than the author, it is called a foreword. The preface or foreword is distinct from the introduction, which deals with the subject of the work.
 
-Customarily \textit{acknowledgments} are included as last part of the preface.
- 
+% Customarily \textit{acknowledgments} are included as last part of the preface.
+
+This book describes the \Digraph collection of Python3 resources for implementing decision aid algorithms in the context of a bipolar-valued outranking approach ([BISD-15], [BISD-00]). These computing resources are useful in the field of Algorithmic Decision Theory and more specifically in outranking based Multiple Criteria Decision Aid (MCDA). They provided practical tools for a Master Course on Algorithmic Decision Theory taught at the University of Luxembourg. Their development, starting in 2010 covers a period of more than ten years, was stepwise and the reader might find some cases of backward compatibility problems.
+
+The numerous listings shown in the following chapters, are all checked with the \texttt{doctest} module of the standard Python3 library and should work effectively as such either, in a shell \texttt{python3} console, or for sure in an \texttt{ipython} console. Some chapters will rely on a given data file that are made available in the \texttt{examples} directory of the \Digraph resources. 
+
+The Digraph3 documentation, available on the Read The Docs site: https://digraph3.readthedocs.io/en/latest/, describes the Python3 resources for implementing decision aid algorithms in the context of a bipolar-valued outranking approach ([BISD-15], [BISD-00]). These computing resources are useful in the field of Algorithmic Decision Theory and more specifically in outranking based Multiple Criteria Decision Aid (MCDA). They provide practical tools for a Master Course on Algorithmic Decision Theory taught at the University of Luxembourg.
+
+The documentation contains, first, a set of tutorials introducing the main objects like digraphs, outranking digraphs and performance tableaux. There is also a tutorial provided on undirected graphs. Some tutorials are problem oriented and show how to compute the winner of an election, how to build a best choice recommendation, or how to linearly rank or rate with multiple incommensurable performance criteria. Other tutorials concern more specifically operational aspects of computing maximal independent sets (MISs) and kernels in graphs and digraphs. The tutorial about split, interval and permutation graphs is inspired by Martin Golumbic ‘s book on Algorithmic Graph Theory and Perfect Graphs ([GOLU-04]). We also provide a tutorial on tree graphs and spanning forests.
+
+The second Section concerns the extensive reference manual of the collection of provided Python3 modules, classes and methods. The main classes in this collection are the digraphs.Digraph overall root class, the perfTabs.PerformanceTableau class and the outrankingDigraphs.BipolarOutrankingDigraph class. The technical documentation also provides insight into the complete source code of all modules, classes and methods.
+
+The third Section exhibits some pearls of bipolar-valued epistemic logic that enrich the Digraph3 resources. These short texts illustrate well the very computational benefit one may get when working in a bipolar-valued logical framework. And, more specifically, the essential part the logically neutral undeterminate value is judiciously playing therein.
+
+The fourth section provides 2x2-reduced notes of the author’s lectures on Algorithmic Decision Theory given at the University of Luxembourg during Spring 2020.
+
+The last section gathers historical case studies with example digraphs compiled before 2006 and concerning the early development of the Digraph3 collection of python3 modules for implementing tools and methods for enumerating non isomorphic maximal independent sets in undirected graphs and computing dominant digraph kernels.
+The documentation contains, first, a set of chapters introducing the \Digraph resources and the main formal objects discussed in this book, like digraphs and outranking digraphs.
+
+A second part presents evaluation models, essentially performance tableaux, and decision methods and tools. Some chapters are problem oriented and show how to compute the winner of an election, how to build a best choice recommendation, or how to linearly rank or rate with multiple incommensurable performance criteria.
+
+Other tutorials concern more specifically operational aspects of computing maximal independent sets (MISs) and kernels in graphs and digraphs. The tutorial about split, interval and permutation graphs is inspired by Martin Golumbic ‘s book on Algorithmic Graph Theory and Perfect Graphs ([GOLU-04]). We also provide a tutorial on tree graphs and spanning forests.
+
+The second  concerns the extensive reference manual of the collection of provided Python3 modules, classes and methods. The main classes in this collection are the digraphs.Digraph overall root class, the perfTabs.PerformanceTableau class and the outrankingDigraphs.BipolarOutrankingDigraph class. The technical documentation also provides insight into the complete source code of all modules, classes and methods.
+
+The third Section exhibits some pearls of bipolar-valued epistemic logic that enrich the Digraph3 resources. These short texts illustrate well the very computational benefit one may get when working in a bipolar-valued logical framework. And, more specifically, the essential part the logically neutral undeterminate value is judiciously playing therein.
+
+The fourth section provides 2x2-reduced notes of the author’s lectures on Algorithmic Decision Theory given at the University of Luxembourg during Spring 2020.
+
+The last section gathers historical case studies with example digraphs compiled before 2006 and concerning the early development of the Digraph3 collection of python3 modules for implementing tools and methods for enumerating non isomorphic maximal independent sets in undirected graphs and computing dominant digraph kernels.
 
 \vspace{\baselineskip}
 \begin{flushright}\noindent

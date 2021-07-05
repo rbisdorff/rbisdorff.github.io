@@ -187,7 +187,7 @@ In our example voting profile here, the multipartisan primary selection stage ap
 
 However, in a very \emph{divisive} two major parties system, like in the US, where preferences of the supporters of one major party appear to be very opposite to the preferences of the supporters of the other major party, the multipartisan outranking digraph will become nearly indeterminate.
 
-In Listing \ref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag  Footnote[5] (see Lines 4 and 13-19). When now converting the voting profile into a performance tableau (Lines 20-21), we may compute the corresponding unopposed outranking digraph.
+In Listing \ref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag \footnote{The \texttt{RandomLinearVotingProfile} constructor provides a \texttt{DivisivePolitics} flag (\emph{False} by default) for generating random linear voting profiles based on a divisive polls strucure.} (see Lines 4 and 13-19). When now converting the voting profile into a performance tableau (Lines 20-21), we may compute the corresponding unopposed outranking digraph.
 \begin{lstlisting}[caption={A divisive two-party example of a random linear voting profile},label=list:20.6]
 >>> from votingProfiles import RandomLinearVotingProfile		     
 >>> lvp = RandomLinearVotingProfile(\

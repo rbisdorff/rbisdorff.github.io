@@ -59,7 +59,7 @@ Some ranking rules will work on the associated \textbf{Condorcet Digraph}, i.e. 
 
 Unfortunately, such crisp median-cut \emph{Condorcet} digraphs, associated with a given strict outranking digraph, present only exceptionally a linear ordering. Usually, pairwise majority comparisons do not even render a \emph{complete} or, at least, a \emph{transitive} partial order. There may even frequently appear \emph{cyclic} outranking situations (see Section \ref{sec:6.4}).
 
-To estimate how \emph{difficult} this ranking problem here may be, we may have a look at the corresponding strict outranking digraph \emph{graphviz} drawing (Footnote [1]).
+To estimate how \emph{difficult} this ranking problem here may be, we may have a look at the corresponding strict outranking digraph \emph{graphviz} drawing \footnote{ The \texttt{exportGraphViz()} method is depending on drawing tools from graphviz softeare (https://graphviz.org/).}.
 
 \begin{lstlisting}
 >>> gcd.exportGraphViz('rankingTutorial')

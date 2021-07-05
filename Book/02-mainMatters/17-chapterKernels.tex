@@ -247,7 +247,7 @@ The \texttt{CirculantDigraph} class provides a parameter for constructing such w
 >>> c6 = CirculantDigraph(order=6, circulants=[1],\
 ...                       IndeterminateInnerPart=True)
 \end{lstlisting}
-It is worth noticing that the dual version (Footnote[14]) of a weak circuit corresponds to its \emph{converse} version, i.e. $-c6$ = $\sim c6$ (see Fig. \ref{fig:17.4}).
+It is worth noticing that the dual version of a weak circuit corresponds to its \emph{converse} version \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the l\emph{ess than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict converse) \emph{better than} relation.}, i.e. $-c6$ = $\sim c6$ (see Fig. \ref{fig:17.4}).
 \begin{lstlisting}
 >>> (-c6).exportGraphViz()
   *---- exporting a dot file for GraphViz tools ---------*
@@ -265,7 +265,7 @@ It is worth noticing that the dual version (Footnote[14]) of a weak circuit corr
 \label{fig:17.4}       % Give a unique label
 \end{figure}
 
-It is worthwhile noticing that weak chordless circuits of length $n$ are in fact part of the class of digraphs that are invariant under the \emph{codual} transform, $cn = - (\sim cn) = \sim (-cn )$ Footnote [13]. In the case, now, of an odd weak chordless circuit, neither the weak chordless circuit, nor its dual, converse, or codual versions will admit any initial or terminal prekernels. 
+It is worthwhile noticing that weak chordless circuits of length $n$ are in fact part of the class of digraphs that are invariant under the \emph{codual} transform, $cn = - (\sim cn) = \sim (-cn )$ \footnote{The class of \emph{self-codual} bipolar-valued digraphs consists of all weakly asymmetric digraphs, i.e. digraphs containing only asymmetric and/or indeterminate links. Limit cases consists of, on the one side, full tournaments with indeterminate reflexive links, and, on the other side, fully indeterminate digraphs. In this class, the converse (inverse $\sim$) operator is indeed identical to the dual (negation $-$ ) one.}. In the case, now, of an odd weak chordless circuit, neither the weak chordless circuit, nor its dual, converse, or codual versions will admit any initial or terminal prekernels. 
 
 \section{Kernels in lateralized digraphs}
 \label{sec:17.3}
@@ -565,7 +565,7 @@ def computePreKernels(self):
     self.abspreKernels = abspreKernels
 \end{lstlisting}
  
-Finally, we use our bipolar epistemic logic framework for computing the credibility that an individual node of the digraph fits with being a member of an initial or terminal prekerenel. For this purpose we make use of the \Berge kernel equation systems Footnote[x][BER-1958p].
+Finally, we use our bipolar epistemic logic framework for computing the credibility that an individual node of the digraph fits with being a member of an initial or terminal prekerenel. For this purpose we make use of the \Berge kernel equation systems [BER-1958p].
 
 \section{\Berge kernel equation systems}
 \label{sec:117:6}

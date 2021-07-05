@@ -59,7 +59,7 @@ A non isomorphic MIS corresponds in fact to a set of isomorphic MISs, i.e. an or
    freq.:  [0, 0, 0, 0, 3, 24,  2, 0, 0, 0,  0,  0,  0]
    Results in c12.misset
 \end{lstlisting}
-In the 12-cycle graph, we observe 29 labelled MISs: 3 of cardinality 4, 24 of cardinality 5, and 2  of cardinality 6. In case of n-cycle graphs with $n$ > 20, as the cardinality of the MISs becomes big, it is preferable to use the shell \texttt{perrinMIS} command compiled from C and installed Footnote[3] along with all the Digraphs3 python modules for computing the set of MISs observed in the graph.
+In the 12-cycle graph, we observe 29 labelled MISs: 3 of cardinality 4, 24 of cardinality 5, and 2  of cardinality 6. In case of n-cycle graphs with $n$ > 20, as the cardinality of the MISs becomes big, it is preferable to use the shell \texttt{perrinMIS} command compiled from C and installed  along with all the \Digraph python modules for computing the set of MISs observed in the graph\footnote{The \texttt{perrinMIS} shell command may be installed system wide with the command texttt{make installPerrin} from the main \Digraph directory. It is stored by default into \texttt{/usr/local/bin/}. This may be changed with the \texttt{INSTALLDIR} flag. The command \texttt{make installPerrinUser} installs it instead without sudo into the user's private \texttt{.bin} directory.}.
 \begin{lstlisting}
 ...$ echo 12 | /usr/local/bin/perrinMIS
   # $------------------------------------- #
@@ -116,7 +116,7 @@ Reading in the result of the \texttt{perrinMIS} shell command, stored in a file 
 \section{Computing the automorphism group}
 \label{sec:24.2}
 
-For computing the corresponding non isomorphic MISs, we actually need the automorphism group of the c12-cycle graph. The \texttt{Digraph} class therefore provides the \texttt{automorphismGenerators()} method which adds automorphism group generators to a \texttt{Digraph} class instance with the help of the external shell \texttt{dreadnaut} command from the \emph{nauty} software package Footnote[2].
+For computing the corresponding non isomorphic MISs, we actually need the automorphism group of the c12-cycle graph. The \texttt{Digraph} class therefore provides the \texttt{automorphismGenerators()} method which adds automorphism group generators to a \texttt{Digraph} class instance with the help of the external shell \texttt{dreadnaut} command from the \emph{nauty} software package \footnote{The \texttt{automorphismGenerators} method uses the \texttt{dreadnaut} shell command from the \emph{nauty} software package. See https://www3.cs.stonybrook.edu/~algorith/implement/nauty/implement.shtml . On Mac OS there exist dmg installers and on Ubuntu Linux or Debian, one may easily install it with \texttt{...\$ sudo apt-get install nauty}.}.
 \begin{lstlisting}
 >>> c12.automorphismGenerators()
       ...

@@ -5,8 +5,7 @@
 
 \abstract{To be written.}
 
-Footnote [19]
-
+This case study is inspired by a multiple criteria decision analysis case study published by Eisenführ Fr., Langer Th., and Weber M. \footnote{Eisenführ Fr., Langer Th., and Weber M. \emph{Fallstudien zu rationalem Entscheiden}, Springer 2001, pp. 1-17.}.
 
 \begin{figure}[h]
 \sidecaption
@@ -55,7 +54,7 @@ Four \textbf{decision objectives} of more or less equal importance are guiding A
 \item \emph{maximize} her professional perspectives (PRA).
 \end{enumerate}
 
-The decision consequences Alice wishes to take into account for evaluating the potential study programs with respect to each of the four objectives are modelled by the following \textbf{coherent family of criteria} Footnote[26].
+The decision consequences Alice wishes to take into account for evaluating the potential study programs with respect to each of the four objectives are modelled by the following \textbf{coherent family of criteria} \footnote{A coherent family of performance criteria verifies: a) \emph{Exhaustiveness}: No argument acceptable to all stakeholders can be put forward to justify a preference in favour of action $x$ versus action $y$  when $x$ and $y$ have the same performance level on each of the criteria of the family; b) \emph{Cohesiveness}: Stakeholders unanimously recognize that action $x$ must be preferred to action $y$ whenever the performance level of $x$ is significantly better than that of $y$ on one of the criteria of positive weight, performance levels of $x$ and $y$ being the same on each of the other criteria; c) \emph{Nonredundancy}: One of the above requirements is violated if one of the criteria is left out from the family. \emph{Source}: European Working Group \emph{Multicriteria Aid for Decisions}, Series 3, n.1, Spring, 2000.}.
 
 \begin{table}[h]
 \caption{Alice's family of performance criteria}
@@ -89,7 +88,7 @@ Within each decision objective, the performance criteria are considered to be eq
 \section{The performance tableau}
 \label{sec:12.2}
 
-The actual evaluations of Alice's potential study programs are stored in a file named \texttt{AliceChoice.py} of \texttt{PerformanceTableau} format Footnote[21].
+The actual evaluations of Alice's potential study programs are stored in a file named \texttt{AliceChoice.py} of \texttt{PerformanceTableau} format \footnote{Alice's performance tableau \texttt{AliceChoice.py} is available in the \texttt{examples} directory of the \Digraph software collection}.
 
 \begin{lstlisting}[caption={Alice's performance tableau},label=list:12.1]
 >>> from perfTabs import PerformanceTableau
@@ -129,7 +128,7 @@ Details of the performance criteria may be consulted in a browser view (see Fig.
 
 It is worthwhile noticing in Fig. \ref{fig:12.2} that, on her subjective attractiveness scale of the study programs (criterion $AS$), Alice considers a performance differences of 7 points to be \emph{considerable} and triggering, the case given, an outranking polarisation [BIS-2013]. Notice also the proportional \emph{indifference} ($1\%$) and \emph{preference} ($5\%$) discrimination thresholds shown on criterion $BC$-number of inhabitants.
 
-Alice is subjectively evaluating the \emph{Attractiveness} of the studies (criterion $AS$) on an ordinal scale from 0 (weak) to 10 (excellent). Similarly, she is subjectively evaluating the \emph{Attractiveness} of the respective professions (criterion $AP$) on a three level ordinal scale from 0 (\emph{weak}), 1 (\emph{fair}) to 2 (\emph{good}). Considering the \emph{Occupational Prestige} (criterion $OP$), she looked up the SIOPS Footnote[20]. All the other evaluation data she found on the internet (see Fig. \ref{fig:12.3}).
+Alice is subjectively evaluating the \emph{Attractiveness} of the studies (criterion $AS$) on an ordinal scale from 0 (weak) to 10 (excellent). Similarly, she is subjectively evaluating the \emph{Attractiveness} of the respective professions (criterion $AP$) on a three level ordinal scale from 0 (\emph{weak}), 1 (\emph{fair}) to 2 (\emph{good}). Considering the \emph{Occupational Prestige} (criterion $OP$), she looked up the SIOPS \footnote{Ganzeboom H.B.G, Treiman D.J. ``Internationally Comparable Measures of Occupational Status for the 1988 International Standard Classification of Occupations'', \emph{Social Science Research} 25, 201–239 (1996).}. All the other evaluation data she found on the internet (see Fig. \ref{fig:12.3}).
 
 In the following \emph{heatmap view}, we may now consult Alice's performance evaluations.
 
@@ -146,9 +145,9 @@ In the following \emph{heatmap view}, we may now consult Alice's performance eva
 
 Notice by the way that evaluations on performance criteria to be \emph{minimized}, like \emph{Distance to Home} (criterion $DH$) or \emph{Study time} (criterion \emph{SL}), are registered as \emph{negative} values, so that smaller measures are, in this case, preferred to larger ones.
 
-Her ten potential study programs are ordered with the \NetFlows ranking rule applied to the corresponding bipolar-valued outranking digraph Footnote[23]. \emph{Graduate interpreter} studies in Köln ($I-FHK$) or Saarbrücken ($I-USB$), followed by \emph{Qualified Translator} studies in Köln ($T-FHK$) appear to be Alice's most preferred alternatives. The least attractive study programs for her appear to be studies at the Chamber of Commerce of Köln ($C-HKK$, $S-HKK$).
+Her ten potential study programs are ordered with the \NetFlows ranking rule applied to the corresponding bipolar-valued outranking digraph \footnote{See Section \ref{sec:8.3}.}. \emph{Graduate interpreter} studies in Köln ($I-FHK$) or Saarbrücken ($I-USB$), followed by \emph{Qualified Translator} studies in Köln ($T-FHK$) appear to be Alice's most preferred alternatives. The least attractive study programs for her appear to be studies at the Chamber of Commerce of Köln ($C-HKK$, $S-HKK$).
 
-It is finally interesting to observe in Fig. \ref{fig:12.3} (third row) that the \emph{most significant} performance criteria, appear to be for Alice, on the one side, the \emph{Attractiveness} of the study program (criterion $AS$, tau = $+0.72$) followed by the \emph{Attractiveness} of the future profession (criterion $AP$, tau = $+0.62$). On the other side, \emph{Study times} (criterion $SL$, tau = $-0.24$), \emph{Big city} (criterion $BC$, tau = $-0.07$) as well as \emph{Monthly living costs} (criterion $LC$, tau = $-0.04$) appear to be for her  \emph{not so significant} Footnote[27].
+It is finally interesting to observe in Fig. \ref{fig:12.3} (third row) that the \emph{most significant} performance criteria, appear to be for Alice, on the one side, the \emph{Attractiveness} of the study program (criterion $AS$, tau = $+0.72$) followed by the \emph{Attractiveness} of the future profession (criterion $AP$, tau = $+0.62$). On the other side, \emph{Study times} (criterion $SL$, tau = $-0.24$), \emph{Big city} (criterion $BC$, tau = $-0.07$) as well as \emph{Monthly living costs} (criterion $LC$, tau = $-0.04$) appear to be for her  \emph{not so significant} \footnote{see Chapter \ref{sec:16}.}.
 
 
 \section{Building a best choice recommendation}
@@ -258,7 +257,7 @@ We may finally notice in the relation map, shown in Fig. \ref{fig:12.4}, that th
      most credible action(s) = {'S-HKK': 0.17,'C-HKK': 0.17}
 \end{lstlisting}
    
-Most credible best choice among the four best-ranked study programs eventually becomes the \emph{Graduate Interpreter} study program at the Technical High School in Köln (see Listing \ref{list:12.4} Line 14) supported by a $(0.75 + 1)/2.0 \,=\,87.5\% (18/24)$ majority of global criteria significance Footnote[24].
+Most credible best choice among the four best-ranked study programs eventually becomes the \emph{Graduate Interpreter} study program at the Technical High School in Köln (see Listing \ref{list:12.4} Line 14) supported by a $(0.75 + 1)/2.0 \,=\,87.5\% (18/24)$ majority of global criteria significance \footnote{see Chapter \ref{sec:17}}.
 
 In the relation map, shown in Fig. \ref{fig:12.4}, we see in the left lower corner that the \emph{asymmetric part} of the outranking relation, i.e. the corresponding \emph{strict} outranking relation, is actually \emph{transitive} (see Line 2 below). Hence, a \emph{graphviz} drawing of its \emph{skeleton}, oriented by the previous \emph{best}, respectively \emph{worst} choice, may well illustrate our \emph{best choice recommendation}.
 
@@ -327,7 +326,7 @@ Yet, how \emph{robust} are our findings with respect to potential settings of th
 
 Alice considers her four decision objectives as being \emph{more or less} equally important. Here we have, however, allocated \emph{strictly equal} importance weights with \emph{strictly equi-significant} criteria per objective. How robust is our previous best choice recommendation when, now, we would consider the importance of the objectives and, hence, the significance of the respective performance criteria to be \emph{more or less uncertain}?
 
-To answer this question, we will consider the respective criteria significance weights $w_j$ for $j=1,...,9$ to be \emph{triangular random variables} in the range 0 to $2w_j$ with mode = $w_j$. We may compute a corresponding $90\%$-\emph{confident} outranking digraph with the help of the \texttt{ConfidentBipolarOutrankingDigraph} constructor Footnote[22].
+To answer this question, we will consider the respective criteria significance weights $w_j$ for $j=1,...,9$ to be \emph{triangular random variables} in the range 0 to $2w_j$ with mode = $w_j$. We may compute a corresponding $90\%$-\emph{confident} outranking digraph with the help of the \texttt{ConfidentBipolarOutrankingDigraph} constructor \footnote{see Chapter \ref{sec:18}}.
 
 \begin{lstlisting}[caption={Computing the 90\% confident outranking digraph},label=list:12.6]
 >>> from outrankingDigraphs import\
@@ -378,7 +377,7 @@ The \emph{Graduate Interpreter} studies in Köln remain indeed a 90\%-confident 
 
 When previously comparing the two best-ranked study programs (see Fig. \ref{fig:12.6}), we have observed that $I-FHK$ actually positively outranks $I-USB$ on all four decision objectives. When admitting equi-significant criteria significances per objective, this outranking situation is hence valid independently of the importance weights Alice may allocate to each of her decision objectives. 
 
-We may compute these \textbf{unopposed} outranking situations Footnote[25] with help of the \texttt{UnOpposedBipolarOutrankingDigraph} constructor (see Chapter \ref{sec:26}).
+We may compute these \textbf{unopposed} outranking situations with help of the \texttt{UnOpposedBipolarOutrankingDigraph} constructor (see Section \ref{sec:19.5}).
 
 \begin{lstlisting}[caption={Computing the unopposed outranking situations},label=list:12.8]
 >>> from outrankingDigraphs import UnOpposedBipolarOutrankingDigraph

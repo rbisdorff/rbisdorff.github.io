@@ -30,7 +30,7 @@
 \usepackage{amsmath,stmaryrd,amssymb,bbm}
 \usepackage{tabularx}
 \usepackage{natbib}
-% \usepackage{chapterbib}
+\usepackage{chapterbib}
 % \usepackage{minitoc}
 \usepackage{pst-all}
 \usepackage{latexsym}
@@ -125,7 +125,7 @@
 %     tabsize=2
 % }
 
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 %level -1: part, 0: chapter, 1: section, etc.
 \makeindex             % used for the subject index
                        % please use the style svind.ist with
@@ -142,9 +142,9 @@
 
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\include{01-frontMatters/dedic}
+\include{01-frontMatters/dedic}
 %\include{01-frontMatters/foreword}
-%\include{01-frontMatters/preface}
+\include{01-frontMatters/preface}
 %\include{01-fromtMatters/acknow}
 
 \tableofcontents
@@ -172,7 +172,7 @@
        }
 
 \include{02-mainMatters/part1}
-\include{02-mainMatters/01-chapterIntroduction}
+\include{02-mainMatters/01-chapterIntroDigraph3}
 \include{02-mainMatters/02-chapterDigraphs}
 \include{02-mainMatters/03-chapterOutrankingDigraphs}
 

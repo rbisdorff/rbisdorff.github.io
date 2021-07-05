@@ -92,7 +92,7 @@ are independent of one another (see [GOL-2004] p. 275).
 
 Claude \Berge's famous mystery story (see [GOL-2004] p.20) may well illustrate the importance of being an \emph{interval} graph.
 
-Suppose the file \texttt{berge.py} Footnote[18] contains the following \texttt{Graph} instance data:
+Suppose the file \texttt{berge.py} \footnote{A \texttt{Graph} encoded file \texttt{berge.py} may be found in the \texttt{examples} directory of the \Digraph resources.} contains the following \texttt{Graph} instance data:
 \begin{lstlisting}
   vertices = {
     'A': {'name': 'Abe', 'shortName': 'A'},
@@ -398,7 +398,7 @@ The resulting orientation of the edges of $g$, shown in Fig. \ref{fig:25.9}, is 
 \label{fig:25.10}       % Give a unique label
 \end{figure}
  
-Let us recheck these facts by explicitly constructing transitively oriented digraph instances with the \texttt{computeTransitivelyOrientedDigraph()} method \footnote{The \texttt{PartiallyDetermined = True}* flag (see Lines 2 and 7 above) is required here in order to orient only the actual edges of the graphs. Relations between vertices not linked by an edge are put to the indeterminate characteristic value $0$. This allows us to compute, later on, convenient disjunctive digraph fusions.
+Let us recheck these facts by explicitly constructing transitively oriented digraph instances with the \texttt{computeTransitivelyOrientedDigraph()} method \footnote{The \texttt{PartiallyDetermined = True} flag (see Lines 2 and 7 above) is required here in order to orient only the actual edges of the graphs. Relations between vertices not linked by an edge are put to the indeterminate characteristic value $0$. This allows us to compute, later on, convenient disjunctive digraph fusions.
 }. 
 \begin{lstlisting}
 >>> og = g.computeTransitivelyOrientedDigraph(\
@@ -415,7 +415,7 @@ Let us recheck these facts by explicitly constructing transitively oriented digr
 
 As both graphs are indeed transitively orientable (see Lines 5 and 10 above), we may conclude that the given random graph $g$ is actually a permutation graph instance. Yet, we still need to find now its corresponding permutation. We therefore implement a recipee given by Martin Golumbic [GOL-2004] p.159.
 
-We will first \emph{fuse} both $og$ and $ogd$ orientations above with an \emph{epistemic disjunction} operated with the symmetric \texttt{o-max} operator Footnote[x].
+We will first \emph{fuse} both $og$ and $ogd$ orientations above with an \emph{epistemic disjunction} operated with the symmetric \texttt{o-max} operator (see Section \ref{sec:2.5}).
 \begin{lstlisting}
 >>> from digraphs import FusionDigraph
 >>> f1 = FusionDigraph(og,ogd,operator='o-max')

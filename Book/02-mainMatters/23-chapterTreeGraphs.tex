@@ -216,7 +216,7 @@ More general, and in case of a not connected graph, we may generate with the \em
 \section{Maximum determined spanning forests}
 \label{sec:23.3}
 
-In case of valued graphs supporting weighted edges, we may finally construct a \emph{most determined} spanning tree (or forest if not connected) using \Kruskal's greedy minimum-spanning-tree algorithm Footnote[5] on the dual valuation of the graph [KRU-1956].
+In case of valued graphs supporting weighted edges, we may finally construct a \emph{most determined} spanning tree (or forest if not connected) using \Kruskal's greedy minimum-spanning-tree algorithm Footnote[5] on the dual valuation of the graph [KRU-1956]\footnote{\Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest.}.
 
 We consider, for instance, a randomly valued graph with five vertices and seven edges bipolar-valued in [-1.0; 1.0]. 
 \begin{lstlisting}

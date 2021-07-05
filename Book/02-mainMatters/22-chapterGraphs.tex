@@ -11,7 +11,7 @@
 In the \Digraph {\tt graphs} module, the root \texttt{Graph} class provides a generic simple graph model, without loops and multiple links. A given object of this class contains at least the following attributes in:
 \begin{enumerate}
 \item \texttt{vertices}: a dictionary of vertices with \texttt{name} and \texttt{shortName} attributes,
-\item \texttt{edges} : a dictionary with \emph{frozensets} Footnote[x] of pairs of vertices as entries carrying a characteristic value in the range of the previous valuation domain,
+\item \texttt{edges} : a dictionary with \emph{frozensets} \footnote{\href{https://docs.python.org/3.9/library/stdtypes.html?highlight=frozenset\#frozenset}{Python documentation}} of pairs of vertices as entries carrying a characteristic value in the range of the previous valuation domain,
 \item \texttt{valuationDomain}: a dictionary with three entries: the minimum ($-1$, means certainly no link), the median ($0$, means missing information) and the maximum characteristic value ($+1$, means certainly a link),
 \item \texttt{gamma}: a dictionary containing the direct neighbors of each vertex, automatically added by the object constructor.
 \end{enumerate}
@@ -214,7 +214,7 @@ Actually, with the given tutorial graph instance, a 2-coloring is already feasib
      frozenset({'v1', 'v6', 'v4', 'v3'})]
 \end{lstlisting}
 
-A MIS in the dual of a graph instance $g$ (its dual $-g$ Footnote[14]), corresponds to a maximal \emph{clique}, i.e. a maximal complete subgraph in $g$. Maximal cliques may be directly enumerated with the \texttt{showCliques()} method.
+A MIS in the dual of a graph instance $g$, corresponds to a maximal \emph{clique}, i.e. a maximal complete subgraph in $g$. Maximal cliques may be directly enumerated with the \texttt{showCliques()} method.
 \begin{lstlisting}
 >>> g.showCliques()
   *---  Maximal Cliques ---*

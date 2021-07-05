@@ -81,7 +81,7 @@ As mentioned in the previous Chapter, the {\tt Digraph} class provides some gene
 \section{Graphviz drawings}
 \label{sec:2.2}
 
-We may have an even better insight into the \texttt{Digraph} object $rdg$ by looking at a \href{https://graphviz.org/}{graphviz} drawing [Footnote 1].
+We may have an even better insight into the \texttt{Digraph} object $rdg$ by looking at a \href{https://graphviz.org/}{graphviz} drawing \footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}.
 
 \begin{lstlisting}
 >>> rdg.exportGraphViz('tutRandValDigraph')
@@ -221,7 +221,7 @@ Let $r$ and $r'$ characterise two bipolar-valued epistemic situations.
 \section{Dual, converse and codual digraphs}
 \label{sec:2.6}
 
-We may as readily compute the \textbf{dual} (negated relation Footnote[14]), the \textbf{converse} (transposed relation) and the \textbf{codual} (transposed and negated relation) of the digraph instance $rdg$. 
+We may as readily compute the \textbf{dual} (negated relation \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}), the \textbf{converse} (transposed relation) and the \textbf{codual} (transposed and negated relation) of the digraph instance $rdg$. 
 
 \begin{lstlisting}[caption={Computing dual, converse and codual},label=list:2.7]
 >>> from digraphs import DualDigraph, ConverseDigraph, CoDualDigraph
