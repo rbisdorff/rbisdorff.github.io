@@ -8,7 +8,7 @@
 \section{Linear voting profiles}
 \label{sec:7.1}
 
-The {\tt votingProfiles} module provides resources for handling election results [ADT-L2], like the \texttt{LinearVotingProfile} class. We consider an election involving a finite set of candidates and finite set of weighted voters, who express their voting preferences in a complete linear ranking (without ties) of the candidates. The data is internally stored in two ordered dictionaries, one for the voters and another one for the candidates. The linear ballots are stored in a standard dictionary.
+The {\tt votingProfiles} module provides resources for handling election results \cite{ADT-L2}, like the \texttt{LinearVotingProfile} class. We consider an election involving a finite set of candidates and finite set of weighted voters, who express their voting preferences in a complete linear ranking (without ties) of the candidates. The data is internally stored in two ordered dictionaries, one for the voters and another one for the candidates. The linear ballots are stored in a standard dictionary.
 
 \begin{lstlisting}[basicstyle=\footnotesize]
 candidates = OrderedDict([('a1',...), ('a2',...), ('a3', ...), ...}
@@ -79,7 +79,7 @@ We may easily compute \textbf{uni-nominal votes}, i.e. how many times a candidat
   ['a3']
 \end{lstlisting}
 
-As we observe no absolute majority (8/15) of votes for any of the three candidate, we may look for the \textbf{instant runoff} winner instead (see [ADT-L2]).
+As we observe no absolute majority (8/15) of votes for any of the three candidate, we may look for the \textbf{instant runoff} winner instead (see \cite{ADT-L2}).
 
 \begin{lstlisting}[caption={Example Instant Run Off Winner},label=list:7.2,basicstyle=\footnotesize]
 >>> v.computeInstantRunoffWinner(Comments=True)
@@ -400,5 +400,4 @@ Let us mention that the \emph{instant-run-off} procedure, we used before (see Li
 
 Remarkable about both these \emph{ranking-by-choosing} or \emph{ordering-by-rejecting} results is the fact that the random voting behaviour, simulated here with the help of two discrete random variables \footnote{Discrete random variables with a given empirical probability law (here the polls) are provided in the \texttt{randomNumbers} module by the \texttt{DiscreteRandomVariable} class.}, defined respectively by the two party polls, is rendering a ranking that is more or less in accordance with the simulated balance of the polls: -Party-1 supporters : 460;  Party-2 supporters: 436 (see Listing \ref{list:7.7} Lines 26-40 third column). Despite a random voting behaviour per voter, the given polls apparently show a \emph{very strong incidence} on the eventual election result. In order to avoid any manipulation of the election outcome, public media are therefore in some countries not allowed to publish polls during the last weeks before a general election.
 
-\begin{svgraybox}Mind that the specific \emph{ranking-by-choosing} procedure, we use here on the \emph{majority margins} digraph, operates the selection procedure by extracting at each step \emph{initial} and \emph{terminal} kernels, i.e. NP-hard operational problems (see tutorial on kernels and [BIS-1999]); A technique that does not allow in general to tackle voting profiles with much more than 30 candidates. The tutorial on ranking methods provides more adequate and efficient techniques for ranking from pairwise majority margins when a larger number of potential candidates is given.  
-\end{svgraybox} 
+Mind that the specific \emph{ranking-by-choosing} procedure, we use here on the \emph{majority margins} digraph, operates the selection procedure by extracting at each step \emph{initial} and \emph{terminal} kernels, i.e. NP-hard operational problems (see tutorial on kernels and \cite{BIS-1999}); A technique that does not allow in general to tackle voting profiles with much more than 30 candidates. The tutorial on ranking methods provides more adequate and efficient techniques for ranking from pairwise majority margins when a larger number of potential candidates is given.  

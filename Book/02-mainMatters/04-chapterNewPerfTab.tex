@@ -116,12 +116,11 @@ Decision alternatives are stored in attribute \textbf{actions} under the \texttt
 
 Required attributes of each decision alternative, besides the object identifier,  are: \texttt{shortName}, \texttt{name} and \texttt{}comment (see Lines 15-17). The \texttt{shortName} attribute is essentially used when showing the performance tableau or the performance heatmap in a browser view.
 
-\begin{svgraybox}Mind that graphviz drawings require digraph actions' (nodes) identifier strings without any special characters like `\_` or `/`.\end{svgraybox}
+Mind that graphviz drawings require digraph actions' (nodes) identifier strings without any special characters like `\_` or `/`.
 
 Decision actions descriptions are stored in the order of which they appear in the stored instance file. The \texttt{OrderedDict} object keeps this given order when iterating over the decision alternatives.
 
 The random performance tableau models presented in the previous tutorial use the \texttt{actions} attribute for storing special features of the decision alternatives. The \emph{Cost-Benefit} model, for instance, uses a \texttt{type} attribute for distinguishing between \emph{advantageous}, \emph{neutral} and \emph{cheap} alternatives. The \emph{3-Objectives} model keeps a detailed record of the performance profile per decision objective and the corresponding random generators per performance criteria (see Lines 7- below).
-
 \begin{lstlisting}[basicstyle=\footnotesize]
 >>> t = Random3ObjectivesPerformanceTableau()
 >>> t.actions
@@ -180,7 +179,7 @@ The \texttt{objectives} attribute is methodologically useful for specifying the 
 
 The importance weight sums up to 48 for each one of the three example decision objectives shown in Listing \ref{list:4.2} (Lines 8,13 and 19), so that the significance of each one of the 3 economic criteria is set to 16, of both societal criteria is set to 24, and of each one of the 6 environmental criteria is set to 8.
 
-\begin{svgraybox}Mind that the \texttt{objectives} attribute is always present in a \texttt{PerformanceTableau} object instance, even when empty. In this case, we consider that each performance criterion canonically represents in fact its own decision objective. The criterion significance equals in this case the corresponding decision objective's importance weight.\end{svgraybox}
+Mind that the \texttt{objectives} attribute is always present in a \texttt{PerformanceTableau} object instance, even when empty. In this case, we consider that each performance criterion canonically represents in fact its own decision objective. The criterion significance equals in this case the corresponding decision objective's importance weight.
 
 The third section of the template file concerns now the \textbf{performance criteria}.
 
@@ -210,12 +209,11 @@ In order to assess how well each potential decision alternative is satisfying a 
 
 In our bipolar-valued outranking approach, all performance criteria implement \emph{decimal-valued} grading functions, where preferences are either \emph{increasing} or \emph{decreasing} with measured performances.
 
-\begin{svgraybox}In order to model a \textbf{coherent} performance tableau, the decision criteria must satisfy two methodological requirements:
+In order to model a \textbf{coherent} performance tableau, the decision criteria must satisfy two methodological requirements:
 \begin{enumerate}
-\item \textbf{Independance}: Each decision criterion implements a grading that is \emph{functionally independent} of the grading of the other decision criteria, i.e. the performance measured on one of the criteria does not \emph{constrain} the performance measured on any other criterion.
+\item \textbf{Independance}: Each decision criterion implements a grading that is \emph{functionally independent} of the grading of the other decision criteria, i.e. the performance measured on one of the criteria does not \emph{constrain} in any sense the performance measured on any other criterion.
 \item \textbf{Non redundancy}: Each performance criterion is only \emph{significant} for a \emph{single} decision objective.
 \end{enumerate}
-\end{svgraybox}
 
 In order to take into account any, usually \emph{unavoidable}, \textbf{imprecision} of the performance grading procedures, we may specify three performance \textbf{discrimination thresholds}: an \emph{indifference} ('ind'), a \emph{preference} ('pref') and a \emph{considerable performance difference} ('veto') threshold (see Listing \ref{list:4.3} Lines 10-12). The left decimal number of a threshold description tuple indicates a \emph{constant part}, whereas the right decimal number indicates a \emph{proportional} part.
 

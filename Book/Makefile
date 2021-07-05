@@ -16,13 +16,8 @@ all:
 book.pdf: 
 	# makes a pdf directly
 	pdflatex book.tex
-
-	#bibtex 01-frontmatter/preface.aux
-
-	#bibtex 02-mainMatters/01-caphterIntroduction.aux
-
 	pdflatex book.tex
-	#pdflatex book.tex
+	pdflatex book.tex
 	#makeindex -s svind.ist book.idx
 	#pdflatex book.tex
 	#pdflatex book.tex
