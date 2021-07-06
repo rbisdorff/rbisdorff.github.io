@@ -8,7 +8,7 @@
 \section{The absolute rating problem}
 \label{sec:10.1}
 	  
-In this tutorial we address the problem of rating multiple criteria performances of a set of potential decision alternatives with respect to empirical order statistics, i.e. performance quantiles learned from historical performance data gathered from similar decision alternatives observed in the past \cite{CPSTAT-L5}).
+In this tutorial we address the problem of rating multiple criteria performances of a set of potential decision alternatives with respect to empirical order statistics, i.e. performance quantiles learned from historical performance data gathered from similar decision alternatives observed in the past \citep{CPSTAT-L5}).
 
 To illustrate the decision problem we face, consider for a moment that, in a given decision aid study, we observe, for instance in the Table \ref{tab:10.1} below, the multi-criteria performances of two potential decision alternatives, named $a1001$ and $a1010$, marked on 7 \emph{incommensurable} preformance criteria: 2 \emph{Costs} criteria $c1$ and $c2$ (to \emph{minimize}) and 5 \emph{Benefits} criteria $b1$ to $b5$ (to \emph{maximize}). 
 
@@ -40,7 +40,7 @@ To solve this \emph{absolute} rating decision problem, first, we need to estimat
 \section{Incremental learning of historical performance quantiles}
 \label{sec:10.2}
 
-Suppose that we see flying in random multiple criteria performances from a given model of random performance tableau (see Chapter \ref{sec:5}). The question we address here is to estimate empirical performance quantiles on the basis of so far observed performance vectors. For this task, we are inspired by [CHAM-2006] and [NR3-2007], who present an efficient algorithm for incrementally updating a quantile-binned cumulative distribution function (CDF) with newly observed CDFs.
+Suppose that we see flying in random multiple criteria performances from a given model of random performance tableau (see Chapter \ref{sec:5}). The question we address here is to estimate empirical performance quantiles on the basis of so far observed performance vectors. For this task, we are inspired by \citep{CHAM-2006} and \citep{NR3-2007}, who present an efficient algorithm for incrementally updating a quantile-binned cumulative distribution function (CDF) with newly observed CDFs.
 
 The \texttt{PerformanceQuantiles} class implements such a performance quantiles estimation based on a given performance tableau. Its main attributes are:
 \begin{itemize}
@@ -224,7 +224,7 @@ The \texttt{LearnedQuantilesRatingDigraph} class instance's \texttt{actions} dic
 
 The main run time is spent by the class constructor in computing a bipolar-valued outranking relation on the extended actions set including both the new alternatives as well as the quartile class limits (see Listing \ref{list:10.4} Lines 23-29). In case of large volumes, i.e. many new decision alternatives and centile classes for instance, a multi-threading version may be used when multiple processing cores are available.
 
-The actual rating procedure will rely on a complete ranking of the new decision alternatives as well as the quantile class limits obtained from the corresponding bipolar-valued outranking digraph. Two efficient and scalable ranking rules, the \Copeland and its valued version, the \NetFlows rule may be used for this purpose. The \texttt{rankingRule} parameter allows to choose one of both. With \texttt{rankingRule='best'} (see Listing \ref{list:10.4} Line 3 ) the \texttt{LearnedQuantilesRatingDigraph} constructor will choose the ranking rule that results in the highest ordinal correlation with the given outranking relation (see Chapter \ref{sec:22} and [BIS-2012]).
+The actual rating procedure will rely on a complete ranking of the new decision alternatives as well as the quantile class limits obtained from the corresponding bipolar-valued outranking digraph. Two efficient and scalable ranking rules, the \Copeland and its valued version, the \NetFlows rule may be used for this purpose. The \texttt{rankingRule} parameter allows to choose one of both. With \texttt{rankingRule='best'} (see Listing \ref{list:10.4} Line 3 ) the \texttt{LearnedQuantilesRatingDigraph} constructor will choose the ranking rule that results in the highest ordinal correlation with the given outranking relation (see Chapter \ref{sec:22} and \citep{BIS-2012a}).
 
 In this rating example, the \Copeland rule appears to be the more appropriate ranking rule.
 
@@ -345,4 +345,12 @@ To avoid having to recompute performance deciles from historical data when wishi
 With the \texttt{quantiles} parameter (see Listing \ref{list:10.10} Line 2), we may recover by interpolation the same quartiles rating as obtained directly with historical performance quartiles (see Listing \ref{list:10.8}). Mind that a correct interpolation of quantiles from a given cumulative distribution function requires more or less uniform distributions of observations in each bin. 
 
 More generally, in the case of industrial production monitoring problems, for instance, where large volumes of historical performance data may be available, it may be of interest to estimate even more precisely the marginal cumulative distribution functions, especially when \emph{tail} rating results, i.e. distinguishing \emph{very best}, or \emph{very weak} multiple criteria performances, become a critical issue. Similarly, the \texttt{historySize} parameter may be used for monitoring on the fly \emph{unstable} random multiple criteria performance data.  	
- 
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/10-chapterAbsoluteRating.bbl} 

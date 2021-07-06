@@ -202,7 +202,7 @@ M(R_1 \Leftrightarrow R_2) \; &= \\  &\sum_{(x \neq y)} \Big[ \min \Big( \max \b
 
 $M(R_1 \Leftrightarrow R_2)$ is thus given by the sum of the non reflexive terms of the relation table of $eq$, the relation equivalence digraph computed above (see Listing \ref{list:16.3}).
 
-In the crisp case, $M(R_1 \Leftrightarrow R_2)$  is now normalized with the maximum number of possible irreflexive pairs, namely $n(n-1)$. In a generalized $r$-valued case, the maximal possible equivalence majority margin $M$ corresponds to the sum $D$ of the conjoint determinations of $(x \,R_1\, y)$ and $(x \,R2\, y)$ (see [BIS-2012p]). 
+In the crisp case, $M(R_1 \Leftrightarrow R_2)$  is now normalized with the maximum number of possible irreflexive pairs, namely $n(n-1)$. In a generalized $r$-valued case, the maximal possible equivalence majority margin $M$ corresponds to the sum $D$ of the conjoint determinations of $(x \,R_1\, y)$ and $(x \,R2\, y)$ (see \citep{BIS-2012a}). 
 \begin{equation}
   D \;=\; \sum_{x \neq y} \min \Big[ abs\big(r(x \,R_1\, y) \big), abs \big( r(x \,R_2\, y \big)  \Big]\;.
 \end{equation}
@@ -219,7 +219,7 @@ It is worthwhile noticing that the ordinal correlation index $\tau(R_1,R_2)$ we 
 \item $d \;=\; \frac{D}{n(n-1)}$ : the normalized determination of the corresponding pairwise relational equivalence statements, in fact the \emph{determinateness} of the relational equivalence digraph.
 \end{itemize}
 
-We have thus successfully \emph{out-factored} the epistemic determination effect from the ordinal correlation effect. With completely determined relations, $\tau(R_1,R_2) \;=\; r(R_1 \Leftrightarrow R_2)$. By convention, we set the ordinal correlation with a completely indeterminate relation, i.e. when $D = 0$, to the indeterminate correlation value $0.0$. With uniformly chosen random $r$-valued relations, the expected $\tau$ index is $0.0$, denoting in fact an indeterminate correlation. The corresponding expected normalized determination $d$ is about $0.333$ (see [BIS-2012p]).
+We have thus successfully \emph{out-factored} the epistemic determination effect from the ordinal correlation effect. With completely determined relations, $\tau(R_1,R_2) \;=\; r(R_1 \Leftrightarrow R_2)$. By convention, we set the ordinal correlation with a completely indeterminate relation, i.e. when $D = 0$, to the indeterminate correlation value $0.0$. With uniformly chosen random $r$-valued relations, the expected $\tau$ index is $0.0$, denoting in fact an indeterminate correlation. The corresponding expected normalized determination $d$ is about $0.333$ (see \citep{BIS-2012a}).
 
 We may verify these relations with help of the corresponding equivalence digraph $eq$ (see Listing \ref{list:16.4}).
 
@@ -411,3 +411,13 @@ Such a preordering of the movies may, for instance, be computed with the \texttt
 \end{lstlisting}
 
 In the next Chapter \ref{sec:17}, we thouroughly discuss the computation of kernels in bipolar-valued digraphs.
+
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/16-chapterCorrelation.bbl}

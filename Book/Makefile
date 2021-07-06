@@ -16,7 +16,32 @@ all:
 book.pdf: 
 	# makes a pdf directly
 	pdflatex book.tex
+	#bibtex 02-mainMatters/00-chapterIntroduction.aux
+	#bibtex 02-mainMatters/01-chapterIntroDigraph3.aux
+	bibtex 02-mainMatters/02-chapterDigraphs.aux
 	bibtex 02-mainMatters/03-chapterOutrankingDigraphs.aux
+	bibtex 02-mainMatters/04-chapterNewPerfTab.aux
+	#bibtex 02-mainMatters/05-chapterRandomPerfTabs.aux
+	bibtex 02-mainMatters/06-chapterBestChoice.aux
+	bibtex 02-mainMatters/07-chapterWinnerElection.aux
+	bibtex 02-mainMatters/08-chapterRankings.aux
+	#bibtex 02-mainMatters/09-chapterRelativeRating.aux
+	bibtex 02-mainMatters/10-chapterAbsoluteRating.aux
+	bibtex 02-mainMatters/11-chapterHPCRanking.aux
+	bibtex 02-mainMatters/12-chapterAliceChoice.aux
+	bibtex 02-mainMatters/13-chapterBestCSDpts.aux
+	#bibtex 02-mainMatters/14-chapterBestStudents.aux
+	#bibtex 02-mainMatters/15-chapterExercises.aux
+	bibtex 02-mainMatters/16-chapterCorrelation.aux
+	bibtex 02-mainMatters/17-chapterKernels.aux
+	bibtex 02-mainMatters/18-chapterConfidentOutrankings.aux
+	bibtex 02-mainMatters/19-chapterRobustOutrankings.aux
+	#bibtex 02-mainMatters/20-chapterMultipartisan.aux
+	#bibtex 02-mainMatters/21-chapterTemperingPlurality.aux
+	bibtex 02-mainMatters/22-chapterGraphs.aux
+	bibtex 02-mainMatters/23-chapterTreeGraphs.aux
+	bibtex 02-mainMatters/24-chapterIsomorphicMIS.aux
+	bibtex 02-mainMatters/25-chapterPerfectGraphs.aux
 	pdflatex book.tex
 	pdflatex book.tex
 	#makeindex -s svind.ist book.idx

@@ -5,8 +5,6 @@
 
 \abstract{To be written.}
 
-%.. seealso:: Lecture 7 notes from the MICS Algorithmic Decision Theory course: [ADT-L7].
-
 \section{What site to choose ?}
 \label{sec:6.1}
 
@@ -94,7 +92,7 @@ Except the \emph{Costs} criterion, all other criteria admit for grading a qualit
 
 In Table \ref{tab:6.3} we may also see that the \emph{Costs} criterion admits the highest significance ($45.0$), followed by the \emph{Future turnover} criteria $(32.0 + 26.0 + 23.0 = 81.0)$, The \emph{Working conditions} criteria are the less significant $(10.0 + 6.0, + 3.0 = 19.0)$. It follows that the CEO considers \emph{maximizing the future turnover} the most important objective ($81.0$), followed by minizing the yearly costs ($45.0$), and less important, \emph{maximizing working conditions} ($19.0$). 
 
-Concerning yearly costs, we suppose that the CEO is indifferent up to a performance difference of $1000.00$€, and he actually prefers a site if there is at least a positive difference of $2500.00$€. The grades observed on the six qualitative criteria (measured in percentages of satisfaction) are very subjective and rather imprecise. The CEO is hence indifferent up to a satisfaction difference of $10\%$, and he claims a significant preference when the satisfaction difference is at least of $20\%$.  Furthermore, a satisfaction difference of $80\%$ represents for him a \emph{considerably large} performance difference, triggering the case given a polarisation of the preferential situations (see [BIS-2013]). 
+Concerning yearly costs, we suppose that the CEO is indifferent up to a performance difference of $1000.00$€, and he actually prefers a site if there is at least a positive difference of $2500.00$€. The grades observed on the six qualitative criteria (measured in percentages of satisfaction) are very subjective and rather imprecise. The CEO is hence indifferent up to a satisfaction difference of $10\%$, and he claims a significant preference when the satisfaction difference is at least of $20\%$.  Furthermore, a satisfaction difference of $80\%$ represents for him a \emph{considerably large} performance difference, triggering the case given a polarisation of the preferential situations (see \citep{BIS-2013}). 
 
 In view of Table \ref{tab:6.3}, what is now the office site we may recommend to the CEO as \textbf{best choice}?
 
@@ -171,7 +169,7 @@ A colorful comparison of all the performances is shown in Figure \ref{fig:6.1} b
 
 Site $Ave$ shows extreme and contradictory performances: highest \emph{Costs} and no \emph{Working Comfort} on the one hand, and total satisfaction with respect to \emph{Standing}, \emph{Proximity} and \emph{Parking facilities} on the other hand. Similar, but opposite, situation is given for site $Ces$: unsatisfactory \emph{Working Space}, no \emph{Standing} and no \emph{Working Comfort} on the one hand, and lowest \emph{Costs}, best \emph{Proximity} and \emph{Parking facilities} on the other hand. Contrary to these contradictory alternatives, we observe two appealing compromise decision alternatives: sites $Dom$ and $Gar$. Finally, site $Fen$ is clearly the less satisfactory alternative of all.
 
-To help now the CEO choosing the best site, we are going to compute pairwise outrankings (see [BIS-2013]) on the set of potential sites.
+To help now the CEO choosing the best site, we are going to compute pairwise outrankings (see \citep{BIS-2013}) on the set of potential sites.
 
 
 \section{Computing the outranking digraph}
@@ -182,7 +180,8 @@ For two sites $x$ and $y$:
 \item $x$ \emph{outranks} $y$, denoted $(x \succsim y)$, is given when there is:
    \begin{enumerate}
      \item A \textbf{majority} of criteria significance concordantly supporting that site $x$ is \emph{at least as satisfactory as} site $y$, and
-    \item \textbf{No considerable} counter-performance observed on any discordant criterion.
+     \item \textbf{No considerable} counter-performance observed on any discordant criterion.10
+       
     \end{enumerate}
 \item $x$ \emph{does not outrank} $y$, denoted $(x \not\succsim y)$, is given when there is:
    \begin{enumerate}
@@ -191,7 +190,7 @@ For two sites $x$ and $y$:
     \end{enumerate}
 \end{itemize}
 
-The credibility of each pairwise outranking situation (see [BIS-2013]), denoted $r(x \succsim y)$, is measured in a bipolar significance valuation $[-1.0, 1.0]$, where \textbf{positive} terms $r(x \succsim y)\, >\, 0.0$ indicate a \textbf{validated}, and \textbf{negative} terms $r(x \succsim y)\, <\, 0.0$ indicate a \textbf{non-validated} outranking situation. The \textbf{median} value $r(x \succsim y)\, = \,0.0$ represents an \textbf{indeterminate} situation (see [BIS-2004a]).   
+The credibility of each pairwise outranking situation (see \citep{BIS-2013}), denoted $r(x \succsim y)$, is measured in a bipolar significance valuation $[-1.0, 1.0]$, where \textbf{positive} terms $r(x \succsim y)\, >\, 0.0$ indicate a \textbf{validated}, and \textbf{negative} terms $r(x \succsim y)\, <\, 0.0$ indicate a \textbf{non-validated} outranking situation. The \textbf{median} value $r(x \succsim y)\, = \,0.0$ represents an \textbf{indeterminate} situation (see \citep{BIS-2004a}).   
 
 For computing such a bipolar-valued outranking digraph from the given performance tableau $t$, we use the \texttt{BipolarOutrankingDigraph} constructor from the \texttt{outrankingDigraphs} module. The corresponding \texttt{showHTMLRelationTable} method shows here the resulting bipolar-valued adjacency matrix in a system browser window (see Fig. \ref{fig:6.2}).
 
@@ -244,7 +243,7 @@ Outranking digraphs are \emph{weakly complete}, i.e. for all $x$ and $y$ in $X$,
 \section{Computing a \Rubis best choice recommendation}
 \label{sec:6.3}
 
-Following the \Rubis outranking method (see [BIS-2008]), potential best choice recommendations are determined by the outranking \textbf{prekernels} --weakly independent and strictly outranking choices-- of the outranking digraph (see the tutorial on computing digraph kernels). The case given, we previously need to break open all chordless odd circuits at their weakest link.
+Following the \Rubis outranking method (see \citep{BIS-2008a}), potential best choice recommendations are determined by the outranking \textbf{prekernels} --weakly independent and strictly outranking choices-- of the outranking digraph (see the tutorial on computing digraph kernels). The case given, we previously need to break open all chordless odd circuits at their weakest link.
 
 \begin{lstlisting}
 >>> from digraphs import BrokenCocsDigraph
@@ -379,7 +378,7 @@ Yet, we must as well notice that the cheapest alternative $C$ is in fact \textbf
     Valuation in range: -145.00 to +145.00; global concordance: +15.00/-15.00
 \end{lstlisting}
   
-To model these \emph{strict outranking} situations, we may recompute the best choice recommendation on the \textbf{codual}, the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance $g$ (see [BIS-2013]), as follows:
+To model these \emph{strict outranking} situations, we may recompute the best choice recommendation on the \textbf{codual}, the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance $g$ (see \citep{BIS-2013}]), as follows:
 
 \begin{lstlisting}[caption={Computing the strict best choice recommendation},label=list:6.6]
 >>> g.showBestChoiceRecommendation(\
@@ -409,7 +408,7 @@ To model these \emph{strict outranking} situations, we may recompute the best ch
 	     'D': 0.00, 'C': 0.00, 'B': 0.00, 'A': 0.00, }
 \end{lstlisting}				  
 
-It is interesting to notice in Listing \ref{list:6.6} Line 9 that the \textbf{strict best choice recommendation} consists in the set of weak Condorcet winners: $A$, $C$ and $D$. In the corresponding characteristic vector (see Lines 15-16), representing the bipolar credibility degree with which each alternative may indeed be considered a best choice (see [BIS-2006a], [BIS-2006b]), we find confirmed that alternative $D$ is the only positively validated one, whereas both extreme alternatives - $A$ (the most expensive) and $C$ (the cheapest) - stay in an indeterminate situation. They may be potential best choice candidates besides $D$. Notice furthermore that compromise alternative $G$, while not actually included in any outranking prekernel, shows as well an indeterminate situation with respect to \textbf{being or not being} a potential best choice candidate. 
+It is interesting to notice in Listing \ref{list:6.6} Line 9 that the \textbf{strict best choice recommendation} consists in the set of weak Condorcet winners: $A$, $C$ and $D$. In the corresponding characteristic vector (see Lines 15-16), representing the bipolar credibility degree with which each alternative may indeed be considered a best choice (see \citep{BIS-2006a,BIS-2006b}), we find confirmed that alternative $D$ is the only positively validated one, whereas both extreme alternatives - $A$ (the most expensive) and $C$ (the cheapest) - stay in an indeterminate situation. They may be potential best choice candidates besides $D$. Notice furthermore that compromise alternative $G$, while not actually included in any outranking prekernel, shows as well an indeterminate situation with respect to \textbf{being or not being} a potential best choice candidate. 
 
 We may also notice (see Line 16 and Line 19) that both alternatives $A$ and $F$ are reported as certainly strict outranked choices, hence as \textbf{potential worst choice recommendation} . This confirms again the global incomparability status of alternative $A$ (see Fig. \ref{fig:6.3}).
 
@@ -462,13 +461,22 @@ To get a more complete insight in the overall strict outranking situations, we m
 	   
 The best choice recommendation appears hence depending on the very importance the CEO is attaching to each of the three decision objectives he is considering. In the setting here, where he considers that \emph{maximizing the future turnover} is the most important objective followed by \emph{minimizing the Costs} and, less important, \emph{maximizing the working conditions}, site $D$ represents actually the best compromise. However, if \emph{Costs} do not play much a role, it would be perhaps better to decide to move to the most advantageous site $A$; or if, on the contrary, \emph{Costs} do matter a lot, moving to the cheapest alternative $C$ could definitely represent a more convincing recommendation. 
 
-It might be worth, as an \textbf{exercise}, to modify these criteria significance weights in the \texttt{officeChoice.py} data file in such a way that
+\noindent \textbf{Exercise:}
+
+\noindent It might be worth modifying these criteria significance weights in the \texttt{officeChoice.py} data file in such a way that:
 \begin{itemize}
-\item all criteria under an objective appear \emph{equi-significant}, and
-\item all three decision objectives are considered \emph{equally important}.
+\item All criteria under an objective appear \emph{equi-significant}, and
+\item All three decision objectives are considered \emph{equally important}.
 \end{itemize}
+What will become the best choice recommendation under this working hypothesis? \footnote{See also Lecture 7 notes from the MICS Algorithmic Decision Theory course \citep{ADT-L7}.} 
 
-What will become the best choice recommendation under this working hypothesis?  
 
-%.. seealso:: Lecture 7 notes from the MICS Algorithmic Decision Theory course: [ADT-L7].
- 
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/06-chapterBestChoice.bbl}

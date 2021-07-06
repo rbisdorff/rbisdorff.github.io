@@ -71,7 +71,8 @@ As mentioned in the previous Chapter \ref{sec:1}, the {\tt Digraph} class provid
      '6': in => {'5', '2'}, out => {'5', '7', '1', '3', '4'}
      '7': in => {'5', '6', '3'}, out => {'5'}
 \end{lstlisting}   
-Mind that most Digraph class methods will ignore the \emph{reflexive} links by considering that they are \emph{indeterminate}, i.e. the characteristic value $r(x\,S\,x)$ for all action $x$ is set to the \emph{median}, i.e. \emph{indeterminate} value $0.0$ in this case (see Listing \ref{list:2.2} Lines 12-18 and [BIS-2004a]).
+
+Mind that most Digraph class methods will ignore the \emph{reflexive} links by considering that they are \emph{indeterminate}, i.e. the characteristic value $r(x\,S\,x)$ for all action $x$ is set to the \emph{median}, i.e. \emph{indeterminate} value $0.0$ in this case (see Listing \ref{list:2.2} Lines 12-18 and \citep{BIS-2004a} ).
 
 \section{Graphviz drawings}
 \label{sec:2.2}
@@ -419,3 +420,13 @@ Let us finally mention some special universal classes of digraphs that are readi
 \end{lstlisting}
 
 Mind the subtle difference between the neighborhoods of an \textbf{empty} and the neighborhoods of an \textbf{indeterminate} digraph instance. In the first kind, the neighborhoods are known to be completely \emph{empty}  (see Listing \ref{list:2.11} Lines 22-27) whereas, in the latter, \emph{nothing is known} about the actual neighborhoods of the nodes  (see Lines 45-50). These two cases illustrate why in the case of \textbf{bipolar-valued} digraphs, we may need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
+
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+%\addcontentsline{toc}{section}{Chapter Bibliograhy}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/02-chapterDigraphs.bbl}

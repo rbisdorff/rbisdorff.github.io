@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+% this bibliography was produced with the style dinat.bst v2.5
+\makeatletter
+\newcommand{\dinatlabel}[1]%
+{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
+\makeatother
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[Bisdorff und Marichal(2008)]{ISOMIS-08}
+\dinatlabel{Bisdorff und Marichal 2008} \textsc{Bisdorff}, R.~;
+  \textsc{Marichal}, J.~L.:
+\newblock Counting non-isomorphic maximal independent sets of the n-cycle
+  graph.
+\newblock In: \emph{Journal of Integer Sequences}
+\newblock 11 (2008), Nr.~Art. 08.5.7, S.~1--16. --
+\newblock URL
+  \url{https://cs.uwaterloo.ca/journals/JIS/VOL11/Marichal/marichal.html}
+
+\end{thebibliography}

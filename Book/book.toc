@@ -1,9 +1,268 @@
-\contentsline {chapter}{\numberline {1}Working with outranking digraphs}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Outranking digraph model}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}The bipolar-valued outranking digraph}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Pairwise comparisons}{4}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Recoding the digraph valuation}{5}{section.1.4}%
-\contentsline {section}{\numberline {1.5}The strict outranking digraph}{6}{section.1.5}%
-\contentsline {section}{Chapter Bibliograhy}{8}{section*.2}%
-\contentsline {section}{References}{8}{section*.3}%
-\contentsline {chapter}{Appendix}{9}{appendix.A}%
+\gdef \the@ipfilectr {@-1}
+\contentsline {part}{Part\ I\hspace {\betweenumberspace }Introduction to the {\sc Digraph3}\xspace software resources}{1}{part.1}%
+\contentsline {xpart}{Introduction to the {\sc Digraph3}\xspace software resources}{2}{part.1}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-2}
+\contentsline {chapter}{\numberline {1}Working with the {\sc Digraph3}\xspace Python resources}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Installing the {\sc Digraph3}\xspace resources}{3}{section.1.1}%
+\contentsline {paragraph}{Dependencies}{4}{section*.2}%
+\contentsline {section}{\numberline {1.2}Starting a Python3 session}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Permanent storage of a digraph object}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Inspecting a digraph object}{7}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Special digraph instances}{11}{section.1.5}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-3}
+\contentsline {chapter}{\numberline {2}Working with bipolar-valued digraphs}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Random bipolar-valued digraphs}{13}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Graphviz drawings}{15}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Asymmetric and symmetric parts}{16}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Border and inner parts}{17}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Fusion by epistemic disjunction}{18}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Dual, converse and codual digraphs}{19}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Symmetric and transitive closures}{21}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Strong components}{22}{section.2.8}%
+\contentsline {section}{\numberline {2.9}CSV storage}{22}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Complete, empty and indeterminate digraphs}{24}{section.2.10}%
+\contentsline {section}{References}{26}{section*.4}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-4}
+\contentsline {chapter}{\numberline {3}Working with outranking digraphs}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Outranking digraph model}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}The bipolar-valued outranking digraph}{29}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Pairwise comparisons}{30}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Recoding the digraph valuation}{31}{section.3.4}%
+\contentsline {section}{\numberline {3.5}The strict outranking digraph}{32}{section.3.5}%
+\contentsline {section}{Chapter Bibliography}{34}{section*.5}%
+\contentsline {section}{References}{34}{section*.6}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-5}
+\contentsline {part}{Part\ II\hspace {\betweenumberspace }Evaluation models and decision methods and tools}{35}{part.2}%
+\contentsline {xpart}{Evaluation models and decision methods and tools}{36}{part.2}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-6}
+\contentsline {chapter}{\numberline {4}How to create a new performance tableau instance}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Editing a template file}{37}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Editing the decision alternatives}{39}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Editing the decision objectives}{40}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Editing the family of performance criteria}{41}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Editing the performance table}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Inspecting the template outranking relation}{45}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Ranking the template peformance tableau}{46}{section.4.7}%
+\contentsline {section}{Chapter Bibliography}{48}{section*.7}%
+\contentsline {section}{References}{48}{section*.8}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-7}
+\contentsline {chapter}{\numberline {5}Generating random performance tableaux}{49}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{49}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Random standard performance tableaux}{50}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Random Cost-Benefit performance tableaux}{52}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Random three objectives performance tableaux}{56}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Random academic performance tableaux}{58}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Random linearly ranked performance tableaux}{62}{section.5.6}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-8}
+\contentsline {chapter}{\numberline {6}Computing a best choice recommendation}{63}{chapter.6}%
+\contentsline {section}{\numberline {6.1}What site to choose ?}{63}{section.6.1}%
+\contentsline {section}{\numberline {6.2}The {\sc Digraph3}\xspace Performance tableau}{65}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Computing the outranking digraph}{67}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Computing a {\sc Rubis}\xspace best choice recommendation}{68}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Computing \emph {strict best} choice recommendations}{71}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Weakly ordering the outranking digraph}{73}{section.6.6}%
+\contentsline {section}{Chapter Bibliography}{76}{section*.9}%
+\contentsline {section}{References}{76}{section*.10}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-9}
+\contentsline {chapter}{\numberline {7}Computing the winner of an election}{77}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Linear voting profiles}{77}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Computing the winner}{78}{section.7.2}%
+\contentsline {section}{\numberline {7.3}The Condorcet winner}{80}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Cyclic social preferences}{82}{section.7.4}%
+\contentsline {section}{\numberline {7.5}On generating realistic random linear voting profiles}{83}{section.7.5}%
+\contentsline {section}{Chapter Bibliography}{88}{section*.11}%
+\contentsline {section}{References}{88}{section*.12}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-10}
+\contentsline {chapter}{\numberline {8}Ranking with multiple incommensurable criteria}{89}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The ranking problem}{89}{section.8.1}%
+\contentsline {section}{\numberline {8.2}The {\sc Copeland}\xspace ranking}{91}{section.8.2}%
+\contentsline {section}{\numberline {8.3}The {\sc NetFlows}\xspace ranking}{94}{section.8.3}%
+\contentsline {section}{\numberline {8.4}{\sc Kemeny}\xspace rankings}{95}{section.8.4}%
+\contentsline {section}{\numberline {8.5}{\sc Slater}\xspace rankings}{97}{section.8.5}%
+\contentsline {section}{\numberline {8.6}{\sc Kohler}\xspace 's ranking-by-choosing rule}{98}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Tideman's {\sc RankedPairs}\xspace ranking rule}{101}{section.8.7}%
+\contentsline {section}{Chapter Bibliography}{103}{section*.13}%
+\contentsline {section}{References}{103}{section*.14}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-11}
+\contentsline {chapter}{\numberline {9}Rating by sorting into relative performance quantiles}{105}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Quantile sorting on a single criterion}{105}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Quantiles sorting with multiple performance criteria}{106}{section.9.2}%
+\contentsline {section}{\numberline {9.3}The sparse pre-ranked outranking digraph model}{110}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Ranking pre-ranked sparse outranking digraphs}{113}{section.9.4}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-12}
+\contentsline {chapter}{\numberline {10}Rating by ranking with learned performance quantile norms}{115}{chapter.10}%
+\contentsline {section}{\numberline {10.1}The absolute rating problem}{115}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Incremental learning of historical performance quantiles}{116}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Rating-by-ranking new performances with quantile norms}{118}{section.10.3}%
+\contentsline {section}{Chapter Bibliography}{127}{section*.15}%
+\contentsline {section}{References}{127}{section*.16}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-13}
+\contentsline {chapter}{\numberline {11}HPC ranking of big performance tableaux}{129}{chapter.11}%
+\contentsline {section}{\numberline {11.1}C-compiled Python modules}{129}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Big Data performance tableaux}{130}{section.11.2}%
+\contentsline {section}{\numberline {11.3}C-implemented integer-valued outranking digraphs}{131}{section.11.3}%
+\contentsline {section}{\numberline {11.4}The sparse outranking digraph implementation}{133}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Ranking big performance tableaux}{136}{section.11.5}%
+\contentsline {section}{\numberline {11.6}HPC quantiles ranking records}{139}{section.11.6}%
+\contentsline {section}{Chapter Bibliography}{140}{section*.17}%
+\contentsline {section}{References}{140}{section*.18}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-14}
+\contentsline {part}{Part\ III\hspace {\betweenumberspace }Evaluation and decision case studies}{141}{part.3}%
+\contentsline {xpart}{Evaluation and decision case studies}{142}{part.3}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-15}
+\contentsline {chapter}{\numberline {12}Alice's best choice: A selection case study}{143}{chapter.12}%
+\contentsline {section}{\numberline {12.1}The decision problem}{144}{section.12.1}%
+\contentsline {section}{\numberline {12.2}The performance tableau}{145}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Building a best choice recommendation}{147}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Robustness analysis}{152}{section.12.4}%
+\contentsline {section}{Chapter Bibliography}{157}{section*.19}%
+\contentsline {section}{References}{157}{section*.20}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-16}
+\contentsline {chapter}{\numberline {13}The best academic Computer Science Depts: A ranking case study}{159}{chapter.13}%
+\contentsline {section}{\numberline {13.1}The THE performance tableau}{159}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Ranking with multiple criteria of ordinal significance}{165}{section.13.2}%
+\contentsline {section}{\numberline {13.3}How to judge the quality of a ranking result?}{172}{section.13.3}%
+\contentsline {section}{Chapter Bibliography}{179}{section*.21}%
+\contentsline {section}{References}{179}{section*.22}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-17}
+\contentsline {chapter}{\numberline {14}The best students, where do they study? A rating case study}{181}{chapter.14}%
+\contentsline {section}{\numberline {14.1}The performance tableau}{181}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Rating-by-ranking with lower-closed quantile limits}{185}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Inspecting the bipolar-valued outranking digraph}{189}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Rating by quantiles sorting}{190}{section.14.4}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-18}
+\contentsline {chapter}{\numberline {15}Exercises}{197}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Who will receive the best student award? (§)}{197}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Data}{197}{subsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.1.2}Questions}{198}{subsection.15.1.2}%
+\contentsline {section}{\numberline {15.2}How to fairly rank movies (§)}{198}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}Data}{198}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}Questions}{199}{subsection.15.2.2}%
+\contentsline {section}{\numberline {15.3}What is your best choice recommendation? (§)}{200}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Data}{200}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}Questions}{201}{subsection.15.3.2}%
+\contentsline {section}{\numberline {15.4}What is the best public policy? (§§)}{201}{section.15.4}%
+\contentsline {subsection}{\numberline {15.4.1}Data files}{201}{subsection.15.4.1}%
+\contentsline {subsection}{\numberline {15.4.2}Questions}{201}{subsection.15.4.2}%
+\contentsline {section}{\numberline {15.5}A fair diploma validation decision (§§§)}{202}{section.15.5}%
+\contentsline {subsection}{\numberline {15.5.1}Data}{202}{subsection.15.5.1}%
+\contentsline {subsection}{\numberline {15.5.2}Questions}{202}{subsection.15.5.2}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-19}
+\contentsline {part}{Part\ IV\hspace {\betweenumberspace }Advanced topics}{203}{part.4}%
+\contentsline {xpart}{Advanced topics}{204}{part.4}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-20}
+\contentsline {chapter}{\numberline {16}Ordinal Correlation}{205}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Coping with missing data}{205}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Modelling pairwise bipolar-valued rating opinions}{207}{section.16.2}%
+\contentsline {section}{\numberline {16.3}{\sc Kendall}\xspace 's tau index}{210}{section.16.3}%
+\contentsline {section}{\numberline {16.4}Bipolar-valued relational equivalence}{211}{section.16.4}%
+\contentsline {section}{\numberline {16.5}Fitness of ranking heuristics}{213}{section.16.5}%
+\contentsline {section}{\numberline {16.6}Illustrating preference divergences}{215}{section.16.6}%
+\contentsline {section}{\numberline {16.7}Exploring the ``\emph {better rated}'' and the ``\emph {as well as rated}'' opinions}{217}{section.16.7}%
+\contentsline {section}{Chapter Bibliography}{219}{section*.23}%
+\contentsline {section}{References}{219}{section*.24}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-21}
+\contentsline {chapter}{\numberline {17}On computing digraph kernels}{221}{chapter.17}%
+\contentsline {section}{\numberline {17.1}What is a graph kernel ?}{221}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Initial and terminal kernels}{223}{section.17.2}%
+\contentsline {section}{\numberline {17.3}Kernels in lateralized digraphs}{228}{section.17.3}%
+\contentsline {section}{\numberline {17.4}Computing first and last choice recommendations}{230}{section.17.4}%
+\contentsline {section}{\numberline {17.5}Tractability of prekernel computation}{235}{section.17.5}%
+\contentsline {section}{\numberline {17.6}{\sc Berge}\xspace kernel equation systems}{237}{section.17.6}%
+\contentsline {section}{Chapter Bibliography}{244}{section*.25}%
+\contentsline {section}{References}{244}{section*.26}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-22}
+\contentsline {chapter}{\numberline {18}On confident outrankings}{245}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Modelling uncertain criteria significances}{245}{section.18.1}%
+\contentsline {section}{\numberline {18.2}Bipolar-valued likelihood of ``\emph {at least as good as}'' situations}{247}{section.18.2}%
+\contentsline {section}{\numberline {18.3}Confidence level of outranking situations}{249}{section.18.3}%
+\contentsline {section}{Chapter Bibliography}{254}{section*.27}%
+\contentsline {section}{References}{254}{section*.28}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-23}
+\contentsline {chapter}{\numberline {19}On robust outrankings}{255}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Cardinal or ordinal criteria significances}{255}{section.19.1}%
+\contentsline {section}{\numberline {19.2}Qualifying the stability of outranking situations}{256}{section.19.2}%
+\contentsline {section}{\numberline {19.3}Computing stability denotations}{260}{section.19.3}%
+\contentsline {section}{\numberline {19.4}Robust bipolar-valued outranking digraphs}{262}{section.19.4}%
+\contentsline {section}{\numberline {19.5}Unopposed outranking situations}{265}{section.19.5}%
+\contentsline {section}{\numberline {19.6}Computing Pareto efficient multiobjective choices}{268}{section.19.6}%
+\contentsline {section}{Chapter Bibliography}{270}{section*.29}%
+\contentsline {section}{References}{270}{section*.30}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-24}
+\contentsline {chapter}{\numberline {20}Two-stage elections with multipartisan primary selection}{271}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Converting voting profiles into performance tableaux}{271}{section.20.1}%
+\contentsline {section}{\numberline {20.2}Multipartisan primary selection of eligible candidates}{273}{section.20.2}%
+\contentsline {section}{\numberline {20.3}Secondary election winner determination}{275}{section.20.3}%
+\contentsline {section}{\numberline {20.4}Multipartisan preferences in divisive politics}{275}{section.20.4}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-25}
+\contentsline {chapter}{\numberline {21}Bipolar approval voting}{281}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Bipolar approval voting systems}{281}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Pairwise comparison of bipolar approval votes}{284}{section.21.2}%
+\contentsline {section}{\numberline {21.3}Three-valued evaluative voting system}{286}{section.21.3}%
+\contentsline {section}{\numberline {21.4}Favouring multipartisan candidates}{289}{section.21.4}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-26}
+\contentsline {part}{Part\ V\hspace {\betweenumberspace }Working with simple graphs}{295}{part.5}%
+\contentsline {xpart}{Working with simple graphs}{296}{part.5}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-27}
+\contentsline {chapter}{\numberline {22}Working with undirected graphs}{297}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Implementing undirected graphs}{297}{section.22.1}%
+\contentsline {section}{\numberline {22.2}q-coloring of a graph}{300}{section.22.2}%
+\contentsline {section}{\numberline {22.3}MIS and clique enumeration}{301}{section.22.3}%
+\contentsline {section}{\numberline {22.4}Line graphs and maximal matchings}{302}{section.22.4}%
+\contentsline {section}{\numberline {22.5}Grids and the Ising model}{305}{section.22.5}%
+\contentsline {section}{\numberline {22.6}Simulating Metropolis random walks}{306}{section.22.6}%
+\contentsline {section}{Chapter Bibliography}{308}{section*.31}%
+\contentsline {section}{References}{308}{section*.32}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-28}
+\contentsline {chapter}{\numberline {23}On tree graphs and graph forests}{309}{chapter.23}%
+\contentsline {section}{\numberline {23.1}Generating random tree graphs}{309}{section.23.1}%
+\contentsline {section}{\numberline {23.2}Recognizing tree graphs}{311}{section.23.2}%
+\contentsline {section}{\numberline {23.3}Spanning trees and forests}{313}{section.23.3}%
+\contentsline {section}{\numberline {23.4}Maximum determined spanning forests}{315}{section.23.4}%
+\contentsline {section}{Chapter Bibliography}{318}{section*.33}%
+\contentsline {section}{References}{318}{section*.34}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-29}
+\contentsline {chapter}{\numberline {24}Computing the non isomorphic MISs of the n-cycle graph}{319}{chapter.24}%
+\contentsline {section}{\numberline {24.1}Computing maximal independent sets (MISs)}{320}{section.24.1}%
+\contentsline {section}{\numberline {24.2}Computing the automorphism group}{321}{section.24.2}%
+\contentsline {section}{\numberline {24.3}Computing the isomorphic MISs}{322}{section.24.3}%
+\contentsline {section}{Chapter Bibliography}{324}{section*.35}%
+\contentsline {section}{References}{324}{section*.36}%
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-30}
+\contentsline {chapter}{\numberline {25}About split, interval and permutation graphs}{325}{chapter.25}%
+\contentsline {section}{\numberline {25.1}A multiply perfect graph}{327}{section.25.1}%
+\contentsline {section}{\numberline {25.2}Who is the liar?}{329}{section.25.2}%
+\contentsline {section}{\numberline {25.3}Generating permutation graphs}{331}{section.25.3}%
+\contentsline {section}{\numberline {25.4}Recognizing permutation graphs}{334}{section.25.4}%
+\contentsline {section}{Chapter Bibliography}{340}{section*.38}%
+\contentsline {section}{References}{340}{section*.39}%
+\gdef \the@ipfilectr {}

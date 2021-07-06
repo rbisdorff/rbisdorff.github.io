@@ -217,7 +217,7 @@ In order to model a \textbf{coherent} performance tableau, the decision criteria
 
 In order to take into account any, usually \emph{unavoidable}, \textbf{imprecision} of the performance grading procedures, we may specify three performance \textbf{discrimination thresholds}: an \emph{indifference} ('ind'), a \emph{preference} ('pref') and a \emph{considerable performance difference} ('veto') threshold (see Listing \ref{list:4.3} Lines 10-12). The left decimal number of a threshold description tuple indicates a \emph{constant part}, whereas the right decimal number indicates a \emph{proportional} part.
 
-On the template performance criterion $g_1$, shown in Listing \ref{list:4.3}, we observe for instance a grading scale from $0.0$ to $100.0$ with a constant \emph{indifference} threshold of $2.5$, a constant \emph{preference} threshold of $5.0$, and a constant \emph{considerable performance difference} threshold of $60.0$. The latter threshold  will trigger, the case given, a \emph{polarisation} of the outranking statement [BIS-2013].
+On the template performance criterion $g_1$, shown in Listing \ref{list:4.3}, we observe for instance a grading scale from $0.0$ to $100.0$ with a constant \emph{indifference} threshold of $2.5$, a constant \emph{preference} threshold of $5.0$, and a constant \emph{considerable performance difference} threshold of $60.0$. The latter threshold  will trigger, the case given, a \emph{polarisation} of the outranking statement \citep{BIS-2013}.
 
 In a random \emph{Cost-Benefit} performance tableau model we may obtain by default the following content.
 
@@ -434,3 +434,12 @@ Due to a 11 against 7 \textbf{plurality tyranny} effect, the \emph{Copeland} ran
 
 It might be opportun to furthermore study the robustness of the apparent outranking situations when assuming only *ordinal* or *uncertain* criteria significance weights. If interested in mainly objectively *unopposed* (multipartisan) outranking situations, one might also try the {\tt UnOpposedOutrankingDigraph} constructor. (see Chapter \ref{sec:x}). 
  
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/04-chapterNewPerfTab.bbl}

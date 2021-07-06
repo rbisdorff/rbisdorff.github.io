@@ -281,7 +281,7 @@ Let us, first, have a critical look at the THE performance criteria.
 \label{fig:13.1}       % Give a unique label
 \end{figure}
 
-Considering a very likely imprecision of the performance grading procedure, followed by some potential violation of uniform distributed quantile classes, we assume here that a performance quantile difference of up to $abs(2.5)\%$ is \emph{insignificant}, whereas a difference of $5\%$ warrants a \emph{clearly better}, resp. \emph{clearly less good} performance. With quantiles $94\%$, resp. $87.3\%$, Oxford's CS teaching environment, for instance, is thus clearly better evaluated than that of the MIT (see Listing \ref{list:13.5} Lines 27-28). We shall furthermore assume that a \emph{considerable} performance quantile difference of $60\%$, observed on the three major ranking criteria: \emph{Teaching}, \emph{Research} and \emph{Citations}, will trigger a polarisation of a pairwise outranking, respectively a pairwise outranked situation [BIS-2013].
+Considering a very likely imprecision of the performance grading procedure, followed by some potential violation of uniform distributed quantile classes, we assume here that a performance quantile difference of up to $abs(2.5)\%$ is \emph{insignificant}, whereas a difference of $5\%$ warrants a \emph{clearly better}, resp. \emph{clearly less good} performance. With quantiles $94\%$, resp. $87.3\%$, Oxford's CS teaching environment, for instance, is thus clearly better evaluated than that of the MIT (see Listing \ref{list:13.5} Lines 27-28). We shall furthermore assume that a \emph{considerable} performance quantile difference of $60\%$, observed on the three major ranking criteria: \emph{Teaching}, \emph{Research} and \emph{Citations}, will trigger a polarisation of a pairwise outranking, respectively a pairwise outranked situation \citep{BIS-2013}.
 
 The effect of these performance discrimination thresholds on the preference modelling may be inspected as follows.
 
@@ -318,11 +318,11 @@ The effect of these performance discrimination thresholds on the preference mode
       Threshold pref : 5.00 + 0.00x ; percentile: 21.51
 \end{lstlisting}
 
-Between $6\%$ and $12\%$ of the observed quantile differences are, thus, considered to be \emph{insignificant}. Similarly, between $77\%$ and $88\%$ are considered to be \emph{significant}. Less than $1\%$ correspond to \emph{considerable} quantile differences on both the \emph{Teaching} and \emph{Research} criteria; actually triggering an epistemic polarisation effect [BIS-2013].
+Between $6\%$ and $12\%$ of the observed quantile differences are, thus, considered to be \emph{insignificant}. Similarly, between $77\%$ and $88\%$ are considered to be \emph{significant}. Less than $1\%$ correspond to \emph{considerable} quantile differences on both the \emph{Teaching} and \emph{Research} criteria; actually triggering an epistemic polarisation effect \citep{BIS-2013}.
 
 Beside the likely imprecise performance discrimination, the \emph{precise decimal significance weights}, as allocated by the THE authors to the five ranking criteria are, as well, quite \emph{questionable}. Criteria significance weights may carry usually hidden strategies for rendering the performance evaluations commensurable in view of a numerical computation of the overall ranking scores. The eventual ranking result is thus as much depending on the precise values of the given criteria significance weights as, vice versa, the given precise significance weights are depending on the subjectively expected and accepted ranking results \footnote{In a social choice context, this potential double bind between voting profiles and election result, corresponds to voting manipulation strategies.}. We will therefore drop such precise weights and, instead, only require a corresponding criteria significance preorder: 'gtch' = 'gres' > 'gcit' > 'gint' > 'gind'. \emph{Teaching environment} and \emph{Research volume and reputation} are equally considered most important, followed by \emph{Research influence}. Then comes \emph{International outlook in staff, students and research} and, least important finally, \emph{Industry income and innovation}.
 
-Both these working hypotheses: performance discrimitation thresholds and solely ordinal criteria significance, give us way to a ranking methodology based on \emph{robust pairwise outranking} situations (see Chapter \ref{sec:19} and [BIS-2004b]):
+Both these working hypotheses: performance discrimitation thresholds and solely ordinal criteria significance, give us way to a ranking methodology based on \emph{robust pairwise outranking} situations (see Chapter \ref{sec:19} and \citep{BIS-2004b}):
 \begin{itemize}
 \item We say that CS Dept $x$ \emph{robustly outranks} CS Dept $y$ when $x$ positively outranks $y$ with \textbf{all} significance weight vectors that are compatible with the significance preorder: 'gtch' = 'gres' > 'gcit' > 'gint' > 'gind';
 \item We say that CS Dept $x$ is \emph{robustly outranked} by CS Dept $y$ when $x$ is positively outranked by $y$ with \textbf{all} significance weight vectors that are compatible with the significance preorder: 'gtch' = 'gres' > 'gcit' > 'gint' > 'gind';
@@ -716,3 +716,12 @@ To conclude, let us emphasize, that, without any commensurability hypothesis and
 
 As an exercise, the reader is invited to try out other robust outranking based ranking heuristics. Notice also that we have not challenged in this case study the THE provided criteria significance preorder. It would be very interesting to consider the five ranking objectives as equally important and, consequently, consider the ranking criteria to be equisignificant. Curious to see the ranking results under such settings.
  
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/13-chapterBestCSDpts.bbl}

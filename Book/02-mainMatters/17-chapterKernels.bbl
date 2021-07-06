@@ -1,0 +1,49 @@
+\begin{thebibliography}{5}
+% this bibliography was produced with the style dinat.bst v2.5
+\makeatletter
+\newcommand{\dinatlabel}[1]%
+{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
+\makeatother
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[Berge(1962)]{BER-1958}
+\dinatlabel{Berge 1962} \textsc{Berge}, Cl.:
+\newblock \emph{The Theory of Graphs (original title: The theory of graphs and
+  its applications)}.
+\newblock Dover 2001 (originally published by Wiley 1962). Translated from a
+  French edition by Dunod, 1958, 1962
+
+\bibitem[Bisdorff(2000)]{BIS-2000}
+\dinatlabel{Bisdorff 2000} \textsc{Bisdorff}, R.:
+\newblock Logical foundation of fuzzy preferential systems with application to
+  the ELECTRE decision aid methods.
+\newblock In: \emph{Computers and Operations Research}
+\newblock 27 (2000), S.~673--687. --
+\newblock URL \url{http://hdl.handle.net/10993/23724}
+
+\bibitem[Bisdorff(2002)]{BIS-2002}
+\dinatlabel{Bisdorff 2002} \textsc{Bisdorff}, R.:
+\newblock Logical Foundation of Multicriteria Preference Aggregation.
+\newblock In: \textsc{Bouyssou}, D. (Hrsg.)~; \textsc{Jacquet-Lagr\`eze}, E.
+  (Hrsg.)~; \textsc{Perny}, P. (Hrsg.)~; \textsc{S\l{}owi\'{n}ski}, R.
+  (Hrsg.)~; \textsc{Vanderpooten}, D. (Hrsg.)~; \textsc{Vincke}, Ph. (Hrsg.):
+  \emph{Aiding Decisions with Multiple Criteria}.
+\newblock Kluwer Academic Publishers, 2002, S.~379--403
+
+\bibitem[Bisdorff(2006)]{BIS-2006b}
+\dinatlabel{Bisdorff 2006} \textsc{Bisdorff}, R.:
+\newblock On enumerating the kernels in a bipolar-valued digraph.
+\newblock In: \emph{Annales du Lamsade}
+\newblock 6 (2006), S.~1--38. --
+\newblock URL \url{hdl.handle.net/10993/38741}
+
+\bibitem[Klement und Pap(2004)]{BIS-2004a}
+\dinatlabel{Klement und Pap 2004} \textsc{Klement}, E.~P. (Hrsg.)~;
+  \textsc{Pap}, E. (Hrsg.):
+\newblock \emph{On a natural fuzzification of Boolean logic}.
+\newblock Bildungszentrum St. Magdalena, Linz (Austria), 2004. --
+\newblock 20--26~S. --
+\newblock URL \url{http://hdl.handle.net/10993/23721}
+
+\end{thebibliography}

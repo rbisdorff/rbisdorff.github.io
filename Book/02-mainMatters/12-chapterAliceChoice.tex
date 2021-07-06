@@ -126,7 +126,7 @@ Details of the performance criteria may be consulted in a browser view (see Fig.
 \label{fig:12.2}       % Give a unique label
 \end{figure}
 
-It is worthwhile noticing in Fig. \ref{fig:12.2} that, on her subjective attractiveness scale of the study programs (criterion $AS$), Alice considers a performance differences of 7 points to be \emph{considerable} and triggering, the case given, an outranking polarisation [BIS-2013]. Notice also the proportional \emph{indifference} ($1\%$) and \emph{preference} ($5\%$) discrimination thresholds shown on criterion $BC$-number of inhabitants.
+It is worthwhile noticing in Fig. \ref{fig:12.2} that, on her subjective attractiveness scale of the study programs (criterion $AS$), Alice considers a performance differences of 7 points to be \emph{considerable} and triggering, the case given, an outranking polarisation \citep{BIS-2013}. Notice also the proportional \emph{indifference} ($1\%$) and \emph{preference} ($5\%$) discrimination thresholds shown on criterion $BC$-number of inhabitants.
 
 Alice is subjectively evaluating the \emph{Attractiveness} of the studies (criterion $AS$) on an ordinal scale from 0 (weak) to 10 (excellent). Similarly, she is subjectively evaluating the \emph{Attractiveness} of the respective professions (criterion $AP$) on a three level ordinal scale from 0 (\emph{weak}), 1 (\emph{fair}) to 2 (\emph{good}). Considering the \emph{Occupational Prestige} (criterion $OP$), she looked up the SIOPS \footnote{Ganzeboom H.B.G, Treiman D.J. ``Internationally Comparable Measures of Occupational Status for the 1988 International Standard Classification of Occupations'', \emph{Social Science Research} 25, 201–239 (1996).}. All the other evaluation data she found on the internet (see Fig. \ref{fig:12.3}).
 
@@ -296,7 +296,7 @@ Let us now, for instance, check the pairwise outranking situations observed betw
 \end{figure}
 \clearpage
 
-In a similar way, we may finally compute a \emph{weak ranking} of all the potential study programs with the help of the \texttt{RankingByChoosingDigraph} constructor, who computes a bipolar ranking by conjointly \emph{best-choosing} and \emph{last-rejecting} [BIS-1999].
+In a similar way, we may finally compute a \emph{weak ranking} of all the potential study programs with the help of the \texttt{RankingByChoosingDigraph} constructor, who computes a bipolar ranking by conjointly \emph{best-choosing} and \emph{last-rejecting} \citep{BIS-1999}.
 
 \begin{lstlisting}[caption={Weakly ranking by bipolar best-choosing and last-rejecting},label=list:12.5]
 >>> from transitiveDigraphs import\
@@ -417,5 +417,14 @@ We may hence make use of the \texttt{exportGraphViz()} method of the\\ \texttt{T
 \clearpage
 In view of her performance tableau in Fig. \ref{fig:12.3}, \emph{Graduate Interpreter} studies at the Technical High School Köln, thus, represent definitely \textbf{Alice's very best choice}.
 
-For further reading about the \emph{Rubis Best Choice} methodology, one may consult in \cite{BIS-2015} the study of a \emph{real decision aid case} about choosing a best poster in a scientific conference.
+For further reading about the \emph{Rubis Best Choice} methodology, one may consult in \citep{BIS-2015} the study of a \emph{real decision aid case} about choosing a best poster in a scientific conference.
  
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/12-chapterAliceChoice.bbl}

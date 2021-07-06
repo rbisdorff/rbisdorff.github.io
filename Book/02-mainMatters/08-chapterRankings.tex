@@ -8,7 +8,7 @@
 \section{The ranking problem}
 \label{sec:8.1}
 
-We need to rank without ties a set $X$ of items (usually decision alternatives) that are evaluated on multiple incommensurable performance criteria; yet, for which we may know their pairwise bipolar-valued {\em strict outranking\/} characteristics, i.e. $r(x\, \succnsim \, y)$ for all $x, y \in X$ (see CoDual-Digraph-label and [BIS-2013]).
+We need to rank without ties a set $X$ of items (usually decision alternatives) that are evaluated on multiple incommensurable performance criteria; yet, for which we may know their pairwise bipolar-valued {\em strict outranking\/} characteristics, i.e. $r(x\, \succnsim \, y)$ for all $x, y \in X$ (see Section \ref{sec:x} and \citep{BIS-2013}).
 
 Let us consider a didactic outranking digraph $odg$ generated from a random Cost-Benefit performance tableau (see Section \ref{sec:5.3}) concerning 9 decision alternatives evaluated on 13 performance criteria. We may compute the corresponding {\em strict outranking digraph\/} with a codual transform (see Section \ref{sec:2.6} ) as follows.
 
@@ -135,7 +135,7 @@ Alternative $a5$ obtains here the best \Copeland score (+12), followed by altern
    Epistemic determination   :  0.230
 \end{lstlisting}
 
-With an epistemic determination level of 0.230, the \emph{extended} \Kendall $\tau$ index (see [BIS-2012]) is in fact computed on $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the pairwise strict outranking comparisons. Furthermore, the bipolar-valued \emph{relational equivalence} characteristics between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the corresponding \Copeland ranking.
+With an epistemic determination level of 0.230, the \emph{extended} \Kendall $\tau$ index (see \citep{BIS-2012a}) is in fact computed on $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the pairwise strict outranking comparisons. Furthermore, the bipolar-valued \emph{relational equivalence} characteristics between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the corresponding \Copeland ranking.
 
 The \Copeland scores deliver actually only a unique \emph{weak ranking}, i.e. a ranking with potential ties. This weak ranking may be constructed with the \texttt{WeakCopelandOrder} class.
 
@@ -217,7 +217,7 @@ To appreciate now the more or less correlation of both the \Copeland and the \Ne
 \section{\Kemeny rankings}
 \label{sec:8.4}
 
-A \Kemeny ranking is a linear ranking without ties which is \emph{closest}, nn the sense of the ordinal \Kendall distance (see [BIS-2012]), to the given valued outranking digraphs $g$ or $gcd$. This rule is also \emph{invariant} under the codual transform. 
+A \Kemeny ranking is a linear ranking without ties which is \emph{closest}, nn the sense of the ordinal \Kendall distance (see \citep{BIS-2012a}), to the given valued outranking digraphs $g$ or $gcd$. This rule is also \emph{invariant} under the codual transform. 
 
 \begin{lstlisting}[caption={Computing a \Kemeny ranking},label=list:8.7]   
 >>> from linearOrders import KemenyRanking
@@ -394,7 +394,7 @@ With this \emph{min-max} lexicographic ranking-by-choosing strategy, we find a c
      Bipolar-valued equivalence : +0.111
 \end{lstlisting}
 
-But \Kohler 's ranking has a \emph{dual} version, the prudent \textbf{Arrow-Raynaud} ordering-by-choosing rule, where a corresponding \emph{max-min} strategy, when used on the \emph{non-strict} outranking digraph $g$, for ordering the from \emph{last} to \emph{first} produces a similar ranking result (see [LAM-2009], [DIA-2010]).
+But \Kohler 's ranking has a \emph{dual} version, the prudent \textbf{Arrow-Raynaud} ordering-by-choosing rule, where a corresponding \emph{max-min} strategy, when used on the \emph{non-strict} outranking digraph $g$, for ordering the from \emph{last} to \emph{first} produces a similar ranking result (see \citep{LAM-2009,DIA-2010}).
 
 Noticing that the \NetFlows score of an alternative $x$ represents in fact a bipolar-valued characteristic of the assertion '\emph{alternative x is ranked first}', we may enhance \Kohler 's rule by replacing the \emph{min-max} strategy with an \textbf{iterated} maximal \NetFlows score selection.
 
@@ -450,7 +450,7 @@ Let us finally mention another interesting ranking-by-choosing approach.
 \section{Tideman's \RankedPairs ranking rule}
 \label{sec:8.7}
 
-Tideman's ranking-by-choosing heuristic, the \RankedPairs rule, working best this time on the non strict outranking digraph $g$, is based on a \emph{prudent incremental} construction of linear orders that avoids on the fly any cycling outrankings (see [LAM-2009]). The ranking rule may be formulated as follows:
+Tideman's ranking-by-choosing heuristic, the \RankedPairs rule, working best this time on the non strict outranking digraph $g$, is based on a \emph{prudent incremental} construction of linear orders that avoids on the fly any cycling outrankings (see \citep{LAM-2009}). The ranking rule may be formulated as follows:
 \begin{enumerate}
  \item Rank the ordered pairs $(x,y)$ of alternatives in decreasing order of $r(x\, \succsim \,y) \,+\, r(y\, \not\succsim \,x)$;
  \item Consider the pairs in that order (ties are resolved by a lexicographic rule):
@@ -482,6 +482,16 @@ The \RankedPairs rule renders in our example here luckily one of the two optimal
     Bipolar-valued equivalence : +0.179
 \end{lstlisting}
 
-Similar to \Kohler 's rule, the \RankedPairs rule has also a prudent dual version, the \textbf{Dias-Lamboray} ordering-by-choosing rule, which produces, when working this time on the codual strict outranking digraph gcd, a similar ranking result (see [LAM-2009], [DIA-2010]).
+Similar to \Kohler 's rule, the \RankedPairs rule has also a prudent dual version, the \textbf{Dias-Lamboray} ordering-by-choosing rule, which produces, when working this time on the codual strict outranking digraph gcd, a similar ranking result (see \citep{LAM-2009,DIA-2010}).
 
 Besides of not providing a unique linear ranking, the ranking-by-choosing rules, as well as their dual, the ordering-by-choosing rules, are unfortunately not scalable to outranking digraphs of larger orders ($> 100$). For such bigger outranking digraphs, with several hundred or thousands of alternatives, only the \Copeland and the \NetFlows ranking-by-scoring rules, with a polynomial complexity of $\mathcal{O}(n^2)$, where $n$ is the order of the outranking digraph, remain in fact computationally tractable.
+
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/08-chapterRankings.bbl}

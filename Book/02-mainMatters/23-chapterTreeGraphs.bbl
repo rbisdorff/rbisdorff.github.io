@@ -1,0 +1,23 @@
+\begin{thebibliography}{2}
+% this bibliography was produced with the style dinat.bst v2.5
+\makeatletter
+\newcommand{\dinatlabel}[1]%
+{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
+\makeatother
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[Barthélemy und Guenoche(1991)]{BAR-1991}
+\dinatlabel{Barthélemy und Guenoche 1991} \textsc{Barthélemy}, J.P.~;
+  \textsc{Guenoche}, A.:
+\newblock \emph{Trees and Proximities Representations}.
+\newblock Wiley, 1991
+
+\bibitem[Wilson(1996)]{WIL-1996}
+\dinatlabel{Wilson 1996} \textsc{Wilson}, D.~B.:
+\newblock Generating random spanning trees more quickly than the cover time.
+\newblock In: \emph{Proceedings of the Twenty-eighth Annual ACM \emph{Symposium
+  on the Theory of Computing} (Philadelphia PA)}, ACM New York, 1996,
+  S.~296--303
+
+\end{thebibliography}

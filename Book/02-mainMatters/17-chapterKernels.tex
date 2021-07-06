@@ -111,7 +111,7 @@ In an oriented graph context, the internal stability condition of the kernel con
 \end{enumerate}
 A both internally \textbf{and} dominant, resp. absorbent stable choice is called a dominant or \emph{initial}, resp. an absorbent or \emph{terminal} kernel. From a topological perspective, the initial kernel concept looks from the outside of the digraph into its interior, whereas the terminal kernel looks from the interior of a digraph toward its outside. From an algebraic perspective, the initial kernel is a prefix operand, and the terminal kernel is a postfix operand in the \Berge kernel equation systems (see Section \ref{sec:17.6}).
 
-Furthermore, as the kernel concept involves conjointly a positive logical refutation (the internal stability) and a positive logical affirmation (the external stability), it appeared rather quickly necessary in our operational developments to adopt a bipolar characteristic $[-1.0,1.0]$ valuation domain, modelling logical negation by a change of numerical sign and including explicitly a third median logical value ($0.0$) expressing logical \emph{indeterminateness} (neither positive, nor negative, see [BIS-2000] and [BIS-2004a]).
+Furthermore, as the kernel concept involves conjointly a positive logical refutation (the internal stability) and a positive logical affirmation (the external stability), it appeared rather quickly necessary in our operational developments to adopt a bipolar characteristic $[-1.0,1.0]$ valuation domain, modelling logical negation by a change of numerical sign and including explicitly a third median logical value ($0.0$) expressing logical \emph{indeterminateness} (neither positive, nor negative, see \citep{BIS-2000,BIS-2002,BIS-2004a}).
 
 In such a  bipolar-valued context, we call \emph{prekernel} a choice which is \emph{externally stable} and for which the internal stability condition is \emph{valid or indeterminate}. We say that the independence condition is in this case only \emph{weakly} validated. Notice that all kernels are hence prekernels, but not vice-versa.
 
@@ -485,7 +485,7 @@ In the resulting linear ranking (see Fig. \ref{fig:17.9}), action 'a4' is set at
 \section{Tractability of prekernel computation}
 \label{sec:17.5}
 
-Let us give some hints on the \emph{tractability} of prekernel computations. Detecting all prekernels in a digraph is a famously NP-hard computational problem. Checking external stability conditions for an independent choice is equivalent to checking its maximality and may be done in the linear complexity of the order of the digraph. However, checking all independent choices contained in a digraph may get hard already for tiny sparse digraphs of order $n > 20$ (see [BIS-2006b]). Indeed, the worst case is given by an empty or indeterminate digraph where the set of all potential independent choices to check is in fact the power set of the vertices.
+Let us give some hints on the \emph{tractability} of prekernel computations. Detecting all prekernels in a digraph is a famously NP-hard computational problem. Checking external stability conditions for an independent choice is equivalent to checking its maximality and may be done in the linear complexity of the order of the digraph. However, checking all independent choices contained in a digraph may get hard already for tiny sparse digraphs of order $n > 20$ (see \citep{BIS-2006b}). Indeed, the worst case is given by an empty or indeterminate digraph where the set of all potential independent choices to check is in fact the power set of the vertices.
 \begin{lstlisting}
 >>> e = EmptyDigraph(order=20)
 >>> e.showMIS()   # by visiting all 2^20 independent choices
@@ -498,7 +498,7 @@ Let us give some hints on the \emph{tractability} of prekernel computations. Det
   1048576
 \end{lstlisting}
 
-Now, there exist more efficient specialized algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices (see [BIS-2006b]). \emph{Alain Hertz} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method). When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 7 above and Line 15 below).
+Now, there exist more efficient specialized algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices (see \citep{BIS-2006b}). \emph{Alain Hertz} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method). When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 7 above and Line 15 below).
 \begin{lstlisting}
 >>> e.showMIS_AH()
   # by visiting only maximal independent choices
@@ -544,7 +544,7 @@ def independentChoices(self,U):
                 yield Sx
 \end{lstlisting}
 
-And, checking maximality of independent choices via the external stability conditions during their enumeration with the \texttt{computePreKernels()} method (see below) provides the effective advantage of computing all initial and terminal prekernels in a single loop (see Line 10 and [BIS-2006b]).
+And, checking maximality of independent choices via the external stability conditions during their enumeration with the \texttt{computePreKernels()} method (see below) provides the effective advantage of computing all initial and terminal prekernels in a single loop (see Line 10 and \citep{BIS-2006b}).
 \begin{lstlisting}[caption={Computing dominant and absorbent preKernels},label=list:17.1]
 def computePreKernels(self):
     """
@@ -565,7 +565,7 @@ def computePreKernels(self):
     self.abspreKernels = abspreKernels
 \end{lstlisting}
  
-Finally, we use our bipolar epistemic logic framework for computing the credibility that an individual node of the digraph fits with being a member of an initial or terminal prekerenel. For this purpose we make use of the \Berge kernel equation systems [BER-1958p].
+Finally, we use our bipolar epistemic logic framework for computing the credibility that an individual node of the digraph fits with being a member of an initial or terminal prekerenel. For this purpose we make use of the \Berge kernel equation systems \citep{BER-1958}.
 
 \section{\Berge kernel equation systems}
 \label{sec:117:6}
@@ -576,7 +576,7 @@ When $Y$ satisfies the following equation system: $Y \circ R \; = \; -Y$, where 
 \begin{equation}\label{eq:17.2}
      (Y \circ R)(x) \; = \; \max_{y \in X, x \neq y} \big ( \min(Y(x), R(x,y))\big)\;,`
 \end{equation}
-then $Y$ characterises an \emph{initialkernel} ([BER-1958p]).
+then $Y$ characterises an \emph{initialkernel} \citep{BER-1958}.
 
 When transposing now the membership characteristic vector $Y$ into a column vector $Y^t$, the following equation system: $R \circ Y^t \; = \; -Y^t$.
 makes $Y^t$ similarly characterise a \emph{terminal kernel}.
@@ -828,3 +828,13 @@ Notice that the stable low vector characterises the \emph{negative membership} p
 The adjacency matrix of a symmetric digraph staying \emph{unchanged} by the transposition operator, the previous computations, when qualifying the same kernel as a terminal instance, will hence produce exactly the same result.
 
 It is worthwhile noticing the essential computational role, the logical indeterminate value $0.0$ is playing in this double fixpoint algorithm. To implement such kind of algorithms without a logical \emph{neutral} term would be like implementing numerical algorithms without a possible usage of the number $0$. Infinitely many trivial impossibility theorems and dubious logical results come up. 
+
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/17-chapterKernels.bbl}
