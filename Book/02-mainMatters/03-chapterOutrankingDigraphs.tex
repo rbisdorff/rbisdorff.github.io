@@ -209,7 +209,7 @@ Notice that the reflexive self comparison characteristic $r(x,x)$ is set above b
 \section{The strict outranking digraph}
 \label{sec:3.5}
 
-From the theory (\cite{BIS-2013}, \cite{ADT-L7} ) we know that a bipolar-valued outranking digraph is {\bf weakly complete}, i.e. if $r(x,y) < 0.0$ then $r(y,x) \geq 0.0$ . From this property follows that a bipolar-valued outranking relation verifies the {\bf coduality} principle: the {\bf dual} ({\em strict negation\/} $-$ \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}) of the {\bf converse} ({\em inverse\/} $\approx$) of the outranking relation corresponds to its {\em strict outranking\/} part.
+From the theory (\cite{BIS-2013}, \cite{ADT-L7}) we know that a bipolar-valued outranking digraph is {\bf weakly complete}, i.e. if $r(x,y) < 0.0$ then $r(y,x) \geq 0.0$ . From this property follows that a bipolar-valued outranking relation verifies the {\bf coduality} principle: the {\bf dual} ({\em strict negation\/} $-$ \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}) of the {\bf converse} ({\em inverse\/} $\approx$) of the outranking relation corresponds to its {\em strict outranking\/} part.
 
 We may visualize the {\bf codual} ({\em strict\/}) outranking digraph with a graphviz drawing \footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}.
 
@@ -230,4 +230,12 @@ We may visualize the {\bf codual} ({\em strict\/}) outranking digraph with a gra
  
 Many more tools for exploiting bipolar-valued outranking digraphs are available in the \Digraph3 resources (see the technical documentation of the {\tt outrankingDigraphs} module and the {\tt perfTabs} module).
 
- 
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliograhy}
+\bibliographystyle{dinat}
+\typeout{}
+\bibliography{03-backMatters/reference}
+\input{02-mainMatters/03-chapterOutrankingDigraphs.bbl}
