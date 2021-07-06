@@ -18,7 +18,7 @@
 \section{Installing the \Digraph resources}
 \label{sec:1.1}
 
-Using the \Digraph modules is easy. You only need to have installed on your system the Python programming language of version 3.+ (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard decimal module implements very efficiently its decimal.Decimal class in C. Now, Decimal objects are mainly used in the \Digraph characteristic r-valuation functions, which makes the recent python-3.7+ versions much faster (more than twice as fast) when extensive digraph operations are performed.
+Using the \Digraph modules is easy \citep{BIS-2021}. You only need to have installed on your system the Python programming language of version 3.+ (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard decimal module implements very efficiently its decimal.Decimal class in C. Now, Decimal objects are mainly used in the \Digraph characteristic r-valuation functions, which makes the recent python-3.7+ versions much faster (more than twice as fast) when extensive digraph operations are performed.
 
 Several download options (easiest under Linux or Mac OS-X) are given. Either, by using a git client either, from \texttt{github}:
 \begin{footnotesize}
@@ -68,13 +68,13 @@ A verbose (with stdout not captured) pytest suite may be run as follows:
 .../Digraph3$ make verboseTests
 \end{verbatim}
 \end{footnotesize}
-When the GNU \texttt{parallel} shell tool (\href{https://www.gnu.org/software/parallel}{https://www.gnu.org/software/parallel}) is installed and multiple cores are detected, the tests may be executed in multiple processing mode:
+When the GNU \texttt{parallel} shell tool\footnote{\href{https://www.gnu.org/software/parallel}{https://www.gnu.org/software/parallel}} is installed and multiple cores are detected, the tests may be executed in multiple processing mode:
 \begin{footnotesize}
 \begin{verbatim}
 ../Digraph3$ make pTests 
 \end{verbatim}
 \end{footnotesize}
-Individual module pytest suites are also provided (see the makefile), like the one for the \texttt{outrankingDigraphs} module:
+Individual module pytest suites are also provided (see the makefile), like the one for the \texttt{outrankingDigraphs} module (see Chapter{sec:2}):
 \begin{footnotesize}
 \begin{verbatim}
 ../Digraph3$ make outrankingDigraphsTests
@@ -83,7 +83,7 @@ Individual module pytest suites are also provided (see the makefile), like the o
 
 \paragraph{Dependencies}
 \begin{itemize}
-\item To be fully functional, the \Digraph resources mainly need the \texttt{graphviz} tools (\href{https://graphviz.org}{https://graphviz.org}) and the R statistics resources (\href{https://www.r-project.org}{https://www.r-project.org}) to be installed.
+\item To be fully functional, the \Digraph resources mainly need the \texttt{graphviz} tools \footnote{\href{https://graphviz.org}{https://graphviz.org}} and the R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
 \item When exploring digraph isomorphisms, the \href{https://www.cs.sunysb.edu/~algorith/implement/nauty/implement.shtml}{\texttt{nauty} isomorphism testing program} is required.
 \item Two specific criteria and actions clustering methods of the \texttt{OutrankingDigraph} class furthermore require the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
 \end{itemize}
@@ -94,14 +94,13 @@ You may start an interactive Python3 session in the \texttt{Digraph3} directory.
 \begin{footnotesize}
 \begin{verbatim}
 $HOME/.../Digraph3$ python3
-Python 3.9.5 (default, Jun  5 2021, 14:26:42)
-[GCC 9.3.0] on linux
-Type "help", "copyright", "credits" or
-       "license" for more information.
+Python 3.9.6 (v3.9.6:db3ff76da1, Jun 28 2021, 11:49:53) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
 >>>
 \end{verbatim}
 \end{footnotesize}
-For exploring the classes and methods provided by the \Digraph modules (see the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}) enter the Python3 commands following the session prompts marked with '\>\>\>' or '...' . The lines without the prompt are output from the Python3 interpreter.
+For exploring the classes and methods provided by the \Digraph module \footnote{See the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}} enter the Python3 commands following the session prompts marked with '\>\>\>' or '...' . The lines without the prompt are output from the Python3 interpreter.
 
 \begin{lstlisting}[caption={Generating a digraph instance},label=list:1.1]
 >>> from randomDigraphs import RandomDigraph
@@ -124,14 +123,11 @@ In Listing \ref{list:1.1}  we import, for instance, from the \texttt{randomDigra
 \section{Permanent storage of a digraph object}
 \label{sec:1.3}                   
 We may save the content of $dg$ in a file called \texttt{tutorialDigraph.py}.
-
 \begin{lstlisting}
 >>> dg.save('tutorialDigraph')
  *--- Saving digraph in file: <tutorialDigraph.py> ---*
 \end{lstlisting}
-
 with the following content:
-
 \begin{lstlisting}[caption={A stored digraph instance},label=list:1.2]
 from decimal import Decimal
 from collections import OrderedDict
@@ -189,7 +185,7 @@ All digraphs instances are of \texttt{Digraph} type and contain at least the fol
 \section{Inspecting a digraph object}
 \label{sec:1.4}
 
-Different \texttt{show} methods (see Listing \ref{list:1.3}  Lines 3, 18, 28,31 below) reveal us now that $dg$ is a crisp, irreflexive and connected digraph of order five.
+Different \texttt{show...()} methods (see Listing \ref{list:1.3}  Lines 1, 16, 26, 31 below) reveal us now that $dg$ is a crisp, irreflexive and connected digraph of order five.
 
 \begin{lstlisting}[caption={Random crisp digraph object},label=list:1.3]
 >>> dg.showShort()
@@ -207,7 +203,6 @@ Different \texttt{show} methods (see Listing \ref{list:1.3}  Lines 3, 18, 28,31 
   'max': Decimal('1.0'),
   'med': Decimal('0.0'), 'hasIntegerValuation': True
   }
-
 >>> dg.showRelationTable()
  * ---- Relation Table -----
    S   |  'a1'  'a2'  'a3'  'a4'  'a5'
@@ -218,11 +213,9 @@ Different \texttt{show} methods (see Listing \ref{list:1.3}  Lines 3, 18, 28,31 
   'a4' |    1     1     1    -1    -1
   'a5' |    1     1     1    -1    -1
  Valuation domain: [-1;+1]
-
 >>> dg.showComponents()
  *--- Connected Components ---*
  1: ['a1', 'a2', 'a3', 'a4', 'a5']
-
 >>> dg.showNeighborhoods()
  Neighborhoods:
    Gamma     :

@@ -72,7 +72,7 @@ As mentioned in the previous Chapter \ref{sec:1}, the {\tt Digraph} class provid
      '7': in => {'5', '6', '3'}, out => {'5'}
 \end{lstlisting}   
 
-Mind that most Digraph class methods will ignore the \emph{reflexive} links by considering that they are \emph{indeterminate}, i.e. the characteristic value $r(x\,S\,x)$ for all action $x$ is set to the \emph{median}, i.e. \emph{indeterminate} value $0.0$ in this case (see Listing \ref{list:2.2} Lines 12-18 and \citep{BIS-2004a} ).
+Mind that most Digraph class methods will ignore the \emph{reflexive} links by considering that they are \emph{indeterminate}, i.e. the characteristic value $r(x\,S\,x)$ for all action $x$ is set to the \emph{median}, i.e. \emph{indeterminate} value $0.0$ in this case (see Listing \ref{list:2.2} Lines 12-18 and \citet{BIS-2004a}).
 
 \section{Graphviz drawings}
 \label{sec:2.2}
@@ -354,7 +354,7 @@ It is as well possible to show a colored version of the valued relation table in
 \end{lstlisting}
  \begin{figure}[h]
 \sidecaption
-\includegraphics[width=5cm]{Figures/htmlTutorialDigraph.png}
+\includegraphics[width=7cm]{Figures/htmlTutorialDigraph.png}
 \caption{The valued relation table shown in a browser window. Positive arcs are shown in *green* and negative arcs in *red*. Indeterminate -zero-valued- links, like the reflexive diagonal ones or the link between node *6* and node *2*, are shown in *gray*.}
 \label{fig:2.6}       % Give a unique label
 \end{figure}
@@ -362,7 +362,7 @@ It is as well possible to show a colored version of the valued relation table in
 \section{Complete, empty and indeterminate digraphs}
 \label{sec:2.10}
 
-Let us finally mention some special universal classes of digraphs that are readily available in the :py:mod:`digraphs` module, like the \texttt{CompleteDigraph}, the \texttt{EmptyDigraph} and the \texttt{IndeterminateDigraph} classes, which put all characteristic values respectively to the maximum, the minimum or the median indeterminate characteristic value.
+Let us finally mention some special universal classes of digraphs that are readily available in the \texttt{digraphs} module\footnote{See \citealp{BIS-2021}}, like the \texttt{CompleteDigraph}, the \texttt{EmptyDigraph} and the \texttt{IndeterminateDigraph} classes, which put all characteristic values respectively to the maximum, the minimum or the median indeterminate characteristic value.
 \begin{lstlisting}[caption={Complete, empty and indeterminate digraphs},label=list:2.11]
 >>> from digraphs import CompleteDigraph,EmptyDigraph,\
 ...   			 IndeterminateDigraph

@@ -31,7 +31,6 @@
 \usepackage{tabularx}
 \usepackage{natbib}
 \usepackage{chapterbib}
-\usepackage{cite}
 \usepackage{minitoc}
 \usepackage{pst-all}
 \usepackage{latexsym}
@@ -140,9 +139,9 @@
 
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\include{01-frontMatters/dedic}
+\include{01-frontMatters/dedic}
 %\include{01-frontMatters/foreword}
-%\include{01-frontMatters/preface}
+\include{01-frontMatters/preface}
 %\include{01-fromtMatters/acknow}
 
 \tableofcontents
@@ -151,6 +150,7 @@
 
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\citeindextrue
 %\lstset{style=mystyle}
 \lstset{language=Python,
        backgroundcolor=\color{LightGray},
@@ -169,9 +169,9 @@
        showtabs=false,        
        }
 
-% \include{02-mainMatters/00-chapterIntroduction}
+\include{02-mainMatters/00-chapterIntroduction}
        
- \include{02-mainMatters/part1}
+\include{02-mainMatters/part1}
 \include{02-mainMatters/01-chapterIntroDigraph3}
 \include{02-mainMatters/02-chapterDigraphs}
 \include{02-mainMatters/03-chapterOutrankingDigraphs}
@@ -210,12 +210,12 @@
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\include{03-backMatters/appendix}
-%\bibliographystyle{abbrvnat}
-%\bibliography{03-backMatters/reference}
+%\bibliographystyle{dinat}
+\bibliography{03-backMatters/reference}
 
 %\include{03-backMatters/glossary}
 %\include{03-backMatters/reference}
-%\printindex
+\printindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -44,9 +44,9 @@ book.pdf:
 	bibtex 02-mainMatters/25-chapterPerfectGraphs.aux
 	pdflatex book.tex
 	pdflatex book.tex
-	#makeindex -s svind.ist book.idx
-	#pdflatex book.tex
-	#pdflatex book.tex
+	makeindex -s svind.ist book.idx
+	pdflatex book.tex
+	pdflatex book.tex
 
 reIndex:
 	pdflatex book.tex
