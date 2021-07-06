@@ -117,8 +117,7 @@ Given the previous random performance tableau $pt$, the {\tt BipolarOutrankingDi
 \end{lstlisting}
 
 The resulting digraph contains 20 positive (valid) outranking realtions. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Listing \ref{list:3.4}  Lines 8-9). We may inspect the complete $[-1.0,+1.0]$-valued adjacency table as follows.
- 
-\begin{lstlisting}[caption={Inspecting the valued adjacency table},label=list:3.5]
+ \begin{lstlisting}[caption={Inspecting the valued adjacency table},label=list:3.5]
 >>> odg.showRelationTable()
   * ---- Relation Table -----
    r(x,y)|  'a1'   'a2'   'a3'   'a4'   'a5'   'a6'   'a7'   
@@ -133,7 +132,7 @@ The resulting digraph contains 20 positive (valid) outranking realtions. And, th
    Valuation domain: [-1.0; 1.0]
 \end{lstlisting}
 
-Considering the given performance tableau $pt$, the \texttt{BipolarOutrankingDigraph} class constructor computes the characteristic value $r(x,y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ (see [BIS-2013], [ADT-L7]) in a default {\em normalised\/} {\bf valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as {\bf indeterminate} characteristic value. The semantics of $r(x,y)$ are the following.
+Considering the given performance tableau $pt$, the \texttt{BipolarOutrankingDigraph} class constructor computes the characteristic value $r(x,y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ (\cite{BIS-2013}, \cite{ADT-L7}) in a default {\em normalised\/} {\bf valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as {\bf indeterminate} characteristic value. The semantics of $r(x,y)$ are the following.
 \begin{enumerate}
 \item When $r(x,y) > 0.0$, it is more {\em True\/} than {\em False\/} that $x$ {\bf outranks} $y$, i.e. alternative $x$ is at least as well performing than alternative $y$ on a weighted majority of criteria {\bf and} there is no considerable negative performance difference observed in disfavour of $x$,
 \item When $r(x,y) < 0.0$, it is more {\em False\/} than {\em True\/} that $x$ {\bf outranks} $y$, i.e. alternative $x$ is {\bf not} at least as well performing on a weighted majority of criteria than alternative $y$ {\bf and} there is no considerable positive performance difference observed in favour of $x$,
@@ -210,7 +209,7 @@ Notice that the reflexive self comparison characteristic $r(x,x)$ is set above b
 \section{The strict outranking digraph}
 \label{sec:3.5}
 
-From the theory (see [BIS-2013], [ADT-L7] ) we know that a bipolar-valued outranking digraph is {\bf weakly complete}, i.e. if $r(x,y) < 0.0$ then $r(y,x) \geq 0.0$ . From this property follows that a bipolar-valued outranking relation verifies the {\bf coduality} principle: the {\bf dual} ({\em strict negation\/} $-$ \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}) of the {\bf converse} ({\em inverse\/} $\approx$) of the outranking relation corresponds to its {\em strict outranking\/} part.
+From the theory (\cite{BIS-2013}, \cite{ADT-L7} ) we know that a bipolar-valued outranking digraph is {\bf weakly complete}, i.e. if $r(x,y) < 0.0$ then $r(y,x) \geq 0.0$ . From this property follows that a bipolar-valued outranking relation verifies the {\bf coduality} principle: the {\bf dual} ({\em strict negation\/} $-$ \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}) of the {\bf converse} ({\em inverse\/} $\approx$) of the outranking relation corresponds to its {\em strict outranking\/} part.
 
 We may visualize the {\bf codual} ({\em strict\/}) outranking digraph with a graphviz drawing \footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}.
 

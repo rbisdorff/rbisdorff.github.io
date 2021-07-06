@@ -16,6 +16,7 @@ all:
 book.pdf: 
 	# makes a pdf directly
 	pdflatex book.tex
+	bibtex 02-mainMatters/03-chapterOutrankingDigraphs.aux
 	pdflatex book.tex
 	pdflatex book.tex
 	#makeindex -s svind.ist book.idx

@@ -7,7 +7,7 @@
 
 \section{Random bipolar-valued digraphs}
 
-We are starting this tutorial with generating a uniformly random $[-1.0; +1.0]$-valued digraph of order 7, denoted $rdg$ and modelling, for instance, a binary relation $S(x,y)$ defined on the set of nodes of $rdg$. For this purpose, the \Digraph3 resources provide a {\tt randomDigraphs} module providing a specific {\tt RandomValuationDigraph} constructor.
+We are starting this tutorial with generating a uniformly random $[-1.0; +1.0]$-valued digraph of order 7, denoted $rdg$ and modelling, for instance, a binary relation $S(x,y)$ defined on the set of nodes of $rdg$. For this purpose, the \Digraph resources provide a {\tt randomDigraphs} module providing a specific {\tt RandomValuationDigraph} constructor.
 \begin{lstlisting}[caption={Random bipolar-valued digraph instance},label=list:2.1]
    >>> from randomDigraphs import RandomValuationDigraph
    >>> rdg = RandomValuationDigraph(order=7)
@@ -31,7 +31,7 @@ With the {\tt Digraph.save()} method (see Listing \ref{list:2.1} Line 3) we may 
 
 All objects of {\tt Digraph} type contain at least the list of attributes shown here: a \texttt{name} (string), a dictionary of \texttt{actions} (digraph nodes), an \texttt{order} (integer) attribute containing the number of actions, a \texttt{valuationdomain} dictionary, a double dictionary \texttt{relation} representing the adjency table of the digraph relation, a \texttt{gamma} and a {\tt notGamma} dictionary containing the direct neighbourhood of each action.
 
-As mentioned in the previous Chapter, the {\tt Digraph} class provides some generic {\tt show} methods for exploring a given {\tt Digraph} object, like the {\tt showShort()}, {\tt showAll()}, {\tt showRelationTable()} and the {\tt showNeighborhoods()} methods.
+As mentioned in the previous Chapter \ref{sec:1}, the {\tt Digraph} class provides some generic {\tt show} methods for exploring a given {\tt Digraph} object, like the {\tt showShort()}, {\tt showAll()}, {\tt showRelationTable()} and the {\tt showNeighborhoods()} methods.
 \begin{lstlisting}[caption={Example of random valuation digraph},label=list:2.2]
    >>> rdg.showAll()
     *----- show detail -------------*
@@ -137,7 +137,7 @@ Here below, for illustration the source code of the {\tt relation} constructor o
 \section{Border and inner parts}
 \label{sec:2.4}
 
-We may also extract the border -the part of a digraph induced by the union of its initial and terminal prekernels (see Kernel Chapter)-  as well as, the inner part -the complement of the border- with the help of two corresponding class constructors: \texttt{GraphBorder} and \texttt{GraphInner} (see Fig. \ref{fig:2.3}).
+We may also extract the border -the part of a digraph induced by the union of its initial and terminal prekernels (see Kernel Chapter \ref{sec:17})-  as well as, the inner part -the complement of the border- with the help of two corresponding class constructors: \texttt{GraphBorder} and \texttt{GraphInner} (see Fig. \ref{fig:2.3}).
 
 Let us illustrate these parts on a linear ordering obtained from the tutorial random valuation digraph $rdg$  with the \NetFlows ranking rule  (see Section \ref{sec:8.3}).  
 \begin{lstlisting}[caption={Border and inner part of a linear order},label=list:2.5]

@@ -8,7 +8,7 @@
 
 
 % RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[envcountchap]{svmono}
+\documentclass[envcountchap,sectrefs]{svmono}
 
 % choose options for [] as required from the list
 % in the Reference Guide
@@ -29,7 +29,7 @@
 % in the Reference Guide
 \usepackage{amsmath,stmaryrd,amssymb,bbm}
 \usepackage{tabularx}
-%\usepackage{natbib}
+\usepackage{natbib}
 %\usepackage{chapterbib}
 % \usepackage{minitoc}
 \usepackage{pst-all}
@@ -70,7 +70,7 @@
 %	pdfborder = {0 0 0},			% Style de bordure : ici, pas de bordure
  	plainpages = false,			% necessaire si on veut des liens retour
 								% corrects vers les citations
-%	pagebackref,					% des liens retour vers 
+	pagebackref,					% des liens retour vers 
 								% l'endroit ou la citation a eu lieu
 	pdfpagelabels = false
 %	hypertexnames=false
@@ -142,9 +142,9 @@
 
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{01-frontMatters/dedic}
+%\include{01-frontMatters/dedic}
 %\include{01-frontMatters/foreword}
-\include{01-frontMatters/preface}
+%\include{01-frontMatters/preface}
 %\include{01-fromtMatters/acknow}
 
 \tableofcontents
@@ -171,49 +171,52 @@
        showtabs=false,        
        }
 
-\include{02-mainMatters/00-chapterIntroduction}
+% \include{02-mainMatters/00-chapterIntroduction}
        
-\include{02-mainMatters/part1}
-\include{02-mainMatters/01-chapterIntroDigraph3}
-\include{02-mainMatters/02-chapterDigraphs}
+% \include{02-mainMatters/part1}
+% \include{02-mainMatters/01-chapterIntroDigraph3}
+% \include{02-mainMatters/02-chapterDigraphs}
 \include{02-mainMatters/03-chapterOutrankingDigraphs}
 
-\include{02-mainMatters/part2}
-\include{02-mainMatters/04-chapterNewPerfTab}
-\include{02-mainMatters/05-chapterRandomPerfTabs}
-\include{02-mainMatters/06-chapterBestChoice}
-\include{02-mainMatters/07-chapterWinnerElection}
-\include{02-mainMatters/08-chapterRankings}
-\include{02-mainMatters/09-chapterRelativeRating}
-\include{02-mainMatters/10-chapterAbsoluteRating}
-\include{02-mainMatters/11-chapterHPCRanking}
+% \include{02-mainMatters/part2}
+% \include{02-mainMatters/04-chapterNewPerfTab}
+% \include{02-mainMatters/05-chapterRandomPerfTabs}
+% \include{02-mainMatters/06-chapterBestChoice}
+% \include{02-mainMatters/07-chapterWinnerElection}
+% \include{02-mainMatters/08-chapterRankings}
+% \include{02-mainMatters/09-chapterRelativeRating}
+% \include{02-mainMatters/10-chapterAbsoluteRating}
+% \include{02-mainMatters/11-chapterHPCRanking}
 
-\include{02-mainMatters/part3}
-\include{02-mainMatters/12-chapterAliceChoice}
-\include{02-mainMatters/13-chapterBestCSDpts}
-\include{02-mainMatters/14-chapterBestStudents}
-\include{02-mainMatters/15-chapterExercises}
+% \include{02-mainMatters/part3}
+% \include{02-mainMatters/12-chapterAliceChoice}
+% \include{02-mainMatters/13-chapterBestCSDpts}
+% \include{02-mainMatters/14-chapterBestStudents}
+% \include{02-mainMatters/15-chapterExercises}
 
-\include{02-mainMatters/part4}
-\include{02-mainMatters/16-chapterCorrelation}
-\include{02-mainMatters/17-chapterKernels}
-\include{02-mainMatters/18-chapterConfidentOutrankings}
-\include{02-mainMatters/19-chapterRobustOutrankings}
-\include{02-mainMatters/20-chapterMultipartisan}
-\include{02-mainMatters/21-chapterTemperingPlurality}
+% \include{02-mainMatters/part4}
+% \include{02-mainMatters/16-chapterCorrelation}
+% \include{02-mainMatters/17-chapterKernels}
+% \include{02-mainMatters/18-chapterConfidentOutrankings}
+% \include{02-mainMatters/19-chapterRobustOutrankings}
+% \include{02-mainMatters/20-chapterMultipartisan}
+% \include{02-mainMatters/21-chapterTemperingPlurality}
 
-\include{02-mainMatters/part5}
-\include{02-mainMatters/22-chapterGraphs}
-\include{02-mainMatters/23-chapterTreeGraphs}
-\include{02-mainMatters/24-chapterIsomorphicMIS}
-\include{02-mainMatters/25-chapterPerfectGraphs}
+% \include{02-mainMatters/part5}
+% \include{02-mainMatters/22-chapterGraphs}
+% \include{02-mainMatters/23-chapterTreeGraphs}
+% \include{02-mainMatters/24-chapterIsomorphicMIS}
+% \include{02-mainMatters/25-chapterPerfectGraphs}
 
 
-\include{appendix}
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{03-backMatters/appendix}
+\bibliographystyle{abbrvnat}
+\bibliography{03-backMatters/reference}
+
 %\include{03-backMatters/glossary}
-\include{03-backMatters/reference}
+%\include{03-backMatters/reference}
 %\printindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
