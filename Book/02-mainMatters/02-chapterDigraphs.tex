@@ -9,22 +9,22 @@
 
 We are starting this tutorial with generating a uniformly random $[-1.0; +1.0]$-valued digraph of order 7, denoted $rdg$ and modelling, for instance, a binary relation $S(x,y)$ defined on the set of nodes of $rdg$. For this purpose, the \Digraph resources provide a {\tt randomDigraphs} module providing a specific {\tt RandomValuationDigraph} constructor.
 \begin{lstlisting}[caption={Random bipolar-valued digraph instance},label=list:2.1]
-   >>> from randomDigraphs import RandomValuationDigraph
-   >>> rdg = RandomValuationDigraph(order=7)
-   >>> rdg.save('tutRandValDigraph')
-   >>> from digraphs import Digraph
-   >>> rdg = Digraph('tutRandValDigraph')
-   >>> rdg
-    *------- Digraph instance description ------*
-    Instance class      : Digraph
-    Instance name       : tutRandValDigraph
-    Digraph Order       : 7
-    Digraph Size        : 22
-    Valuation domain    : [-1.00;1.00]
-    Determinateness (%) : 75.24
-    Attributes          : ['name','actions','order',
-                           'valuationdomain','relation',
-                           'gamma','notGamma']
+>>> from randomDigraphs import RandomValuationDigraph
+>>> rdg = RandomValuationDigraph(order=7)
+>>> rdg.save('tutRandValDigraph')
+>>> from digraphs import Digraph
+>>> rdg = Digraph('tutRandValDigraph')
+>>> rdg
+ *------- Digraph instance description ------*
+   Instance class      : Digraph
+   Instance name       : tutRandValDigraph
+   Digraph Order       : 7
+   Digraph Size        : 22
+   Valuation domain    : [-1.00;1.00]
+   Determinateness (%) : 75.24
+   Attributes          : ['name','actions','order',
+                          'valuationdomain','relation',
+                          'gamma','notGamma']
 \end{lstlisting}   
 
 With the {\tt Digraph.save()} method (see Listing \ref{list:2.1} Line 3) we may keep a backup version for future use of $rdg$ which will be stored in a file called {\tt tutRandValDigraph.py} in the current working directory. The genuine {\tt Digraph} class constructor may restore the $rdg$ object from the stored file (Line 4-5). We may easily inspect the content of $rdg$ (Line 5). The digraph size 22 indicates the number of positively valued arcs. The valuation domain is uniformly distributed in the interval $[-1.0; 1.0]$ and the mean absolute arc valuation is $(0.7524 \times 2)\, -\, 1.0 \;=\; 0.5048$ (Line 12) .
@@ -33,27 +33,27 @@ All objects of {\tt Digraph} type contain at least the list of attributes shown 
 
 As mentioned in the previous Chapter \ref{sec:1}, the {\tt Digraph} class provides some generic {\tt show} methods for exploring a given {\tt Digraph} object, like the {\tt showShort()}, {\tt showAll()}, {\tt showRelationTable()} and the {\tt showNeighborhoods()} methods.
 \begin{lstlisting}[caption={Example of random valuation digraph},label=list:2.2]
-   >>> rdg.showAll()
-    *----- show detail -------------*
-     Digraph          : tutRandValDigraph
-    *---- Actions ----*
-     ['1', '2', '3', '4', '5', '6', '7']
-    *---- Characteristic valuation domain ----*
-     {'med': Decimal('0.0'), 'hasIntegerValuation': False, 
-      'min': Decimal('-1.0'), 'max': Decimal('1.0')}
-    * ---- Relation Table -----
-    r(xSy) |  '1'    '2'   '3'  '4'   '5'    '6'  '7'	  
-    -------|-------------------------------------------
-    '1'    |  0.00 -0.48  0.70  0.86  0.30  0.38  0.44	 
-    '2'    | -0.22  0.00 -0.38  0.50  0.80 -0.54  0.02	 
-    '3'    | -0.42  0.08  0.00  0.70 -0.56  0.84 -1.00	 
-    '4'    |  0.44 -0.40 -0.62  0.00  0.04  0.66  0.76	 
-    '5'    |  0.32 -0.48 -0.46  0.64  0.00 -0.22 -0.52	 
-    '6'    | -0.84  0.00 -0.40 -0.96 -0.18  0.00 -0.22	 
-    '7'    |  0.88  0.72  0.82  0.52 -0.84  0.04  0.00
-    *--- Connected Components ---*
-     1: ['1', '2', '3', '4', '5', '6', '7']
-    Neighborhoods:
+>>> rdg.showAll()
+  *----- show detail -------------*
+   Digraph          : tutRandValDigraph
+  *---- Actions ----*
+   ['1', '2', '3', '4', '5', '6', '7']
+  *---- Characteristic valuation domain ----*
+   {'med': Decimal('0.0'), 'hasIntegerValuation': False, 
+    'min': Decimal('-1.0'), 'max': Decimal('1.0')}
+  * ---- Relation Table -----
+   r(xSy) |  '1'    '2'   '3'  '4'   '5'    '6'  '7'	  
+   -------|-------------------------------------------
+    '1'   |  0.00 -0.48  0.70  0.86  0.30  0.38  0.44	 
+    '2'   | -0.22  0.00 -0.38  0.50  0.80 -0.54  0.02	 
+    '3'   | -0.42  0.08  0.00  0.70 -0.56  0.84 -1.00	 
+    '4'   |  0.44 -0.40 -0.62  0.00  0.04  0.66  0.76	 
+    '5'   |  0.32 -0.48 -0.46  0.64  0.00 -0.22 -0.52	 
+    '6'   | -0.84  0.00 -0.40 -0.96 -0.18  0.00 -0.22	 
+    '7'   |  0.88  0.72  0.82  0.52 -0.84  0.04  0.00
+  *--- Connected Components ---*
+    1: ['1', '2', '3', '4', '5', '6', '7']
+  *---- Neighborhoods ------*
      Gamma:
      '1': in => {'5', '7', '4'}, out => {'5', '7', '6', '3', '4'}
      '2': in => {'7', '3'}, out => {'5', '7', '4'}
@@ -112,27 +112,27 @@ We may now extract both the \emph{}\emph{symmetric} as well as the asymmetric pa
 The constructor of the partial objects $asymDg$ and $symDg$ puts to the indeterminate characteristic value all not-asymmetric, respectively not-symmetric links between nodes (see Fig. \ref{fig:2.2}).
 
 Here below, for illustration the source code of the {\tt relation} constructor of the {\tt AsymmetricPartialDigraph} class.
-\begin{lstlisting}[label=list:2.4,basicstyle=\footnotesize]
-    def _constructRelation(self):
-	actions = self.actions
-	Min = self.valuationdomain['min']
-	Max = self.valuationdomain['max']
-	Med = self.valuationdomain['med']
-	relationIn = self.relation
-	relationOut = {}
-	for a in actions:
-	    relationOut[a] = {}
-	    for b in actions:
-		if a != b:
-		    if relationIn[a][b] >= Med and relationIn[b][a] <= Med:
-			relationOut[a][b] = relationIn[a][b]
-		    elif relationIn[a][b] <= Med and relationIn[b][a] >= Med:
-			relationOut[a][b] = relationIn[a][b]
-		    else:
-			relationOut[a][b] = Med
+\begin{lstlisting}[label=list:2.4,basicstyle=\scriptsize]
+def _constructRelation(self):
+    actions = self.actions
+    Min = self.valuationdomain['min']
+    Max = self.valuationdomain['max']
+    Med = self.valuationdomain['med']
+    relationIn = self.relation
+    relationOut = {}
+    for a in actions:
+	relationOut[a] = {}
+	for b in actions:
+	    if a != b:
+                if relationIn[a][b] >= Med and relationIn[b][a] <= Med:
+		    relationOut[a][b] = relationIn[a][b]
+		elif relationIn[a][b] <= Med and relationIn[b][a] >= Med:
+		    relationOut[a][b] = relationIn[a][b]
 		else:
 		    relationOut[a][b] = Med
-	return relationOut
+		else:
+		    relationOut[a][b] = Med
+    return relationOut
 \end{lstlisting}
 
 \section{Border and inner parts}
@@ -174,20 +174,20 @@ Indeed, a complete digraph on the limit has no inner part (privacy!) at all, whe
 
 We may recover object $rdg$ from both partial objects $asymDg$ and $symDg$, or as well from the border $bg$ and the inner part $ig$, with a \textbf{bipolar fusion} constructor, also called \textbf{epistemic disjunction}, available via the \texttt{FusionDigraph} class. 
 \begin{lstlisting}[caption={Epistemic fusion of partial diagraphs},label=list:2.6]
-   >>> from digraphs import FusionDigraph
-   >>> fusDg = FusionDigraph(asymDg,symDg,operator='o-max')
-   >>> # fusDg = FusionDigraph(bg,ig,operator='o-max')
-   >>> fusDg.showRelationTable()
-    * ---- Relation Table -----
-    r(xSy) |  '1'    '2'   '3'  '4'   '5'    '6'  '7'	  
-    -------|------------------------------------------
-    '1'    |  0.00 -0.48  0.70  0.86  0.30  0.38  0.44	 
-    '2'    | -0.22  0.00 -0.38  0.50  0.80 -0.54  0.02	 
-    '3'    | -0.42  0.08  0.00  0.70 -0.56  0.84 -1.00	 
-    '4'    |  0.44 -0.40 -0.62  0.00  0.04  0.66  0.76	 
-    '5'    |  0.32 -0.48 -0.46  0.64  0.00 -0.22 -0.52	 
-    '6'    | -0.84  0.00 -0.40 -0.96 -0.18  0.00 -0.22	 
-    '7'    |  0.88  0.72  0.82  0.52 -0.84  0.04  0.00
+>>> from digraphs import FusionDigraph
+>>> fusDg = FusionDigraph(asymDg,symDg,operator='o-max')
+>>> # fusDg = FusionDigraph(bg,ig,operator='o-max')
+>>> fusDg.showRelationTable()
+  * ---- Relation Table -----
+   r(xSy) |  '1'    '2'   '3'  '4'   '5'    '6'  '7'	  
+   -------|------------------------------------------
+    '1'   |  0.00 -0.48  0.70  0.86  0.30  0.38  0.44	 
+    '2'   | -0.22  0.00 -0.38  0.50  0.80 -0.54  0.02	 
+    '3'   | -0.42  0.08  0.00  0.70 -0.56  0.84 -1.00	 
+    '4'   |  0.44 -0.40 -0.62  0.00  0.04  0.66  0.76	 
+    '5'   |  0.32 -0.48 -0.46  0.64  0.00 -0.22 -0.52	 
+    '6'   | -0.84  0.00 -0.40 -0.96 -0.18  0.00 -0.22	 
+    '7'   |  0.88  0.72  0.82  0.52 -0.84  0.04  0.00
 \end{lstlisting}
 The epistemic fusion operator \texttt{o-max} (see Listing \ref{list:2.6} Line 2) works as follows.
 
@@ -355,7 +355,7 @@ It is as well possible to show a colored version of the valued relation table in
  \begin{figure}[h]
 \sidecaption
 \includegraphics[width=7cm]{Figures/htmlTutorialDigraph.png}
-\caption{The valued relation table shown in a browser window. Positive arcs are shown in *green* and negative arcs in *red*. Indeterminate -zero-valued- links, like the reflexive diagonal ones or the link between node *6* and node *2*, are shown in *gray*.}
+\caption{The valued relation table shown in a browser window. Positive arcs are shown in green and negative arcs in red. Indeterminate --zero-valued-- links, like the reflexive diagonal ones or the link between node '6' and node '2', are shown in gray.}
 \label{fig:2.6}       % Give a unique label
 \end{figure}
  

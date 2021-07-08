@@ -572,7 +572,11 @@ Finally, we use our bipolar epistemic logic framework for computing the credibil
 
 Let $G(X,R)$ be a crisp irreflexive digraph defined on a finite set $X$ of nodes and where $R$ is the corresponding $\{-1,+1\}$-valued adjacency matrix. Let $Y$ be the $\{-1,+1\}$-valued membership characteristic (row) vector of a choice in $X$.
 
-When $Y$ satisfies the following equation system: $Y \circ R \; = \; -Y$, where for all $x$ in $X$,
+When $Y$ satisfies the following equation system:
+\begin{equation}
+  Y \circ R \; = \; -Y\;,
+\end{equation}
+where for all $x$ in $X$,
 \begin{equation}\label{eq:17.2}
      (Y \circ R)(x) \; = \; \max_{y \in X, x \neq y} \big ( \min(Y(x), R(x,y))\big)\;,`
 \end{equation}
@@ -609,15 +613,15 @@ Let us verify this result on a tiny random digraph.
 \end{lstlisting}
 It is easy to verify that the characteristic vector $[-1, -1, +1]$ satisfies the initial kernel equation system; 'a3' gives an \emph{initial} kernel. Similarly, the characteristic vector $[-1, +1, -1]$ verifies indeed the terminal kernel equation system and hence 'a2' gives a \emph{terminal} kernel.
 
-We succeeded now in generalizing \Berge's kernel equation systems to genuine bipolar-valued digraphs ([BIS-2006-1p]). The constructive proof, found by \emph{Marc Pirlot}, is based on the following \emph{fixpoint equation} that may be used for computing bipolar-valued kernel membership vectors,
+We succeeded now in generalizing \Berge's kernel equation systems to genuine bipolar-valued digraphs \citep{BIS-2006b}. The constructive proof, found by \emph{Marc Pirlot}\index{Pirlot@\textsl{M. Pirlot}}, is based on the following \emph{fixpoint equation} that may be used for computing bipolar-valued kernel membership vectors,
 \begin{equation}\label{eq:17.4}
 T(Y) \; := \; -(Y \circ R) = Y\;,
 \end{equation}
-\emph{John von Neumann} showed indeed that, when a digraph $G(X,R)$ is acyclic with a unique initial kernel $K$ characterised by its membership characteristics vector $Y_k$, then the following double bipolar-valued fixpoint equation:
+\emph{John von Neumann}\index{JvNeumann@\textsl{J. von Neumann}} showed indeed that, when a digraph $G(X,R)$ is acyclic with a unique initial kernel $K$ characterised by its membership characteristics vector $Y_k$, then the following double bipolar-valued fixpoint equation:
 \begin{equation}\label{eq:17.5}
 T^2(Y) \; := \; -\big( -(Y \circ R) \circ R) \; = \; Y\;.
 \end{equation}
-will admit a stable high and a stable low fixpoint solution that converge both to $Y_k$ ([SCH-1985p]).
+will admit a stable high and a stable low fixpoint solution that converge both to $Y_k$ \citep{SCH-1985}.
 
 Inspired by this crisp double fixpoint equation, we observed that for a given bipolar-valued digraph $G(X,R)$, each of its dominant or absorbent prekernels $K_i$ in $X$ determines an induced partial digraph $G(X,R/K_i)$ which is acyclyc and admits $K_i$ as unique kernel (see [BIS-2006-2p]).
 
@@ -785,8 +789,8 @@ it may even happen, in case of more indeterminate outranking situations, that no
 
 To illustrate finally why sometimes we need to operate an epistemic disjunctive fusion of unequal stable low and high membership characteristics vectors (see Step 2.c.), let us consider, for instance, the following crisp 7-cycle graph.
 \begin{lstlisting}
->>> g = CirculantDigraph(order=7,circulants=[-1,1])
->>> g			     
+>>> c7 = CirculantDigraph(order=7,circulants=[-1,1])
+>>> c7			     
   *------- Digraph instance description ------*
    Instance class      : CirculantDigraph
    Instance name       : c7
@@ -801,7 +805,7 @@ To illustrate finally why sometimes we need to operate an epistemic disjunctive 
 
 Digraph $c7$ is a symmetric crisp digraph showing, among others, the maximal independent set \{'2','5','7'\}, i.e. an initial as well as terminal kernel. We may compute the corresponding initial kernel characteristic vector.
 \begin{lstlisting}
->>> g.computeKernelVector(['2','5','7'],\
+>>> c7.computeKernelVector(['2','5','7'],\
 ...                       Initial=True,Comments=True)
  --> Initial kernel: {'2', '5', '7'}
  initial low vector  : [-1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0]

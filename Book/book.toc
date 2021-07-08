@@ -31,14 +31,14 @@
 \contentsline {chapter}{\numberline {2}Working with bipolar-valued digraphs}{17}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Random bipolar-valued digraphs}{17}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Graphviz drawings}{19}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Asymmetric and symmetric parts}{19}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Asymmetric and symmetric parts}{20}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Border and inner parts}{21}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Fusion by epistemic disjunction}{23}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Fusion by epistemic disjunction}{22}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Dual, converse and codual digraphs}{23}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Symmetric and transitive closures}{25}{section.2.7}%
+\contentsline {section}{\numberline {2.7}Symmetric and transitive closures}{24}{section.2.7}%
 \contentsline {section}{\numberline {2.8}Strong components}{26}{section.2.8}%
-\contentsline {section}{\numberline {2.9}CSV storage}{27}{section.2.9}%
-\contentsline {section}{\numberline {2.10}Complete, empty and indeterminate digraphs}{27}{section.2.10}%
+\contentsline {section}{\numberline {2.9}CSV storage}{26}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Complete, empty and indeterminate digraphs}{28}{section.2.10}%
 \contentsline {section}{References}{30}{section*.12}%
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-7}
@@ -70,7 +70,7 @@
 \contentsline {section}{\numberline {5.2}Random standard performance tableaux}{54}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Random Cost-Benefit performance tableaux}{55}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Random three objectives performance tableaux}{59}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Random academic performance tableaux}{62}{section.5.5}%
+\contentsline {section}{\numberline {5.5}Random academic performance tableaux}{63}{section.5.5}%
 \contentsline {section}{\numberline {5.6}Random linearly ranked performance tableaux}{65}{section.5.6}%
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-11}
@@ -96,10 +96,10 @@
 \contentsline {chapter}{\numberline {8}Ranking with multiple incommensurable criteria}{93}{chapter.8}%
 \contentsline {section}{\numberline {8.1}The ranking problem}{93}{section.8.1}%
 \contentsline {section}{\numberline {8.2}The {\sc Copeland}\xspace ranking}{95}{section.8.2}%
-\contentsline {section}{\numberline {8.3}The {\sc NetFlows}\xspace ranking}{98}{section.8.3}%
+\contentsline {section}{\numberline {8.3}The {\sc NetFlows}\xspace ranking}{97}{section.8.3}%
 \contentsline {section}{\numberline {8.4}{\sc Kemeny}\xspace rankings}{99}{section.8.4}%
 \contentsline {section}{\numberline {8.5}{\sc Slater}\xspace rankings}{101}{section.8.5}%
-\contentsline {section}{\numberline {8.6}{\sc Kohler}\xspace 's ranking-by-choosing rule}{102}{section.8.6}%
+\contentsline {section}{\numberline {8.6}{\sc Kohler}\xspace 's ranking-by-choosing rule}{103}{section.8.6}%
 \contentsline {section}{\numberline {8.7}Tideman's {\sc RankedPairs}\xspace ranking rule}{105}{section.8.7}%
 \contentsline {section}{References}{107}{section*.17}%
 \gdef \the@ipfilectr {}
@@ -108,7 +108,7 @@
 \contentsline {section}{\numberline {9.1}Quantile sorting on a single criterion}{109}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Quantiles sorting with multiple performance criteria}{110}{section.9.2}%
 \contentsline {section}{\numberline {9.3}The sparse pre-ranked outranking digraph model}{114}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Ranking pre-ranked sparse outranking digraphs}{118}{section.9.4}%
+\contentsline {section}{\numberline {9.4}Ranking pre-ranked sparse outranking digraphs}{117}{section.9.4}%
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-15}
 \contentsline {chapter}{\numberline {10}Rating by ranking with learned performance quantile norms}{119}{chapter.10}%
@@ -187,9 +187,9 @@
 \gdef \the@ipfilectr {@-24}
 \contentsline {chapter}{\numberline {17}On computing digraph kernels}{225}{chapter.17}%
 \contentsline {section}{\numberline {17.1}What is a graph kernel ?}{225}{section.17.1}%
-\contentsline {section}{\numberline {17.2}Initial and terminal kernels}{228}{section.17.2}%
+\contentsline {section}{\numberline {17.2}Initial and terminal kernels}{227}{section.17.2}%
 \contentsline {section}{\numberline {17.3}Kernels in lateralized digraphs}{232}{section.17.3}%
-\contentsline {section}{\numberline {17.4}Computing first and last choice recommendations}{235}{section.17.4}%
+\contentsline {section}{\numberline {17.4}Computing first and last choice recommendations}{234}{section.17.4}%
 \contentsline {section}{\numberline {17.5}Tractability of prekernel computation}{239}{section.17.5}%
 \contentsline {section}{\numberline {17.6}{\sc Berge}\xspace kernel equation systems}{241}{section.17.6}%
 \contentsline {section}{References}{248}{section*.23}%
@@ -205,7 +205,7 @@
 \contentsline {chapter}{\numberline {19}On robust outrankings}{259}{chapter.19}%
 \contentsline {section}{\numberline {19.1}Cardinal or ordinal criteria significances}{259}{section.19.1}%
 \contentsline {section}{\numberline {19.2}Qualifying the stability of outranking situations}{260}{section.19.2}%
-\contentsline {section}{\numberline {19.3}Computing stability denotations}{265}{section.19.3}%
+\contentsline {section}{\numberline {19.3}Computing stability denotations}{264}{section.19.3}%
 \contentsline {section}{\numberline {19.4}Robust bipolar-valued outranking digraphs}{266}{section.19.4}%
 \contentsline {section}{\numberline {19.5}Unopposed outranking situations}{269}{section.19.5}%
 \contentsline {section}{\numberline {19.6}Computing Pareto efficient multiobjective choices}{272}{section.19.6}%
@@ -216,7 +216,7 @@
 \contentsline {section}{\numberline {20.1}Converting voting profiles into performance tableaux}{275}{section.20.1}%
 \contentsline {section}{\numberline {20.2}Multipartisan primary selection of eligible candidates}{277}{section.20.2}%
 \contentsline {section}{\numberline {20.3}Secondary election winner determination}{279}{section.20.3}%
-\contentsline {section}{\numberline {20.4}Multipartisan preferences in divisive politics}{280}{section.20.4}%
+\contentsline {section}{\numberline {20.4}Multipartisan preferences in divisive politics}{279}{section.20.4}%
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-28}
 \contentsline {chapter}{\numberline {21}Bipolar approval voting}{285}{chapter.21}%
@@ -234,8 +234,8 @@
 \contentsline {section}{\numberline {22.2}q-coloring of a graph}{304}{section.22.2}%
 \contentsline {section}{\numberline {22.3}MIS and clique enumeration}{305}{section.22.3}%
 \contentsline {section}{\numberline {22.4}Line graphs and maximal matchings}{306}{section.22.4}%
-\contentsline {section}{\numberline {22.5}Grids and the Ising model}{308}{section.22.5}%
-\contentsline {section}{\numberline {22.6}Simulating Metropolis random walks}{309}{section.22.6}%
+\contentsline {section}{\numberline {22.5}Grids and the Ising model}{309}{section.22.5}%
+\contentsline {section}{\numberline {22.6}Simulating Metropolis random walks}{310}{section.22.6}%
 \contentsline {section}{References}{312}{section*.26}%
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-31}

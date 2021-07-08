@@ -106,22 +106,18 @@ For this purpose we provide the following {\tt perfTab\_Template.py} file in the
     }
    ####################
 \end{lstlisting}
-
-The template file, shown in Listing \ref{list:4.1}, contains first the instructions to import the required {\tt Decimal} and {\tt OrderedDict} classes (see Lines 7-8). Four main sections are following: the potential decision {\bf actions}, the decision \textbf{objectives}, the performance \textbf{criteria}, and finally the performance \textbf{evaluation}.  
+The template file, shown in Listing \ref{list:4.1}, contains first the instructions to import the required {\tt Decimal} and {\tt OrderedDict} classes (see Lines 7-8). Four main sections are following: the potential decision \emph{actions}, the decision \emph{objectives}, the performance \emph{criteria}, and finally the performance \emph{evaluation}.  
 
 \section{Editing the decision alternatives}
 \label{sec:4.2}
 
-Decision alternatives are stored in attribute \textbf{actions} under the \texttt{OrderedDict} format (see the \href{https://docs.python.org/3/library/collections.html}{{\tt OrderedDict}} description in the Python documentation).
+Decision alternatives are stored in attribute \texttt{actions} under the \texttt{OrderedDict} format. The \texttt{OrderedDict} object keeps this given order when iterating over the decision alternatives \footnote{See the \href{https://docs.python.org/3/library/collections.html}{{\tt OrderedDict}} description in the Python documentation \citep{python}.}.
 
-Required attributes of each decision alternative, besides the object identifier,  are: \texttt{shortName}, \texttt{name} and \texttt{}comment (see Lines 15-17). The \texttt{shortName} attribute is essentially used when showing the performance tableau or the performance heatmap in a browser view.
+Required attributes of each decision alternative, besides the object identifier\footnote{Mind that \emph{graphviz} drawings require node identifier strings without any special characters like `\_` or `/`.},  are: \texttt{shortName}, \texttt{name} and \texttt{comment} (see Lines 15-17). The \texttt{shortName} attribute is essentially used when showing the performance tableau or the performance heatmap in a browser view.
 
-Mind that graphviz drawings require digraph actions' (nodes) identifier strings without any special characters like `\_` or `/`.
 
-Decision actions descriptions are stored in the order of which they appear in the stored instance file. The \texttt{OrderedDict} object keeps this given order when iterating over the decision alternatives.
-
-The random performance tableau models presented in the previous tutorial use the \texttt{actions} attribute for storing special features of the decision alternatives. The \emph{Cost-Benefit} model, for instance, uses a \texttt{type} attribute for distinguishing between \emph{advantageous}, \emph{neutral} and \emph{cheap} alternatives. The \emph{3-Objectives} model keeps a detailed record of the performance profile per decision objective and the corresponding random generators per performance criteria (see Lines 7- below).
-\begin{lstlisting}[basicstyle=\footnotesize]
+The random performance tableau models, introduced in Chapter \ref{sec:5}, use the \texttt{actions} attribute for storing special features of the decision alternatives. The \emph{Cost-Benefit} model, for instance, uses a \texttt{type} attribute for distinguishing between \emph{advantageous}, \emph{neutral} and \emph{cheap} alternatives (see Section \ref{sec:5.3}). The \emph{3-Objectives} model keeps a detailed record of the performance profile per decision objective and the corresponding random generators per performance criteria (see Lines 7- below).
+\begin{lstlisting}
 >>> t = Random3ObjectivesPerformanceTableau()
 >>> t.actions
     OrderedDict([
@@ -145,7 +141,7 @@ The random performance tableau models presented in the previous tutorial use the
       ])
 \end{lstlisting}
 
-The second section of the template file concerns the decision \textbf{objectives}.
+The second section of the template file concerns the decision \emph{objectives}.
 
 \section{Editing the decision objectives}
 \label{sec:4.3}
