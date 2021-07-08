@@ -7,18 +7,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
 %\motto{Use the template \emph{chapter.tex} to style the various elements of your chapter content.}
 \chapter{Working with the \Digraph Python resources}
-\label{intro} % chapter1
+\label{sec:1} % chapter1
 % use \chaptermark{}
 % to alter or adjust the chapter heading in the running head
 
-\abstract*{The basic idea of the \Digraph Python resources is to make easy python interactive sessions or write short Python scripts for computing all kind of results from a bipolar-valued digraph or graph. These include such features as maximal independent, maximal dominant or absorbent choices, rankings, outrankings, linear ordering, etc. Most of the available computing resources are meant to illustrate a Master Course on Algorithmic Decision Theory given at the University of Luxembourg in the context of its Master in Information and Computer Science (MICS). The Python development of these computing resources offers the advantage of an easy to write and maintain OOP source code as expected from a performing scripting language without loosing on efficiency in execution times compared to compiled languages such as C++ or Java.}
+\abstract*{}
 
-\abstract{The basic idea of the \Digraph Python resources is to make easy python interactive sessions or write short Python scripts for computing all kind of results from a bipolar-valued digraph or graph. These include such features as maximal independent, maximal dominant or absorbent choices, rankings, outrankings, linear ordering, etc. Most of the available computing resources are meant to illustrate a Master Course on Algorithmic Decision Theory given at the University of Luxembourg in the context of its Master in Information and Computer Science (MICS). The Python development of these computing resources offers the advantage of an easy to write and maintain OOP source code as expected from a performing scripting language without loosing on efficiency in execution times compared to compiled languages such as C++ or Java.}
+\abstract{}
 
 \section{Installing the \Digraph resources}
 \label{sec:1.1}
 
-Using the \Digraph modules is easy \citep{BIS-2021}. You only need to have installed on your system the Python programming language of version 3.+ (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard decimal module implements very efficiently its decimal.Decimal class in C. Now, Decimal objects are mainly used in the \Digraph characteristic r-valuation functions, which makes the recent python-3.7+ versions much faster (more than twice as fast) when extensive digraph operations are performed.
+Using the \Digraph Python modules is easy \citep{BIS-2021}. You only need to have installed on your system the Python programming language of version 3.+ (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard decimal module implements very efficiently its decimal.Decimal class in C. Now, Decimal objects are mainly used in the \Digraph characteristic r-valuation functions, which makes the recent python-3.7+ versions much faster (more than twice as fast) when extensive digraph operations are performed.
 
 Several download options (easiest under Linux or Mac OS-X) are given. Either, by using a git client either, from \texttt{github}:
 \begin{footnotesize}
@@ -81,14 +81,14 @@ Individual module pytest suites are also provided (see the makefile), like the o
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{Dependencies}
-\begin{itemize}
-\item To be fully functional, the \Digraph resources mainly need the \texttt{graphviz} tools \footnote{\href{https://graphviz.org}{https://graphviz.org}} and the R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
-\item When exploring digraph isomorphisms, the \href{https://www.cs.sunysb.edu/~algorith/implement/nauty/implement.shtml}{\texttt{nauty} isomorphism testing program} is required.
-\item Two specific criteria and actions clustering methods of the \texttt{OutrankingDigraph} class furthermore require the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
-\end{itemize}
+\paragraph{Dependencies:}
+To be fully functional, the \Digraph resources mainly need the \texttt{graphviz} tools \footnote{\href{https://graphviz.org}{https://graphviz.org}, \citet{graphViz}} and the R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
 
-\section{Starting a Python3 session}
+When exploring digraph isomorphisms, the \href{https://www.cs.sunysb.edu/~algorith/implement/nauty/implement.shtml}{\texttt{nauty} isomorphism testing program} is required.
+
+Two specific methods of the \texttt{OutrankingDigraph} class for clustering performance criteria or decision alternatives require furthermore the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
+
+\section{Starting a \Digraph python3 session}
 \label{sec:1.2}
 You may start an interactive Python3 session in the \texttt{Digraph3} directory.
 \begin{footnotesize}
@@ -118,7 +118,7 @@ For exploring the classes and methods provided by the \Digraph module \footnote{
                       'gamma','notGamma']
 \end{lstlisting}
                    
-In Listing \ref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs} module the \texttt{RandomDigraph} class in order to generate a random digraph object $dg$ of order 5 - number of nodes called (decision) actions - and arc probability of $50\%$. The resulting digraph of order 5 and size -- number of arcs-- 12 is completely determined.
+In Listing \ref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs}} module the \texttt{RandomDigraph} class \index{randomDigraphs@\texttt{randomDigraphs}!RandomDigraph@\texttt{RandomDigraph}} in order to generate a random digraph object $dg$ of order 5 - number of nodes called (decision) actions - and arc probability of $50\%$. The resulting digraph of order 5 and size -- number of arcs-- 12 is completely determined.
 
 \section{Permanent storage of a digraph object}
 \label{sec:1.3}                   
@@ -131,7 +131,6 @@ with the following content:
 \begin{lstlisting}[caption={A stored digraph instance},label=list:1.2]
 from decimal import Decimal
 from collections import OrderedDict
-
 actions = OrderedDict([
     ('a1', {'shortName': 'a1',
           'name': 'random decision action'}),
@@ -144,14 +143,12 @@ actions = OrderedDict([
     ('a5', {'shortName': 'a5',
           'name': 'random decision action'}),
  ])
-
  valuationdomain = {
      'min': Decimal('-1.0'),
      'med': Decimal('0.0'),
      'max': Decimal('1.0'),
      'hasIntegerValuation': True, # representation format
 }
-
  relation = {
      'a1': {'a1':Decimal('-1.0'), 'a2':Decimal('-1.0'),
               'a3':Decimal('1.0'), 'a4':Decimal('-1.0'),
@@ -171,7 +168,7 @@ actions = OrderedDict([
  }
 \end{lstlisting}
 
-All digraphs instances are of \texttt{Digraph} type and contain at least the following attributes (see Listing \ref{list:1.1}  Lines 11-12):
+All digraphs instances are of \texttt{Digraph}\index{digraphs@\texttt{digraphs}|Digraph@\texttt{Digraph}} type and contain at least the following attributes (see Listing \ref{list:1.1}  Lines 11-12):
 \begin{enumerate}
 \item A \texttt{name} attribute, holding usually the actual name of the stored instance that was used to create the instance;
 \item A ordered dictionary of digraph nodes called \texttt{actions} (decision alternatives) with at least a \texttt{name} attribute;
@@ -185,7 +182,7 @@ All digraphs instances are of \texttt{Digraph} type and contain at least the fol
 \section{Inspecting a digraph object}
 \label{sec:1.4}
 
-Different \texttt{show...()} methods (see Listing \ref{list:1.3}  Lines 1, 16, 26, 31 below) reveal us now that $dg$ is a crisp, irreflexive and connected digraph of order five.
+Different \texttt{show...()} methods like the \texttt{showShort()} method \index{digraphs@\texttt{digraphs}|Digraph@\texttt{Digraph}|showSort@\texttt{showShort()}} reveal us now that $dg$ is a crisp, irreflexive and connected digraph of order five (see Listing \ref{list:1.3}  Lines 1, 16, 26, 37 below).
 
 \begin{lstlisting}[caption={Random crisp digraph object},label=list:1.3]
 >>> dg.showShort()
@@ -232,7 +229,7 @@ Different \texttt{show...()} methods (see Listing \ref{list:1.3}  Lines 1, 16, 2
  'a5': in => {'a1', 'a4', 'a3'}, out => {'a4'}
 \end{lstlisting}
 
-The \texttt{exportGraphViz()} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph $dg$ (see Fig. \ref{fig:1.1}), if the \emph{graphviz} tools are installed on your system.
+The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph $dg$ (see Fig. \ref{fig:1.1}), if the \emph{graphviz} tools are installed on your system \citep{graphViz}\index{graphviz@\textsl{graphviz}}.
 \begin{lstlisting}
 >>> dg.exportGraphViz('tutorialDigraph')
  *---- exporting a dot file do GraphViz tools ---------*
@@ -246,7 +243,7 @@ The \texttt{exportGraphViz()} method generates in the current working directory 
 \label{fig:1.1}       % Give a unique label
 \end{figure}
 
-Further methods are provided for inspecting this random \texttt{Digraph} object $dg$, like the following \texttt{showStatistics()} method.
+Further methods are provided for inspecting this random \texttt{Digraph} object $dg$, like the following \texttt{showStatistics()}\index{showStatistics@\texttt{showStatistics()}} method.
 
 \begin{lstlisting}[caption={Inspecting a \texttt{Digraph} object},label=list:1.5]
 >>> dg.showStatistics()
@@ -289,9 +286,14 @@ Further methods are provided for inspecting this random \texttt{Digraph} object 
  agglomeration coefficient        : 45.00
 \end{lstlisting}
 
-These show methods usually rely upon corresponding compute methods, like the computeSize(), the computeDeterminateness() or the computeTransitivityDegree() method (see Listing \ref{list:1.6} Lines 5,7,16).
-
-\begin{lstlisting}[label=list:1.6,basicstyle=\footnotesize]
+These show methods usually rely upon corresponding compute methods, like:
+\begin{itemize}
+\item The \texttt{computeSize()}\index{computeSize@\texttt{computeSize()}},
+\item The \texttt{computeDeterminateness()}\index{computeDeterminateness@\texttt{computeDeterminateness()}}, or
+\item The \texttt{computeTransitivityDegree()}\index{computeTransitivityDegree@\texttt{computeTransitivityDegree()}} method,
+\end{itemize}
+(see Listing \ref{list:1.6} Lines 5,7,16).
+\begin{lstlisting}[caption={Various \texttt{computexxx()} methods.}label=list:1.6]
 >>> dg.computeSize()
  12
 >>> dg.computeDeterminateness(InPercents=True)
@@ -299,9 +301,10 @@ These show methods usually rely upon corresponding compute methods, like the com
 >>> dg.computeTransitivityDegree(InPercents=True)
  Decimal('60.00')
 \end{lstlisting}
-Mind that \texttt{show} methods output their results in the \emph{Python} console. We provide also some \texttt{showHTML} methods which output their results in a system browser’s window.
+Mind that \texttt{showxxx()} methods output their results in the \emph{Python} console. We provide also some \texttt{showHTMLxxx()} methods which output their results in a system browser’s window.
 \begin{lstlisting}[label=list:1.7,basicstyle=\footnotesize]
->>> dg.showHTMLRelationMap(relationName='r(x,y)',rankingRule=None)
+>>> dg.showHTMLRelationMap(relationName='r(x,y)',\
+...                        rankingRule=None)
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption
@@ -309,7 +312,6 @@ Mind that \texttt{show} methods output their results in the \emph{Python} consol
 \caption{Browsing the relation map of the tutorial digraph. $+$ indicates a certainly valid and $-$ indicates a certainly  invalid relation, Here we find confirmed again that our random digraph instance $dg$, is indeed a crisp, i.e. 100\% determined irreflexive digraph instance.}
 \label{fig:1.2}       % Give a unique label
 \end{figure}
-\clearpage
 
 \section{Special digraph instances}
 \label{sec:1.5}
@@ -317,11 +319,13 @@ Mind that \texttt{show} methods output their results in the \emph{Python} consol
 Some constructors for universal digraph instances, like the \texttt{CompleteDigraph}, the \texttt{EmptyDigraph} or the \texttt{GridDigraph} constructor, are readily available (see Fig. \ref{fig:1.3}).
 \begin{lstlisting}
 >>> from digraphs import GridDigraph
->>> grid = GridDigraph(n=5,m=5,hasMedianSplitOrientation=True)
+>>> grid = GridDigraph(n=5,m=5,\
+...                    hasMedianSplitOrientation=True)
 >>> grid.exportGraphViz('tutorialGrid')
- *---- exporting a dot file for GraphViz tools ---------*
+ *---- exporting a dot file for GraphViz tools ------*
  Exporting to tutorialGrid.dot
- dot -Grankdir=BT -Tpng TutorialGrid.dot -o tutorialGrid.png
+ dot -Grankdir=BT -Tpng TutorialGrid.dot\
+                  -o tutorialGrid.png
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption
@@ -334,10 +338,10 @@ To be written: chaper conclusion and transition to the next chapter.
 
 %%%%%%% The chapter bibliography
 % %\normallatexbib
-% \clearpage
+\clearpage
 % \phantomsection
 % \addcontentsline{toc}{section}{Chapter Bibliography}
-% \bibliographystyle{dinat}
+\bibliographystyle{spbasic}
 % \typeout{}
-% \bibliography{03-backMatters/reference}
+\bibliography{03-backMatters/reference}
 % %\input{02-mainMatters/01-chapterIntroDigraph3.bbl}

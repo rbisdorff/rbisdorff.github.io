@@ -5,17 +5,20 @@
 
 \abstract{To be written.}
 
-This case study is inspired by a multiple criteria decision analysis case study published by Eisenführ Fr., Langer Th., and Weber M. \footnote{Eisenführ Fr., Langer Th., and Weber M. \emph{Fallstudien zu rationalem Entscheiden}, Springer 2001, pp. 1-17.}.
 
 \begin{figure}[h]
 \sidecaption
 \includegraphics[width=5cm]{Figures/AliceF.png}
-\caption{Alice D. , 19 years old German student finishing her secondary studies in Köln (Germany), desires to undertake foreign languages studies. She will probably receive her "Abitur" with satisfactory and/or good marks and  wants to start her further studies thereafter. She would not mind staying in Köln, yet is ready to move elsewhere if necessary. The length of the higher studies do concern her, as she wants to earn her life as soon as possible.  Her parents however agree to financially support her study fees as well as her living costs during her studies.}
+\caption{Alice D. , 19 years old German student finishing her secondary studies in Köln (Germany), desires to undertake foreign languages studies.}
 \label{fig:12.1}       % Give a unique label
 \end{figure}
 
+This case study is inspired by a multiple criteria decision analysis case study published by \citealp[pp. 1-17]{EIS-2001}.
+
 \section{The decision problem}
 \label{sec:12.1}
+
+Alice will probably receive her "Abitur" with satisfactory and/or good marks and  wants to start her further studies thereafter. She would not mind staying in Köln, yet is ready to move elsewhere if necessary. The length of the higher studies do concern her, as she wants to earn her life as soon as possible.  Her parents however agree to financially support her study fees as well as her living costs during her studies.
 
 Alice has already identified 10 potential study programs.
 
@@ -25,7 +28,7 @@ Alice has already identified 10 potential study programs.
 \begin{center}
   %\begin{small}
     \begin{tabular}{l|l|l|l}
-      \hline\noalign{\smallskip}
+      \svhline\noalign{\smallskip}
       ID & Diploma & Institution & City\\
       \noalign{\smallskip}\hline\noalign{\smallskip}
       T-UD   & Qualified translator (T)  &   University (UD)               &  Düsseldorf\\
@@ -54,15 +57,19 @@ Four \textbf{decision objectives} of more or less equal importance are guiding A
 \item \emph{maximize} her professional perspectives (PRA).
 \end{enumerate}
 
-The decision consequences Alice wishes to take into account for evaluating the potential study programs with respect to each of the four objectives are modelled by the following \textbf{coherent family of criteria} \footnote{A coherent family of performance criteria verifies: a) \emph{Exhaustiveness}: No argument acceptable to all stakeholders can be put forward to justify a preference in favour of action $x$ versus action $y$  when $x$ and $y$ have the same performance level on each of the criteria of the family; b) \emph{Cohesiveness}: Stakeholders unanimously recognize that action $x$ must be preferred to action $y$ whenever the performance level of $x$ is significantly better than that of $y$ on one of the criteria of positive weight, performance levels of $x$ and $y$ being the same on each of the other criteria; c) \emph{Nonredundancy}: One of the above requirements is violated if one of the criteria is left out from the family. \emph{Source}: European Working Group \emph{Multicriteria Aid for Decisions}, Series 3, n.1, Spring, 2000.}.
-
+The decision consequences Alice wishes to take into account for evaluating the potential study programs with respect to each of the four objectives are modelled by the following \emph{coherent family of criteria}\footnote{See \citet{ROY-2000}}. Such a family of performance criteria verifies:
+\begin{enumerate}
+\item \emph{Exhaustiveness}: No argument acceptable to all stakeholders can be put forward to justify a preference in favour of action $x$ versus action $y$  when $x$ and $y$ have the same performance level on each of the criteria of the family;
+\item \emph{Cohesiveness}: Stakeholders unanimously recognize that action $x$ must be preferred to action $y$ whenever the performance level of $x$ is significantly better than that of $y$ on one of the criteria of positive weight, performance levels of $x$ and $y$ being the same on each of the other criteria; 
+\item \emph{Nonredundancy}: One of the above requirements is violated if one of the criteria is left out from the family.
+\end{enumerate}
 \begin{table}[h]
 \caption{Alice's family of performance criteria}
 \label{tab:12.2}       % Give a unique label
 \begin{center}
   %\begin{small}
     \begin{tabular}{l|l|l|l|c}
-      \hline\noalign{\smallskip}
+      \svhline\noalign{\smallskip}
       ID & Name & Comment & Objective & Weight\\
       \noalign{\smallskip}\hline\noalign{\smallskip}
        DH  & Proximity  &  Distance in km to her home (min)      &   GEO    &     3\\
@@ -128,7 +135,7 @@ Details of the performance criteria may be consulted in a browser view (see Fig.
 
 It is worthwhile noticing in Fig. \ref{fig:12.2} that, on her subjective attractiveness scale of the study programs (criterion $AS$), Alice considers a performance differences of 7 points to be \emph{considerable} and triggering, the case given, an outranking polarisation \citep{BIS-2013}. Notice also the proportional \emph{indifference} ($1\%$) and \emph{preference} ($5\%$) discrimination thresholds shown on criterion $BC$-number of inhabitants.
 
-Alice is subjectively evaluating the \emph{Attractiveness} of the studies (criterion $AS$) on an ordinal scale from 0 (weak) to 10 (excellent). Similarly, she is subjectively evaluating the \emph{Attractiveness} of the respective professions (criterion $AP$) on a three level ordinal scale from 0 (\emph{weak}), 1 (\emph{fair}) to 2 (\emph{good}). Considering the \emph{Occupational Prestige} (criterion $OP$), she looked up the SIOPS \footnote{Ganzeboom H.B.G, Treiman D.J. ``Internationally Comparable Measures of Occupational Status for the 1988 International Standard Classification of Occupations'', \emph{Social Science Research} 25, 201–239 (1996).}. All the other evaluation data she found on the internet (see Fig. \ref{fig:12.3}).
+Alice is subjectively evaluating the \emph{Attractiveness} of the studies (criterion $AS$) on an ordinal scale from 0 (weak) to 10 (excellent). Similarly, she is subjectively evaluating the \emph{Attractiveness} of the respective professions (criterion $AP$) on a three level ordinal scale from 0 (\emph{weak}), 1 (\emph{fair}) to 2 (\emph{good}). Considering the \emph{Occupational Prestige} (criterion $OP$), she looked up the SIOPS \footnote{See \citet*{GAN-1996}.}. All the other evaluation data she found on the internet (see Fig. \ref{fig:12.3}).
 
 In the following \emph{heatmap view}, we may now consult Alice's performance evaluations.
 
@@ -137,8 +144,8 @@ In the following \emph{heatmap view}, we may now consult Alice's performance eva
 ...       colorLevels=5,Correlations=True,ndigits=0)
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=10cm]{Figures/aliceHeatmap.png}
+%\sidecaption
+\includegraphics[width=12cm]{Figures/aliceHeatmap.png}
 \caption{Heatmap of Alice's performance tableau}
 \label{fig:12.3}       % Give a unique label
 \end{figure}
@@ -170,25 +177,22 @@ Let us now have a look at the resulting pairwise outranking situations.
 >>> dg.computeSymmetryDegree(Comments=True)
   Symmetry degree of graph <rel_AliceChoice> : 0.49
 \end{lstlisting}
-
 From Alice's performance tableau we obtain 67 positively validated pairwise outranking situations in the digraph $dg$, supported by a $74\%$ majority of criteria significance (see Listing \ref{list:12.2} Line 9-10).
 
 Due to the poorly discriminating performance evaluations, nearly half of these outranking situations (see Line 12) are \emph{symmetric} and reveal actually \emph{more or less indifference} situations between the potential study programs. This is well illustrated in the \emph{relation map} of the outranking digraph (see Fig. \ref{fig:12.4}).
-
 \begin{lstlisting}
 >>> dg.showHTMLRelationMap(\
 ...           tableTitle='Outranking relation map',\
 ...           rankingRule='Copeland')
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=12cm]{Figures/aliceRelationmap.png}
+%\sidecaption
+\includegraphics[width=10cm]{Figures/aliceRelationmap.png}
 \caption{\Copeland ranked outranking relation map}
 \label{fig:12.4}       % Give a unique label
 \end{figure}
 
 We have mentioned that Alice considers a performance difference of 7 points on the \emph{Attractiveness of studies} criterion $AS$ to be considerable which triggers, the case given, a potential polarisation of the outranking characteristics. In Fig. \ref{fig:12.4}, these polarisations appear in the last column and last row. We may inspect the occurrence of such polarisations as follows.
-
 \begin{lstlisting}[caption={Polarised outranking situations},label=list:12.3]
 >>> dg.showVetos()
     *----  Veto situations ---
@@ -226,12 +230,10 @@ We have mentioned that Alice considers a performance difference of 7 points on t
      Counter-veto threshold              : 7.00
      Polarisation: r(I-UHB >= S-HKK) = 0.17 ==> +1.00
 \end{lstlisting}
-
 In Listing \ref{list:12.3}, we see that \emph{considerable} performance differences concerning the \emph{Attractiveness of the studies} ($AS$ criterion) are indeed observed between the \emph{Specialised Secretary} study programm offered in Köln and the \emph{Graduate Interpreter} study programs offered in Köln, Saarbrücken and Heidelberg. They polarise, hence, three \emph{more or less invalid} outranking situations to \emph{certainly invalid} (Lines 8, 13, 18) and corresponding three \emph{more or less valid} converse outranking situations to \emph{certainly valid} ones (Lines 25, 30, 35). 
 
 We may finally notice in the relation map, shown in Fig. \ref{fig:12.4}, that the four best-ranked study programs, $I-FHK$, $I-USB$, $I-UHB$ and $T-FHK$,  are in fact \Condorcet winners (see Listing \ref{list:12.4} Line 2), i.e. they are all four \emph{indifferent} one of the other \textbf{and} positively \emph{outrank} all other alternatives, a result confirmed below by our best choice recommendation (Line 8).
-   
-\begin{lstlisting}[caption={Alice's best choice recommendation},label=list:12.4]
+   \begin{lstlisting}[caption={Alice's best choice recommendation},label=list:12.4]
 >>> dg.computeCondorcetWinners()
   ['I-FHK', 'I-UHB', 'I-USB', 'T-FHK'] 
 >>> dg.showBestChoiceRecommendation()
@@ -377,7 +379,7 @@ The \emph{Graduate Interpreter} studies in Köln remain indeed a 90\%-confident 
 
 When previously comparing the two best-ranked study programs (see Fig. \ref{fig:12.6}), we have observed that $I-FHK$ actually positively outranks $I-USB$ on all four decision objectives. When admitting equi-significant criteria significances per objective, this outranking situation is hence valid independently of the importance weights Alice may allocate to each of her decision objectives. 
 
-We may compute these \textbf{unopposed} outranking situations with help of the \texttt{UnOpposedBipolarOutrankingDigraph} constructor (see Section \ref{sec:19.5}).
+We may compute these \textbf{unopposed} outranking situations with help of\\ the \texttt{UnOpposedBipolarOutrankingDigraph} constructor (see Section \ref{sec:19.5}).
 
 \begin{lstlisting}[caption={Computing the unopposed outranking situations},label=list:12.8]
 >>> from outrankingDigraphs import UnOpposedBipolarOutrankingDigraph
@@ -395,11 +397,9 @@ We may compute these \textbf{unopposed} outranking situations with help of the \
 >>> uop.isTransitive()
   True
 \end{lstlisting}
-
 We keep 28 out the 67 standard outranking situations, which leads to an \emph{oppositeness degree} of $(1.0 - 28/67) = 58.21\%$ (see Listing \ref{list:12.8} Line 10). Remarkable furthermore is that this unopposed outranking digraph $uop$ is actually \emph{transitive}, i.e. modelling a \emph{partial ranking} of the study programs (Line 14).
 
 We may hence make use of the \texttt{exportGraphViz()} method of the\\ \texttt{TransitiveDigraph} class for drawing the corresponding partial ranking.
-
 \begin{lstlisting}
 >>> from transitiveDigraphs import TransitiveDigraph
 >>> TransitiveDigraph.exportGraphViz(uop,\
@@ -410,7 +410,7 @@ We may hence make use of the \texttt{exportGraphViz()} method of the\\ \texttt{T
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption
-\includegraphics[width=3cm]{Figures/AliceChoice_unopposed.png}
+\includegraphics[width=4cm]{Figures/AliceChoice_unopposed.png}
 \caption{Unopposed partial ranking of the potential study programs. Again, when \emph{equi-signficant} performance criteria are assumed per decision objective, we observe in here that $I-FHK$ remains the stable best choice, \emph{independently} of the actual importance weights that Alice may wish to allocate to her four decision objectives.}
 \label{fig:12.7}       % Give a unique label
 \end{figure}
@@ -422,9 +422,9 @@ For further reading about the \emph{Rubis Best Choice} methodology, one may cons
 %%%%%%% The chapter bibliography
 %\normallatexbib
 \clearpage
-\phantomsection
-\addcontentsline{toc}{section}{Chapter Bibliography}
-\bibliographystyle{dinat}
-\typeout{}
+%\phantomsection
+%\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{spbasic}
+%\typeout{}
 \bibliography{03-backMatters/reference}
 %\input{02-mainMatters/12-chapterAliceChoice.bbl}

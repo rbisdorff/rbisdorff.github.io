@@ -1,25 +1,28 @@
-\begin{thebibliography}{2}
-% this bibliography was produced with the style dinat.bst v2.5
-\makeatletter
-\newcommand{\dinatlabel}[1]%
-{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
-\makeatother
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[Bisdorff(2021)]{BIS-2021}
-\dinatlabel{Bisdorff 2021} \textsc{Bisdorff}, R.:
-\newblock \emph{Digraph3: a collection of Python3 modules for computing with
-  outranking digraphs}.
-\newblock 2021. --
-\newblock URL \url{https://digraph3.readthedocs.io/en/latest/}
+\bibitem[{Bisdorff(2004)}]{BIS-2004a}
+Bisdorff R (2004) On a natural fuzzification of boolean logic. In: Klement EP,
+  Pap E (eds) Linz Seminar on Fuzzy Set Theory, Mathematics of Fuzzy Systems,
+  Bildungszentrum St. Magdalena, Linz (Austria), pp 20--26,
+  \urlprefix\url{http://hdl.handle.net/10993/23721}
 
-\bibitem[Klement und Pap(2004)]{BIS-2004a}
-\dinatlabel{Klement und Pap 2004} \textsc{Klement}, E.~P. (Hrsg.)~;
-  \textsc{Pap}, E. (Hrsg.):
-\newblock \emph{On a natural fuzzification of Boolean logic}.
-\newblock Bildungszentrum St. Magdalena, Linz (Austria), 2004. --
-\newblock 20--26~S. --
-\newblock URL \url{http://hdl.handle.net/10993/23721}
+\bibitem[{Bisdorff(2021)}]{BIS-2021}
+Bisdorff R (2021) Digraph3: a collection of python3 modules for computing with
+  outranking digraphs.
+  \urlprefix\url{https://digraph3.readthedocs.io/en/latest/}
+
+\bibitem[{Roy(1959)}]{ROY-1959}
+Roy B (1959) Transitivité et connexité. C R Acad Sci Paris 249:216--218
+
+\bibitem[{Warshall(1962)}]{WAR-1962}
+Warshall S (1962) A theorem on boolean matrices. J ACM 9:11--12
 
 \end{thebibliography}

@@ -16,8 +16,9 @@ all:
 book.pdf: 
 	# makes a pdf directly
 	pdflatex book.tex
-	#bibtex 02-mainMatters/00-chapterIntroduction.aux
-	#bibtex 02-mainMatters/01-chapterIntroDigraph3.aux
+	pdflatex book.tex
+	bibtex 02-mainMatters/00-chapterIntroduction.aux
+	bibtex 02-mainMatters/01-chapterIntroDigraph3.aux
 	bibtex 02-mainMatters/02-chapterDigraphs.aux
 	bibtex 02-mainMatters/03-chapterOutrankingDigraphs.aux
 	bibtex 02-mainMatters/04-chapterNewPerfTab.aux
@@ -42,6 +43,7 @@ book.pdf:
 	bibtex 02-mainMatters/23-chapterTreeGraphs.aux
 	bibtex 02-mainMatters/24-chapterIsomorphicMIS.aux
 	bibtex 02-mainMatters/25-chapterPerfectGraphs.aux
+	#bibtex book
 	pdflatex book.tex
 	pdflatex book.tex
 	makeindex -s svind.ist book.idx

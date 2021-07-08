@@ -8,15 +8,10 @@
 
 
 % RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[envcountchap,sectrefs]{svmono}
+\documentclass[12pt,envcountchap,sectrefs,english]{svmono}
 
 % choose options for [] as required from the list
 % in the Reference Guide
-
-\usepackage{mathptmx}
-\usepackage{helvet}
-\usepackage{courier}
-%
 \usepackage{type1cm}         
 
 \usepackage{makeidx}         % allows index generation
@@ -25,33 +20,48 @@
 \usepackage{multicol}        % used for the two-column index
 \usepackage[bottom]{footmisc}% places footnotes at page bottom
 
-% see the list of further useful packages
-% in the Reference Guide
-\usepackage{amsmath,stmaryrd,amssymb,bbm}
-\usepackage{tabularx}
-\usepackage{natbib}
+\usepackage{newtxtext}       % 
+\usepackage{newtxmath}       % selects Times Roman as basic font
+
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{courier}
+% %
+\usepackage{type1cm}         
+
+% \usepackage{makeidx}         % allows index generation
+% \usepackage{graphicx}        % standard LaTeX graphics tool
+%                              % when including figure files
+% \usepackage{multicol}        % used for the two-column index
+% \usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+% % see the list of further useful packages
+% % in the Reference Guide
+% \usepackage{amsmath,stmaryrd,amssymb,bbm}
+% \usepackage{tabularx}
+\usepackage[sectionbib]{natbib}
 \usepackage{chapterbib}
-\usepackage{minitoc}
-\usepackage{pst-all}
-\usepackage{latexsym}
-\usepackage{euscript}
-\usepackage{enumerate}
-\usepackage{amssymb}
-\usepackage{ifthen}
+%\usepackage{minitoc}
+% \usepackage{pst-all}
+% \usepackage{latexsym}
+% \usepackage{euscript}
+% \usepackage{enumerate}
+% \usepackage{amssymb}
+% \usepackage{ifthen}
 \usepackage{xspace}
-\usepackage[official,right]{eurosym}
-\usepackage{url}
-\usepackage{epstopdf}
+% \usepackage[official,right]{eurosym}
+% \usepackage{url}
+% \usepackage{epstopdf}
 \usepackage{listings}
-%\usepackage{rotating}
-%\usepackage[usenames]{color}
-\usepackage{ascii}
-%\usepackage{array}
-\usepackage{pifont}
-%\usepackage{colortbl}
-\usepackage{multirow}
-%\usepackage{stmaryrd}
-%\usepackage{dcolumn}
+% %\usepackage{rotating}
+% %\usepackage[usenames]{color}
+% \usepackage{ascii}
+% %\usepackage{array}
+% \usepackage{pifont}
+% %\usepackage{colortbl}
+% \usepackage{multirow}
+% %\usepackage{stmaryrd}
+% %\usepackage{dcolumn}
 
 \usepackage[pdftex,
 	draft = false,				% Mettre true pour ne pas générer les liens! 
@@ -150,14 +160,14 @@
 
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\citeindextrue
+%\citeindextrue
 %\lstset{style=mystyle}
 \lstset{language=Python,
        backgroundcolor=\color{LightGray},
        basicstyle=\ttfamily\footnotesize,
        breaklines=true,
        %commentstyle=\bf,
-       keywordstyle=\tt,
+       keywordstyle=\tt
        numbers=left,
        numberstyle=\tiny,
        %stepnumber=5,
@@ -210,11 +220,17 @@
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\include{03-backMatters/appendix}
-%\bibliographystyle{dinat}
-\bibliography{03-backMatters/reference}
+% included in the appendix
+%\bibliographystyle{spbasic}
+%\bibliography{03-backMatters/reference}
+%\lstlistoflistings
+%\listoffigures
+%\listoftables
+
 
 %\include{03-backMatters/glossary}
 %\include{03-backMatters/reference}
+\indexstarthook{Authors are indexed in \emph{italic} and \Digraph modules, classes and methods are indexed in \texttt{typewriting} font. }
 \printindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

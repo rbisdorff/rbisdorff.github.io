@@ -1,32 +1,28 @@
 \begin{thebibliography}{3}
-% this bibliography was produced with the style dinat.bst v2.5
-\makeatletter
-\newcommand{\dinatlabel}[1]%
-{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
-\makeatother
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[Bisdorff(2012)]{BIS-2012a}
-\dinatlabel{Bisdorff 2012} \textsc{Bisdorff}, R.:
-\newblock On measuring and testing the ordinal correlation between bipolar
-  outranking relations.
-\newblock In: \emph{in V. Mousseau and M. Pirlot (Eds.), From Multiple Criteria
-  Decision Aid to Preference Learning , DAP'2012, University of Mons (Belgium),
-  2012}, URL \url{http://hdl.handle.net/10993/23909}, 2012, S.~91--100
+\bibitem[{Bisdorff(2012)}]{BIS-2012a}
+Bisdorff R (2012) On measuring and testing the ordinal correlation between
+  bipolar outranking relations. In: in V. Mousseau and M. Pirlot (Eds.), From
+  Multiple Criteria Decision Aid to Preference Learning , DAP'2012, University
+  of Mons (Belgium), 2012, pp 91--100,
+  \urlprefix\url{http://hdl.handle.net/10993/23909}
 
-\bibitem[Bisdorff(2020)]{CPSTAT-L5}
-\dinatlabel{Bisdorff 2020} \textsc{Bisdorff}, R.:
-\newblock \emph{Simulating from abitrary empirical random distributions.
-  Computational Statistics Course Lecture 5, University of Luxembourg}.
-\newblock 2020. --
-\newblock URL \url{http://hdl.handle.net/10993/37933}
+\bibitem[{Bisdorff(2020)}]{CPSTAT-L5}
+Bisdorff R (2020) Simulating from abitrary empirical random distributions.
+  computational statistics course lecture 5, university of luxembourg.
+  \urlprefix\url{http://hdl.handle.net/10993/37933}
 
-\bibitem[Press~W.H. und B.P.(2007)]{NR3-2007}
-\dinatlabel{Press~W.H. und B.P. 2007} \textsc{Press~W.H.}, Vetterling~W.~;
-  \textsc{B.P.}, Flannery:
-\newblock \emph{Numerical Recipes: The Art of Scientific Computing}.
-\newblock Kap. Single-Pass Estimation of Arbitrary Quantiles, Section 5.8.2,
-  S.~435--438, Cambridge University Press, 2007
+\bibitem[{Press~W.H. and B.P.(2007)}]{NR3-2007}
+Press~WH VW Teukolsky~SA, BP F (2007) Numerical Recipes: The Art of Scientific
+  Computing, 3rd edn, Cambridge University Press, chap Single-Pass Estimation
+  of Arbitrary Quantiles, Section 5.8.2, pp 435--438
 
 \end{thebibliography}

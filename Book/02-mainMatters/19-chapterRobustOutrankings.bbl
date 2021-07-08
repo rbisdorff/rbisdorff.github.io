@@ -1,19 +1,17 @@
 \begin{thebibliography}{1}
-% this bibliography was produced with the style dinat.bst v2.5
-\makeatletter
-\newcommand{\dinatlabel}[1]%
-{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
-\makeatother
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[Bisdorff(2015)]{BIS-2015}
-\dinatlabel{Bisdorff 2015} \textsc{Bisdorff}, R.:
-\newblock The EURO 2004 Best Poster Award: Choosing the Best Poster in a
-  Scientific Conference.
-\newblock In: \textsc{Bisdorff}, R. (Hrsg.)~; \textsc{Dias}, L. (Hrsg.)~;
-  \textsc{V.Mousseau} (Hrsg.)~; \textsc{Pirlot}, M. (Hrsg.): \emph{Evaluation
-  and Decision Models with Multiple Criteria: Case Studies}.
-\newblock Spinger, 2015, S.~117--166
+\bibitem[{Bisdorff(2015)}]{BIS-2015}
+Bisdorff R (2015) The euro 2004 best poster award: Choosing the best poster in
+  a scientific conference. In: Bisdorff R, Dias L, VMousseau, Pirlot M (eds)
+  Evaluation and Decision Models with Multiple Criteria: Case Studies, Spinger,
+  pp 117--166
 
 \end{thebibliography}

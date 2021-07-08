@@ -201,7 +201,7 @@ Let $r$ and $r'$ characterise two bipolar-valued epistemic situations.
 \section{Dual, converse and codual digraphs}
 \label{sec:2.6}
 
-We may as readily compute the \textbf{dual} (negated relation \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}), the \textbf{converse} (transposed relation) and the \textbf{codual} (transposed and negated relation) of the digraph instance $rdg$. 
+We may as readily compute the \emph{dual} (negated relation \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}), the \emph{converse} (transposed relation) and the \emph{codual} (transposed and negated relation) of the digraph instance $rdg$. 
 \begin{lstlisting}[caption={Computing dual, converse and codual},label=list:2.7]
 >>> from digraphs import DualDigraph, ConverseDigraph, CoDualDigraph
 >>> ddg = DualDigraph(rdg)
@@ -278,7 +278,7 @@ Symmetric and transitive closures, by default in-site constructors, are also ava
 \label{fig:2.5}       % Give a unique label
 \end{figure}
 
-The \texttt{closeSymmetric()} method (see Listing \ref{list:2.9}  Line 2), of complexity $O(n^2)$ where $n$ denotes the digraph's order, changes, on the one hand, all single pairwise links it may detect into double links by operating a disjunction of the pairwise relations. On the other hand, the \texttt{closeTransitive()} method (see Line 3), implements the \emph{Roy-Warshall} transitive closure algorithm of complexity $O(n^3)$ \footnote{Roy, B. \emph{Transitivité et connexité} C. R. Acad. Sci. Paris 249, 216-218, 1959. Warshall, S. \emph{A Theorem on Boolean Matrices} J. ACM 9, 11-12, 1962.}.
+The \texttt{closeSymmetric()} method (see Listing \ref{list:2.9}  Line 2), of complexity $O(n^2)$ where $n$ denotes the digraph's order, changes, on the one hand, all single pairwise links it may detect into double links by operating a disjunction of the pairwise relations. On the other hand, the \texttt{closeTransitive()} method (see Line 3), implements the \emph{Roy-Warshall} transitive closure algorithm of complexity $O(n^3)$ \footnote{\citet{ROY-1959}\index{Roy@\textsl{B. Roy}} and \citet{WAR-1962}\index{warshall@\textsl{S. Warshall}}.}.
 
 The same closeTransitive() method with a \texttt{Reverse = True} flag may be readily used for eliminating all transitive arcs from a transitive digraph instance. We make usage of this feature when drawing Hasse diagrams of \texttt{TransitiveDigraph} objects.
 
@@ -424,9 +424,9 @@ Mind the subtle difference between the neighborhoods of an \textbf{empty} and th
 %%%%%%% The chapter bibliography
 %\normallatexbib
 \clearpage
-\phantomsection
+%\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliograhy}
-\bibliographystyle{dinat}
-\typeout{}
+\bibliographystyle{spbasic}
+%\typeout{}
 \bibliography{03-backMatters/reference}
 %\input{02-mainMatters/02-chapterDigraphs.bbl}

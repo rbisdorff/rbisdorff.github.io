@@ -1,25 +1,36 @@
-\chapter*{Why this book}
+\Extrachap{Introduction}
 \label{sec:0}
 
 \abstract*{To be written.}
 
 \abstract{To be written.}
 
-\section*{The Editing strategy}
-\label{sec:0.1}
+\section{The Editing strategy}
+%\label{sec:0.1}
+
+In this book we pesent series of tutorials and advanced topics originally written as documentation parts for the \Digraph collection of Python ressources over the last ten years \citep{BIS-2021}. These \Digraph resources, like the \texttt{outrankingDigraphs} module were essentially used for the preparation and illustration of the MICS Algoritmic Decision Theory Course taught at the University of Luxembourg from 2010-2020. Some parts also served for preparing and illustrating the lectures of a MICS Computational Statistics Course like the \texttt{randomNumbers} module. Curious readers will also discover some resources like the \texttt{arithmetics} module, used for preparing and illustrating a first Semester Cours on Discrete Mathematics.
 
 The numerous listings shown in the following chapters, are all checked with the \texttt{doctest} module of the standard Python3 library and should work effectively as such either, in a shell \texttt{python3} console, or for sure in an \texttt{ipython} console. Some chapters will rely on a given data file that are made available in the \texttt{examples} directory of the \Digraph resources. 
 
 
 
-\section*{Organisation of the book}
-\label{sec:0.2}
+\section{Organisation of the book}
+%\label{sec:0.2}
+The book is divided into five parts. The first part, with three chapters presents an introduction the \Digraph Python resources \ref{sec:1}. Instructions for installing the python modules and starting first python console sessions for manipulating a digraph object \ref{1.1}. The second chapter shows how to how to work with bipolar-valued digraphs \ref{sec:3} and a third chapter moves on to outranking digraphs, the most important\ref{sec:4}.
+
+The second and major part with eight chapters tackles multiple objectives and criteria evaluation and decision methods and tools. A first Chapter is devoted to edit new a multiple criteria performance tableau \ref{sec:4}, followed by several useful random generator for various performance tableau models, like a Cost-Benefit, a three objectives, or an academic model \ref{sec:5}. An important chapter shows how to compute a recommendation for choosing the best new office site \ref{sec:6}. We move on with the problem of determing the winner of an election, a problem nos as obvious as many people naively may believe \ref{sec:7}. When ...
+
+\section{Highlights}
+%\label{asec:0.1}
 
 To be written
 
-\section*{Highlights}
-\label{asec:0.1}
-
-To be written
-
-
+%%%%%%% The chapter bibliography
+% %\normallatexbib
+\clearpage
+% \phantomsection
+% \addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{spbasic}
+% \typeout{}
+\bibliography{03-backMatters/reference}
+% %\input{02-mainMatters/01-chapterIntroDigraph3.bbl}
