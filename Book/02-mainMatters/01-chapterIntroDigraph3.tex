@@ -100,7 +100,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 \end{verbatim}
 \end{footnotesize}
-For exploring the classes and methods provided by the \Digraph module \footnote{See the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}} enter the Python3 commands following the session prompts marked with '\>\>\>' or '...' . The lines without the prompt are output from the Python3 interpreter.
+For exploring the classes and methods provided by the \Digraph modules \footnote{See the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}} enter the Python3 commands following the session prompts marked with '\>\>\>' or '...' . The lines without the prompt are output from the Python3 interpreter.
 
 \begin{lstlisting}[caption={Generating a digraph instance},label=list:1.1]
 >>> from randomDigraphs import RandomDigraph
@@ -168,7 +168,7 @@ actions = OrderedDict([
  }
 \end{lstlisting}
 
-All digraphs instances are of \texttt{Digraph}\index{digraphs@\texttt{digraphs}|Digraph@\texttt{Digraph}} type and contain at least the following attributes (see Listing \ref{list:1.1}  Lines 11-12):
+All digraphs\index{digraphs@\texttt{digraphs}} instances are of \texttt{Digraph}\index{digraphs!Digraph@\texttt{Digraph}} type and contain at least the following attributes (see Listing \ref{list:1.1}  Lines 11-12):
 \begin{enumerate}
 \item A \texttt{name} attribute, holding usually the actual name of the stored instance that was used to create the instance;
 \item A ordered dictionary of digraph nodes called \texttt{actions} (decision alternatives) with at least a \texttt{name} attribute;
@@ -182,7 +182,7 @@ All digraphs instances are of \texttt{Digraph}\index{digraphs@\texttt{digraphs}|
 \section{Inspecting a digraph object}
 \label{sec:1.4}
 
-Different \texttt{show...()} methods like the \texttt{showShort()} method \index{digraphs@\texttt{digraphs}|Digraph@\texttt{Digraph}|showSort@\texttt{showShort()}} reveal us now that $dg$ is a crisp, irreflexive and connected digraph of order five (see Listing \ref{list:1.3}  Lines 1, 16, 26, 37 below).
+Different \texttt{show...()} methods like the \texttt{showShort()} method \index{digraphs!Digraph!showSort@\texttt{showShort()}} reveal us now that $dg$ is a crisp, irreflexive and connected digraph of order five (see Listing \ref{list:1.3}  Lines 1, 16, 26, 37 below).
 
 \begin{lstlisting}[caption={Random crisp digraph object},label=list:1.3]
 >>> dg.showShort()
@@ -229,7 +229,7 @@ Different \texttt{show...()} methods like the \texttt{showShort()} method \index
  'a5': in => {'a1', 'a4', 'a3'}, out => {'a4'}
 \end{lstlisting}
 
-The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph $dg$ (see Fig. \ref{fig:1.1}), if the \emph{graphviz} tools are installed on your system \citep{graphViz}\index{graphviz@\textsl{graphviz}}.
+The \texttt{exportGraphViz()}\index{digraphs!Digraph!exportGraphViz@\texttt{exportGraphViz()}} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph $dg$ (see Fig. \ref{fig:1.1}), if the \emph{graphviz} tools are installed on your system \citep{graphViz}\index{graphviz@\textsl{graphviz}}.
 \begin{lstlisting}
 >>> dg.exportGraphViz('tutorialDigraph')
  *---- exporting a dot file do GraphViz tools ---------*
@@ -237,7 +237,7 @@ The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} me
  dot -Grankdir=BT -Tpng tutorialDigraph.dot -o tutorialDigraph.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
+\sidecaption[t]
 \includegraphics[width=7cm]{Figures/tutorialDigraph.png}
 \caption{The tutorial crisp digraph. The \texttt{exportGraphViz()} method is depending on drawing tools from \texttt{https://graphviz.org}. On Linux Ubuntu or Debian you may try '\texttt{sudo apt-get install graphviz}’ to install them. There are ready $dmg$ installers for Mac OSX.}
 \label{fig:1.1}       % Give a unique label
@@ -288,9 +288,9 @@ Further methods are provided for inspecting this random \texttt{Digraph} object 
 
 These show methods usually rely upon corresponding compute methods, like:
 \begin{itemize}
-\item The \texttt{computeSize()}\index{computeSize@\texttt{computeSize()}},
-\item The \texttt{computeDeterminateness()}\index{computeDeterminateness@\texttt{computeDeterminateness()}}, or
-\item The \texttt{computeTransitivityDegree()}\index{computeTransitivityDegree@\texttt{computeTransitivityDegree()}} method,
+\item The \texttt{computeSize()}\index{digraphs!Digraph!computeSize@\texttt{computeSize()}},
+\item The \texttt{computeDeterminateness()}\index{digraph!Digrap!computeDeterminateness@\texttt{computeDeterminateness()}}, or
+\item The \texttt{computeTransitivityDegree()}\index{digraphs!DigraphcomputeTransitivityDegree@\texttt{computeTransitivityDegree()}} method,
 \end{itemize}
 (see Listing \ref{list:1.6} Lines 5,7,16).
 \begin{lstlisting}[caption={Various \texttt{computexxx()} methods.}label=list:1.6]
@@ -307,8 +307,8 @@ Mind that \texttt{showxxx()} methods output their results in the \emph{Python} c
 ...                        rankingRule=None)
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=7cm]{Figures/relationMap1.png}
+\sidecaption[t]
+\includegraphics[width=6cm]{Figures/relationMap1.png}
 \caption{Browsing the relation map of the tutorial digraph. $+$ indicates a certainly valid and $-$ indicates a certainly  invalid relation, Here we find confirmed again that our random digraph instance $dg$, is indeed a crisp, i.e. 100\% determined irreflexive digraph instance.}
 \label{fig:1.2}       % Give a unique label
 \end{figure}
@@ -328,17 +328,17 @@ Some constructors for universal digraph instances, like the \texttt{CompleteDigr
                   -o tutorialGrid.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=5cm]{Figures/tutorialGrid.png}
+\sidecaption[t]
+\includegraphics[width=4cm]{Figures/tutorialGrid.png}
 \caption{The 5x5 grid graph. Notice the median split orientation. This kind of oriented grids show the highest possible number of chordless circuits. }
 \label{fig:1.3}       % Give a unique label
 \end{figure}
+\clearpage
 
-To be written: chaper conclusion and transition to the next chapter.
+The next Chapter \ref{sec:3} will introduce the fondamental bipolar-valued digraph model which is \emph{root object type} to all the specialised digraph models implemented in the \Digraph modules.    
 
 %%%%%%% The chapter bibliography
 % %\normallatexbib
-\clearpage
 % \phantomsection
 % \addcontentsline{toc}{section}{Chapter Bibliography}
 \bibliographystyle{spbasic}
