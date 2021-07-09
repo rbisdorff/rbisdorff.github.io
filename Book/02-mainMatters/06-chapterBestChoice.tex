@@ -230,10 +230,33 @@ Outranking digraphs are \emph{weakly complete}\index{weakly complete}, i.e. for 
   No circuits observed in this digraph.
 \end{lstlisting}
 
-\section{Computing a \Rubis best choice recommendation}
+\section{Designing a best choice recommender system}
 \label{sec:6.3}
 
-Following the \Rubis outranking method\index{outranking!Rubis best choice recommendation} (see \citet{BIS-2008a}), potential best choice recommendations are determined by the outranking \emph{prekernels}\index{prekernels} --\emph{weakly independent} and \emph{strictly outranking} choices-- of the outranking digraph\footnote{See Chapter \ref{sec:17} on computing digraph kernels.}. The case given, we previously need to break open\index{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class} all chordless odd circuits at their weakest link.
+Traditionally, solving a best-choice problem consists in finding the unique best decision alternative. We adopt here a modern recommender system’s approach which shows a non empty subset of decision alternatives which contains by construction the potential best alternative(s).
+
+Our five \emph{pragmatic principles} for computing a \emph{best-choice recommendation} (BCR) are the following:
+\begin{itemize}
+\item [] P1: \emph{Elimination for well motivated reasons}; each eliminated alternative has to be outranked by at least one alternive in the BCR.
+\item [] P2: \emph{Minimal size}; the BCR must be as limited in cardinality as possible.
+\item [] P3: \emph{Efficient and informative}; The BCR must not contain a self-contained sub-recommendation.
+\item [] P4: \emph{Effectively better}; the BCR must not be ambiguous in the sense that it is both a best choice as well as a worst choice recommendation.
+\item [] P5: \emph{Maximally determined}; the BCR is, of all potential best-choice recommendations, the most determined one in the sense of the characteristics of the bipolar-valued outranking relation.
+\end{itemize}
+
+Let $X$ be the set of potential decision alternatives. Let $Y$ be a non empty subset of $X$, called a \emph{choice} in the outranking digraph $G(X,r(\succsim )$. A weakly independent and outranking (resp. outranked) choice is called a \emph{prekernel} (see Chapter \ref{17} on computing kernels in digraphs).
+
+We may now qualify a BCR $Y$ in the following terms:
+\begin{itemize}
+\item $Y$ is called \emph{outranking} (resp. \emph{outranked}) when for all not selected alternative $x$ there exists an alternative $y \in X$ retained such that $r(y \succsim x) > 0.0$ (resp. $r(x \precsim y) > 0.0$). Such a choice verifies principle P1.
+\item $Y$ is called \emph{weakly independent} when for all $x \neq y$ in $Y$ , we observe $r(x \succsim y) \leq 0.0$. Such a choice verifies principles P2 + P3 (minimal in cardinality and stable).
+\item $Y$ is a \emph{strict outranking prekernel} (resp. \emph{strict outranked prekernel}): $Y$ is conjointly an outranking (resp. outranked) \emph{and} weakly independent choice. This choice now verifies principles P1, P2, P3 and P4 (strictly more outranking than outranked, resp. vice versa).
+\item To finally verify principle P5, we recommend among all potential outranking (resp. outranked) prekernels, the \emph{most determined} one, i.e. the one supported with the highest significance majority.
+\end{itemize}
+
+Following the \Rubis best choice method\index{outranking!Rubis best choice recommendation} (see \citet{BIS-2008a}), potential best choice recommendations are hence determined by the outranking \emph{prekernels}\index{prekernels} --\emph{weakly independent} and \emph{outranking} choices-- of the strict outranking digraph. If not reduced to a singleton, the actual \emph{best choice recommendation} will have to be refined in a later decision process phase.
+
+Mind that a given outranking digraph $G$ may not always admit an outranking (resp. outranked) prekernel when $G$ contains a chordless odd circuit. The case given, we previously need to break open\index{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class} all chordless odd circuits at their weakest link.
 \begin{lstlisting}
 >>> from digraphs import BrokenCocsDigraph
 >>> bcg = BrokenCocsDigraph(g)
@@ -241,91 +264,41 @@ Following the \Rubis outranking method\index{outranking!Rubis best choice recomm
   set()
 \end{lstlisting}
 
-As we observe indeed no such chordless circuits here, we may directly compute the \emph{prekernels}\index{showPreKernels@\texttt{showPreKernels()}} Of the outranking digraph $g$.
-\begin{lstlisting}[caption={Computing outranking and outranked prekernels},label=list:6.3]
->>> g.showPreKernels()
- *--- Computing preKernels ---*
-    Dominant preKernels :
-    ['D']
-       independence :  1.0
-       dominance    :  0.02
-       absorbency   :  -1.0
-       covering     :  1.000
-    ['B', 'E', 'C']
-       independence :  0.00
-       dominance    :  0.10
-       absorbency   :  -1.0
-       covering     :  0.500
-    ['A', 'G']
-       independence :  0.00
-       dominance    :  0.78
-       absorbency   :  0.00
-       covering     :  0.700
-    Absorbent preKernels :
-    ['F', 'A']
-       independence :  0.00
-       dominance    :  0.00
-       absorbency   :  1.0
-       covering     :  0.700
-    *----- statistics -----
-    graph name:  rel_officeChoice.xml
-    number of solutions
-     dominant kernels :  3
-     absorbent kernels:  1
-    cardinality frequency distributions
-    cardinality     :  [0, 1, 2, 3, 4, 5, 6, 7]
-    dominant kernel :  [0, 1, 1, 1, 0, 0, 0, 0]
-    absorbent kernel:  [0, 0, 1, 0, 0, 0, 0, 0]
-    Execution time  : 0.00018 sec.
-    Results in sets: dompreKernels and abspreKernels.
-\end{lstlisting}
-We notice in Listing \ref{list:6.3} three potential best choice recommendations: the \Condorcet winner 'D' (Line 4), the triplet 'B', 'C' and 'E' (Line 9), and finally the pair 'A' and 'G' (Line 14). The best choice recommendation is now given by the \emph{most determined} prekernel; the one supported by the most significant criteria coalition.
-
-This result is shown with the \texttt{showBestChoiceRecommendation()}\index{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}} method. Notice that this method actually works by default on the broken chords digraph $bcg$. Therefore we set the \texttt{CoDual} flag to \texttt{False} (see Line 1 in Listing \ref{list:6.4} below).
-\begin{lstlisting}[caption={Computing a best choice recommendation},label=list:6.4]
->>> g.showBestChoiceRecommendation(CoDual=False)
- *****************************************
-  Rubis best choice recommendation(s) (BCR)
-   (in decreasing order of determinateness)   
-   Credibility domain: [-1.00,1.00]
-    === >> potential best choice(s)
-    * choice              : ['D']
-      independence        : 1.00
-      dominance           : 0.02
-      absorbency          : -1.00
-      covering (%)        : 100.00
-      determinateness (%) : 51.03
-      - most credible action(s) = { 'D': 0.02, }
-    === >> potential best choice(s)
-    * choice              : ['A', 'G']
-      independence        : 0.00
-      dominance           : 0.78
-      absorbency          : 0.00
-      covering (%)        : 70.00
-      determinateness (%) : 50.00
-      - most credible action(s) = { }
-    === >> potential best choice(s)
-    * choice              : ['B', 'C', 'E']
-      independence        : 0.00
-      dominance           : 0.10
-      absorbency          : -1.00
-      covering (%)        : 50.00
-      determinateness (%) : 50.00
-      - most credible action(s) = { }
-    === >> potential worst choice(s) 
-    * choice              : ['A', 'F']
-      independence        : 0.00
-      dominance           : 0.00
-      absorbency          : 1.00
-      covered (%)         : 70.00
-      determinateness (%) : 50.00
-      - most credible action(s) = { }
-    Execution time: 0.014 seconds
-\end{lstlisting}
-We notice in Line 7 above that the most significantly supported best choice recommendation is indeed the \Condorcet winner 'D' supported by a majority of $51.03\%$ of the criteria significance (see Line 12). Both other potential best choice recommendations, as well as the potential worst choice recommendation, are not positively validated as best, resp. worst choices. They may or may not be considered so. Alternative 'A', with extreme contradictory performances, appears both, in a best and a worst choice recommendation (see Lines 15 and 31) and seams hence not actually comparable to its competitors.
 
 \section{Computing \emph{strict best} choice recommendations}
 \label{sec:6.4}
+
+  
+To model \emph{strict outranking} situations\index{outranking!strict}, we compute the best choice recommendation\index{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}} on the \emph{codual}\index{codual digraph}, the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance $g$ (see \citet{BIS-2013}]), as follows:
+\begin{lstlisting}[caption={Computing the best choice recommendation},label=list:6.6]
+>>> g.showBestChoiceRecommendation(\
+...                   CoDual=True,\
+...                   ChoiceVector=True)   
+* --- Best and worst choice recommendation(s) ---*
+  (in decreasing order of determinateness)   
+  Credibility domain: [-1.00,1.00]
+    === >> potential best choice(s)
+    * choice              : ['A', 'C', 'D']
+      independence        : 0.00
+      dominance           : 0.10
+      absorbency          : 0.00
+      covering (%)        : 41.67
+      determinateness (%) : 50.59
+      - characteristic vector = {
+             'D': 0.02, 'G': 0.00, 'C': 0.00,
+	     'A': 0.00, 'F': -0.02, 'E': -0.02, 'B': -0.02, }
+    === >> potential worst choice(s) 
+    * choice              : ['A', 'F']
+      independence        : 0.00
+      dominance           : -0.52
+      absorbency          : 1.00
+      covered (%)         : 50.00
+      determinateness (%) : 50.00
+      - characteristic vector = { 'G': 0.00, 'F': 0.00, 'E': 0.00,
+	     'D': 0.00, 'C': 0.00, 'B': 0.00, 'A': 0.00, }
+\end{lstlisting}				  
+
+It is interesting to notice in Listing \ref{list:6.6} Line 9 that the \emph{best choice recommendation} consists in the set of weak \Condorcet winners\index{Condorcet!winner}: 'A', 'C' and 'D'. In the corresponding characteristic vector (see Lines 15-16), representing the bipolar credibility degree with which each alternative may indeed be considered a best choice (see \citet{BIS-2006a,BIS-2006b}), we find confirmed that alternative 'D' is the only positively validated one, whereas both extreme alternatives - 'A' (the most expensive) and 'C' (the cheapest) - stay in an indeterminate situation. They may be potential best choice candidates besides 'D'. Notice furthermore that compromise alternative $G$, while not actually included in any outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} a potential best choice candidate.
 
 When comparing now the performances of alternatives 'D' and 'G' in a pairwise perspective (see below)\index{showPairwiseComparison}, we notice that, with the given preference discrimination thresholds, alternative 'G' is actually \emph{certainly at least as good as} alternative 'D':  $r(G \succsim D)\, = \, +145/145\, =\, +1.0$.
 \begin{lstlisting}[caption={Inspecting pairwise comparisons},label=list:6.5,basicstyle=\scriptsize]
@@ -362,39 +335,8 @@ Yet, we must as well notice that the cheapest alternative 'C' is in fact \emph{s
    ===========================================================================
     Valuation in range: -145.00 to +145.00; global concordance: +15.00/-15.00
 \end{lstlisting}
-  
-To model these \emph{strict outranking} situations\index{outranking!strict}, we may recompute the best choice recommendation on the \emph{codual}\index{codual digraph}, the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance $g$ (see \citet{BIS-2013}]), as follows:
-\begin{lstlisting}[caption={Computing the strict best choice recommendation},label=list:6.6]
->>> g.showBestChoiceRecommendation(\
-...                   CoDual=True,\
-...                   ChoiceVector=True)   
-* --- Best and worst choice recommendation(s) ---*
-  (in decreasing order of determinateness)   
-  Credibility domain: [-1.00,1.00]
-    === >> potential best choice(s)
-    * choice              : ['A', 'C', 'D']
-      independence        : 0.00
-      dominance           : 0.10
-      absorbency          : 0.00
-      covering (%)        : 41.67
-      determinateness (%) : 50.59
-      - characteristic vector = {
-             'D': 0.02, 'G': 0.00, 'C': 0.00,
-	     'A': 0.00, 'F': -0.02, 'E': -0.02, 'B': -0.02, }
-    === >> potential worst choice(s) 
-    * choice              : ['A', 'F']
-      independence        : 0.00
-      dominance           : -0.52
-      absorbency          : 1.00
-      covered (%)         : 50.00
-      determinateness (%) : 50.00
-      - characteristic vector = { 'G': 0.00, 'F': 0.00, 'E': 0.00,
-	     'D': 0.00, 'C': 0.00, 'B': 0.00, 'A': 0.00, }
-\end{lstlisting}				  
 
-It is interesting to notice in Listing \ref{list:6.6} Line 9 that the \emph{strict best choice recommendation} consists in the set of weak \Condorcet winners\index{Condorcet!winner}: 'A', 'C' and 'D'. In the corresponding characteristic vector (see Lines 15-16), representing the bipolar credibility degree with which each alternative may indeed be considered a best choice (see \citet{BIS-2006a,BIS-2006b}), we find confirmed that alternative 'D' is the only positively validated one, whereas both extreme alternatives - 'A' (the most expensive) and 'C' (the cheapest) - stay in an indeterminate situation. They may be potential best choice candidates besides 'D'. Notice furthermore that compromise alternative $G$, while not actually included in any outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} a potential best choice candidate. 
-
-We may also notice (see Line 16 and Line 19) that both alternatives 'A' and 'F' are reported as certainly strict outranked choices, hence as \emph{potential worst choice recommendation} . This confirms again the global incomparability status of alternative 'A' (see Fig. \ref{fig:6.3}).
+We may finally notice in Listing \ref{list:6.6} (Lines 16 and 19) that both alternatives 'A' and 'F' are reported as certainly strict outranked choices, hence as \emph{potential worst choice recommendation} . This confirms again the global incomparability status of alternative 'A' (see Fig. \ref{fig:6.3}).
 \begin{lstlisting}
 >>> gcd = ~(-g) # codual of g
 >>> gcd.exportGraphViz(fileName='bestChoiceChoice',\
