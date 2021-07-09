@@ -7,7 +7,7 @@
 
 \section{Random bipolar-valued digraphs}
 
-We are starting the tutorial with generating a uniformly random $[-1.0; +1.0]$-valued digraph of order 7, denoted $rdg$ and modelling, for instance, a binary relation $S(x,y)$ defined on the set of nodes of $rdg$. For this purpose, the \Digraph resources provide in {\tt randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs}} module a specific {\tt RandomValuationDigraph}\index{randomDigraphs!RandomValuationDigraph@\texttt{RandomValuationDigraph}} constructor.
+We are starting the tutorial with generating a uniformly random $[-1.0; +1.0]$-valued digraph of order 7, denoted $rdg$ and modelling, for instance, a binary relation $S(x,y)$ defined on the set of nodes of $rdg$. For this purpose, the \Digraph resources provide in {\tt randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module a specific {\tt RandomValuationDigraph}\index{RandomValuationDigraph@\texttt{RandomValuationDigraph} class} constructor.
 \begin{lstlisting}[caption={Random bipolar-valued digraph instance},label=list:2.1]
 >>> from randomDigraphs import RandomValuationDigraph
 >>> rdg = RandomValuationDigraph(order=7)
@@ -26,13 +26,13 @@ We are starting the tutorial with generating a uniformly random $[-1.0; +1.0]$-v
                           'valuationdomain','relation',
                           'gamma','notGamma']
 \end{lstlisting}   
-With the {\tt save()} \index{digraphs!Digraph!save@\texttt{save()}} method (see Listing \ref{list:2.1} Line 3) we may keep a backup version for future use of $rdg$ which will be stored in a file called {\tt tutRandValDigraph.py} in the current working directory.
+With the {\tt save()} \index{save@\texttt{save()}} method (see Listing \ref{list:2.1} Line 3) we may keep a backup version for future use of $rdg$ which will be stored in a file called {\tt tutRandValDigraph.py} in the current working directory.
 
 The genuine {\tt Digraph} class constructor may restore the $rdg$ object from the stored file (Line 4-5). We may easily inspect the content of $rdg$ (Line 6). The digraph size 22 indicates the number of positively valued arcs. The valuation domain is uniformly distributed in the interval $[-1.0; 1.0]$ and the mean absolute arc valuation is $(0.7524 \times 2)\, -\, 1.0 \;=\; 0.5048$ (Line 13) .
 
 As mentioned in the previous Chapter \ref{sec:1}, all objects of {\tt Digraph} type contain at least the list of attributes shown here in Lines 14-16: a \texttt{name} (string), a dictionary of \texttt{actions} (digraph nodes), an \texttt{order} (integer) attribute containing the number of actions, a \texttt{valuationdomain} dictionary, a double dictionary \texttt{relation} representing the adjency table of the digraph relation, a \texttt{gamma} and a {\tt notGamma} dictionary containing the direct neighbourhood of each action.
 
-The {\tt Digraph} class provides some generic {\tt showxxx()} methods for exploring the content of a given {\tt Digraph} object, like the \texttt{showRelationTable()}\index{digraphs!Digraph!showRelationTable@\texttt{showRelationTable()}}, the \texttt{showComponents()}\index{digraphs!Digraph!showComponents@\texttt{showComponents()}} and the \texttt{showNeighborhoods()}\index{digraphs!Digraph!showNeighborhoods@\texttt{showNeighborhoods()}} methods.
+The {\tt Digraph} class provides some generic {\tt showxxx()} methods for exploring the content of a given {\tt Digraph} object, like the \texttt{showRelationTable()}\index{showRelationTable@\texttt{showRelationTable()}}, the \texttt{showComponents()}\index{showComponents@\texttt{showComponents()}} and the \texttt{showNeighborhoods()}\index{showNeighborhoods@\texttt{showNeighborhoods()}} methods.
 \begin{lstlisting}[caption={Example of random valuation digraph},label=list:2.2]
 >>> rdg.showRelationTable()
   * ---- Relation Table -----
@@ -73,7 +73,7 @@ Mind that most Digraph class methods will ignore the \emph{reflexive} links by c
 \section{Graphviz drawings}
 \label{sec:2.2}
 
-We may have an even better insight into the \texttt{Digraph} object $rdg$ by looking at a \href{https://graphviz.org/}{graphviz} drawing \footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}.
+We may have an even better insight into the \texttt{Digraph} object $rdg$ by looking at a \href{https://graphviz.org/}{graphviz} drawing \footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}\index{graphviz}.
 \begin{lstlisting}
 >>> rdg.exportGraphViz('tutRandValDigraph')
  *---- exporting a dot file for GraphViz tools ---------*
@@ -107,7 +107,7 @@ We may now extract both the \emph{}\emph{symmetric} as well as the asymmetric pa
 \end{figure}
 The constructor of the partial objects $asymDg$ and $symDg$ puts to the indeterminate characteristic value all not-asymmetric, respectively not-symmetric links between nodes (see Fig. \ref{fig:2.2}).
 
-Here below, for illustration the source code of the {\tt relation} constructor of the {\tt AsymmetricPartialDigraph}\index{digraphs!AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph}} class.
+Here below, for illustration the source code of the {\tt relation} constructor of the {\tt AsymmetricPartialDigraph}\index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class} class.
 \begin{lstlisting}[caption={Computing the asymmetric part of a bipolar-valued relation},label=list:2.4,basicstyle=\ttfamily\scriptsize]
 def _constructRelation(self):
     actions = self.actions
@@ -134,7 +134,7 @@ def _constructRelation(self):
 \section{Border and inner parts}
 \label{sec:2.4}
 
-We may also extract the border --the part of a digraph induced by the union of its initial and terminal prekernels (see Chapter \ref{sec:17})--  as well as, the inner part -the complement of the border- with the help of two corresponding class constructors: \texttt{GraphBorder}\index{digraphs!GraphBorder@\texttt{GraphBorder}} and \texttt{GraphInner}\index{digraphs!|GraphInner@\texttt{GraphInner}} (see Fig. \ref{fig:2.3}).
+We may also extract the border --the part of a digraph induced by the union of its initial and terminal prekernels (see Chapter \ref{sec:17})--  as well as, the inner part -the complement of the border- with the help of two corresponding class constructors: \texttt{GraphBorder}\index{GraphBorder@\texttt{GraphBorder} class} and \texttt{GraphInner}\index{GraphInner@\texttt{GraphInner} class} (see Fig. \ref{fig:2.3}).
 
 Let us illustrate these parts on a linear ordering obtained from the tutorial random valuation digraph $rdg$  with the \NetFlows ranking rule  (see Section \ref{sec:8.3}).  
 \begin{lstlisting}[caption={Border and inner part of a linear order},label=list:2.5]

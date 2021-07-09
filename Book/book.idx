@@ -1,58 +1,66 @@
-\indexentry{randomDigraphs@\texttt{randomDigraphs}|hyperpage}{9}
-\indexentry{randomDigraphs@\texttt{randomDigraphs}!RandomDigraph@\texttt{RandomDigraph}|hyperpage}{9}
-\indexentry{digraphs@\texttt{digraphs}|hyperpage}{10}
-\indexentry{digraphs!Digraph@\texttt{Digraph}|hyperpage}{10}
-\indexentry{digraphs!Digraph!showSort@\texttt{showShort()}|hyperpage}{11}
-\indexentry{digraphs!Digraph!exportGraphViz@\texttt{exportGraphViz()}|hyperpage}{11}
+\indexentry{randomDigraphs@\texttt{randomDigraphs} module|hyperpage}{9}
+\indexentry{RandomDigraph@\texttt{RandomDigraph} class|hyperpage}{9}
+\indexentry{Digraph@\texttt{Digraph} class|hyperpage}{10}
+\indexentry{showSort@\texttt{showShort()}|hyperpage}{11}
+\indexentry{exportGraphViz@\texttt{exportGraphViz()}|hyperpage}{11}
 \indexentry{graphviz@\textsl{graphviz}|hyperpage}{12}
 \indexentry{showStatistics@\texttt{showStatistics()}|hyperpage}{12}
-\indexentry{digraphs!Digraph!computeSize@\texttt{computeSize()}|hyperpage}{13}
-\indexentry{digraph!Digrap!computeDeterminateness@\texttt{computeDeterminateness()}|hyperpage}{13}
-\indexentry{digraphs!DigraphcomputeTransitivityDegree@\texttt{computeTransitivityDegree()}|hyperpage}{13}
-\indexentry{randomDigraphs@\texttt{randomDigraphs}|hyperpage}{17}
-\indexentry{randomDigraphs!RandomValuationDigraph@\texttt{RandomValuationDigraph}|hyperpage}{17}
-\indexentry{digraphs!Digraph!save@\texttt{save()}|hyperpage}{18}
-\indexentry{digraphs!Digraph!showRelationTable@\texttt{showRelationTable()}|hyperpage}{18}
-\indexentry{digraphs!Digraph!showComponents@\texttt{showComponents()}|hyperpage}{18}
-\indexentry{digraphs!Digraph!showNeighborhoods@\texttt{showNeighborhoods()}|hyperpage}{18}
-\indexentry{digraphs!AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph}|hyperpage}{20}
-\indexentry{digraphs!GraphBorder@\texttt{GraphBorder}|hyperpage}{21}
-\indexentry{digraphs!|hyperindexformat{\GraphInner@\texttt{GraphInner}}}{21}
+\indexentry{computeSize@\texttt{computeSize()}|hyperpage}{13}
+\indexentry{computeDeterminateness@\texttt{computeDeterminateness()}|hyperpage}{13}
+\indexentry{computeTransitivityDegree@\texttt{computeTransitivityDegree()}|hyperpage}{13}
+\indexentry{GridDigraph@texttt{GridDigraph} class|hyperpage}{13}
+\indexentry{randomDigraphs@\texttt{randomDigraphs} module|hyperpage}{17}
+\indexentry{RandomValuationDigraph@\texttt{RandomValuationDigraph} class|hyperpage}{17}
+\indexentry{save@\texttt{save()}|hyperpage}{18}
+\indexentry{showRelationTable@\texttt{showRelationTable()}|hyperpage}{18}
+\indexentry{showComponents@\texttt{showComponents()}|hyperpage}{18}
+\indexentry{showNeighborhoods@\texttt{showNeighborhoods()}|hyperpage}{18}
+\indexentry{graphviz|hyperpage}{19}
+\indexentry{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class|hyperpage}{20}
+\indexentry{GraphBorder@\texttt{GraphBorder} class|hyperpage}{21}
+\indexentry{GraphInner@\texttt{GraphInner} class|hyperpage}{21}
 \indexentry{digraphs!FusionDigraph@\texttt{FusionDigraph}|hyperpage}{22}
 \indexentry{digraphs!Digraph!closeSymmetric@\texttt{closeSymmetric()}|hyperpage}{25}
 \indexentry{digraphs!Digraph!closeTransitive@\texttt{closeTransitive()}|hyperpage}{25}
 \indexentry{Roy@\textsl  {B. Roy}|hyperpage}{25}
 \indexentry{warshall@\textsl  {S. Warshall}|hyperpage}{25}
 \indexentry{transitiveDigraphs@\texttt{transitiveDigraphs}!TransitiveDigraph@\texttt{TransitiveDigraph}|hyperpage}{26}
-\indexentry{digraphs@\texttt{digraphs}|hyperindexformat{\StrongComponentsCollapsedDigraph@\texttt{StrongComponentsCollapsedDigraph}}}{26}
-\indexentry{digraphs@\texttt{digraphs}|hyperindexformat{\CompleteDigraph@\texttt{Complete \index{digraphs@\texttt{digraphs}|StrongComponentsCollapsedDigraph@\texttt{StrongComponentsCollapsedDigraph}} Digraph}}}{28}
-\indexentry{digraphs@\texttt{digraphs}|hyperindexformat{\EmptyDigraph@\texttt{EmptyDigraph}}}{28}
-\indexentry{digraphs@\texttt{digraphs}|hyperindexformat{\IndeterminateDigraph@\texttt{IndeterminateDigraph}}}{28}
-\indexentry{Roy@\textsl{B. Roy}|hyperpage}{31}
-\indexentry{od@\texttt{outrankingDigraphs}|hyperpage}{31}
-\indexentry{od@\texttt{outrankingDigraphs}!bod@\texttt{BipolarOutrankingDigraph}|hyperpage}{31}
-\indexentry{Bisdorff@\textsl{R. Bisdorff}|hyperpage}{34}
-\indexentry{Bisdorff@\textsl{R. Bisdorff}|hyperpage}{35}
-\indexentry{Bisdorff@\textsl{R. Bisdorff}|hyperpage}{36}
-\indexentry{Bisdorff@\textsl{R. Bisdorff}|hyperpage}{37}
-\indexentry{PerformanceTableau|hyperpage}{69}
-\indexentry{perfTabs|hyperpage}{69}
-\indexentry{perfTabs!schowCriteria()|hyperpage}{70}
-\indexentry{perfTabs!showHTMLPerformanceHeatmap|hyperpage}{70}
+\indexentry{digraphs!StrongComponentsCollapsedDigraph@\texttt{StrongComponentsCollapsedDigraph}|hyperpage}{26}
+\indexentry{digraphs!CompleteDigraph@\texttt{Complete \index{digraphs@\texttt{digraphs}|StrongComponentsCollapsedDigraph@\texttt{StrongComponentsCollapsedDigraph}} Digraph}|hyperpage}{28}
+\indexentry{digraphs!EmptyDigraph@\texttt{EmptyDigraph}|hyperpage}{28}
+\indexentry{digraphs!IndeterminateDigraph@\texttt{IndeterminateDigraph}|hyperpage}{28}
+\indexentry{Roy|hyperpage}{31}
+\indexentry{outrankingDigraphs@\texttt{outrankingDigraphs}|hyperpage}{31}
+\indexentry{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}|hyperpage}{31}
+\indexentry{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}|hyperpage}{33}
+\indexentry{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}|hyperpage}{34}
+\indexentry{recodeValuation@\textsl{recodeValuation()}|hyperpage}{36}
+\indexentry{Roy|hyperpage}{67}
+\indexentry{PerformanceTableau@\texttt{PerformanceTableau} class|hyperpage}{69}
+\indexentry{perfTabs@\texttt{perfTabs} module|hyperpage}{69}
+\indexentry{showCriteria@\texttt{showCriteria()}|hyperpage}{70}
+\indexentry{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}|hyperpage}{70}
 \indexentry{outranking!situation|hyperpage}{71}
-\indexentry{outranking!situation|hyperpage}{71}
-\indexentry{outrankingDigraphs!BipolarOutrankingDigraph|hyperpage}{71}
+\indexentry{BipolarOutrankingDigraph|hyperpage}{71}
 \indexentry{outrankingDigraphs|hyperpage}{71}
-\indexentry{digraphs!showHTMLRelationTable()|hyperpage}{71}
+\indexentry{showHTMLRelationTable|hyperpage}{71}
 \indexentry{Condorcet!winner|hyperpage}{72}
+\indexentry{computeCondorcetWinners@\texttt{computeCondorcetWinners()}|hyperpage}{72}
+\indexentry{computeWeakCondorcetWinners@\texttt{computeWeakCondorcetWinners()}|hyperpage}{72}
 \indexentry{outranking!digraph|hyperpage}{72}
 \indexentry{weakly complete|hyperpage}{72}
 \indexentry{coduality principle|hyperpage}{72}
-\indexentry{outranking!Rubis best choice recommendation|hyperpage}{73}
-\indexentry{prekernels|hyperpage}{73}
-\indexentry{digraphs!BrokenCocsDigraph|hyperpage}{73}
-\indexentry{Digraph!showBestChoiceRecommendation()|hyperpage}{74}
-\indexentry{strict outranking!situation|hyperpage}{76}
-\indexentry{Condorcet!winner|hyperpage}{77}
+\indexentry{computeChordlessCircuits@\texttt{computeChordlessCircuits()}|hyperpage}{72}
+\indexentry{outranking!Rubis best choice recommendation|hyperpage}{72}
+\indexentry{prekernels|hyperpage}{72}
+\indexentry{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class|hyperpage}{72}
+\indexentry{showPreKernels@\texttt{showPreKernels()}|hyperpage}{73}
+\indexentry{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}|hyperpage}{74}
+\indexentry{showPairwiseComparison|hyperpage}{75}
+\indexentry{outranking!strict|hyperpage}{76}
+\indexentry{codual digraph|hyperpage}{76}
+\indexentry{Condorcet!winner|hyperpage}{76}
+\indexentry{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class|hyperpage}{77}
+\indexentry{transitiveDigraphs@\texttt{transitiveDigraphs} module|hyperpage}{78}
 \indexentry{Pirlot@\textsl{M. Pirlot}|hyperpage}{241}
 \indexentry{JvNeumann@\textsl{J. von Neumann}|hyperpage}{242}
