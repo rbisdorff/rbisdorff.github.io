@@ -335,7 +335,7 @@ Yet, we must as well notice that the cheapest alternative 'C' is in fact \emph{s
     Valuation in range: -145.00 to +145.00; global concordance: +15.00/-15.00
 \end{lstlisting}
 
-We may finally notice in Listing \ref{list:6.6} (Lines 16 and 19) that both alternatives 'A' and 'F' are reported as certainly strict outranked choices, hence as \emph{potential worst choice recommendation} . This confirms again the global incomparability status of alternative 'A' (see Fig. \ref{fig:6.3}).
+We may finally notice in Listing \ref{list:6.6} (Lines 16 and 19) that both alternatives 'A' and 'F' are reported as certainly strict outranked choices, hence as \emph{potential worst choice recommendation} . This confirms again the global \emph{incomparability} status of alternative 'A' (see Fig. \ref{fig:6.3}).
 \begin{lstlisting}
 >>> gcd = ~(-g) # codual of g
 >>> gcd.exportGraphViz(fileName='bestChoiceChoice',\
@@ -380,7 +380,6 @@ To get a more complete insight in the overall strict outranking situations, we m
 \caption{In this \emph{ranking-by-choosing} method, where we operate the \emph{epistemic fusion} of iterated (strict) best and worst choices, compromise alternative 'D' is now ranked before compromise alternative 'G'. The overall partial ordering result shows again the important fact that the most expensive site 'A', and the cheapest site 'C', both appear incomparable with most of the other alternatives.} 
 \label{fig:6.5}       % Give a unique label
 \end{figure}
-	   
 The best choice recommendation appears hence depending on the very importance the CEO is attaching to each of the three decision objectives he is considering. In the given setting here, where he considers that \emph{maximizing the future turnover} is the most important objective followed by \emph{minimizing the Costs} and, less important, \emph{maximizing the working conditions}, site $D$ represents actually the \emph{best compromise}. However, if \emph{Costs} do not play much a role, it would be perhaps better to decide to move to the most advantageous site 'A'; or if, on the contrary, \emph{Costs} do matter a lot, moving to the cheapest alternative 'C' could definitely represent a more convincing recommendation. 
 
 \noindent \textbf{Exercise:}
