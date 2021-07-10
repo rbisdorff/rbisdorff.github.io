@@ -1,13 +1,14 @@
-\chapter{Working with outranking digraphs}
+\chapter{Working with bipolar-valued outranking digraphs}
 \label{sec:3}
+
+\abstract*{ In this chapter, we introduce the main formal object of this book, namely the outranking digraph. With a randomly generated mulitiple criteria performance tableau, we construct the corresponding bipolar-valued outranking relation from pairwise comparisons. The resulting bipolar-valued outranking characteristics may be recoded. Finally, the dual outranking digraph gives us the associated strict outranking relation.}
 
 \begin{quotation}
 “On what principles may we base the arcs to be added to [the unanimous dominance digraph] in order to deduce a digraph which is both – in best possible concordance with the [given] multiple [preferential] points of view and – not too poor in comparable pairs [of decision actions]?” \citep[p.6]{ROY-1966}\index{Roy}
 \end{quotation}
+\vspace{1cm}
 
-\abstract*{ In this chapter, we introduce the main formal object of this book, namely the outranking digraph. With a randomly generated mulitiple criteria performance tableau, we construct the corresponding bipolar-valued outranking relation from pairwise comparisons. The resulting bipolar-valued outranking characteristics may be recoded. Finally, the dual outranking digraph gives us the associated strict outranking relation.}
-
-\abstract{ In this chapter, we introduce the main formal object of this book, namely the outranking digraph. With a randomly generated mulitiple criteria performance tableau, we construct the corresponding bipolar-valued outranking relation from pairwise comparisons. The resulting bipolar-valued outranking characteristics may be recoded. Finally, the dual outranking digraph gives us the associated strict outranking relation.}
+\abstract{ In this chapter, we introduce the main formal object of this book, namely the bipolar-valued outranking digraph. With a randomly generated mulitiple criteria performance tableau, we construct the corresponding bipolar-valued outranking relation from pairwise comparisons. The resulting bipolar-valued outranking characteristics may be recoded. Finally, the dual outranking digraph gives us the associated strict outranking relation.}
 
 
 \section{The hybrid outranking digraph model}
@@ -21,12 +22,12 @@ A given \texttt{BipolarOutrankingDigraph} object contains hence always at least 
 \item \texttt{objectives}: A possibly empty ordered dictionary of decision objectives with {\tt name} and {\tt comment} attributes, describing the multiple preference dimensions involved in the decision problem, 
 \item \texttt{criteria}: An ordered dictionary of performance criteria, i.e. {\em preferentially independent\/} and {\em non-redundant\/} decimal-valued functions used for measuring the performance of each potential decision action with respect to a decision objective,
 \item \texttt{evaluation}: A double dictionary gathering performance grades for each decision action or alternative on each criterion function. 
-\item \texttt{evaluationdomain}: A dictionary with three entries: the minimum ($-1.0$, \emph{certainly outranked}), the median ($0.0$, \emph{indeterminate}) and the maximum characteristic value ($+1.0$, \emph{certainly outranking}),
+\item \texttt{valuationdomain}: A dictionary with three entries: the minimum ($-1.0$, \emph{certainly outranked}), the median ($0.0$, \emph{indeterminate}) and the maximum characteristic value ($+1.0$, \emph{certainly outranking}),
 \item \texttt{relation}: A double dictionary defined on the Cartesian product of the set of decision alternatives capturing the credibility of the pairwise \emph{outranking situation} computed on the basis of the performance differences observed between couples of decision alternatives on the given family of criteria functions.   
 \end{enumerate}
 
-Let us construct, for instance, a random bipolar-valued outranking digraph with seven decision actions denotes \texttt{a1}, \texttt{a2}, ..., \texttt{a7}. We need therefore, first, to generate a corresponding random performance tableaux.
-\begin{lstlisting}[caption={Generating a random performance tableau},label=list:3.1]
+Let us consider, for instance, a random bipolar-valued outranking digraph with seven decision actions denoted \texttt{a1}, \texttt{a2}, ..., \texttt{a7}. We need therefore, first, to generate a corresponding random performance tableaux.
+\begin{lstlisting}[caption={Generating a random performance tableau.},label=list:3.1]
 >>> from perfTabs import RandomPerformanceTableau
 >>> pt = RandomPerformanceTableau(numberOfActions=7,\
 ...                               seed=100)   
@@ -54,7 +55,7 @@ Let us construct, for instance, a random bipolar-valued outranking digraph with 
 \end{lstlisting}
 
 In this example we, furthermore, consider a family of seven \emph{equisignificant} cardinal \emph{criteria functions} \texttt{g1}, \texttt{g2}, ..., \texttt{g7}, measuring the performance of each alternative on a rational scale from $0.0$ (worst) to $100.00$ (best). In order to capture the grading procedure's potential \emph{uncertainty} and \emph{imprecision}, each criterion function \texttt{g1} to \texttt{g7} admits three performance \emph{discrimination thresholds} of $2.5$, $5.0$ and $80.0$ pts for warranting respectively any \emph{indifference}, \emph{preference} or \emph{considerable performance difference} situation.
-\begin{lstlisting}[caption={Inspecting the performance criteria},label=list:3.2]
+\begin{lstlisting}[caption={Inspecting the performance criteria.},label=list:3.2]
 >>> pt.showCriteria()
   *----  criteria -----*
    g1 'RandomPerformanceTableau() instance'
@@ -78,7 +79,7 @@ In this example we, furthermore, consider a family of seven \emph{equisignifican
      Threshold pref : 5.00 + 0.00x ; percentile: 4.76
      Threshold veto : 80.00 + 0.00x ; percentile: 100.00
 \end{lstlisting}
-On criteria function \texttt{g1} (see Lines Listing \ref{list:3.2} 6-8 above) we observe, for instance, about $5\%$ of \emph{indifference}, about $90\%$ of \emph{preference} and about $5\%$ of \emph{considerable} performance difference situations.
+On criteria function \texttt{g1} (see Lines Listing \ref{list:3.2} 6-8 above) we observe, for instance, about $5\%$ of \emph{indifference} situations, about $90\%$ of \emph{preference} situations and about $5\%$ of \emph{considerable} performance difference situations.
 
 The individual \emph{performance evaluation} of all decision alternative on each criterion are gathered in a \emph{performance table}.
 \begin{lstlisting}[caption={Inspecting the performance table},label=list:3.3]
@@ -101,7 +102,7 @@ It is noteworthy to mention the three \emph{missing data} (\texttt{NA}) cases: a
 \label{sec:3.2}
 
 Given the previous random performance tableau $pt$, the {\tt BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} constructor computes the corresponding \emph{bipolar-valued outranking digraph}. 
-\begin{lstlisting}[caption={Example of random bipolar-valued outranking digraph},label=list:3.4]
+\begin{lstlisting}[caption={Example of random bipolar-valued outranking digraph.},label=list:3.4]
 >>> from outrankingDigraphs import \
 ...                       BipolarOutrankingDigraph
 >>> odg = BipolarOutrankingDigraph(pt)
@@ -124,7 +125,7 @@ Given the previous random performance tableau $pt$, the {\tt BipolarOutrankingDi
 The resulting digraph contains 20 positive (valid) outranking realtions. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Listing \ref{list:3.4}  Lines 9-10).
 
 We may inspect the complete $[-1.0,+1.0]$-valued adjacency table as follows:
- \begin{lstlisting}[caption={Inspecting the valued adjacency table},label=list:3.5]
+\begin{lstlisting}[caption={Inspecting the valued adjacency table.},label=list:3.5]
 >>> odg.showRelationTable()
   * ---- Relation Table -----
    r(x,y)|  'a1'   'a2'   'a3'   'a4'   'a5'   'a6'   'a7'   
@@ -141,11 +142,11 @@ We may inspect the complete $[-1.0,+1.0]$-valued adjacency table as follows:
 
 The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class constructor computes from the given performance tableau $pt$ the characteristic value $r(x \succsim y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ in a default \emph{valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as \emph{indeterminate} characteristic value \citep{BIS-2013}. 
 
-\begin{definition}[Semantics of the bipolar-valued characteristic function $r$] The semantics of $r(x,y)$ are the following:
+\begin{definition}[Semantics of the bipolar-valued characteristic function $r$] The semantics of $r(x \succsim y)$ are the following:
 \begin{itemize}
-\item [a.] When $r(x,y) > 0.0$, it is more {\em True\/} than {\em False\/} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is at least as well performing than alternative $y$ on a weighted majority of criteria {\bf and} there is no considerable negative performance difference observed in disfavour of $x$,
-\item [b.] When $r(x,y) < 0.0$, it is more {\em False\/} than {\em True\/} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is {\bf not} \emph{at least as well performing} on a weighted majority of criteria than alternative $y$ {\bf and} there is no considerable positive performance difference observed in favour of $x$,
-\item [c.] When $r(x,y) = 0.0$, it is {\bf indeterminate} whether $x$ outranks $y$ or not.
+\item [a.] When $r(x \succsim y) > 0.0$, it is more {\em True\/} than {\em False\/} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is at least as well performing than alternative $y$ on a weighted majority of criteria {\bf and} there is no considerable negative performance difference observed in disfavour of $x$,
+\item [b.] When $r(x \succsim y) < 0.0$, it is more {\em False\/} than {\em True\/} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is {\bf not} \emph{at least as well performing} on a weighted majority of criteria than alternative $y$ {\bf and} there is no considerable positive performance difference observed in favour of $x$,
+\item [c.] When $r(x \succsim y) = 0.0$, it is {\bf indeterminate} whether $x$ outranks $y$ or not.
 \end{itemize}
 \end{definition}
 
@@ -189,7 +190,7 @@ Such a situation is, however, observed when we pairwise compare the performances
    ----------------------------------------
    Valuation in range: -7.00 to +7.00; r(x,y)= +1/7 => 0.0
 \end{lstlisting}
-This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting an \emph{as well as performing} situation. Yet, we also observe a considerable negative performance difference on criterion \texttt{g1} (see Listing \ref{list:3.7} Line 6 above and first row in the relation table shown in Listing \ref{list:3.5}). Both contradictory facts trigger eventually an \emph{indeterminate} outranking situation \citep{BIS-2013}. 
+This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting an \emph{as well as performing} situation. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Listing \ref{list:3.7} Line 6 above and first row in the relation table shown in Listing \ref{list:3.5}). Both contradictory facts trigger eventually an \emph{indeterminate} outranking situation \citep{BIS-2013}. 
 
 \section{Recoding the digraph valuation}
 \label{sec:3.4}
@@ -203,20 +204,20 @@ All outranking digraphs, being of root type {\tt Digraph}, inherit the methods a
    r(x,y)  |  'a1'  'a2'  'a3'  'a4'  'a5'  'a6'  'a7'	  
   ---------|------------------------------------------
     'a1'   |    0    +5    +2    +2    +2    +2     0	 
-    'a2'   |   -5    +7    -1    -1    +1    +2    -4	 
-    'a3'   |   -1    +2    +7    -1    -1     0    -1	 
-    'a4'   |    0    +1    +4    +7    +2    +4    -3	 
-    'a5'   |   -1     0    +1     0    +7    +2    -1	 
-    'a6'   |   -1     0    +1    -1    +1    +7     0	 
-    'a7'   |    0    +5    +4    +3    +2     0    +7	 
+    'a2'   |   -5     0    -1    -1    +1    +2    -4	 
+    'a3'   |   -1    +2     0    -1    -1     0    -1	 
+    'a4'   |    0    +1    +4     0    +2    +4    -3	 
+    'a5'   |   -1     0    +1     0     0    +2    -1	 
+    'a6'   |   -1     0    +1    -1    +1     0     0	 
+    'a7'   |    0    +5    +4    +3    +2     0     0	 
     Valuation domain: [-7;+7]
 \end{lstlisting}
-Notice in Listing \ref{list:3.8} Line 3 above, that the reflexive self comparison characteristic $r(x \succsim x)$ may be ignored by setting the \texttt{ReflexiveTerms} flag to \texttt{False}. They are in this case set to the \emph{indeterminate} valuation value $0$. Mind that the trivial reflexive terms of outranking relations are generally ignored in the \Digraph resources. 
+Notice in Listing \ref{list:3.8} Line 3 above, that the reflexive self comparison characteristic $r(x \succsim x)$ may be ignored by setting the \texttt{ReflexiveTerms} flag to \texttt{False}. They are in this case set to the \emph{indeterminate} valuation value $0$. Mind that the trivial reflexive terms of outranking relations may be ignored in some of the \Digraph resources. 
 
 \section{The strict outranking digraph}
 \label{sec:3.5}
 
-From the theory we know that a bipolar-valued outranking digraph is \emph{weakly complete}, i.e. if $r(x,y) < 0.0$ then $r(y,x) \geq 0.0$ \citep{BIS-2013, ADT-L7}. From this property follows that a bipolar-valued outranking relation verifies the \emph{coduality} principle: the \emph{dual strict negation} $-$ \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}) of the \emph{converse} ({\em inverse\/} $\sim$) of the outranking relation corresponds to its {\em strict outranking\/} part.
+From the theory we know that a bipolar-valued outranking digraph is \emph{weakly complete}, i.e. if $r(x,y) < 0.0$ then $r(y,x) \geq 0.0$ \citep{BIS-2013, ADT-L7}. From this property follows that a bipolar-valued outranking relation verifies the \emph{coduality principle}\index{coduality principle}: the \emph{dual strict negation} $-$ \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}) of the \emph{converse} ({\em inverse\/} $\sim$) of the outranking relation corresponds to its {\em strict outranking\/} part.
 
 We may visualize the \emph{codual} ({\em strict\/}) outranking digraph with a graphviz drawing \footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}.
 \begin{lstlisting}
@@ -234,6 +235,23 @@ We may visualize the \emph{codual} ({\em strict\/}) outranking digraph with a gr
 \end{figure}
  
 Many more tools for exploiting bipolar-valued outranking digraphs are available in the \Digraph resources \citep{BIS-2021}.
+
+\phantomsection
+\addcontentsline{toc}{section}{Notes}
+\section*{Notes}
+
+The seminal work on outranking digraphs goes back to the seventies and eighties (\citet{ROY-1985,ROY-1991} and \citet*{ROY-1993}). The LAMSADE \footnote{Laboratoire d’Analyse et de Modélisation de Systèmes pour l’Aide à la Décision (LAMSADE), University Paris Dauphine, founded by B. Roy} was indeed a major site in the development of the outranking  approach to multiple criteria decision making.
+
+The ongoing success of the original outranking concept stems from the fact that it is rooted in a sound pragamatism. The multiple criteria performance tableau, necessarily associated with a given outranking digraph, is indeed convincingly objective and meaningful. And, ideas from social choice theory gave initially the insight that a pairwise voting mechanism à la \Condorcet could provide an order-statistical tool for aggregating a set of preference points of view into what M. Barbut calls the \emph{central} \Condorcet point of view \cite{BAR-1966}; in fact the median of the multiple preference points of view, at minimal absolute \Kendall's ordinal correlation $\tau$ measure from all individual points of view (see Chapter~\ref{sec:16}).
+
+Considering thus each performance criterion as a subset of unanimous voters and arithmetically balancing the votes in favour against considerable counter-performances in disfavour gave eventually rise to the modern concept of \emph{outranking situation}, a distinctive feature of the Multiple Criteria Decision Aid approach \citep{ROY-1991}.  A modern definition would be : An alternative $x$ is said to \emph{outrank} alternative $y$ if and only if – there exists a \emph{significant majority} of criteria who confirm that alternative $x$ is to be considered as \emph{at least as worth as} alternative $y$ (the concordance argument); and – no discordant criterion opens to significant doubt the validity of the previous confirmation by revealing a considerable counter-performance of alternative $x$ compared to $y$ (the discordance argument).
+
+If the concordance argument was always well recieved, the discordance argument, very confused in the beginning \citep{ROY-1966}, could only be handled in an epistemically correct and logically sound way when we used a bipolar disjunctive fusion operator for polarising the concordance with the discordance argument \citep{BIS-2013}.
+
+
+\vspace{1cm}
+
+The next, and main Part of the book, presents decision methods and tools, like computing a best choice recommendation, a linear ranking or a rating with multiple incommensurable criteria. We also introduce the main performance tableau models we are going to use.  
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

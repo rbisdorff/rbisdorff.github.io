@@ -18,7 +18,7 @@
 \section{Installing the \Digraph resources}
 \label{sec:1.1}
 
-Using the \Digraph Python modules is easy \citep{BIS-2021}. You only need to have installed on your system the Python programming language of version 3.+ (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard decimal module implements very efficiently its \texttt{decimal.Decimal} class in C. Now, \texttt{Decimal} objects are mainly used in the \Digraph characteristic valuation functions, which makes the recent python-3.7+ versions much faster (more than twice as fast) when extensive digraph operations are performed.
+Using the \Digraph Python modules is easy\footnote{See the \Digraph doumentation site: \url{https://digraph3.readthedocs.io/en/latest/}, \citet{BIS-2021}.} You only need to have installed on your system the Python programming language of version 3 (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard \texttt{decimal} module implements very efficiently its \texttt{Decimal} class in C. Now, \texttt{Decimal} numbers are mainly used in the \Digraph characteristic valuation functions, which makes the recent python-3.7+ versions much faster (more than twice as fast) when extensive digraph operations are performed.
 
 Several download options (easiest under Linux or Mac OS-X) are given. Either, by using a git client from \texttt{github}:
 \begin{footnotesize}
@@ -87,7 +87,7 @@ Individual module pytest suites are also provided (see the makefile), like the o
 
 \paragraph{Dependencies:}
 To be fully functional, the \Digraph resources mainly need:
-\begin{itemize}[leftmargin=0.5cm,listparindent=0em]
+\begin{itemize}[leftmargin=0.5cm,listparindent=0em,rightmargin=0.2cm]
 \item The \texttt{graphviz} tools \footnote{\href{https://graphviz.org}{https://graphviz.org}, \citet{graphViz}} and 
 \item The R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
 \item When exploring digraph isomorphisms, the \texttt{nauty} isomorphism testing program is required. \footnote{\href{https://www.cs.sunysb.edu/~algorith/implement/nauty/implement.shtml}{nauty home page} and \citet{nauty}. On linux you may try: \texttt{sudo apt install nauty}. On Mac OS X corresponding dmg installer are available for downloading.}.
@@ -339,6 +339,7 @@ Some constructors for universal digraph instances, like the \texttt{CompleteDigr
 \end{figure}
 \clearpage
 
+\vspace{0.5cm}
 The next Chapter \ref{sec:3} will introduce the fondamental \emph{bipolar-valued digraph} model which is \emph{root object type} to all the specialised digraph models implemented in the \Digraph modules.    
 
 %%%%%%% The chapter bibliography

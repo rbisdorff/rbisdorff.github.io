@@ -2,21 +2,19 @@
 \label{sec:4}
 
 \begin{quotation}
-“... The goal of our research was to design a resolution method ... that is easy to
-put into practice, that requires as few and reliable hypotheses as possible, and that
-meets the needs [of the decision maker]...” -- \citep{ROY-1966}\index{Roy}.
+“... The goal of our research was to design a resolution method ... that is easy to put into practice, that requires as few and reliable hypotheses as possible, and that meets the needs [of the decision maker]...” --\citep{ROY-1966}\index{Roy}.
 \end{quotation}
 
 \vspace{1cm}
 
-\abstract*{ In this chapter we present the \Rubis best choice recommender system. To illustrate the approach we use a best office site selection problem. We show how to explore the given performance tableau and compute the corresponding outranking digraph. We present the pragmatic principles that govern our best best choice recommendation algorithm and solve the illustrative best office choice choice problem.}
+\abstract*{ In this chapter we present the \Rubis best choice recommender system. To illustrate the approach we use a best office site selection problem. We show how to explore the given performance tableau and compute the corresponding outranking digraph. We present the pragmatic principles that govern our best choice recommendation algorithm and solve the illustrative best office site choice problem.}
 
-\abstract{ In this chapter we present the \Rubis best choice recommender system. We illustrate our \Rubis approach with a best office site selection problem. We show how to explore the given performance tableau and compute the corresponding outranking digraph. We present the pragmatic principles that govern our best best choice recommendation algorithm and solve the illustrative best office choice choice problem.}
+\abstract{ In this chapter we present the \Rubis best choice recommender system. We illustrate our \Rubis approach with a best office site selection problem. We show how to explore the given performance tableau and compute the corresponding outranking digraph. We present the pragmatic principles that govern our best choice recommendation algorithm and solve the illustrative best office site choice problem.}
 
 \section{What office site to choose?}
 \label{sec:4.1}
 
-A SME, specialized in printing and copy services, has to move into new offices, and its CEO has gathered seven \emph{potential office sites} (see Table~\ref{tab:4.1}).
+A SME, specialized in printing and copy services, has to move into new offices, and its CEO has gathered seven \emph{potential new office sites} (see Table~\ref{tab:4.1}).
 \begin{table}[h]
 \caption{The potential new office sites}
 \label{tab:4.1}       % Give a unique label
@@ -69,9 +67,9 @@ The decision consequences to take into account for evaluating the potential new 
   \end{center}
 \end{table}
 
-In Table~\ref{tab:4.2} we notice that the \emph{Costs} criterion admits the highest significance ($45$), followed by the \emph{Future turnover} criteria $(32 + 26 + 23 = 81)$, The \emph{Working conditions} criteria are the less significant $(10 + 6 + 3 = 19)$. It follows that the CEO considers \emph{maximizing the future turnover} the most important objective ($81.0$), followed by minizing the yearly costs ($45.0$), and less important, \emph{maximizing working conditions} ($19.0$). These weights were supposedly established with a swing weighing MCDA method \citep{EIS-2001}.
+In Table~\ref{tab:4.2} we notice that the \emph{Costs} criterion admits the highest significance ($45$), followed by the \emph{Future turnover} criteria $(32 + 26 + 23 = 81)$, The \emph{Working conditions} criteria are the less significant $(10 + 6 + 3 = 19)$ \footnote{These criteria weights were supposedly established with a swing weighing MCDA method \citep{EIS-2001}.}. It follows that the CEO considers \emph{maximizing the future turnover} the most important objective ($81.0$), followed by minizing the yearly costs ($45.0$), and less important, \emph{maximizing working conditions} ($19.0$). 
 
-The evaluation of the seven potential sites on each performance criterion are gathered in a \emph{performance tableau} shown in Table~\ref{tab:4.3}.
+The evaluation of the seven potential new sites on each performance criterion are gathered in a \emph{performance table} shown in Table~\ref{tab:4.3}.
 \begin{table}[h]
 \caption{Performance evaluations of the potential office sites}
 \label{tab:4.3}       % Give a unique label
@@ -97,8 +95,7 @@ The evaluation of the seven potential sites on each performance criterion are ga
 
 All criteria, except the \emph{Costs} Criterion, admit for grading a qualitative satisfaction scale from $0\%$ (worst) to $100\%$ (best). We may thus notice in Table~\ref{tab:4.3} that site \texttt{A} (\emph{Ave}) is the most expensive, but also $100\%$ satisfying the \emph{Proximity} as well as the  \emph{Standing} criterion. Whereas site \texttt{C} (\emph{Ces}) is the cheapest one; providing however no satisfaction at all on both the \emph{Standing} and the \emph{Working Space} criteria.
 
-
-Concerning yearly costs, we suppose that the CEO is indifferent up to a performance difference of $1000.00$€, and he actually prefers a site if there is at least a positive difference of $2500.00$€. The grades observed on the six qualitative criteria (measured in percentages of satisfaction) are very subjective and rather imprecise. The CEO is hence indifferent up to a satisfaction difference of $10\%$, and he claims a significant preference when the satisfaction difference is at least of $20\%$.  Furthermore, a satisfaction difference of $80\%$ represents for him a \emph{considerably large} performance difference, triggering the case given a polarisation of the preferential situations \citep{BIS-2013}. 
+Concerning yearly costs, we suppose that the CEO is indifferent up to a performance difference of $1000.00$€, and he actually prefers a site when there is at least a positive difference of $2500.00$€. The grades observed on the six qualitative criteria (measured in percentages of satisfaction) are very subjective and rather imprecise. The CEO is hence indifferent up to a satisfaction difference of $10\%$, and he claims a significant preference when the satisfaction difference is at least of $20\%$.  Furthermore, a satisfaction difference of $80\%$ represents for him a \emph{considerably large} performance difference, triggering the case given a polarisation of the preferential situations \citep{BIS-2013}. 
 
 In view of Table~\ref{tab:4.3}, what is now the office site we may recommend to the CEO as \textbf{best choice}?
 
@@ -106,8 +103,8 @@ In view of Table~\ref{tab:4.3}, what is now the office site we may recommend to 
 \label{sec:4.2}
 
 
-In file \texttt{officeChoice.py}, stored in the \texttt{examples} directory of the \Digraph resources, a corresponding, \texttt{PerformanceTableau}\index{PerformanceTableau@\texttt{PerformanceTableau} class} object, is provided. We may inspect its actual content with the computing resources provided by the \texttt{perfTabs} module.
-\begin{lstlisting}[caption={Inspecting the \texttt{officeChoice} performance tableau},label=list:4.1]
+In file \texttt{officeChoice.py}, stored in the \texttt{examples} directory of the \Digraph resources, a corresponding, \texttt{PerformanceTableau}\index{PerformanceTableau@\texttt{PerformanceTableau} class} object, is provided. We may inspect its actual content with the computing resources provided by the \texttt{perfTabs} module \index{perfTabs@\texttt{perfTabs} module}.
+\begin{lstlisting}[caption={Inspecting the \texttt{officeChoice} performance tableau.},label=list:4.1]
 >>> from perfTabs import PerformanceTableau
 >>> t = PerformanceTableau('examples/officeChoice')
 >>> t
@@ -136,7 +133,7 @@ In file \texttt{officeChoice.py}, stored in the \texttt{examples} directory of t
 \end{lstlisting}
 
 We thus recover all the input data shown in Section~\ref{sec:4.1}. We may use the \texttt{showCriteria()}\index{showCriteria@\texttt{showCriteria()}} method for measuring the actual preference discrimination we observe on each criterion.
-\begin{lstlisting}[caption={Inspecting the performance criteria},label=list:4.2]
+\begin{lstlisting}[caption={Inspecting the performance criteria.},label=list:4.2]
 >>> t.showCriteria(IntegerWeights=True)
  *----  criteria -----*
   C 'Costs'
