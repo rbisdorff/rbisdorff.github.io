@@ -21,9 +21,9 @@ book.pdf:
 	bibtex 02-mainMatters/01-chapterIntroDigraph3.aux
 	bibtex 02-mainMatters/02-chapterDigraphs.aux
 	bibtex 02-mainMatters/03-chapterOutrankingDigraphs.aux
-	bibtex 02-mainMatters/04-chapterNewPerfTab.aux
-	#bibtex 02-mainMatters/05-chapterRandomPerfTabs.aux
-	bibtex 02-mainMatters/06-chapterBestChoice.aux
+	bibtex 02-mainMatters/04-chapterBestChoice.aux
+	bibtex 02-mainMatters/05-chapterNewPerfTab.aux
+	#bibtex 02-mainMatters/06-chapterRandomPerfTabs.aux
 	bibtex 02-mainMatters/07-chapterWinnerElection.aux
 	bibtex 02-mainMatters/08-chapterRankings.aux
 	#bibtex 02-mainMatters/09-chapterRelativeRating.aux

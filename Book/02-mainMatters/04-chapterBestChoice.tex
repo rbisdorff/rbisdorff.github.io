@@ -1,0 +1,402 @@
+\chapter{Computing a best choice recommendation}
+\label{sec:4}
+
+\begin{quotation}
+“... The goal of our research was to design a resolution method ... that is easy to
+put into practice, that requires as few and reliable hypotheses as possible, and that
+meets the needs [of the decision maker]...” -- \citep{ROY-1966}\index{Roy}.
+\end{quotation}
+
+\vspace{2cm}
+
+\abstract*{ In this chapter we present the \Rubis best choice recommender system. To illustrate the approach we use a best office site selection problem. We show how to explore the given performance tableau and compute the corresponding outranking digraph. We present the pragmatic principles that govern our best best choice recommendation algorithm and solve the illustrative best office choice choice problem.}
+
+\abstract{ In this chapter we present the \Rubis best choice recommender system. We illustrate our \Rubis approach with a best office site selection problem. We show how to explore the given performance tableau and compute the corresponding outranking digraph. We present the pragmatic principles that govern our best best choice recommendation algorithm and solve the illustrative best office choice choice problem.}
+
+\section{What site to choose ?}
+\label{sec:4.1}
+
+A SME, specialized in printing and copy services, has to move into new offices, and its CEO has gathered seven \emph{potential office sites} (see Table \ref{tab:4.1}).
+\begin{table}[h]
+\caption{The potential new office sites}
+\label{tab:4.1}       % Give a unique label
+\begin{center}
+  %\begin{small}
+    \begin{tabular}{c|l|l|l}
+      \svhline\noalign{\smallskip}
+      ID & Name & Address & Comment\\
+      \noalign{\smallskip}\hline\noalign{\smallskip}
+    A &   Ave  &  Avenue de la liberté &  High standing city center\\
+    B &   Bon  &  Bonnevoie &             Industrial environment\\
+    C &   Ces  &  Cessange &              Residential suburb location\\
+    D &   Dom  &  Dommeldange &           Industrial suburb environment\\
+    E &   Bel  &  Esch-Belval &           New and ambitious urbanization far from the city\\
+    F &   Fen  &  Fentange &              Out in the countryside\\
+      G &   Gar  &  Avenue de la Gare &     Main city shopping street\\
+      \noalign{\smallskip}\hline
+    \end{tabular}
+  %\end{small}
+\end{center}
+\end{table}
+
+Three \textbf{decision objectives} are guiding the CEO's choice:
+\begin{enumerate}[leftmargin=1cm]
+\item \emph{minimize} the yearly costs induced by the moving,
+\item \emph{maximize} the future turnover of the SME,
+\item \emph{maximize} the new working conditions.
+\end{enumerate}
+
+The decision consequences to take into account for evaluating the potential new office sites with respect to each of the three objectives are modelled by the following \emph{family of performance criteria} \footnote{See \citealp{ROY-2000}}.
+\begin{table}[h]
+\caption{The family of performance criteria}
+\label{tab:4.2}       % Give a unique label
+\begin{center}
+    \begin{tabular}{l|l|l|l}
+      \svhline\noalign{\smallskip}
+      Objective & ID & Name &  Comment\\
+      \noalign{\smallskip}\hline\noalign{\smallskip}
+    Yearly costs  &       C &   Costs &       Annual rent, charges, and cleaning\\
+    \             &  \      & \        &  \ \\
+    Future turnover   &   St &   Standing &    Image and presentation\\
+    Future turnover   &   V  &  Visibility &  Circulation of potential customers \\
+    Future turnover   &   Pr  & Proximity  &  Distance from town center\\
+    \                 &   \   & \          &  \  \\
+    Working conditions &  W  &  Space   &     Working space\\
+    Working conditions &  Cf &  Comfort  &    Quality of office equipment\\
+    Working conditions &  P  &  Parking  &    Available parking facilities\\
+      \noalign{\smallskip}\hline
+    \end{tabular}   
+  \end{center}
+\end{table}
+
+The evaluation of the seven potential sites on each performance criterion are gathered in the following \emph{performance tableau}.
+\begin{table}[h]
+\caption{Performance evaluations of the potential office sites}
+\label{tab:4.3}       % Give a unique label
+\begin{center}
+    \begin{tabular}{l|c|c|c|c|c|c|c|c}
+      \svhline\noalign{\smallskip}
+    Criterion  &   weight &  A  &      B &       C &       D &       E &        F &        G\\
+       \noalign{\smallskip}\hline\noalign{\smallskip}
+
+    Costs     &    45.0  &   35.0K€ &  17.8K€  & 6.7K€  &  14.1K€ &  34.8K€ &  18.6K€ &  12.0K€\\
+    \      &        \    &   \      &  \     &   \     &   \    &    \    &    \    &    \ \\
+    Proximity     &     32.0  &   100    &  20 &      80    &   70    &   40    &   0    &    60 \\
+    Visibility     &     26.0  &   60     &  80  &     70    &   50    &   60    &   0    &    100 \\
+    Standing     &     23.0  &   100   &   10   &    0     &   30    &   90    &   70   &    20 \\
+    \        &      \    &   \     &   \    &    \     &   \     &   \     &   \    &    \  \\
+    Working space     &     10.0  &   75    &   30   &    0     &   55    &   100   &   0    &    50  \\
+    Working comfort     &      6.0  &   0     &   100  &    10    &   30    &   60    &   80   &    50 \\
+    Parking     &      3.0  &   90    &   30   &    100   &   90    &   70    &   0    &    80 \\
+      \noalign{\smallskip}\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+All criteria, except the \emph{Costs} Criterion, admit for grading a qualitative satisfaction scale from $0\%$ (worst) to $100\%$ (best). We may thus notice in Table \ref{tab:4.3} that site 'A' is the most expensive, but also $100\%$ satisfying the \emph{Proximity} as well as the  \emph{Standing} criterion. Whereas site 'C' is the cheapest one; providing however no satisfaction at all on both the \emph{Standing} and the \emph{Working Space} criteria.
+
+In Table \ref{tab:4.3} we may also notice that the \emph{Costs} criterion admits the highest significance ($45.0$), followed by the \emph{Future turnover} criteria $(32.0 + 26.0 + 23.0 = 81.0)$, The \emph{Working conditions} criteria are the less significant $(10.0 + 6.0, + 3.0 = 19.0)$. It follows that the CEO considers \emph{maximizing the future turnover} the most important objective ($81.0$), followed by minizing the yearly costs ($45.0$), and less important, \emph{maximizing working conditions} ($19.0$). 
+
+Concerning yearly costs, we suppose that the CEO is indifferent up to a performance difference of $1000.00$€, and he actually prefers a site if there is at least a positive difference of $2500.00$€. The grades observed on the six qualitative criteria (measured in percentages of satisfaction) are very subjective and rather imprecise. The CEO is hence indifferent up to a satisfaction difference of $10\%$, and he claims a significant preference when the satisfaction difference is at least of $20\%$.  Furthermore, a satisfaction difference of $80\%$ represents for him a \emph{considerably large} performance difference, triggering the case given a polarisation of the preferential situations \citep{BIS-2013}. 
+
+In view of Table \ref{tab:4.3}, what is now the office site we may recommend to the CEO as \textbf{best choice}?
+
+\section{The given performance tableau}
+\label{sec:4.2}
+
+
+In file \texttt{officeChoice.py}, stored in the \texttt{examples} directory of the \Digraph resources, a corresponding, \texttt{PerformanceTableau}\index{PerformanceTableau@\texttt{PerformanceTableau} class} object, is provided. We may inspect its actual content with the computing resources provided by the \texttt{perfTabs} module.
+\begin{lstlisting}[caption={Inspecting the \texttt{officeChoice} performance tableau},label=list:4.1]
+>>> from perfTabs import PerformanceTableau
+>>> t = PerformanceTableau('examples/officeChoice')
+>>> t
+ *------- PerformanceTableau instance description ------*
+   Instance class     : PerformanceTableau
+   Instance name      : officeChoice
+   Actions            : 7
+   Objectives         : 3
+   Criteria           : 7
+   NaN proportion (%) : 0.0
+   Attributes         : ['name', 'actions', 'objectives',
+                         'criteria', 'weightPreorder',
+			 'NA', 'evaluation']
+>>> t.showPerformanceTableau()
+ *----  performance tableau -----*
+  Criteria|  'C'        'Cf'   'P'   'Pr'   'St'   'V'    'W'   
+  Weights |  45.00      6.00   3.00  32.00  23.00  26.00  10.00    
+  --------|----------------------------------------------------
+   'Ave'  | -35000.00   0.00  90.00 100.00 100.00  60.00  75.00  
+   'Bon'  | -17800.00 100.00  30.00  20.00  10.00  80.00  30.00  
+   'Ces'  |  -6700.00  10.00 100.00  80.00   0.00  70.00   0.00  
+   'Dom'  | -14100.00  30.00  90.00  70.00  30.00  50.00  55.00  
+   'Bel'  | -34800.00  60.00  70.00  40.00  90.00  60.00 100.00  
+   'Fen'  | -18600.00  80.00   0.00   0.00  70.00   0.00   0.00  
+   'Gar'  | -12000.00  50.00  80.00  60.00  20.00 100.00  50.00  
+\end{lstlisting}
+
+We thus recover all the input data shown in Section \ref{sec:4.1}. To measure the actual preference discrimination we observe on each criterion, we may use the \texttt{showCriteria()}\index{showCriteria@\texttt{showCriteria()}} method.
+\begin{lstlisting}[caption={Inspecting the performance criteria},label=list:4.2]
+>>> t.showCriteria(IntegerWeights=True)
+ *----  criteria -----*
+  C 'Costs'
+   Scale = (Decimal('0.00'), Decimal('50000.00'))
+   Weight = 45
+   Threshold ind : 1000.00 + 0.00x ;  percentile:  9.5
+   Threshold pref : 2500.00 + 0.00x ; percentile: 14.3
+  Cf 'Comfort'
+   Scale = (Decimal('0.00'), Decimal('100.00'))
+   Weight = 6
+   Threshold ind : 10.00 + 0.00x ;  percentile:   9.5
+   Threshold pref : 20.00 + 0.00x ; percentile:  28.6
+   Threshold veto : 80.00 + 0.00x ; percentile:  90.5
+    ...
+\end{lstlisting}
+On the \emph{Costs} criterion, $9.5\%$ of the performance differences are considered insignificant and $14.3\%$ below the preference discrimination threshold (see Listing \ref{list:4.2} lines 6-7). On the qualitative \emph{Comfort} criterion, we observe again $9.5\%$ of insignificant performance differences (line 11). Due to the imprecision in the subjective grading, we notice here $28.6\%$ of performance differences below the preference discrimination threshold (Line 12). Furthermore, $100.0 - 90.5 = 9.5\%$ of the performance differences are judged \emph{considerably large} (Line 13) and triggering hence a polarisation of the concerned outranking situations \citep{BIS-2013}. Same information is available for all the other criteria. 
+ 
+A colorful comparison of all the performances is shown in Figure \ref{fig:4.1} by the \emph{heatmap}\index{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}} statistics, illustrating the respective quantile class of each performance. As the set of potential alternatives is tiny, we choose here a classification into performance quintiles.
+\begin{lstlisting}
+>>> t.showHTMLPerformanceHeatmap(colorLevels=5,\
+...                              rankingRule=None)
+\end{lstlisting}
+    \begin{figure}[h]
+%\sidecaption
+\includegraphics[width=11cm]{Figures/officeChoiceHeatmap.png}
+\caption{Unranked heatmap of the office choice performance tableau.}
+\label{fig:4.1}       % Give a unique label
+\end{figure}
+
+Site 'A' (\emph{Ave}) shows extreme and contradictory performances: highest \emph{Costs} and no \emph{Working Comfort} on the one hand, and total satisfaction with respect to \emph{Standing}, \emph{Proximity} and \emph{Parking facilities} on the other hand. Similar, but opposite, situation is given for site 'C' (\emph{Ces}): unsatisfactory \emph{Working Space}, no \emph{Standing} and no \emph{Working Comfort} on the one hand, and lowest \emph{Costs}, best \emph{Proximity} and \emph{Parking facilities} on the other hand. Contrary to these contradictory alternatives, we observe two appealing compromise decision alternatives: sites 'D' (\emph{Dom}) and 'G' (\emph{Gar}). Finally, site 'F' (\emph{Fen}) is clearly the less satisfactory alternative of all.
+
+To help now the CEO choosing the best of these potential sites, we are going to compute pairwise outrankings on the set of potential sites (see \citet{BIS-2013}).
+
+\section{Computing the outranking digraph}
+\label{sec:4.2}
+
+\begin{definition}[Outranking situation]\index{outranking!situation}
+For two potential office sites $x$ and $y$:
+\begin{itemize}[leftmargin=1cm]
+\item $x$ \emph{outranks} $y$, denoted $(x \succsim y)$, is given when there is:
+   \begin{enumerate}
+     \item A \emph{majority} of criteria significance concordantly supporting that site $x$ is \emph{at least as satisfactory as} site $y$, and
+     \item \emph{No considerable} counter-performance observed on any discordant criterion.      
+    \end{enumerate}
+\item $x$ \emph{does not outrank} $y$, denoted $(x \not\succsim y)$, is given when there is:
+   \begin{enumerate}
+    \item A \emph{majority} of criteria concordantly supporting that site $x$ is \emph{not at least as satisfactory as} site $y$, and
+    \item \emph{No considerable} better performance observed on any discordant criterion.
+    \end{enumerate}
+\end{itemize}
+\end{definition}
+The credibility of each pairwise outranking situation, denoted $r(x \succsim y)$, is measured in a bipolar significance valuation $[-1.0, 1.0]$, where \emph{positive} terms $r(x \succsim y)\, >\, 0.0$ indicate a \emph{validated}, and \emph{negative} terms $r(x \succsim y)\, <\, 0.0$ indicate a \emph{non-validated} outranking situation. The \emph{median} value $r(x \succsim y)\, = \,0.0$ represents an \emph{indeterminate} situation (see \citet{BIS-2004a} and \citet{BIS-2013}).   
+
+For computing such a bipolar-valued outranking digraph from the given performance tableau $t$, we use the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph} constructor from the \texttt{outrankingDigraphs}\index{outrankingDigraphs} module. The corresponding \texttt{showHTMLRelationTable}\index{showHTMLRelationTable} method shows here the resulting bipolar-valued adjacency matrix in a system browser window (see Fig. \ref{fig:4.2}).
+\begin{lstlisting}
+>>> from outrankingDigraphs import BipolarOutrankingDigraph
+>>> g = BipolarOutrankingDigraph(t)
+>>> g.showHTMLRelationTable()
+\end{lstlisting}
+\begin{figure}[h]
+\sidecaption[t]
+\includegraphics[width=6cm]{Figures/officeChoiceOutranking.png}
+\caption{Bipolar-valued adjacency matrix. In the resulting outranking relation we may notice, on the one hand, that Alternative 'D' is \emph{positively outranking} all other potential office sites. On the other hand, alternatives 'A' (the most expensive) and 'C' (the cheapest) are \emph{not outranked} by any other site.}
+\label{fig:4.2}       % Give a unique label
+\end{figure}
+Alternative 'D' gives a \Condorcet winner, whereas Alternatives 'A' (the most expensive) and 'C' (the cheapest) give in fact \emph{weak} \Condorcet winners.\index{computeCondorcetWinners@\texttt{computeCondorcetWinners()}}\index{computeWeakCondorcetWinners@\texttt{computeWeakCondorcetWinners()}}
+\begin{lstlisting}
+>>> g.computeCondorcetWinners()
+ ['D']
+>>> g.computeWeakCondorcetWinners()
+ ['A', 'C', 'D']
+\end{lstlisting}
+
+We may get even more insight in the apparent outranking situations when we draw the corresponding \emph{outranking digraph}\index{outranking!digraph} (see Fig. \ref{fig:4.2}).
+\begin{lstlisting}
+>>> g.exportGraphViz('officeChoice')
+ *---- exporting a dot file for GraphViz tools ---------*
+  Exporting to officeChoice.dot
+  dot -Grankdir=BT -Tpng officeChoice.dot -o officeChoice.png
+\end{lstlisting}
+\begin{figure}[h]
+\sidecaption
+\includegraphics[width=6cm]{Figures/officeChoice.png}
+\caption{The office choice outranking digraph.}
+\label{fig:4.3}       % Give a unique label
+\end{figure}
+
+Outranking digraphs are \emph{weakly complete}\index{weakly complete}, i.e. for all $x$ and $y$ in $X$, $r(x \succsim y)\, <\, 0.0$ implies that $r(y \succsim x)\, \geq\, 0.0$. And, they verify the coduality principle\index{coduality principle}:  $r(x \not\succsim y) \;=\; r(y \succnsim y)$ \citep{BIS-2013}. One may furthermore check that the resulting outranking digraph $g$ here does in fact not admit any cyclic outranking situation.\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}}
+\begin{lstlisting}
+>>> g.computeChordlessCircuits()
+  []
+>>> g.showChordlessCircuits()
+  No circuits observed in this digraph.
+\end{lstlisting}
+
+\section{Designing a best choice recommender system}
+\label{sec:4.3}
+
+Traditionally, solving a best-choice problem consists in finding \emph{the} unique best decision alternative. We adopt here instead a modern recommender system’s approach which shows a non empty subset of decision alternatives which contains by construction the potential best alternative(s).
+
+Our five \emph{pragmatic principles} for computing such a \emph{best-choice recommendation} (BCR) are the following:
+\begin{itemize}
+\item [] P1: \emph{Elimination for well motivated reasons}; each eliminated alternative has to be outranked by at least one alternive in the BCR.
+\item [] P2: \emph{Minimal size}; the BCR must be as limited in cardinality as possible.
+\item [] P3: \emph{Efficient and informative}; The BCR must not contain a self-contained sub-recommendation.
+\item [] P4: \emph{Effectively better}; the BCR must not be ambiguous in the sense that it is both a best choice as well as a worst choice recommendation.
+\item [] P5: \emph{Maximally determined}; the BCR is, of all potential best-choice recommendations, the most determined one in the sense of the characteristics of the bipolar-valued outranking relation.
+\end{itemize}
+
+Let $X$ be the set of potential decision alternatives. Let $Y$ be a non empty subset of $X$, called a \emph{choice} in the outranking digraph $G(X,r(\succsim )$. A \emph{weakly independent} and \emph{outranking} (resp. \emph{outranked}) choice is called an \emph{outranking} (resp. \emph{outranked}) \emph{prekernel} (see Chapter \ref{17} on computing kernels in digraphs).
+
+We may now qualify a BCR $Y$ in the following terms:
+\begin{itemize}
+\item $Y$ is called \emph{outranking} (resp. \emph{outranked}) when for all not selected alternative $x$ there exists an alternative $y \in X$ retained such that $r(y \succsim x) > 0.0$ (resp. $r(x \precsim y) > 0.0$). Such a choice verifies principle P1.
+\item $Y$ is called \emph{weakly independent} when for all $x \neq y$ in $Y$ , we observe $r(x \succsim y) \leq 0.0$. Such a choice verifies principles P2 + P3 (minimal in cardinality and stable).
+\item $Y$ is conjointly a \emph{strict  outranking} (resp. \emph{outranked}) \textbf{and} \emph{weakly independent} choice. This choice now verifies principles P1, P2, P3 and P4.
+\item To finally verify principle P5, we recommend among all potential outranking (resp. outranked) prekernels, the \emph{most determined} one, i.e. the one supported with the highest significance majority.
+\end{itemize}
+
+Following the \Rubis best choice method\index{outranking!Rubis best choice recommendation}, our potential best choice recommendations are hence determined by the outranking \emph{prekernels}\index{prekernels} --\emph{weakly independent} and \emph{outranking} choices-- of the strict outranking digraph (see \citet{BIS-2008a}). If not reduced to a singleton, the actual \emph{best choice recommendation} will have to be refined in a later decision process phase.
+
+Mind that a given outranking digraph $G$ may not always admit any outranking (resp. outranked) prekernels. This is the case when $G$ contains chordless odd circuits. The case given, we previously need to break open all these chordless odd circuits at their weakest link.\index{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class}
+\begin{lstlisting}
+>>> from digraphs import BrokenCocsDigraph
+>>> bcg = BrokenCocsDigraph(g)
+>>> bcg.brokenLinks
+  set()
+\end{lstlisting}
+Luckily our outranking digraph $g$ here does not show any chordless outranking circuits.
+
+\section{Computing a best choice recommendation}
+\label{sec:4.4}
+
+To compute now our \Rubis best choice recommendation\index{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}} we work on the \emph{codual} outranking digraph \index{codual digraph}, i.e. the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance $g$, as follows\footnote{See Section \ref{sec:2.6} and \citet{BIS-2013}].}:
+\begin{lstlisting}[caption={Computing the best choice recommendation},label=list:4.6]
+>>> g.showBestChoiceRecommendation(\
+...                   CoDual=True,\
+...                   ChoiceVector=True)   
+* --- Best and worst choice recommendation(s) ---*
+  (in decreasing order of determinateness)   
+  Credibility domain: [-1.00,1.00]
+    === >> potential best choice(s)
+    * choice              : ['A', 'C', 'D']
+      independence        : 0.00
+      dominance           : 0.10
+      absorbency          : 0.00
+      covering (%)        : 41.67
+      determinateness (%) : 50.59
+      - characteristic vector = {
+             'D': 0.02, 'G': 0.00, 'C': 0.00,
+	     'A': 0.00, 'F': -0.02, 'E': -0.02, 'B': -0.02, }
+    === >> potential worst choice(s) 
+    * choice              : ['A', 'F']
+      independence        : 0.00
+      dominance           : -0.52
+      absorbency          : 1.00
+      covered (%)         : 50.00
+      determinateness (%) : 50.00
+      - characteristic vector = { 'G': 0.00, 'F': 0.00, 'E': 0.00,
+	     'D': 0.00, 'C': 0.00, 'B': 0.00, 'A': 0.00, }
+\end{lstlisting}				  
+It is interesting to notice in Listing \ref{list:4.6} (Line 9) that our \emph{best choice recommendation} consists actually in the previously mentioned set of weak \Condorcet winners\index{Condorcet!winner}: 'A', 'C' and 'D' (see Fig. \ref{fig:4.2}). In the corresponding characteristic vector (see Lines 15-16), representing the bipolar credibility degree with which each alternative may indeed be considered a best choice, we find that alternative 'D' is the only positively validated one, whereas both extreme alternatives - 'A' (the most expensive) and 'C' (the cheapest) - stay in an indeterminate situation (see \citet{BIS-2006a,BIS-2006b}). They may \emph{be or not be} potential best choice candidates besides 'D'. Notice furthermore that compromise alternative $G$, while not actually included in any outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} a potential best choice candidate.
+
+When comparing now the performances of alternatives 'D' and 'G' in a pairwise perspective (see below)\index{showPairwiseComparison}, we notice that, with the given preference discrimination thresholds, alternative 'G' is actually \emph{certainly at least as good as} alternative 'D':  $r(G \succsim D)\, = \, +145/145\, =\, +1.0$.
+\begin{lstlisting}[caption={Inspecting pairwise comparisons},label=list:4.5,basicstyle=\ttfamily\scriptsize]
+>>> g.showPairwiseComparison('G','D')
+ *------------  pairwise comparison ----*
+  Comparing actions : ('G', 'D')
+  crit.  wght.    g(x)      g(y)    diff.  |   ind     pref    concord 	|
+   =====================================================================
+   'C'  45.00 -12000.00 -14100.00 +2100.00 | 1000.00 2500.00   +45.00 	| 
+   'Cf'  6.00     50.00     30.00   +20.00 |   10.00   20.00    +6.00 	| 
+   'P'   3.00     80.00     90.00   -10.00 |   10.00   20.00    +3.00 	| 
+   'Pr' 32.00     60.00     70.00   -10.00 |   10.00   20.00   +32.00 	| 
+   'St' 23.00     20.00     30.00   -10.00 |   10.00   20.00   +23.00 	| 
+   'V'  26.00    100.00     50.00   +50.00 |   10.00   20.00   +26.00 	| 
+   'W'  10.00     50.00     55.00    -5.00 |   10.00   20.00   +10.00 	|
+   =====================================================================
+    Valuation in range: -145.00 to +145.00; global concordance: +145.00
+\end{lstlisting}
+
+Yet, we must as well notice that the cheapest alternative 'C' is in fact \emph{strictly outranking} alternative 'G':  $r(C \succsim G)\, =\, +15/145\, >\, 0.0$, and $r(G \succsim C)\, =\, -15/145 \,<\, 0.0$.
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
+>>> g.showPairwiseComparison('C','G')
+ *------------  pairwise comparison ----*
+  Comparing actions : ('C','G')/('G','C')
+  crit. wght.   g(x)     g(y)      diff.  |   ind.   pref. ('C','G')/('G','C')|
+   ===========================================================================
+   'C'   45.00 -6700.00 -12000.00 +5300.00 | 1000.00 2500.00    +45.00/-45.00 | 
+   'Cf'   6.00    10.00     50.00   -40.00 |   10.00   20.00     -6.00/ +6.00 | 
+   'P'    3.00   100.00     80.00   +20.00 |   10.00   20.00     +3.00/ -3.00 | 
+   'Pr'  32.00    80.00     60.00   +20.00 |   10.00   20.00    +32.00/-32.00 | 
+   'St'  23.00     0.00     20.00   -20.00 |   10.00   20.00    -23.00/+23.00 | 
+   'V'   26.00    70.00    100.00   -30.00 |   10.00   20.00    -26.00/+26.00 | 
+   'W'   10.00     0.00     50.00   -50.00 |   10.00   20.00    -10.00/+10.00 |
+   ===========================================================================
+    Valuation in range: -145.00 to +145.00; global concordance: +15.00/-15.00
+\end{lstlisting}
+
+We may finally notice in Listing \ref{list:4.6} (Lines 16 and 19) that both alternatives 'A' and 'F' are reported as certainly strict outranked choices, hence as \emph{potential worst choice recommendation} . This confirms again the global \emph{incomparability} status of alternative 'A' (see Fig. \ref{fig:4.3}).
+\begin{lstlisting}
+>>> gcd = ~(-g) # codual of g
+>>> gcd.exportGraphViz(fileName='bestChoiceChoice',\
+...                    bestChoice=['A','C','D'],\
+...                    worstChoice=['F'])
+ *---- exporting a dot file for GraphViz tools ---------*
+  Exporting to bestOfficeChoice.dot
+  dot -Grankdir=BT -Tpng bestOfficeChoice.dot -o bestOfficeChoice.png
+\end{lstlisting}
+\begin{figure}[h]
+\sidecaption[t]
+\includegraphics[width=5cm]{Figures/bestOfficeChoice.png}
+\caption{Best office choice recommendation from strict outranking digraph.}
+\label{fig:4.4}       % Give a unique label
+\end{figure}
+
+\section{Weakly ordering the outranking digraph}
+\label{sec:4.6}
+
+To get a more complete insight in the overall strict outranking situations, we may use the \texttt{RankingByChoosingDigraph}\index{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class} constructor imported from the \texttt{transitiveDigraphs}\index{transitiveDigraphs@\texttt{transitiveDigraphs} module} module for computing a \emph{ranking-by-choosing} result from the codual, i.e. the strict outranking digraph instance $gcd$ (see above). If the computing node supports multiple processor cores, best and worst choosing iterations may be run in parallel (see Line 3 below).
+\begin{lstlisting}
+>>> from transitiveDigraphs import\
+...                  RankingByChoosingDigraph
+>>> rbc = RankingByChoosingDigraph(gcd)
+ Threading ... # multiprocessing if 2 cores are available
+ Exiting computing threads
+>>> rbc.showRankingByChoosing()
+ Ranking by Choosing and Rejecting
+    1st ranked ['D']
+       2nd ranked ['C', 'G']
+       2nd last ranked ['B', 'C', 'E']
+    1st last ranked ['A', 'F']
+>>> rbc.exportGraphViz('officeChoiceRanking')
+ *---- exporting a dot file for GraphViz tools ---------*
+  Exporting to officeChoiceRanking.dot
+  dot -Grankdir=TB -Tpng officeChoiceRanking.dot\
+                   -o officeChoiceRanking.png
+\end{lstlisting}
+\begin{figure}[h]
+\sidecaption[t]
+\includegraphics[width=6cm]{Figures/officeChoiceRanking.png}
+\caption{In this \emph{ranking-by-choosing} method, where we operate the \emph{epistemic fusion} of iterated (strict) best and worst choices, compromise alternative 'D' is now ranked before compromise alternative 'G'. The overall partial ordering result shows again the important fact that the most expensive site 'A', and the cheapest site 'C', both appear incomparable with most of the other alternatives.} 
+\label{fig:4.5}       % Give a unique label
+\end{figure}
+The best choice recommendation appears hence depending on the very importance the CEO is attaching to each of the three decision objectives he is considering. In the given setting here, where he considers that \emph{maximizing the future turnover} is the most important objective followed by \emph{minimizing the Costs} and, less important, \emph{maximizing the working conditions}, site $D$ represents actually the \emph{best compromise}. However, if \emph{Costs} do not play much a role, it would be perhaps better to decide to move to the most advantageous site 'A'; or if, on the contrary, \emph{Costs} do matter a lot, moving to the cheapest alternative 'C' could definitely represent a more convincing recommendation. 
+
+It might be worth editing the criteria significance weights in the \texttt{officeChoice.py} data file in such a way that:
+\begin{itemize}
+\item All three decision objectives are considered \emph{equally important}, and
+\item All criteria under each objective are considered \emph{equi-significant}.
+\end{itemize}
+What will become the best choice recommendation under this working hypothesis? \footnote{See also Lecture 7 notes from the MICS Algorithmic Decision Theory course \citep{ADT-L7}.} 
+
+In the next Chapter (\ref{sec:5}) we precisely show how to edit a new performance tableau from a given template file. 
+
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+%\phantomsection
+%\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{spbasic}
+%\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/06-chapterBestChoice.bbl}
