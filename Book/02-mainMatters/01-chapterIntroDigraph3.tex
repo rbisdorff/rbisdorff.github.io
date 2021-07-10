@@ -11,9 +11,9 @@
 % use \chaptermark{}
 % to alter or adjust the chapter heading in the running head
 
-\abstract*{}
+\abstract*{ The first Chapter is devoted to a first contact with the \Digraph Python resources. Following installation instructions, we start a first Python session for generating, saving and inspecting a random crisp digraph.}
 
-\abstract{}
+\abstract{ The first Chapter is devoted to a first contact with the \Digraph Python resources. Following installation instructions, we start a first Python session for generating, saving and inspecting a random crisp digraph.}
 
 \section{Installing the \Digraph resources}
 \label{sec:1.1}
@@ -48,7 +48,7 @@ installs (with \emph{sudo} !) the \Digraph modules in the current running python
 \end{footnotesize}
 installs the \Digraph modules in an activated virtual python environment.
 
-If the \textbf{cython} (\href{https://cython.org}{https://cython.org}) C-compiled modules for Big Data applications are required, it is necessary to previously install the \emph{Cython} package in the running Python environment:
+If the \emph{cython} (\href{https://cython.org}{https://cython.org}) C-compiled modules for Big Data applications are required, it is necessary to previously install the \emph{Cython} package in the running Python environment:
 \begin{footnotesize}
 \begin{verbatim}
 ...$ python3 -m pip install cython
@@ -72,7 +72,7 @@ A verbose (with stdout not captured) \texttt{pytest} suite may be run as follows
 .../Digraph3$ make verboseTests
 \end{verbatim}
 \end{footnotesize}
-When the GNU \texttt{parallel} shell tool\footnote{\href{https://www.gnu.org/software/parallel}{https://www.gnu.org/software/parallel}} is installed and multiple cores are detected, the tests may be executed in multiple processing mode:
+When the GNU \texttt{parallel} shell tool\index{parallel@\texttt{parallel} shell tool}\footnote{\href{https://www.gnu.org/software/parallel}{https://www.gnu.org/software/parallel}} is installed and multiple cores are detected, the tests may be executed in multiple processing mode:
 \begin{footnotesize}
 \begin{verbatim}
 ../Digraph3$ make pTests 
@@ -86,11 +86,13 @@ Individual module pytest suites are also provided (see the makefile), like the o
 \end{footnotesize}
 
 \paragraph{Dependencies:}
-To be fully functional, the \Digraph resources mainly need the \texttt{graphviz} tools \footnote{\href{https://graphviz.org}{https://graphviz.org}, \citet{graphViz}} and the R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
-
-When exploring digraph isomorphisms, the \href{https://www.cs.sunysb.edu/~algorith/implement/nauty/implement.shtml}{\texttt{nauty} isomorphism testing program} is required.
-
-Two specific methods of the \texttt{OutrankingDigraph} class for clustering performance criteria or decision alternatives require furthermore the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
+To be fully functional, the \Digraph resources mainly need:
+\begin{itemize}[leftmargin=0.5cm,listparindent=0em]
+\item The \texttt{graphviz} tools \footnote{\href{https://graphviz.org}{https://graphviz.org}, \citet{graphViz}} and 
+\item The R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
+\item When exploring digraph isomorphisms, the \texttt{nauty} isomorphism testing program is required. \footnote{\href{https://www.cs.sunysb.edu/~algorith/implement/nauty/implement.shtml}{nauty home page} and \citet{nauty}. On linux you may try: \texttt{sudo apt install nauty}. On Mac OS X corresponding dmg installer are available for downloading.}.
+\item Two specific methods of the \texttt{OutrankingDigraph} class for clustering performance criteria or decision alternatives require furthermore the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
+\end{itemize}
 
 \section{Starting a \Digraph python3 session}
 \label{sec:1.2}
@@ -105,7 +107,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 \end{verbatim}
 \end{footnotesize}
 For exploring the classes and methods provided by the \Digraph modules \footnote{See the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}} enter the Python3 commands following the session prompts marked with '\>\>\>' or '...' . The lines without the prompt are output from the Python3 interpreter.
-
 \begin{lstlisting}[caption={Generating a digraph instance},label=list:1.1]
 >>> from randomDigraphs import RandomDigraph
 >>> dg = RandomDigraph(order=5,arcProbability=0.5,seed=101)
@@ -121,7 +122,6 @@ For exploring the classes and methods provided by the \Digraph modules \footnote
                       'relation','order','name',
                       'gamma','notGamma']
 \end{lstlisting}
-                   
 In Listing \ref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object $dg$ of order 5 - number of nodes called (decision) actions - and arc probability of $50\%$. The resulting digraph of order 5 and size -- number of arcs-- 12 is completely determined.
 
 \section{Permanent storage of a digraph object}
@@ -173,7 +173,7 @@ actions = OrderedDict([
 \end{lstlisting}
 
 In the \Digraph resources, all digraph object instances are of \texttt{Digraph}\index{Digraph@\texttt{Digraph} class} type and contain at least the following attributes (see Listing \ref{list:1.1}  Lines 11-12):
-\begin{enumerate}
+\begin{enumerate}[leftmargin=0.5cm,listparindent=0em]
 \item A \texttt{name} attribute, holding usually the actual name of the stored instance that was used to create the instance;
 \item An ordered dictionary of digraph nodes called \texttt{actions} (decision alternatives) with at least a \texttt{name} attribute;
 \item An \texttt{order} attribute containing the number of graph nodes (length of the actions dictionary) automatically added by the object constructor;
@@ -290,13 +290,13 @@ Further methods are provided for inspecting this random \texttt{Digraph} object 
  agglomeration coefficient        : 45.00
 \end{lstlisting}
 
-The preceeding \texttt{showxxx()} methods usually rely upon corresponding compute methods, like:
+The preceeding \texttt{show...()} methods usually rely upon corresponding compute methods, like:
 \begin{itemize}
 \item The \texttt{computeSize()}\index{computeSize@\texttt{computeSize()}},
 \item The \texttt{computeDeterminateness()}\index{computeDeterminateness@\texttt{computeDeterminateness()}}, or
 \item The \texttt{computeTransitivityDegree()}\index{computeTransitivityDegree@\texttt{computeTransitivityDegree()}} method.
 \end{itemize}
-\begin{lstlisting}[caption={Various \texttt{computexxx()} methods.}label=list:1.6]
+\begin{lstlisting}[caption={Various \texttt{compute...()} methods.}label=list:1.6]
 >>> dg.computeSize()
  12
 >>> dg.computeDeterminateness(InPercents=True)
@@ -305,8 +305,8 @@ The preceeding \texttt{showxxx()} methods usually rely upon corresponding comput
  Decimal('60.00')
 \end{lstlisting}
 
-Mind that \texttt{showxxx()} methods output their results in the \emph{Python} console. We provide also some \texttt{showHTMLxxx()} methods which output their results in a system browser’s tab or window.
-\begin{lstlisting}[label=list:1.7,basicstyle=\footnotesize]
+Mind that \texttt{show...()} methods output their results in the \emph{Python} console. We provide also some \texttt{showHTML...()} methods which output their results in a system browser’s tab or window.
+\begin{lstlisting}
 >>> dg.showHTMLRelationMap(relationName='r(x,y)',\
 ...                        rankingRule=None)
 \end{lstlisting}
@@ -339,7 +339,7 @@ Some constructors for universal digraph instances, like the \texttt{CompleteDigr
 \end{figure}
 \clearpage
 
-The next Chapter \ref{sec:3} will introduce the fondamental bipolar-valued digraph model which is \emph{root object type} to all the specialised digraph models implemented in the \Digraph modules.    
+The next Chapter \ref{sec:3} will introduce the fondamental \emph{bipolar-valued digraph} model which is \emph{root object type} to all the specialised digraph models implemented in the \Digraph modules.    
 
 %%%%%%% The chapter bibliography
 % %\normallatexbib

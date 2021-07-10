@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -17,5 +17,9 @@ Bisdorff R (2021) Documentation of the digraph3 collection of python modules
 Gansner ER, North SC (2000) An open graph visualization system and its
   applications to software engineering. SOFTWARE - PRACTICE AND EXPERIENCE
   30(11):1203--1233, \urlprefix\url{https://graphviz.org/documentation/}
+
+\bibitem[{McKay and Piperno(2013)}]{nauty}
+McKay BD, Piperno A (2013) Practical graph isomorphism, ii. J Symbolic
+  Computation 60:94--112, \urlprefix\url{https://doi.org/10.1016}
 
 \end{thebibliography}
