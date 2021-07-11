@@ -113,7 +113,7 @@ Notice finally the ordinal correlation \emph{tau} values in Fig. \ref{fig:16.2} 
 \label{sec:16:6}
 
 
-M. G. Kendall ([KEN-1938p]) defined his ordinal correlation $\tau$ (\emph{tau}) index for linear orders of dimension $n$ as a balancing of the number $Co$ of correctly oriented pairs against the number $In$ of incorrectly oriented pairs. The total number of irreflexive pairs being $n(n-1)$, in the case of linear orders, $Co + In \;=\; n(n-1)$.  Hence $\tau \;=\; \big(\frac{Co}{n(n-1)}\big) \,-\, \big(\frac{In}{n(n-1)}\big)$. In case $In$ is zero, $\tau \;=\; +1$  (all pairs are equivalently oriented); inversely, in case $Co$ is zero, $\tau \;=\; -1$ (all pairs are differently oriented).
+M. G. Kendall defined his ordinal correlation $\tau$ (\emph{tau}) index for linear orders of dimension $n$ as a balancing of the number $Co$ of correctly oriented pairs against the number $In$ of incorrectly oriented pairs \citep{KEN-1938}. The total number of irreflexive pairs being $n(n-1)$, in the case of linear orders, $Co + In \;=\; n(n-1)$.  Hence $\tau \;=\; \big(\frac{Co}{n(n-1)}\big) \,-\, \big(\frac{In}{n(n-1)}\big)$. In case $In$ is zero, $\tau \;=\; +1$  (all pairs are equivalently oriented); inversely, in case $Co$ is zero, $\tau \;=\; -1$ (all pairs are differently oriented).
 
 Noticing that $\frac{Co}{n(n-1)} \;=\; 1 \,-\, \frac{In}{n(n-1)}$, and recalling that the bipolar-valued negation is operated by changing the sign of the characteristic value, \Kendall 's original \emph{tau} definition implemented in fact the bipolar-valued negation of the non equivalence of two linear orders: 
 \begin{equation}
@@ -152,6 +152,7 @@ What happens now with more or less determined and even partially indeterminate r
 Let us now consider two randomly bipolar-valued digraphs $R_1$ and $R_2$ of order five.
 
 \begin{lstlisting}[caption={Two random bipolar-valued digraphs},label=list:16.2]
+>>> from randomDigraphs import RandomValuationDigraph
 >>> R1 = RandomValuationDigraph(order=5,seed=1)
 >>> R1.showRelationTable(ReflexiveTerms=False)
   * ---- Relation Table -----
@@ -176,8 +177,9 @@ Let us now consider two randomly bipolar-valued digraphs $R_1$ and $R_2$ of orde
    Valuation domain: [-1.00;1.00]
 \end{lstlisting}
 
-We may notice in the relation tables shown above that 9 pairs, like (a1,a2) or (a3,a2) for instance, appear equivalently oriented (see Listing \ref{list:16.2} Lines 6,17 or 8,19). The \texttt{EquivalenceDigraph} class implements this relational equivalence relation between digraphs $R_1$ and $R_2$ (see Listing \ref{list:16.3}).
+We may notice in the relation tables shown above that 9 pairs, like (a1,a2) or (a3,a2) for instance, appear equivalently oriented (see Listing \ref{list:16.2} Lines 7,18 or 9,20). The \texttt{EquivalenceDigraph} class implements this relational equivalence between digraphs $R_1$ and $R_2$ (see Listing \ref{list:16.3}).
 \begin{lstlisting}[caption={Bipolar-valued Equivalence Digraph},label=list:16.3]
+>>> from digraphs import EquivalenceDigraph
 >>> eq = EquivalenceDigraph(R1,R2)
 >>> eq.showRelationTable(ReflexiveTerms=False)
   * ---- Relation Table -----
@@ -200,7 +202,7 @@ M(R_1 \Leftrightarrow R_2) \; &= \\  &\sum_{(x \neq y)} \Big[ \min \Big( \max \b
 \end{aligned}\right.
 \end{equation}
 
-$M(R_1 \Leftrightarrow R_2)$ is thus given by the sum of the non reflexive terms of the relation table of $eq$, the relation equivalence digraph computed above (see Listing \ref{list:16.3}).
+$M(R_1 \Leftrightarrow R_2)$ is thus given by the sum of the non reflexive terms of the relation table of $eq$, the relational equivalence digraph computed above (see Listing \ref{list:16.3}).
 
 In the crisp case, $M(R_1 \Leftrightarrow R_2)$  is now normalized with the maximum number of possible irreflexive pairs, namely $n(n-1)$. In a generalized $r$-valued case, the maximal possible equivalence majority margin $M$ corresponds to the sum $D$ of the conjoint determinations of $(x \,R_1\, y)$ and $(x \,R2\, y)$ (see \citep{BIS-2012a}). 
 \begin{equation}
