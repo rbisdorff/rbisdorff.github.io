@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -8,10 +8,20 @@
   \urlstyle{rm}\Url}\fi
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem[{Barbut(1980)}]{BAR-1980}
+Barbut M (1980) M\'edianes, {C}ondorcet et {K}endall. Math\'ematiques et
+  Sciences Humaines 69:9--13
+
 \bibitem[{Bisdorff(2013)}]{BIS-2013}
 Bisdorff R (2013) On polarizing outranking relations with large performance
   differences. Journal of Multi-Criteria Decision Analysis, Wiley 20:3--12,
   \urlprefix\url{http://hdl.handle.net/10993/245}
+
+\bibitem[{Bisdorff(2015)}]{BIS-2015}
+Bisdorff R (2015) The euro 2004 best poster award: Choosing the best poster in
+  a scientific conference. In: Bisdorff R, Dias L, VMousseau, Pirlot M (eds)
+  Evaluation and Decision Models with Multiple Criteria: Case Studies, Spinger,
+  pp 117--166
 
 \bibitem[{Bisdorff(2020)}]{ADT-L7}
 Bisdorff R (2020) Best multiple criteria choice: the rubis outranking method.
@@ -22,6 +32,14 @@ Bisdorff R (2020) Best multiple criteria choice: the rubis outranking method.
 Bisdorff R (2021) Documentation of the digraph3 collection of python modules
   for algorithmic decision theory.
   \urlprefix\url{https://digraph3.readthedocs.io/en/latest/}
+
+\bibitem[{Roy(1991)}]{ROY-1991}
+Roy B (1991) The outranking approach and the foundations of electre methods.
+  Theory and Decision 31(1):49--73
+
+\bibitem[{Roy and Bouyssou(1993)}]{ROY-1993}
+Roy B, Bouyssou D (1993) Aide Multicrit\`ere \`a la D\'ecision : M\'ethodes et
+  Cas. Economica, Paris
 
 \bibitem[{Roy et~al.(1966)Roy, Benayoun, and Sussmann}]{ROY-1966}
 Roy B, Benayoun R, Sussmann B (1966) {\sc Electre}: une m\'ethode pour guider
