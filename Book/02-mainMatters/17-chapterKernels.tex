@@ -343,7 +343,7 @@ Now, we know that its potential prekernels must be among its set of maximal inde
        covering     :  0.600
 \end{lstlisting}
      
-Among the six MISs contained in this random digraph (see above Lines 3-8) we discover two initial and two terminal kernels (Lines 12-34). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()} method (Lines 17, 22, 28 and 33). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. We may hence redraw the same digraph in Fig. \ref{fig:17.6} by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{a3','4a'\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{'a1','a6'\} (coloured in blue).
+Among the six MISs contained in this random digraph (see above Lines 3-8) we discover two initial and two terminal kernels (Lines 12-34). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels}()} method (Lines 17, 22, 28 and 33). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. We may hence redraw the same digraph in Fig. \ref{fig:17.6} by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{a3','4a'\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{'a1','a6'\} (coloured in blue).
 
 \begin{lstlisting}
 >>> rd.exportGraphViz(fileName='orientedLaterality',\
@@ -568,7 +568,7 @@ def computePreKernels(self):
 Finally, we use our bipolar epistemic logic framework for computing the credibility that an individual node of the digraph fits with being a member of an initial or terminal prekerenel. For this purpose we make use of the \Berge kernel equation systems \citep{BER-1958}.
 
 \section{\Berge kernel equation systems}
-\label{sec:117:6}
+\label{sec:17:6}
 
 Let $G(X,R)$ be a crisp irreflexive digraph defined on a finite set $X$ of nodes and where $R$ is the corresponding $\{-1,+1\}$-valued adjacency matrix. Let $Y$ be the $\{-1,+1\}$-valued membership characteristic (row) vector of a choice in $X$.
 
@@ -832,6 +832,20 @@ Notice that the stable low vector characterises the \emph{negative membership} p
 The adjacency matrix of a symmetric digraph staying \emph{unchanged} by the transposition operator, the previous computations, when qualifying the same kernel as a terminal instance, will hence produce exactly the same result.
 
 It is worthwhile noticing the essential computational role, the logical indeterminate value $0.0$ is playing in this double fixpoint algorithm. To implement such kind of algorithms without a logical \emph{neutral} term would be like implementing numerical algorithms without a possible usage of the number $0$. Infinitely many trivial impossibility theorems and dubious logical results come up. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{section}{Notes}
+\section*{Notes}
+
+It is Marc Roubens\index{Roubens@\textsl{M. Roubens}} who in Spring 1995, by commenting a newly published book on fuzzy decision theory with binary relations \cite{KIT-1993}, suggested that computing valued kernels would be very difficult. Triggered by his remark and knowing about the \Berge kernel equation systems and the \Neumann fixpoint theorem, I immediately started to implement in Prolog a solver for the valued version of such equation systems. The \Berge equation systems served as constraints for a discrete labelling of all possible solution vectors.
+
+And in Summer 1995, we indeed obtained the very first valued outranking kernel from a classical example digraph of order 8 (!) well known in the multiple criteria decision aid community. The computation was done with the help of a commercial finite domain solver. It took several seconds on a CRAY 6412 superserver with 12 processors operating in a nowadays ridiculous CPU speed of 90 Mhz. The labelled solution vectors showing up for a digraph with a single kernel were structured in a way that suggested the converging stages of the \Neumann fixpoint algorithm and gave the initial idea for eventually computing all valued prekernels of an outranking digraph (see Section~\ref{sec:17.6}). 
+
+In our present Python implementation, such an example is solved in less than a thousandth of a second on a common low budget desktop computer. And this remains practically the same for any relevant example of outranking digraph observed in a real decision aid problem. Several times we wrote in our personal journal that there is certainly now no more potential for any substantial improvement of this computational efficiency; Only to discover, shortly later, that following a new theoretical idea or choosing a more efficient implementation –-using for instance the amazing instrument of itorator generators in Python–-, execution times could well be divided by 20.
+
+This nowadays available computational efficiency confers the kernel concept a methodological premium for solving specific choice decision problems on the basis of the bipolar-valued outranking digraph. But it also opens new opportunities for verifying and implementing kernel extraction algorithms for more graph theoretical purposes. New results concerning for instance unlabelled kernels in symmetric graphs could be obtained and exploring the non isomorphic maximal independent sets --the kernels-- of known difficult graph instances like the n-cycle becomes possible (see Chapter~\ref{sec:24}).
+
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

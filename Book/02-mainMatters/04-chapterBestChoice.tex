@@ -2,7 +2,7 @@
 \label{sec:4}
 
 \begin{quotation}
-“... The goal of our research was to design a resolution method ... that is easy to put into practice, that requires as few and reliable hypotheses as possible, and that meets the needs [of the decision maker]...” --\citep{ROY-1966}\index{Roy}.
+“... The goal of our research was to design a resolution method ... that is easy to put into practice, that requires as few and reliable hypotheses as possible, and that meets the needs [of the decision maker]...” --\citep*{ROY-1966}\index{Roy}.
 \end{quotation}
 
 \vspace{1cm}
@@ -39,7 +39,7 @@ A SME, specialized in printing and copy services, has to move into new offices, 
 
 Three \emph{decision objectives} are guiding the CEO's choice:
 \begin{enumerate}[leftmargin=1cm]
-\item \emph{minimize} the yearly costs induced by the moving,
+\item \emph{minimize} the future yearly costs induced by the moving,
 \item \emph{maximize} the future turnover of the SME,
 \item \emph{maximize} the new working conditions.
 \end{enumerate}
@@ -67,7 +67,7 @@ The decision consequences to take into account for evaluating the potential new 
   \end{center}
 \end{table}
 
-In Table~\ref{tab:4.2} we notice that the \emph{Costs} criterion admits the highest significance ($45$), followed by the \emph{Future turnover} criteria $(32 + 26 + 23 = 81)$, The \emph{Working conditions} criteria are the less significant $(10 + 6 + 3 = 19)$ \footnote{These criteria weights were supposedly established with a swing weighing MCDA method \citep{EIS-2001}.}. It follows that the CEO considers \emph{maximizing the future turnover} the most important objective ($81.0$), followed by minizing the yearly costs ($45.0$), and less important, \emph{maximizing working conditions} ($19.0$). 
+In Table~\ref{tab:4.2} we notice that the \emph{Costs} criterion admits the highest significance ($45$), followed by the \emph{Future turnover} criteria $(32 + 26 + 23 = 81)$, The \emph{Working conditions} criteria are the less significant $(10 + 6 + 3 = 19)$ \footnote{These criteria weights were supposedly established with a swing weighing MCDA method \citep{EIS-2001}.}. It follows that the CEO considers \emph{maximizing the future turnover} the most important objective ($81.0$), followed by minizing the future yearly costs ($45.0$), and less important, \emph{maximizing working conditions} ($19.0$). 
 
 The evaluation of the seven potential new sites on each performance criterion are gathered in a \emph{performance table} shown in Table~\ref{tab:4.3}.
 \begin{table}[h]
@@ -163,7 +163,7 @@ A colorful comparison of all the performances is shown in Figure~\ref{fig:4.1} b
 \label{fig:4.1}       % Give a unique label
 \end{figure}
 
-Site \texttt{'A'} (\emph{Ave}) shows extreme and contradictory performances: highest \emph{Costs} and no \emph{Working Comfort} on the one hand, and total satisfaction with respect to \emph{Standing}, \emph{Proximity} and \emph{Parking facilities} on the other hand. Similar, but opposite, situation is given for site \texttt{'C'} (\emph{Ces}): unsatisfactory \emph{Working Space}, no \emph{Standing} and no \emph{Working Comfort} on the one hand, and lowest \emph{Costs}, best \emph{Proximity} and \emph{Parking facilities} on the other hand. Contrary to these contradictory alternatives, we observe two appealing compromise decision alternatives: sites \texttt{'D'} (\emph{Dom}) and \texttt{'G'} (\emph{Gar}). Finally, site \texttt{'F'} (\emph{Fen}) is clearly the less satisfactory alternative of all.
+Site \texttt{A} (\emph{Ave}) shows extreme and contradictory performances: highest \emph{Costs} and no \emph{Working Comfort} on the one hand, and total satisfaction with respect to \emph{Standing}, \emph{Proximity} and \emph{Parking facilities} on the other hand. Similar, but opposite, situation is given for site \texttt{C} (\emph{Ces}): unsatisfactory \emph{Working Space}, no \emph{Standing} and no \emph{Working Comfort} on the one hand, and lowest \emph{Costs}, best \emph{Proximity} and \emph{Parking facilities} on the other hand. Contrary to these contradictory alternatives, we observe two appealing compromise decision alternatives: sites \texttt{D} (\emph{Dom}) and \texttt{G} (\emph{Gar}). Finally, site \texttt{F} (\emph{Fen}) is clearly the less satisfactory alternative of all.
 
 To help now the CEO choosing the best of these potential sites, we are going to compute pairwise outrankings on the set of potential sites (see \citet{BIS-2013}).
 
@@ -198,10 +198,10 @@ The corresponding \texttt{showHTMLRelationTable}\index{showHTMLRelationTable} me
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/officeChoiceOutranking.png}
-\caption{Bipolar-valued adjacency matrix. In the resulting outranking relation we may notice, on the one hand, that Alternative \texttt{'D'} is \emph{positively outranking} all other potential office sites. On the other hand, alternatives \texttt{'A'} (the most expensive) and \texttt{'C'} (the cheapest) are \emph{not outranked} by any other site.}
+\caption{Bipolar-valued adjacency matrix. In the resulting outranking relation we may notice, on the one hand, that Alternative \texttt{D} is \emph{positively outranking} all other potential office sites. On the other hand, alternatives \texttt{A} (the most expensive) and \texttt{C} (the cheapest) are \emph{not outranked} by any other site.}
 \label{fig:4.2}       % Give a unique label
 \end{figure}
-Alternative \texttt{'D'} gives a \Condorcet winner, whereas Alternatives \texttt{'A'} (the most expensive) and \texttt{'C'} (the cheapest) give in fact \emph{weak} \Condorcet winners.\index{computeCondorcetWinners@\texttt{computeCondorcetWinners()}}\index{computeWeakCondorcetWinners@\texttt{computeWeakCondorcetWinners()}}
+Alternative \texttt{D} gives a \Condorcet winner, whereas Alternatives \texttt{A} (the most expensive) and \texttt{C} (the cheapest) give in fact \emph{weak} \Condorcet winners.\index{computeCondorcetWinners@\texttt{computeCondorcetWinners()}}\index{computeWeakCondorcetWinners@\texttt{computeWeakCondorcetWinners()}}
 \begin{lstlisting}
 >>> g.computeCondorcetWinners()
  ['D']
@@ -209,21 +209,7 @@ Alternative \texttt{'D'} gives a \Condorcet winner, whereas Alternatives \texttt
  ['A', 'C', 'D']
 \end{lstlisting}
 
-% We may get even more insight in the apparent outranking situations when we draw the corresponding \emph{outranking digraph}\index{outranking!digraph} (see Fig.~\ref{fig:4.2}).
-% \begin{lstlisting}
-% >>> g.exportGraphViz('officeChoice')
-%  *---- exporting a dot file for GraphViz tools ---------*
-%   Exporting to officeChoice.dot
-%   dot -Grankdir=BT -Tpng officeChoice.dot -o officeChoice.png
-% \end{lstlisting}
-% \begin{figure}[h]
-% \sidecaption
-% \includegraphics[width=6cm]{Figures/officeChoice.png}
-% \caption{The office choice outranking digraph.}
-% \label{fig:4.3}       % Give a unique label
-% \end{figure}
-
-Outranking digraphs are \emph{weakly complete}\index{weakly complete}, i.e. for all $x$ and $y$ in $X$, $r(x \succsim y)\, <\, 0.0$ implies that $r(y \succsim x)\, \geq\, 0.0$. And, they verify the \emph{coduality principle}\index{coduality principle}:  $r(x \not\succsim y) \;=\; r(y \succnsim y)$ \citep{BIS-2013}. One may furthermore check that the resulting outranking digraph $g$ here does in fact not admit any cyclic outranking situation.\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}}
+From theory, we know that outranking digraphs are \emph{weakly complete}\index{weakly complete}, i.e. for all $x$ and $y$ in $X$, $r(x \succsim y)\, <\, 0.0$ implies that $r(y \succsim x)\, \geq\, 0.0$. And, they verify the \emph{coduality principle}\index{coduality principle}:  $r(x \not\succsim y) \;=\; r(y \succnsim y)$ \citep{BIS-2013}. One may furthermore check that the resulting outranking digraph $g$ here does in fact not admit any cyclic outranking situation.\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}}
 \begin{lstlisting}
 >>> g.computeChordlessCircuits()
   []
@@ -250,12 +236,12 @@ Let $X$ be the set of potential decision alternatives. Let $Y$ be a non empty su
 We may now qualify a BCR $Y$ in the following terms:
 \begin{itemize}[leftmargin=0.5cm,listparindent=0em]
 \item [-] $Y$ is called \emph{outranking} (resp. \emph{outranked}) when for all not selected alternative $x$ there exists an alternative $y \in X$ retained such that $r(y \succsim x) > 0.0$ (resp. $r(x \precsim y) > 0.0$). Such a choice verifies principle P1.
-\item [-] $Y$ is called \emph{weakly independent} when for all $x \neq y$ in $Y$ , we observe $r(x \succsim y) \leq 0.0$. Such a choice verifies principles P2 + P3 (minimal in cardinality and stable).
+\item [-] $Y$ is called \emph{weakly independent} when for all $x \neq y$ in $Y$ , we observe $r(x \succsim y) \leq 0.0$. Such a choice verifies principles P3 (stable).
 \item [-] $Y$ is conjointly a \emph{strict  outranking} (resp. \emph{outranked}) \textbf{and} \emph{weakly independent} choice. This choice now verifies principles P1, P2, P3 and P4.
 \item [-] To finally verify principle P5, we recommend among all potential outranking (resp. outranked) prekernels, the \emph{most determined} one, i.e. the one supported with the highest significance majority.
 \end{itemize}
 
-Following the \Rubis best choice method\index{outranking!Rubis best choice recommendation}, our potential best choice recommendations are hence determined by the outranking \emph{prekernels}\index{prekernels} --\emph{weakly independent} and \emph{outranking} choices-- of the strict outranking digraph (see \citet{BIS-2008a}). If not reduced to a singleton, the actual \emph{best choice recommendation} will have to be refined in a later decision process phase.
+Following this best choice method\index{outranking!Rubis best choice recommendation}, our potential best choice recommendations are hence determined by the outranking \emph{prekernels}\index{prekernels} --\emph{weakly independent} and \emph{outranking} choices-- of the strict outranking digraph (see \citet{BIS-2008a}). If not reduced to a singleton, the actual \emph{best choice recommendation} will have to be refined in a later decision process phase.
 
 Mind that a given outranking digraph $G$ may not always admit any outranking (resp. outranked) prekernels. This is the case when $G$ contains chordless odd circuits. The case given, we previously need to break open all these chordless odd circuits at their weakest link.\index{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class}
 \begin{lstlisting}
@@ -297,45 +283,45 @@ To compute now our \Rubis best choice recommendation\index{showBestChoiceRecomme
       - characteristic vector = { 'G': 0.00, 'F': 0.00, 'E': 0.00,
 	     'D': 0.00, 'C': 0.00, 'B': 0.00, 'A': 0.00, }
 \end{lstlisting}				  
-It is interesting to notice in Listing~\ref{list:4.6} (Line 9) that our \emph{best choice recommendation} consists actually in the previously mentioned set of weak \Condorcet winners\index{Condorcet!winner}: \texttt{'A'}, \texttt{'C'} and \texttt{'D'} (see Fig.~\ref{fig:4.2}). In the corresponding characteristic vector (see Lines 15-16), representing the bipolar credibility degree with which each alternative may indeed be considered a best choice, we find that alternative \texttt{'D'} is the only positively validated one, whereas both extreme alternatives - \texttt{'A'} (the most expensive) and \texttt{'C'} (the cheapest) - stay in an indeterminate situation (see \citet{BIS-2006a,BIS-2006b}). They may \emph{be or not be} potential best choice candidates besides \texttt{'D'}. Notice furthermore that compromise alternative \texttt{'G'}, while not actually included in any outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} a potential best choice candidate.
+It is interesting to notice in Listing~\ref{list:4.6} (Line 9) that our \emph{best choice recommendation} consists actually in the previously mentioned set of weak \Condorcet winners\index{Condorcet!winner}: \texttt{A}, \texttt{C} and \texttt{D} (see Fig.~\ref{fig:4.2}). In the corresponding characteristic vector (see Lines 15-16), representing the bipolar credibility degree with which each alternative may indeed be considered a best choice, we find that alternative \texttt{D} is the only positively validated one, whereas both extreme alternatives - \texttt{A} (the most expensive) and \texttt{C} (the cheapest) - stay in an indeterminate situation (see \citet{BIS-2006a,BIS-2006b}). They may \emph{be or not be} potential best choice candidates besides \texttt{D}. Notice furthermore that compromise alternative \texttt{G}, while not actually included in any outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} a potential best choice candidate.
 
-When comparing now the performances of alternatives \texttt{'D'} and \texttt{'G'} in a pairwise perspective (see below)\index{showPairwiseComparison}, we notice that, with the given preference discrimination thresholds, alternative \texttt{'G'} is actually \emph{certainly at least as good as} alternative \texttt{'D'}:  $r(G \succsim D)\, = \, +145/145\, =\, +1.0$.
+When comparing now the performances of alternatives \texttt{D} and \texttt{G} in a pairwise perspective (see below)\index{showPairwiseComparison}, we notice that, with the given preference discrimination thresholds, alternative \texttt{G} is actually \emph{certainly at least as good as} alternative \texttt{D}:  $r(G \succsim D)\, = \, +145/145\, =\, +1.0$.
 \begin{lstlisting}[caption={Inspecting pairwise comparisons},label=list:4.5,basicstyle=\ttfamily\scriptsize]
 >>> g.showPairwiseComparison('G','D')
  *------------  pairwise comparison ----*
   Comparing actions : ('G', 'D')
-  crit.  wght.    g(x)      g(y)    diff.  |   ind     pref    concord 	|
-   =====================================================================
-   'C'  45.00 -12000.00 -14100.00 +2100.00 | 1000.00 2500.00   +45.00 	| 
-   'Cf'  6.00     50.00     30.00   +20.00 |   10.00   20.00    +6.00 	| 
-   'P'   3.00     80.00     90.00   -10.00 |   10.00   20.00    +3.00 	| 
-   'Pr' 32.00     60.00     70.00   -10.00 |   10.00   20.00   +32.00 	| 
-   'St' 23.00     20.00     30.00   -10.00 |   10.00   20.00   +23.00 	| 
-   'V'  26.00    100.00     50.00   +50.00 |   10.00   20.00   +26.00 	| 
-   'W'  10.00     50.00     55.00    -5.00 |   10.00   20.00   +10.00 	|
+  crit.  wght.    g(x)      g(y)    diff.  |   ind.    pref.  concord. 
+  ====================================================================
+   Costs 45.00 -12000.00 -14100.00 +2100.00 | 1000.00 2500.00  +45.00  
+   Comf.  6.00     50.00     30.00   +20.00 |   10.00   20.00   +6.00 
+   Park.  3.00     80.00     90.00   -10.00 |   10.00   20.00   +3.00 
+   Prox. 32.00     60.00     70.00   -10.00 |   10.00   20.00  +32.00 
+   Stdg. 23.00     20.00     30.00   -10.00 |   10.00   20.00  +23.00 
+   Visi. 26.00    100.00     50.00   +50.00 |   10.00   20.00  +26.00 
+   Spac. 10.00     50.00     55.00    -5.00 |   10.00   20.00  +10.00
    =====================================================================
     Valuation in range: -145.00 to +145.00; global concordance: +145.00
 \end{lstlisting}
 
-Yet, we must as well notice that the cheapest alternative \texttt{'C'} is in fact \emph{strictly outranking} alternative \texttt{'G'}:  $r(C \succsim G)\, =\, +15/145\, >\, 0.0$, and $r(G \succsim C)\, =\, -15/145 \,<\, 0.0$.
+Yet, we must as well notice that the cheapest alternative \texttt{C} is in fact \emph{strictly outranking} alternative \texttt{'G'}:  $r(C \succsim G)\, =\, +15/145\, >\, 0.0$, and $r(G \succsim C)\, =\, -15/145 \,<\, 0.0$.
 \begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
 >>> g.showPairwiseComparison('C','G')
  *------------  pairwise comparison ----*
-  Comparing actions : ('C','G')/('G','C')
-  crit. wght.   g(x)     g(y)      diff.  |   ind.   pref. ('C','G')/('G','C')|
-   ===========================================================================
-   'C'   45.00 -6700.00 -12000.00 +5300.00 | 1000.00 2500.00    +45.00/-45.00 | 
-   'Cf'   6.00    10.00     50.00   -40.00 |   10.00   20.00     -6.00/ +6.00 | 
-   'P'    3.00   100.00     80.00   +20.00 |   10.00   20.00     +3.00/ -3.00 | 
-   'Pr'  32.00    80.00     60.00   +20.00 |   10.00   20.00    +32.00/-32.00 | 
-   'St'  23.00     0.00     20.00   -20.00 |   10.00   20.00    -23.00/+23.00 | 
-   'V'   26.00    70.00    100.00   -30.00 |   10.00   20.00    -26.00/+26.00 | 
-   'W'   10.00     0.00     50.00   -50.00 |   10.00   20.00    -10.00/+10.00 |
-   ===========================================================================
-    Valuation in range: -145.00 to +145.00; global concordance: +15.00/-15.00
+  Comparing actions : (C,G)/(G,C)
+  crit. wght.   g(x)     g(y)      diff.  |   ind.   pref.       (C,G)/(G,C)
+   ==========================================================================
+   'C'   45.00 -6700.00 -12000.00 +5300.00 | 1000.00 2500.00    +45.00/-45.00 
+   'Cf'   6.00    10.00     50.00   -40.00 |   10.00   20.00     -6.00/ +6.00 
+   'P'    3.00   100.00     80.00   +20.00 |   10.00   20.00     +3.00/ -3.00 
+   'Pr'  32.00    80.00     60.00   +20.00 |   10.00   20.00    +32.00/-32.00 
+   'St'  23.00     0.00     20.00   -20.00 |   10.00   20.00    -23.00/+23.00 
+   'V'   26.00    70.00    100.00   -30.00 |   10.00   20.00    -26.00/+26.00 
+   'W'   10.00     0.00     50.00   -50.00 |   10.00   20.00    -10.00/+10.00
+                                                               --------------
+    Valuation in range: -145 to +145;      r(C >= G)/r(G >= c): +15.00/-15.00
 \end{lstlisting}
 
-We may finally notice in Listing~\ref{list:4.6} (Lines 16 and 19) that both alternatives \texttt{'A'} and \texttt{'F'} are reported as certainly strict outranked choices, hence as \emph{potential worst choice recommendation} . This confirms again the global \emph{incomparability} status of alternative \texttt{'A'} (see Fig.~\ref{fig:4.3}).
+We may finally notice in Listing~\ref{list:4.6} (Lines 16 and 19) that both alternatives \texttt{A} and \texttt{F} are reported as certainly strict outranked choices, hence as \emph{potential worst choice recommendation} . This confirms again the global \emph{incomparability} status of alternative \texttt{A} (see Fig.~\ref{fig:4.3}).
 \begin{lstlisting}
 >>> gcd = ~(-g) # codual of g
 >>> gcd.exportGraphViz(fileName='bestChoiceChoice',\
@@ -348,7 +334,7 @@ We may finally notice in Listing~\ref{list:4.6} (Lines 16 and 19) that both alte
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/bestOfficeChoice.png}
-\caption{Best office choice recommendation from strict outranking digraph. Notice that site \texttt{'A'} (\emph{Ave}) (the most expensive) is appearing \emph{incomparable} to all the other aternatives}
+\caption{Best office choice recommendation from strict outranking digraph. Notice that site \texttt{A} (\emph{Ave}) (the most expensive) is appearing \emph{incomparable} to all the other aternatives}
 \label{fig:4.4}       % Give a unique label
 \end{figure}
 
@@ -377,10 +363,10 @@ To get a more complete insight in the overall strict outranking situations, we m
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/officeChoiceRanking.png}
-\caption{In this \emph{ranking-by-choosing} method, where we operate the \emph{epistemic fusion} of iterated (strict) first and last choices, compromise alternative \texttt{'D'} is now ranked before compromise alternative \texttt{'G'}. The overall partial ordering result shows again the important fact that the most expensive site \texttt{'A'}, and the cheapest site \texttt{'C'}, due to their contradictory performances, appear both \emph{incomparable} with most of the other alternatives.} 
+\caption{In this \emph{ranking-by-choosing} method, where we operate the \emph{epistemic fusion} of iterated (strict) first and last choices, compromise alternative \texttt{D} is now ranked before compromise alternative \texttt{G}. The overall partial ordering result shows again the important fact that the most expensive site \texttt{A}, and the cheapest site \texttt{C}, due to their contradictory performances, appear both \emph{incomparable} with most of the other alternatives.} 
 \label{fig:4.5}       % Give a unique label
 \end{figure}
-The best choice recommendation appears hence depending on the very importance the CEO is attaching to each of the three decision objectives he is considering. In the given setting here, where he considers that \emph{maximizing the future turnover} is the most important objective followed by \emph{minimizing the Costs} and, less important, \emph{maximizing the working conditions}, site $D$ represents actually the \emph{best compromise}. However, if \emph{Costs} do not play much a role, it would be perhaps better to decide to move to the most advantageous site \texttt{'A'}; or if, on the contrary, \emph{Costs} do matter a lot, moving to the cheapest alternative \texttt{'C'} could definitely represent a more convincing recommendation. 
+The best choice recommendation appears hence depending on the very importance the CEO is attaching to each of the three decision objectives he is considering. In the given setting here, where he considers that \emph{maximizing the future turnover} is the most important objective followed by \emph{minimizing the Costs} and, less important, \emph{maximizing the working conditions}, site \texttt{D} represents actually the \emph{best compromise}. However, if \emph{Costs} do not play much a role, it would be perhaps better to decide to move to the most advantageous site \texttt{A}; or if, on the contrary, \emph{Costs} do matter a lot, moving to the cheapest alternative \texttt{C} could definitely represent a more convincing recommendation. 
 
 It might be worth editing the criteria significance weights in the \texttt{officeChoice.py} data file in such a way that:
 \begin{itemize}
