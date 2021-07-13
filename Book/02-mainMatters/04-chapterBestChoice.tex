@@ -377,6 +377,31 @@ What will become the best choice recommendation under this working hypothesis? \
 
 In the next Chapter (\ref{sec:5}) we precisely show how to edit a new performance tableau from a given template file. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{section}{Notes}
+\section*{Notes}
+
+Following a seminar presentation in 2005 at the LAMSADE\footnote{Laboratoires d'Analyse et de Modélisation de Systèmes d'Aide à la Décision, Université Paris-Dauphine, UMR 7243 CNRS}, where the author promoted the use of kernels of the outranking digraph as suitable candidates for delivering convincing best choice recommendations \citep{BIS-2005}, a critical discussion started aroung the methodological requirement for a convincing best choice recommendation to be internally stable. Denis Bouyssou\index{Bouyssou@\emph{D. Bouyssou}} illustrated his doubts with the following example of crisp 'outranking' digraph:
+\begin{figure}[h]
+\sidecaption[t]
+\includegraphics[width=6cm]{Figures/bouyssou11Oct05crisp.pdf}
+\caption{The internal stability of a best choice recommendation in question. The only kernel of this digraph is the pair \{a,d\}; yet, it is an ambiguous recommendation, as \{a,d\} is conjointly an outranking and outranked choice. If the instability of the best choice recommendation is, however, not considered a problem then the choice \{a,b\} shows the most convincing strict outranking quality and could be considered in priority for recommendation as potential best choice candidates.}
+\label{fig:4.6}       % Give a unique label
+\end{figure}
+Denis Bouyssou gave later on following comment:
+\begin{quotation}
+`` ... the classical kernel delivers \{\texttt{a},\texttt{d}\}. The choice of alternative \texttt{d} is not convincing as there is in the given digraph a node, who is anyway better than \texttt{d}, and this is node \texttt{b}. The argument that the incomparability between \texttt{a} and \texttt{d} should favour \texttt{d} as best choice is interesting but I don't understand why one should favor this hypothesis. Another hypothesis could be that \texttt{b} outranks \texttt{a}. In this case, it seams clear to me that the actal best choice recommendation should be reduced to node \texttt{b} ... Unless one disposes of other information (a performance tableau or the actual computation method of the outranking situations) ... In any case, one does be very clear about the available information when judging a best choice procedure.'' --D. Bouyssou, private communication October 14, 2005.
+\end{quotation}
+It became thereafter clear for us all that both the lack of a specific performance tableau and the lack of a precise method for computing valid outranking situations does not give anough pertinent information for judging if a given digraph does indeed model a potential outranking relation.
+
+In our present bipolar-valued epistemic approach, a valid outranking digraph instance, following from a given performance tableau and the disjunctive epistemic fusion construction of the outranking relation (see Chapter~\ref{sec:3}), necessarily verifies weak completeness and the coduality principle.
+
+Incomparability is now modelled by epistemic indeterminateness not by the actual absence of a relation. The digraph proposed by D. Bouyssou in the October 2005 discussion, see Fig.~\ref{fig:4.6} is indeed, in our modern sense, not a valid outranking digraph instance, as already suggested by Denis Bouyssou in October 2005.
+
+It stays an interesting open mathematical problem to show (or not) that both conditions: --weak completeness and the coduality principle-- are also sufficient conditions for qualifying a bipolar-valued digraph as potential outranking digraph instance.
+
+
 %%%%%%% The chapter bibliography
 %\normallatexbib
 \clearpage
