@@ -10,7 +10,7 @@
 
 We call \emph{choice} in a graph, respectively a digraph, a subset of its vertices, resp. of its nodes or actions. A choice $Y$ is called \emph{internally stable} or \emph{independent} when there exist no links --(edges) or relations (arcs)-- between its members. Furthermore, a choice $Y$ is called \emph{externally stable} when for each vertex, node or action $x$ not in $Y$, there exists at least a member $y$ of $Y$ such that $x$ is linked or related to $y$. Now, an internally \emph{and} externally stable choice is called a \emph{kernel}.  
 
-A first trivial example is immediately given by the maximal independent vertices sets (MISs) of the $n$-cycle graph (see Fig.~\ref{fig:24.x}). Indeed, each MIS in the $n$-cycle graph is by definition independent, i.e. \emph{internally stable}, and each non selected vertex in the $n$-cycle graph is in relation with either one or even two members of the MIS.
+A first trivial example is immediately given by the maximal independent vertices sets (MISs) of the $n$-cycle graph (see Fig.~\ref{fig:24.2}). Indeed, each MIS in the $n$-cycle graph is by definition independent, i.e. \emph{internally stable}, and each non selected vertex in the $n$-cycle graph is in relation with either one or even two members of the MIS.
 
 In all graph or symmetric digraph, the \emph{maximality condition} imposed on the internal stability is equivalent to the \emph{external stability} condition. Indeed, if there would exist a vertex or node not related to any of the elements of a choice, then we may safely add this vertex or node to the given choice without violating its internal stability. All kernels must hence be maximal independent choices. In fact, in a topological sense, they correspond to maximal \emph{holes} in the given graph.
 
@@ -28,7 +28,7 @@ instance.
                    -o random3RegularGraph.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
+\sidecaption[t]
 \includegraphics[width=7cm]{Figures/random3RegularGraph.png}
 \caption{A random 3-regular graph instance}
 \label{fig:17.1}       % Give a unique label
@@ -362,7 +362,7 @@ Among the six MISs contained in this random digraph (see above Lines 3-8) we dis
 In Algorithmic Decision Theory, initial and terminal prekernels may provide convincing best, resp. last, choice recommendations.
 
 
-\section{Computing first and last choice recommendations}
+\section{Computing best and worst choice recommendations}
 \label{sec:17.4}
 
 To illustrate this idea, let us finally compute first and last choice recommendations in the following random bipolar-valued outranking digraph.
@@ -775,7 +775,7 @@ The corresponding bipolar-valued characteristic vector $Y_2$ may be computed as 
 
 A unique stable bipolar-valued high and low fixpoint is attained at the third iteration with alternative \texttt{a7} positively confirmed (about $75\%$ criteria significance majority) as member of this terminal prekernel, whereas the membership of alternative \texttt{a3} in this prekernel appears indeterminate. All the remaining nodes have negative membership characteristic values and are hence positively excluded from this prekernel.
 
-When we reconsider the graphviz drawing of this outranking digraph in Fig. \ref{fig:17.13},
+When we reconsider the graphviz drawing of this outranking digraph in Fig. \ref{fig:17.9},
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/bestWorstOrientation.png}
@@ -783,7 +783,7 @@ When we reconsider the graphviz drawing of this outranking digraph in Fig. \ref{
 \label{fig:17.13}       % Give a unique label
 \end{figure}
 it becomes obvious here why alternative \texttt{a1} is \emph{neither included nor excluded} from the initial prekernel. Same observation is applicable to alternative \texttt{a3} who can \emph{neither be included nor excluded} from the terminal prekernel. it may even happen, in case of more indeterminate outranking situations, that no alternative  is positively included or excluded from a weakly independent prekernel; the corresponding bipolar-valued membership characteristic vector being completely indeterminate.
-
+\clearpage
 To illustrate finally why sometimes we need to operate an epistemic disjunctive fusion of unequal stable low and high membership characteristics vectors (see Step 2.c.), let us consider, for instance, the following crisp 7-cycle graph.
 \begin{lstlisting}
 >>> from digraphs import CirculantDigraph
