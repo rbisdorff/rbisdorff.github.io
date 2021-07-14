@@ -10,7 +10,7 @@
 
 We need to rank without ties a set $X$ of items (usually decision alternatives) that are evaluated on multiple incommensurable performance criteria; yet, for which we may know their pairwise bipolar-valued {\em strict outranking\/} characteristics, i.e. $r(x\, \succnsim \, y)$ for all $x, y \in X$ (see Section \ref{sec:3.5} and \citep{BIS-2013}).
 
-Let us consider a didactic outranking digraph \texttt{odg} generated from a random \emph{Cost-Benefit} performance tableau (see Section \ref{sec:6.3}) concerning 9 decision alternatives evaluated on 13 performance criteria. We may compute the corresponding {\em strict outranking digraph\/} with a codual transform (see Section \ref{sec:2.6}).
+Let us consider a didactic outranking digraph \texttt{g} generated from a random \emph{Cost-Benefit} performance tableau (see Section \ref{sec:6.3}) concerning 9 decision alternatives evaluated on 13 performance criteria. We may compute the corresponding {\em strict outranking digraph\/} with a codual transform (see Section \ref{sec:2.6}).
 
 \begin{lstlisting}[caption={Random bipolar-valued strict outranking relation characteristics},label=list:8.1]
 >>> from randomPerfTabs import RandomCBPerformanceTableau   
@@ -57,7 +57,7 @@ Some ranking rules will work on the associated \Condorcet digraph\index{digraph!
 
 Unfortunately, such crisp median-cut \Condorcet digraphs, associated with a given strict outranking digraph, only exceptionally present a linear ordering. Usually, pairwise majority comparisons do not even render a \emph{complete} or, at least, a \emph{transitive} partial order. There may even frequently appear \emph{cyclic} outranking situations (see Section \ref{sec:7.4}).
 
-To estimate how \emph{difficult} this ranking problem can get here, we have a look at the corresponding strict outranking digraph \emph{graphviz} drawing \footnote{ The \texttt{exportGraphViz()} method is depending on drawing tools from graphviz softeare (https://graphviz.org/).}.
+To discover how \emph{difficult} this ranking problem can get here, we have a look at the corresponding strict outranking digraph \emph{graphviz} drawing \footnote{ The \texttt{exportGraphViz()} method is depending on drawing tools from graphviz software (https://graphviz.org/).}.
 \begin{lstlisting}
 >>> gcd.exportGraphViz(fileName='rankingTutorial')
  *---- exporting a dot file for GraphViz tools ---------*
@@ -67,8 +67,8 @@ To estimate how \emph{difficult} this ranking problem can get here, we have a lo
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=4cm]{Figures/rankingTutorial.png}
-\caption{The strict outranking relation $\succnsim$ shown here is, for instance, \emph{not transitive}: for alternative \texttt{a8} outranks alternative \texttt{a6} and alternative \texttt{a6} outranks \texttt{a4}, however \texttt{a8} does not outrank \texttt{a4}.}
+\includegraphics[width=5.5cm]{Figures/rankingTutorial.pdf}
+\caption{The strict outranking relation $\succnsim$ shown here is, for instance, \emph{not transitive}: alternative \texttt{a8} outranks alternative \texttt{a6} and alternative \texttt{a6} outranks \texttt{a4}, however, \texttt{a8} does not outrank \texttt{a4}. Furthermore, alternatives \texttt{a8}, \texttt{a6} and \texttt{a7} show a cyclic outranking relation. }
 \label{fig:8.1}       % Give a unique label
 \end{figure}
 
@@ -91,7 +91,7 @@ Let us furthermore see if there are any cyclic outrankings.
 \end{lstlisting}
 There is one chordless circuit detected in the given strict outranking digraph \texttt{gcd}, namely alternative \texttt{a6} outranks alternative \texttt{a7}, the latter outranks \texttt{a8}, and \texttt{a8} outranks again alternative \texttt{a6} (see Fig. \ref{fig:8.1}). Any potential linear ordering of these three alternatives will, in fact, always contradict somehow the given outranking relation.
 
-Now, several heuristic ranking rules have been proposed for constructing a linear ordering which is closest in some specific sense to a given outranking relation. The \Digraph resources provide some of the most common of these ranking rules, like \Copeland 's, \Kemeny 's, \Slater 's, \Kohler 's, or \emph{Tideman}'s \RankedPairs ranking rule.
+Now, several heuristic ranking rules have been proposed for constructing a linear ordering which is closest in some specific sense to a given outranking relation. The \Digraph resources provide some of the most common of these ranking rules, like \Copeland 's, \Kemeny 's, \Slater 's, \Kohler 's, and the \RankedPairs ranking rule.
 
 \section{The \Copeland ranking}
 \label{sec:8.2}
@@ -239,7 +239,8 @@ We may visualize the partial order defined by the epistemic disjunction (see Sec
 \label{fig:8.3}       % Give a unique label
 \end{figure}
 
-To retain now a specific representative among all the potential rankings with maximal \Kemeny index, we will choose, with the help of the \texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@Showrankingconsensusquality()}, the one proposing the best performance criteria consensus.
+To retain now a specific representative among all the potential rankings with maximal \Kemeny index, we will choose, with the help of the \\
+\texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@Showrankingconsensusquality()}, the one proposing the best performance criteria consensus.
 \begin{lstlisting}[caption={Computing the consensus quality of a ranking},label=list:8.10]   
 >>> g.showRankingConsensusQuality(ke.maximalRankings[0])
  Consensus quality of ranking:
@@ -288,7 +289,7 @@ To retain now a specific representative among all the potential rankings with ma
 \end{lstlisting}
 Both \Kemeny rankings show the same \emph{weighted mean marginal correlation} ($+0.099$, see Listing \ref{list:8.10} Lines 19-22, 42-44) with all thirteen performance criteria. However, the second ranking shows a slightly lower \emph{standard deviation} ($+0.132$ versus $+0.177$), resulting in a slightly \emph{fairer} ranking result ($-0.033$ versus $-0.079$).
 
-When several rankings with maximal \Kemeny index are given, the \texttt{KemenyRanking} class constructor instantiates the ranking with \emph{highest} mean marginal correlation and, in case of ties, with \emph{lowest} weighted standard deviation. Here we obtain ranking: ['a5','a6','a7','a3','a9','a4','a1','a8','a2'] (see Line 4 above).
+When several rankings with maximal \Kemeny index are given, the \texttt{KemenyRanking} class constructor instantiates the ranking with \emph{highest} mean marginal correlation and, in case of ties, with \emph{lowest} weighted standard deviation. Here we obtain ranking: [\texttt{a5}, \texttt{a6}, \texttt{a7}, \texttt{a3}, \texttt{a9}, \texttt{a4}, \texttt{a1}, \texttt{a8}, \texttt{a2}] (see Line 4 above).
 
 \section{\Slater rankings}
 \label{sec:8.5}
