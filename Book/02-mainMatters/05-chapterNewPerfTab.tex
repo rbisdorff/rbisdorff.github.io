@@ -204,8 +204,8 @@ In order to assess how well each potential decision alternative is satisfying a 
 
 In our bipolar-valued outranking approach, all performance criteria implement \emph{decimal-valued} grading functions, where preferences are either \emph{increasing} or \emph{decreasing} with measured performances. In order to model a \emph{coherent} performance tableau\index{performance tableau!coherent}, the family of decision criteria must satisfy two methodological requirements:
 \begin{enumerate}[leftmargin=1cm]
-  \item \emph{Independance}: Each decision criterion implements a grading that is \emph{functionally independent} of the grading of the other decision criteria, i.e. the performance measured on one of the criteria does not \emph{constrain} in any sense the performance measured on any other criterion.
-  \item \emph{Non redundancy}: Each performance criterion is only \emph{significant} for a \emph{single} decision objective.
+  \item \textbf{Independance}: Each decision criterion implements a grading that is \emph{functionally independent} of the grading of the other decision criteria, i.e. the performance measured on one of the criteria does not \emph{constrain} in any sense the performance measured on any other criterion.
+  \item \textbf{Non redundancy}: Each performance criterion is only \emph{significant} for a \emph{single} decision objective.
 \end{enumerate}
 
 In order to take into account any, usually \emph{unavoidable}, \emph{imprecision} of the performance grading procedures, we may specify three performance \emph{discrimination thresholds}: an \emph{indifference} (\texttt{'ind'}), a \emph{preference} (\texttt{'pref'}) and a \emph{considerable performance difference} (\texttt{'veto'}) threshold (see Listing \ref{list:5.3} Lines 10-12). The left decimal number of a threshold description tuple indicates a \emph{constant part}, whereas the right decimal number indicates a \emph{proportional} part.
@@ -258,9 +258,9 @@ Criterion \texttt{'c1'} appears here (see Listing \ref{list:5.4}) to be a cardin
     Threshold pref : 3.70 + 0.00x ; percentile: 10.26
     Threshold veto : 67.71 + 0.00x ; percentile: 96.15
 \end{lstlisting}
-The \emph{indifference} threshold on this criterion amounts to a constant value of $1.49$ (Line 6 above). More or less $5\%$ of the observed performance differences on this criterion appear hence to be \textbf{insignificant}. Similarly, with a preference threshold of $3.70$, about $90\%$ of the observed performance differences are preferentially \textbf{significant} (Line 7). Furthermore, $100.0 - 96.15 = 3.85\%$ of the observed performance differences appear to be \textbf{considerable} (Line 8) and will trigger a \emph{polarisation} of the corresponding outranking statements.
+The \emph{indifference} threshold on this criterion amounts to a constant value of $1.49$ (Line 6 above). More or less $5\%$ of the observed performance differences on this criterion appear hence to be \emph{insignificant}. Similarly, with a preference threshold of $3.70$, about $90\%$ of the observed performance differences are preferentially \emph{significant} (Line 7). Furthermore, $100.0 - 96.15 = 3.85\%$ of the observed performance differences appear to be \emph{considerable} (Line 8) and will trigger a \emph{polarisation} of the corresponding outranking statements.
 
-After the performance criteria description, we are ready for recording the actual \textbf{performance table}.
+After the performance criteria description, we are ready for recording the actual \emph{performance table}.
 
 \section{Editing the performance table}
 \label{sec:5.5}
@@ -292,7 +292,7 @@ evaluation = {
    ...
 }
 \end{lstlisting}
-Notice in Listing \ref{list:5.4} (Lines 16- ) that on a criterion with \texttt{preferenceDirection = 'min'} all performance grades are recorded as \textbf{negative} values.
+Notice in Listing \ref{list:5.4} (Lines 16- ) that on a criterion with \texttt{preferenceDirection = 'min'} all performance grades are recorded as \emph{negative} values.
 
 We may now inspect the eventually recorded complete template performance table.
 \begin{lstlisting}
@@ -330,7 +330,7 @@ We may furthermore compute the associated outranking digraph and check if we obs
      Counter-veto threshold              : 60.00
      Polarisation: r(a2 >= a4) = 0.56 ==> +1.00
 \end{lstlisting}
-Indeed, due to the considerable performance difference ($77.00$) oberved on performance criterion \texttt{g1}, alternative \texttt{a2} \textbf{for sure} \emph{outranks} alternative \texttt{a4}, respectively \texttt{a4} \textbf{for sure} \emph{does not outrank} \texttt{a2}.
+Indeed, due to the considerable performance difference ($77.00$) oberved on performance criterion \texttt{g1}, alternative \texttt{a2} \emph{for sure outranks} alternative \texttt{a4}, respectively \texttt{a4} \emph{for sure does not outrank} \texttt{a2}.
 
 \section{Inspecting the template outranking relation}
 \label{sec:5.6}

@@ -106,10 +106,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 \end{verbatim}
 \end{footnotesize}
-For exploring the classes and methods provided by the \Digraph modules \footnote{See the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}} enter the Python3 commands following the session prompts marked with '\>\>\>' or '...' . The lines without the prompt are output from the Python3 interpreter.
+For exploring the classes and methods provided by the \Digraph modules \footnote{See the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}} enter the Python3 commands following the session prompts marked with $>>>$ or \texttt{...}; The lines without the prompt are output from the Python3 interpreter.
 \begin{lstlisting}[caption={Generating a digraph instance},label=list:1.1]
 >>> from randomDigraphs import RandomDigraph
->>> dg = RandomDigraph(order=5,arcProbability=0.5,seed=101)
+>>> dg = RandomDigraph(order=5,arcProbability=0.5,\
+...                    seed=101)
 >>> dg
  *------- Digraph instance description ------*
   Instance class   : RandomDigraph
@@ -290,13 +291,8 @@ Further methods are provided for inspecting this random \texttt{Digraph} object 
  agglomeration coefficient        : 45.00
 \end{lstlisting}
 
-The preceeding \texttt{show...()} methods usually rely upon corresponding compute methods, like:
-\begin{itemize}
-\item The \texttt{computeSize()}\index{computeSize@\texttt{computeSize()}},
-\item The \texttt{computeDeterminateness()}\index{computeDeterminateness@\texttt{computeDeterminateness()}}, or
-\item The \texttt{computeTransitivityDegree()}\index{computeTransitivityDegree@\texttt{computeTransitivityDegree()}} method.
-\end{itemize}
-\begin{lstlisting}[caption={Various \texttt{compute...()} methods.}label=list:1.6]
+The preceeding \texttt{show...()} methods usually rely upon corresponding compute methods, like: \texttt{computeSize()}\index{computeSize@\texttt{computeSize()}}, \texttt{computeDeterminateness()}\index{computeDeterminateness@\texttt{computeDeterminateness()}},\\ or \texttt{computeTransitivityDegree()}\index{computeTransitivityDegree@\texttt{computeTransitivityDegree()}}.
+\begin{lstlisting}[caption={Various \texttt{compute...()} methods.},label=list:1.6]
 >>> dg.computeSize()
  12
 >>> dg.computeDeterminateness(InPercents=True)
