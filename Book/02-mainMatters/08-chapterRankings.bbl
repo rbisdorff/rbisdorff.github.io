@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -7,6 +7,10 @@
   \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Arrow and Raynaud(1986)}]{ARR-1986}
+Arrow KJ, Raynaud H (1986) Social Choice and Multicriterion Decision-Making,
+  MIT Press Books, vol~1. The MIT Press
 
 \bibitem[{Bisdorff(2012)}]{BIS-2012a}
 Bisdorff R (2012) On measuring and testing the ordinal correlation between
@@ -19,13 +23,28 @@ Bisdorff R (2013) On polarizing outranking relations with large performance
   differences. Journal of Multi-Criteria Decision Analysis, Wiley 20:3--12,
   \urlprefix\url{http://hdl.handle.net/10993/245}
 
+\bibitem[{Brans and Vincke(1985)}]{BRA-1985}
+Brans J, Vincke P (1985) A preference ranking organisation method: The
+  promethee method for mcdm. Management Science
+
+\bibitem[{Copeland(1951)}]{COP-1951}
+Copeland A (1951) A reasonable social welfare function, seminar on Mathematics
+  in Social Sciences, University of Michigan
+
 \bibitem[{Dias and Lamboray(2010)}]{DIA-2010}
 Dias LC, Lamboray C (2010) Extensions of the prudence principle to exploit a
   valued outranking relation. European Journal of Operational Research
   201:3:828--837
 
-\bibitem[{Lamboray(2009)}]{LAM-2009}
-Lamboray C (2009) A prudent characterization of the ranked pairs rule. Social
-  Choice and Welfare 32:129--155
+\bibitem[{Kemeny(1959)}]{KEM-1959}
+Kemeny J (1959) Mathematics without numbers. Daedalus 88:577--591
+
+\bibitem[{Slater(1961)}]{SLA-1961}
+Slater P (1961) Inconsistencies in a schedule of paired comparisons. Biometrica
+  48:303--312
+
+\bibitem[{Tideman(1987)}]{TID-1987}
+Tideman N (1987) Independence of clones as a criterion for voting rules. Social
+  Choice and Welfare 4(3):185--206
 
 \end{thebibliography}
