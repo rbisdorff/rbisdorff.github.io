@@ -278,7 +278,7 @@ Symmetric and transitive closures, by default in-site constructors, are also ava
 \label{fig:2.5}       % Give a unique label
 \end{figure}
 
-The \texttt{closeSymmetric()}\index{closeSymmetric@\texttt{closeSymmetric()}} method (see Listing \ref{list:2.9}  Line 2), of complexity $O(n^2)$ where $n$ denotes the digraph's order, changes, on the one hand, all single pairwise links it may detect into double links by operating a disjunction of the pairwise relations. On the other hand, the \texttt{closeTransitive()}\index{closeTransitive@\texttt{closeTransitive()}}  method (see Line 3), implements the \emph{Roy-Warshall} transitive closure algorithm of complexity $O(n^3)$ \footnote{\citet{ROY-1959}\index{Roy} and \citet{WAR-1962}\index{warshall@\textsl{S. Warshall}}.}.
+The \texttt{closeSymmetric()}\index{closeSymmetric@\texttt{closeSymmetric()}} method (see Listing \ref{list:2.9}  Line 2), of complexity $O(n^2)$ where $n$ denotes the digraph's order, changes, on the one hand, all single pairwise links it may detect into double links by operating a disjunction of the pairwise relations. On the other hand, the \texttt{closeTransitive()}\index{closeTransitive@\texttt{closeTransitive()}}  method (see Line 3), implements the \emph{Roy-Warshall} transitive closure algorithm of complexity $O(n^3)$ \footnote{\citet{ROY-1959}\index{Roy@\textsl{B.Roy}} and \citet{WAR-1962}\index{warshall@\textsl{S. Warshall}}.}.
 
 The same \texttt{closeTransitive()} with a \texttt{Reverse = True} flag may be readily used for eliminating all transitive arcs from a transitive digraph instance. We make usage of this feature when drawing Hasse diagrams of \texttt{TransitiveDigraph}\index{TransitiveDigraph@\texttt{TransitiveDigraph} class} objects.
 
