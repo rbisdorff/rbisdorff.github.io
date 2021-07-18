@@ -1,9 +1,9 @@
 \chapter{Generating random performance tableaux}
 \label{sec:6}
 
-\abstract*{ The Chapter describes the \Digraph resources for generating random multiple criteria performance tableaux. These random performance tableaux instances, mainly meant for illustration and training purposes, are serving the preparation Algorithmic Decision Theora Course lectures. The random generators propose several useful models, like a Cost-Benefit tableau, a three Objectives --economic, societal and environmental-- tableau, an academic performance tableau.}
+\abstract*{ The Chapter describes the \Digraph resources for generating random multiple criteria performance tableaux. These random performance tableaux instances, mainly meant for illustration and training purposes, are serving the preparation and illustration of the \emph{Algorithmic Decision Theory} Course lectures. The random generators propose several useful models, like a \emph{Cost-Benefit} tableau, a three Objectives --\emph{economic}, \emph{societal} and \emph{environmental}-- tableau, and evetually an \emph{academic} performance tableau.}
 
-\abstract{ The Chapter describes the \Digraph resources for generating random multiple criteria performance tableaux. These random performance tableaux instances, mainly meant for illustration and training purposes, are serving the preparation Algorithmic Decision Theora Course lectures. The random generators propose several useful models, like a Cost-Benefit tableau, a three Objectives --economic, societal and environmental-- tableau, an academic performance tableau.}
+\abstract{ The Chapter describes the \Digraph resources for generating random multiple criteria performance tableaux. These random performance tableaux instances, mainly meant for illustration and training purposes, are serving the preparation and illustration of the \emph{Algorithmic Decision Theory} Course lectures. The random generators propose several useful models, like a \emph{Cost-Benefit} tableau, a three Objectives --\emph{economic}, \emph{societal} and \emph{environmental}-- tableau, and evetually an \emph{academic} performance tableau.}
 
 \section{Introduction}
 \label{sec:6.1}
@@ -290,7 +290,7 @@ Variable \emph{triangular} modes ($0.3$, $0.5$ or $0.7$ of the span of the measu
    name:       action p7 Eco+ Soc- Env-
    profile:    {'Eco':'good', 'Soc':'weak', 'Env':'weak'}
 \end{lstlisting}
-Policy \texttt{p01}, for instance, will probably show \emph{good} performances wrt the \emph{societal} and \emph{environmental} aspects, and \emph{weak} performances wrt the \emph{economical} aspect.
+Policy \texttt{p01}, for instance, will probably show \emph{good} performances wrt the \emph{societal} and \emph{environmental} aspects, and \emph{weak} performances wrt the \emph{economical} aspect, whereas policy p2 will probably appear among the potential worst choices.
 
 We may inspect in Fig.~\ref{fig:6.3} the given random three-objectives performance tableau with the \texttt{showHTMPerformanceTableau()} method.
 \begin{lstlisting}
@@ -344,7 +344,7 @@ Policy \texttt{p3} gives the most credible best choice candidate with the suppor
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/3ObjPerfTabBestChoice.pdf}
-\caption{The strict outranking digraph oriented by best and worst choices. Policy \texttt{p5} is indeed incomparable --in a strict  outranking sense-- to all the other six policies. Policies \texttt{p1}, \texttt{p2} and \texttt{p7} appear outranked.}
+\caption{The strict outranking digraph oriented by best and worst choices. Policy \texttt{p5} is indeed incomparable --in a strict  outranking sense-- to all the other six policies. Policies \texttt{p1}, \texttt{p2} and \texttt{p7} appear strictly outranked.}
 \label{fig:6.4}       % Give a unique label
 \end{figure}
 
@@ -357,10 +357,10 @@ A heatmap view on the \Copeland ranked performance tableau confirms the best cho
 \begin{figure}[h]
 %\sidecaption[t]
 \includegraphics[width=12cm]{Figures/random3ObjHeatmap.png}
-\caption{View in a browser on the \Copeland ranked performance tableau.}
+\caption{Browser view on the \Copeland ranked performance tableau.}
 \label{fig:6.5}       % Give a unique label
 \end{figure}
-The heatmap view with its \Copeland ranking based on the bipolar outranking digraph confirms policy's \texttt{p3} as first-ranked. Notice also that the three strict outranked policies do appear in the last positions. 
+The heatmap view with its \Copeland ranking based on the bipolar outranking digraph confirms policy's \texttt{p3} as first-ranked. Notice also that the three strict outranked policies do effectively appear in the last positions. 
 \clearpage
 \section{Random academic performance tableaux}
 \label{sec:6.5}
@@ -479,4 +479,4 @@ The \NetFlows ranking represents also a rather \emph{fair weighted consensus} be
 The correlation with the marginal course rankings follows precisely the given ECTS weights. Course \texttt{m7}, with the highest relative weight ($0.294$) is most present ($+0.727$) in the global \NetFlows ranking and no course marginal ranking appears negatively correlated with this ranking. The mean weighted correlation is $+0.361$.
 
 \vspace{1cm}
-In the next Chapter~\ref{sec:7}, we show a different performance evaluation model, namely \emph{linear voting profiles} who are discussed in social choice theory.
+Useful multiple incommensuarble criteria ranking rules are presented and discussed in detail in Chapter~\ref{sec:8}. In the next Chapter~\ref{sec:7}, we first show how to compute the winner of an election on the basis of a different performance evaluation model, namely \emph{linear voting profiles} who are discussed in social choice theory.
