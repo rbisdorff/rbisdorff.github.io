@@ -26,7 +26,7 @@ book.pdf:
 	#bibtex 02-mainMatters/06-chapterRandomPerfTabs.aux
 	bibtex 02-mainMatters/07-chapterWinnerElection.aux
 	bibtex 02-mainMatters/08-chapterRankings.aux
-	#bibtex 02-mainMatters/09-chapterRelativeRating.aux
+	bibtex 02-mainMatters/09-chapterRelativeRating.aux
 	bibtex 02-mainMatters/10-chapterAbsoluteRating.aux
 	bibtex 02-mainMatters/11-chapterHPCRanking.aux
 	bibtex 02-mainMatters/12-chapterAliceChoice.aux

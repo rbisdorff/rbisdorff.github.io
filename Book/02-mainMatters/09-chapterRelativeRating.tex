@@ -42,8 +42,8 @@ The lower-closed $\mathbf{q}_k$ class corresponds to the $m$ quantile intervals 
 
 We call \textbf{q-tiles} a complete series of $k = 1, ..., q$ upper-closed $\mathbf{q}^k$, respectively lower-closed $\mathbf{q}_k$, multiple criteria quantile classes.
 
-\textbf{Property}: With the help of the bipolar-valued characteristic of the outranking relation $r(\succsim)$ we may compute the bipolar-valued characteristic of the assertion: $x$ belongs to upper-closed $q$-tiles class $\mathbf{q}^k$ class, resp. lower-closed class $\mathbf{q}_k$, as follows:
-\begin{eqnarray}
+\textbf{Property}: With the help of the bipolar-valued characteristic of the outranking relation $r(\succsim)$ we may compute the bipolar-valued characteristic of the assertion: $x$ belongs to upper-closed $q$-tiles class $\mathbf{q}^k$ class, resp. lower-closed class $\mathbf{q}_k$, as follows \citep{BIS-2016} :
+\begin{eqnarray}\label{eq:9.1}
 r(x \in \mathbf{q}^k) \; = \; \min \big[ -r\big(\mathbf{q}(p_{q-1}) \succsim x\big), \,r\big(\mathbf{q}(p_{q}) \succsim x)\big]\\
 r(x \in \mathbf{q}_k) \; = \; \min \big[ r\big(x \succsim \mathbf{q}(p_{q-1})\big),\, -r\big(x \succsim\mathbf{q}(p_{q})\big)\big]
 \end{eqnarray}
@@ -257,9 +257,8 @@ We may now check how faithful the sparse model represents the complete outrankin
 
 The ordinal correlation index between the standard and the sparse outranking relations is quite high ($+0.863$) and their bipolar-valued equivalence is supported by a mean criteria significance majority of $(1.0+0.272)/2 = 64\%$.
 
-It is worthwhile noticing in Listing \ref{list:9.4} Lines 20- that sparse pre-ranked outranking digraphs do not contain a \texttt{relation} attribute. The access to pairwise outranking characteristic values is here provided via a corresponding \texttt{relation()} function.
-
-\begin{lstlisting}
+It is worthwhile noticing in Listing~\ref{list:9.4} (Lines 20- ) that sparse pre-ranked outranking digraphs do not contain a \texttt{relation} attribute. The access to pairwise outranking characteristic values is here provided via a corresponding \texttt{relation()} function.
+\begin{lstlisting}[caption={Access to the binary relation characteristics},label=list:9.6]
 def relation(self,x,y):
     """
     Dynamic construction of the global
@@ -279,15 +278,13 @@ def relation(self,x,y):
     else:
         return Max
 \end{lstlisting}
-
-All reflexive situations are set to the \emph{indeterminate} value. When two decision alternatives belong to a same component -quantile equivalence class- we access the relation attribute of the corresponding outranking sub-digraph. Otherwise we just check the respective ranks of the components.
+In Listing~\ref{list:9.6} Lines 9-10, all reflexive situations are set to the \emph{indeterminate} value. When two decision alternatives belong to a same component --quantile equivalence class-- we access the relation attribute of the corresponding outranking sub-digraph (Lines 13-14). Otherwise we just check the respective ranks of the components (Lines 15-18).
 
 \section{Ranking pre-ranked sparse outranking digraphs}
 \label{sec:9.4}
 
-Each one of these 9 ordered components may now be locally ranked by using a suitable ranking rule. Best operational results, both in run times and quality, are more or less equally given with the \Copeland and the \NetFlows rules. The eventually obtained linear ordering (from the worst to best) is stored in a \texttt{prg.boostedOrder} attribute. A reversed linear ranking (from the best to the worst) is stored in a \texttt{prg.boostedRanking} attribute.
-  
-\begin{lstlisting}
+Each one of these nine ordered components may now be locally ranked by using a suitable ranking rule. Best operational results, both in run times and quality, are more or less equally obtained with the \Copeland and the \NetFlows rules\footnote{See Sections~\ref{sec:8.2} and \ref{sec:8.3}}. The eventually obtained linear ordering (from the worst to best) is stored in a \texttt{prg.boostedOrder} attribute. A reversed linear order (from the best to the worst) is stored in a \texttt{prg.boostedRanking} attribute.
+  \begin{lstlisting}
 >>> prg.boostedRanking
   [43, 47, 42, 5, 73, 65, 68, 32, 62, 70, 35, 22, 75, 45, 1,
    61, 41, 34, 4, 13, 40, 14, 2, 54, 63, 37, 56, 71, 69, 36,
@@ -295,9 +292,9 @@ Each one of these 9 ordered components may now be locally ranked by using a suit
    23, 67, 51, 10, 25, 11, 8, 64, 28, 66, 53, 12, 31, 39, 55,
    20, 46, 49, 16, 44, 26, 38, 33, 17, 50, 29, 60, 9, 59, 57]
 \end{lstlisting}
+Alternative \texttt{43} appears \emph{first ranked}, whereas alternative \texttt{57} is \emph{last ranked} (see Line 2 and 6 above).
 
-Alternative 43 appears \emph{first ranked}, whereas alternative 57 is \emph{last ranked} (see Line 2 and 6 above). The quality of this ranking result may be assessed by computing its ordinal correlation with the standard outranking relation.  
-
+The quality of this ranking result may be assessed by computing its ordinal correlation with the standard outranking relation.  
 \begin{lstlisting}
 >>> corr = g.computeRankingCorrelation(prg.boostedRanking)
 >>> g.showCorrelation(corr)
@@ -308,7 +305,6 @@ Alternative 43 appears \emph{first ranked}, whereas alternative 57 is \emph{last
 \end{lstlisting}
 
 We may also verify below that the \Copeland ranking obtained from the standard outranking digraph is highly correlated ($+0.822$) with the one obtained from the sparse outranking digraph.
-
 \begin{lstlisting}
    >>> from linearOrders import CopelandOrder
    >>> cop = CopelandOrder(g)
@@ -316,5 +312,16 @@ We may also verify below that the \Copeland ranking obtained from the standard o
     {'correlation': 0.822, 'determination': 1.0}
 \end{lstlisting}
 
-Noticing the computational efficiency of the quantiles sorting construction, coupled with the separability property of the quantile class membership characteristics computation, we will make usage of the \texttt{PreRankedOutrankingDigraph} constructor for HPC ranking big and even huge performance tableaux (see Chapter \ref{sec:11}).
+\vspace{1cm}
+Noticing the computational efficiency of the quantiles sorting construction, coupled with the separability property of the quantile class membership characteristics computation, we will make usage of the \texttt{PreRankedOutrankingDigraph} constructor in Chaptern\ref{sec:11} for HPC ranking big and even huge performance tableaux. Before we shall address in the next Chapter~\ref{sec:10} the problem of absolute rating into learned quantile performance norms.
+
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+%\phantomsection
+%\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{spbasic}
+%\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/08-chapterRankings.bbl}
  
