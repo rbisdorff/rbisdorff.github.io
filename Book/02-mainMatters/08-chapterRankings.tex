@@ -96,8 +96,10 @@ Now, several heuristic ranking rules have been proposed for constructing a linea
 \section{The \Copeland ranking}
 \label{sec:8.2}
 
-\Copeland 's rule, the most intuitive one as it works well for any strict outranking relation which models in fact a linear order, works on the \emph{median cut} strict outranking digraph \texttt{ccd}. The rule computes for each alternative a score resulting from the sum of the differences between the crisp \emph{strict outranking} characteristics $r(x\, \succnsim \,y)_{>0}$ and the crisp \emph{strict outranked} characteristics $r(y\, \succnsim \, x)_{>0}$  for all pairs of alternatives where $y$ is different from $x$. The alternatives are ranked in decreasing order of these \Copeland scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the alternatives \citep{COP-1951}. 
+\begin{definition}\label{def:copeland}\Copeland 'sranking rule computes for each alternative a score resulting from the sum of the differences between the crisp \emph{strict outranking} characteristics $r(x\, \succnsim \,y)_{>0}$ and the crisp \emph{strict outranked} characteristics $r(y\, \succnsim \, x)_{>0}$  for all pairs of alternatives where $y$ is different from $x$. The alternatives are ranked in decreasing order of these \Copeland scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the alternatives \citep{COP-1951}.
+\end{definition}
 
+\Copeland 's rule, the most intuitive one as it works well for any strict outranking relation which models a linear order on the \emph{median cut} strict outranking digraph \texttt{ccd}. 
 \begin{lstlisting}[caption={Computing a \Copeland Ranking},label=list:8.3]
 >>> from linearOrders import CopelandRanking
 >>> cop = CopelandRanking(gcd,Comments=True)
@@ -116,8 +118,8 @@ Now, several heuristic ranking rules have been proposed for constructing a linea
 \end{lstlisting}
 Alternative \texttt{a5} obtains here the best \Copeland score ($+12$), followed by alternatives \texttt{a1}, \texttt{a6} and \texttt{a7} with same score ($+2$); following the lexicographic rule, \texttt{a1} is hence ranked before \texttt{a6} and \texttt{a6} before \texttt{a7}. Same situation is observed for \texttt{a4} and \texttt{a9} with a score of $-3$ (see Listing \ref{list:8.3} Lines 4-12).
 
-\Copeland 's ranking rule appears in fact \emph{invariant} under the codual transform (see Section \ref{sec:2.6}) and renders a same linear order indifferently from digraphs \texttt{g} or \texttt{gcd} . The resulting ranking (see Listing \ref{list:8.3} Line 14) is rather correlated ($+0.463$) with the given pairwise outranking relation in the ordinal \Kendall sense (see Chapter~\ref{sec:16}).
-\begin{lstlisting}[caption={Checking the quality of the \Copeland Ranking},label=list:8.4]
+\Copeland 's ranking rule is in fact \emph{invariant} under the codual transform (see Section \ref{sec:2.6}) and renders a same linear order indifferently from digraphs \texttt{g} or \texttt{gcd} . The resulting ranking (see Listing \ref{list:8.3} Line 14) is rather correlated ($+0.463$) with the given pairwise outranking relation in the ordinal \Kendall sense\footnote{See Chapter~\ref{sec:16} and \citet{BIS-2012a}.}.
+\begin{lstlisting}[caption={Checking the quality of the \Copeland ranking},label=list:8.4]
 >>> corr = g.computeRankingCorrelation(cop.copelandRanking)
 >>> g.showCorrelation(corr)
  Correlation indexes:
@@ -125,11 +127,11 @@ Alternative \texttt{a5} obtains here the best \Copeland score ($+12$), followed 
    Valued equivalalence      : +0.107
    Epistemic determination   :  0.230
 \end{lstlisting}
-With an epistemic determination level of 0.230, the \emph{extended} \Kendall $\tau$ index (see \citep{BIS-2012a}) is in fact computed on $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the pairwise strict outranking comparisons. Furthermore, the bipolar-valued \emph{relational equivalence} characteristics between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the corresponding \Copeland ranking.
+With an epistemic determination level of $0.230$ (see above), the \emph{extended} \Kendall $\tau$ index is in fact computed on $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the pairwise strict outranking comparisons. Furthermore, the bipolar-valued \emph{relational equivalence} characteristics between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the corresponding \Copeland ranking.
 
 The \Copeland scores deliver actually only a \emph{weak ranking}, i.e. a ranking with potential ties. This weak ranking may be constructed with the\\
 \texttt{WeakCopelandOrder} class \index{WeakCopelandOrder@\texttt{WeakCopelandOrder} class}.
-\begin{lstlisting}[caption={Checking the quality of the \Copeland Ranking},label=list:8.4]
+\begin{lstlisting}[caption={Computing a weak \Copeland ranking},label=list:8.4]
 >>> from transitiveDigraphs import WeakCopelandOrder
 >>> wcop = WeakCopelandOrder(g)
 >>> wcop.showRankingByChoosing()
@@ -152,17 +154,18 @@ We recover in Listing \ref{list:8.4} above, the ranking with ties delivered by t
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=3cm]{Figures/weakCopelandRanking.png}
-\caption{A weak \Copeland ranking.}
+\caption{Drawing of the weak \Copeland ranking. The graph show the skeleton of the preorder produced by the corresponding ties of the \Copeland scores.}
 \label{fig:8.2}       % Give a unique label
 \end{figure}
 
-Let us now consider a similar ranking rule, but working directly on the \emph{bipolar-valued} outranking digraph, i.e. the criteria \emph{significance majority margins}.
+Let us now consider a similar ranking rule, but working directly on the criteria \emph{significance majority margins}, i.e. the \emph{bipolar-valued} outranking relations.
 
 \section{The \NetFlows ranking}
 \label{sec:8.3}
 
-The bipolar-valued version of the \Copeland ranking rule, we call \NetFlows \footnote{This ranking rule is also known under the name \Promethee ranking rule \citep*{BRA-1985}.}, computes for each alternative $x$ a \emph{net flow} score,  i.e. the sum of the differences between the \emph{strict outranking} characteristics $r(x\, \succnsim \,y)$ and the \emph{strict outranked} characteristics $r(y\, \succnsim \,x)$ for all pairs of alternatives where $y$ is different from $x$ .
-  \begin{lstlisting}[caption={Computing a \NetFlows ranking},label=list:8.5]
+\begin{definition}\label{def:netflows} The bipolar-valued version of the \Copeland ranking rule, we call \NetFlows \footnote{This ranking rule is also known under the name \Promethee ranking rule \citep*{BRA-1985}.}, computes for each alternative $x$ a \emph{net flow} score,  i.e. the sum of the differences between the \emph{strict outranking} characteristics $r(x\, \succnsim \,y)$ and the \emph{strict outranked} characteristics $r(y\, \succnsim \,x)$ for all pairs of alternatives where $y$ is different from $x$ .
+\end{definition}
+\begin{lstlisting}[caption={Computing a \NetFlows ranking},label=list:8.5]
 >>> from linearOrders import NetFlowsRanking
 >>> nf = NetFlowsRanking(gcd,Comments=True)
   Net Flows :
@@ -180,7 +183,7 @@ The bipolar-valued version of the \Copeland ranking rule, we call \NetFlows \foo
 >>> cop.copelandRanking # comparing both
    ['a5','a1','a6','a7','a8','a4','a9','a3','a2']
 \end{lstlisting}
-In our example here, the \NetFlows scores actually deliver a ranking \emph{without ties} which is rather different from the one delivered by \Copeland 's rule (see Listing~\ref{list:8.5} Line 16). It may happen, however, that we obtain, as with the \Copeland scores above, only a ranking with ties, which may then be resolved again by following a lexicographic rule. In such cases, it is possible to construct again a \emph{weak ranking} with the corresponding \texttt{WeakNetFlowsOrder} class\index{WeakNetFlowsOrder@\texttt{WeakNetFlowsOrder} class}.
+In our example here, the \NetFlows scores actually deliver a ranking \emph{without ties} which is rather different from the one delivered by \Copeland 's rule (see Listing~\ref{list:8.5} Line 16). It may happen, however, that we obtain, as with the \Copeland scores above, only a ranking with ties, which may then be resolved similarly by following a lexicographic rule applied to the identifiers of the decision alternatives. In such cases, it is possible to construct again a \emph{weak ranking} with the corresponding \texttt{WeakNetFlowsOrder} class\index{WeakNetFlowsOrder@\texttt{WeakNetFlowsOrder} class}.
 
 It is worthwhile noticing again, that similar to the \Copeland ranking rule seen before, the \NetFlows ranking rule is also \emph{invariant} under the codual transform (see Secion \ref{sec:2.6}) and delivers again the same ranking result indifferently from digraphs \texttt{g} or \texttt{gcd} (see Listing \ref{list:8.5} Line 14). 
 
@@ -195,7 +198,7 @@ The \NetFlows ranking result appears to be slightly better correlated ($+0.638$)
 \end{lstlisting}
 Indeed, the extended \Kendall $\tau$ index of $+0.638$ leads to a bipolar-valued \emph{relational equivalence} characteristics of $+0.147$, i.e. a majority of $57.35\%$ of the criteria significance supports the relational equivalence between the given outranking digraphs $g$ or $gcd$  and the corresponding \NetFlows ranking. This lesser ranking performance of the \Copeland rule stems in this example essentially from the \emph{weakness} of the actual ranking result and our subsequent \emph{arbitrary} lexicographic resolution of the many ties given by the \Copeland scores (see Fig. \ref{fig:8.2}).
 
-To appreciate now the more or less correlation of both the \Copeland and the \NetFlows rankings with the underlying pairwise outranking relation, it is useful to consider \Kemeny 's and \Slater 's \emph{best fitting} ranking rules.
+To appreciate now the more or less correlation of both the \Copeland and the \NetFlows rankings with the underlying pairwise outranking relation, it is useful to consider \Kemeny 's and \Slater 's '\emph{optimal}' ranking rules.
 
 \section{\Kemeny rankings}
 \label{sec:8.4}
@@ -290,7 +293,7 @@ To retain now a specific representative among all the potential rankings with ma
 \end{lstlisting}
 Both \Kemeny rankings show the same \emph{weighted mean marginal correlation} ($+0.099$, see Listing \ref{list:8.10} Lines 19-22, 42-44) with all thirteen performance criteria. However, the second ranking shows a slightly lower \emph{standard deviation} ($+0.132$ versus $+0.177$), resulting in a slightly \emph{fairer} ranking result ($-0.033$ versus $-0.079$).
 
-When several rankings with maximal \Kemeny index are given, the \texttt{KemenyRanking} class constructor instantiates the ranking with \emph{highest} mean marginal correlation and, in case of ties, with \emph{lowest} weighted standard deviation. Here we obtain ranking: [\texttt{a5}, \texttt{a6}, \texttt{a7}, \texttt{a3}, \texttt{a9}, \texttt{a4}, \texttt{a1}, \texttt{a8}, \texttt{a2}] (see Line 4 above).
+When several rankings with maximal \Kemeny index are given,\\ the \texttt{KemenyRanking} class constructor instantiates the ranking with \emph{highest} mean marginal correlation and, in case of ties, with \emph{lowest} weighted standard deviation. Here we obtain ranking: [\texttt{a5}, \texttt{a6}, \texttt{a7}, \texttt{a3}, \texttt{a9}, \texttt{a4}, \texttt{a1}, \texttt{a8}, \texttt{a2}] (see Line 4 in Listing~\ref{list:8.10} above).
 
 \section{\Slater rankings}
 \label{sec:8.5}
@@ -333,12 +336,11 @@ More efficient ranking heuristics, like the \Copeland and the \NetFlows rules, a
 \section{\Kohler 's ranking-by-choosing rule}
 \label{sec:8.6}
 
-\Kohler 's \emph{ranking-by-choosing} rule can be formulated like this:
-
-\begin{definition}[\Kohler 's \emph{ranking-by-choosing} rule]
+\Kohler 's \emph{ranking-by-choosing} rule\footnote{\citep{KOH-1978}} is formulated like this:
+\begin{definition}[\Kohler 's \emph{ranking-by-choosing} rule]\label{def:kohler}
   
 \noindent At step $i$ ($i$ goes from 1 to $n$) do the following:
-\begin{enumerate}
+\begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm]
 \item Compute for each row of the bipolar-valued \emph{strict} outranking relation table (see Listing \ref{list:8.1}) the smallest value;
 \item Select the row where this minimum is maximal. Ties are resolved in lexicographic order;
 \item Put the selected decision alternative at rank $i$;
@@ -376,7 +378,7 @@ Noticing that the \NetFlows score of an alternative $x$ represents in fact a bip
 \begin{definition}[The iterated \NetFlows ranking-by-choosing rule]
   
 \noindent At step $i$ ($i$ goes from 1 to $n$) do the following:
-\begin{enumerate}
+\begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm]
 \item Compute for each row of the bipolar-valued outranking relation table (see Listing \ref{list:8.1}) the corresponding \NetFlows score;
 \item Select the row where this score is \emph{maximal}, ties being resolved by lexicographic order;
 \item Put the corresponding decision alternative at rank $i$;
@@ -436,7 +438,7 @@ Let us finally mention another interesting \emph{ranking-by-choosing} approach.
 
 Tideman's \index{Tideman@\emph{Tideman}} ranking-by-choosing heuristic, the \RankedPairs rule, working best this time on the non strict outranking digraph $g$, is based on a \emph{prudent incremental} construction of linear orders that avoids on the fly any cycling outrankings \citep{TID-1987}. The ranking rule may be formulated as follows:
 \begin{definition}[The \RankedPairs ranking rule]
-\begin{enumerate}
+\begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm]
  \item Rank the ordered pairs $(x,y)$ of alternatives in decreasing order of $r(x\, \succsim \,y) \,+\, r(y\, \not\succsim \,x)$;
  \item Consider the pairs in that order (ties are resolved by a lexicographic rule):
    \begin{itemize}

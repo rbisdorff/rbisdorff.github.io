@@ -1,18 +1,17 @@
 \chapter{Rating by sorting into relative performance quantiles}
 \label{sec:9}
 
-\abstract*{To be written.}
+\abstract*{ In This Chapter, we apply order statistics for sorting a set $X$ of $n$ potential decision alternatives, evaluated on $m$ incommensurable performance criteria, into $q$ quantile equivalence classes. The sorting algorithm is based on pairwise outranking characteristics involving the quantile class limits observed on each criterion. Thus we may implement a weak ordering algorithm of complexity $O(nmq)$.
+}
 
-\abstract{To be written.}
-
-We apply order statistics for sorting a set $X$ of $n$ potential decision actions, evaluated on $m$ incommensurable performance criteria, into $q$ quantile equivalence classes, based on pairwise outranking characteristics involving the quantile class limits observed on each criterion. Thus we may implement a weak ordering algorithm of complexity $O(nmq)$.
-
+\abstract{ In This Chapter, we apply order statistics for sorting a set $X$ of $n$ potential decision alternatives, evaluated on $m$ incommensurable performance criteria, into $q$ quantile equivalence classes. The sorting algorithm is based on pairwise outranking characteristics involving the quantile class limits observed on each criterion. Thus we may implement a weak ordering algorithm of complexity $O(nmq)$.
+}
 
 \section{Quantile sorting on a single criterion}
 \label{sec:9.1}
 
 A single criterion sorting category $K$ is a (usually) lower-closed interval $[m_k ; M_k[$ on a real-valued performance measurement scale, with $m_k \leq M_k$. If $x$ is a measured performance on this scale, we may distinguish three sorting situations.
-\begin{enumerate}
+\begin{enumerate}[leftmargin=1cm,rightmargin=0.5cm]
 \item $x < m_k$ and $x < M_k$: The performance $x$ is lower than category $K$.
 \item $x \geqslant m_k$ and $x < M_k$: The performance $x$ belongs to category $K$.
 \item $x > m_k$ and $x \geqslant M_k$: The performance $x$ is higher than category $K$.
@@ -43,7 +42,7 @@ The lower-closed $\mathbf{q}_k$ class corresponds to the $m$ quantile intervals 
 
 We call \textbf{q-tiles} a complete series of $k = 1, ..., q$ upper-closed $\mathbf{q}^k$, respectively lower-closed $\mathbf{q}_k$, multiple criteria quantile classes.
 
-\textbf{Property}: With the help of the bipolar-valued characteristic of the outranking relation $r(\succsim)$ we may compute the bipolar-valued characteristic of the assertion: $x$ belongs to upper-closed *q*-tiles class $\mathbf{q}^k$ class, resp. lower-closed class $\mathbf{q}_k$, as follows:
+\textbf{Property}: With the help of the bipolar-valued characteristic of the outranking relation $r(\succsim)$ we may compute the bipolar-valued characteristic of the assertion: $x$ belongs to upper-closed $q$-tiles class $\mathbf{q}^k$ class, resp. lower-closed class $\mathbf{q}_k$, as follows:
 \begin{eqnarray}
 r(x \in \mathbf{q}^k) \; = \; \min \big[ -r\big(\mathbf{q}(p_{q-1}) \succsim x\big), \,r\big(\mathbf{q}(p_{q}) \succsim x)\big]\\
 r(x \in \mathbf{q}_k) \; = \; \min \big[ r\big(x \succsim \mathbf{q}(p_{q-1})\big),\, -r\big(x \succsim\mathbf{q}(p_{q})\big)\big]
@@ -51,8 +50,7 @@ r(x \in \mathbf{q}_k) \; = \; \min \big[ r\big(x \succsim \mathbf{q}(p_{q-1})\bi
 
 The outranking relation $\succsim$ verifying the coduality principle, $-r\big(\mathbf{q}(p_{q-1}) \succsim x\big) \,=\, r\big(\mathbf{q}(p_{q-1}) \prec x\big)$, resp. $-r\big(x \succsim \mathbf{q}(p_{q}) \,=\, r\big(x \prec \mathbf{q}(p_{q}\big)$.
 
-We may compute, for instance, a five-tiling of a given random performance tableau with the help of the \texttt{QuantilesSortingDigraph} class.
-
+We may compute, for instance, a five-tiling of a given random performance tableau with the help of the \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\texttt{QuantilesSortingDigraph} class}.
 \begin{lstlisting}[caption={Computing a quintiles sorting result},label=list:9.1]
 >>> from randomPerfTabs import RandomPerformanceTableau
 >>> t = RandomPerformanceTableau(numberOfActions=50,seed=5)
@@ -83,7 +81,6 @@ We may compute, for instance, a five-tiling of a given random performance tablea
      Compute profiles : 0.00075
      Compute relation : 0.02581
      Weak Ordering    : 0.00052
-     
 >>> qs.showCriteriaQuantileLimits()
      Quantile Class Limits (q = 5)
      Upper-closed classes
@@ -96,7 +93,6 @@ We may compute, for instance, a five-tiling of a given random performance tablea
       g5	 26.94	 36.43	 52.16	 72.52	 96.25	 
       g6	 23.94	 44.06	 54.92	 67.34	 95.97	 
       g7	 30.94	 47.40	 55.46	 69.04	 97.10	 
-
 >>> qs.showSorting()
     *--- Sorting results in descending order ---*
      ]0.80 - 1.00]: ['a22']
@@ -113,11 +109,9 @@ We may compute, for instance, a five-tiling of a given random performance tablea
 		     'a45','a49']
      ]   < - 0.20]: ['a44']
    \end{lstlisting}
-   
-Most of the decision actions (26) are gathered in the median quintile $]0.40 - 0.60]$ class, whereas the highest quintile $]0.80-1.00]$ and the lowest quintile $]< - 0.20]$ classes gather each one a unique decision alternative ($a22$, resp. $a44$) (see Listing \ref{list:9.1} Lines 45-).
+With the \texttt{showCriteriaQuantileLimits()}\index{showCriteriaQuantileLimits@\texttt{showCriteriaQuantileLimits()}} and the \texttt{showSorting()}\index{showSorting@\texttt{showSorting()}} methods, we may inspect the quintiles sorting result. Most of the decision alternatives (26) are gathered in the median quintile $]0.40 - 0.60]$ class, whereas the highest quintile $]0.80-1.00]$ and the lowest quintile $]< - 0.20]$ classes gather each one a unique decision alternative (\texttt{a22}, resp. \texttt{a44}) (see Listing \ref{list:9.1} Lines 43-).
 
-We may inspect as follows the details of the corresponding sorting characteristics.
-
+We may inspect the details of the corresponding sorting characteristics with the \texttt{showSortingCharacteristics()} method\index{showSortingCharacteristics@\texttt{showSortingCharacteristics()}}.
 \begin{lstlisting}[caption={Bipolar-valued sorting characteristics (extract)},label=list:9.2]
 >>> qs.valuationdomain
     {'min': Decimal('-1.0'), 'med': Decimal('0'),
@@ -144,18 +138,17 @@ We may inspect as follows the details of the corresponding sorting characteristi
     a49 in ]0.60 - 0.80]    0.00	  0.57	       0.00
     a49 in ]0.80 - 1.00]   -0.57	  0.86	      -0.57
 \end{lstlisting}
-  
-Alternative $a22$ verifies indeed positively both sorting conditions only for the highest quintile $[0.80 - 1.00]$ class (see Listing \ref{list:9.2} Lines 10). Whereas alternatives $a44$ and $a49$, for instance, weakly verify both sorting conditions each one for two, resp. three, adjacent quintile classes (see Lines 13-14 and 21-23).  
+Alternative \texttt{a22} verifies indeed positively both sorting conditions only for the highest quintile $[0.80 - 1.00]$ class (see Listing~\ref{list:9.2} Lines 10). Whereas alternatives \texttt{a44} and \texttt{a49}, for instance, weakly verify both sorting conditions each one for two, resp. three, adjacent quintile classes (see Lines 13-14 and 21-23).  
 
 Quantiles sorting results indeed always verify the following \textbf{Properties}.
-\begin{enumerate}
+\begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm]
 \item \textbf{Coherence}: Each object is sorted into a non-empty subset of \emph{adjacent} $q$-tiles classes. An alternative that would \emph{miss} evaluations on all the criteria will be sorted conjointly in all $q$-tiled classes.
 \item \textbf{Uniqueness}: If $r(x \in \mathbf{q}^k) \neq 0$  for $k = 1, ..., q$, then performance $x$ is sorted into \emph{exactly one single} $q$-tiled class.
 \item \textbf{Separability}: Computing the sorting result for performance $x$ is independent from the computing of the other performances’ sorting results. This property gives access to efficient parallel processing of class membership characteristics.
 \end{enumerate}
 
 The $q$-tiles sorting result leaves us hence with more or less \emph{overlapping} ordered quantile equivalence classes. For constructing now a linearly ranked q-tiles partition of $X$ , we may apply three strategies:
-\begin{enumerate}
+\begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm]
 \item \textbf{Average} (default): In decreasing lexicographic order of the average of the lower and upper quantile limits and the upper quantile class limit;
 \item \textbf{Optimistic}: In decreasing lexicographic order of the upper and lower quantile class limits;
 \item \textbf{Pessimistic}: In decreasing lexicographic order of the lower and upper quantile class limits;
@@ -177,8 +170,7 @@ The $q$-tiles sorting result leaves us hence with more or less \emph{overlapping
                     'a26','a34','a38','a45']
     ]  < -0.40] : ['a44']
 \end{lstlisting}
-
-Following, for instance, the \emph{average} ranking strategy, we find confirmed in the weak ranking shown in Listing \ref{list:9.3},  that alternative $a49$  is indeed sorted into three adjacent quintiles classes, namely $]0.20-0.80]$ (see Line 6) and precedes the $]0.40-0.60]$ class, of same average of lower and upper limits.
+Following, for instance, the \emph{average} ranking strategy, we find confirmed in the weak ranking shown in Listing \ref{list:9.3},  that alternative \texttt{a49}  is indeed sorted into three adjacent quintiles classes, namely $]0.20-0.80]$ (see Line 6) and precedes the $]0.40-0.60]$ class, of same average of lower and upper limits.
 
 The \texttt{QuantilesSortingDigraph} constructor gives hence a linearly ordered decomposition of the corresponding bipolar-valued outranking digraph. This decomposition leads us to a new \textbf{sparse pre-ranked} outranking digraph model.
 

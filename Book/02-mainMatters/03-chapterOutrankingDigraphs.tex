@@ -4,7 +4,7 @@
 \abstract*{ In this chapter, we introduce the main formal object of this book, namely the outranking digraph. With a randomly generated mulitiple criteria performance tableau, we construct the corresponding bipolar-valued outranking relation from pairwise comparisons. The resulting bipolar-valued outranking characteristics may be recoded. Finally, the dual outranking digraph gives us the associated strict outranking relation.}
 
 \begin{quotation}
-“On what principles may we base the arcs to be added to [the unanimous dominance digraph] in order to deduce a digraph which is both – in best possible concordance with the [given] multiple [preferential] points of view and – not too poor in comparable pairs [of decision actions]?” \citep[p.6]{ROY-1966}\index{Roy@\textsl{B. Roy}}
+“On what principles may we base the arcs to be added to [the unanimous dominance digraph] in order to deduce a digraph which is both – in best possible concordance with the [given] multiple [preferential] points of view and – not too poor in comparable pairs [of decision actions]?” \citep*[p.6]{ROY-1966}\index{Roy@\textsl{B. Roy}}
 \end{quotation}
 \vspace{1cm}
 
@@ -18,7 +18,7 @@ In the \texttt{outrankingDigraphs} module\index{outrankingDigraphs@\texttt{outra
 
 A given \texttt{BipolarOutrankingDigraph} object contains hence always at least the following attributes:
 \begin{enumerate}
-\item \texttt{actions}: An ordered dictionary of decision actions describing the potential decision actions or alternatives with {\tt name} and {\tt comment} attributes,
+\item \texttt{actions}: An ordered dictionary describing the potential decision actions or alternatives with {\tt name} and {\tt comment} attributes,
 \item \texttt{objectives}: A possibly empty ordered dictionary of decision objectives with {\tt name} and {\tt comment} attributes, describing the multiple preference dimensions involved in the decision problem, 
 \item \texttt{criteria}: An ordered dictionary of performance criteria, i.e. {\em preferentially independent\/} and {\em non-redundant\/} decimal-valued functions used for measuring the performance of each potential decision action with respect to a decision objective,
 \item \texttt{evaluation}: A double dictionary gathering performance grades for each decision action or alternative on each criterion function. 
@@ -79,7 +79,7 @@ In this example we, furthermore, consider a family of seven \emph{equisignifican
      Threshold pref : 5.00 + 0.00x ; percentile: 4.76
      Threshold veto : 80.00 + 0.00x ; percentile: 100.00
 \end{lstlisting}
-On criteria function \texttt{g1} (see Lines Listing \ref{list:3.2} 6-8 above) we observe, for instance, about $5\%$ of \emph{indifference} situations, about $90\%$ of \emph{preference} situations and about $5\%$ of \emph{considerable} performance difference situations.
+On criteria function \texttt{g1} (see Lines Listing~\ref{list:3.2} 6-8 above) we observe, for instance, about $5\%$ of \emph{indifference} situations, about $90\%$ of \emph{preference} situations and about $5\%$ of \emph{considerable} performance difference situations.
 
 The individual \emph{performance evaluation} of all decision alternative on each criterion are gathered in a \emph{performance table}.
 \begin{lstlisting}[caption={Inspecting the performance table},label=list:3.3]
@@ -96,7 +96,7 @@ The individual \emph{performance evaluation} of all decision alternative on each
       'g7'    |  82.9  41.7  12.8  21.9  75.7  15.4   6.0  
 \end{lstlisting}
 
-It is noteworthy to mention the three \emph{missing data} (\texttt{NA}) cases: action \texttt{a3} is missing, for instance, a grade on criterion \texttt{g2} (see Listing \ref{list:3.3} Line 6 above).
+It is noteworthy to mention the three \emph{missing data} (\texttt{NA}) cases: action \texttt{a3} is missing, for instance, a grade on criterion \texttt{g2} (see Listing~\ref{list:3.3} Line 6 above).
     
 \section{The bipolar-valued outranking digraph}
 \label{sec:3.2}
@@ -122,7 +122,7 @@ Given the previous random performance tableau $pt$, the {\tt BipolarOutrankingDi
 	'order', 'gamma', 'notGamma', ...
 	]
 \end{lstlisting}
-The resulting digraph contains 20 positive (valid) outranking realtions. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Listing \ref{list:3.4}  Lines 9-10).
+The resulting digraph contains 20 positive (valid) outranking relations. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Listing~\ref{list:3.4}  Lines 9-10).
 
 We may inspect the complete $[-1.0,+1.0]$-valued adjacency table as follows:
 \begin{lstlisting}[caption={Inspecting the valued adjacency table.},label=list:3.5]
@@ -140,7 +140,7 @@ We may inspect the complete $[-1.0,+1.0]$-valued adjacency table as follows:
    Valuation domain: [-1.0; 1.0]
 \end{lstlisting}
 
-The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class constructor computes from the given performance tableau $pt$ the characteristic value $r(x \succsim y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ in a default \emph{valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as \emph{indeterminate} characteristic value \citep{BIS-2013}. 
+The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class constructor computes from the given performance tableau $pt$ the characteristic value $r(x \succsim y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ in a default \emph{valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as \emph{indeterminate} characteristic value\footnote{See Definition~\ref{def:outranking} \citep{BIS-2013}}. 
 
 \begin{definition}[Semantics of the bipolar-valued characteristic function $r$] The semantics of $r(x \succsim y)$ are the following:
 \begin{itemize}
@@ -153,7 +153,7 @@ The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{Bip
 \section{Pairwise comparisons}
 \label{sec:3.3}
 
-From above given semantics, we notice in Listing \ref{list:3.5} Line 5above that \texttt{a1} outranks \texttt{a2} ($r(a1 \succsim a2) > 0.0$), but not \texttt{a7} ($r(a1 \succsim a7) = 0.0$). In order to comprehend the characteristic values shown in the relation table above, we may for instance inspect the details of the pairwise multiple criteria comparison between alternatives \texttt{a1} and \texttt{a2}\index{showPairwiseComparison@\texttt{showPairwiseComparison()}}.
+From above given semantics, we notice in Listing~\ref{list:3.5} Line 5above that \texttt{a1} outranks \texttt{a2} ($r(a1 \succsim a2) > 0.0$), but not \texttt{a7} ($r(a1 \succsim a7) = 0.0$). In order to comprehend the characteristic values shown in the relation table above, we may for instance inspect the details of the pairwise multiple criteria comparison between alternatives \texttt{a1} and \texttt{a2}\index{showPairwiseComparison@\texttt{showPairwiseComparison()}}.
 \begin{lstlisting}[caption={Inspecting a pairwise multiple criteria comparison},label=list:3.6]
 >>> odg.showPairwiseComparison('a1','a2')
   *------------  pairwise comparison ----*
@@ -190,7 +190,7 @@ Such a situation is, however, observed when we pairwise compare the performances
    ----------------------------------------
    Valuation in range: -7.00 to +7.00; r(x,y)= +1/7 => 0.0
 \end{lstlisting}
-This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting an \emph{as well as performing} situation. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Listing \ref{list:3.7} Line 6 above and first row in the relation table shown in Listing \ref{list:3.5}). Both contradictory facts trigger eventually an \emph{indeterminate} outranking situation \citep{BIS-2013}. 
+This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting an \emph{as well as performing} situation. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Listing~\ref{list:3.7} Line 6 above and first row in the relation table shown in Listing~\ref{list:3.5}). Both contradictory facts trigger eventually an \emph{indeterminate} outranking situation \citep{BIS-2013}. 
 
 \section{Recoding the digraph valuation}
 \label{sec:3.4}
@@ -212,7 +212,7 @@ All outranking digraphs, being of root type {\tt Digraph}, inherit the methods a
     'a7'   |    0    +5    +4    +3    +2     0     0	 
     Valuation domain: [-7;+7]
 \end{lstlisting}
-Notice in Listing \ref{list:3.8} Line 3 above, that the reflexive self comparison characteristic $r(x \succsim x)$ may be ignored by setting the \texttt{ReflexiveTerms} flag to \texttt{False}. They are in this case set to the \emph{indeterminate} valuation value $0$. Mind that the trivial reflexive terms of outranking relations may be ignored in some of the \Digraph resources. 
+Notice in Listing~\ref{list:3.8} Line 3 above, that the reflexive self comparison characteristic $r(x \succsim x)$ may be ignored by setting the \texttt{ReflexiveTerms} flag to \texttt{False}. They are in this case set to the \emph{indeterminate} valuation value $0$. Mind that the trivial reflexive terms of outranking relations may be ignored in some of the \Digraph resources. 
 
 \section{The strict outranking digraph}
 \label{sec:3.5}
@@ -250,7 +250,7 @@ The ongoing success of the original \emph{outranking} concept stems from the fac
 
 Considering thus each performance criterion as a subset of unanimous voters and balancing the votes in favour against considerable counter-performances in disfavour gave eventually rise to the concept of \emph{outranking situation}, a distinctive feature of the Multiple Criteria Decision Aid approach \citep{BIS-2015}.  A modern definition would be : An alternative $x$ is said to \emph{outrank} alternative $y$ when – a \emph{significant majority} of criteria confirm that alternative $x$ has to be considered as \emph{at least as well performing as} an alternative $y$ (the \emph{concordance} argument); and – no discordant criterion opens to significant doubt the validity of the previous confirmation by revealing a considerable counter-performance of alternative $x$ compared to $y$ (the \emph{discordance} argument).
 
-If the concordance argument was always well recieved, the discordance argument however, very confused in the beginning \citep{ROY-1966}, could only be handled in an epistemically correct and logically sound way by using a bipolar-valued epistemic logic \citep{BIS-2013}. The outranking situation had consequently to recieve an explicit negative definition: An alternative $x$ is said to \emph{do not outrank} an alternative $y$ when – a \emph{significant majority} of criteria confirm that alternative $x$ has to be considered as \emph{not at least as well performing as} alternative $y$; and – no discordant criterion opens to significant doubt the validity of the previous confirmation by revealing a considerable \emph{better} performance of alternative $x$ compared to $y$.
+If the concordance argument was always well recieved, the discordance argument however, very confused in the beginning \citep{ROY-1966}, could only be handled in an epistemically correct and logically sound way by using a bipolar-valued epistemic logic (see Definition~\ref{def:outranking}, \citet{BIS-2013}). The outranking situation had consequently to recieve an explicit negative definition: An alternative $x$ is said to \emph{do not outrank} an alternative $y$ when – a \emph{significant majority} of criteria confirm that alternative $x$ has to be considered as \emph{not at least as well performing as} alternative $y$; and – no discordant criterion opens to significant doubt the validity of the previous confirmation by revealing a considerable \emph{better} performance of alternative $x$ compared to $y$.
 
 Furthermore, the initial conjunctive aggregation of the concordance and discordance arguments had to be replaced by a disjunctive epistemic fusion operation, polarising in a logically and epistemically sound way the concordance with the discordance argument. This way, outranking  digraphs gain two very useful properties from a measure theoretical perspective. They are \emph{weakly complete} ; incomparability situations are no longer attested by the absence of outranking relations, but instead by epistemic indeterminateness. And they verify the \emph{coduality principle}: the negation of the epistemic ``\emph{at least as well performing as}'' situation corresponds formally to the strict converse epistemic ``\emph{less well performing than}'' situation.
 

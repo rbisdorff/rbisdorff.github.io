@@ -171,7 +171,7 @@ To help now the CEO choosing the best office site, we are going to compute pairw
 \section{Computing the outranking digraph}
 \label{sec:4.2}
 
-\begin{definition}[Outranking situation]\index{outranking!situation}
+\begin{definition}[Outranking situation]\label{def:outranking}\index{outranking!situation}
 
 \noindent For two potential decision alternatives $x$ and $y$:
 \begin{itemize}[leftmargin=0.5cm,rightmargin=0.5cm]
@@ -182,7 +182,7 @@ To help now the CEO choosing the best office site, we are going to compute pairw
     \end{enumerate}
 \item ``Alternative $x$ \emph{does not outrank} $y$'', denoted $(x \not\succsim y)$, is given when there is:
    \begin{enumerate}
-    \item A \emph{majority} of criteria concordantly supporting that alternative $x$ is \emph{not at least as well performing as} alternative $y$, and
+    \item A \emph{majority} of criteria concordantly supporting that alternative $x$ is \textbf{not} \emph{at least as well performing as} alternative $y$, and
     \item \emph{No considerable} better performance observed on any discordant criterion. 
     \end{enumerate}
 \item Otherwise, the outranking situation between alternatives $x$ and $y$ is considered to be \emph{indeterminate}.
@@ -211,8 +211,8 @@ Alternative \texttt{D} gives a \Condorcet winner\footnote{See Chapter~\ref{sec:7
  ['A', 'C', 'D']
 \end{lstlisting}
 
-From theory, we know that outranking digraphs are \emph{weakly complete}\index{weakly complete}, i.e. for all $x$ and $y$ in $X$, $r(x \succsim y)\, <\, 0.0$ implies that $r(y \succsim x)\, \geq\, 0.0$. And, they verify the \emph{coduality principle}\index{coduality principle}:  $r(x \not\succsim y) \;=\; r(y \succnsim y)$ \citep{BIS-2013}. 
-\begin{definition}[Strict outranking situation]\index{outranking!strict situation}
+From theory, we know that outranking digraphs are \emph{weakly complete}\index{weakly complete}, i.e. for all $x$ and $y$ in $X$, $r(x \succsim y)\, <\, 0.0$ implies that $r(y \succsim x)\, \geq\, 0.0$. And, they verify the \emph{coduality principle}\index{coduality principle}:  $r(x \not\succsim y) \;=\; r(y \succnsim x)$ \citep{BIS-2013}. 
+\begin{definition}[Strict outranking situation]\label{def:strictOutranking}\index{outranking!strict situation}
 
 \noindent For two potential decision alternatives $x$ and $y$:
 \begin{itemize}[leftmargin=0.5cm,rightmargin=0.5cm]
