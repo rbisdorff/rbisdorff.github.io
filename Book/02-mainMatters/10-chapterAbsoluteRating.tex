@@ -122,14 +122,14 @@ With \texttt{historySize = None} (the default setting), the balance in the examp
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/examplePerfQuantiles.png}
-\caption{Showing the updated quartiles limits.}
+\caption{Showing updated quartiles limits per criterion. The $0.25$ column shows the first quartile (\texttt{Q1}) limits, the $0.50$ column shows the second quartile (\texttt{Q2}) limits and the $0.75$ column shows the third quartile (\texttt{Q3}) limits. Column $0.00$ (resp. $1.00$) shows the minimum (resp. maximum) performance on each criterion.}
 \label{fig:10.1}       % Give a unique label
 \end{figure}
     
 \section{Rating-by-ranking new performances with quantile norms}
 \label{sec:10.3}
 
-For \emph{rating} a newly given set of decision alternatives with the help of empirical performance quantiles estimated from historical data,\\we provide the \texttt{LearnedQuantilesRatingDigraph} class\index{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class},\\ a specialisation of the \texttt{QuantilesSortingDigraph} class (see Chapter \ref{sec:9}). The absolute rating result is computed by \emph{ranking} the new performance records together with the learned quantile limits.
+For \emph{rating} a newly given set of decision alternatives with the help of empirical performance quantiles estimated from historical data, we provide the \texttt{Learned\-QuantilesRatingDigraph} class\index{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class}, a specialisation of the \texttt{QuantilesSor\-tingDigraph} class (see Chapter \ref{sec:9}). The absolute rating result is computed by \emph{ranking} the new performance records together with the learned quantile limits.
 
 The constructor requires a valid \texttt{PerformanceQuantiles} instance and, by default, uses \Copeland 's or the \NetFlows ranking rule, whichever fits best in an ordinal correlation sense with the underlying outranking digraph.
 
@@ -175,10 +175,10 @@ We reconsider now the \texttt{PerformanceQuantiles} object instance \texttt{pq} 
    Compute rating   : 0.00186
    Compute sorting  : 0.00000
 \end{lstlisting}
-Data input to the \texttt{LearnedQuantilesRatingDigraph} class constructor (see Listing~\ref{list:10.4} Line 3) are a valid PerformanceQuantiles object $pq$ and a compatible list \texttt{newActions} of new decision alternatives generated from the same random generator $rpg$ (see Listing~\ref{list:10.3} Line 2) .
+Data input to the \texttt{LearnedQuantilesRatingDigraph} class constructor are a valid \texttt{PerformanceQuantiles} object $pq$ and a \texttt{newActions} list of newly generated decision alternatives with the same random generator $rpg$ (see Listing~\ref{list:10.3} Line 2-3).
 
 Let us have a look at the digraph's nodes, here called \texttt{newActions}.
-\begin{lstlisting}[caption={Performance tableau of the new incoming decision alternatives},label=list:10.5,basicstyle=\scriptsize]
+\begin{lstlisting}[caption={Performance tableau of the new incoming decision alternatives},label=list:10.5,basicstyle=\ttfamily\scriptsize]
 >>> lqr.showPerformanceTableau(actionsSubset=lqr.newActions)
  *----  performance tableau -----*
  criteria | a1001 a1002 a1003 a1004 a1005 a1006 a1007 a1008 a1009 a1010   
@@ -193,7 +193,7 @@ Let us have a look at the digraph's nodes, here called \texttt{newActions}.
 \end{lstlisting}
   Among the 10 new incoming decision alternatives (see Listing~\ref{list:10.5}), we recognize alternatives \texttt{a1001} (see column 2) and \texttt{a1010} (see last column) we have shown in Table \ref{tab:10.1}.
 
-The \texttt{LearnedQuantilesRatingDigraph} class instance's \texttt{actions} dictionary includes as well the closed lower limits of the four quartile classes: \texttt{m1} = $[0.0- [$, \texttt{m2} = $[0.25- [$, \texttt{m3} = $[0.5- [$, \texttt{m4} = $[0.75 - [$. We find these limits in the \texttt{profiles} attribute (see Listing \ref{list:10.6} below).
+The \texttt{actions} dictionary of a \texttt{LearnedQuantilesRatingDigraph} class instance includes, besides the 10 performance eavluations of the ten new alternatives, also the closed lower limits of the four quartile classes: \texttt{m1} = $[0.0- [$, \texttt{m2} = $[0.25- [$, \texttt{m3} = $[0.5- [$, \texttt{m4} = $[0.75 - [$. We find these limits in the \texttt{profiles} attribute (see Listing \ref{list:10.6} below).
 \begin{lstlisting}[caption={Showing the limiting profiles of the rating quantiles},label=list:10.6]
 >>> lqr.showPerformanceTableau(actionsSubset=lqr.profiles)
     *----  Quartiles limit profiles -----*
@@ -210,7 +210,7 @@ The \texttt{LearnedQuantilesRatingDigraph} class instance's \texttt{actions} dic
 
 The main run time is spent by the class constructor in computing a bipolar-valued outranking relation on the extended actions set including both the new alternatives as well as the quartile class limits (see Listing \ref{list:10.4} Lines 23-29).\footnote{In case of large volumes, i.e. many new decision alternatives and centile classes for instance, a multi-threading version may be used when multiple processing cores are available.}
 
-The actual rating procedure will rely on a complete ranking of the new decision alternatives as well as the quantile class limits obtained from the corresponding bipolar-valued outranking digraph. Two efficient and scalable ranking rules, the \Copeland and its valued version, the \NetFlows rule may be used for this purpose. The \texttt{rankingRule} parameter allows to choose one of both. With \texttt{rankingRule='best'} (see Listing~\ref{list:10.4} Line 3 ) the \texttt{LearnedQuantilesRatingDigraph} constructor will choose the ranking rule that results in the highest ordinal correlation with the given outranking relation (see Chapter~\ref{sec:22} and \citep{BIS-2012a}).
+The actual rating procedure will rely on a complete ranking of the new decision alternatives as well as the quantile class limits obtained from the corresponding bipolar-valued outranking digraph. Two efficient and scalable ranking rules, the \Copeland and its valued version, the \NetFlows rule may be used for this purpose. The \texttt{rankingRule} parameter allows to choose one of both. With \texttt{rankingRule='best'} (see Listing~\ref{list:10.4} Line 3 ) the \texttt{LearnedQuantiles\-RatingDigraph} constructor will choose the ranking rule that results in the highest ordinal correlation with the given outranking relation (see Chapter~\ref{sec:22} and \citep{BIS-2012a}).
 
 In this rating example, the \Copeland rule appears to be the more appropriate ranking rule.
 \begin{lstlisting}[caption={\Copeland ranking of new alternatives and historical quartile limits},label=list:10.7]
@@ -232,10 +232,11 @@ The eventual rating procedure is based in this example on the \emph{lower} quart
 >>> lqr.ratingCategories
  OrderedDict([
  ('m2', ['a1007','a1004','a1009']),
- ('m3', ['a1005','a1010','a1002','a1008','a1006','a1001','a1003'])
+ ('m3', ['a1005','a1010','a1002','a1008',
+         'a1006','a1001','a1003'])
  ])
 \end{lstlisting}    
-We notice above that no new decision alternatives are actually rated in the lowest $[0.0-0.25[$, respectively highest $[0.75- [$ quartile classes. Indeed, the rating result is shown, in descending order, as follows:
+We notice above that no new decision alternative is actually rated into the lowest $[0.0-0.25[$, respectively highest $[0.75- [$ quartile classes. Indeed, the rating result is shown with the \texttt{showQuantilesRating()} method\index{showQuantilesRating@\texttt{showQuantilesRating()}}:
 \begin{lstlisting}[caption={Absolute quartiles rating result},label=list:10.8]
 >>> lqr.showQuantilesRating()
   *-------- Quartiles rating result ---------
@@ -244,7 +245,7 @@ We notice above that no new decision alternatives are actually rated in the lowe
    [0.25 - 0.50[ ['a1007', 'a1004', 'a1009']
 \end{lstlisting}    
 
-The same result may more conveniently be consulted in a browser view via a specialised rating heatmap format: 
+The same result may also be shown in a browser view with the \texttt{showHTMLRa\-tingHeatmap()} method\index{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}} using a specialised rating heatmap format: 
 \begin{lstlisting}
 >>> lqr.showHTMLRatingHeatmap(\
 ...            pageTitle='Heatmap of Quartiles Rating',\
@@ -253,7 +254,7 @@ The same result may more conveniently be consulted in a browser view via a speci
 \begin{figure}[h]
 \sidecaption[t]
  \includegraphics[width=7cm]{Figures/heatMap1.png}
-\caption{Heatmap of absolute quartiles ranking.}
+\caption{Heatmap of absolute quartiles ranking. The quartile equivalence classes appear lower-closed. No alternative is rated into the \texttt{Q1} class ($[0.00 - 0.25[$) and no alternative is rated into the Q4 class ($[0.75 - 1.00]$). }
 \label{fig:10.2}       % Give a unique label
 \end{figure}
 	    
@@ -265,8 +266,8 @@ Using furthermore a specialised version of the \texttt{exportGraphViz()} method 
   dot -Grankdir=TB -Tpng normedRatingDigraph.dot -o normedRatingDigraph.png
 \end{lstlisting}
 \begin{figure}[h]
-%\sidecaption
-  \includegraphics[width=11cm]{Figures/normedRatingDigraph.png}
+%\sidecaption[t]
+\includegraphics[width=10cm]{Figures/normedRatingDigraph.png}
 \caption{Absolute quartiles rating digraph}
 \label{fig:10.3}       % Give a unique label
 \end{figure}
@@ -295,13 +296,11 @@ A browser heatmap view may more conveniently illustrate this refined rating resu
 ...       colorLevels=5, Correlations=True)
 \end{lstlisting}
 \begin{figure}[h]
-%\sidecaption
-\includegraphics[width=10cm]{Figures/heatMap2.png}
-\caption{Heatmap of absolute deciles rating}
+\sidecaption[t]
+\includegraphics[width=7cm]{Figures/heatMap2.png}
+\caption{Heatmap of absolute deciles rating. Decision alternatives \texttt{a1001} and \texttt{a1010} are now, as expected, rated in the $6^{th}$ decile (\texttt{D6}), respectively in the $7^{th}$ decile (\texttt{D7}).}
 \label{fig:10.4}       % Give a unique label
 \end{figure}
-\clearpage
-In this \emph{deciles} rating, decision alternatives \texttt{a1001} and \texttt{a1010} are now, as expected, rated in the $6^{th}$ decile (\texttt{D6}), respectively in the $7^{th}$ decile (\texttt{D7}).
 
 To avoid having to recompute performance deciles from historical data when wishing to refine a rating result, it is useful, depending on the actual size of the historical data, to initially compute performance quantiles with a relatively high number of bins, for instance \emph{dodeciles} or even \emph{centiles}. It is then possible to interpolate on the fly \emph{quartiles} or \emph{deciles} for instance, when constructing the rating digraph. 
 \begin{lstlisting}[caption={From deciles interpolated quartiles rating result},label=list:10.10]
@@ -318,7 +317,7 @@ With the \texttt{quantiles} parameter (see Listing~\ref{list:10.10} Line 2), we 
 More generally, in the case of industrial production monitoring problems, for instance, where large volumes of historical performance data may be available, it may be of interest to estimate even more precisely the marginal cumulative distribution functions, especially when \emph{tail} rating results, i.e. distinguishing \emph{very best}, or \emph{very weak} multiple criteria performances, become a critical issue. Similarly, the \texttt{historySize} parameter may be used for monitoring on the fly \emph{unstable} random multiple criteria performance data.  	
 
 %%%%%%%
-The chapter bibliography
+%The chapter bibliography
 %\normallatexbib
 \clearpage
 %\phantomsection
