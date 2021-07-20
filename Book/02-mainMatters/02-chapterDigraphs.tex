@@ -359,7 +359,13 @@ It is as well possible to show a colored version of the valued relation table in
 \section{Complete, empty and indeterminate digraphs}
 \label{sec:2.10}
 
-Let us finally mention some special universal classes of digraphs that are readily available in the \texttt{digraphs} module\footnote{See \citealp{BIS-2021}}, like the \texttt{CompleteDigraph}\index{CompleteDigraph@\texttt{CompleteDigraph} class}, the \texttt{EmptyDigraph}\index{EmptyDigraph@\texttt{EmptyDigraph} class} and the \texttt{IndeterminateDigraph}\index{IndeterminateDigraph@\texttt{IndeterminateDigraph} class} classes, which put all characteristic values respectively to the maximum, the minimum or the median indeterminate characteristic value.
+Let us finally mention some special universal classes of digraphs that are readily available in the \texttt{digraphs} module\footnote{See \citealp{BIS-2021}}, like:
+\begin{itemize}[nosep]
+\item the \texttt{CompleteDigraph}\index{CompleteDigraph@\texttt{CompleteDigraph} class},
+\item  the \texttt{EmptyDigraph}\index{EmptyDigraph@\texttt{EmptyDigraph} class} and
+\item  the \texttt{IndeterminateDigraph}\index{IndeterminateDigraph@\texttt{IndeterminateDigraph} class} class,
+\end{itemize}
+who put all characteristic values respectively to the \emph{maximum}, the \emph{minimum} or the \emph{median} indeterminate characteristic value.
 \begin{lstlisting}[caption={Complete, empty and indeterminate digraphs},label=list:2.11]
 >>> from digraphs import CompleteDigraph,EmptyDigraph,\
 ...   			 IndeterminateDigraph
