@@ -1,50 +1,48 @@
 \chapter{About split, interval and permutation graphs}
 \label{sec:25}
 
-\abstract*{}
+\abstract*{ The last Chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, triangulated, interval, permutation and split graphs. We first present an example of a graph which is at the same time a triangulated, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognize that a given graph is in fact a permutation graph.}
 
-\abstract{}
-
-%%%%%%%% draft version
-% uncomment for final version
-\tableofcontents
-
+\abstract{ The last Chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, triangulated, interval, permutation and split graphs. We first present an example of a graph which is at the same time a triangulated, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognize that a given graph is in fact a permutation graph.}
 
 \section{A multiply perfect graph}
 \label{sec:25.1}
 
-Following Martin Golumbic (see \citet[p. 149]{GOL-2004}), we call a given graph g:
-\begin{itemize}
-\item \emph{Comparability} graph when $g$  is \emph{transitively orientable};
-\item \emph{Triangulated} graph when $g$ does not contain any \emph{chordless cycle} of length 4 and more;
-\item \emph{Interval} graph when $g$ is \emph{triangulated} and its dual $-g$ is a \emph{comparability} graph;
-\item \emph{Permutation} graph when $g$ and its dual $-g$ bothe are \emph{comparability} graphs;
-\item \emph{Split} graph when $g$ and its dual $-g$ bothe are \emph{triangulated} graphs.
-\end{itemize}
+\begin{definition}[Perfect graph classes]
 
-To illustrate these \emph{perfect} graph classes, we will generate from 8 intervals, randomly chosen in the default integer range $[0,10]$, a \emph{RandomIntervalIntersectionsGraph} instance $g$ (see Line 2 below). 
+\noindent Following Martin Golumbic (see \citet[p. 149]{GOL-2004}), we call a given graph \texttt{g}:
+\begin{itemize}[nosep]
+\item \emph{Comparability} graph when \texttt{g}  is \emph{transitively orientable};\index{comparability graph}
+\item \emph{Triangulated} graph when \texttt{g} does not contain any \emph{chordless cycle} of length 4 and more;\index{triangulated graph}
+\item \emph{Interval} graph when \texttt{g} is \emph{triangulated} and its dual \texttt{-g} is a \emph{comparability} graph;\index{comparability graph}
+\item \emph{Permutation} graph when \texttt{g} and its dual \texttt{-g} bothe are \emph{comparability} graphs;\index{permutation graph}
+\item \emph{Split} graph when \texttt{g} and its dual \texttt{-g} bothe are \emph{triangulated} graphs.\index{split graph}
+\end{itemize}
+\end{definition}
+
+To illustrate these \emph{perfect} graph classes, we will generate from 8 intervals, randomly chosen in the default integer range $[0,10]$, a \texttt{RandomIntervalInter\-sectionsGraph} instance \texttt{g} (see Line 2 below).\index{RandomIntervalIntersectionsGraph@\texttt{RandomIntervalIntersectionsGraph} class} 
 \begin{lstlisting}
 >>> from graphs import\
-...          RandomIntervalIntersectionsGraph
+...             RandomIntervalIntersectionsGraph
 >>> g = RandomIntervalIntersectionsGraph(\
 ...                          order=8,seed=100)
 >>> g
- *------- Graph instance description ------*
-  Instance class   : RandomIntervalIntersectionsGraph
-  Instance name    : randIntervalIntersections
-  Seed             : 100
-  Graph Order      : 8
-  Graph Size       : 23
-  Valuation domain : [-1.0; 1.0]
-  Attributes       : ['seed', 'name', 'order',
+  *------- Graph instance description ------*
+   Instance class   : RandomIntervalIntersectionsGraph
+   Instance name    : randIntervalIntersections
+   Seed             : 100
+   Graph Order      : 8
+   Graph Size       : 23
+   Valuation domain : [-1.0; 1.0]
+   Attributes       : ['seed', 'name', 'order',
         'intervals', 'vertices', 'valuationDomain',
         'edges', 'size', 'gamma']
 >>> print(g.intervals)
-  [(2,7),(2,7),(5,6),(6,8),(1,8),(1,1),(4,7),(0,10)]
+  [(2,7), (2,7), (5,6), (6,8), (1,8), (1,1), (4,7), (0,10)]
 \end{lstlisting}
 
-With \texttt{seed = 100}, we obtain here an interval graph, in fact apperfect graph, which is \emph{conjointly} a triangulated, a comparability, a split and a permutation graph (see Listing \ref{list:25.1} Lines 6, 10, 14).
-\begin{lstlisting}[caption={Testing perfect graph categories.},label=list:25.1,basicstyle=\scriptsize]
+With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \emph{perfect graph}, which is \emph{conjointly} a \emph{triangulated}, a \emph{comparability}, a \emph{split} and a \emph{permutation} graph (see Listing \ref{list:25.1} Lines 6, 10, 14).
+\begin{lstlisting}[caption={Testing perfect graph categories.},label=list:25.1,basicstyle=\ttfamily\scriptsize]
 >>> g.isPerfectGraph(Comments=True)
   Graph randIntervalIntersections is perfect !
 >>> g.isIntervalGraph(Comments=True)
@@ -69,16 +67,13 @@ With \texttt{seed = 100}, we obtain here an interval graph, in fact apperfect gr
    fdp -Tpng randomSplitGraph.dot -o randomSplitGraph.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
+\sidecaption[t]
 \includegraphics[width=6cm]{Figures/randomSplitGraph.png}
-\caption{A conjointly triangulated, comparability, interval, permutation and split graph} 
+\caption{A conjointly triangulated, comparability, interval, permutation and split graph. In the Figure here one may readily recognize the essential characteristic of split graphs, namely being always splitable into two disjoint sub-graphs: an \emph{independent choice} \{\texttt{v6}\} and a \emph{clique}  --\{\texttt{v1}, \texttt{v2}, \texttt{v3}, \texttt{v4}, \texttt{v5}, \texttt{v7}, \texttt{v8}\}-- which explains their name.} 
 \label{fig:25.1}       % Give a unique label
 \end{figure}
-
-In Fig. \ref{fig:25.1} we may readily recognize the essential characteristic of split graphs, namely being always splitable into two disjoint sub-graphs: an \emph{independent choice} {'v6'} and a \emph{clique} \{'v1', 'v2', 'v3', 'v4', 'v5', 'v7', 'v8'\}; which explains their name.
-
 Notice however that the four properties:
-\begin{enumerate}
+\begin{enumerate}[nosep]
 \item $g$ is a \emph{comparability} graph;
 \item $g$ is a \emph{co-comparability} graph, i.e. $-g$ is a comparability graph;
 \item $g$ is a \emph{triangulated} graph;
@@ -88,7 +83,6 @@ are independent of one another (see \citet[p. 275]{GOL-2004}).
 
 \section{Who is the liar?}
 \label{sec:25.2}
-
 
 Claude \Berge's famous mystery story (see \citet[p. 20]{GOL-2004}) may well illustrate the importance of being an \emph{interval} graph.
 
@@ -122,7 +116,7 @@ Suppose the file \texttt{berge.py} \footnote{A \texttt{Graph} encoded file \text
     }
 \end{lstlisting}
 
-Six professors (labeled 'A', 'B', 'C', 'D', 'E' and 'I') had been to the library on the day that a rare tractate was stolen. Each entered once, stayed for some time, and then left. If two professors were in the library at the same time, then at least one of them saw the other. Detectives questioned the professors and gathered the testimonies that 'A' saw 'B' and 'E'; 'B' saw 'A' and 'I'; 'C' saw 'D' and 'I'; 'D' saw 'A' and 'I'; 'E' saw 'B' and 'I'; and 'I' saw 'C' and 'E'. This data is gathered in the previous file, where each positive edge $\{x,y\}$ models the testimony that, either $x$ saw $y$, or $y$ saw $x$.
+Six professors (labeled \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{E} and \texttt{I}) had been to the library on the day that a rare tractate was stolen. Each entered once, stayed for some time, and then left. If two professors were in the library at the same time, then at least one of them saw the other. Detectives questioned the professors and gathered the testimonies that \emph{Abe} saw \emph{Burt} and \emph{Eddie}; \emph{Burt} saw \emph{Abe} and \emph{Ida}; \emph{Charlotte} saw \emph{Desmond} and \emph{Ida}; \emph{Desmond} saw \emph{Abe} and \emph{Ida}; \emph{Eddie} saw \emph{Burt} and \emph{Ida}; and \emph{Ida} saw \emph{Charlotte} and \emph{Eddie}. This data is gathered in the previous file, where each positive edge $\{x,y\}$ models the testimony that, either $x$ saw $y$, or $y$ saw $x$.
 \begin{lstlisting}
 >>> from graphs import Graph
 >>> g = Graph('berge')
@@ -144,13 +138,13 @@ Six professors (labeled 'A', 'B', 'C', 'D', 'E' and 'I') had been to the library
    fdp -Tpng berge1.dot -o berge1.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=6cm]{Figures/berge1.png}
+\sidecaption[t]
+\includegraphics[width=7cm]{Figures/berge1.pdf}
 \caption{Graph representation of the testimonies of the professors} 
 \label{fig:25.2}       % Give a unique label
 \end{figure}
 
-From graph theory we know that time interval intersections graphs must in fact be interval graphs, i.e. \emph{triangulated} and \emph{co-comparative} graphs. The testimonies graph should therefore not contain any chordless cycle of four and more vertices. Now, the presence or not of such chordless cycles in the testimonies graph may be checked as follows:
+From graph theory we know that time interval intersections graphs must in fact be interval graphs, i.e. \emph{triangulated} and \emph{co-comparative} graphs. The testimonies graph should therefore not contain any chordless cycle of four and more vertices. Now, the presence or not of such chordless cycles in the testimonies graph may be checked with the \texttt{computeChordlessCycles()} method.\index{computeChordlessCycles@\emph{computeChordlessCycles()}}
 \begin{lstlisting}
 >>> g.computeChordlessCycles()
   Chordless cycle certificate: ['D','C','E','A','D']
@@ -162,7 +156,7 @@ From graph theory we know that time interval intersections graphs must in fact b
 \end{lstlisting}
 We see in the Listing above three intersection cycles of length 4, which is impossible to occur on the linear time line. Obviously one professor lied!
 
-And it is $D$ ; if we put to doubt his testimony that he saw 'A' (see Line 1 below), we obtain indeed a triangulated graph instance whose dual is a comparability graph.
+And it is \emph{Desmond}. If we put to doubt his testimony that he saw \emph{Abe} (see Line 1 below), we obtain indeed a triangulated graph instance whose dual is a comparability graph.
 \begin{lstlisting}
 >>> g.setEdgeValue( ('D','A'), 0)
 >>> g.showShort()
@@ -187,8 +181,8 @@ And it is $D$ ; if we put to doubt his testimony that he saw 'A' (see Line 1 bel
    fdp -Tpng berge2.dot -o berge2.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=6cm]{Figures/berge2.png}
+\sidecaption[t]
+\includegraphics[width=7cm]{Figures/berge2.pdf}
 \caption{The triangulated testimonies graph} 
 \label{fig:25.3}       % Give a unique label
 \end{figure}
@@ -213,20 +207,20 @@ A graph is called a \emph{permutation} or \emph{inversion} graph if there exists
                   'edges', 'size', 'gamma']
 >>> g.isPerfectGraph()
   True
->>> g.exportGraphViz()
-  *---- exporting a dot file for GraphViz tools ---------*
+>>> g.exportGraphViz(fileName='permutationGraph')
+  *---- exporting a dot file for GraphViz tools ----*
    Exporting to permutationGraph.dot
    fdp -Tpng permutationGraph.dot\
-       -o permutationGraph.png
+                    -o permutationGraph.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=6cm]{Figures/permutationGraph.png}
+\sidecaption[t]
+\includegraphics[width=7cm]{Figures/permutationGraph.pdf}
 \caption{The default \Digraph permutation graph} 
 \label{fig:25.4}       % Give a unique label
 \end{figure}
 
-By using color sorting queues, the minimal vertex coloring for a permutation graph is computable in $O\big(n log(n)\big)$ (see \citet{GOL-2004}).
+By using color sorting queues, the minimal vertex coloring for a permutation graph is computable in $O\big(n log(n)\big)$ (see \citet{GOL-2004}).\index{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}}
 \begin{lstlisting}
 >>> g.computeMinimalVertexColoring(Comments=True)
     vertex 1: lightcoral
@@ -243,8 +237,8 @@ By using color sorting queues, the minimal vertex coloring for a permutation gra
        -o coloredPermutationGraph.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=6cm]{Figures/coloredPermutationGraph.png}
+\sidecaption[t]
+\includegraphics[width=6cm]{Figures/coloredPermutationGraph.pdf}
 \caption{Minimal vertex coloring of the permutation graph.} 
 \label{fig:25.5}       % Give a unique label
 \end{figure}
@@ -260,12 +254,12 @@ The correspondingly colored \emph{matching diagram} of the nine inversions --the
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption
-\includegraphics[width=8cm]{Figures/perm_permutationGraph.png}
+\includegraphics[width=10cm]{Figures/perm_permutationGraph.pdf}
 \caption{Colored matching diagram of the permutation [4,3,6,1,5,2].} 
 \label{fig:25.6}       % Give a unique label
 \end{figure}
 
-As mentioned before, a permutation graph and its dual are \emph{transitively orientable}. The \texttt{transitiveOrientation()} method constructs from a given permutation graph a digraph where each edge of the permutation graph is converted into an arc oriented in increasing alphabetic order of the adjacent vertices' keys (see \citet{GOL-2004}). This orientation of the edges of a permutation graph is always transitive and delivers a \emph{transitive ordering} of the vertices.
+As mentioned before, a permutation graph and its dual are \emph{transitively orientable}. The \texttt{transitiveOrientation()} method\index{transitiveOrientation@\texttt{transitiveOrientation()}} constructs from a given permutation graph a digraph where each edge of the permutation graph is converted into an arc oriented in increasing alphabetic order of the adjacent vertices' keys (see \citet{GOL-2004}). This orientation of the edges of a permutation graph is always transitive and delivers a \emph{transitive ordering} of the vertices.
 \begin{lstlisting}
 >>> dg = g.transitiveOrientation()
 >>> dg
@@ -306,7 +300,7 @@ The dual of a permutation graph is again a permutation graph and as such also tr
 \section{Recognizing permutation graphs}
 \label{sec:25.4}
 
-Now, a given graph $g$ is a permutation graph if and only if both $g$ \textbf{and} $-g$ are transitively orientable. This  property gives a polynomial test procedure (in $O(n^3)$ due to the transitivity check) for recognizing permutation graphs.
+Now, a given graph \texttt{g} is a permutation graph if and only if both \texttt{g} \textbf{and} \texttt{-g} are transitively orientable. This  property gives a polynomial test procedure (in $O(n^3)$ due to the transitivity check) for recognizing permutation graphs.
 
 Let us consider, for instance, the following random graph of order 8 generated with an edge probability of $40\%$ and a random seed equal to $4335$.
 \begin{lstlisting}
@@ -328,16 +322,16 @@ Let us consider, for instance, the following random graph of order 8 generated w
                        'edgeProbability']
 >>> g.isPerfectGraph()
   True
->>> g.exportGraphViz()
+>>> g.exportGraphViz(fileName='randomGraph4335')
 \end{lstlisting}		    
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=6cm]{Figures/randomGraph4335.png}
+\sidecaption[t]
+\includegraphics[width=6cm]{Figures/randomGraph4335.pdf}
 \caption{Random graph of order 8 generated with edge probability $0.4$.} 
 \label{fig:25.8}       % Give a unique label
 \end{figure}
 
-If the random perfect graph instance $g$, shown in Fig. \ref{fig:25.8}, is indeed a permutation graph, $g$ and its dual $-g$ should be \emph{transitively orientable}, i.e. comparability graphs (see \citet{GOL-2004}). With the \texttt{isComparabilityGraph()} test, we may easily check this fact. This method proceeds indeed by trying to construct a transitive neighbourhood decomposition of a given graph instance and, if successful, stores the resulting edge orientations into a \texttt{edgeOrientations} attribute (see \citet[p.129-132]{GOL-2004}).
+If the random perfect graph instance \texttt{g}, shown in Fig.~\ref{fig:25.8}, is indeed a permutation graph, \texttt{g} and its dual \texttt{-g} should be \emph{transitively orientable}, i.e. comparability graphs (see \citet{GOL-2004}). With the \texttt{isComparabilityGraph()} test\index{isComparabilityGraph@\texttt{isComparabilityGraph()}}, we may easily check this fact. This method proceeds indeed by trying to construct a transitive neighbourhood decomposition of a given graph instance and, if successful, stores the resulting edge orientations into a \texttt{edgeOrientations} attribute (see \citet[p.129-132]{GOL-2004}).
 \begin{lstlisting}[basicstyle=\scriptsize]
 >>> if g.isComparabilityGraph():
 ...     print(g.edgeOrientations)  
@@ -359,18 +353,14 @@ If the random perfect graph instance $g$, shown in Fig. \ref{fig:25.8}, is indee
   ('v7','v7'): 0, ('v7','v8'): 1, ('v8','v7'): -1, ('v8','v8'): 0}
 \end{lstlisting}		    
 \begin{figure}[h]
-\sidecaption
+\sidecaption[t]
 \includegraphics[width=7cm]{Figures/transOrientGraph.png}
-\caption{Transitive neighbourhoods of the graph $g$.} 
+\caption{Transitive neighbourhoods of the graph \texttt{g}.} 
 \label{fig:25.9}       % Give a unique label
 \end{figure}
 
-The resulting orientation of the edges of $g$, shown in Fig. \ref{fig:25.9}, is indeed transitive. The same procedure applied to the dual graph $gd = -g$ gives as well a transitive orientation to the edges of $-g$.
-
-.. code-block:: pycon
-   :linenos:
-
-\begin{lstlisting}[basicstyle=\scriptsize]
+The resulting orientation of the edges of \texttt{g}, shown in Fig.~\ref{fig:25.9}, is indeed transitive. The same procedure applied to the dual graph \texttt{gd} = \texttt{-g} gives as well a transitive orientation to the edges of \texttt{-g}.
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
 >>> gd = -g
 >>> if gd.isComparabilityGraph():
 ...     print(gd.edgeOrientations) 
@@ -392,14 +382,13 @@ The resulting orientation of the edges of $g$, shown in Fig. \ref{fig:25.9}, is 
    ('v7','v7'): 0, ('v7','v8'): 0, ('v8','v7'): 0, ('v8','v8'): 0}
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
+\sidecaption[t]
 \includegraphics[width=7cm]{Figures/transOrientDualGraph.png}
-\caption{Transitive neighbourhoods of the dual graph $-g$. It is worthwhile noticing that the orientation of $g$ is achieved with a single neighbourhood decomposition, covering all the vertices. Whereas, the orientation of the dual graph $-g$ here needs a decomposition into three subsequent neighbourhoods marked in black, red and blue.} 
+\caption{Transitive neighbourhoods of the dual graph \texttt{-g}. It is worthwhile noticing that the orientation of \texttt{g} is achieved with a single neighbourhood decomposition, covering all the vertices. Whereas, the orientation of the dual graph \texttt{-g} here needs a decomposition into three subsequent neighbourhoods marked in black, red and blue.} 
 \label{fig:25.10}       % Give a unique label
 \end{figure}
  
-Let us recheck these facts by explicitly constructing transitively oriented digraph instances with the \texttt{computeTransitivelyOrientedDigraph()} method \footnote{The \texttt{PartiallyDetermined = True} flag (see Lines 2 and 7 above) is required here in order to orient only the actual edges of the graphs. Relations between vertices not linked by an edge are put to the indeterminate characteristic value $0$. This allows us to compute, later on, convenient disjunctive digraph fusions.
-}. 
+Let us recheck these facts by explicitly constructing transitively oriented digraph instances with the \texttt{computeTransitivelyOrientedDigraph()} method\index{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOrientedDigraph()}}.
 \begin{lstlisting}
 >>> og = g.computeTransitivelyOrientedDigraph(\
 ...                      PartiallyDetermined = )
@@ -412,8 +401,9 @@ Let us recheck these facts by explicitly constructing transitively oriented digr
 ...                      (ogd.transitivityDegree)) 
   Transitivity degree: 1.000
 \end{lstlisting}
+The \texttt{PartiallyDetermined = True} flag (see Lines 2 and 7 above) is required here in order to orient only the actual edges of the graphs. Relations between vertices not linked by an edge are put to the indeterminate characteristic value $0$. This allows us to compute, later on, convenient disjunctive digraph fusions.
 
-As both graphs are indeed transitively orientable (see Lines 5 and 10 above), we may conclude that the given random graph $g$ is actually a permutation graph instance. Yet, we still need to find now its corresponding permutation. We therefore implement a recipee given by Martin Golumbic \citep[p. 159]{GOL-2004}.
+As both graphs are indeed transitively orientable (see Lines 5 and 10 above), we may conclude that the given random graph \texttt{g} is actually a permutation graph instance. Yet, we still need to find now its corresponding permutation. We therefore implement a recipee given by Martin Golumbic \citep[p. 159]{GOL-2004}.
 
 We will first \emph{fuse} both $og$ and $ogd$ orientations above with an \emph{epistemic disjunction} operated with the symmetric \texttt{o-max} operator (see Section \ref{sec:2.5}).
 \begin{lstlisting}
@@ -423,18 +413,18 @@ We will first \emph{fuse} both $og$ and $ogd$ orientations above with an \emph{e
 >>> print(s1)
   ['v5','v7','v1','v6','v8','v4','v3','v2']
 \end{lstlisting}
-We obtain with the help of the \texttt{computeCopelandRanking()} method) the linear ordering ['v5','v7','v1','v6','v8','v4','v3','v2'] of the vertices (see Line 5 above).
+With the \texttt{computeCopelandRanking()} method\index{computeCopelandRanking@\texttt{computeCopelandRanking()}}, we obtain the linear ordering [\texttt{v5}, \texttt{v7}, \texttt{v1}, \texttt{v6}, \texttt{v8}, \texttt{v4}, \texttt{v3}, \texttt{v2} of the vertices (see Line 5 above).
 
-We reverse now the orientation of the edges in $og$ (see $-og$ in Line 1 below) in order to generate, again by disjunctive fusion, the \emph{inversions} that are produced by the permutation we are looking for.
+We reverse now the orientation of the edges in \texttt{og} (see \texttt{-og} in Line 1 below) in order to generate, again by disjunctive fusion, the \emph{inversions} that are produced by the permutation we are looking for.
 
-Computing again a ranking with the \Copeland rule, will show the correspondingly permuted list of vertices (see Line 4 below).
+Computing again a ranking with the \Copeland rule, reveals the permuted list of vertices we are looking for (see Line 4 below).
 \begin{lstlisting}
 >>> f2 = FusionDigraph((-og),ogd,operator='o-max')
 >>> s2 = f2.computeCopelandRanking()
 >>> print(s2)
   ['v8','v7','v6','v5','v4','v3','v2','v1']
 \end{lstlisting}
-Vertex 'v8' is put from position 5 to position 1, vertex 'v7' is put from position 2 to position 2, vertex 'v6' from position 4 to position 3, vertex 'v5' from position 1 to position 4, etc ... . We generate these position swaps for all vertices and obtain thus the required permutation (see Line 5 below).
+Vertex \texttt{v8} is put from position 5 to position 1, vertex \texttt{v7} is put from position 2 to position 2, vertex \texttt{v6} from position 4 to position 3, vertex \texttt{v5} from position 1 to position 4, etc ... . We generate these position swaps for all vertices and obtain thus the required permutation (see Line 5 below).
 \begin{lstlisting}
 >>> permutation = [0 for j in range(g.order)]
 >>> for j in range(g.order):
@@ -457,7 +447,7 @@ s4: ['v8', 'v7', 'v6', 'v5', 'v4', 'v3', 'v2', 'v1']
 (s3 -> s4): [5, 2, 4, 1, 6, 7, 8, 3]
 (s4 -> s3) = [4, 2, 8, 3, 1, 5, 6, 7]
 \end{lstlisting}
-The \texttt{computePermutation()} method does directly operate all these steps: - computing transitive orientations, - ranking their epistemic fusion and, - delivering a corresponding permutation.
+The \texttt{computePermutation()} method\index{computePermutation@\texttt{computePermutation()}} does directly operate all these steps: - computing transitive orientations, - ranking their epistemic fusion and, - delivering a corresponding permutation.
 \begin{lstlisting}  
 >>> g.computePermutation(Comments=True)
   ['v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'v7', 'v8']
@@ -468,26 +458,18 @@ The \texttt{computePermutation()} method does directly operate all these steps: 
 We may finally check that, for instance, the two permutations [2, 3, 4, 8, 6, 1, 7, 5] and [4, 2, 8, 3, 1, 5, 6, 7] observed above, will generate corresponding \emph{isomorphic} permutation graphs.
 \begin{lstlisting}  
 >>> gtesta = PermutationGraph(\
-  ...       permutation=[2, 3, 4, 8, 6, 1, 7, 5])
-  >>> gtestb = PermutationGraph(\
-  ...       permutation=[4, 2, 8, 3, 1, 5, 6, 7])
+...             permutation=[2, 3, 4, 8, 6, 1, 7, 5])
+>>> gtestb = PermutationGraph(\
+  ...           permutation=[4, 2, 8, 3, 1, 5, 6, 7])
 >>> gtesta.exportGraphViz('gtesta')
 >>> gtestb.exportGraphViz('gtestb')
 \end{lstlisting}
-.. Figure:: isomorphicPerms.png
-    :alt: Isomorphic permutation graphs
-    :name: isomorphicPermGraphs
-    :width: 700 px
-    :align: center
-
-    Isomorphic permutation graphs
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=10cm]{Figures/isomorphicPerms.png}
+\includegraphics[width=12cm]{Figures/isomorphicPerms.png}
 \caption{Isomorphic permutation graphs.} 
 \label{fig:25.11}       % Give a unique label
 \end{figure}
-
 And, we indeed recover in Fig. \ref{fig:25.11} indeed two isomorphic copies of the original random graph (compare with Fig. \ref{fig:25.8}).
  
 %%%%%%% The chapter bibliography

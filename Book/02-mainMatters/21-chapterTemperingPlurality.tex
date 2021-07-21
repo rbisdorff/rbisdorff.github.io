@@ -322,7 +322,7 @@ Let us finally illustrate how bipolar approval voting systems may favour multipa
 \section{Favouring multipartisan candidates}
 \label{sec:21.3}
 
-In modern democracy, politics  are largely structured by political parties and activists movements. Let us so consider a bipolar approval voting profile $dvp$ where the random voter behaviour is simulated from two pre-electoral polls concerning a political scene with essentially two major competing parties, like the one existing in the US.
+In modern democracy, politics  are largely structured by political parties and activists. Let us so consider a bipolar approval voting profile $dvp$ where the random voter behaviour is simulated from two pre-electoral polls concerning a political scene with essentially two major highly competing parties, like the one existing in the US.
 \begin{lstlisting}[caption={A random bipolar approval voting profile in a divisive political context},label=list:21.6]
 >>> dvp = RandomBipolarApprovalVotingProfile(\
 ...                numberOfCandidates=15,
@@ -358,7 +358,7 @@ In modern democracy, politics  are largely structured by political parties and a
   'a10' : 00.20% | 'a14' : 00.20% | 'a02' : 03.21%
   'a07' : 00.14% | 'a05' : 00.14% | 'a11' : 03.16%
 \end{lstlisting}   
-In Listing \ref{list:21.6}, the divisive political situation is reflected by the fact that Party-1 and Party-2 supporters show strict reversed preferences. The leading candidates of Party-1 ('a05' and 'a14') are last choices for Party-2 supporters and, Candidates 'a07' and 'a10', leading candidates for Party-2 supporters, are similarly the least choices for Party-1 supporters.
+In Listing \ref{list:21.6}, the divisive political situation is reflected by the fact that Party-1 and Party-2 supporters show strict reversed preferences. The leading candidates of Party-1 (\texttt{a05} and \texttt{a14}) are last choices for Party-2 supporters and, Candidates \texttt{a07} and \texttt{a10}, leading candidates for Party-2 supporters, are similarly the least choices for Party-1 supporters.
 
 No clear winner may be guessed from these pre-election polls. As Party-2 shows however slightly more supporters than Party-1, the expected winner in an uninominal plurality or instant-runoff voting system will be Candidate 'a07', i,e, the leading candidate of majority Party-2 (see below).
 \begin{lstlisting}
