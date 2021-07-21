@@ -38,12 +38,12 @@ The {\tt RandomPerformanceTableau} class\index{RandomPerformanceTableau@\texttt{
 \item \texttt{IntegerWeights} := \texttt{True} (default) $|$ \texttt{False} (normalized to proportions of $1.0$).
 \item \texttt{commonScale} := \texttt{[a,b]}; common performance measuring scales (default = $[0.0,100.0]$)
 \item \texttt{commonThresholds} := [(\texttt{q0}, \texttt{q1}), (\texttt{p0}, \texttt{p1}), (\texttt{v0}, \texttt{v1})]; indifference($q$), preference ($p$) and considerable performance difference ($v$) discrimination thresholds. For each threshold type $x \in \{q,p,v\}$, the float $x0$ value represents a \emph{constant percentage} of the common scale and the float $x1$ value a \emph{proportional value} of the actual performance measure. Default values are $[(2.5.0,0.0), (5.0,0.0), (60.0,0,0)]$. 
-\item \texttt{commonMode} := common random distribution of random performance measurements:
+\item \texttt{commonMode} := common distribution of random performance measurements\footnote{See Lecture 3 of the Computational Statistic Course \citep{CPSTAT-L3}.}:
       \begin{itemize}[rightmargin=1cm]
          \item (\texttt{'beta'}, \texttt{None} (default setting), ($\alpha$, $\beta$)), a beta generator with default $\alpha=2$ and $\beta=2$ parameters.
          \item  (\texttt{'uniform'}, \texttt{None}, \texttt{None}), uniformly distributed float values on the given common scales' range \texttt{[Min, Max]};
          \item (\texttt{'normal'}, $\mu$, $\sigma$), truncated Gaussian distribution, by default $\mu = (b-a)/2$ and $\sigma = (b-a)/4$;
-         \item (\texttt{'triangular'}, \emph{mode}, \emph{repartition}), generalized triangular distribution with a probability repartition parameter specifying the probability mass accumulated until the mode value. By default, \emph{mode} = $(b-a)/2$ and \texttt{repartition} = $0.5$.
+         \item (\texttt{'triangular'}, \emph{mode}, \emph{repartition}), generalized triangular distribution with a probability repartition parameter specifying the probability mass accumulated until the mode value. By default, \emph{mode} = $(b-a)/2$ and \texttt{repartition} = $0.5$.\footnote{The \texttt{randomNumbers}\index{randomNumbers@\texttt{randomNumbers} module} module provides for this purpose the \texttt{ExtendedTriangularRandomVariable} class\index{ExtendedTriangularRandomVariable@\texttt{ExtendedTriangularRandomVariable} class}.}
       \end{itemize}
 \item \texttt{valueDigits} := \texttt{integer}, precision of performance measurements (2 decimal digits by default).
 \item \texttt{missingDataProbability} := $0.0 \leq \mathtt{float} \leq 1.0$ ; probability of missing performance evaluation on a criterion for an alternative (default $0.025$).
@@ -479,4 +479,15 @@ The \NetFlows ranking represents also a rather \emph{fair weighted consensus} be
 The correlation with the marginal course rankings follows precisely the given ECTS weights. Course \texttt{m7}, with the highest relative weight ($0.294$) is most present ($+0.727$) in the global \NetFlows ranking and no course marginal ranking appears negatively correlated with this ranking. The mean weighted correlation is $+0.361$.
 
 \vspace{1cm}
-Useful multiple incommensuarble criteria ranking rules are presented and discussed in detail in Chapter~\ref{sec:8}. In the next Chapter~\ref{sec:7}, we first show how to compute the winner of an election on the basis of a different performance evaluation model, namely \emph{linear voting profiles} who are discussed in social choice theory.
+Useful multiple incommensuarble criteria ranking rules are presented and discussed in detail in Chapter~\ref{sec:8}. In the next Chapter~\ref{sec:7}, we first show how to compute the winner of an election on the basis of a different kind of performance evaluation models, namely \emph{linear voting profiles} who are discussed in social choice theory.
+
+%%%%%%%
+%The chapter bibliography
+%\normallatexbib
+\clearpage
+%\phantomsection
+%\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{spbasic}
+%\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/10-chapterAbsoluteRating.bbl} 

@@ -478,7 +478,7 @@ It may be interesting to compare this result with a \Copeland ranking of the und
 
 In the resulting linear ranking (see Fig. \ref{fig:17.10}), alternative \texttt{a4} is set at first rank, followed by alternative \texttt{a2}. This makes sense as action \texttt{a4} shows three performances in the first quintile, whereas \texttt{a2} is only partially evaluated and shows only two such excellent performances. But \texttt{a4} also shows a very weak performance in the first quintile. Both decision actions, hence, don't show eventually a performance profile that would make apparent a clear preference situation in favour of one or the other. In this sense, the prekernels based best choice recommendations may appear more faithful with respect to the actually definite strict outranking relation than any 'forced' linear ranking result as shown in Fig. \ref{fig:17.9}.
 
-\section{Tractability of prekernel computation}
+\section{Tractability of kernel computation}
 \label{sec:17.5}
 
 Let us give some hints on the \emph{tractability} of prekernel computations. Detecting all prekernels in a digraph is a famously NP-hard computational problem. Checking external stability conditions for an independent choice is equivalent to checking its maximality and may be done in the linear complexity of the order of the digraph. However, checking all independent choices contained in a digraph may get hard already for tiny sparse digraphs of order $n > 20$ (see \citep{BIS-2006b}). Indeed, the worst case is given by an empty or indeterminate digraph where the set of all potential independent choices to check is in fact the power set of the vertices.

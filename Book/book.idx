@@ -72,61 +72,68 @@
 \indexentry{performance criteria|hyperpage}{63}
 \indexentry{performance tableau!coherent|hyperpage}{64}
 \indexentry{RandomPerformanceTableau@\texttt{RandomPerformanceTableau} class|hyperpage}{72}
+\indexentry{randomNumbers@\texttt  {randomNumbers} module|hyperpage}{73}
+\indexentry{ExtendedTriangularRandomVariable@\texttt  {ExtendedTriangularRandomVariable} class|hyperpage}{73}
 \indexentry{RandomCBPerformanceTableau@\texttt{RandomCBPerformanceTableau} class|hyperpage}{74}
 \indexentry{showStatistics@\texttt{showStatistics()}|hyperpage}{76}
 \indexentry{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformanceTableau} class|hyperpage}{78}
 \indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformanceTableau()}|hyperpage}{83}
 \indexentry{showCourseStatistics@\texttt{showCourseStatistics()}|hyperpage}{84}
 \indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}|hyperpage}{85}
-\indexentry{votingProfiles@\texttt{votingProfiles} module|hyperpage}{87}
-\indexentry{LinearVotingProfile@\texttt{LinearVotingProfile} class|hyperpage}{87}
-\indexentry{RandomLinearVotingProfile@\texttt{RandomLinearVotingProfile} class|hyperpage}{88}
-\indexentry{showLinearBallots@\texttt{showLinearBallots()}|hyperpage}{88}
-\indexentry{computeUninominalVotes@\texttt{computeUninominalVotes}()|hyperpage}{89}
-\indexentry{computeSimpleMajorityWinner@\texttt{computeSimpleMajorityWinner()}|hyperpage}{89}
-\indexentry{computeInstantRunoffWinner@\texttt{computeInstantRunoffWinner()}|hyperpage}{89}
-\indexentry{computeRankAnalysis@\texttt{computeRankAnalysis()}|hyperpage}{89}
-\indexentry{computeBordaWinners@\texttt{computeBordaWinners}()|hyperpage}{89}
-\indexentry{showRankAnalysisTable@\texttt{showRankAnalysisTable()}|hyperpage}{90}
-\indexentry{majority margins|hyperpage}{90}
-\indexentry{majority margins digraph|hyperpage}{90}
-\indexentry{MajorityMarginsDigraph@\texttt{MajorityMarginsDigraph} class|hyperpage}{90}
-\indexentry{weak tournament|hyperpage}{91}
-\indexentry{Condorcet!winner|hyperpage}{91}
-\indexentry{computeChordlessCircuits|hyperpage}{93}
-\indexentry{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}|hyperpage}{93}
-\indexentry{computeRankingByChoosing@\texttt{computeRankingByChoosing()}|hyperpage}{96}
-\indexentry{digraph!Condorcet|hyperpage}{102}
-\indexentry{WeakCopelandOrder@\texttt{WeakCopelandOrder} class|hyperpage}{105}
-\indexentry{WeakNetFlowsOrder@\texttt{WeakNetFlowsOrder} class|hyperpage}{106}
-\indexentry{RankingsFusion@\texttt{RankingsFusion} class|hyperpage}{108}
-\indexentry{showRankingConsensusQuality@Showrankingconsensusquality()|hyperpage}{108}
-\indexentry{IteratedNetFlowsRanking@\texttt{IteratedNetFlowsRanking} class|hyperpage}{112}
-\indexentry{Tideman@\emph{Tideman}|hyperpage}{114}
-\indexentry{RankedPairsRanking@\texttt{RankedPairsRanking} class|hyperpage}{114}
-\indexentry{QuantilesSortingDigraph@\texttt{QuantilesSortingDigraph} class|hyperpage}{119}
-\indexentry{showCriteriaQuantileLimits@\texttt{showCriteriaQuantileLimits()}|hyperpage}{120}
-\indexentry{showSorting@\texttt{showSorting()}|hyperpage}{120}
-\indexentry{showSortingCharacteristics@\texttt{showSortingCharacteristics()}|hyperpage}{120}
-\indexentry{PerformanceQuantiles@\texttt{PerformanceQuantiles} class|hyperpage}{128}
-\indexentry{IncrementalQuantilesEstimator@\texttt{IncrementalQuantilesEstimator} class|hyperpage}{128}
-\indexentry{randomNumbers@\texttt{randomNumbers} module|hyperpage}{128}
-\indexentry{showLimitingQuantiles@\texttt{showLimitingQuantiles()}|hyperpage}{129}
-\indexentry{RandomPerformanceGenerator@\texttt{RandomPerformanceGenerator()}|hyperpage}{130}
-\indexentry{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class|hyperpage}{130}
-\indexentry{showQuantilesRating@\texttt{showQuantilesRating()}|hyperpage}{134}
-\indexentry{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}|hyperpage}{134}
-\indexentry{digraph!complete|hyperpage}{234}
-\indexentry{digraph!empty|hyperpage}{235}
-\indexentry{digraph!indeterminate|hyperpage}{235}
-\indexentry{digraph!indeterminate|hyperpage}{235}
-\indexentry{chordless circuits!odd|hyperpage}{236}
-\indexentry{filled circuits|hyperpage}{236}
-\indexentry{CirculantDigraph@\texttt{CirculantDigraph} class|hyperpage}{237}
-\indexentry{showPreKernels@\texttt{showPreKernels}()|hyperpage}{240}
-\indexentry{Hertz@\emph{A. Hertz}|hyperpage}{245}
-\indexentry{showMISAH@\texttt{showMIS\_AH}()|hyperpage}{245}
-\indexentry{independentChoices@\texttt{independentChoices}()|hyperpage}{246}
-\indexentry{Pirlot@\textsl{M. Pirlot}|hyperpage}{248}
-\indexentry{Neumann@\textsl{J. von Neumann}|hyperpage}{248}
-\indexentry{Roubens@\textsl{M. Roubens}|hyperpage}{255}
+\indexentry{votingProfiles@\texttt{votingProfiles} module|hyperpage}{89}
+\indexentry{LinearVotingProfile@\texttt{LinearVotingProfile} class|hyperpage}{89}
+\indexentry{RandomLinearVotingProfile@\texttt{RandomLinearVotingProfile} class|hyperpage}{90}
+\indexentry{showLinearBallots@\texttt{showLinearBallots()}|hyperpage}{90}
+\indexentry{computeUninominalVotes@\texttt{computeUninominalVotes}()|hyperpage}{91}
+\indexentry{computeSimpleMajorityWinner@\texttt{computeSimpleMajorityWinner()}|hyperpage}{91}
+\indexentry{computeInstantRunoffWinner@\texttt{computeInstantRunoffWinner()}|hyperpage}{91}
+\indexentry{computeRankAnalysis@\texttt{computeRankAnalysis()}|hyperpage}{91}
+\indexentry{computeBordaWinners@\texttt{computeBordaWinners}()|hyperpage}{91}
+\indexentry{showRankAnalysisTable@\texttt{showRankAnalysisTable()}|hyperpage}{92}
+\indexentry{majority margins|hyperpage}{92}
+\indexentry{majority margins digraph|hyperpage}{92}
+\indexentry{MajorityMarginsDigraph@\texttt{MajorityMarginsDigraph} class|hyperpage}{92}
+\indexentry{weak tournament|hyperpage}{93}
+\indexentry{Condorcet!winner|hyperpage}{93}
+\indexentry{computeChordlessCircuits|hyperpage}{95}
+\indexentry{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}|hyperpage}{95}
+\indexentry{computeRankingByChoosing@\texttt{computeRankingByChoosing()}|hyperpage}{98}
+\indexentry{digraph!Condorcet|hyperpage}{104}
+\indexentry{WeakCopelandOrder@\texttt{WeakCopelandOrder} class|hyperpage}{107}
+\indexentry{WeakNetFlowsOrder@\texttt{WeakNetFlowsOrder} class|hyperpage}{108}
+\indexentry{RankingsFusion@\texttt{RankingsFusion} class|hyperpage}{110}
+\indexentry{showRankingConsensusQuality@Showrankingconsensusquality()|hyperpage}{110}
+\indexentry{IteratedNetFlowsRanking@\texttt{IteratedNetFlowsRanking} class|hyperpage}{114}
+\indexentry{Tideman@\emph{Tideman}|hyperpage}{116}
+\indexentry{RankedPairsRanking@\texttt{RankedPairsRanking} class|hyperpage}{116}
+\indexentry{QuantilesSortingDigraph@\texttt{QuantilesSortingDigraph} class|hyperpage}{121}
+\indexentry{showCriteriaQuantileLimits@\texttt{showCriteriaQuantileLimits()}|hyperpage}{122}
+\indexentry{showSorting@\texttt{showSorting()}|hyperpage}{122}
+\indexentry{showSortingCharacteristics@\texttt{showSortingCharacteristics()}|hyperpage}{122}
+\indexentry{PerformanceQuantiles@\texttt{PerformanceQuantiles} class|hyperpage}{130}
+\indexentry{IncrementalQuantilesEstimator@\texttt{IncrementalQuantilesEstimator} class|hyperpage}{130}
+\indexentry{randomNumbers@\texttt{randomNumbers} module|hyperpage}{130}
+\indexentry{showLimitingQuantiles@\texttt{showLimitingQuantiles()}|hyperpage}{131}
+\indexentry{RandomPerformanceGenerator@\texttt{RandomPerformanceGenerator()}|hyperpage}{132}
+\indexentry{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class|hyperpage}{132}
+\indexentry{showQuantilesRating@\texttt{showQuantilesRating()}|hyperpage}{136}
+\indexentry{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}|hyperpage}{136}
+\indexentry{digraph!complete|hyperpage}{238}
+\indexentry{digraph!empty|hyperpage}{239}
+\indexentry{digraph!indeterminate|hyperpage}{239}
+\indexentry{digraph!indeterminate|hyperpage}{239}
+\indexentry{chordless circuits!odd|hyperpage}{240}
+\indexentry{filled circuits|hyperpage}{240}
+\indexentry{CirculantDigraph@\texttt{CirculantDigraph} class|hyperpage}{241}
+\indexentry{showPreKernels@\texttt{showPreKernels}()|hyperpage}{244}
+\indexentry{Hertz@\emph{A. Hertz}|hyperpage}{249}
+\indexentry{showMISAH@\texttt{showMIS\_AH}()|hyperpage}{249}
+\indexentry{independentChoices@\texttt{independentChoices}()|hyperpage}{250}
+\indexentry{Pirlot@\textsl{M. Pirlot}|hyperpage}{252}
+\indexentry{Neumann@\textsl{J. von Neumann}|hyperpage}{252}
+\indexentry{Roubens@\textsl{M. Roubens}|hyperpage}{259}
+\indexentry{votingProfiles@\texttt{votingProfiles} module|hyperpage}{297}
+\indexentry{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class|hyperpage}{297}
+\indexentry{showApprovalResults@\texttt{showApprovalResults()}|hyperpage}{298}
+\indexentry{showDisapprovalResults@\texttt{showDisapprovalResults()}|hyperpage}{298}
+\indexentry{showNetApprovalScores@\texttt{showNetApprovalScores()}|hyperpage}{299}

@@ -6,15 +6,15 @@
 \abstract{}
 
 \begin{quotation}\emph{The choice of a voting procedure shapes the democracy in which we live}.\\
-    -- Baujard A., Gavrel F., Igersheim H., Laslier J.-F. and Lebon I. [BAU-2013p].
+    -- \citet*{BAU-2012}.
 \end{quotation}
 
 \section{Bipolar approval voting systems}
 \label{sec:21.1}
 
-In the \texttt{votingProfiles} module we provide a \\ \texttt{BipolarApprovalVotingProfile} class for handling voting results where, for each eligible candidate $c$, the voters are invited  to \emph{approve} ($+1$), \emph{disapprove} ($-1$), or \emph{ignore} ($0$) the statement that candidate $c$ should win the election.
+In the \texttt{votingProfiles} module\index{votingProfiles@\texttt{votingProfiles} module} we provide a \texttt{BipolarApprovalVotingProfile} class\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class} for handling voting results where, for each eligible candidate $c$, the voters are invited  to \emph{approve} ($+1$), \emph{disapprove} ($-1$), or \emph{ignore} ($0$) the statement that candidate $c$ should win the election.
 
-File \texttt{bpApVotingProfile.py} Footnote[x] contains such a bipolar approval voting profile concerning 100 voters and 15 eligible candidates \footnote{The file \texttt{bpApVotingProfile.py} may be found in the \texttt{examples} directory of the \Digraph resources.}. We may inspect its content as follows.
+File \texttt{bpApVotingProfile.py} contains such a bipolar approval voting profile concerning 100 voters and 15 eligible candidates \footnote{The file \texttt{bpApVotingProfile.py} may be found in the \texttt{examples} directory of the \Digraph resources.}. We may inspect its content as follows.
 \begin{lstlisting}
 >>> from votingProfiles import \
 ...                 BipolarApprovalVotingProfile
@@ -56,7 +56,7 @@ Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Li
 \end{lstlisting}	
 Let us denote $A_v$ the set of candidates approved by voter $v$. In the \texttt{approvalBallot} attribute we hence record in fact the bipolar-valued truth characteristic values $r(c \in A_v)$ of the statements that candidate $c$ \emph{is approved} by voter $v$. In Listing \ref{list:21.1} Line 5, we observe for instance that voter 'v001' positively approves candidate 'a04'. And, in Line 10, we see that voter 'v002' negatively approves, i.e. positively disapproves candidate 'a01'.
 
-We may now consult how many approvals or disapprovals each candidate receives.
+We may now consult with the \texttt{showApprovalResults()} method\index{showApprovalResults@\texttt{showApprovalResults()}} and the \texttt{showDisapprovalResults()} method\index{showDisapprovalResults@\texttt{showDisapprovalResults()}} how many approvals or disapprovals each candidate receives.
 \begin{lstlisting}
 >>> bavp.showApprovalResults()
     Approval results
@@ -97,13 +97,13 @@ We may now consult how many approvals or disapprovals each candidate receives.
     Total disapproval votes: 376
     Disapproval proportion: 376/1500 = 0.25
 \end{lstlisting}
-In Lines 3 and 22 above, we may see that, of all potential candidates, it is Candidate 'a12' who receives the highest number of approval votes (34) and the lowest number of disapproval votes (16). Total number of approval, respectively disapproval, votes approaches more or less a proportion of $25\%$ of the $100 \times 15 = 1500$ potential approval votes. About $50\%$ of the latter remain hence ignored. 
+In Lines 3 and 22 above, we may see that, of all potential candidates, it is Candidate \texttt{a12} who receives the highest number of approval votes (34) and the lowest number of disapproval votes (16). Total number of approval, respectively disapproval, votes approaches more or less a proportion of $25\%$ of the $100 \times 15 = 1500$ potential approval votes. About $50\%$ of the latter remain hence ignored. 
 
-When operating now, for each candidate $c$, the difference between the number of approval and the number of disapproval votes he receives, we obtain per candidate a corresponding \emph{net approval} score; in fact, the bipolar truth characteristic value of the statement ``\emph{candidate c should win the election}''.
+When operating now, for each candidate \texttt{C}, the difference between the number of approval and the number of disapproval votes he receives, we obtain per candidate a corresponding \emph{net approval} score; in fact, the bipolar truth characteristic value of the statement ``\emph{candidate C should win the election}''.
 \begin{equation}
-r(\text{Candidate c should win the election}) \;=\; \sum_v \big(r(c \in A_v)\big)\;.
+r(\text{Candidate C should win the election}) \;=\; \sum_v \big(r(C \in A_v)\big)\;.
 \end{equation}
-These bipolar characteristic values are stored in the \texttt{netApprovalScores} attribute and may be printed out as follows:
+These bipolar characteristic values are stored in the \texttt{netApprovalScores} attribute and may be printed out with the \texttt{showNetApprovalScores()} method\index{showNetApprovalScores@\texttt{showNetApprovalScores()}}:
 \begin{lstlisting}
 >>> bavp.showNetApprovalScores()
   Net Approval Scores
@@ -123,11 +123,10 @@ These bipolar characteristic values are stored in the \texttt{netApprovalScores}
      Candidate: 'a01' obtains -5 net approvals
      Candidate: 'a10' obtains -6 net approvals
 \end{lstlisting}
-We observe in Line 3 above that Candidate 'a12', with a net approval score of $34 - 16 = 18$, represents indeed the \emph{best approved} candidate for winning the election. With a net approval score of $28-22 = 6$, Candidate 'a03' appears 2nd-best approved. The net approval scores define hence a potentially weak ranking on the set of eligible election candidates, and the winner(s) of the election is(are) determined by the first-ranked candidate(s).
+We observe in Line 3 above that Candidate \texttt{a12}, with a net approval score of $34 - 16 = 18$, represents indeed the \emph{best approved} candidate for winning the election. With a net approval score of $28-22 = 6$, Candidate \texttt{a03} appears 2nd-best approved. The net approval scores define hence a potentially weak ranking on the set of eligible election candidates, and the winner(s) of the election is(are) determined by the first-ranked candidate(s).
 
 \section{Pairwise comparison of bipolar approval votes}
 \label{sec:21.1}
-
 
 The approval votes of each voter define now on the set of eligible candidates three ordered categories: his approved ($+1$), his ignored ($0$) and his disapproved ($-1$) ones. Within each of these three categories we consider the voter's actual preferences as \emph{not communicated}, i.e. as missing data. This gives for each voter a partially determined strict order which we find in the \texttt{ballot} attribute.
 \begin{lstlisting}
@@ -141,7 +140,7 @@ The approval votes of each voter define now on the set of eligible candidates th
      'a09': Decimal('0'), 'a03': Decimal('1'),
      'a10': Decimal('0')}
 \end{lstlisting}
-For voter 'v001, for instance, the best approved candidate 'a12' is strictly preferred to candidates: 'a01', 'a02', 'a03', 'a05', 'a06', 'a07', 'a08', 'a11', 'a14' and '15'. No candidate is preferred to 'a12' and the comparison with 'a04', 'a09', 'a10' and 'a13' is not communicated, hence indeterminate. Mind by the way that the reflexive comparison of 'a12' with itself is, as usual, is ignored, i.e. indeterminate. Each voter $v$ defines thus a partially determined transitive strict preference relation denoted $\succ_v$ on the eligible candidates.
+For voter \texttt{v001}, for instance, the best approved candidate \texttt{a12} is strictly preferred to candidates: \texttt{a01}, \texttt{a02}, \texttt{a03}, \texttt{a05}, \texttt{a06}, \texttt{a07}, \texttt{a08}, \texttt{a11}, \texttt{a14} and \texttt{a15}. No candidate is preferred to \texttt{a12} and the comparison with \texttt{a04}, \texttt{a09}, \texttt{a10} and \texttt{a13} is not communicated, hence indeterminate. Mind by the way that the reflexive comparison of \texttt{a12} with itself is, as usual, ignored, i.e. indeterminate. Each voter $v$ defines thus a partially determined transitive strict preference relation denoted $\succ_v$ on the eligible candidates.
 
 For each pair of eligible candidates, we aggregate the previous individual voter's preferences into a truth characteristic of the statement: ``candidate $x$ is \emph{better approved than} candidate $y$'', denoted $r(x \succ y)$:
 \begin{equation}
@@ -178,9 +177,9 @@ We may inspect these pairwise $r(x \succ y)$ values in a browser view:
 \label{fig:21.1}       % Give a unique label
 \end{figure}
 
-It gets easily apparent that candidate 'a12' is a \Condorcet winner, i.e. the candidate who beats all the other candidates and, with the given voting profile $gavp$, should without doubt win the election. This strongly confirms the first-ranked result obtained with the previous net approval scoring. 
+It gets easily apparent that candidate \texttt{a12} is a \Condorcet winner, i.e. the candidate who beats all the other candidates and, with the given voting profile $gavp$, should without doubt win the election. This strongly confirms the first-ranked result obtained with the previous net approval scoring. 
 
-Let us eventually compute, with the help of the \NetFlows ranking rule, a linear ranking of the 15 eligible candidates and compare the result with the net approval scores ranking.
+Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{See Section~\ref{sec:8.3}.}, a linear ranking of the 15 eligible candidates and compare the result with the net approval scores ranking.
 \begin{lstlisting}[caption={Comparing the net approval and the \NetFlows rankings},label=list:21.2]
 >>> from linearOrders import NetFlowsOrder
 >>> nf = NetFlowsOrder(m,Comments=True)
@@ -208,21 +207,22 @@ Let us eventually compute, with the help of the \NetFlows ranking rule, a linear
       'a10'	   -122.000	  -6.0
       'a01'	   -126.000	  -5.0
 \end{lstlisting}
-In Listing \ref{list:21.2} we may notice that the \NetFlows rule delivers a ranking that is very similar to the one previously obtained with the corresponding \emph{Net Approval} scores. Only minor inversions do appear, like in the midfield, where candidate 'a09' advances before candidates 'a13' and a14' (see Line 16) , and 'a6' and 'a07' swap their positions 9 and 10 (see Line 19). And, the two last-ranked candidates 'a10' and 'a01' also swap their positions.
+In Listing \ref{list:21.2} we may notice that the \NetFlows rule delivers a ranking that is very similar to the one previously obtained with the corresponding \emph{Net Approval} scores. Only minor inversions do appear, like in the midfield, where candidate \texttt{a09} advances before candidates \texttt{a13} and \texttt{a14} (see Line 16), and \texttt{a6} and \texttt{a07} swap their positions 9 and 10 (see Line 19). And, the two last-ranked candidates \texttt{a10} and \texttt{a01} also swap their positions.
 
 This confirms again the pertinence of the net approval scoring approach for finding the winner in a bipolar approving voting system. Yet, voting by approving ($+1$), disapproving ($-1$) or ignoring ($0$) eligible candidates, may also be seen as a performance evaluation of the eligible candidates on a $\{-1, 0, 1\}$-graded ordinal scale.
 
 \section{Three-valued evaluative voting system}
 \label{sec:21.2}
 
-Following such an epistemic perspective, we may effectively convert the given \texttt{BipolarApprovalVotingProfile} instance into\\ a \texttt{PerformanceTableau} instance, so as to get access to a corresponding outranking decision aiding approach.
+Following such an epistemic perspective, we may effectively convert the given \texttt{BipolarApprovalVotingProfile} instance into a \texttt{PerformanceTableau} instance, so as to get access to a corresponding outranking decision aiding approach.
 
 Mind that, contrary to the majority margins of the ``\emph{better approved than}'' relation, all voters consider now the approved candidates to be all equivalent ($+1$). Same is true for the disapproved ($-1$), respectively the ignored ($0$) candidates. The voter's marginal preferences model this time a complete preorder with three equivalence classes. 
 
-From the saved file \texttt{AVPerfTab.py} (see Line 1 below), we may construct an outranking relation on the eligible candidates with our \\ standard \texttt{BipolarOutrankingDigraph} constructor. The semantics of this outranking relation are the following:
-\begin{itemize}
-\item We say that Candidate $x$ \emph{outranks} Candidate $y$ when there is a majority of voters who consider $x$ \emph{at least as well evaluated as} $y$ (see Line3 below);
-\item We say that Candidate $x$ is \emph{outranked by} Candidate $y$ when there is a majority of voters who consider $x$ \emph{not at least as well evaluated as} $y$.
+From the saved file \texttt{AVPerfTab.py} (see Line 1 below), we may construct an outranking relation on the eligible candidates with our standard \texttt{BipolarOutrankingDigraph} constructor. The semantics of this outranking relation are the following:
+\begin{itemize}[nosep,leftmargin=0.5cm,rightmargin=0.5cm]
+\item We say that Candidate $x$ \emph{outranks} Candidate $y$ when there is a majority of voters who consider $x$ \emph{at least as well evaluated as} $y$ (see Listing~\ref{list:21.3} Line 3 below);
+\item We say that Candidate $x$ is \emph{outranked by} Candidate $y$ when there is a majority of voters who consider $x$ \emph{not at least as well evaluated as} $y$;
+\item Otherwise, the outranking situation is indeterminate.
 \end{itemize}
 \begin{lstlisting}[caption={Computing the outranking digraph},label=list:21.3]
 >>> bavp.save2PerfTab(fileName='AVPerfTab',valueDigits=0)
@@ -276,7 +276,7 @@ Yet, we may nevertheless try to apply again the \NetFlows ranking rule to this c
 \end{lstlisting}
 Despite its apparent poor strict preference discriminating power, we obtain in Listing \ref{list:21.4} here \NetFlows scores that are directly proportional (divided by $100$) to the scores obtained with the \emph{better approved than} majority margins digraph $m$ (see Listing \ref{list:21.2}).
 
-Encouraged by this positive result, we may furthermore try to compute as well a best choice recommendation.
+Encouraged by this positive result, we may furthermore compute as well a best choice recommendation.
 \begin{lstlisting}[caption={Computing a best social choice recommendation},label=list:21.5]
 >>> odg.showBestChoiceRecommendation(CoDual=True)
   Rubis best choice recommendation(s) (BCR)
@@ -313,9 +313,9 @@ Encouraged by this positive result, we may furthermore try to compute as well a 
          'a09': 0.28, 'a04': 0.26, 'a10': 0.24,
          'a05': 0.20, 'a03': 0.20, 'a12': 0.06, }
 \end{lstlisting}
-The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --best as well as last-- choice recommendation which trivially retains all fifteen candidates (see Listing \ref{list:21.5} Lines 6-8 above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate 'a12' the most credible one with a $72\%$ majority of voters' support (see Line 15, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate 'a03' ($67\%$) and Candidate 'a04' ($65\%$). Similarly, Candidates 'a13' and 'a06' represent the most credible losers with a $68\%$ majority voters' support (Line 30).
+The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --best as well as last-- choice recommendation which trivially retains all fifteen candidates (see Listing \ref{list:21.5} Lines 6-8 above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate \texttt{a12} the most credible one with a $72\%$ majority of voters' support (see Line 15, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate \texttt{a03} ($67\%$) and Candidate \texttt{a04} ($65\%$). Similarly, Candidates \texttt{a13} and \texttt{a06} represent the most credible losers with a $68\%$ majority voters' support (Line 30).
 
-We observe here empirically that \emph{evaluative} voting systems, using three-valued ordinal performance scales, match closely a corresponding bipolar approval voting systems. The latter voting system models, however, more faithfully the very preferential information that is expressed with \emph{approved}, \emph{disapproved} or \emph{ignored} statements. The corresponding evaluation on a three-graded scale, being value (numbers) based, cannot express the fact that in bipolar approval voting systems there is no preferential information given concerning the pairwise comparison of all approved, respectively disapproved or ignored candidates.
+We observe here empirically that \emph{evaluative} voting systems, using three-valued ordinal performance scales, match closely a corresponding bipolar approval voting systems. The latter voting system models, however, more faithfully the very preferential information that is expressed with \emph{approved}, \emph{disapproved} and \emph{ignored} statements. The corresponding evaluation on a three-graded scale, being value (numbers) based, cannot express the fact that in bipolar approval voting systems there is no preferential information given concerning the pairwise comparison of all approved, respectively disapproved or ignored candidates.
 
 Let us finally illustrate how bipolar approval voting systems may favour multipartisan supported candidates. We shall therefore compare \emph{bipolar approval} versus \emph{uninominal plurality} election results when considering a highly divisive and partisan political context.
  
@@ -484,3 +484,12 @@ Let us conclude by predicting that, for leading political candidates in an aggre
 
 It is worthwhile noticing again the essential structural and computational role, the ignored value is again playing in bipolar approval voting systems. This epistemic and logical \emph{neutral} term is needed indeed for handling in a consistent and efficient manner \emph{not communicated votes} and/or \emph{indeterminate} preferential statements.
  
+%%%%%%% The chapter bibliography
+%\normallatexbib
+\clearpage
+%\phantomsection
+%\addcontentsline{toc}{section}{Chapter Bibliography}
+\bibliographystyle{spbasic}
+%\typeout{}
+\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/17-chapterKernels.bbl}
