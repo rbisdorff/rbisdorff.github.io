@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  22 JUL 2021 10:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  22 JUL 2021 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -663,8 +663,7 @@ LaTeX Warning: Label `sec:21.1' multiply defined.
 
 LaTeX Warning: Label `sec:23.2' multiply defined.
 
-) (./02-mainMatters/24-chapterPerfectGraphs.aux) (./03-backMatters/appendix.aux
-))
+) (./02-mainMatters/24-chapterPerfectGraphs.aux))
 \openout1 = `book.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
@@ -685,7 +684,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
 LaTeX Font Info:    ... okay on input line 143.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
 LaTeX Font Info:    ... okay on input line 143.
- (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count326
 \scratchdimen=\dimen196
@@ -2757,41 +2757,21 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 470--471
 
 
 ]
-\openout2 = `03-backMatters/appendix.aux'.
+(./book.lol [355
 
 
-(./03-backMatters/appendix.tex) [355
-
-
-
-
-]
-No file book.bbl.
-[356
-
-
-
-
-] (./book.lol [357] [358] [359])
+] [356] [357])
 \tf@lol=\write8
 \openout8 = `book.lol'.
 
- [360] (./book.lof [361
+ [358] (./book.lot)
+\tf@lot=\write9
+\openout9 = `book.lot'.
+
+ (./book.ind [359
 
 
-] [362] [363]
-[364] [365] [366])
-\tf@lof=\write9
-\openout9 = `book.lof'.
-
- [367] [368
-
-
-] (./book.lot)
-\tf@lot=\write10
-\openout10 = `book.lot'.
-
- (./book.ind [369] [370
+] [360
 
 
 ]
@@ -2804,7 +2784,7 @@ Overfull \hbox (3.17114pt too wide) in paragraph at lines 71--73
 []\OT1/pcr/m/n/8.5 ExtendedTriangularRandomVariable 
  []
 
-[371]
+[361]
 Overfull \hbox (18.47112pt too wide) in paragraph at lines 163--165
 []\OT1/pcr/m/n/8.5 Random3ObjectivesPerformanceTableau 
  []
@@ -2819,14 +2799,14 @@ Overfull \hbox (3.17114pt too wide) in paragraph at lines 172--174
 []\OT1/pcr/m/n/8.5 RandomIntervalIntersectionsGraph 
  []
 
-[372]
+[362]
 Overfull \hbox (3.17114pt too wide) in paragraph at lines 225--227
 []\OT1/pcr/m/n/8.5 StrongComponentsCollapsedDigraph 
  []
 
-[373])
-\tf@thm=\write11
-\openout11 = `book.thm'.
+[363])
+\tf@thm=\write10
+\openout10 = `book.thm'.
 
 
 
@@ -2857,7 +2837,7 @@ Package natbib Warning: There were undefined citations.
 (./02-mainMatters/21-chapterTemperingPlurality.aux) (./02-mainMatters/part5.aux
 ) (./02-mainMatters/22-chapterGraphs.aux)
 (./02-mainMatters/23-chapterTreeGraphs.aux)
-(./02-mainMatters/24-chapterPerfectGraphs.aux) (./03-backMatters/appendix.aux))
+(./02-mainMatters/24-chapterPerfectGraphs.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -2869,15 +2849,15 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: B2DFCADC7D480D8E8698DB12B055D3C7;43962.
+(rerunfilecheck)             Checksum: 34DEEAD7F36449D34E3D4EBC9D3820AE;43962.
 Package rerunfilecheck Info: File `book.brf' has not changed.
 (rerunfilecheck)             Checksum: 5BA2BAAC2D77462842DE009BEAEE355A;5347.
  ) 
 Here is how much of TeX's memory you used:
- 24955 strings out of 478994
- 377888 string characters out of 5858184
- 1150094 words of memory out of 5000000
- 34650 multiletter control sequences out of 15000+600000
+ 24925 strings out of 478994
+ 377458 string characters out of 5858184
+ 1149247 words of memory out of 5000000
+ 34642 multiletter control sequences out of 15000+600000
  488906 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,12n,102p,1507b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2905,10 +2885,10 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (385 pages, 7650627 bytes).
+Output written on book.pdf (375 pages, 7624193 bytes).
 PDF statistics:
- 12617 PDF objects out of 12825 (max. 8388607)
- 11785 compressed objects within 118 object streams
- 7029 named destinations out of 7423 (max. 500000)
+ 12295 PDF objects out of 12825 (max. 8388607)
+ 11476 compressed objects within 115 object streams
+ 7017 named destinations out of 7423 (max. 500000)
  2061 words of extra memory for PDF output out of 10000 (max. 10000000)
 
