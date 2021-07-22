@@ -118,13 +118,15 @@
 \indexentry{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class|hyperpage}{132}
 \indexentry{showQuantilesRating@\texttt{showQuantilesRating()}|hyperpage}{136}
 \indexentry{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}|hyperpage}{136}
-\indexentry{digraph!complete|hyperpage}{238}
-\indexentry{digraph!empty|hyperpage}{239}
-\indexentry{digraph!indeterminate|hyperpage}{239}
-\indexentry{digraph!indeterminate|hyperpage}{239}
-\indexentry{chordless circuits!odd|hyperpage}{240}
+\indexentry{prekernel|hyperpage}{238}
+\indexentry{CompleteDigraph@\texttt{CompleteDigraph} class|hyperpage}{238}
+\indexentry{Bouyssou@\emph  {D. Bouyssou}|hyperpage}{238}
+\indexentry{EmptyDigraph@\texttt{EmptyDigraph} class|hyperpage}{239}
+\indexentry{IndeterminateDigraph@\texttt{IndeterminateDigraph} class|hyperpage}{239}
+\indexentry{chordless circuits|hyperpage}{240}
+\indexentry{CirculantDigraph@\texttt{CirculantDigraph} class|hyperpage}{240}
 \indexentry{filled circuits|hyperpage}{240}
-\indexentry{CirculantDigraph@\texttt{CirculantDigraph} class|hyperpage}{241}
+\indexentry{anti-holes|hyperpage}{240}
 \indexentry{showPreKernels@\texttt{showPreKernels}()|hyperpage}{244}
 \indexentry{Hertz@\emph{A. Hertz}|hyperpage}{249}
 \indexentry{showMISAH@\texttt{showMIS\_AH}()|hyperpage}{249}
@@ -137,16 +139,20 @@
 \indexentry{showApprovalResults@\texttt{showApprovalResults()}|hyperpage}{298}
 \indexentry{showDisapprovalResults@\texttt{showDisapprovalResults()}|hyperpage}{298}
 \indexentry{showNetApprovalScores@\texttt{showNetApprovalScores()}|hyperpage}{299}
-\indexentry{comparability graph|hyperpage}{341}
-\indexentry{triangulated graph|hyperpage}{341}
-\indexentry{comparability graph|hyperpage}{341}
-\indexentry{permutation graph|hyperpage}{341}
-\indexentry{split graph|hyperpage}{341}
-\indexentry{RandomIntervalIntersectionsGraph@\texttt{RandomIntervalIntersectionsGraph} class|hyperpage}{341}
-\indexentry{computeChordlessCycles@\emph{computeChordlessCycles()}|hyperpage}{344}
-\indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{346}
-\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{347}
-\indexentry{isComparabilityGraph@\texttt{isComparabilityGraph()}|hyperpage}{350}
-\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOrientedDigraph()}|hyperpage}{351}
-\indexentry{computeCopelandRanking@\texttt{computeCopelandRanking()}|hyperpage}{352}
-\indexentry{computePermutation@\texttt{computePermutation()}|hyperpage}{353}
+\indexentry{perrinMIS@\texttt{perrinMIS} shell command|hyperpage}{324}
+\indexentry{readPerrinMisset@\texttt{readPerrinMisset()}|hyperpage}{325}
+\indexentry{automorphismGenerators@\texttt{automorphismGenerators()}|hyperpage}{326}
+\indexentry{dreadnaut@\texttt{dreadnaut} shell command|hyperpage}{326}
+\indexentry{comparability graph|hyperpage}{339}
+\indexentry{triangulated graph|hyperpage}{339}
+\indexentry{comparability graph|hyperpage}{339}
+\indexentry{permutation graph|hyperpage}{339}
+\indexentry{split graph|hyperpage}{339}
+\indexentry{RandomIntervalIntersectionsGraph@\texttt{RandomIntervalIntersectionsGraph} class|hyperpage}{339}
+\indexentry{computeChordlessCycles@\emph{computeChordlessCycles()}|hyperpage}{343}
+\indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{345}
+\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{346}
+\indexentry{isComparabilityGraph@\texttt{isComparabilityGraph()}|hyperpage}{349}
+\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOrientedDigraph()}|hyperpage}{350}
+\indexentry{computeCopelandRanking@\texttt{computeCopelandRanking()}|hyperpage}{351}
+\indexentry{computePermutation@\texttt{computePermutation()}|hyperpage}{351}

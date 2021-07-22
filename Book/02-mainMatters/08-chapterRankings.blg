@@ -4,46 +4,44 @@ The top-level auxiliary file: 02-mainMatters/08-chapterRankings.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Warning--can't use both volume and number fields in ARR-1986
 You've used 10 entries,
             3269 wiz_defined-function locations,
-            742 strings with 6323 characters,
-and the built_in function-call counts, 7679 in all, are:
+            740 strings with 6308 characters,
+and the built_in function-call counts, 7645 in all, are:
 = -- 696
 > -- 137
-< -- 12
+< -- 11
 + -- 53
 - -- 41
-* -- 598
+* -- 591
 := -- 1098
 add.period$ -- 9
 call.type$ -- 10
 change.case$ -- 64
 chr.to.int$ -- 10
-cite$ -- 11
-duplicate$ -- 706
-empty$ -- 744
+cite$ -- 10
+duplicate$ -- 701
+empty$ -- 742
 format.name$ -- 64
-if$ -- 1618
+if$ -- 1613
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 86
+missing$ -- 84
 newline$ -- 40
 num.names$ -- 42
-pop$ -- 174
+pop$ -- 172
 preamble$ -- 1
 purify$ -- 53
 quote$ -- 0
 skip$ -- 164
 stack$ -- 0
 substring$ -- 797
-swap$ -- 180
-text.length$ -- 2
+swap$ -- 173
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 87
-warning$ -- 1
+warning$ -- 0
 while$ -- 59
 width$ -- 0
 write$ -- 120
-(There was 1 warning)

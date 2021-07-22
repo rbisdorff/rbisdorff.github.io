@@ -10,7 +10,7 @@
 
 We call \emph{choice} in a graph, respectively a digraph, a subset of its vertices, resp. of its nodes or actions. A choice $Y$ is called \emph{internally stable} or \emph{independent} when there exist no links --(edges) or relations (arcs)-- between its members. Furthermore, a choice $Y$ is called \emph{externally stable} when for each vertex, node or action $x$ not in $Y$, there exists at least a member $y$ of $Y$ such that $x$ is linked or related to $y$. Now, an internally \emph{and} externally stable choice is called a \emph{kernel}.  
 
-A first trivial example is immediately given by the maximal independent vertices sets (MISs) of the $n$-cycle graph (see Fig.~\ref{fig:24.2}). Indeed, each MIS in the $n$-cycle graph is by definition independent, i.e. \emph{internally stable}, and each non selected vertex in the $n$-cycle graph is in relation with either one or even two members of the MIS.
+A first trivial example is immediately given by the maximal independent vertices sets (MISs) of the $n$-cycle graph (see Fig.~\ref{fig:22.7.2}). Indeed, each MIS in the $n$-cycle graph is by definition independent, i.e. \emph{internally stable}, and each non selected vertex in the $n$-cycle graph is in relation with either one or even two members of the MIS.
 
 In all graph or symmetric digraph, the \emph{maximality condition} imposed on the internal stability is equivalent to the \emph{external stability} condition. Indeed, if there would exist a vertex or node not related to any of the elements of a choice, then we may safely add this vertex or node to the given choice without violating its internal stability. All kernels must hence be maximal independent choices. In fact, in a topological sense, they correspond to maximal \emph{holes} in the given graph.
 
@@ -103,17 +103,18 @@ All graphs and symmetric digraphs admit MISs, hence also kernels. In the context
 \label{sec:17.2}
 
 In an oriented graph context, the internal stability condition of the kernel concept remains untouched; however, the external stability condition gets indeed split up by the orientation into two lateral cases:
-\begin{enumerate}
+\begin{enumerate}[nosep]
 \item A \emph{dominant} stability condition, where each non selected node is dominated by at least one member of the kernel;
 \item An \emph{absorbent} stability condition, where each non selected node is absorbed by at least one member of the kernel.
 \end{enumerate}
+
 A both internally \textbf{and} dominant, resp. absorbent stable choice is called a dominant or \emph{initial}, resp. an absorbent or \emph{terminal} kernel. From a topological perspective, the initial kernel concept looks from the outside of the digraph into its interior, whereas the terminal kernel looks from the interior of a digraph toward its outside. From an algebraic perspective, the initial kernel is a prefix operand, and the terminal kernel is a postfix operand in the \Berge kernel equation systems (see Section \ref{sec:17.6}).
 
-Furthermore, as the kernel concept involves conjointly a positive logical refutation (the internal stability) and a positive logical affirmation (the external stability), it appeared rather quickly necessary in our operational developments to adopt a bipolar characteristic $[-1.0,1.0]$ valuation domain, modelling logical negation by a change of numerical sign and including explicitly a third median logical value ($0.0$) expressing logical \emph{indeterminateness} --neither positive, nor negative.\footnote{It is D. Bouyssou who first suggested us to adopt bipolar-valued relational characteristics (see \citep{BIS-2000,BIS-2002,BIS-2004a}).}.
+Furthermore, as the kernel concept involves conjointly a positive logical refutation (the internal stability) and a positive logical affirmation (the external stability), it appeared rather quickly necessary in our operational developments to adopt a bipolar characteristic $[-1.0,1.0]$ valuation domain, modelling logical negation by a change of numerical sign and including explicitly a third median logical value ($0.0$) expressing logical \emph{indeterminateness} --neither positive, nor negative.\footnote{It is D. Bouyssou \index{Bouyssou@\emph{D. Bouyssou}} who first suggested us to adopt bipolar-valued relational characteristics (see \citep{BIS-2000,BIS-2002,BIS-2004a}).}.
 
-In such a  bipolar-valued context, we call \emph{prekernel} a choice who is \emph{externally stable} and for which the internal stability condition is \emph{valid or indeterminate}. We say that the independence condition is in this case only \emph{weakly validated}. Notice that all kernels are hence prekernels, but not vice-versa.
+In such a  bipolar-valued context, we call \emph{prekernel}\index{prekernel} a choice who is \emph{externally stable} and for which the internal stability condition is \emph{valid or indeterminate}. We say that the independence condition is in this case only \emph{weakly validated}. Notice that all kernels are hence prekernels, but not vice-versa.
 
-In graphs or symmetric digraphs, where there is essentially no apparent \emph{laterality}; all prekernels are initial and terminal at the same time. A universal example is given by the \emph{complete} digraph \index{digraph!complete}.
+In graphs or symmetric digraphs, where there is essentially no apparent \emph{laterality}; all prekernels are initial and terminal at the same time. A universal example is given by the \emph{complete} digraph \index{CompleteDigraph@\texttt{CompleteDigraph} class}.
 
 \begin{lstlisting}
 >>> from digraphs import CompleteDigraph
@@ -155,7 +156,7 @@ In graphs or symmetric digraphs, where there is essentially no apparent \emph{la
 \end{lstlisting}
 In a complete digraph, each single node is indeed both an initial and a terminal prekernel candidate and there is no definite begin or end of the digraph to be detected. Laterality is here entirely relative to a specific singleton chosen as reference point of view.
 
-The same absence of laterality is apparent in two other universal digraph models, the \emph{empty}\index{digraph!empty} and the \emph{indeterminate} digraph\index{digraph!indeterminate}. 
+The same absence of laterality is apparent in two other universal digraph models, the \emph{empty}\index{EmptyDigraph@\texttt{EmptyDigraph} class} and the \emph{indeterminate} digraph\index{IndeterminateDigraph@\texttt{IndeterminateDigraph} class}. 
 \begin{lstlisting}
 >>> from digraphs import EmptyDigraph
 >>> ed = EmptyDigraph(order=5)
@@ -172,7 +173,7 @@ The same absence of laterality is apparent in two other universal digraph models
        dominance    :  1.0
        absorbency   :  1.0
 \end{lstlisting}
-In the empty digraph, the whole set of nodes gives indeed at the same time the unique initial and terminal prekernel. Similarly, for the \emph{indeterminate} digraph.\index{digraph!indeterminate}
+In the empty digraph, the whole set of nodes gives indeed at the same time the unique initial and terminal prekernel. Similarly, for the \emph{indeterminate} digraph.
 \begin{lstlisting}
 >>> from digraphs import IndeterminateDigraph
 >>> id = IndeterminateDigraph(order=5)
@@ -192,7 +193,7 @@ In the empty digraph, the whole set of nodes gives indeed at the same time the u
 
 Both these results make sense, as in a completely empty or indeterminate digraph, there is no \emph{interior} of the digraph defined, only a \emph{border} which is hence at the same time an initial and terminal prekernel.  Notice however, that in the latter indeterminate case, the complete set of nodes verifies only weakly the internal stability condition (see above).
 
-Other common digraph models, although being clearly oriented, may show nevertheless no apparent laterality, like \emph{chordless circuits}\index{chordless circuits!odd}, i.e. holes surrounded by an oriented cycle -a circuit- of odd length. They do not admit in fact any initial or terminal prekernel.
+Other common digraph models, although being clearly oriented, may show nevertheless no apparent laterality, like \emph{chordless circuits}\index{chordless circuits}, i.e. holes surrounded by an oriented cycle -a circuit- of odd length. They do not admit in fact any initial or terminal prekernel.\index{CirculantDigraph@\texttt{CirculantDigraph} class}
 \begin{lstlisting}
 >>> from digraphs import CirculantDigraph
 >>> c5 = CirculantDigraph(order=5,circulants=[1])
@@ -216,7 +217,7 @@ Chordless circuits of \emph{even} length $2 \times k$, with $k > 1$, contain how
     ['1', '3', '5'] ind. : 1.0, dom. : 1.0, abs. : 1.0
     ['2', '4', '6'] ind. : 1.0, dom. : 1.0, abs. : 1.0
 \end{lstlisting}
-Chordless circuits of even length may thus be indifferently oriented along two opposite directions. Notice by the way that the duals of all chordless circuits of odd or even length, i.e. \emph{filled} circuits\index{filled circuits} also called \emph{anti-holes} (see Fig. \ref{fig:17.3}), never contain any potential prekernel candidates.
+Chordless circuits of even length may thus be indifferently oriented along two opposite directions. Notice by the way that the duals of all chordless circuits of odd or even length, i.e. \emph{filled} circuits\index{filled circuits} also called \emph{anti-holes}\index{anti-holes} (see Fig. \ref{fig:17.3}), never contain any potential prekernel candidates.
 \begin{lstlisting}
 >>> dc6 = -c6   # dc6 = DualDigraph(c6)
 >>> dc6.showPreKernels()
@@ -240,7 +241,7 @@ Chordless circuits of even length may thus be indifferently oriented along two o
 
 We call \emph{weak}, a chordless circuit with indeterminate inner part.
 
-The \texttt{CirculantDigraph}\index{CirculantDigraph@\texttt{CirculantDigraph} class} class provides a parameter for constructing such weak chordless circuits. 
+The \texttt{CirculantDigraph} class provides a parameter for constructing such weak chordless circuits. 
 \begin{lstlisting}
 >>> from digraphs import CirculantDigraph
 >>> c6 = CirculantDigraph(order=6,circulants=[1],\

@@ -41,8 +41,7 @@ book.pdf:
 	bibtex 02-mainMatters/21-chapterTemperingPlurality.aux
 	bibtex 02-mainMatters/22-chapterGraphs.aux
 	bibtex 02-mainMatters/23-chapterTreeGraphs.aux
-	bibtex 02-mainMatters/24-chapterIsomorphicMIS.aux
-	bibtex 02-mainMatters/25-chapterPerfectGraphs.aux
+	bibtex 02-mainMatters/24-chapterPerfectGraphs.aux
 	#bibtex book
 	pdflatex book.tex
 	pdflatex book.tex
