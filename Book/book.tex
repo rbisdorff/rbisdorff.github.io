@@ -40,7 +40,9 @@
 \usepackage{amsmath,stmaryrd,amssymb,bbm}
 % \usepackage{tabularx}
 \usepackage[sectionbib]{natbib}
-\usepackage{chapterbib}
+%\usepackage{biblatex}
+%\addbibresource{03-backMatters/reference.bib}
+%\usepackage{chapterbib}
 %\usepackage{minitoc}
 % \usepackage{pst-all}
 % \usepackage{latexsym}
@@ -207,13 +209,12 @@
 \include{02-mainMatters/17-chapterKernels}
 \include{02-mainMatters/18-chapterConfidentOutrankings}
 \include{02-mainMatters/19-chapterRobustOutrankings}
-\include{02-mainMatters/20-chapterMultipartisan}
-\include{02-mainMatters/21-chapterTemperingPlurality}
+\include{02-mainMatters/20-chapterTemperingPlurality}
 
 \include{02-mainMatters/part5}
-\include{02-mainMatters/22-chapterGraphs}
-\include{02-mainMatters/23-chapterTreeGraphs}
-\include{02-mainMatters/24-chapterPerfectGraphs}
+\include{02-mainMatters/21-chapterGraphs}
+\include{02-mainMatters/22-chapterTreeGraphs}
+\include{02-mainMatters/23-chapterPerfectGraphs}
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\include{03-backMatters/appendix}
@@ -223,11 +224,11 @@
 \phantomsection
 \addcontentsline{toc}{part}{Appendix}
 \phantomsection
-\addcontentsline{toc}{chapter}{List of listings}
+\addcontentsline{toc}{section}{List of listings}
 \lstlistoflistings
 %\listoffigures
 \phantomsection
-\addcontentsline{toc}{chapter}{List of tables}
+\addcontentsline{toc}{section}{List of tables}
 \listoftables
 %\include{03-backMatters/glossary}
 %\include{03-backMatters/reference}

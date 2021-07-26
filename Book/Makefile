@@ -37,11 +37,10 @@ book.pdf:
 	bibtex 02-mainMatters/17-chapterKernels.aux
 	bibtex 02-mainMatters/18-chapterConfidentOutrankings.aux
 	bibtex 02-mainMatters/19-chapterRobustOutrankings.aux
-	#bibtex 02-mainMatters/20-chapterMultipartisan.aux
-	bibtex 02-mainMatters/21-chapterTemperingPlurality.aux
-	bibtex 02-mainMatters/22-chapterGraphs.aux
-	bibtex 02-mainMatters/23-chapterTreeGraphs.aux
-	bibtex 02-mainMatters/24-chapterPerfectGraphs.aux
+	bibtex 02-mainMatters/20-chapterTemperingPlurality.aux
+	bibtex 02-mainMatters/21-chapterGraphs.aux
+	bibtex 02-mainMatters/22-chapterTreeGraphs.aux
+	bibtex 02-mainMatters/23-chapterPerfectGraphs.aux
 	#bibtex book
 	pdflatex book.tex
 	pdflatex book.tex
