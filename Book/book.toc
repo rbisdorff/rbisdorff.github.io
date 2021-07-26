@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {2.8}Strong components}{24}{section.2.8}%
 \contentsline {section}{\numberline {2.9}CSV storage}{24}{section.2.9}%
 \contentsline {section}{\numberline {2.10}Complete, empty and indeterminate digraphs}{26}{section.2.10}%
-\contentsline {chapter}{\numberline {3}Working with bipolar-valued outranking digraphs}{29}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Working with outranking digraphs}{29}{chapter.3}%
 \contentsline {section}{\numberline {3.1}The hybrid outranking digraph model}{29}{section.3.1}%
 \contentsline {section}{\numberline {3.2}The bipolar-valued outranking digraph}{31}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Pairwise comparisons}{33}{section.3.3}%
@@ -49,7 +49,6 @@
 \contentsline {section}{\numberline {5.4}Editing the family of performance criteria}{57}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Editing the performance table}{59}{section.5.5}%
 \contentsline {section}{\numberline {5.6}Inspecting the template outranking relation}{61}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Ranking the template peformance tableau}{62}{section.5.7}%
 \contentsline {chapter}{\numberline {6}Generating random performance tableaux}{65}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Introduction}{65}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Random standard performance tableaux}{66}{section.6.2}%
@@ -83,8 +82,8 @@
 \contentsline {section}{\numberline {11.1}C-compiled Python modules}{131}{section.11.1}%
 \contentsline {section}{\numberline {11.2}Big Data performance tableaux}{132}{section.11.2}%
 \contentsline {section}{\numberline {11.3}C-implemented integer-valued outranking digraphs}{133}{section.11.3}%
-\contentsline {section}{\numberline {11.4}The sparse outranking digraph implementation}{135}{section.11.4}%
-\contentsline {section}{\numberline {11.5}Ranking big performance tableaux}{138}{section.11.5}%
+\contentsline {section}{\numberline {11.4}The sparse implementation of big outranking digraphs}{135}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Quantiles ranking of big performance tableaux}{138}{section.11.5}%
 \contentsline {section}{\numberline {11.6}HPC quantiles ranking records}{141}{section.11.6}%
 \contentsline {part}{Part\ III\hspace {\betweenumberspace }Evaluation and decision case studies}{143}{part.3}%
 \contentsline {chapter}{\numberline {12}Alice's best choice: A selection case study}{145}{chapter.12}%
@@ -130,30 +129,30 @@
 \contentsline {section}{\numberline {17.1}What is a graph kernel ?}{219}{section.17.1}%
 \contentsline {section}{\numberline {17.2}Initial and terminal kernels}{221}{section.17.2}%
 \contentsline {section}{\numberline {17.3}Kernels in lateralized digraphs}{226}{section.17.3}%
-\contentsline {section}{\numberline {17.4}Computing best and worst choice recommendations}{228}{section.17.4}%
+\contentsline {section}{\numberline {17.4}Computing first and last choice recommendations}{228}{section.17.4}%
 \contentsline {section}{\numberline {17.5}Tractability of kernel computation}{233}{section.17.5}%
 \contentsline {section}{\numberline {17.6}{\sc Berge}\xspace kernel equation systems}{235}{section.17.6}%
 \contentsline {section}{Notes}{242}{section*.14}%
 \contentsline {chapter}{\numberline {18}On confident outrankings}{243}{chapter.18}%
 \contentsline {section}{\numberline {18.1}Modelling uncertain criteria significances}{243}{section.18.1}%
-\contentsline {section}{\numberline {18.2}Bipolar-valued likelihood of ``\emph {at least as good as}'' situations}{245}{section.18.2}%
-\contentsline {section}{\numberline {18.3}Confidence level of outranking situations}{247}{section.18.3}%
+\contentsline {section}{\numberline {18.2}Bipolar-valued likelihood of outranking situations}{245}{section.18.2}%
+\contentsline {section}{\numberline {18.3}Confidence level of outranking digraphs}{247}{section.18.3}%
 \contentsline {chapter}{\numberline {19}On robust outrankings}{253}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Cardinal or ordinal criteria significances}{253}{section.19.1}%
+\contentsline {section}{\numberline {19.1}Cardinal or ordinal criteria significance weights}{253}{section.19.1}%
 \contentsline {section}{\numberline {19.2}Qualifying the stability of outranking situations}{254}{section.19.2}%
 \contentsline {section}{\numberline {19.3}Computing stability denotations}{258}{section.19.3}%
 \contentsline {section}{\numberline {19.4}Robust bipolar-valued outranking digraphs}{260}{section.19.4}%
 \contentsline {section}{\numberline {19.5}Unopposed outranking situations}{263}{section.19.5}%
 \contentsline {section}{\numberline {19.6}Computing Pareto efficient multiobjective choices}{266}{section.19.6}%
 \contentsline {chapter}{\numberline {20}Tempering plurality tyranny effects in social choice problems}{269}{chapter.20}%
-\contentsline {section}{\numberline {20.1}Two-stage electons with multipartisan primary selection}{269}{section.20.1}%
+\contentsline {section}{\numberline {20.1}Two-stage elections with multipartisan primary selection}{269}{section.20.1}%
 \contentsline {subsection}{\numberline {20.1.1}Converting voting profiles into performance tableaux}{269}{subsection.20.1.1}%
 \contentsline {subsection}{\numberline {20.1.2}Multipartisan primary selection of eligible candidates}{271}{subsection.20.1.2}%
 \contentsline {subsection}{\numberline {20.1.3}Secondary election winner determination}{272}{subsection.20.1.3}%
 \contentsline {subsection}{\numberline {20.1.4}Multipartisan preferences in divisive politics}{274}{subsection.20.1.4}%
 \contentsline {section}{\numberline {20.2}Bipolar approval voting systems}{276}{section.20.2}%
 \contentsline {section}{\numberline {20.3}Pairwise comparison of bipolar approval votes}{280}{section.20.3}%
-\contentsline {section}{\numberline {20.4}Three-valued evaluative voting system}{282}{section.20.4}%
+\contentsline {section}{\numberline {20.4}Three-valued evaluative voting systems}{282}{section.20.4}%
 \contentsline {section}{\numberline {20.5}Favouring multipartisan candidates}{285}{section.20.5}%
 \contentsline {part}{Part\ V\hspace {\betweenumberspace }Working with simple graphs}{291}{part.5}%
 \contentsline {chapter}{\numberline {21}Working with undirected graphs}{293}{chapter.21}%

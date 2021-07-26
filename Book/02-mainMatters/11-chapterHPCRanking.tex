@@ -170,7 +170,7 @@ By far, most of the run time is in each case needed for computing the individual
 About 103MB for $g$ and 202MB for $g1$. The standard \texttt{Decimal} valued \\
 \texttt{BipolarOutrankingDigraph} instance $g1$ thus nearly doubles the memory\\ occupation of the corresponding \texttt{IntegerBipolarOutrankingDigraph} $g$ instance (see Line 3 and 5 above). 3/4 of this memory occupation is due to the \texttt{g1.relation} ($34\%$) and the \texttt{g1.gamma} ($45\%$) dictionaries. And these ratios quadratically grow with the digraph order. To limit the object sizes for really big outranking digraphs, we need to abandon the complete implementation of adjacency tables and gamma functions.
 
-\section{The sparse outranking digraph implementation}
+\section{The sparse implementation of big outranking digraphs}
 \label{sec:11.4}
 
 The idea is to first decompose the complete outranking relation into an ordered collection of equivalent quantile performance classes. Let us consider for this illustration a random performance tableau with 100 decision alternatives evaluated on 7 criteria.
@@ -296,7 +296,7 @@ For sparse outranking digraphs, the adjacency table is implemented as a dynamic 
            return Max
 \end{lstlisting}
 
-\section{Ranking big performance tableaux}
+\section{Quantiles ranking of big performance tableaux}
 \label{sec:12.5}
 
 We may now rank the complete set of 100 decision alternatives by locally ranking with the \Copeland or the \NetFlows rule, for instance, all these individual components.

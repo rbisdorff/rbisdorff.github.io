@@ -1,4 +1,4 @@
-\chapter[On confident outrankings]{On confident outrankings with uncertain criteria significances}
+\chapter[On confident outrankings]{On confident outrankings with uncertain criteria significance weights}
 \label{sec:18}
 
 \abstract*{When modelling preferences following the outranking approach, the signs of the majority margins do sharply distribute validation and invalidation of pairwise outranking situations. How can we be confident in the resulting outranking digraph, when we acknowledge the usual imprecise knowledge of criteria significance weights coupled with small majority margins? To answer this question, one usually requires \emph{qualified} majority margins for confirming outranking situations. But how to choose such a qualifying majority level: two third, three fourth of the significances ? In this chapter we propose to link the qualifying significance majority with a required $\alpha\%$-confidence level. We model therefore the significance weights as random variables following more or less widespread distributions around an average significance value that corresponds to the given deterministic weight. As the bipolar-valued random credibility of an outranking statement hence results from the simple sum of positive or negative independent random variables, we may apply the Central Limit Theorem (CLT) for computing the bipolar likelihood that the expected majority margin will indeed be positive, respectively negative.}
@@ -27,7 +27,7 @@ When considering, for instance, that the potential range of a significance weigh
 \end{figure}
 It is worthwhile noticing that these four uncertainty models all admit the same expected value, $E(W_j)$, however, with a respective variance which goes decreasing from $1/3$, to $1/9$ of the square of $E(W_j)$ (see Fig. \ref{fig:18.1}).
 
-\section{Bipolar-valued likelihood of ``\emph{at least as good as}'' situations}
+\section{Bipolar-valued likelihood of outranking situations}
 \label{sec:18.2}
 
 Let $A = \{x, y, z,...\}$ be a finite set of $n$ potential decision actions, evaluated on $F = \{1,..., m\}$ --a finite and coherent family of $m$ performance criteria. On each criterion $j \in F$, the decision actions are evaluated on a real performance scale $[0; M_j ]$, supporting an upper-closed indifference threshold $indj$ and a lower-closed preference threshold $prj$ such that $0 \leq indj < prj \leq M_j$. The marginal performance of object $x$ on criterion $j$ is denoted $x_j$. Each criterion $j$ is thus characterising a marginal double threshold order $\geq_j$ on $A$:
@@ -78,7 +78,7 @@ A \emph{Monte Carlo} simulation with $10\,000$ runs empirically confirms the eff
 Indeed, $\tilde{r}(x \geq y) \leadsto Y = \mathcal{N}(1.03,1.089)$, with an empirical probability of observing a negative majority margin of about $17\%$.
 \end{example}
 
-\section{Confidence level of outranking situations}
+\section{Confidence level of outranking digraphs}
 \label{sec:18.3}
 
 Now, following the classical outranking approach (see \citep{BIS-2013}), we may say, from an epistemic perspective, that decision action $x$ \emph{outranks} decision action $y$ at \emph{confidence} level $\alpha \%$, when
