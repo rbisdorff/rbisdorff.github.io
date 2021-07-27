@@ -32,151 +32,151 @@
 \contentsline {section}{\numberline {3.3}Pairwise comparisons}{33}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Recoding the digraph valuation}{34}{section.3.4}%
 \contentsline {section}{\numberline {3.5}The strict outranking digraph}{34}{section.3.5}%
-\contentsline {section}{Notes}{35}{section*.10}%
-\contentsline {part}{Part\ II\hspace {\betweenumberspace }Evaluation models and decision methods and tools}{37}{part.2}%
-\contentsline {chapter}{\numberline {4}Computing a best choice recommendation}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}What office site to choose?}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}The given performance tableau}{41}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Computing the outranking digraph}{43}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Designing a best choice recommender system}{45}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Computing a best choice recommendation}{46}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Weakly ordering the outranking digraph}{48}{section.4.6}%
-\contentsline {section}{Notes}{50}{section*.12}%
-\contentsline {chapter}{\numberline {5}How to create a new performance tableau instance}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Editing a template file}{53}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Editing the decision alternatives}{55}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Editing the decision objectives}{56}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Editing the family of performance criteria}{57}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Editing the performance table}{59}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Inspecting the template outranking relation}{61}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Generating random performance tableaux}{65}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction}{65}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Random standard performance tableaux}{66}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Random Cost-Benefit performance tableaux}{68}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Random three objectives performance tableaux}{72}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Random academic performance tableaux}{77}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Computing the winner of an election}{81}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Linear voting profiles}{81}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Computing the winner}{83}{section.7.2}%
-\contentsline {section}{\numberline {7.3}The majority margins digraph}{84}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Cyclic social preferences}{86}{section.7.4}%
-\contentsline {section}{\numberline {7.5}On generating realistic random linear voting profiles}{88}{section.7.5}%
-\contentsline {chapter}{\numberline {8}Ranking with multiple incommensurable criteria}{93}{chapter.8}%
-\contentsline {section}{\numberline {8.1}The ranking problem}{93}{section.8.1}%
-\contentsline {section}{\numberline {8.2}The {\sc Copeland}\xspace ranking}{96}{section.8.2}%
-\contentsline {section}{\numberline {8.3}The {\sc NetFlows}\xspace ranking}{98}{section.8.3}%
-\contentsline {section}{\numberline {8.4}{\sc Kemeny}\xspace rankings}{99}{section.8.4}%
-\contentsline {section}{\numberline {8.5}{\sc Slater}\xspace rankings}{102}{section.8.5}%
-\contentsline {section}{\numberline {8.6}{\sc Kohler}\xspace 's ranking-by-choosing rule}{102}{section.8.6}%
-\contentsline {section}{\numberline {8.7}The {\sc RankedPairs}\xspace ranking rule}{106}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Rating by sorting into relative performance quantiles}{109}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Quantile sorting on a single criterion}{109}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Quantiles sorting with multiple performance criteria}{110}{section.9.2}%
-\contentsline {section}{\numberline {9.3}The sparse pre-ranked outranking digraph model}{114}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Ranking pre-ranked sparse outranking digraphs}{117}{section.9.4}%
-\contentsline {chapter}{\numberline {10}Rating by ranking with learned performance quantile norms}{119}{chapter.10}%
-\contentsline {section}{\numberline {10.1}The absolute rating problem}{119}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Incremental learning of historical performance quantiles}{120}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Rating-by-ranking new performances with quantile norms}{122}{section.10.3}%
-\contentsline {chapter}{\numberline {11}HPC ranking of big performance tableaux}{131}{chapter.11}%
-\contentsline {section}{\numberline {11.1}C-compiled Python modules}{131}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Big Data performance tableaux}{132}{section.11.2}%
-\contentsline {section}{\numberline {11.3}C-implemented integer-valued outranking digraphs}{133}{section.11.3}%
-\contentsline {section}{\numberline {11.4}The sparse implementation of big outranking digraphs}{135}{section.11.4}%
-\contentsline {section}{\numberline {11.5}Quantiles ranking of big performance tableaux}{138}{section.11.5}%
-\contentsline {section}{\numberline {11.6}HPC quantiles ranking records}{141}{section.11.6}%
-\contentsline {part}{Part\ III\hspace {\betweenumberspace }Evaluation and decision case studies}{143}{part.3}%
-\contentsline {chapter}{\numberline {12}Alice's best choice: A selection case study}{145}{chapter.12}%
-\contentsline {section}{\numberline {12.1}The decision problem}{145}{section.12.1}%
-\contentsline {section}{\numberline {12.2}The performance tableau}{147}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Building a best choice recommendation}{150}{section.12.3}%
-\contentsline {section}{\numberline {12.4}Robustness analysis}{155}{section.12.4}%
-\contentsline {chapter}{\numberline {13}The best academic Computer Science Depts: A ranking case study}{161}{chapter.13}%
-\contentsline {section}{\numberline {13.1}The THE performance tableau}{161}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Ranking with multiple criteria of ordinal significance}{167}{section.13.2}%
-\contentsline {section}{\numberline {13.3}How to judge the quality of a ranking result?}{174}{section.13.3}%
-\contentsline {chapter}{\numberline {14}The best students, where do they study? A rating case study}{181}{chapter.14}%
-\contentsline {section}{\numberline {14.1}The performance tableau}{181}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Rating-by-ranking with lower-closed quantile limits}{185}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Inspecting the bipolar-valued outranking digraph}{189}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Rating by quantiles sorting}{190}{section.14.4}%
-\contentsline {chapter}{\numberline {15}Exercises}{197}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Who will receive the best student award? (§)}{197}{section.15.1}%
-\contentsline {subsection}{\numberline {15.1.1}Data}{197}{subsection.15.1.1}%
-\contentsline {subsection}{\numberline {15.1.2}Questions}{198}{subsection.15.1.2}%
-\contentsline {section}{\numberline {15.2}How to fairly rank movies (§)}{198}{section.15.2}%
-\contentsline {subsection}{\numberline {15.2.1}Data}{198}{subsection.15.2.1}%
-\contentsline {subsection}{\numberline {15.2.2}Questions}{199}{subsection.15.2.2}%
-\contentsline {section}{\numberline {15.3}What is your best choice recommendation? (§)}{200}{section.15.3}%
-\contentsline {subsection}{\numberline {15.3.1}Data}{200}{subsection.15.3.1}%
-\contentsline {subsection}{\numberline {15.3.2}Questions}{201}{subsection.15.3.2}%
-\contentsline {section}{\numberline {15.4}What is the best public policy? (§§)}{201}{section.15.4}%
-\contentsline {subsection}{\numberline {15.4.1}Data files}{201}{subsection.15.4.1}%
-\contentsline {subsection}{\numberline {15.4.2}Questions}{201}{subsection.15.4.2}%
-\contentsline {section}{\numberline {15.5}A fair diploma validation decision (§§§)}{202}{section.15.5}%
-\contentsline {subsection}{\numberline {15.5.1}Data}{202}{subsection.15.5.1}%
-\contentsline {subsection}{\numberline {15.5.2}Questions}{202}{subsection.15.5.2}%
-\contentsline {part}{Part\ IV\hspace {\betweenumberspace }Advanced topics}{203}{part.4}%
-\contentsline {chapter}{\numberline {16}Ordinal correlation equals bipolar-valued relational equivalence}{205}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Coping with missing data}{205}{section.16.1}%
-\contentsline {section}{\numberline {16.2}Modelling pairwise bipolar-valued rating opinions}{207}{section.16.2}%
-\contentsline {section}{\numberline {16.3}{\sc Kendall}\xspace 's tau index}{210}{section.16.3}%
-\contentsline {section}{\numberline {16.4}Bipolar-valued relational equivalence}{211}{section.16.4}%
-\contentsline {section}{\numberline {16.5}Fitness of ranking heuristics}{213}{section.16.5}%
-\contentsline {section}{\numberline {16.6}Illustrating preference divergences}{215}{section.16.6}%
-\contentsline {section}{\numberline {16.7}Exploring the ``\emph {better rated}'' and the ``\emph {as well as rated}'' opinions}{217}{section.16.7}%
-\contentsline {chapter}{\numberline {17}On computing digraph kernels}{219}{chapter.17}%
-\contentsline {section}{\numberline {17.1}What is a graph kernel ?}{219}{section.17.1}%
-\contentsline {section}{\numberline {17.2}Initial and terminal kernels}{221}{section.17.2}%
-\contentsline {section}{\numberline {17.3}Kernels in lateralized digraphs}{226}{section.17.3}%
-\contentsline {section}{\numberline {17.4}Computing first and last choice recommendations}{228}{section.17.4}%
-\contentsline {section}{\numberline {17.5}Tractability of kernel computation}{233}{section.17.5}%
-\contentsline {section}{\numberline {17.6}{\sc Berge}\xspace kernel equation systems}{235}{section.17.6}%
-\contentsline {section}{Notes}{242}{section*.14}%
-\contentsline {chapter}{\numberline {18}On confident outrankings}{243}{chapter.18}%
-\contentsline {section}{\numberline {18.1}Modelling uncertain criteria significances}{243}{section.18.1}%
-\contentsline {section}{\numberline {18.2}Bipolar-valued likelihood of outranking situations}{245}{section.18.2}%
-\contentsline {section}{\numberline {18.3}Confidence level of outranking digraphs}{247}{section.18.3}%
-\contentsline {chapter}{\numberline {19}On robust outrankings}{253}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Cardinal or ordinal criteria significance weights}{253}{section.19.1}%
-\contentsline {section}{\numberline {19.2}Qualifying the stability of outranking situations}{254}{section.19.2}%
-\contentsline {section}{\numberline {19.3}Computing stability denotations}{258}{section.19.3}%
-\contentsline {section}{\numberline {19.4}Robust bipolar-valued outranking digraphs}{260}{section.19.4}%
-\contentsline {section}{\numberline {19.5}Unopposed outranking situations}{263}{section.19.5}%
-\contentsline {section}{\numberline {19.6}Computing Pareto efficient multiobjective choices}{266}{section.19.6}%
-\contentsline {chapter}{\numberline {20}Tempering plurality tyranny effects in social choice problems}{269}{chapter.20}%
-\contentsline {section}{\numberline {20.1}Two-stage elections with multipartisan primary selection}{269}{section.20.1}%
-\contentsline {subsection}{\numberline {20.1.1}Converting voting profiles into performance tableaux}{269}{subsection.20.1.1}%
-\contentsline {subsection}{\numberline {20.1.2}Multipartisan primary selection of eligible candidates}{271}{subsection.20.1.2}%
-\contentsline {subsection}{\numberline {20.1.3}Secondary election winner determination}{272}{subsection.20.1.3}%
-\contentsline {subsection}{\numberline {20.1.4}Multipartisan preferences in divisive politics}{274}{subsection.20.1.4}%
-\contentsline {section}{\numberline {20.2}Bipolar approval voting systems}{276}{section.20.2}%
-\contentsline {section}{\numberline {20.3}Pairwise comparison of bipolar approval votes}{280}{section.20.3}%
-\contentsline {section}{\numberline {20.4}Three-valued evaluative voting systems}{282}{section.20.4}%
-\contentsline {section}{\numberline {20.5}Favouring multipartisan candidates}{285}{section.20.5}%
-\contentsline {part}{Part\ V\hspace {\betweenumberspace }Working with simple graphs}{291}{part.5}%
-\contentsline {chapter}{\numberline {21}Working with undirected graphs}{293}{chapter.21}%
-\contentsline {section}{\numberline {21.1}Implementing undirected graphs}{293}{section.21.1}%
-\contentsline {section}{\numberline {21.2}q-coloring of a graph}{296}{section.21.2}%
-\contentsline {section}{\numberline {21.3}MIS and clique enumeration}{297}{section.21.3}%
-\contentsline {section}{\numberline {21.4}Line graphs and maximal matchings}{298}{section.21.4}%
-\contentsline {section}{\numberline {21.5}Grids and the Ising model}{301}{section.21.5}%
-\contentsline {section}{\numberline {21.6}Simulating Metropolis random walks}{302}{section.21.6}%
-\contentsline {section}{\numberline {21.7}The n-cycle graph}{303}{section.21.7}%
-\contentsline {subsection}{\numberline {21.7.1}Computing maximal independent sets (MISs)}{304}{subsection.21.7.1}%
-\contentsline {subsection}{\numberline {21.7.2}Computing the automorphism group}{305}{subsection.21.7.2}%
-\contentsline {subsection}{\numberline {21.7.3}Computing the isomorphic MISs}{306}{subsection.21.7.3}%
-\contentsline {chapter}{\numberline {22}On tree graphs and graph forests}{309}{chapter.22}%
-\contentsline {section}{\numberline {22.1}Generating random tree graphs}{309}{section.22.1}%
-\contentsline {section}{\numberline {22.2}Recognizing tree graphs}{311}{section.22.2}%
-\contentsline {section}{\numberline {22.3}Spanning trees and forests}{313}{section.22.3}%
-\contentsline {section}{\numberline {22.4}Maximum determined spanning forests}{315}{section.22.4}%
-\contentsline {chapter}{\numberline {23}About split, interval and permutation graphs}{319}{chapter.23}%
-\contentsline {section}{\numberline {23.1}A multiply perfect graph}{319}{section.23.1}%
-\contentsline {section}{\numberline {23.2}Who is the liar?}{322}{section.23.2}%
-\contentsline {section}{\numberline {23.3}Generating permutation graphs}{324}{section.23.3}%
-\contentsline {section}{\numberline {23.4}Recognizing permutation graphs}{328}{section.23.4}%
-\contentsline {part}{Appendix}{333}{section*.16}%
-\contentsline {section}{List of listings}{333}{section*.17}%
-\contentsline {section}{List of tables}{336}{section*.19}%
-\contentsline {chapter}{Index}{339}{chapter*.21}%
+\contentsline {section}{Notes}{36}{section*.10}%
+\contentsline {part}{Part\ II\hspace {\betweenumberspace }Evaluation models and decision methods and tools}{39}{part.2}%
+\contentsline {chapter}{\numberline {4}Computing a best choice recommendation}{41}{chapter.4}%
+\contentsline {section}{\numberline {4.1}What office site to choose?}{41}{section.4.1}%
+\contentsline {section}{\numberline {4.2}The given performance tableau}{43}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Computing the outranking digraph}{45}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Designing a best choice recommender system}{47}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Computing a best choice recommendation}{48}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Weakly ordering the outranking digraph}{50}{section.4.6}%
+\contentsline {section}{Notes}{52}{section*.12}%
+\contentsline {chapter}{\numberline {5}How to create a new performance tableau instance}{55}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Editing a template file}{55}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Editing the decision alternatives}{57}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Editing the decision objectives}{58}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Editing the family of performance criteria}{59}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Editing the performance table}{61}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Inspecting the template outranking relation}{63}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Generating random performance tableaux}{67}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{67}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Random standard performance tableaux}{68}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Random Cost-Benefit performance tableaux}{70}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Random three objectives performance tableaux}{74}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Random academic performance tableaux}{79}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Who wins the election ?}{83}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Linear voting profiles}{83}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Computing the winner}{85}{section.7.2}%
+\contentsline {section}{\numberline {7.3}The majority margins digraph}{86}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Cyclic social preferences}{88}{section.7.4}%
+\contentsline {section}{\numberline {7.5}On generating realistic random linear voting profiles}{90}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Ranking with multiple incommensurable criteria}{95}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The ranking problem}{95}{section.8.1}%
+\contentsline {section}{\numberline {8.2}The {\sc Copeland}\xspace ranking}{98}{section.8.2}%
+\contentsline {section}{\numberline {8.3}The {\sc NetFlows}\xspace ranking}{100}{section.8.3}%
+\contentsline {section}{\numberline {8.4}{\sc Kemeny}\xspace rankings}{101}{section.8.4}%
+\contentsline {section}{\numberline {8.5}{\sc Slater}\xspace rankings}{104}{section.8.5}%
+\contentsline {section}{\numberline {8.6}{\sc Kohler}\xspace 's ranking-by-choosing rule}{104}{section.8.6}%
+\contentsline {section}{\numberline {8.7}The {\sc RankedPairs}\xspace ranking rule}{108}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Rating by sorting into relative performance quantiles}{111}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Quantile sorting on a single criterion}{111}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Quantiles sorting with multiple performance criteria}{112}{section.9.2}%
+\contentsline {section}{\numberline {9.3}The sparse pre-ranked outranking digraph model}{116}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Ranking pre-ranked sparse outranking digraphs}{119}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Rating by ranking with learned performance quantile norms}{121}{chapter.10}%
+\contentsline {section}{\numberline {10.1}The absolute rating problem}{121}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Incremental learning of historical performance quantiles}{122}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Rating-by-ranking new performances with quantile norms}{124}{section.10.3}%
+\contentsline {chapter}{\numberline {11}HPC ranking of big performance tableaux}{133}{chapter.11}%
+\contentsline {section}{\numberline {11.1}C-compiled Python modules}{133}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Big Data performance tableaux}{134}{section.11.2}%
+\contentsline {section}{\numberline {11.3}C-implemented integer-valued outranking digraphs}{135}{section.11.3}%
+\contentsline {section}{\numberline {11.4}The sparse implementation of big outranking digraphs}{137}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Quantiles ranking of big performance tableaux}{140}{section.11.5}%
+\contentsline {section}{\numberline {11.6}HPC quantiles ranking records}{143}{section.11.6}%
+\contentsline {part}{Part\ III\hspace {\betweenumberspace }Evaluation and decision case studies}{145}{part.3}%
+\contentsline {chapter}{\numberline {12}Alice's best choice: A selection case study}{147}{chapter.12}%
+\contentsline {section}{\numberline {12.1}The decision problem}{147}{section.12.1}%
+\contentsline {section}{\numberline {12.2}The performance tableau}{149}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Building a best choice recommendation}{152}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Robustness analysis}{157}{section.12.4}%
+\contentsline {chapter}{\numberline {13}The best academic Computer Science Depts: A ranking case study}{163}{chapter.13}%
+\contentsline {section}{\numberline {13.1}The THE performance tableau}{163}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Ranking with multiple criteria of ordinal significance}{169}{section.13.2}%
+\contentsline {section}{\numberline {13.3}How to judge the quality of a ranking result?}{176}{section.13.3}%
+\contentsline {chapter}{\numberline {14}The best students, where do they study? A rating case study}{183}{chapter.14}%
+\contentsline {section}{\numberline {14.1}The performance tableau}{183}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Rating-by-ranking with lower-closed quantile limits}{187}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Inspecting the bipolar-valued outranking digraph}{191}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Rating by quantiles sorting}{192}{section.14.4}%
+\contentsline {chapter}{\numberline {15}Exercises}{199}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Who will receive the best student award? (§)}{199}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Data}{199}{subsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.1.2}Questions}{200}{subsection.15.1.2}%
+\contentsline {section}{\numberline {15.2}How to fairly rank movies (§)}{200}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}Data}{200}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}Questions}{201}{subsection.15.2.2}%
+\contentsline {section}{\numberline {15.3}What is your best choice recommendation? (§)}{202}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Data}{202}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}Questions}{203}{subsection.15.3.2}%
+\contentsline {section}{\numberline {15.4}What is the best public policy? (§§)}{203}{section.15.4}%
+\contentsline {subsection}{\numberline {15.4.1}Data files}{203}{subsection.15.4.1}%
+\contentsline {subsection}{\numberline {15.4.2}Questions}{203}{subsection.15.4.2}%
+\contentsline {section}{\numberline {15.5}A fair diploma validation decision (§§§)}{204}{section.15.5}%
+\contentsline {subsection}{\numberline {15.5.1}Data}{204}{subsection.15.5.1}%
+\contentsline {subsection}{\numberline {15.5.2}Questions}{204}{subsection.15.5.2}%
+\contentsline {part}{Part\ IV\hspace {\betweenumberspace }Advanced topics}{205}{part.4}%
+\contentsline {chapter}{\numberline {16}Bipolar-valued relational equivalence}{207}{chapter.16}%
+\contentsline {section}{\numberline {16.1}A motivating data set}{207}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Modelling pairwise bipolar-valued rating opinions}{209}{section.16.2}%
+\contentsline {section}{\numberline {16.3}{\sc Kendall}\xspace 's tau index}{212}{section.16.3}%
+\contentsline {section}{\numberline {16.4}Bipolar-valued relational equivalence}{213}{section.16.4}%
+\contentsline {section}{\numberline {16.5}Fitness of ranking heuristics}{215}{section.16.5}%
+\contentsline {section}{\numberline {16.6}Illustrating preference divergences}{217}{section.16.6}%
+\contentsline {section}{\numberline {16.7}Exploring the ``\emph {better rated}'' and the ``\emph {as well as rated}'' opinions}{219}{section.16.7}%
+\contentsline {chapter}{\numberline {17}On computing digraph kernels}{221}{chapter.17}%
+\contentsline {section}{\numberline {17.1}What is a graph kernel ?}{221}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Initial and terminal kernels}{223}{section.17.2}%
+\contentsline {section}{\numberline {17.3}Kernels in lateralized digraphs}{228}{section.17.3}%
+\contentsline {section}{\numberline {17.4}Computing first and last choice recommendations}{230}{section.17.4}%
+\contentsline {section}{\numberline {17.5}Tractability of kernel computation}{235}{section.17.5}%
+\contentsline {section}{\numberline {17.6}{\sc Berge}\xspace kernel equation systems}{237}{section.17.6}%
+\contentsline {section}{Notes}{244}{section*.14}%
+\contentsline {chapter}{\numberline {18}On confident outrankings}{245}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Modelling uncertain criteria significances}{245}{section.18.1}%
+\contentsline {section}{\numberline {18.2}Bipolar-valued likelihood of outranking situations}{247}{section.18.2}%
+\contentsline {section}{\numberline {18.3}Confidence level of outranking digraphs}{249}{section.18.3}%
+\contentsline {chapter}{\numberline {19}On robust outrankings}{255}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Cardinal or ordinal criteria significance weights}{255}{section.19.1}%
+\contentsline {section}{\numberline {19.2}Qualifying the stability of outranking situations}{256}{section.19.2}%
+\contentsline {section}{\numberline {19.3}Computing stability denotations}{260}{section.19.3}%
+\contentsline {section}{\numberline {19.4}Robust bipolar-valued outranking digraphs}{262}{section.19.4}%
+\contentsline {section}{\numberline {19.5}Unopposed outranking situations}{265}{section.19.5}%
+\contentsline {section}{\numberline {19.6}Computing Pareto efficient multiobjective choices}{268}{section.19.6}%
+\contentsline {chapter}{\numberline {20}Tempering plurality tyranny effects in social choice problems}{271}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Two-stage elections with multipartisan primary selection}{271}{section.20.1}%
+\contentsline {subsection}{\numberline {20.1.1}Converting voting profiles into performance tableaux}{271}{subsection.20.1.1}%
+\contentsline {subsection}{\numberline {20.1.2}Multipartisan primary selection of eligible candidates}{273}{subsection.20.1.2}%
+\contentsline {subsection}{\numberline {20.1.3}Secondary election winner determination}{274}{subsection.20.1.3}%
+\contentsline {subsection}{\numberline {20.1.4}Multipartisan preferences in divisive politics}{276}{subsection.20.1.4}%
+\contentsline {section}{\numberline {20.2}Bipolar approval voting systems}{278}{section.20.2}%
+\contentsline {section}{\numberline {20.3}Pairwise comparison of bipolar approval votes}{282}{section.20.3}%
+\contentsline {section}{\numberline {20.4}Three-valued evaluative voting systems}{284}{section.20.4}%
+\contentsline {section}{\numberline {20.5}Favouring multipartisan candidates}{287}{section.20.5}%
+\contentsline {part}{Part\ V\hspace {\betweenumberspace }Working with simple graphs}{293}{part.5}%
+\contentsline {chapter}{\numberline {21}Working with undirected graphs}{295}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Implementing undirected graphs}{295}{section.21.1}%
+\contentsline {section}{\numberline {21.2}q-coloring of a graph}{298}{section.21.2}%
+\contentsline {section}{\numberline {21.3}MIS and clique enumeration}{299}{section.21.3}%
+\contentsline {section}{\numberline {21.4}Line graphs and maximal matchings}{300}{section.21.4}%
+\contentsline {section}{\numberline {21.5}Grids and the Ising model}{303}{section.21.5}%
+\contentsline {section}{\numberline {21.6}Simulating Metropolis random walks}{304}{section.21.6}%
+\contentsline {section}{\numberline {21.7}The n-cycle graph}{305}{section.21.7}%
+\contentsline {subsection}{\numberline {21.7.1}Computing maximal independent sets (MISs)}{306}{subsection.21.7.1}%
+\contentsline {subsection}{\numberline {21.7.2}Computing the automorphism group}{307}{subsection.21.7.2}%
+\contentsline {subsection}{\numberline {21.7.3}Computing the isomorphic MISs}{308}{subsection.21.7.3}%
+\contentsline {chapter}{\numberline {22}On tree graphs and graph forests}{311}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Generating random tree graphs}{311}{section.22.1}%
+\contentsline {section}{\numberline {22.2}Recognizing tree graphs}{313}{section.22.2}%
+\contentsline {section}{\numberline {22.3}Spanning trees and forests}{315}{section.22.3}%
+\contentsline {section}{\numberline {22.4}Maximum determined spanning forests}{317}{section.22.4}%
+\contentsline {chapter}{\numberline {23}About split, interval and permutation graphs}{321}{chapter.23}%
+\contentsline {section}{\numberline {23.1}A multiply perfect graph}{321}{section.23.1}%
+\contentsline {section}{\numberline {23.2}Who is the liar?}{324}{section.23.2}%
+\contentsline {section}{\numberline {23.3}Generating permutation graphs}{326}{section.23.3}%
+\contentsline {section}{\numberline {23.4}Recognizing permutation graphs}{330}{section.23.4}%
+\contentsline {part}{Appendix}{335}{section*.16}%
+\contentsline {section}{List of listings}{335}{section*.17}%
+\contentsline {section}{List of tables}{338}{section*.19}%
+\contentsline {chapter}{Index}{341}{chapter*.21}%

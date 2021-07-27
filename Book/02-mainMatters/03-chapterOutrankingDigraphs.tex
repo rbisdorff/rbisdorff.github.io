@@ -17,7 +17,7 @@
 In the \texttt{outrankingDigraphs} module\index{outrankingDigraphs@\texttt{outrankingDigraphs}}, the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class provides our standard \emph{outranking digraph} constructor. Such an instance represents a \emph{hybrid} object of both:\\ the {\tt PerformanceTableau} type and the {\tt OutrankingDigraph} type.
 
 A given \texttt{BipolarOutrankingDigraph} object contains hence always at least the following attributes:
-\begin{enumerate}
+\begin{enumerate}[nosep]
 \item \texttt{actions}: An ordered dictionary describing the potential decision actions or alternatives with {\tt name} and {\tt comment} attributes,
 \item \texttt{objectives}: A possibly empty ordered dictionary of decision objectives with {\tt name} and {\tt comment} attributes, describing the multiple preference dimensions involved in the decision problem, 
 \item \texttt{criteria}: An ordered dictionary of performance criteria, i.e. {\em preferentially independent\/} and {\em non-redundant\/} decimal-valued functions used for measuring the performance of each potential decision action with respect to a decision objective,
@@ -101,7 +101,7 @@ It is noteworthy to mention the three \emph{missing data} (\texttt{NA}) cases: a
 \section{The bipolar-valued outranking digraph}
 \label{sec:3.2}
 
-Given the previous random performance tableau $pt$, the {\tt BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} constructor computes the corresponding \emph{bipolar-valued outranking digraph}. 
+Given the previous random performance tableau \texttt{pt}, the {\tt BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} constructor computes the corresponding \emph{bipolar-valued outranking digraph}. 
 \begin{lstlisting}[caption={Example of random bipolar-valued outranking digraph.},label=list:3.4]
 >>> from outrankingDigraphs import \
 ...                       BipolarOutrankingDigraph
@@ -143,7 +143,7 @@ We may inspect the complete $[-1.0,+1.0]$-valued adjacency table as follows:
 The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class constructor computes from the given performance tableau $pt$ the characteristic value $r(x \succsim y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ in a default \emph{valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as \emph{indeterminate} characteristic value\footnote{See Definition~\ref{def:outranking} \citep{BIS-2013}}. 
 
 \begin{definition}[Semantics of the bipolar-valued characteristic function $r$] The semantics of $r(x \succsim y)$ are the following:
-\begin{itemize}
+\begin{itemize}[nosep]
 \item [a.] When $r(x \succsim y) > 0.0$, it is more {\em True\/} than {\em False\/} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is at least as well performing than alternative $y$ on a weighted majority of criteria {\bf and} there is no considerable negative performance difference observed in disfavour of $x$,
 \item [b.] When $r(x \succsim y) < 0.0$, it is more {\em False\/} than {\em True\/} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is {\bf not} \emph{at least as well performing} on a weighted majority of criteria than alternative $y$ {\bf and} there is no considerable positive performance difference observed in favour of $x$,
 \item [c.] When $r(x \succsim y) = 0.0$, it is {\bf indeterminate} whether $x$ outranks $y$ or not.
@@ -171,10 +171,10 @@ From above given semantics, we notice in Listing~\ref{list:3.5} Line 5above that
    Valuation in range: -7.00 to +7.00; r(x,y): +5/7 = +0.71
 \end{lstlisting}
 
-The outranking characteristic value $r(a1 \succsim a2)$ represents the \emph{majority margin} resulting from the difference between the weights of the criteria in favor and the weights of the criteria in disfavor of the statement that alternative \texttt{a1} is at least as well performing as alternative \texttt{a2}. No considerable performance difference being observed, no polarising situation is triggered in this pairwise comparison.
+The outranking characteristic value $r(a1 \succsim a2)$ represents the \emph{majority margin} resulting from the difference between the significance weights of the criteria in favour and the significace weights of the criteria in disfavour of the statement that alternative \texttt{a1} is ``\emph{at least as well performing as}'' alternative \texttt{a2}. No considerable performance difference being observed, no polarising situation is triggered in this pairwise comparison.
 
 Such a situation is, however, observed when we pairwise compare the performances of alternatives \texttt{a1} and \texttt{a7}.
-\begin{lstlisting}[caption={Pairwiese comparison with considerable performance difference},label=list:3.7,basicstyle=\scriptsize]
+\begin{lstlisting}[caption={Pairwise comparison with considerable performance difference},label=list:3.7,basicstyle=\scriptsize]
 >>> odg.showPairwiseComparison('a1','a7')
   *------------  pairwise comparison ----*
    Comparing actions : (a1, a7)
@@ -190,12 +190,12 @@ Such a situation is, however, observed when we pairwise compare the performances
    ----------------------------------------
    Valuation in range: -7.00 to +7.00; r(x,y)= +1/7 => 0.0
 \end{lstlisting}
-This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting an \emph{as well as performing} situation. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Listing~\ref{list:3.7} Line 6 above and first row in the relation table shown in Listing~\ref{list:3.5}). Both contradictory facts trigger eventually an \emph{indeterminate} outranking situation \citep{BIS-2013}. 
+This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting an ``\emph{as well as performing}'' situation. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Listing~\ref{list:3.7} Line 6 above and first row in the relation table shown in Listing~\ref{list:3.5}). Both contradictory facts trigger eventually an \emph{indeterminate} outranking situation \citep{BIS-2013}. 
 
 \section{Recoding the digraph valuation}
 \label{sec:3.4}
 
-All outranking digraphs, being of root type {\tt Digraph}, inherit the methods available under this latter class. The characteristic valuation domain of a digraph may, for instance,  be recoded with the {\tt recodeValuation()}\index{recodeValuation@\textsl{recodeValuation()}} method below to the {\em integer\/} range $[-7,+7]$, i.e. plus or minus the global significance of the family of criteria considered in this example instance.
+All outranking digraphs, being of root type {\tt Digraph}, inherit the methods available under this latter class. The characteristic valuation domain of a digraph may, for instance,  be recoded with the {\tt recodeValuation()}\index{recodeValuation@\textsl{recodeValuation()}} method to the {\em integer\/} range $[-7,+7]$, i.e. plus or minus the total significance weights of the family of criteria considered in this example instance \texttt{odg}.
 \begin{lstlisting}[caption={Recoding the digraph valuation},label=list:3.8]
 >>> odg.recodeValuation(-37,+37)
 >>> odg.valuationdomain['hasIntegerValuation'] = True
@@ -237,7 +237,7 @@ We may visualize the \emph{codual} ({\em strict\/}) outranking digraph with a gr
 Many more tools for exploiting bipolar-valued outranking digraphs are available in the \Digraph resources \citep{BIS-2021}.
 \vspace{1cm}
 
-The next, and main Part of the book, presents decision methods and tools, like computing a best choice recommendation, a linear ranking or a rating with multiple incommensurable criteria. We also introduce the main performance tableau models we are going to use.  
+In the next, methodological Part of the book, we present and discuss operational decision methods and tools, like recommending a best choice, determining the winner of an election, computing linear rankings or  quantile ratings with multiple incommensurable criteria. We also introduce the main performance tableau models we are going to use in the sequel. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \phantomsection

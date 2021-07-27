@@ -27,14 +27,14 @@ Several download options (easiest under Linux or Mac OS-X) are given. Either, by
 \end{verbatim}
 \end{footnotesize}
 or from \texttt{sourceforge.net}:
-\begin{footnotesize}
+\begin{scriptsize}
 \begin{verbatim}
 ...\$ git clone https://git.code.sf.net/p/digraph3/code Digraph3}
 \end{verbatim}
-\end{footnotesize}
+\end{scriptsize}
 Or, with a browser access, download either, from the github link above or, from the sourceforge page the latest distribution zip archive and extract it.
 
-On Linux or Mac OS, \texttt{..\$ cd} to the extracted \texttt{Digraph3} directory.
+On Linux or Mac OS, \texttt{..\$ cd} to the extracted \texttt{Digraph3} directory:
 \begin{footnotesize}
 \begin{verbatim}
 ../Digraph3$ make install
@@ -87,7 +87,7 @@ Individual module pytest suites are also provided (see the makefile), like the o
 
 \paragraph{Dependencies:}
 To be fully functional, the \Digraph resources mainly need:
-\begin{itemize}[leftmargin=0.5cm,listparindent=0em,rightmargin=0.2cm]
+\begin{itemize}[leftmargin=0.5cm,listparindent=0em,rightmargin=0.2cm,nosep]
 \item The \texttt{graphviz} tools \footnote{\href{https://graphviz.org}{https://graphviz.org}, \citet{graphViz}} and 
 \item The R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
 \item When exploring digraph isomorphisms, the \texttt{nauty} isomorphism testing program is required. \footnote{\href{https://www.cs.sunysb.edu/~algorith/implement/nauty/implement.shtml}{nauty home page} and \citet{nauty}. On linux you may try: \texttt{sudo apt install nauty}. On Mac OS X corresponding dmg installer are available for downloading.}.
@@ -102,7 +102,8 @@ You may start an interactive Python3 session in the \texttt{Digraph3} directory.
 $HOME/.../Digraph3$ python3
 Python 3.9.6 (v3.9.6:db3ff76da1, Jun 28 2021, 11:49:53) 
 [Clang 6.0 (clang-600.0.57)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
+Type "help", "copyright", "credits" or 
+     "license" for more information.
 >>>
 \end{verbatim}
 \end{footnotesize}
@@ -123,11 +124,11 @@ For exploring the classes and methods provided by the \Digraph modules \footnote
                       'relation','order','name',
                       'gamma','notGamma']
 \end{lstlisting}
-In Listing \ref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object $dg$ of order 5 - number of nodes called (decision) actions - and arc probability of $50\%$. The resulting digraph of order 5 and size -- number of arcs-- 12 is completely determined.
+In Listing \ref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object \texttt{dg} of order 5 - number of nodes called (decision) actions - and arc probability of $50\%$. The resulting digraph of order 5 and size -- number of arcs-- 12 is completely determined.
 
 \section{Permanent storage of a digraph object}
 \label{sec:1.3}                   
-We may save the content of $dg$ in a file called \texttt{tutorialDigraph.py}.
+We may save the content of \texttt{dg} in a file called \texttt{tutorialDigraph.py}.
 \begin{lstlisting}
 >>> dg.save('tutorialDigraph')
  *--- Saving digraph in file: <tutorialDigraph.py> ---*
@@ -174,7 +175,7 @@ actions = OrderedDict([
 \end{lstlisting}
 
 In the \Digraph resources, all digraph object instances are of \texttt{Digraph}\index{Digraph@\texttt{Digraph} class} type and contain at least the following attributes (see Listing \ref{list:1.1}  Lines 11-12):
-\begin{enumerate}[leftmargin=0.5cm,listparindent=0em]
+\begin{enumerate}[leftmargin=0.5cm,listparindent=0em,nosep]
 \item A \texttt{name} attribute, holding usually the actual name of the stored instance that was used to create the instance;
 \item An ordered dictionary of digraph nodes called \texttt{actions} (decision alternatives) with at least a \texttt{name} attribute;
 \item An \texttt{order} attribute containing the number of graph nodes (length of the actions dictionary) automatically added by the object constructor;
@@ -187,7 +188,7 @@ In the \Digraph resources, all digraph object instances are of \texttt{Digraph}\
 \section{Inspecting a digraph object}
 \label{sec:1.4}
 
-Different \texttt{show...()} methods like the \texttt{showShort()} method \index{showSort@\texttt{showShort()}} reveal us now that $dg$ is a crisp, irreflexive and connected digraph of order five (see Listing \ref{list:1.3}  Lines 1, 16, 26, 37 below).
+Different \texttt{show...()} methods like the \texttt{showShort()} method \index{showSort@\texttt{showShort()}} reveal us now that \texttt{dg} is a crisp, irreflexive and connected digraph of order five (see Listing \ref{list:1.3}  Lines 1, 16, 26, 37 below).
 
 \begin{lstlisting}[caption={Random crisp digraph object},label=list:1.3]
 >>> dg.showShort()
@@ -234,7 +235,7 @@ Different \texttt{show...()} methods like the \texttt{showShort()} method \index
  'a5': in => {'a1', 'a4', 'a3'}, out => {'a4'}
 \end{lstlisting}
 
-The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph $dg$ (see Fig. \ref{fig:1.1}), if the \emph{graphviz} tools are installed on your system \citep{graphViz}\index{graphviz@\textsl{graphviz}}.
+The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph \texttt{dg} (see Fig. \ref{fig:1.1}), if the \emph{graphviz} tools are installed on your system \citep{graphViz}\index{graphviz@\textsl{graphviz}}.
 \begin{lstlisting}
 >>> dg.exportGraphViz('tutorialDigraph')
  *---- exporting a dot file do GraphViz tools ---------*
@@ -248,7 +249,7 @@ The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} me
 \label{fig:1.1}       % Give a unique label
 \end{figure}
 
-Further methods are provided for inspecting this random \texttt{Digraph} object $dg$, like the following \texttt{showStatistics()}\index{showStatistics@\texttt{showStatistics()}} method.
+Further methods are provided for inspecting this random \texttt{Digraph} object \texttt{dg}, like the following \texttt{showStatistics()}\index{showStatistics@\texttt{showStatistics()}} method.
 
 \begin{lstlisting}[caption={Inspecting a \texttt{Digraph} object},label=list:1.5]
 >>> dg.showStatistics()
@@ -309,7 +310,7 @@ Mind that \texttt{show...()} methods output their results in the \emph{Python} c
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/relationMap1.png}
-\caption{Browsing the relation map of the tutorial digraph. $+$ indicates a certainly valid and $-$ indicates a certainly  invalid relation, Here we find confirmed again that our random digraph instance $dg$, is indeed a crisp, i.e. 100\% determined irreflexive digraph instance.}
+\caption{Browsing the relation map of the tutorial digraph. $+$ indicates a certainly valid and $-$ indicates a certainly  invalid relation, Here we find confirmed again that our random digraph instance \texttt{dg}, is indeed a crisp, i.e. 100\% determined irreflexive digraph instance.}
 \label{fig:1.2}       % Give a unique label
 \end{figure}
 
