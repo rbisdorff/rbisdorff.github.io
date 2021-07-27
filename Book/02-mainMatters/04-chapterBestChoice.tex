@@ -1,14 +1,14 @@
 \chapter{Computing a best choice recommendation}
 \label{sec:4}
 
-\begin{quotation}''... whether we are deciding between buying different commodity baskets, or making choices about what to do on a holiday, or deciding for whom to vote for in an election, we are inescapably involved in evaluating alternatives with non–commensurable aspects.''
-    
---Amartya Sen\index{Sen@\textsl{A. Sen}}, \emph{Idea of Justice}, Allen Lane London, 2009.
-  \end{quotation}
-
-\vspace{1cm}
-
 \abstract*{ In this chapter we present the \Rubis best choice recommender system. To illustrate the approach we use a best office site selection problem. We show how to explore the given performance tableau and compute the corresponding outranking digraph. We present the pragmatic principles that govern our best choice recommendation algorithm and solve the illustrative best office site choice problem.}
+
+\begin{quotation}
+  ``... The goal of our research was to design a resolution method ... that is easy to put into practice, that requires as few and reliable hypotheses as possible, and that meets the needs [of the decision maker]...''
+
+  --\citep*{ROY-1966}\index{Roy@\textsl{B. Roy}}.
+\end{quotation}
+\vspace{1cm}
 
 \abstract{ In this chapter we present the \Rubis best choice recommender system. We illustrate our \Rubis approach with a best office site selection problem. We show how to explore the given performance tableau and compute the corresponding outranking digraph. We present the pragmatic principles that govern our best choice recommendation algorithm and solve the illustrative best office site choice problem.}
 
@@ -238,7 +238,8 @@ Our best office site choice will now be based on such strict outranking situatio
 Traditionally, solving a best-choice problem consists in finding \emph{the} unique best decision alternative. We adopt here instead a modern recommender system’s approach which shows a non empty subset of decision alternatives which contains by construction the potential best alternative(s).
 
 Our five \emph{pragmatic principles} for computing such a \emph{best-choice recommendation} (BCR) are the following:
-\begin{itemize}[leftmargin=1cm,listparindent=0em]
+
+\begin{itemize}[leftmargin=1cm,listparindent=0em,nosep]
 \item [P1:] \emph{Elimination for well motivated reasons}; each eliminated alternative has to be outranked by at least one alternive in the BCR.
 \item [P2:] \emph{Minimal size}; the BCR must be as limited in cardinality as possible.
 \item [P3:] \emph{Efficient and informative}; The BCR must not contain a self-contained sub-recommendation.
@@ -249,28 +250,29 @@ Our five \emph{pragmatic principles} for computing such a \emph{best-choice reco
 Let $X$ be the set of potential decision alternatives. Let $Y$ be a non empty subset of $X$, called a \emph{choice} in the outranking digraph $G(X,r(\succsim )$. A \emph{weakly independent} and \emph{outranking} (resp. \emph{outranked}) choice is called an \emph{outranking} (resp. \emph{outranked}) \emph{prekernel} (see Chapter~\ref{sec:17} on computing kernels in digraphs).
 
 We may now qualify a BCR $Y$ in the following terms:
-\begin{itemize}[leftmargin=0.5cm,listparindent=0em]
+
+\begin{itemize}[leftmargin=0.5cm,listparindent=0em,nosep]
 \item [-] $Y$ is called \emph{outranking} (resp. \emph{outranked}) when for all not selected alternative $x$ there exists an alternative $y \in X$ retained such that $r(y \succsim x) > 0.0$ (resp. $r(x \precsim y) > 0.0$). Such a choice verifies principle P1.
 \item [-] $Y$ is called \emph{weakly independent} when for all $x \neq y$ in $Y$ , we observe $r(x \succsim y) \leq 0.0$. Such a choice verifies principles P3 (\emph{internal stability}).
 \item [-] $Y$ is conjointly a \emph{strictly outranking} (resp. \emph{stricly toutranked}) \textbf{and} \emph{weakly independent} choice. This choice now verifies principles P1, P2, P3 and P4.
 \item [-] To finally verify principle P5, we recommend among all potential strict outranking (resp. strict outranked) prekernels, the \emph{most determined} one, i.e. the one supported with the highest criteria significance. And in this prekernel we eventually recommend the alternatives that are included in this prekernel with highest criteria significance.
 \end{itemize}
 
-Following this best choice method\index{outranking!Rubis best choice recommendation}, our potential best choice recommendations are determined by the outranking \emph{prekernels}\index{prekernels} --\emph{weakly independent} and \emph{outranking} choices-- of the \emph{strict outranking} digraph (see \citet{BIS-2008a}). If not reduced to a singleton, the actual \emph{best choice recommendation} will have to be refined in a later stage of the decision process.
+Following this best choice method\index{outranking!Rubis best choice recommendation}, our potential best choice recommendations are determined by the outranking \emph{prekernels}\index{prekernel} --\emph{weakly independent} and \emph{outranking} choices-- of the \emph{strict outranking} digraph (see \citet{BIS-2008a}). If not reduced to a singleton, the actual \emph{best choice recommendation} will have to be refined in a later stage of the decision process.
 
-Mind that a given outranking digraph $G$ may not always admit any outranking (resp. outranked) prekernels. This is the case when $G$ contains chordless odd circuits. The case given, we previously need to break open all these chordless odd circuits at their weakest link.\index{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class}
+Mind that a given outranking digraph \texttt{g} may not always admit any outranking (resp. outranked) prekernels. This is the case when \texttt{g} contains chordless odd circuits. The case given, we previously need to break open all these chordless odd circuits at their weakest link.\index{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class}
 \begin{lstlisting}
 >>> from digraphs import BrokenCocsDigraph
 >>> bcg = BrokenCocsDigraph(g)
 >>> bcg.brokenLinks
   set()
 \end{lstlisting}
-Luckily our outranking digraph $g$ here does not show any chordless outranking circuits.
+Luckily our outranking digraph \texttt{g} here does not show any chordless outranking circuits.
 
 \section{Computing a best choice recommendation}
 \label{sec:4.4}
 
-To compute now our \Rubis best choice recommendation\index{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}} we work on the \emph{codual} outranking digraph \index{codual digraph}, i.e. the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance $g$.\footnote{See Section~\ref{sec:2.6} and \citet{BIS-2013}].}:
+To compute now our \Rubis best choice recommendation\index{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}} we work on the \emph{codual} outranking digraph \index{codual digraph}, i.e. the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph \texttt{g} that has a vertex for each face of \texttt{g}. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance \texttt{g} \citep{BIS-2013}.\footnote{See Section~\ref{sec:2.6}}:
 \begin{lstlisting}[caption={Computing the best choice recommendation},label=list:4.3]
 >>> g.showBestChoiceRecommendation(\
 ...              CoDual=True, # default setting\
@@ -299,7 +301,7 @@ To compute now our \Rubis best choice recommendation\index{showBestChoiceRecomme
         'G': 0.00, 'F': 0.00, 'E': 0.00, 'D': 0.00,
         'C': 0.00, 'B': 0.00, 'A': 0.00, }
 \end{lstlisting}				  
-It is interesting to notice in Listing~\ref{list:4.6} (Line 8) that our \emph{best choice recommendation} consists actually in the previously mentioned set of weak \Condorcet winners\index{Condorcet!winner}: \texttt{A}, \texttt{C} and \texttt{D} (see Fig.~\ref{fig:4.2}). In the corresponding characteristic vector (see Lines 15-16 and Section~\ref{sec:17.6}), representing the bipolar credibility degree with which each alternative may indeed be included in, or excluded from this recommendation, we find that alternative \texttt{D} is the only positively validated one, whereas both extreme alternatives --\texttt{A} (the most expensive) and \texttt{C} (the cheapest)-- stay in an indeterminate situation (see \citet{BIS-2006a,BIS-2006b}). They may \emph{be or not be} potential best choices. Notice furthermore that compromise alternative \texttt{G}, while not actually being included in this stricly outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} recommended as potential best choice. Alternatives \texttt{B}, \texttt{E} and \texttt{F} are all positively excluded from this best choice recommendation.
+It is interesting to notice in Listing~\ref{list:4.3} (Line 8) that our \emph{best choice recommendation} consists actually in the previously mentioned set of weak \Condorcet winners\index{Condorcet!winner}: \texttt{A}, \texttt{C} and \texttt{D} (see Fig.~\ref{fig:4.2}). In the corresponding characteristic vector (see Lines 15-16 and Section~\ref{sec:17.6}), representing the bipolar credibility degree with which each alternative may indeed be included in, or excluded from this recommendation, we find that alternative \texttt{D} is the only positively validated one, whereas both extreme alternatives --\texttt{A} (the most expensive) and \texttt{C} (the cheapest)-- stay in an indeterminate situation (see \citet{BIS-2006a,BIS-2006b}). They may \emph{be or not be} potential best choices. Notice furthermore that compromise alternative \texttt{G}, while not actually being included in this stricly outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} recommended as potential best choice. Alternatives \texttt{B}, \texttt{E} and \texttt{F} are all positively excluded from this best choice recommendation.
 
 To inspect why alternative \texttt{D} is the only positive best choice recommendation, we shall compare now the performances of alternatives \texttt{D} and \texttt{G} in a pairwise perspective\index{showPairwiseComparison@\texttt{showPairwiseComparison()}}.
 \begin{lstlisting}[caption={Inspecting pairwise comparison between alternatives \texttt{G} and \texttt{D}},label=list:4.4,basicstyle=\ttfamily\scriptsize]
@@ -416,7 +418,7 @@ It became thereafter clear for us all that both the lack of a specific performan
 
 The digraph proposed by D. Bouyssou in the October 2005 discussion, see Fig.~\ref{fig:4.5} is effectively not weakly complete and does hence not represent, in our modern sense, a valid outranking digraph instance, as already suggested by Denis Bouyssou in October 2005. Yet, as it is a partial tournament, it may be a strict outranking digraph, i.e. the asymmetric part --the codual-- of a valid outranking digraph. In this case, nodes \texttt{a} and \texttt{d} --the kernel of the strict outranking digraph-- would actually for sure outrank each other and, hence, represent both the natural best choice recommendation. However, contrary to node \texttt{d}, node \texttt{a} becomes in this associated not strict outranking digraph actually a \Condorcet winner --outranking certainly all other nodes-- and should for sure always be included in the best choice recommendation.
 
-It stays an interesting open mathematical problem to show (or not) that both necessary conditions: --weak completeness and the coduality principle-- are also sufficient for qualifying any bipolar-valued digraph as potential bipolar-valued outranking digraph instance.
+It stays an interesting open mathematical problem to show (or not) that both necessary conditions: --weak completeness and the coduality principle-- are also sufficient for qualifying any bipolar-valued digraph as potential instance of an outranking digraph.
 
 
 %%%%%%% The chapter bibliography
