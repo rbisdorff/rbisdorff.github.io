@@ -145,7 +145,7 @@ Six professors (labeled \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{
 \label{fig:23.2}       % Give a unique label
 \end{figure}
 
-From graph theory we know that time interval intersections graphs must in fact be interval graphs, i.e. \emph{triangulated} and \emph{co-comparative} graphs. The testimonies graph should therefore not contain any chordless cycle of four and more vertices. Now, the presence or not of such chordless cycles in the testimonies graph may be checked with the \texttt{computeChordlessCycles()} method.\index{computeChordlessCycles@\emph{computeChordlessCycles()}}
+From graph theory we know that time interval intersections graphs must in fact be interval graph instances, i.e. \emph{triangulated} and \emph{co-comparative} graphs. The testimonies graph should therefore not contain any chordless cycle of four and more vertices. Now, the presence or not of such chordless cycles in the testimonies graph may be checked with the \texttt{computeChordlessCycles()} method.\index{computeChordlessCycles@\emph{computeChordlessCycles()}}
 \begin{lstlisting}
 >>> g.computeChordlessCycles()
   Chordless cycle certificate: ['D','C','E','A','D']
@@ -324,6 +324,9 @@ Let us consider, for instance, the following random graph of order 8 generated w
 >>> g.isPerfectGraph()
   True
 >>> g.exportGraphViz(fileName='randomGraph4335')
+  *---- exporting a dot file for GraphViz tools ----*
+   Exporting to randomGraph4335.dot
+   fdp -Tpdf randomGraph4335.dot -o randomGraph4335.pdf
 \end{lstlisting}		    
 \begin{figure}[h]
 \sidecaption[t]

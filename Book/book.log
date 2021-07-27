@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  27 JUL 2021 10:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  27 JUL 2021 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -761,53 +761,49 @@ Package backref Info: ** backref set up for natbib ** on input line 143.
 
 Package mathptmx Warning: There are no bold math fonts on input line 9.
 
-
-Package natbib Warning: Citation `BIS-2021' on page vii undefined on input line
- 20.
-
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-0.
+1.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [7] [8]
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 54.
+ 66.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 54.
+ 66.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 54.
+ 66.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 54.
+ 66.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 5
-4.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 6
+6.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-<Figures/Marc-Roubens.jpg, id=771, 513.92pt x 513.92pt>
+<Figures/Marc-Roubens.jpg, id=770, 513.92pt x 513.92pt>
 File: Figures/Marc-Roubens.jpg Graphic file (type jpg)
 <use Figures/Marc-Roubens.jpg>
-Package pdftex.def Info: Figures/Marc-Roubens.jpg  used on input line 56.
+Package pdftex.def Info: Figures/Marc-Roubens.jpg  used on input line 68.
 (pdftex.def)             Requested size: 85.35826pt x 85.35774pt.
 ) [9 <./Figures/Marc-Roubens.jpg>] [10
 
@@ -1651,7 +1647,7 @@ Package pdftex.def Info: Figures/AliceF.png  used on input line 12.
 
 
  <./Figures/AliceF.png>] [156] [157]
-<Figures/aliceCriteria.png, id=5113, 1115.16624pt x 603.25375pt>
+<Figures/aliceCriteria.png, id=5109, 1115.16624pt x 603.25375pt>
 File: Figures/aliceCriteria.png Graphic file (type png)
 <use Figures/aliceCriteria.png>
 Package pdftex.def Info: Figures/aliceCriteria.png  used on input line 131.
@@ -1662,7 +1658,7 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 131--132
  []
 
 [158 <./Figures/aliceCriteria.png>]
-<Figures/aliceHeatmap.png, id=5141, 773.89125pt x 511.9125pt>
+<Figures/aliceHeatmap.png, id=5138, 773.89125pt x 511.9125pt>
 File: Figures/aliceHeatmap.png Graphic file (type png)
 <use Figures/aliceHeatmap.png>
 Package pdftex.def Info: Figures/aliceHeatmap.png  used on input line 148.
@@ -1673,7 +1669,7 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 148--149
  []
 
 [159 <./Figures/aliceHeatmap.png>]
-<Figures/aliceRelationmap.png, id=5159, 691.58376pt x 527.9725pt>
+<Figures/aliceRelationmap.png, id=5158, 691.58376pt x 527.9725pt>
 File: Figures/aliceRelationmap.png Graphic file (type png)
 <use Figures/aliceRelationmap.png>
 Package pdftex.def Info: Figures/aliceRelationmap.png  used on input line 190.
@@ -1683,12 +1679,12 @@ Package pdftex.def Info: Figures/aliceRelationmap.png  used on input line 190.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [160] [161 <./Figures/aliceRelationmap.png>] [162]
-<Figures/aliceBestChoice.png, id=5272, 586.19pt x 452.69125pt>
+<Figures/aliceBestChoice.png, id=5263, 586.19pt x 452.69125pt>
 File: Figures/aliceBestChoice.png Graphic file (type png)
 <use Figures/aliceBestChoice.png>
 Package pdftex.def Info: Figures/aliceBestChoice.png  used on input line 281.
 (pdftex.def)             Requested size: 199.16928pt x 153.80937pt.
-<Figures/pairwiseComparison.png, id=5276, 656.4525pt x 803.0pt>
+<Figures/pairwiseComparison.png, id=5267, 656.4525pt x 803.0pt>
 File: Figures/pairwiseComparison.png Graphic file (type png)
 <use Figures/pairwiseComparison.png>
 Package pdftex.def Info: Figures/pairwiseComparison.png  used on input line 295
@@ -2723,32 +2719,37 @@ Package pdftex.def Info: Figures/oriented_permutationGraph.png  used on input l
 ine 289.
 (pdftex.def)             Requested size: 142.26378pt x 208.97112pt.
  [345 <./Figures/oriented_permutationGraph.png>]
-<Figures/randomGraph4335.pdf, id=10217, 299.1175pt x 266.9975pt>
+<Figures/randomGraph4335.pdf, id=10217, 299.1175pt x 319.1925pt>
 File: Figures/randomGraph4335.pdf Graphic file (type pdf)
 <use Figures/randomGraph4335.pdf>
-Package pdftex.def Info: Figures/randomGraph4335.pdf  used on input line 331.
-(pdftex.def)             Requested size: 170.71652pt x 152.3857pt.
- [346 <./Figures/randomGraph4335.pdf>]
-<Figures/transOrientGraph.png, id=10274, 398.48875pt x 329.23pt>
+Package pdftex.def Info: Figures/randomGraph4335.pdf  used on input line 334.
+(pdftex.def)             Requested size: 170.71652pt x 182.17538pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[346]
+<Figures/transOrientGraph.png, id=10263, 398.48875pt x 329.23pt>
 File: Figures/transOrientGraph.png Graphic file (type png)
 <use Figures/transOrientGraph.png>
-Package pdftex.def Info: Figures/transOrientGraph.png  used on input line 359.
+Package pdftex.def Info: Figures/transOrientGraph.png  used on input line 362.
 (pdftex.def)             Requested size: 199.16928pt x 164.5543pt.
- [347 <./Figures/transOrientGraph.png>]
-<Figures/transOrientDualGraph.png, id=10309, 441.65pt x 277.035pt>
+ [347 <./Figures/randomGraph4335.pdf> <./Figures/transOrientGraph.png>]
+<Figures/transOrientDualGraph.png, id=10306, 441.65pt x 277.035pt>
 File: Figures/transOrientDualGraph.png Graphic file (type png)
 <use Figures/transOrientDualGraph.png>
 Package pdftex.def Info: Figures/transOrientDualGraph.png  used on input line 3
-88.
+91.
 (pdftex.def)             Requested size: 199.16928pt x 124.93513pt.
- [348 <./Figures/transOrientDualGraph.png>] [349]
-<Figures/isomorphicPerms.png, id=10380, 921.4425pt x 396.48125pt>
+
+[348 <./Figures/transOrientDualGraph.png>] [349]
+<Figures/isomorphicPerms.png, id=10378, 921.4425pt x 396.48125pt>
 File: Figures/isomorphicPerms.png Graphic file (type png)
 <use Figures/isomorphicPerms.png>
-Package pdftex.def Info: Figures/isomorphicPerms.png  used on input line 470.
+Package pdftex.def Info: Figures/isomorphicPerms.png  used on input line 473.
 (pdftex.def)             Requested size: 341.43306pt x 146.9075pt.
 
-Overfull \hbox (8.53583pt too wide) in paragraph at lines 470--471
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 473--474
 [][] 
  []
 
@@ -2816,12 +2817,8 @@ Overfull \hbox (3.17114pt too wide) in paragraph at lines 223--225
 \tf@thm=\write10
 \openout10 = `book.thm'.
 
-
-
-Package natbib Warning: There were undefined citations.
-
-(./book.aux (./01-frontMatters/dedic.aux) (./01-frontMatters/preface.aux)
-(./02-mainMatters/00-chapterIntroduction.aux) (./02-mainMatters/part1.aux)
+ (./book.aux (./01-frontMatters/dedic.aux) (./01-frontMatters/preface.aux) (./0
+2-mainMatters/00-chapterIntroduction.aux) (./02-mainMatters/part1.aux)
 (./02-mainMatters/01-chapterIntroDigraph3.aux)
 (./02-mainMatters/02-chapterDigraphs.aux)
 (./02-mainMatters/03-chapterOutrankingDigraphs.aux) (./02-mainMatters/part2.aux
@@ -2858,16 +2855,16 @@ LaTeX Warning: There were multiply-defined labels.
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 0AA11003498B4A810CD2F6AF06AB3207;42598.
 Package rerunfilecheck Info: File `book.brf' has not changed.
-(rerunfilecheck)             Checksum: 300BB1D7C1920E2D01D87465FAB7C17D;5446.
+(rerunfilecheck)             Checksum: 5334511919DA66725AD5E00B991F065E;5446.
  ) 
 Here is how much of TeX's memory you used:
- 24915 strings out of 478994
- 377238 string characters out of 5858184
- 1148555 words of memory out of 5000000
- 34638 multiletter control sequences out of 15000+600000
+ 24919 strings out of 478994
+ 377309 string characters out of 5858184
+ 1148512 words of memory out of 5000000
+ 34639 multiletter control sequences out of 15000+600000
  488906 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,12n,102p,1584b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,12n,102p,1507b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{page.33,\\relax\040\\hskip\0400.2em\\ignorespaces
 \04034} has been referenced but does not exist, replaced by a fixed one
 
@@ -2892,10 +2889,10 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (375 pages, 7626202 bytes).
+Output written on book.pdf (375 pages, 7629208 bytes).
 PDF statistics:
- 12289 PDF objects out of 12825 (max. 8388607)
- 11470 compressed objects within 115 object streams
- 7018 named destinations out of 7423 (max. 500000)
+ 12294 PDF objects out of 12825 (max. 8388607)
+ 11475 compressed objects within 115 object streams
+ 7021 named destinations out of 7423 (max. 500000)
  2037 words of extra memory for PDF output out of 10000 (max. 10000000)
 
