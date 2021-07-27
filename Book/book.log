@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  27 JUL 2021 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  27 JUL 2021 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2765,10 +2765,6 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 473--474
 
 
 ]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 225.
-
 (./book.lol [353
 
 
@@ -2861,14 +2857,14 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 8DE5AE3238559D6745DC533C9A4F69DB;43089.
+(rerunfilecheck)             Checksum: 438EB51F615A6CA9D6C75BDEAE02E736;43089.
 Package rerunfilecheck Info: File `book.brf' has not changed.
 (rerunfilecheck)             Checksum: 5334511919DA66725AD5E00B991F065E;5446.
  ) 
 Here is how much of TeX's memory you used:
  24925 strings out of 478994
  377383 string characters out of 5858184
- 1230645 words of memory out of 5000000
+ 1230642 words of memory out of 5000000
  34642 multiletter control sequences out of 15000+600000
  489523 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2897,7 +2893,7 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (375 pages, 7629593 bytes).
+Output written on book.pdf (375 pages, 7629581 bytes).
 PDF statistics:
  12303 PDF objects out of 12825 (max. 8388607)
  11484 compressed objects within 115 object streams
