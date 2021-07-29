@@ -18,7 +18,7 @@
 \section{Installing the \Digraph resources}
 \label{sec:1.1}
 
-Using the \Digraph Python modules is easy\footnote{See the \Digraph doumentation site: \url{https://digraph3.readthedocs.io/en/latest/}, \citet{BIS-2021}.}. You only need to have installed on your system the Python programming language of version 3 (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard \texttt{decimal} module implements very efficiently its \texttt{Decimal} class in C. Now, \texttt{Decimal} numbers are mainly used in the \Digraph characteristic valuation functions, which makes the recent \texttt{Python-3.7+} versions much faster (more than twice as fast) when extensive digraph operations are performed.
+Using the \Digraph Python modules is easy\footnote{See the \Digraph documentation site: \url{https://digraph3.readthedocs.io/en/latest/}, \citet{BIS-2021}.}. You only need to have installed on your system the Python programming language of version 3 (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard \texttt{decimal} module implements very efficiently its \texttt{Decimal} class in C. Now, \texttt{Decimal} numbers are mainly used in the \Digraph characteristic valuation functions, which makes the recent \texttt{Python-3.7+} versions much faster (more than twice as fast) when extensive digraph operations are performed.
 %\lstset{style=shstyle}
 Several download options (easiest under Linux or Mac OS-X) are given. Either, by using a git client from \texttt{github}:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
@@ -28,7 +28,7 @@ or from \texttt{sourceforge.net}:
 \begin{lstlisting}[language=sh,backgroundcolor=\color{White},numbers=none]
   ...$ git clone https://git.code.sf.net/p/digraph3/code Digraph3
 \end{lstlisting}
-or, with a browser access, download either, from the github link abov e or, from the sourceforge page the latest distribution zip archive and extract it.
+or, with a browser access, download either, from the github link above e or, from the sourceforge page the latest distribution zip archive and extract it.
 
 \noindent On Linux or Mac OS, \texttt{..\$ cd} to the extracted \texttt{Digraph3} directory:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White},numbers=none]
@@ -277,7 +277,7 @@ Further methods are provided for inspecting this random \texttt{Digraph} object 
  agglomeration coefficient        : 45.00
 \end{lstlisting}
 
-The preceeding \texttt{show...()} methods usually rely upon corresponding compute methods, like: \texttt{computeSize()}\index{computeSize@\texttt{computeSize()}}, \texttt{computeDeterminateness()}\index{computeDeterminateness@\texttt{computeDeterminateness()}},\\ or \texttt{computeTransitivityDegree()}\index{computeTransitivityDegree@\texttt{computeTransitivityDegree()}}.
+The preceding \texttt{show...()} methods usually rely upon corresponding compute methods, like: \texttt{computeSize()}\index{computeSize@\texttt{computeSize()}}, \texttt{computeDeterminateness()}\index{computeDeterminateness@\texttt{computeDeterminateness()}},\\ or \texttt{computeTransitivityDegree()}\index{computeTransitivityDegree@\texttt{computeTransitivityDegree()}}.
 \begin{lstlisting}[caption={Various \texttt{compute...()} methods.},label=list:1.6]
 >>> dg.computeSize()
  12
