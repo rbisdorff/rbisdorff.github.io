@@ -17,7 +17,7 @@
 In the \texttt{outrankingDigraphs} module\index{outrankingDigraphs@\texttt{outrankingDigraphs}}, the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class provides our standard \emph{outranking digraph} constructor. Such an instance represents a \emph{hybrid} object of both:\\ the {\tt PerformanceTableau} type and the {\tt OutrankingDigraph} type.
 
 A given \texttt{BipolarOutrankingDigraph} object contains hence always at least the following attributes:
-\begin{enumerate}[nosep]
+\begin{enumerate}[topsep=3pt,partopsep=0pt]
 \item \texttt{actions}: An ordered dictionary describing the potential decision actions or alternatives with {\tt name} and {\tt comment} attributes,
 \item \texttt{objectives}: A possibly empty ordered dictionary of decision objectives with {\tt name} and {\tt comment} attributes, describing the multiple preference dimensions involved in the decision problem, 
 \item \texttt{criteria}: An ordered dictionary of performance criteria, i.e. {\em preferentially independent\/} and {\em non-redundant\/} decimal-valued functions used for measuring the performance of each potential decision action with respect to a decision objective,

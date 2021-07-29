@@ -1,9 +1,9 @@
 \chapter{Working with bipolar-valued digraphs}
 \label{sec:2}
 
-\abstract*{ We introduce bipolar-valued digraphs, the fondamental root model of all the specialised digraphs implemented in the \Digraph modules. With the help of a randomly valued digraph, we illustrate some basic digraph manipulation methods, like drawing the digraph, dividing the digraph into its assymetric and symmetric parts, separating the border from the inner part, computing associated dual, converse and codual digraphs, and operating symmetric and transitive closures.}
+\abstract*{ We introduce bipolar-valued digraphs, the fondamental root type of all the specialised digraphs implemented in the \Digraph modules. With the help of a randomly valued digraph, we illustrate some basic digraph manipulation methods, like drawing the digraph, dividing the digraph into its asymmetric and symmetric parts, separating the border from the inner part, computing associated dual, converse and codual digraphs, and operating symmetric and transitive closures.}
 
-\abstract{ We introduce bipolar-valued digraphs, the fondamental root model of all the specialised digraphs implemented in the \Digraph modules. With the help of a randomly valued digraph, we illustrate some basic digraph manipulation methods, like drawing the digraph, dividing the digraph into its assymetric and symmetric parts, separating the border from the inner part, computing associated dual, converse and codual digraphs, and operating symmetric and transitive closures.}
+\abstract{ We introduce bipolar-valued digraphs, the fondamental root type of all the specialised digraphs implemented in the \Digraph modules. With the help of a randomly valued digraph, we illustrate some basic digraph manipulation methods, like drawing the digraph, dividing the digraph into its asymmetric and symmetric parts, separating the border from the inner part, computing associated dual, converse and codual digraphs, and operating symmetric and transitive closures.}
 
 \section{Random bipolar-valued digraphs}
 
@@ -15,7 +15,7 @@ We are starting the tutorial with generating a uniformly random $[-1.0; +1.0]$-v
 >>> from digraphs import Digraph
 >>> rdg = Digraph('tutRandValDigraph')
 >>> rdg
- *------- Digraph instance description ------*
+  *------- Digraph instance description ------*
    Instance class      : Digraph
    Instance name       : tutRandValDigraph
    Digraph Order       : 7
@@ -26,11 +26,11 @@ We are starting the tutorial with generating a uniformly random $[-1.0; +1.0]$-v
                           'valuationdomain','relation',
                           'gamma','notGamma']
 \end{lstlisting}   
-With the {\tt save()} \index{save@\texttt{save()}} method (see Listing \ref{list:2.1} Line 3) we may keep a backup version for future use of $rdg$ which will be stored in a file called {\tt tutRandValDigraph.py} in the current working directory.
+With the {\tt save()} \index{save@\texttt{save()}} method (see Listing \ref{list:2.1} Line 3) we may keep a backup version for future use of \texttt{rdg} which will be stored in a file called {\tt tutRandValDigraph.py} in the current working directory.
 
-The genuine {\tt Digraph} class constructor may restore the \texttt{rdg} object from the stored file (Line 4-5). We may easily inspect the content of $rdg$ (Line 6). The digraph size 22 indicates the number of positively valued arcs. The valuation domain is uniformly distributed in the interval $[-1.0; 1.0]$ and the mean absolute arc valuation is $(0.7524 \times 2)\, -\, 1.0 \;=\; 0.5048$ (Line 13) .
+The genuine {\tt Digraph} class constructor may restore the \texttt{rdg} object from the stored file (Line 4-5). We may easily inspect the content of \texttt{rdg} (Line 6). The digraph size 22 indicates the number of positively valued arcs. The valuation domain is uniformly distributed in the interval $[-1.0; 1.0]$ and the mean absolute arc valuation is $(0.7524 \times 2)\, -\, 1.0 \;=\; 0.5048$ (Line 13) .
 
-As mentioned in the previous Chapter \ref{sec:1}, all objects of {\tt Digraph} type contain at least the list of attributes shown here in Lines 14-16: a \texttt{name} (string), a dictionary of \texttt{actions} (digraph nodes), an \texttt{order} (integer) attribute containing the number of actions, a \texttt{valuationdomain} dictionary, a double dictionary \texttt{relation} representing the adjency table of the digraph relation, a \texttt{gamma} and a {\tt notGamma} dictionary containing the direct neighbourhood of each action.
+As mentioned in the previous Chapter \ref{sec:1}, all objects of {\tt Digraph} type contain at least the list of attributes shown here in Lines 14-16: --a \texttt{name} (string), --a dictionary of \texttt{actions} (digraph nodes), --an \texttt{order} (integer) attribute containing the number of actions, --a \texttt{valuationdomain} dictionary, --a double dictionary \texttt{relation} representing the adjency table of the digraph relation, --a \texttt{gamma} and --a {\tt notGamma} dictionary containing the direct neighbourhood of each action.
 
 The {\tt Digraph} class provides some generic {\tt show...()} methods for exploring the content of a given {\tt Digraph} object, like the \texttt{showRelationTable()}\index{showRelationTable@\texttt{showRelationTable()}}, the \texttt{showComponents()}\index{showComponents@\texttt{showComponents()}} and the \texttt{showNeighborhoods()}\index{showNeighborhoods@\texttt{showNeighborhoods()}} methods.
 \begin{lstlisting}[caption={Example of random valuation digraph},label=list:2.2]
@@ -84,14 +84,14 @@ We may have an even better insight into the \texttt{Digraph} object \texttt{rdg}
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/tutRandValDigraph.png}
-\caption{The tutorial random valuation digraph. Double links are drawn in bold black with an arrowhead at each end, whereas single asymmetric links are drawn in black with an arrowhead showing the direction of the link. Notice the undetermined relational situation ($r(6\,S\,2) = 0.00$) observed between nodes '6' and '2'. The corresponding link is marked in gray with an open arrowhead in the drawing.}
+\caption{\emph{The tutorial random valuation digraph}. Double links are drawn in bold black with an arrowhead at each end, whereas single asymmetric links are drawn in black with an arrowhead showing the direction of the link. Notice the undetermined relational situation ($r(6\,S\,2) = 0.00$) observed between nodes '6' and '2'. The corresponding link is marked in gray with an open arrowhead in the drawing.}
 \label{fig:2.1}       % Give a unique label
 \end{figure}
   
 \section{Asymmetric and symmetric parts}
 \label{sec:2.3}
 
-We may now extract both the \emph{}\emph{symmetric} as well as the asymmetric part of digraph \texttt{rdg} with the help of two corresponding constructors (see Listing \ref{list:2.3}).
+We may now extract both the \emph{}\emph{symmetric} as well as the \emph{asymmetric} part of digraph \texttt{rdg} with the help of two corresponding constructors (see Listing \ref{list:2.3}) \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}\index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}.
 \begin{lstlisting}[caption={Computing asymmetric and symmetric Parts},label=list:2.3]
 >>> from digraphs import AsymmetricPartialDigraph,\
 ...                      SymmetricPartialDigraph
@@ -106,9 +106,9 @@ We may now extract both the \emph{}\emph{symmetric} as well as the asymmetric pa
 \caption{Asymmetric and symmetric part of the tutorial random valuation digraph.}
 \label{fig:2.2}       % Give a unique label
 \end{figure}
-The constructor of the partial objects \texttt{asymDg} and \texttt{symDg} puts to the indeterminate characteristic value all not-asymmetric, respectively not-symmetric links between nodes (see Fig. \ref{fig:2.2}).
+The constructor of the partial objects \texttt{asymDg} and \texttt{symDg} puts to the indeterminate characteristic value all non-asymmetric, respectively non-symmetric links between nodes (see Fig. \ref{fig:2.2}).
 
-Here below, for illustration the source code of the {\tt relation} constructor of the {\tt AsymmetricPartialDigraph}\index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class} class.
+Here below, for illustration the source code of the {\tt relation} constructor of the {\tt AsymmetricPartialDigraph} class.
 \begin{lstlisting}[caption={Computing the asymmetric part of a bipolar-valued relation},label=list:2.4,basicstyle=\ttfamily\scriptsize]
 def _constructRelation(self):
     actions = self.actions
@@ -135,9 +135,9 @@ def _constructRelation(self):
 \section{Border and inner parts}
 \label{sec:2.4}
 
-We may also extract the border --the part of a digraph induced by the union of its initial and terminal prekernels (see Chapter \ref{sec:17})--  as well as, the inner part -the complement of the border- with the help of two corresponding class constructors: \texttt{GraphBorder}\index{GraphBorder@\texttt{GraphBorder} class} and \texttt{GraphInner}\index{GraphInner@\texttt{GraphInner} class} (see Fig. \ref{fig:2.3}).
+We may also extract the border --the part of a digraph induced by the union of its initial and terminal prekernels (see Chapter \ref{sec:17})--  as well as, the inner part --the complement of the border-- with the help of two corresponding class constructors: \texttt{GraphBorder}\index{GraphBorder@\texttt{GraphBorder} class} and \texttt{GraphInner}\index{GraphInner@\texttt{GraphInner} class} (see Fig. \ref{fig:2.3}).
 
-Let us illustrate these parts on a linear ordering obtained from the tutorial random valuation digraph \texttt{rdg}  with the \NetFlows ranking rule  (see Section \ref{sec:8.3}).  
+Let us illustrate the digraph border and inner parts on a linear ordering obtained from the tutorial random valuation digraph \texttt{rdg}  with the \NetFlows ranking rule  (see Section \ref{sec:8.3}).  
 \begin{lstlisting}[caption={Border and inner part of a linear order},label=list:2.5]
 >>> from digraphs import GraphBorder, GraphInner
 >>> from linearOrders import NetFlowsOrder
@@ -264,7 +264,7 @@ Computing the \emph{dual}, respectively the \emph{converse} of a digraph, may al
 \section{Symmetric and transitive closures}
 \label{sec:2.7}
 
-Symmetric and transitive closures, by default in-site constructors, are also available (see Fig. \ref{fig:2.5}). Note that it is a good idea, before going ahead with these in-site operations, who irreversibly modify the original \texttt{rdg} object, to previously make a backup version of \texttt{rdg}. The simplest storage method, always provided by the generic \texttt{Digraph.save()}, writes out in a named file the python content of the Digraph object in string representation (see Section \ref{sec:1.3}).
+Symmetric and transitive closures, by default in-site constructors, are also available (see Fig. \ref{fig:2.5}). Note that it is a good idea, before going ahead with these in-site operations, who irreversibly modify the original \texttt{rdg} object, to previously make a backup version of \texttt{rdg}. The simplest storage method, always provided by the generic \texttt{Digraph.save()} method, writes out in a named file the python content of the Digraph object in string representation (see Section \ref{sec:1.3}).
 \begin{lstlisting}[caption={Symmeric and transitive closures},label=list:2.9]
 >>> rdg.save('tutRandValDigraph')
 >>> rdg.closeSymmetric(InSite=True)
@@ -313,7 +313,7 @@ As the original digraph \texttt{rdg} was connected (see above the result of the 
 \section{CSV storage}
 \label{sec:2.9}
 
-Sometimes it is required to exchange the graph valuation data in CSV format with a statistical package like \textbf{R}\footnote{\url{https://www.r-project.org/}}. For this purpose it is possible to export the digraph data into a CSV file. The valuation domain is hereby normalized by default to the range $[-1.0,1.0]$ and the diagonal is put by default to the minimal value $-1.0$.
+Sometimes it is required to exchange the graph valuation data in CSV format with a statistical package like \textbf{R}\footnote{\url{https://www.r-project.org/}}. For this purpose it is possible to export the digraph data into a CSV file. The valuation domain is hereby normalised by default to the range $[-1.0,1.0]$ and the diagonal is put by default to the minimal value $-1.0$.
 \begin{lstlisting}
 >>> rdg = Digraph('tutRandValDigraph')
 >>> rdg.saveCSV('tutRandValDigraph')
@@ -345,7 +345,7 @@ It is possible to reload a \texttt{Digraph} instance from its previously saved C
     '7'    |  0.88  0.72  0.82  0.52 -0.84  0.04   -
 \end{lstlisting}
   
-It is as well possible to show a colored version of the valued relation table in a system browser window tab (see Fig. \ref{fig:2.5}).
+It is as well possible to show a coloured version of the valued relation table in a system browser window tab (see Fig. \ref{fig:2.5}).
 \begin{lstlisting}
 >>> rdgcsv.showHTMLRelationTable(tableTitle="Tutorial random digraph")
 \end{lstlisting}
@@ -419,10 +419,10 @@ who put all characteristic values respectively to the \emph{maximum}, the \emph{
     '3': in => set(), out => set()
     '4': in => set(), out => set()
 \end{lstlisting}
-Mind the subtle difference between the neighborhoods of an \emph{empty} and the neighborhoods of an \emph{indeterminate} digraph instance. In the first kind, the neighborhoods are known to be completely \emph{empty}  (see Listing \ref{list:2.11} Lines 22-27) whereas, in the latter, \emph{nothing is known} about the actual neighborhoods of the nodes  (see Lines 46-51). These two cases illustrate why in the case of \emph{bipolar-valued} digraphs, we may sometimes need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
+Mind the subtle difference between the neighbourhoods of an \emph{empty} and the neighbourhoods of an \emph{indeterminate} digraph instance. In the first kind, the neighbourhoods are known to be completely \emph{empty}  (see Listing \ref{list:2.11} Lines 22-27) whereas, in the latter, \emph{nothing is known} about the actual neighbourhoods of the nodes  (see Lines 46-51). These two cases illustrate why in the case of \emph{bipolar-valued} digraphs, we may sometimes need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
 
 \vspace{1cm}
-In the following chapter we introduce the main formal objects of this book, namely \emph{bipolar-valued outranking} digraphs.
+In the following Chapter~\ref{sec:3}  we introduce the main formal object of this book, namely \emph{bipolar-valued outranking} digraphs.
 
 %%%%%%% The chapter bibliography
 %\normallatexbib
