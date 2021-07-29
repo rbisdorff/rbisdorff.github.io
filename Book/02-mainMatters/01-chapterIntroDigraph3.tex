@@ -18,113 +18,98 @@
 \section{Installing the \Digraph resources}
 \label{sec:1.1}
 
-Using the \Digraph Python modules is easy\footnote{See the \Digraph doumentation site: \url{https://digraph3.readthedocs.io/en/latest/}, \citet{BIS-2021}.} You only need to have installed on your system the Python programming language of version 3 (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard \texttt{decimal} module implements very efficiently its \texttt{Decimal} class in C. Now, \texttt{Decimal} numbers are mainly used in the \Digraph characteristic valuation functions, which makes the recent python-3.7+ versions much faster (more than twice as fast) when extensive digraph operations are performed.
-
+Using the \Digraph Python modules is easy\footnote{See the \Digraph doumentation site: \url{https://digraph3.readthedocs.io/en/latest/}, \citet{BIS-2021}.}. You only need to have installed on your system the Python programming language of version 3 (readily available under Linux and Mac OS). Notice that, from Version 3.3 on, the Python standard \texttt{decimal} module implements very efficiently its \texttt{Decimal} class in C. Now, \texttt{Decimal} numbers are mainly used in the \Digraph characteristic valuation functions, which makes the recent \texttt{Python-3.7+} versions much faster (more than twice as fast) when extensive digraph operations are performed.
+%\lstset{style=shstyle}
 Several download options (easiest under Linux or Mac OS-X) are given. Either, by using a git client from \texttt{github}:
-\begin{footnotesize}
-\begin{verbatim}
-...\$ git clone https://github.com/rbisdorff/Digraph3
-\end{verbatim}
-\end{footnotesize}
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
+  ...$ git clone https://github.com/rbisdorff/Digraph3
+\end{lstlisting}
 or from \texttt{sourceforge.net}:
-\begin{scriptsize}
-\begin{verbatim}
-...\$ git clone https://git.code.sf.net/p/digraph3/code Digraph3}
-\end{verbatim}
-\end{scriptsize}
-Or, with a browser access, download either, from the github link above or, from the sourceforge page the latest distribution zip archive and extract it.
+\begin{lstlisting}[language=sh,backgroundcolor=\color{White},numbers=none]
+  ...$ git clone https://git.code.sf.net/p/digraph3/code Digraph3
+\end{lstlisting}
+or, with a browser access, download either, from the github link abov e or, from the sourceforge page the latest distribution zip archive and extract it.
 
-On Linux or Mac OS, \texttt{..\$ cd} to the extracted \texttt{Digraph3} directory:
-\begin{footnotesize}
-\begin{verbatim}
-../Digraph3$ make install
-\end{verbatim}
-\end{footnotesize}
-installs (with \emph{sudo} !) the \Digraph modules in the current running python environment. Python 3.8 (or later) environment is recommended (see the makefile for adapting to your python environment). Whereas:
-\begin{footnotesize}
-\begin{verbatim}
-../Digraph3$ make installVenv
-\end{verbatim}          
-\end{footnotesize}
+\noindent On Linux or Mac OS, \texttt{..\$ cd} to the extracted \texttt{Digraph3} directory:
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White},numbers=none]
+  .../Digraph3$ make install
+\end{lstlisting}
+installs (with \emph{sudo} !) the \Digraph modules in the current running python environment. Python-3.8 (or later) environment is recommended (see the makefile for adapting the \texttt{make install} command to your running python environment).
+
+\noindent Whereas:
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
+  .../Digraph3$ make installVenv
+\end{lstlisting}
 installs the \Digraph modules in an activated virtual python environment.
 
 If the \emph{cython} (\href{https://cython.org}{https://cython.org}) C-compiled modules for Big Data applications are required, it is necessary to previously install the \emph{Cython} package in the running Python environment:
-\begin{footnotesize}
-\begin{verbatim}
-...$ python3 -m pip install cython
-\end{verbatim}
-\end{footnotesize}
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
+  ...$ python3 -m pip install cython
+\end{lstlisting}
 It is recommended to run a test suite:
-\begin{footnotesize}
-\begin{verbatim}
-.../Digraph3$ make tests
-\end{verbatim}
-\end{footnotesize}
-Test results are stored in the \texttt{Digraph3/test} directory. Notice that the python3 \texttt{pytest} package is required:
-\begin{footnotesize}
-\begin{verbatim}
-...$ python3 -m pip install pytest
-\end{verbatim}
-\end{footnotesize}
-A verbose (with stdout not captured) \texttt{pytest} suite may be run as follows:
-\begin{footnotesize}
-\begin{verbatim}
-.../Digraph3$ make verboseTests
-\end{verbatim}
-\end{footnotesize}
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
+  .../Digraph3$ make tests
+\end{lstlisting}
+Test results are stored in the \texttt{Digraph3/test} directory.
+
+\noindent Notice that the python3 \texttt{pytest} package is required:
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
+  ...$ python3 -m pip install pytest
+\end{lstlisting}
+A verbose (with \texttt{stdout} not captured) \texttt{pytest} suite may be run as follows:
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
+  .../Digraph3$ make verboseTests
+\end{lstlisting}
 When the GNU \texttt{parallel} shell tool\index{parallel@\texttt{parallel} shell tool}\footnote{\href{https://www.gnu.org/software/parallel}{https://www.gnu.org/software/parallel}} is installed and multiple cores are detected, the tests may be executed in multiple processing mode:
-\begin{footnotesize}
-\begin{verbatim}
-../Digraph3$ make pTests 
-\end{verbatim}
-\end{footnotesize}
-Individual module pytest suites are also provided (see the makefile), like the one for the \texttt{outrankingDigraphs} module (see Chapter{sec:2}):
-\begin{footnotesize}
-\begin{verbatim}
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
+  ../Digraph3$ make pTests
+\end{lstlisting}
+
+Individual module \texttt{pytest} suites are also provided (see the \texttt{makefile}), like the one for the \texttt{outrankingDigraphs} module (see Chapter{sec:2}):
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
 ../Digraph3$ make outrankingDigraphsTests
-\end{verbatim}
-\end{footnotesize}
+\end{lstlisting}
 
 \paragraph{Dependencies:}
 To be fully functional, the \Digraph resources mainly need:
+
 \begin{itemize}[leftmargin=0.5cm,listparindent=0em,rightmargin=0.2cm,nosep]
 \item The \texttt{graphviz} tools \footnote{\href{https://graphviz.org}{https://graphviz.org}, \citet{graphViz}} and 
 \item The R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
-\item When exploring digraph isomorphisms, the \texttt{nauty} isomorphism testing program is required. \footnote{\href{https://www.cs.sunysb.edu/~algorith/implement/nauty/implement.shtml}{nauty home page} and \citet{nauty}. On linux you may try: \texttt{sudo apt install nauty}. On Mac OS X corresponding dmg installer are available for downloading.}.
+\item When exploring digraph isomorphisms, the \texttt{nauty} isomorphism testing program is required \citep*{nauty}. On linux you may try: \texttt{sudo apt install nauty}. For Mac OS X, corresponding \texttt{dmg} installers are available for downloading.
 \item Two specific methods of the \texttt{OutrankingDigraph} class for clustering performance criteria or decision alternatives require furthermore the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
 \end{itemize}
 
-\section{Starting a \Digraph python3 session}
+\section{Starting a \Digraph terminal session}
 \label{sec:1.2}
-You may start an interactive Python3 session in the \texttt{Digraph3} directory.
-\begin{footnotesize}
-\begin{verbatim}
-$HOME/.../Digraph3$ python3
-Python 3.9.6 (v3.9.6:db3ff76da1, Jun 28 2021, 11:49:53) 
-[Clang 6.0 (clang-600.0.57)] on darwin
-Type "help", "copyright", "credits" or 
+You may start an interactive Python3 terminal session in the \texttt{Digraph3} directory.
+\begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
+  $HOME/.../Digraph3$ python3
+  Python 3.9.6 (v3.9.6:db3ff76da1, Jun 28 2021, 11:49:53) 
+  [Clang 6.0 (clang-600.0.57)] on darwin
+  Type "help", "copyright", "credits" or 
      "license" for more information.
->>>
-\end{verbatim}
-\end{footnotesize}
-For exploring the classes and methods provided by the \Digraph modules \footnote{See the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}} enter the Python3 commands following the session prompts marked with $>>>$ or \texttt{...}; The lines without the prompt are output from the Python3 interpreter.
+  >>>
+\end{lstlisting}
+
+For exploring the classes and methods provided by the \Digraph modules \footnote{See the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}} enter the Python3 commands following the session prompts marked with $>>>$ or \texttt{...}; the lines without a prompt are output from the Python3 interpreter.
 \begin{lstlisting}[caption={Generating a digraph instance},label=list:1.1]
 >>> from randomDigraphs import RandomDigraph
 >>> dg = RandomDigraph(order=5,arcProbability=0.5,\
 ...                    seed=101)
 >>> dg
- *------- Digraph instance description ------*
-  Instance class   : RandomDigraph
-  Instance name    : randomDigraph
-  Digraph Order    : 5
-  Digraph Size     : 12
-  Valuation domain : [-1.00; 1.00]
-  Determinateness  : 100.000
-  Attributes       : ['actions','valuationdomain',
-                      'relation','order','name',
-                      'gamma','notGamma']
+  *------- Digraph instance description ------*
+   Instance class   : RandomDigraph
+   Instance name    : randomDigraph
+   Digraph Order    : 5
+   Digraph Size     : 12
+   Valuation domain : [-1.00; 1.00]
+   Determinateness  : 100.000
+   Attributes       : ['actions','valuationdomain',
+                       'relation','order','name',
+                       'gamma','notGamma']
 \end{lstlisting}
-In Listing \ref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object \texttt{dg} of order 5 - number of nodes called (decision) actions - and arc probability of $50\%$. The resulting digraph of order 5 and size -- number of arcs-- 12 is completely determined.
+In Listing \ref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object \texttt{dg} of order 5 and arc probability of $50\%$. The resulting digraph of \emph{order} 5 --number of nodes called (decision) \emph{actions}-- and \emph{size} 12 --number of arcs-- is completely determined (see Line 11 in Listing~ref{list:1.1}) .
 
 \section{Permanent storage of a digraph object}
 \label{sec:1.3}                   
@@ -181,14 +166,14 @@ In the \Digraph resources, all digraph object instances are of \texttt{Digraph}\
 \item An \texttt{order} attribute containing the number of graph nodes (length of the actions dictionary) automatically added by the object constructor;
 \item  A logical characteristic \texttt{valuationdomain} dictionary with three decimal entries: the minimum ($-1.0$, means certainly false), the median ($0.0$, means missing information) and the maximum characteristic value ($+1.0$, means certainly true);
 \item A double dictionary called \texttt{relation} and indexed by an oriented pair of actions (nodes) and carrying a decimal characteristic value in the range of the previous valuation domain;
-\item Its associated \texttt{gamma }attribute, a dictionary containing the direct successors, respectively predecessors of each action, automatically added by the object constructor;
+\item Its associated \texttt{gamma } attribute, a dictionary containing the direct successors, respectively predecessors of each action, automatically added by the object constructor;
 \item Its associated \texttt{notGamma} attribute, a dictionary containing the actions that are not direct successors respectively predecessors of each action, automatically added by the object constructor.
 \end{enumerate}
 
 \section{Inspecting a digraph object}
 \label{sec:1.4}
 
-Different \texttt{show...()} methods like the \texttt{showShort()} method \index{showSort@\texttt{showShort()}} reveal us now that \texttt{dg} is a crisp, irreflexive and connected digraph of order five (see Listing \ref{list:1.3}  Lines 1, 16, 26, 37 below).
+Different \texttt{show...()} methods, like the \texttt{showShort()} method \index{showSort@\texttt{showShort()}}, reveal us now that \texttt{dg} is a crisp, irreflexive and connected digraph of order five (see Listing \ref{list:1.3}  Lines 1, 16, 26, 37 below).
 
 \begin{lstlisting}[caption={Random crisp digraph object},label=list:1.3]
 >>> dg.showShort()

@@ -109,6 +109,7 @@
 \newcommand{\Promethee}{{\sc Promethee}\xspace}
 
 \definecolor{LightGray}{rgb}{0.92,0.92,0.92}
+\definecolor{White}{rgb}{1.0,1.0,1.0}
 % \definecolor{codegreen}{rgb}{0,0.6,0}
 % \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 % \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -130,7 +131,42 @@
 %     showstringspaces=false,
 %     showtabs=false,                  
 %     tabsize=2
-% }
+%   }
+\lstdefinestyle{pythonstyle}{
+       language=Python,
+       backgroundcolor=\color{LightGray},
+       basicstyle=\ttfamily\footnotesize,
+       breaklines=true,
+       %commentstyle=\bf,
+       keywordstyle=\tt,
+       numbers=left,
+       numberstyle=\tiny,
+       %stepnumber=5,
+       numbersep=5pt,
+       breakatwhitespace=true,
+       %frame=tlBR
+       showspaces=false,                
+       showstringspaces=false,
+       showtabs=false,        
+       }
+\lstdefinestyle{shstyle}{
+     backgroundcolor=\color{White},   
+%     commentstyle=\color{codegreen},
+%     keywordstyle=\color{magenta},
+%     numberstyle=\tiny\color{codegray},
+%     stringstyle=\color{codepurple},
+%     basicstyle=\ttfamily\footnotesize,
+%     breakatwhitespace=false,         
+%     breaklines=true,                 
+%     captionpos=b,                    
+%     keepspaces=true,                 
+      numbers=none,                    
+%     numbersep=5pt,                  
+%     showspaces=false,                
+%     showstringspaces=false,
+%     showtabs=false,                  
+%     tabsize=2
+}
 
 \setcounter{tocdepth}{1}
 %level -1: part, 0: chapter, 1: section, etc.
@@ -161,28 +197,29 @@
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\citeindextrue
-%\lstset{style=mystyle}
-\lstset{language=Python,
-       backgroundcolor=\color{LightGray},
-       basicstyle=\ttfamily\footnotesize,
-       breaklines=true,
-       %commentstyle=\bf,
-       keywordstyle=\tt,
-       numbers=left,
-       numberstyle=\tiny,
-       %stepnumber=5,
-       numbersep=5pt,
-       breakatwhitespace=true,
-       %frame=tlBR
-       showspaces=false,                
-       showstringspaces=false,
-       showtabs=false,        
-       }
+\lstset{style=pythonstyle}
+% \lstset{language=Python,
+%        backgroundcolor=\color{LightGray},
+%        basicstyle=\ttfamily\footnotesize,
+%        breaklines=true,
+%        %commentstyle=\bf,
+%        keywordstyle=\tt,
+%        numbers=left,
+%        numberstyle=\tiny,
+%        %stepnumber=5,
+%        numbersep=5pt,
+%        breakatwhitespace=true,
+%        %frame=tlBR
+%        showspaces=false,                
+%        showstringspaces=false,
+%        showtabs=false,        
+%        }
 
 \include{02-mainMatters/00-chapterIntroduction}
        
 \include{02-mainMatters/part1}
 \include{02-mainMatters/01-chapterIntroDigraph3}
+\lstset{style=pythonstyle}
 \include{02-mainMatters/02-chapterDigraphs}
 \include{02-mainMatters/03-chapterOutrankingDigraphs}
 
