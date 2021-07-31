@@ -6,16 +6,24 @@
 \abstract{To be written.}
 
 \section{The editing strategy}
-%\label{sec:0.1}
+\label{sec:0.1}
 
-In this book we present series of tutorials and advanced topics originally written as documentation parts for the \Digraph collection of Python ressources over the last ten years \citep{BIS-2021}. These \Digraph resources, like the \texttt{outrankingDigraphs} module were essentially used for the preparation and illustration of the MICS Algoritmic Decision Theory Course taught at the University of Luxembourg from 2010-2020. Some parts also served for preparing and illustrating the lectures of a MICS Computational Statistics Course like the \texttt{randomNumbers} module. Curious readers will also discover some resources like the \texttt{arithmetics} module, used for preparing and illustrating a first Semester Cours on Discrete Mathematics.
+The reader will find in the five parts of this monograph several series of tutorials and adavanced topics that present and illustrate computational methods and tools mainly useful in the field of Multiple Criteria Decision Aid and Decision Analysis. These methods and tools were designed and implemented in Python3 by the author over the last decade in order to support the preparation and illustration of a Master Course on Algorithmic Decision Theory taught at the University of Luxembourg from 2010 to 2020.
 
-The numerous listings shown in the following chapters, are all checked with the \texttt{doctest} module of the standard Python3 library and should work effectively as such either, in a shell \texttt{python3} console, or for sure in an \texttt{ipython} console. Some chapters will rely on a given data file that are made available in the \texttt{examples} directory of the \Digraph resources. 
+Each chapter illustrates a specific preference modelling aspect, like building a best choice recommendation, ranking a set of potential decision alternatives, or computing the winner of an election. Explicit Python programming examples, purposely kept elementary, are shown in numerous terminal session style listings. A complete list of the numbered listings, shown over all the chapters, is printed in the Appendix. 
+
+These programming examples were all checked with the \texttt{doctest} module of the standard Python3 library and should work effectively as such either, in a Python3 shell console, or for sure in an \texttt{ipython} console. Some chapters will rely on a given data file that is made available in the \texttt{examples} directory of the \Digraph resources. 
+
+For easing their reading, most chapters do not provide detailed mathematical developments and proofs. Readers interested in such details are invited to consult the references listed separately at the end of each chapter. Most of these references provide a full text access to the corresponding document on the \href{https://orbilu.uni.lu/}{https://orbilu.uni.lu/} repository of the University of Luxembourg.
+
+Readers interested in the technical aspects of the organisation and implementation of the collecgtion of \Digraph Python modules are invited to consult the reference manual: \href{https://digraph3.readthedocs.io/en/latest/techDoc.html}{https://digraph3.readthedocs.io/en/latest/techDoc.html}.
 
 \section{Organisation of the book}
-% \label{sec:0.2}
+\label{sec:0.2}
 
-\noindent The book is organised into five parts. Part I presents three chapters introducing the \Digraph resources and the main formal objects discussed in this book, namely \emph{bipolar-valued digraphs} and, in particular, \emph{outranking digraphs}.
+The book is organised into five parts.
+
+Part I presents three chapters introducing the \Digraph programming resources and the main formal objects discussed in this book, namely \emph{bipolar-valued digraphs} and, in particular, \emph{outranking digraphs} \citep{BIS-2021}.
 
 Part II illustrates in eight chapters decision methods and tools and performance evaluation models. These methodological chapters are mostly problem oriented and show how to build a best choice recommendation or compute the winner of an election. Others show how to linearly rank or order incommensurable multiple criteria performance records. We also show how to rate such performance records with order-statistical quantiles.
 
@@ -26,9 +34,21 @@ Part IV presents in five chapters more advanced topics showing some pearls of bi
 Part V, with three chapters, concerns eventually simple undirected graphs and illustrates operational resources for working with such graphs, like \emph{q-coloring}, enumerating\emph{ maximal independent sets} (MISs) and \emph{cliques}, computing \emph{maximal matchings}, simulating \emph{Metropolis random walks} and enumerating the \emph{non-isomorphic} MISs of the $n$-cycle graph. A second chapter is more specifically devoted to \emph{tree graphs} and \emph{graph forests}. A very last chapter, inspired by Martin Golumbic ‘s book on \emph{Algorithmic Graph Theory and Perfect Graphs}, introduces \emph{split}, \emph{interval} and \emph{permutation} graphs.
 
 \section{Highlights}
-%\label{asec:0.1}
+\label{asec:0.1}
 
-To be written
+The Rubis best choice recommendation Chpater 4
+
+The ranked performance heatmap statistic Chapter 6
+
+Absolute rating with learned quantiles Chapter 10
+
+Ordinal correlation of bipolar-valued digraphs Chapter 16
+
+Bipolar-valued likelihood of outranking situtations Chapter 18
+
+Robustness analysis of outranking digraphs Chapter 19
+
+Tempering plurality tyranny effects Chapter 20
 
 %%%%%%% The chapter bibliography
 % %\normallatexbib
