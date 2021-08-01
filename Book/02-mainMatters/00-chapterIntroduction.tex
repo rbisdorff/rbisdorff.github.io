@@ -21,34 +21,41 @@ Readers interested in the technical aspects of the organisation and implementati
 \section{Organisation of the book}
 \label{sec:0.2}
 
-The book is organised into five parts.
+The book is organised into five parts. Part I presents three chapters introducing the \Digraph programming resources and the main formal objects discussed in this book, namely \emph{bipolar-valued digraphs} and, in particular, \emph{outranking digraphs} \citep{BIS-2021}. In a first chapter, the reader will find the installation instructions for the \Digraph Python modules followed by a first Python terminal session using the main \texttt{digraphs} module. A random crisp digraph is generated, saved and inspected for illustration. The second chapter introduces the bipolar-valued digraph model --the root type of all specialised digraphs models--. A randomly bipolar-valued digaph instance is generated. Drawing the digraph, separating its asymmetric and symmetric parts, or its border and inner parts is illustrated. The initial digraph instance may be reconstructed by epistemic disjunctive fusion from these respective parts. Dual, converse and codual versions, as well as symmetric and transitive closures are generated. Complete, empty and indeterminate digraphs are eventually presented. The third chapter presents the outranking digraph --the main formal object discussed and used in this monograph--. After illustrating its hybrid type --it is conjointly a multiple criteria performance tableau and a bipolar-valued digraph modelling the outranking situations between the given performance records. Pairwise comparisons and the recoding of the digraph characteristic valuation are illustrated. The codual version of the outranking renders in fact the corresponding strict outranking digraph, i.e. its asymmetric part. 
 
-Part I presents three chapters introducing the \Digraph programming resources and the main formal objects discussed in this book, namely \emph{bipolar-valued digraphs} and, in particular, \emph{outranking digraphs} \citep{BIS-2021}.
+Part II illustrates in eight chapters decision methods and tools and performance evaluation models. These methodological chapters are mostly problem oriented and show how to build a best choice recommendation or compute the winner of an election. Others show how to edit a new performance tableau or generate random performance tableaux of different kinds. A chapter is showing how to rank, respectively rate with relative or absolute performance quantiles, multiple incommensurable criteria performance records. A last chapter gives finally insight into a collection of C-implemented versions of the main \Digraph modules. These more computationnally efficient modules give way to a sparse implementation of big outranking digraphs allowing to rank in reasonable time with HPC multiprocessing resources millions of such multiple incommensurable criteria performance records.
 
-Part II illustrates in eight chapters decision methods and tools and performance evaluation models. These methodological chapters are mostly problem oriented and show how to build a best choice recommendation or compute the winner of an election. Others show how to linearly rank or order incommensurable multiple criteria performance records. We also show how to rate such performance records with order-statistical quantiles.
+Part III delivers three real algorithmic decision making case studies: --one building and discussing a best choice recommendation for selecting a foreign language study program, --one reworking the Time Higher Education World University rankings 2016 by Computer Science subject, and --a third one for rating the student recruitment quality of German Universities using the published data from the Spigel student survey 2004. The three case studies are followed by a smal set of exercises suitable for a Course on Algorithmic Decision Theory.
 
-Part III, with four chapters, presents three case studies: --one for building a best choice recommendation for selecting a study program, --one for ranking world famous Computer Science Dpts, and --a third one for rating the student recruitment quality of German Universities. The three case studies are followed by a set of exercises suitable for a Course on Algorithmic Decision Theory.
-
-Part IV presents in five chapters more advanced topics showing some pearls of bipolar-valued epistemic logic. We first generalize \Kendall 's ordinal correlation index to bipolar-valued digraphs in order to measure the fitness of our ranking results. A second and important advanced topic concerns the effective computation of digraph kernels and solving of \Berge kernel equation systems. We furthermore introduce confidence levels for outranking situations when facing uncertain criteria significance weights. And, we develop a robustness analysis of the outranking digraph when facing only ordinal criteria significance weights. The last topic concerns the tempering of plurality tyranny effects in social choice problems with the help a.o. of bipolar approval voting. 
+Part IV presents in five chapters more advanced topics showing some pearls of bipolar-valued epistemic logic. We first generalize \Kendall 's ordinal correlation index to bipolar-valued digraphs in order to measure the fitness of our ranking or rating results. A second and important advanced topic concerns the effective computation of digraph kernels and, especially, solving of \Berge kernel equation systems. We furthermore introduce confidence levels for outranking situations when facing uncertain criteria significance weights. And, we develop a robustness analysis of the outranking digraph when facing only ordinal criteria significance weights. The last advanced topic discusses the tempering of plurality tyranny effects in social choice problems one may expect when using a bipolar approval voting system. 
 
 Part V, with three chapters, concerns eventually simple undirected graphs and illustrates operational resources for working with such graphs, like \emph{q-coloring}, enumerating\emph{ maximal independent sets} (MISs) and \emph{cliques}, computing \emph{maximal matchings}, simulating \emph{Metropolis random walks} and enumerating the \emph{non-isomorphic} MISs of the $n$-cycle graph. A second chapter is more specifically devoted to \emph{tree graphs} and \emph{graph forests}. A very last chapter, inspired by Martin Golumbic ‘s book on \emph{Algorithmic Graph Theory and Perfect Graphs}, introduces \emph{split}, \emph{interval} and \emph{permutation} graphs.
 
 \section{Highlights}
 \label{asec:0.1}
 
-The Rubis best choice recommendation Chpater 4
+Contrary to what is generally thought, most time in a decision problem solving takes the preparation of the performance tableau not running any decision making algorithms. Designing adequate performance grading criteria functions for each decision objective is essential for the success of the solving. This is a very critical and essential step. Chapter~\ref{sec:4} and Chapter~\ref{sec:5} illustrate both how to edit a coherent performance tableau. In order to discover examples of potential performance tableau, we provide in Chapter~\ref{sec:6} random generators for several kinds of performance tableau. 
 
-The ranked performance heatmap statistic Chapter 6
+Once the performance tableau is ready, starts the thrilling step of discovering the resulting outranking digraph. Are there many chordless outranking circuits? What is the degree of symmetry of the outranking relations? What is the degree of transitivity?  If the number of potential decision alternatives is small --less than 20-- one may try, in the case of a best choice selection problem to compute initial prekernels in order to find potential best choice decision alternatives? Chapter~\ref{sec:17} is illustrating and discussing this computational problem.  
 
-Absolute rating with learned quantiles Chapter 10
+
+
+If the number of decision alternatives is 
+Computing a \Rubis best choice recommendation Chapter 4
+
+Rankin a performance tableau with the heatmap statistic Chapter 6
+
+Absolute rating of performance records with learned quantiles Chapter 10
 
 Ordinal correlation of bipolar-valued digraphs Chapter 16
+
+Solving bipolar-valued \Berge kernel equation systems Chapter 17
 
 Bipolar-valued likelihood of outranking situtations Chapter 18
 
 Robustness analysis of outranking digraphs Chapter 19
 
-Tempering plurality tyranny effects Chapter 20
+Tempering plurality tyranny effects with bipolar-valued approval voting Chapter 20
 
 %%%%%%% The chapter bibliography
 % %\normallatexbib

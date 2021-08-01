@@ -25,21 +25,21 @@ When considering, for instance, that the potential range of a significance weigh
 \caption{Four models of uncertain significance weights}
 \label{fig:18.1}       % Give a unique label
 \end{figure}
-It is worthwhile noticing that these four uncertainty models all admit the same expected value, $E(W_j)$, however, with a respective variance which goes decreasing from $1/3$, to $1/9$ of the square of $E(W_j)$ (see Fig. \ref{fig:18.1}).
+It is worthwhile noticing in Fig.~\ref{fig:18.1} that these four uncertainty models all admit the same expected value, $E(W_j)$, however, with a respective variance which goes decreasing from $1/3$, to $1/9$ of the square of $E(W_j)$ \citep{BIS-2014}.
 
 \section{Bipolar-valued likelihood of outranking situations}
 \label{sec:18.2}
 
-Let $A = \{x, y, z,...\}$ be a finite set of $n$ potential decision actions, evaluated on $F = \{1,..., m\}$ --a finite and coherent family of $m$ performance criteria. On each criterion $j \in F$, the decision actions are evaluated on a real performance scale $[0; M_j ]$, supporting an upper-closed indifference threshold $indj$ and a lower-closed preference threshold $prj$ such that $0 \leq indj < prj \leq M_j$. The marginal performance of object $x$ on criterion $j$ is denoted $x_j$. Each criterion $j$ is thus characterising a marginal double threshold order $\geq_j$ on $A$:
+Let $A = \{x, y, z,...\}$ be a finite set of $n$ potential decision actions, evaluated on $F = \{1,..., m\}$ --a finite and coherent family of $m$ performance criteria. On each criterion $j \in F$, the decision actions are evaluated on a real performance scale $[0; M_j ]$, supporting an upper-closed indifference threshold $ind_j$ and a lower-closed preference threshold $pr_j$ such that $0 \leq ind_j < pr_j \leq M_j$. The marginal performance of object $x$ on criterion $j$ is denoted $x_j$. Each criterion $j$ is thus characterising a marginal double threshold order $\geq_j$ on $A$:
 \begin{equation}
   r(x \geq_j y) \; = \; \begin{cases} +1 \quad \text{if} \quad x_j - y_j \leq -ind_j,\\  -1 \quad \text{if} \quad x_j - y_j \leq -pr_j,\\ 0 \quad \text{otherwise}. \end{cases}
 \end{equation}
 
 Semantics of the marginal bipolar-valued characteristic function:
 \begin{itemize}
-\item $+1$ signifies $x$ is performing at least as good as $y$ on criterion $j$,
-\item $-1$ signifies that $x$ is not performing at least as good as $y$ on criterion $j$,
-\item $0$ signifies that it is unclear whether, on criterion $j$, $x$ is performing at least as good as $y$.
+\item $+1$ signifies $x$ is performing at least as well as $y$ on criterion $j$,
+\item $-1$ signifies that $x$ is not performing at least as well as $y$ on criterion $j$,
+\item $0$ signifies that it is unclear whether, on criterion $j$, $x$ is performing at least as well as $y$.
 \end{itemize}
 \begin{figure}[h]
 %\sidecaption
@@ -47,24 +47,24 @@ Semantics of the marginal bipolar-valued characteristic function:
 \caption{Bipolar-valued outranking characteristic function.}
 \label{fig:18.2}       % Give a unique label
 \end{figure}
-Each criterion $j$ in $F$ contributes the random significance $W_j$ of his ``\emph{at least as good as}'' characteristic $r(x \geq_j y)$ to the global characteristic $\tilde{r}(x \geq y)$ in the following way:
+Each criterion $j$ in $F$ contributes the random significance $W_j$ of his ``\emph{performing at least as well as}'' characteristic $r(x \geq_j y)$ to the global characteristic $\tilde{r}(x \geq y)$ in the following way:
 \begin{equation}
       \tilde{r}(x \geq y) \; = \; \sum_{j \in F} W_j \times r(x \geq_j y) )
     \end{equation}
-Thus, $\tilde{r}(x \geq y)$ becomes a simple sum of positive or negative independent random variables with known means and variances where $\tilde{r}(x \geq y) \, > \, 0$ signifies $x$ is globally performing at least as good as $y$, $\tilde{r}(x \geq y) \, < \, 0$ signifies that $x$ is not globally performing at least as good as $y$, and $\tilde{r}(x \geq y)\,=\,0$ signifies that it is unclear whether $x$ is globally performing at least as good as $y$.
+Thus, $\tilde{r}(x \geq y)$ becomes a simple sum of positive or negative independent random variables with known means and variances where $\tilde{r}(x \geq y) \, > \, 0$ signifies $x$ is globally performing at least as well as $y$, $\tilde{r}(x \geq y) \, < \, 0$ signifies that $x$ is not globally performing at least as well as $y$, and $\tilde{r}(x \geq y)\,=\,0$ signifies that it is unclear whether $x$ is globally performing at least as well as $y$.
 
 From the \emph{Central Limit Theorem} (CLT), we know that such a sum of random variables leads, with $m$ getting large, to a Gaussian distribution $Y$ with
 \begin{eqnarray}
 E(Y ) = &\sum_{j \in F} \big(\,E(W_j) \times r(x \geq_j y)\,\big), \text{and}\\
 V(Y) = &\sum_{j \in F} \big(\,V(W_j)\times |r(x \geq_j y)|\,\big).
 \end{eqnarray}
-And the \emph{likelihood of validation}, respectively \emph{invalidation} of an ``\emph{at least as good as}'' situation, denoted $lh(x \geq y)$,  may hence be assessed by the probability $P(Y > 0) = 1.0 - P(Y \leq 0)$ that $Y$ takes a positive, resp. $P(Y < 0)$ takes a negative value. In the bipolar-valued case here, we can judiciously make usage of the standard Gaussian \emph{error function} , i.e. the bipolar $2P(Z) - 1.0$ version of the standard Gaussian $P(Z)$ probability distribution function:
+And the \emph{likelihood of validation}, respectively \emph{invalidation} of an ``\emph{performing at least as well as}'' situation, denoted $lh(x \geq y)$,  may hence be assessed by the probability $P(Y > 0) = 1.0 - P(Y \leq 0)$ that $Y$ takes a positive, resp. $P(Y < 0)$ takes a negative value. In the bipolar-valued case here, we can judiciously make usage of the standard Gaussian \emph{error function} , i.e. the bipolar $2P(Z) - 1.0$ version of the standard Gaussian $P(Z)$ probability distribution function:
 \begin{equation}
   lh(x \geq y) \;=\; -\text{erf}\big(\frac{1}{\sqrt{2}}\frac{-E(Y)}{\sqrt{V(Y)}} \big)
 \end{equation}
-The range of the bipolar-valued $lh(x \geq y)$ hence becomes $[-1.0;+1.0]$, and $-lh(x \geq y) \,=\, lh(x \not\geq y)$ , i.e. a \emph{negative likelihood} represents the likelihood of the correspondent \emph{negated} ``\emph{at least as good as}'' situation. A likelihood of $+1.0$ (resp. $-1.0$) means the corresponding preferential situation appears \emph{certainly} validated (resp. invalidated).
+The range of the bipolar-valued $lh(x \geq y)$ hence becomes $[-1.0;+1.0]$, and $-lh(x \geq y) \,=\, lh(x \not\geq y)$ , i.e. a \emph{negative likelihood} represents the likelihood of the correspondent \emph{negated} ``\emph{performing at least as well as}'' situation. A likelihood of $+1.0$ (resp. $-1.0$) means the corresponding preferential situation appears \emph{certainly} validated (resp. invalidated).
 
-\begin{example} Let $x$ and $y$ be evaluated wrt 7 equisignificant criteria; Four criteria positively support that $x$ is \emph{as least as good performing} than $y$ and three criteria support that $x$ is \emph{not at least as good} performing than $y$. Suppose $E(W_j) = w$ for $j = 1,...,7$ and $W_j \leadsto Tr(0, 2w, w)$ for $j = 1,...7$. The expected value of the global ``\emph{at least as good as}'' characteristic value becomes: $E\big(\tilde{r}(x \geq y)\big)\, = \, 4w - 3w = w$ with a variance $V\big(\tilde{r}(x \geq y)\big)\,=\, 7\frac{1}{6}w^2$. 
+\begin{example} Let $x$ and $y$ be evaluated wrt 7 equisignificant criteria; Four criteria positively support that $x$ is \emph{as least as good performing} than $y$ and three criteria support that $x$ is \emph{not at least as good} performing than $y$. Suppose $E(W_j) = w$ for $j = 1,...,7$ and $W_j \leadsto Tr(0, 2w, w)$ for $j = 1,...7$. The expected value of the global ``\emph{performing at least as well as}'' characteristic value becomes: $E\big(\tilde{r}(x \geq y)\big)\, = \, 4w - 3w = w$ with a variance $V\big(\tilde{r}(x \geq y)\big)\,=\, 7\frac{1}{6}w^2$. 
 
 If $w = 1$, $E\big(\tilde{r}(x \geq y)\big)\, = \, 1$ and $sd\big(\tilde{r}(x \geq y)\big)\,=\, 1.08$. By the CLT, the bipolar likelihood of the \emph{at least as good} performing situation becomes: $lh(x \geq y)\,=\, 0.66$, which corresponds to a global support of $(0.66 + 1.0)/2 = 83\%$ of the criteria significance weights.
 
@@ -81,21 +81,20 @@ Indeed, $\tilde{r}(x \geq y) \leadsto Y = \mathcal{N}(1.03,1.089)$, with an empi
 \section{Confidence level of outranking digraphs}
 \label{sec:18.3}
 
-Now, following the classical outranking approach (see \citep{BIS-2013}), we may say, from an epistemic perspective, that decision action $x$ \emph{outranks} decision action $y$ at \emph{confidence} level $\alpha \%$, when
-\begin{itemize}
-\item An expected majority of criteria validates, at confidence level $\alpha \%$ or higher, a global ``\emph{at least as good as}'' situation between $x$ and $y$, and
+Now, following the classical outranking approach (see \citep{BIS-2013}), we may say, from an epistemic perspective, that decision action $x$ \emph{outranks} decision action $y$ at \emph{confidence} level $\alpha \%$, when:
+\begin{itemize}[topsep=0pt]
+\item An expected majority of criteria validates, at confidence level $\alpha \%$ or higher, a global ``\emph{performing at least as well as}'' situation between $x$ and $y$, and
 \item no considerably less performing is observed on a discordant criterion.
 \end{itemize}
-Dually, decision action $x$ \emph{does not outrank} decision action $y$ at
-confidence level $\alpha \%$, when
-\begin{itemize}
-\item An expected majority of criteria at confidence level $\alpha \%$ or higher, invalidates a global ``\emph{at least as good as}'' situation between $x$ and $y$, and
+Dually, decision action $x$ \emph{does not outrank} decision action $y$ at confidence level $\alpha \%$, when:
+\begin{itemize}[topsep=0pt]
+\item An expected majority of criteria at confidence level $\alpha \%$ or higher, invalidates a global ``\emph{performing at least as well as}'' situation between $x$ and $y$, and
 \item no considerably better performing situation is observed on a discordant criterion.
 \end{itemize}
 
 \noindent \textbf{Time for a coded example}
 Let us consider the following random performance tableau.
-\begin{lstlisting}[basicstyle=\scriptsize]
+\begin{lstlisting}[label=list:18.1,basicstyle=\ttfamily\scriptsize]
 >>> from randomPerfTabs import RandomPerformanceTableau
 >>> t = RandomPerformanceTableau(\
 ...          numberOfActions=7,\
@@ -113,13 +112,14 @@ Let us consider the following random performance tableau.
      'g7'  |     1   | 82.88  41.66  12.82  21.92  75.74  15.45   6.05  
 \end{lstlisting}
 
-For the corresponding confident outranking digraph, we require a confidence level of $\alpha = 90\%$.
+For the corresponding confident outranking digraph, we assume uncerain criteria significance weights of \emph{triangular} ditribution and require a confidence level of $\alpha = 90\%$.
 
 The \texttt{ConfidentBipolarOutrankingDigraph} class provides such a construction.
-\begin{lstlisting}
+\begin{lstlisting}[label=list:18.2]
 >>> from outrankingDigraphs import\
 ...        ConfidentBipolarOutrankingDigraph   
->>> g90 = ConfidentBipolarOutrankingDigraph(t,confidence=90)
+>>> g90 = ConfidentBipolarOutrankingDigraph(t,\
+...        distribution ='triangular',confidence=90)
 >>> g90
   *------- Object instance description ------*
    Instance class      : ConfidentBipolarOutrankingDigraph
@@ -144,7 +144,7 @@ The \texttt{ConfidentBipolarOutrankingDigraph} class provides such a constructio
 \end{lstlisting}
 
 The resulting $90\%$-confident expected outranking relation is shown below.
-\begin{lstlisting}[basicstyle=\scriptsize]
+\begin{lstlisting}[caption={$90\%$-confident outranking relation with triangular distributed significance weights},label=list:18.3,basicstyle=\ttfamily\scriptsize]
 >>> g90.showRelationTable(LikelihoodDenotation=True)
   * ---- Outranking Relation Table -----
     r/(lh) |  'a1'    'a2'    'a3'    'a4'    'a5'    'a6'    'a7'	 
@@ -171,11 +171,11 @@ The resulting $90\%$-confident expected outranking relation is shown below.
     Determinateness    : 0.24 (62.1%)
 \end{lstlisting}
 
-The ($lh$) figures, indicated in the table above, correspond to bipolar likelihoods and the required bipolar confidence level equals $(0.90+1.0)/2 = 0.80$ (see Line 22 above). Action 'a1' thus confidently outranks all other actions, except 'a7' where the actual likelihood ($+0.65$) is lower than the required one ($0.80$) and we furthermore observe a considerable counter-performance on criterion 'g1'.
+The ($lh$) figures, indicated in the table above, correspond to bipolar likelihoods and the required bipolar confidence level equals $(0.90+1.0)/2 = 0.80$ (see Line 22 above). Action \texttt{a1} thus confidently outranks all other actions, except \texttt{a7} where the actual likelihood ($+0.65$) is lower than the required one ($0.80$) and we furthermore observe a considerable counter-performance on criterion \texttt{g1}.
 
-Notice also the lack of confidence in the outranking situations we observe between action 'a2' and actions 'a4' and 'a5'. In the deterministic case we would have $r(a2 \geq a4) \,=\, -0.143$ and $r(a2 \geq a5) \,=\, +0.143$ . All outranking situations with a characteristic value lower or equal to $abs(0.143)$, i.e. a majority support of $1.143/2 = 57.1\%$ and less, appear indeed to be \emph{not confident} at $\alpha$ level $90\%$ (see Line 23 above).
+Notice also the lack of confidence in the outranking situations we observe between action \texttt{a2} and actions \texttt{a4} and \texttt{a5}. In the deterministic case we would have $r(a2 \geq a4) \,=\, -0.143$ and $r(a2 \geq a5) \,=\, +0.143$ . All outranking situations with a characteristic value lower or equal to $abs(0.143)$, i.e. a majority support of $1.143/2 = 57.1\%$ and less, appear indeed to be \emph{not confident} at $\alpha$ level $90\%$ (see Line 23 above).
 
-We may draw the corresponding strict $90\%$-confident outranking digraph, oriented by its initial and terminal strict prekernels (see Fig. \ref{fig:18.4}).
+Fig.~\ref{fig:18.4} shows the corresponding strict $90\%$-confident outranking digraph, oriented by its initial and terminal strict prekernels.
 \begin{lstlisting}
 >>> gcd90 = ~ (-g90)
 >>> gcd90.showPreKernels()
@@ -193,23 +193,24 @@ We may draw the corresponding strict $90\%$-confident outranking digraph, orient
        absorbency   :  0.2857
        covered      :  0.583
 >>> gcd90.exportGraphViz(fileName='confidentOutranking',
-...        bestChoice=['a1', 'a7'],worstChoice=['a2', 'a5', 'a6'])
-  *---- exporting a dot file for GraphViz tools ---------*
+...        bestChoice=['a1', 'a7'],\
+...        worstChoice=['a2', 'a5', 'a6'])
+  *---- exporting a dot file for GraphViz tools ----*
    Exporting to confidentOutranking.dot
    dot -Grankdir=BT -Tpng confidentOutranking.dot\
                     -o confidentOutranking.png
 \end{lstlisting}
-
 \begin{figure}[h]
-\sidecaption
+\sidecaption[t]
 \includegraphics[width=6cm]{Figures/confidentOutranking.png}
-\caption{90\%-confident strict outranking digraph oriented by its prekernels}
+\caption{90\%-confident strict outranking digraph oriented by its initial and terminal prekernels}
 \label{fig:18.4}       % Give a unique label
 \end{figure}
 
-Now, what becomes this 90\%-confident outranking digraph when we require a stronger confidence level of, say $99\%$?
-\begin{lstlisting}[basicstyle=\scriptsize]
->>> g99 = ConfidentBipolarOutrankingDigraph(t,confidence=99)
+Now, what becomes this $90\%$-confident outranking digraph when we require a stronger confidence level of, say $99\%$?
+\begin{lstlisting}[caption={$99\%$-confident outranking relation},label=list:18.4,basicstyle=\ttfamily\scriptsize]
+>>> g99 = ConfidentBipolarOutrankingDigraph(t,\
+...      distribution='trinagular',confidence=99)
 >>> g99.showRelationTable()
   * ---- Outranking Relation Table -----
    r/(lh) |  'a1'    'a2'    'a3'    'a4'    'a5'    'a6'    'a7'	 
@@ -235,11 +236,10 @@ Now, what becomes this 90\%-confident outranking digraph when we require a stron
     Confident majority : 0.29 (64.3%) 
     Determinateness    : 0.13 (56.6%)
 \end{lstlisting}
+At $99\%$ confidence, the minimal required significance majority support amounts to $64.3\%$ (see Listing~\ref{list:18.4} Line 25 above). As a result, most outranking situations don't get anymore validated, like the outranking situations between action \texttt{a1} and actions \texttt{a3}, \texttt{a4}, \texttt{a5} and \texttt{a6} (see Line 5 above). The overall epistemic determination of the digraph consequently drops from $.1\%$ to $56.6\%$ (see Line 25).
 
-At $99\%$ confidence, the minimal required significance majority support amounts to $64.3\%$ (see Line 24 above). As a result, most outranking situations don't get anymore validated, like the outranking situations between action 'a1' and actions 'a3', 'a4', 'a5' and 'a6' (see Line 5 above). The overall epistemic determination of the digraph consequently drops from $.1\%$ to $56.6\%$ (see Line 25).
-
-Finally, what becomes the previous $90\%$-confident outranking digraph if the uncertainty concerning the criteria significance weights is modelled with a larger variance, like \emph{uniform} variates (see Line 2 below).
-\begin{lstlisting}[basicstyle=\scriptsize]
+Finally, what becomes the previous $90\%$-confident outranking digraph when the uncertainty concerning the criteria significance weights is modelled with a larger variance, like \emph{uniform} variates (see Line 2 below).
+\begin{lstlisting}[caption={$90\%$-confident outranking relation with uniform variates},label=list:18.5, basicstyle=\ttfamily\scriptsize]
 >>> gu90 = ConfidentBipolarOutrankingDigraph(t,\
 ...           confidence=90,distribution='uniform')
 >>> gu90.showRelationTable()
@@ -267,8 +267,7 @@ Finally, what becomes the previous $90\%$-confident outranking digraph if the un
     Confident majority : 0.14 (57.1%) 
     Determinateness    : 0.24 (62.1%)
 \end{lstlisting}
-
-Despite lower likelihood values (see the $g90$ relation table above), we keep the same confident majority level of $57.1\%$ (see Line 25 above) and, hence, also the same $90\%$-confident outranking digraph.
+Despite lower likelihood values (see the $g90$ relation in Listing~table above), we keep the same confident majority level of $57.1\%$ (see Listing~\ref{list:18.5} Line 25 above) and, hence, also the same $90\%$-confident outranking digraph.
 
 For concluding, it is worthwhile noticing again that it is in fact the \emph{neutral} value of our bipolar-valued epistemic logic that allows us to easily handle $\alpha\%$ confidence or not of outranking situations when confronted with uncertain criteria significances. Remarkable furthermore is the usage, the standard Gaussian error function (erf) provides by delivering \emph{signed} likelihood values immediately concerning either a positive relational statement, or when negative, its negated version. 
  
