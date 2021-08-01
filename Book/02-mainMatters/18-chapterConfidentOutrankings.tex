@@ -12,7 +12,7 @@ Let us consider the significance weights of a family $F$ of $m$ criteria to be i
 
 Choosing a specific stochastic model of uncertainty is usually application specific. In the limited scope of this chapter, we will illustrate the consequence of this design decision on the resulting outranking modelling with four slightly different models for taking into account the uncertainty with which we know the numerical significance weights: \emph{uniform}, \emph{triangular}, and two models of \emph{Beta laws}, one more widespread and, the other, more concentrated.
 
-When considering, for instance, that the potential range of a significance weight is distributed between $0$ and two times its mean value, we obtain the following random variates:
+When considering, for instance, that the potential range of a significance weight is distributed between $0$ and two times its mean value, we obtain the following random variates \citep{CPSTAT-L3}:
 \begin{itemize}
 \item A continuous \emph{uniform} distribution on the range $0$ to $2E(W_j)$. Thus $W_j \leadsto U(0, 2E(W_j))$ and $V(W_j) = 1/3(E(W_j))^2$;
 \item A \emph{symmetric beta} distribution with, for instance, parameters  $\alpha = 2$ and $\beta = 2$. Thus, $W_i \leadsto Beta(2,2) \times 2E(W_j)$ and $V(W_j) = 1/5(E(Wj))^2$;
@@ -22,7 +22,7 @@ When considering, for instance, that the potential range of a significance weigh
 \begin{figure}[h]
 %\sidecaption
 \includegraphics[width=12cm]{Figures/weightDistributions.png}
-\caption{Four models of uncertain significance weights}
+\caption{Four models of uncertain criteria significance weights}
 \label{fig:18.1}       % Give a unique label
 \end{figure}
 It is worthwhile noticing in Fig.~\ref{fig:18.1} that these four uncertainty models all admit the same expected value, $E(W_j)$, however, with a respective variance which goes decreasing from $1/3$, to $1/9$ of the square of $E(W_j)$ \citep{BIS-2014}.
@@ -58,7 +58,7 @@ From the \emph{Central Limit Theorem} (CLT), we know that such a sum of random v
 E(Y ) = &\sum_{j \in F} \big(\,E(W_j) \times r(x \geq_j y)\,\big), \text{and}\\
 V(Y) = &\sum_{j \in F} \big(\,V(W_j)\times |r(x \geq_j y)|\,\big).
 \end{eqnarray}
-And the \emph{likelihood of validation}, respectively \emph{invalidation} of an ``\emph{performing at least as well as}'' situation, denoted $lh(x \geq y)$,  may hence be assessed by the probability $P(Y > 0) = 1.0 - P(Y \leq 0)$ that $Y$ takes a positive, resp. $P(Y < 0)$ takes a negative value. In the bipolar-valued case here, we can judiciously make usage of the standard Gaussian \emph{error function} , i.e. the bipolar $2P(Z) - 1.0$ version of the standard Gaussian $P(Z)$ probability distribution function:
+And the \emph{likelihood of validation}, respectively \emph{invalidation} of an ``\emph{performing at least as well as}'' situation, denoted $lh(x \geq y)$,  may hence be assessed by the probability $P(Y > 0) = 1.0 - P(Y \leq 0)$ that $Y$ takes a positive, resp. $P(Y < 0)$ takes a negative value. In the bipolar-valued case here, we can judiciously make usage of the standard Gaussian \emph{error function} , i.e. the bipolar $2P(Z) - 1.0$ version of the standard Gaussian $P(Z)$ probability distribution function \citep[Chapter 6]{NR3-2007}:
 \begin{equation}
   lh(x \geq y) \;=\; -\text{erf}\big(\frac{1}{\sqrt{2}}\frac{-E(Y)}{\sqrt{V(Y)}} \big)
 \end{equation}
