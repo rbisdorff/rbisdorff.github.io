@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  2 AUG 2021 11:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  3 AUG 2021 09:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,7 +6,7 @@ entering extended mode
 (./book.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (./svmono.cls
-Document Class: svmono 2018/06/25 v5.6 
+Document Class: svmono 2009/12/17 v5.5 
 Springer Verlag global LaTeX document class for monographs
 
 Class Springer-SVMono Warning: Specified option or subpackage "english" 
@@ -39,17 +39,17 @@ File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \mottowidth=\dimen142
 \svitemindent=\dimen143
 \verbatimindent=\dimen144
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 839.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 840.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 841.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 842.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 843.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 844.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 845.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 846.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 847.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 848.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 849.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 832.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 833.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 834.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 835.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 836.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 837.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 838.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 839.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 840.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 841.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 842.
 \tocchpnum=\dimen145
 \tocsecnum=\dimen146
 \tocsectotal=\dimen147
@@ -84,91 +84,7 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 849.
 \figcapgap=\dimen159
 \tabcapgap=\dimen160
 \c@merk=\count270
-LaTeX Info: Redefining \abstract on input line 1902.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
-)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/x11nam.def
-File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
-))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ntheorem/ntheorem.sty
-Style `ntheorem', Version 1.33 <2011/08/15>
-Package: ntheorem 2011/08/15 1.33
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\theorem@style=\toks15
-\theorem@@style=\toks16
-\theorembodyfont=\toks17
-\theoremnumbering=\toks18
-\theorempreskipamount=\skip49
-\theorempostskipamount=\skip50
-\theoremframepreskipamount=\skip51
-\theoremframepostskipamount=\skip52
-\theoreminframepreskipamount=\skip53
-\theoreminframepostskipamount=\skip54
-\theorem@preskip=\toks19
-\theorem@postskip=\toks20
-\theorem@framepreskip=\toks21
-\theorem@framepostskip=\toks22
-\theorem@inframepreskip=\toks23
-\theorem@inframepostskip=\toks24
-\theoremindent=\dimen161
-\theorem@indent=\dimen162
-\theoremrightindent=\dimen163
-\theorem@rightindent=\dimen164
-\theoremheaderfont=\toks25
-\theoremseparator=\toks26
-\theoremprework=\toks27
-\theorempostwork=\toks28
-\theoremsymbol=\toks29
-\qedsymbol=\toks30
-\theoremkeyword=\toks31
-\qedsymbol=\toks32
-\thm@topsep=\skip55
-\thm@topsepadd=\skip56
-Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
-\c@endNonectr=\count271
-\c@currNonectr=\count272
-\mysavskip=\skip57
-Package ntheorem Info: Option `thref' loaded on input line 1175.
-\mysavskip=\skip58
-)
-\c@currproofctr=\count273
-\c@endproofctr=\count274
-\c@proof=\count275
-\minitoc=\write3
-\c@minitocdepth=\count276
-\c@@inst=\count277
-\c@@auth=\count278
-\c@auco=\count279
-\instindent=\dimen165
-\authrun=\box48
-\authorrunning=\toks33
-\tocauthor=\toks34
-\titrun=\box49
-\titlerunning=\toks35
-\toctitle=\toks36
-\c@contribution=\count280
+LaTeX Info: Redefining \abstract on input line 1894.
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/type1cm/type1cm.sty
 Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
@@ -182,7 +98,7 @@ Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks37
+\KV@toks@=\toks15
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
@@ -194,33 +110,38 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-)
-\Gin@req@height=\dimen166
-\Gin@req@width=\dimen167
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count281
-\mult@box=\box50
-\multicol@leftmargin=\dimen168
-\c@unbalance=\count282
-\c@collectmore=\count283
-\doublecol@number=\count284
-\multicoltolerance=\count285
-\multicolpretolerance=\count286
-\full@width=\dimen169
-\page@free=\dimen170
-\premulticols=\dimen171
-\postmulticols=\dimen172
-\multicolsep=\skip59
-\multicolbaselineskip=\skip60
-\partial@page=\box51
-\last@line=\box52
-\maxbalancingoverflow=\dimen173
-\mult@rightbox=\box53
-\mult@grightbox=\box54
-\mult@gfirstbox=\box55
-\mult@firstbox=\box56
+\c@tracingmulticols=\count271
+\mult@box=\box48
+\multicol@leftmargin=\dimen163
+\c@unbalance=\count272
+\c@collectmore=\count273
+\doublecol@number=\count274
+\multicoltolerance=\count275
+\multicolpretolerance=\count276
+\full@width=\dimen164
+\page@free=\dimen165
+\premulticols=\dimen166
+\postmulticols=\dimen167
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box49
+\last@line=\box50
+\maxbalancingoverflow=\dimen168
+\mult@rightbox=\box51
+\mult@grightbox=\box52
+\mult@gfirstbox=\box53
+\mult@firstbox=\box54
+\@tempa=\box55
+\@tempa=\box56
 \@tempa=\box57
 \@tempa=\box58
 \@tempa=\box59
@@ -256,23 +177,21 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box89
 \@tempa=\box90
 \@tempa=\box91
-\@tempa=\box92
-\@tempa=\box93
-\c@minrows=\count287
-\c@columnbadness=\count288
-\c@finalcolumnbadness=\count289
-\last@try=\dimen174
-\multicolovershoot=\dimen175
-\multicolundershoot=\dimen176
-\mult@nat@firstbox=\box94
-\colbreak@box=\box95
-\mc@col@check@num=\count290
+\c@minrows=\count277
+\c@columnbadness=\count278
+\c@finalcolumnbadness=\count279
+\last@try=\dimen169
+\multicolovershoot=\dimen170
+\multicolundershoot=\dimen171
+\mult@nat@firstbox=\box92
+\colbreak@box=\box93
+\mc@col@check@num=\count280
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks38
-\footnotemargin=\dimen177
-\c@pp@next@reset=\count291
+\FN@temptoken=\toks16
+\footnotemargin=\dimen172
+\c@pp@next@reset=\count281
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -326,7 +245,7 @@ Package: courier 2020/03/25 PSNFSS-v9.3 (WaS)
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
-\@mathmargin=\skip61
+\@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -334,51 +253,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks39
-\ex@=\dimen178
+\@emptytoks=\toks17
+\ex@=\dimen173
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen179
+\pmbraise@=\dimen174
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count292
+\inf@bad=\count282
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count293
-\leftroot@=\count294
+\uproot@=\count283
+\leftroot@=\count284
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count295
-\DOTSCASE@=\count296
+\classnum@=\count285
+\DOTSCASE@=\count286
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box96
-\strutbox@=\box97
-\big@size=\dimen180
+\Mathstrutbox@=\box94
+\strutbox@=\box95
+\big@size=\dimen175
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count297
-\c@MaxMatrixCols=\count298
+\macc@depth=\count287
+\c@MaxMatrixCols=\count288
 \dotsspace@=\muskip16
-\c@parentequation=\count299
-\dspbrk@lvl=\count300
-\tag@help=\toks40
-\row@=\count301
-\column@=\count302
-\maxfields@=\count303
-\andhelp@=\toks41
-\eqnshift@=\dimen181
-\alignsep@=\dimen182
-\tagshift@=\dimen183
-\tagwidth@=\dimen184
-\totwidth@=\dimen185
-\lineht@=\dimen186
-\@envbody=\toks42
-\multlinegap=\skip62
-\multlinetaggap=\skip63
-\mathdisplay@stack=\toks43
+\c@parentequation=\count289
+\dspbrk@lvl=\count290
+\tag@help=\toks18
+\row@=\count291
+\column@=\count292
+\maxfields@=\count293
+\andhelp@=\toks19
+\eqnshift@=\dimen176
+\alignsep@=\dimen177
+\tagshift@=\dimen178
+\tagwidth@=\dimen179
+\totwidth@=\dimen180
+\lineht@=\dimen181
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
@@ -409,60 +328,68 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip64
-\bibsep=\skip65
+\bibhang=\skip54
+\bibsep=\skip55
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count304
+\c@NAT@ctr=\count294
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/cite/chapterbib.sty
-\c@inputfile=\count305
+\c@inputfile=\count295
 Package: chapterbib 2010/09/18  v 1.17
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip66
-\enit@outerparindent=\dimen187
-\enit@toks=\toks44
-\enit@inbox=\box98
-\enit@count@id=\count306
-\enitdp@description=\count307
+\labelindent=\skip56
+\enit@outerparindent=\dimen182
+\enit@toks=\toks22
+\enit@inbox=\box96
+\enit@count@id=\count296
+\enitdp@description=\count297
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box99
+\@eurobox=\box97
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count308
-\lst@gtempboxa=\box100
-\lst@token=\toks45
-\lst@length=\count309
-\lst@currlwidth=\dimen188
-\lst@column=\count310
-\lst@pos=\count311
-\lst@lostspace=\dimen189
-\lst@width=\dimen190
-\lst@newlines=\count312
-\lst@lineno=\count313
-\lst@maxwidth=\dimen191
+\lst@mode=\count298
+\lst@gtempboxa=\box98
+\lst@token=\toks23
+\lst@length=\count299
+\lst@currlwidth=\dimen183
+\lst@column=\count300
+\lst@pos=\count301
+\lst@lostspace=\dimen184
+\lst@width=\dimen185
+\lst@newlines=\count302
+\lst@lineno=\count303
+\lst@maxwidth=\dimen186
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count314
-\lst@skipnumbers=\count315
-\lst@framebox=\box101
+\c@lstnumber=\count304
+\lst@skipnumbers=\count305
+\lst@framebox=\box99
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
 
@@ -504,9 +431,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen192
-\Hy@linkcounter=\count316
-\Hy@pagecounter=\count317
+\@linkdim=\dimen187
+\Hy@linkcounter=\count306
+\Hy@pagecounter=\count307
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
@@ -522,7 +449,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count318
+\Hy@SavedSpaceFactor=\count308
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
@@ -563,16 +490,16 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 ))
-\c@Hy@tempcnt=\count319
+\c@Hy@tempcnt=\count309
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen193
+\XeTeXLinkMargin=\dimen188
 
 (/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count320
-\Field@Width=\dimen194
-\Fld@charsize=\dimen195
+\Fld@menulength=\count310
+\Field@Width=\dimen189
+\Fld@charsize=\dimen190
 Package hyperref Info: Hyper figures OFF on input line 6075.
 Package hyperref Info: Link nesting OFF on input line 6080.
 Package hyperref Info: Hyper index ON on input line 6083.
@@ -588,19 +515,19 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\c@Item=\count321
-\c@Hfootnote=\count322
+\c@Item=\count311
+\c@Hfootnote=\count312
 )
 Package hyperref Info: Driver: hpdftex.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
-\Fld@listcount=\count323
-\c@bookmark@seq@number=\count324
-\Hy@SectionHShift=\skip67
+\Fld@listcount=\count313
+\c@bookmark@seq@number=\count314
+\Hy@SectionHShift=\skip57
 )
-\@indexfile=\write4
-\openout4 = `book.idx'.
+\@indexfile=\write3
+\openout3 = `book.idx'.
 
 
 Writing index file book.idx
@@ -611,8 +538,8 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count325
-\l__pdf_internal_box=\box102
+\l__color_backend_stack_int=\count315
+\l__pdf_internal_box=\box100
 )
 (./book.aux (./01-frontMatters/dedic.aux) (./01-frontMatters/preface.aux)
 (./02-mainMatters/00-chapterIntroduction.aux) (./02-mainMatters/part1.aux)
@@ -689,17 +616,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 179.
 LaTeX Font Info:    ... okay on input line 179.
  (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count326
-\scratchdimen=\dimen196
-\scratchbox=\box103
-\nofMPsegments=\count327
-\nofMParguments=\count328
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count329
-\MPscratchDim=\dimen197
-\MPnumerator=\count330
-\makeMPintoPDFobject=\count331
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count316
+\scratchdimen=\dimen191
+\scratchbox=\box101
+\nofMPsegments=\count317
+\nofMParguments=\count318
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count319
+\MPscratchDim=\dimen192
+\MPnumerator=\count320
+\makeMPintoPDFobject=\count321
+\everyMPtoPDFconversion=\toks25
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -709,7 +636,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count332
+\c@lstlisting=\count322
 Package hyperref Info: Link coloring ON on input line 179.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -722,14 +649,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count333
+\c@section@level=\count323
 )
 LaTeX Info: Redefining \ref on input line 179.
 LaTeX Info: Redefining \pageref on input line 179.
 LaTeX Info: Redefining \nameref on input line 179.
  (./book.out) (./book.out)
-\@outlinefile=\write5
-\openout5 = `book.out'.
+\@outlinefile=\write4
+\openout4 = `book.out'.
 
 Package backref Info: ** backref set up for natbib ** on input line 179.
  [1
@@ -765,47 +692,47 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
 1.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [7]
+) [7] [8]
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 65.
+ 67.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 65.
+ 67.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 65.
+ 67.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 65.
+ 67.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 6
-5.
+7.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-<Figures/Marc-Roubens.jpg, id=765, 513.92pt x 513.92pt>
+<Figures/Marc-Roubens.jpg, id=769, 513.92pt x 513.92pt>
 File: Figures/Marc-Roubens.jpg Graphic file (type jpg)
 <use Figures/Marc-Roubens.jpg>
-Package pdftex.def Info: Figures/Marc-Roubens.jpg  used on input line 67.
+Package pdftex.def Info: Figures/Marc-Roubens.jpg  used on input line 69.
 (pdftex.def)             Requested size: 85.35826pt x 85.35774pt.
- [8 <./Figures/Marc-Roubens.jpg>]) [9] [10
+) [9 <./Figures/Marc-Roubens.jpg>] [10
 
 
 
@@ -817,8 +744,8 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [14] [15])
-\tf@toc=\write6
-\openout6 = `book.toc'.
+\tf@toc=\write5
+\openout5 = `book.toc'.
 
 
 [16] (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -846,8 +773,8 @@ l.25
                    \relax 
 l.31 
       [2] [3] (./02-mainMatters/00-chapterIntroduction.bbl (./book.brf)
-\tf@brf=\write7
-\openout7 = `book.brf'.
+\tf@brf=\write6
+\openout6 = `book.brf'.
 
 ))
 [4
@@ -2330,12 +2257,6 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (./02-mainMatters/19-chapterRobustOutrankings.tex
 Chapter 19.
-
-Overfull \hbox (92.81047pt too wide) in paragraph at lines 13--14
-\OT1/ptm/m/n/10 and equi-significant cri-te-ria may be gen-er-ated with the \OT
-1/pcr/m/n/10 Random3ObjectivesPerformanceTableau
- []
-
 [271
 
 
@@ -2344,74 +2265,73 @@ Overfull \hbox (92.81047pt too wide) in paragraph at lines 13--14
 
 
 ] [272]
-Overfull \hbox (14.60208pt too wide) in paragraph at lines 88--89
+Overfull \hbox (14.60208pt too wide) in paragraph at lines 87--88
 \OT1/pcr/m/n/10 StabilityDenotation=True \OT1/ptm/m/n/10 flag with the com-mon 
 \OT1/pcr/m/n/10 showRelationTable()
  []
 
-[273] [274] [275] [276] [277]
-Overfull \hbox (103.9307pt too wide) in paragraph at lines 310--311
-[]\OT1/ptm/m/n/10 The cor-re-spond-ing \OT1/ptm/m/it/10 ro-bust \OT1/ptm/m/n/10
- out-rank-ing di-graph may be com-puted with the \OT1/pcr/m/n/10 RobustOutranki
-ngDigraph
- []
-
-[278]
-<Figures/robStdStrictOutranking.png, id=8107, 1010.77625pt x 569.12625pt>
+[273] [274] [275] [276] [277] [278] [279]
+<Figures/robStdStrictOutranking.png, id=8147, 1010.77625pt x 569.12625pt>
 File: Figures/robStdStrictOutranking.png Graphic file (type png)
 <use Figures/robStdStrictOutranking.png>
 Package pdftex.def Info: Figures/robStdStrictOutranking.png  used on input line
- 375.
+ 395.
 (pdftex.def)             Requested size: 341.43306pt x 192.24985pt.
 
-Overfull \hbox (8.53583pt too wide) in paragraph at lines 375--376
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 395--396
 [][] 
  []
 
-[279]
-<Figures/robustHeatmap.png, id=8148, 858.20625pt x 453.695pt>
+[280 <./Figures/robStdStrictOutranking.png>]
+<Figures/robustHeatmap.png, id=8178, 743.77875pt x 489.83pt>
 File: Figures/robustHeatmap.png Graphic file (type png)
 <use Figures/robustHeatmap.png>
-Package pdftex.def Info: Figures/robustHeatmap.png  used on input line 384.
-(pdftex.def)             Requested size: 341.43306pt x 180.49866pt.
+Package pdftex.def Info: Figures/robustHeatmap.png  used on input line 412.
+(pdftex.def)             Requested size: 341.43306pt x 224.86113pt.
 
-Overfull \hbox (8.53583pt too wide) in paragraph at lines 384--385
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 412--413
+[][] 
+ []
+
+[281 <./Figures/robustHeatmap.png>] [282]
+Overfull \hbox (175.67148pt too wide) in paragraph at lines 486--487
+\OT1/ptm/m/n/10 the \OT1/pcr/m/n/10 outrankingDigraphs \OT1/ptm/m/n/10 mod-ule 
+con-ve-niently pro-vides a cor-re-spond-ing \OT1/pcr/m/n/10 UnOpposedBipolarOut
+rankingDigraph
+ []
+
+[283] [284]
+<Figures/unopDigraph.png, id=8304, 807.015pt x 467.7475pt>
+File: Figures/unopDigraph.png Graphic file (type png)
+<use Figures/unopDigraph.png>
+Package pdftex.def Info: Figures/unopDigraph.png  used on input line 575.
+(pdftex.def)             Requested size: 341.43306pt x 197.89432pt.
+
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 575--576
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[280 <./Figures/robStdStrictOutranking.png>] [281 <./Figures/robustHeatmap.png>
-] [282] [283] [284]
-<Figures/unopDigraph.png, id=8300, 807.015pt x 467.7475pt>
-File: Figures/unopDigraph.png Graphic file (type png)
-<use Figures/unopDigraph.png>
-Package pdftex.def Info: Figures/unopDigraph.png  used on input line 559.
-(pdftex.def)             Requested size: 341.43306pt x 197.89432pt.
-
-Overfull \hbox (8.53583pt too wide) in paragraph at lines 559--560
-[][] 
- []
-
-[285 <./Figures/unopDigraph.png>]
-(./02-mainMatters/19-chapterRobustOutrankings.bbl (./book.brf))) [286
+[285] [286 <./Figures/unopDigraph.png>]
+(./02-mainMatters/19-chapterRobustOutrankings.bbl (./book.brf))) [287
 
 ]
 \openout2 = `02-mainMatters/20-chapterTemperingPlurality.aux'.
 
 
-(./02-mainMatters/20-chapterTemperingPlurality.tex
+(./02-mainMatters/20-chapterTemperingPlurality.tex [288
+
+
+
+
+
+
+]
 Chapter 20.
-[287
-
-
-
-
-
-
-] [288] [289]
-<Figures/unOpposedOutrankings.png, id=8433, 779.91376pt x 528.97626pt>
+[289] [290] [291]
+<Figures/unOpposedOutrankings.png, id=8460, 779.91376pt x 528.97626pt>
 File: Figures/unOpposedOutrankings.png Graphic file (type png)
 <use Figures/unOpposedOutrankings.png>
 Package pdftex.def Info: Figures/unOpposedOutrankings.png  used on input line 1
@@ -2425,14 +2345,14 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 147--148
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[290] [291 <./Figures/unOpposedOutrankings.png>] [292]
+[292] [293 <./Figures/unOpposedOutrankings.png>] [294]
 Overfull \hbox (135.82983pt too wide) in paragraph at lines 253--254
 []\OT1/ptm/m/n/10 As a con-se-quence, a mul-ti-par-ti-san pri-mary se-lec-tion,
  com-puted with a \OT1/pcr/m/n/10 showBestChoiceRecommendation()
  []
 
-[293]
-<Figures/divGraph.png, id=8584, 295.1025pt x 500.87125pt>
+[295]
+<Figures/divGraph.png, id=8611, 295.1025pt x 500.87125pt>
 File: Figures/divGraph.png Graphic file (type png)
 <use Figures/divGraph.png>
 Package pdftex.def Info: Figures/divGraph.png  used on input line 310.
@@ -2447,20 +2367,20 @@ Overfull \hbox (29.4522pt too wide) in paragraph at lines 318--319
  we pro-vide a \OT1/pcr/m/n/10 BipolarApprovalVotingProfile
  []
 
-[294] [295 <./Figures/divGraph.png>]
+[296] [297 <./Figures/divGraph.png>]
 Overfull \hbox (5.0967pt too wide) in paragraph at lines 360--361
 \OT1/ptm/m/n/10 Let us de-note $\OML/ztmcm/m/it/10 A[]$ \OT1/ptm/m/n/10 the set
  of can-di-dates ap-proved by voter $\OML/ztmcm/m/it/10 v$\OT1/ptm/m/n/10 . In 
 the \OT1/pcr/m/n/10 approvalBallot
  []
 
-[296] [297] [298]
-<Figures/majMargAV.png, id=8756, 635.37375pt x 440.64626pt>
+[298] [299] [300]
+<Figures/majMargAV.png, id=8784, 635.37375pt x 440.64626pt>
 File: Figures/majMargAV.png Graphic file (type png)
 <use Figures/majMargAV.png>
 Package pdftex.def Info: Figures/majMargAV.png  used on input line 478.
 (pdftex.def)             Requested size: 312.9803pt x 217.0683pt.
- [299 <./Figures/majMargAV.png>]
+ [301 <./Figures/majMargAV.png>]
 Overfull \hbox (3.47209pt too wide) in paragraph at lines 520--521
 \OT1/pcr/m/n/10 BipolarApprovalVotingProfile \OT1/ptm/m/n/10 in-stance into a \
 OT1/pcr/m/n/10 PerformanceTableau
@@ -2472,32 +2392,32 @@ Overfull \hbox (61.50024pt too wide) in paragraph at lines 524--525
 r stan-dard \OT1/pcr/m/n/10 BipolarOutrankingDigraph
  []
 
-[300] [301] [302] [303] [304] [305]
-<Figures/majMargDAV.png, id=9007, 618.31pt x 435.6275pt>
+[302] [303] [304] [305] [306] [307]
+<Figures/majMargDAV.png, id=9034, 618.31pt x 435.6275pt>
 File: Figures/majMargDAV.png Graphic file (type png)
 <use Figures/majMargDAV.png>
 Package pdftex.def Info: Figures/majMargDAV.png  used on input line 749.
 (pdftex.def)             Requested size: 312.9803pt x 220.51195pt.
- [306 <./Figures/majMargDAV.png>] [307]
-(./02-mainMatters/20-chapterTemperingPlurality.bbl (./book.brf))) [308
+ [308 <./Figures/majMargDAV.png>] [309]
+(./02-mainMatters/20-chapterTemperingPlurality.bbl (./book.brf))) [310
 
 ]
 \openout2 = `02-mainMatters/part5.aux'.
 
 
-(./02-mainMatters/part5.tex [309
+(./02-mainMatters/part5.tex [311
 
 
 
 
 
 
-] [310])
+] [312])
 \openout2 = `02-mainMatters/21-chapterGraphs.aux'.
 
  (./02-mainMatters/21-chapterGraphs.tex
 Chapter 21.
-[311
+[313
 
 
 
@@ -2505,34 +2425,34 @@ Chapter 21.
 
 
 ]
-<Figures/tutorialGraph.png, id=9088, 398.48875pt x 260.975pt>
+<Figures/tutorialGraph.png, id=9116, 398.48875pt x 260.975pt>
 File: Figures/tutorialGraph.png Graphic file (type png)
 <use Figures/tutorialGraph.png>
 Package pdftex.def Info: Figures/tutorialGraph.png  used on input line 76.
 (pdftex.def)             Requested size: 199.16928pt x 130.43939pt.
- [312 <./Figures/tutorialGraph.png>] [313]
-<Figures/tutorial-3-coloring.png, id=9180, 398.48875pt x 276.03125pt>
+ [314 <./Figures/tutorialGraph.png>] [315]
+<Figures/tutorial-3-coloring.png, id=9207, 398.48875pt x 276.03125pt>
 File: Figures/tutorial-3-coloring.png Graphic file (type png)
 <use Figures/tutorial-3-coloring.png>
 Package pdftex.def Info: Figures/tutorial-3-coloring.png  used on input line 16
 1.
 (pdftex.def)             Requested size: 199.16928pt x 137.96474pt.
- [314 <./Figures/tutorial-3-coloring.png>]
-<Figures/tutorial-2-coloring.png, id=9214, 398.48875pt x 276.03125pt>
+ [316 <./Figures/tutorial-3-coloring.png>]
+<Figures/tutorial-2-coloring.png, id=9241, 398.48875pt x 276.03125pt>
 File: Figures/tutorial-2-coloring.png Graphic file (type png)
 <use Figures/tutorial-2-coloring.png>
 Package pdftex.def Info: Figures/tutorial-2-coloring.png  used on input line 18
 6.
 (pdftex.def)             Requested size: 199.16928pt x 137.96474pt.
- [315 <./Figures/tutorial-2-coloring.png>] [316] [317]
-<Figures/maxMatchingcycleGraph.png, id=9349, 441.65pt x 487.8225pt>
+ [317 <./Figures/tutorial-2-coloring.png>] [318] [319]
+<Figures/maxMatchingcycleGraph.png, id=9376, 441.65pt x 487.8225pt>
 File: Figures/maxMatchingcycleGraph.png Graphic file (type png)
 <use Figures/maxMatchingcycleGraph.png>
 Package pdftex.def Info: Figures/maxMatchingcycleGraph.png  used on input line 
 337.
 (pdftex.def)             Requested size: 199.16928pt x 219.99448pt.
- [318 <./Figures/maxMatchingcycleGraph.png>]
-<Figures/grid-15-15-ising.png, id=9372, 674.52pt x 595.22375pt>
+ [320 <./Figures/maxMatchingcycleGraph.png>]
+<Figures/grid-15-15-ising.png, id=9399, 674.52pt x 595.22375pt>
 File: Figures/grid-15-15-ising.png Graphic file (type png)
 <use Figures/grid-15-15-ising.png>
 Package pdftex.def Info: Figures/grid-15-15-ising.png  used on input line 364.
@@ -2542,13 +2462,13 @@ Package pdftex.def Info: Figures/grid-15-15-ising.png  used on input line 364.
 Class SVMono Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 364.
 
-[319pdfTeX warning (ext4): destination with the same identifier (name{figure.21
+[321pdfTeX warning (ext4): destination with the same identifier (name{figure.21
 .5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.372 \begin{lstlisting}
-                         <./Figures/grid-15-15-ising.png>] [320]
-<Figures/cg12.pdf, id=9438, 546.04pt x 578.16pt>
+                         <./Figures/grid-15-15-ising.png>] [322]
+<Figures/cg12.pdf, id=9465, 546.04pt x 578.16pt>
 File: Figures/cg12.pdf Graphic file (type pdf)
 <use Figures/cg12.pdf>
 Package pdftex.def Info: Figures/cg12.pdf  used on input line 467.
@@ -2557,11 +2477,11 @@ Package pdftex.def Info: Figures/cg12.pdf  used on input line 467.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[321]
+[323]
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <8.5> not available
 (Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 487.
- [322 <./Figures/cg12.pdf>] [323]
-<Figures/c12.png, id=9578, 372.1905pt x 341.47575pt>
+ [324 <./Figures/cg12.pdf>] [325]
+<Figures/c12.png, id=9605, 372.1905pt x 341.47575pt>
 File: Figures/c12.png Graphic file (type png)
 <use Figures/c12.png>
 Package pdftex.def Info: Figures/c12.png  used on input line 580.
@@ -2570,7 +2490,7 @@ Package pdftex.def Info: Figures/c12.png  used on input line 580.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[324] [325 <./Figures/c12.png (PNG copy)>]
+[326] [327 <./Figures/c12.png (PNG copy)>]
 
 (./02-mainMatters/21-chapterGraphs.bbl (./book.brf)
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
@@ -2578,14 +2498,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
  Marichal /
  []
 
-)) [326
+)) [328
 
 ]
 \openout2 = `02-mainMatters/22-chapterTreeGraphs.aux'.
 
  (./02-mainMatters/22-chapterTreeGraphs.tex
 Chapter 22.
-<Figures/tutRandomTree.png, id=9627, 398.48875pt x 578.16pt>
+<Figures/tutRandomTree.png, id=9655, 398.48875pt x 578.16pt>
 File: Figures/tutRandomTree.png Graphic file (type png)
 <use Figures/tutRandomTree.png>
 Package pdftex.def Info: Figures/tutRandomTree.png  used on input line 36.
@@ -2593,41 +2513,41 @@ Package pdftex.def Info: Figures/tutRandomTree.png  used on input line 36.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[327
+[329
 
 
 
 
 
 
-] [328 <./Figures/tutRandomTree.png>]
-<Figures/tutPruefTree.png, id=9674, 478.78876pt x 421.575pt>
+] [330 <./Figures/tutRandomTree.png>]
+<Figures/tutPruefTree.png, id=9702, 478.78876pt x 421.575pt>
 File: Figures/tutPruefTree.png Graphic file (type png)
 <use Figures/tutPruefTree.png>
 Package pdftex.def Info: Figures/tutPruefTree.png  used on input line 78.
 (pdftex.def)             Requested size: 199.16928pt x 175.36848pt.
- [329 <./Figures/tutPruefTree.png>]
-<Figures/test62.png, id=9700, 398.48875pt x 368.37625pt>
+ [331 <./Figures/tutPruefTree.png>]
+<Figures/test62.png, id=9727, 398.48875pt x 368.37625pt>
 File: Figures/test62.png Graphic file (type png)
 <use Figures/test62.png>
 Package pdftex.def Info: Figures/test62.png  used on input line 118.
 (pdftex.def)             Requested size: 199.16928pt x 184.12021pt.
 
-[330 <./Figures/test62.png>]
-<Figures/rootedTree.png, id=9726, 272.01625pt x 296.10625pt>
+[332 <./Figures/test62.png>]
+<Figures/rootedTree.png, id=9754, 272.01625pt x 296.10625pt>
 File: Figures/rootedTree.png Graphic file (type png)
 <use Figures/rootedTree.png>
 Package pdftex.def Info: Figures/rootedTree.png  used on input line 143.
 (pdftex.def)             Requested size: 170.71652pt x 185.84308pt.
- [331 <./Figures/rootedTree.png>]
-<Figures/randomSpanningTree.png, id=9753, 398.48875pt x 333.245pt>
+ [333 <./Figures/rootedTree.png>]
+<Figures/randomSpanningTree.png, id=9780, 398.48875pt x 333.245pt>
 File: Figures/randomSpanningTree.png Graphic file (type png)
 <use Figures/randomSpanningTree.png>
 Package pdftex.def Info: Figures/randomSpanningTree.png  used on input line 185
 .
 (pdftex.def)             Requested size: 199.16928pt x 166.56107pt.
- [332 <./Figures/randomSpanningTree.png>]
-<Figures/spanningForest.png, id=9789, 587.19376pt x 499.8675pt>
+ [334 <./Figures/randomSpanningTree.png>]
+<Figures/spanningForest.png, id=9816, 587.19376pt x 499.8675pt>
 File: Figures/spanningForest.png Graphic file (type png)
 <use Figures/spanningForest.png>
 Package pdftex.def Info: Figures/spanningForest.png  used on input line 213.
@@ -2637,7 +2557,7 @@ Package pdftex.def Info: Figures/spanningForest.png  used on input line 213.
 Class SVMono Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 213.
 
-[333pdfTeX warning (ext4): destination with the same identifier (name{figure.22
+[335pdfTeX warning (ext4): destination with the same identifier (name{figure.22
 .6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -2648,15 +2568,15 @@ Overfull \hbox (130.4402pt too wide) in paragraph at lines 252--253
 we may use the\OT1/pcr/m/n/10 BestDeterminedSpanningForest
  []
 
-[334]
-<Figures/bestDeterminedSpanningTree.png, id=9860, 398.48875pt x 280.04625pt>
+[336]
+<Figures/bestDeterminedSpanningTree.png, id=9888, 398.48875pt x 280.04625pt>
 File: Figures/bestDeterminedSpanningTree.png Graphic file (type png)
 <use Figures/bestDeterminedSpanningTree.png>
 Package pdftex.def Info: Figures/bestDeterminedSpanningTree.png  used on input 
 line 289.
 (pdftex.def)             Requested size: 199.16928pt x 139.97148pt.
- [335 <./Figures/bestDeterminedSpanningTree.png>]
-(./02-mainMatters/22-chapterTreeGraphs.bbl (./book.brf))) [336
+ [337 <./Figures/bestDeterminedSpanningTree.png>]
+(./02-mainMatters/22-chapterTreeGraphs.bbl (./book.brf))) [338
 
 ]
 \openout2 = `02-mainMatters/23-chapterPerfectGraphs.aux'.
@@ -2664,7 +2584,7 @@ line 289.
 
 (./02-mainMatters/23-chapterPerfectGraphs.tex
 Chapter 23.
-[337
+[339
 
 
 
@@ -2672,7 +2592,7 @@ Chapter 23.
 
 
 ]
-<Figures/randomSplitGraph.pdf, id=9901, 299.1175pt x 358.33875pt>
+<Figures/randomSplitGraph.pdf, id=9928, 299.1175pt x 358.33875pt>
 File: Figures/randomSplitGraph.pdf Graphic file (type pdf)
 <use Figures/randomSplitGraph.pdf>
 Package pdftex.def Info: Figures/randomSplitGraph.pdf  used on input line 72.
@@ -2681,34 +2601,34 @@ Package pdftex.def Info: Figures/randomSplitGraph.pdf  used on input line 72.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[338] [339 <./Figures/randomSplitGraph.pdf>] [340
+[340] [341 <./Figures/randomSplitGraph.pdf>] [342
 
 ]
-<Figures/berge1.pdf, id=10018, 299.1175pt x 240.9pt>
+<Figures/berge1.pdf, id=10046, 299.1175pt x 240.9pt>
 File: Figures/berge1.pdf Graphic file (type pdf)
 <use Figures/berge1.pdf>
 Package pdftex.def Info: Figures/berge1.pdf  used on input line 144.
 (pdftex.def)             Requested size: 199.16928pt x 160.40599pt.
- [341 <./Figures/berge1.pdf>]
-<Figures/berge2.pdf, id=10070, 299.1175pt x 240.9pt>
+ [343 <./Figures/berge1.pdf>]
+<Figures/berge2.pdf, id=10098, 299.1175pt x 240.9pt>
 File: Figures/berge2.pdf Graphic file (type pdf)
 <use Figures/berge2.pdf>
 Package pdftex.def Info: Figures/berge2.pdf  used on input line 187.
 (pdftex.def)             Requested size: 199.16928pt x 160.40599pt.
-[342 <./Figures/berge2.pdf>]
-<Figures/permutationGraph.pdf, id=10125, 299.1175pt x 266.9975pt>
+[344 <./Figures/berge2.pdf>]
+<Figures/permutationGraph.pdf, id=10152, 299.1175pt x 266.9975pt>
 File: Figures/permutationGraph.pdf Graphic file (type pdf)
 <use Figures/permutationGraph.pdf>
 Package pdftex.def Info: Figures/permutationGraph.pdf  used on input line 220.
 (pdftex.def)             Requested size: 199.16928pt x 177.78331pt.
-<Figures/coloredPermutationGraph.pdf, id=10128, 299.1175pt x 266.9975pt>
+<Figures/coloredPermutationGraph.pdf, id=10155, 299.1175pt x 266.9975pt>
 File: Figures/coloredPermutationGraph.pdf Graphic file (type pdf)
 <use Figures/coloredPermutationGraph.pdf>
 Package pdftex.def Info: Figures/coloredPermutationGraph.pdf  used on input lin
 e 243.
 (pdftex.def)             Requested size: 170.71652pt x 152.3857pt.
- [343 <./Figures/permutationGraph.pdf>]
-<Figures/perm_permutationGraph.pdf, id=10188, 417.56pt x 251.94125pt>
+ [345 <./Figures/permutationGraph.pdf>]
+<Figures/perm_permutationGraph.pdf, id=10216, 417.56pt x 251.94125pt>
 File: Figures/perm_permutationGraph.pdf Graphic file (type pdf)
 <use Figures/perm_permutationGraph.pdf>
 Package pdftex.def Info: Figures/perm_permutationGraph.pdf  used on input line 
@@ -2719,7 +2639,7 @@ Package pdftex.def Info: Figures/perm_permutationGraph.pdf  used on input line
 Class SVMono Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 259.
 
-[344pdfTeX warning (ext4): destination with the same identifier (name{figure.23
+[346pdfTeX warning (ext4): destination with the same identifier (name{figure.23
 .6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -2730,14 +2650,14 @@ m_permutationGraph.pdf
 pdfTeX warning: pdflatex (file ./Figures/perm_permutationGraph.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >]
-<Figures/oriented_permutationGraph.png, id=10250, 209.78375pt x 308.15125pt>
+<Figures/oriented_permutationGraph.png, id=10277, 209.78375pt x 308.15125pt>
 File: Figures/oriented_permutationGraph.png Graphic file (type png)
 <use Figures/oriented_permutationGraph.png>
 Package pdftex.def Info: Figures/oriented_permutationGraph.png  used on input l
 ine 289.
 (pdftex.def)             Requested size: 142.26378pt x 208.97112pt.
- [345 <./Figures/oriented_permutationGraph.png>]
-<Figures/randomGraph4335.pdf, id=10280, 299.1175pt x 319.1925pt>
+ [347 <./Figures/oriented_permutationGraph.png>]
+<Figures/randomGraph4335.pdf, id=10308, 299.1175pt x 319.1925pt>
 File: Figures/randomGraph4335.pdf Graphic file (type pdf)
 <use Figures/randomGraph4335.pdf>
 Package pdftex.def Info: Figures/randomGraph4335.pdf  used on input line 334.
@@ -2746,22 +2666,22 @@ Package pdftex.def Info: Figures/randomGraph4335.pdf  used on input line 334.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[346]
-<Figures/transOrientGraph.png, id=10327, 398.48875pt x 329.23pt>
+[348]
+<Figures/transOrientGraph.png, id=10355, 398.48875pt x 329.23pt>
 File: Figures/transOrientGraph.png Graphic file (type png)
 <use Figures/transOrientGraph.png>
 Package pdftex.def Info: Figures/transOrientGraph.png  used on input line 362.
 (pdftex.def)             Requested size: 199.16928pt x 164.5543pt.
- [347 <./Figures/randomGraph4335.pdf> <./Figures/transOrientGraph.png>]
-<Figures/transOrientDualGraph.png, id=10370, 441.65pt x 277.035pt>
+ [349 <./Figures/randomGraph4335.pdf> <./Figures/transOrientGraph.png>]
+<Figures/transOrientDualGraph.png, id=10397, 441.65pt x 277.035pt>
 File: Figures/transOrientDualGraph.png Graphic file (type png)
 <use Figures/transOrientDualGraph.png>
 Package pdftex.def Info: Figures/transOrientDualGraph.png  used on input line 3
 91.
 (pdftex.def)             Requested size: 199.16928pt x 124.93513pt.
 
-[348 <./Figures/transOrientDualGraph.png>] [349]
-<Figures/isomorphicPerms.png, id=10442, 921.4425pt x 396.48125pt>
+[350 <./Figures/transOrientDualGraph.png>] [351]
+<Figures/isomorphicPerms.png, id=10469, 921.4425pt x 396.48125pt>
 File: Figures/isomorphicPerms.png Graphic file (type png)
 <use Figures/isomorphicPerms.png>
 Package pdftex.def Info: Figures/isomorphicPerms.png  used on input line 473.
@@ -2771,30 +2691,30 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 473--474
 [][] 
  []
 
-[350 <./Figures/isomorphicPerms.png>]
-(./02-mainMatters/23-chapterPerfectGraphs.bbl (./book.brf))) [351
+[352 <./Figures/isomorphicPerms.png>]
+(./02-mainMatters/23-chapterPerfectGraphs.bbl (./book.brf))) [353
 
-] [352
+] [354
 
 
 
 
 ]
-(./book.lol [353
+(./book.lol [355
 
 
-] [354] [355])
-\tf@lol=\write8
-\openout8 = `book.lol'.
+] [356] [357])
+\tf@lol=\write7
+\openout7 = `book.lol'.
 
- [356] (./book.lot)
-\tf@lot=\write9
-\openout9 = `book.lot'.
+ [358] (./book.lot)
+\tf@lot=\write8
+\openout8 = `book.lot'.
 
- (./book.ind [357
+ (./book.ind [359
 
 
-] [358
+] [360
 
 
 ]
@@ -2812,32 +2732,38 @@ Overfull \hbox (3.17114pt too wide) in paragraph at lines 74--76
 []\OT1/pcr/m/n/8.5 ExtendedTriangularRandomVariable 
  []
 
-[359]
-Overfull \hbox (18.47112pt too wide) in paragraph at lines 165--167
+[361]
+Overfull \hbox (28.6711pt too wide) in paragraph at lines 165--167
+[]\OT1/pcr/m/n/8.5 Random3ObjectivesPerformanceTableau() 
+ []
+
+
+Overfull \hbox (18.47112pt too wide) in paragraph at lines 167--169
 []\OT1/pcr/m/n/8.5 Random3ObjectivesPerformanceTableau 
  []
 
 
-Overfull \hbox (13.37112pt too wide) in paragraph at lines 167--169
+Overfull \hbox (13.37112pt too wide) in paragraph at lines 169--171
 []\OT1/pcr/m/n/8.5 RandomAcademicPerformanceTableau() 
  []
 
 
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 174--176
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 176--178
 []\OT1/pcr/m/n/8.5 RandomIntervalIntersectionsGraph 
  []
 
-[360]
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 229--231
+[362]
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 232--234
 []\OT1/pcr/m/n/8.5 StrongComponentsCollapsedDigraph 
  []
 
-[361])
-\tf@thm=\write10
-\openout10 = `book.thm'.
 
- (./book.aux (./01-frontMatters/dedic.aux) (./01-frontMatters/preface.aux) (./0
-2-mainMatters/00-chapterIntroduction.aux) (./02-mainMatters/part1.aux)
+Overfull \hbox (8.27113pt too wide) in paragraph at lines 250--252
+[]\OT1/pcr/m/n/8.5 UnOpposedBipolarOutrankingDigraph 
+ []
+
+[363]) (./book.aux (./01-frontMatters/dedic.aux) (./01-frontMatters/preface.aux
+) (./02-mainMatters/00-chapterIntroduction.aux) (./02-mainMatters/part1.aux)
 (./02-mainMatters/01-chapterIntroDigraph3.aux)
 (./02-mainMatters/02-chapterDigraphs.aux)
 (./02-mainMatters/03-chapterOutrankingDigraphs.aux) (./02-mainMatters/part2.aux
@@ -2874,14 +2800,14 @@ LaTeX Warning: There were multiply-defined labels.
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: B135B9A569E157DAF56453FFF88082A4;43091.
 Package rerunfilecheck Info: File `book.brf' has not changed.
-(rerunfilecheck)             Checksum: 845AFE21F141F18496CA05BE06CCEE3B;5821.
+(rerunfilecheck)             Checksum: C87908E5172FFE552FE299F848BBADD8;5823.
  ) 
 Here is how much of TeX's memory you used:
- 25055 strings out of 478994
- 379267 string characters out of 5858184
- 1241345 words of memory out of 5000000
- 34737 multiletter control sequences out of 15000+600000
- 487839 words of font info for 189 fonts, out of 8000000 for 9000
+ 23979 strings out of 478994
+ 364855 string characters out of 5858184
+ 1198238 words of memory out of 5000000
+ 33656 multiletter control sequences out of 15000+600000
+ 485706 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,12n,102p,1716b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{page.33,\\relax\040\\hskip\0400.2em\\ignorespaces
@@ -2908,10 +2834,10 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (375 pages, 7635020 bytes).
+Output written on book.pdf (377 pages, 7601967 bytes).
 PDF statistics:
- 12376 PDF objects out of 12825 (max. 8388607)
- 11556 compressed objects within 116 object streams
- 7057 named destinations out of 7423 (max. 500000)
+ 12410 PDF objects out of 12825 (max. 8388607)
+ 11588 compressed objects within 116 object streams
+ 7077 named destinations out of 7423 (max. 500000)
  2037 words of extra memory for PDF output out of 10000 (max. 10000000)
 

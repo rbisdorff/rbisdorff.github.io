@@ -10,7 +10,7 @@ In this chapter, we study the stability of the outranking digraph when the crite
 \section{Cardinal or ordinal criteria significance weights}
 \label{sec:19.1}
 
-A random example of a decision problem with equally important decision objectives and equi-significant criteria may be generated with the \texttt{Random3ObjectivesPerformanceTableau} class.
+A random example of such a decision problem with equally important decision objectives and equi-significant criteria may be generated with the \texttt{Random3\-Objectives\-PerformanceTableau} class \index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformanceTableau()}}.
 
 \begin{lstlisting}[caption={Generate a Random 3 Objectives Performance Tableau},label=list:19.1]
 >>> from randomPerfTabs import \
@@ -33,7 +33,7 @@ A random example of a decision problem with equally important decision objective
               'commonScale', 'objectiveSupportingTypes',
               'actions', 'objectives', 'criteriaWeightMode',
               'criteria', 'evaluation', 'weightPreorder']
->>> t.showObjectives()
+>>> pt.showObjectives()
   *------ show objectives -------*
    Eco: Economical aspect
      ec1 criterion of objective Eco 8
@@ -51,10 +51,9 @@ A random example of a decision problem with equally important decision objective
      en9 criterion of objective Env 6
      Total weight: 24.00 (4 criteria)
 \end{lstlisting}
-In Listing~\ref{list:19.1} one may notice a performance tableau \texttt{pt} describing seven decision alternatives that are assessed with respect to three equally important decision objectives concerning: first, an \emph{economical} aspect (Line 24) with a coalition of three performance criteria of significance weight 8, secondly, a \emph{societal} aspect (Line 29) with a coalition of two performance criteria of significance weight 12, and thirdly, an \emph{environmental} aspect (Line 33) with a coalition four performance criteria of significance weight 6.
+In Listing~\ref{list:19.1} one may notice a performance tableau \texttt{pt} describing seven decision alternatives that are assessed with respect to three equally important decision objectives concerning: --first, an \emph{economical} aspect (Line 24) with a coalition of three performance criteria of significance weight 8, --secondly, a \emph{societal} aspect (Line 29) with a coalition of two performance criteria of significance weight 12, and --thirdly, an \emph{environmental} aspect (Line 33) with a coalition four performance criteria of significance weight 6.
 
-The question we tackle is the following: How \emph{dependent} on the actual values of the significance weights appears the corresponding bipolar-valued outranking digraph ? In the previous Chapter \ref{sec:18}, we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights. In our example we see indeed three increasing weight equivalence classes.
-
+The question we tackle is the following: How \emph{dependent} on the actual values of the significance weights appears the corresponding bipolar-valued outranking digraph ? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights. In our example we see indeed three increasing weight equivalence classes.
 \begin{lstlisting}[caption={The significance weights preorder},label=list:19.2]
 >>> pt.showWeightPreorder()
     ['en3', 'en5', 'en6', 'en9'] (6) <
@@ -62,7 +61,7 @@ The question we tackle is the following: How \emph{dependent} on the actual valu
     ['so2', 'so7'] (12)
 \end{lstlisting}
 
-How stable appear now the outranking situations when assuming only ordinal significance weights?
+How stable appear now the outranking situations when allowing only significance weights that are compatible with this weights preorder shown in Listing~\ref{list:19.2} ?
 
 \section{Qualifying the stability of outranking situations}
 \label{sec:19.2}
@@ -196,8 +195,8 @@ Let us now consider a comparison, like the one between alternatives \texttt{p2} 
 \end{lstlisting}
 In both comparisons, the performances observed with respect to the environmental decision objective are not validating with a significant majority the otherwise unanimous outranking, resp. outranked situations. Hence, the stability of the reported preferential situations is in fact dependent on choosing significance weights that are compatible with the given significance weights preorder (see Listing \ref{list:19.2}).
 
-Let us finally inspect a comparison that is only qualified at stability level $+1$, like the one between alternatives 'p7' and 'p3'.
-\begin{lstlisting}[caption={Comparison of alternatives 'p7' and 'p3'},label=list:19.6]
+Let us finally inspect a comparison that is only qualified at stability level $+1$, like the one between alternatives \texttt{p7} and \texttt{p3}.
+\begin{lstlisting}[caption={Comparison of alternatives \texttt{p7} and \texttt{p3}},label=list:19.6]
 >>> g.showPairwiseOutrankings('p7','p3')
  *------------  pairwise comparison ----*
   Comparing actions : ('p7', 'p3')
@@ -307,7 +306,7 @@ Dually, we say that decision alternative $x$ \emph{does not robustly outrank} de
 \item we may not observe any considerable better performance of $x$ on a discordant criterion.
 \end{itemize}     
 
-The corresponding \emph{robust} outranking digraph may be computed with the \texttt{RobustOutrankingDigraph} class as follows:
+The corresponding \emph{robust} outranking digraph may be computed as follows with the \texttt{RobustOutrankingDigraph} class\index{RobustOutrankingDigraph@\texttt{RobustOutrankingDigraph} class}:
 \begin{lstlisting}[caption={Computing a robust outranking digraph},label=list:19.7]
 >>> from outrankingDigraphs import\
 ...              RobustOutrankingDigraph
@@ -327,7 +326,7 @@ The corresponding \emph{robust} outranking digraph may be computed with the \tex
          'cardinalRelation', 'ordinalRelation',
          'equisignificantRelation', 'unanimousRelation',
          'relation', 'gamma', 'notGamma']
->>> rg.showRelationTable(StabilityDenotation=True)
+>>> rg.showRelationTable()
   * ---- Relation Table -----
    r/(stab) |  'p1'  'p2'  'p3'  'p4'  'p5'  'p6'  'p7'   
    ---------|------------------------------------------
@@ -346,10 +345,10 @@ The corresponding \emph{robust} outranking digraph may be computed with the \tex
      'p7'   | +0.22 -0.50 +0.00 +0.00 +0.78 +0.42 +1.00  
             |  (+2)  (-2)  (+1)  (-1)  (+3)  (+2)  (+4)  
 \end{lstlisting}
-We may notice that all outranking situations, qualified at stability level $\pm 1$, are now put to an \emph{indeterminate} status. In the example here, we actually drop three positive outrankings: between 'p3' and 'p7', between 'p7' and 'p3', and between 'p6' and 'p3', where the last situation is actually already put to doubt by a veto situation (see Listing \ref{list:19.7} Lines 22-35). We drop as well three negative outrankings: between 'p1' and 'p7', between 'p4' and 'p2', and between 'p7' and 'p4' (see Lines 22-35).
+We may notice that all outranking situations, qualified at stability level $\pm 1$, are now put to an \emph{indeterminate} status. In the example here, we actually drop three positive outrankings: between \texttt{p3} and \texttt{p7}, between \texttt{p7} and \texttt{p3}, and between \texttt{p6} and \texttt{p3}, where the last situation is actually already put to doubt by a veto situation (see Listing \ref{list:19.7} Lines 22-35). We drop as well three negative outrankings: between \texttt{p1} and \texttt{p7}, between \texttt{p4} and \texttt{p2}, and between \texttt{p7} and \texttt{p4} (see Lines 22-35).
 
-Notice by the way that outranking or outranked situations, although qualified at level $\pm 2$ or $\pm 3$ may nevertheless be put to doubt by considerable performance differences. We may observe such an outranking situation when comparing, for instance, alternatives 'p2' and 'p4' (see Listing \ref{list:19.7} Lines 24-25).
-\begin{lstlisting}[caption={Comparing alternatives 'p2' and 'p4'},label=list:19.8,basicstyle=\scriptsize]
+Notice by the way that outranking or outranked situations, although qualified at level $\pm 2$ or $\pm 3$ may nevertheless be put to doubt by considerable performance differences. We may observe such an outranking situation when comparing, for instance, alternatives \texttt{p2} and \texttt{p4} (see Listing \ref{list:19.7} Lines 24-25).
+\begin{lstlisting}[caption={Comparing alternatives 'p2' and 'p4'},label=list:19.8,basicstyle=\ttfamily\scriptsize]
 >>> rg.showPairwiseComparison('p2','p4')
    *------------  pairwise comparison ----*
     Comparing actions : (p2, p4)
@@ -367,9 +366,30 @@ Notice by the way that outranking or outranked situations, although qualified at
     Valuation in range: -72.00 to +72.00;             -------
                                    global concordance: +24.00      
 \end{lstlisting}
-Despite being robust, the apparent positive outranking situation between alternatives 'p2' and 'p4' is indeed put to doubt by a considerable counter-performance ($-60.02$) of 'p2' observed on criterion 'en3', a negative difference which exceeds slightly the assumed veto discrimination threshold $v = 60.00$ (see Listing \ref{list:19.8} Line 9).
+Despite being robust, the apparent positive outranking situation between alternatives \texttt{p2} and \texttt{p4} is indeed put to doubt by a considerable counter-performance ($-60.02$) of \texttt{p2} observed on criterion \texttt{en3}, a negative difference which exceeds slightly the assumed veto discrimination threshold $v = 60.00$ (see Listing \ref{list:19.8} Line 9).
 
 We may finally compare in Fig. \ref{fig:19.1} the \emph{standard} and the \emph{robust} version of the corresponding strict outranking digraphs, both oriented by their respective identical initial and terminal prekernels.
+\begin{lstlisting}
+>>> rg.showPreKernels()
+  *--- Computing preKernels ---*
+   Dominant preKernels :
+   ['p2', 'p4']
+    independence :  0.00
+    dominance    :  0.667
+    absorbency   :  -0.50
+    covering     :  1.000
+   Absorbent preKernels :
+   ['p5']
+    independence :  1.0
+    dominance    :  -0.889
+    absorbency   :  0.167
+    covered      :  1.000
+   ['p6']
+    independence :  1.0
+    dominance    :  -1.0
+    absorbency   :  0.111
+    covered      :  1.000
+\end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
 \includegraphics[width=12cm]{Figures/robStdStrictOutranking.png}
@@ -377,44 +397,41 @@ We may finally compare in Fig. \ref{fig:19.1} the \emph{standard} and the \emph{
 \label{fig:19.1}       % Give a unique label
 \end{figure}
    
-The robust version drops two strict outranking situations: between 'p4' and 'p7' and between 'p7' and 'p1'. The remaining 14 strict outranking (resp. outranked) situations are now all verified at a stability level of +2 and more (resp. -2 and less). They are, hence, only depending on potential significance weights that must respect the given significance preorder (see Listing \ref{list:19.2}).
+The robust version drops two strict outranking situations: between \texttt{p4} and \texttt{p7} and between \texttt{p7} and \texttt{p1}. The remaining 14 strict outranking (resp. outranked) situations are now all verified at a stability level of $+2$ and more (resp. $-2$ and less). They are, hence, only depending on potential significance weights that must respect the given significance preorder (see Listing \ref{list:19.2}).
 
+To appreciate the apparent orientation of the standard and robust strict outranking digraphs shown in Fig. \ref{fig:19.1}, let us have a final heat map view in Fig. \ref{fig:19.2} on the underlying performance tableau ordered by the \NetFlows ranking rule applied to the robust outranking digraph (see the \texttt{outrankingModel='this'} flag in Line 4 below).
+\begin{lstlisting}
+>>> rg.showHTMLPerformanceHeatmap(\
+...           Correlations=True,\
+...           colorLevels=5,\
+...           outrankingModel='this',\
+...           rankingRule='NetFlows')
+\end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
 \includegraphics[width=12cm]{Figures/robustHeatmap.png}
-\caption{Heat map of the random 3 objectives performance tableau ordered by the \NetFlows ranking rule. } 
+\caption{Robust heatmap of the random 3 objectives performance tableau ordered by the \NetFlows ranking rule.} 
 \label{fig:19.2}       % Give a unique label
 \end{figure}
-
-To appreciate the apparent orientation of the standard and robust strict outranking digraphs shown in Fig. \ref{fig:19.1}, let us have a final heat map view in Fig. \ref{fig:19.2} on the underlying performance tableau ordered by the \NetFlows ranking rule.
-\begin{lstlisting}
->>> t.showHTMLPerformanceHeatmap(\
-...           Correlations=True,rankingRule='NetFlows')
-\end{lstlisting}
-As the inital prekernel is here validated at stability level $+2$, recommending alternatives 'p4', as well as 'p2', as potential best choices, appears well justified. Alternative 'p4' represents indeed an overall \emph{best compromise choice} between all decision objectives, whereas alternative 'p2' gives an unanimous best choice with respect to two out of three decision objectives. Up to the decision maker to make his final choice.
-
-When facing a performance tableau involving multiple decision objectives, the robustness level $\pm 3$  may lead to distinguishing what we call \emph{unopposed} outranking situations, like the one shown between alternative 'p4' and 'p1' ($r(p4 \succsim p1) = +0.78$, see Listing \ref{list:19.4} Line 11), namely preferential situations that are more or less validated or invalidated by all the decision objectives.  
+ As the inital prekernel is in the robust outranking digraph validated at least at stability level $+2$, recommending alternatives \texttt{p4}, as well as \texttt{p2}, as potential best choices, appears well justified. Alternative \texttt{p4} represents indeed an overall \emph{best compromise choice} between all decision objectives, whereas alternative \texttt{p2} gives an unanimous best choice with respect to two out of three decision objectives. Up to the decision maker to make his final choice.
 
 \section{Characterising unopposed multiobjective outranking situations}
 \label{sec:19.5}
 
+When facing a performance tableau involving multiple decision objectives, the robustness level $\pm 3$  may lead to distinguishing what we call \emph{unopposed} outranking situations, like the one shown in the previous section between alternative \texttt{p4} and \texttt{p1} ($r(p4 \succsim p1) = +0.78$, see Listing \ref{list:19.4} Line 11), namely preferential situations that are more or less validated or invalidated by all the decision objectives.  
+
 Formally, we say that decision alternative $x$ \emph{outranks} decision alternative $y$ \emph{unopposed} when:
-\begin{itemize}
+\begin{itemize}[nosep]
 \item [] $x$ positively outranks $y$ on one or more decision objective without $x$ being positively outranked by $y$ on any decision objective.
 \end{itemize}
 Dually, we say that decision alternative $x$ \emph{does not outrank} decision alternative $y$ \emph{unopposed} when:
-\begin{itemize}
+\begin{itemize}[nosep]
 \item [] $x$ is positively outranked by $y$ on one or more decision objective without $x$ positively outranking $y$ on any decision objective.
 \end{itemize}
 
-Let us reconsider, for instance, the performance tableau with three decision objectives already seen in Listing \ref{list:19.1}:
+Let us reconsider, for instance, the performance tableau \texttt{pt} with three decision objectives already seen in Listing \ref{list:19.1}:
 \begin{lstlisting}
->>> from randomPerfTabs import\
-...           Random3ObjectivesPerformanceTableau
->>> t = Random3ObjectivesPerformanceTableau(\
-...           numberOfActions=7,\
-...           numberOfCriteria=9,seed=102)
->>> t.showObjectives()
+>>> pt.showObjectives()
   *------ show objectives -------"
    Eco: Economical aspect
      ec1 criterion of objective Eco 8
@@ -432,21 +449,21 @@ Let us reconsider, for instance, the performance tableau with three decision obj
      en9 criterion of objective Env 6
     Total weight: 24.00 (4 criteria)
 \end{lstlisting}
-We notice in this example three decision objectives of equal importance (see Lines 8,13,17). What will be the outranking situations that are positively (resp.  negatively) validated for each one of the decision objectives taken individually ?
+We notice in this example three decision objectives of equal importance (see Lines 3,13,17). What will be the outranking situations that are positively (resp.  negatively) validated for each one of the decision objectives taken individually ?
 
-We may obtain such unopposed multiobjective outranking situations by operating an epistemic \emph{average fusion} (see the \texttt{symmetricAverage()} method) of the marginal outranking digraphs restricted to the coalition of criteria supporting each one of the decision objectives (see Listing \ref{list:19.9} below).
+We may obtain such unopposed multiobjective outranking situations by operating an epistemic \emph{average fusion} (see the \texttt{symmetricAverage()} method \index{symmetricAverage@\texttt{symmetricAverage()}}) of the marginal outranking digraphs restricted to the coalition of criteria supporting each one of the decision objectives (see Listing \ref{list:19.9} below).
 \begin{lstlisting}[caption={Computing unopposed outranking situations},label=list:19.9]
 >>> from outrankingDigraphs import\
 ...                     BipolarOutrankingDigraph
->>> geco = BipolarOutrankingDigraph(t,\
+>>> geco = BipolarOutrankingDigraph(pt,\
 ...                     objectivesSubset=['Eco'])
->>> gsoc = BipolarOutrankingDigraph(t,\
+>>> gsoc = BipolarOutrankingDigraph(pt,\
 ...                     objectivesSubset=['Soc'])
->>> genv = BipolarOutrankingDigraph(t,\
+>>> genv = BipolarOutrankingDigraph(pt,\
 ...                     objectivesSubset=['Env'])
 >>> from digraphs import FusionLDigraph
 >>> objectiveWeights = \
-...               [t.objectives[obj]['weight']\
+...               [pt.objectives[obj]['weight']\
 ...                      for obj in t.objectives] 
 >>> uopg = FusionLDigraph([geco,gsoc,genv],\
 ...                   operator='o-average',\
@@ -466,8 +483,7 @@ We may obtain such unopposed multiobjective outranking situations by operating a
 \end{lstlisting}
 Positive (resp. negative) $r(x \succsim y)$ characteristic values, like $r(p1 \succsim p5) = +0.39$ (see Listing \ref{list:19.9} Line 20), show hence only outranking situations being validated (resp. invalidated) by one or more decision objectives without being invalidated (resp. validated) by any other decision objective.
 
-For easily computing this kind of \emph{unopposed multiobjective} outranking digraphs, the \texttt{outrankingDigraphs} module conveniently provides a corresponding\\
-\texttt{UnOpposedBipolarOutrankingDigraph} constructor.
+For easily computing this kind of \emph{unopposed multiobjective} outranking digraphs, the \texttt{outrankingDigraphs} module conveniently provides a corresponding \texttt{UnOpposedBipolarOutrankingDigraph} constructor \index{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph} class}.
 \begin{lstlisting}[caption={Unopposed outranking digraph constructor},label=list:19.10]
 >>> from outrankingDigraphs import\
 ...              UnOpposedBipolarOutrankingDigraph

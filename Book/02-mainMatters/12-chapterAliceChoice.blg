@@ -5,43 +5,43 @@ The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 6 entries,
-            3269 wiz_defined-function locations,
-            710 strings with 5838 characters,
-and the built_in function-call counts, 6337 in all, are:
-= -- 590
+            3270 wiz_defined-function locations,
+            710 strings with 5837 characters,
+and the built_in function-call counts, 7673 in all, are:
+= -- 832
 > -- 118
 < -- 4
-+ -- 44
++ -- 62
 - -- 36
-* -- 559
-:= -- 859
+* -- 581
+:= -- 911
 add.period$ -- 6
 call.type$ -- 6
 change.case$ -- 40
 chr.to.int$ -- 6
 cite$ -- 6
-duplicate$ -- 596
-empty$ -- 632
+duplicate$ -- 794
+empty$ -- 658
 format.name$ -- 50
-if$ -- 1349
+if$ -- 1617
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 55
 newline$ -- 28
 num.names$ -- 25
-pop$ -- 117
+pop$ -- 179
 preamble$ -- 1
 purify$ -- 36
 quote$ -- 0
-skip$ -- 98
+skip$ -- 256
 stack$ -- 0
-substring$ -- 800
-swap$ -- 113
+substring$ -- 866
+swap$ -- 333
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 48
 warning$ -- 0
-while$ -- 38
+while$ -- 42
 width$ -- 0
 write$ -- 75
