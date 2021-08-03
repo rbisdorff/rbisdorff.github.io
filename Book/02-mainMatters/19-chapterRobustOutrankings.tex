@@ -232,7 +232,7 @@ Let us consider the significance equivalence classes we observe in the given wei
 
 In all the pairwise marginal comparisons shown in the previous Section, we may observe that each one of the nine criteria assigns one precise item out of this list $W$. Let us denote $q[i]$ the number of criteria assigning item $W[i]$, and $Q[i]$ the cumulative sums of these $q[i]$ counts, where $i$ is an index in the range of the length of list $W$.
 
-In the comparison of alternatives 'p2' and 'p1', for instance (see Listing \ref{list:19.5}), we observe the following counts: \hfill
+In the comparison of alternatives \texttt{p2} and \texttt{p1}, for instance (see Listing \ref{list:19.5}), we observe the following counts: \hfill
 \begin{center}
 \begin{tabular}{l|r|r|r|r|r|r|r}
  \svhline\noalign{\smallskip}
@@ -289,8 +289,9 @@ Using this stability denotation, we may, hence, define the following \emph{robus
 \section{Robust bipolar-valued outranking digraphs}
 \label{sec:19.4}
 
+\begin{definition}[Robust outranking situation]\label{def:19.1}
 We say that decision alternative $x$ \emph{robustly outranks} decision alternative $y$ when:
-\begin{itemize}[nosep]
+\begin{itemize}
 \item $x$ positively outranks $y$ at stability level $+2$ or higher and
 \item we may not observe any considerable counter-performance of $x$ on a discordant criterion.
 \end{itemize}
@@ -299,7 +300,7 @@ Dually, we say that decision alternative $x$ \emph{does not robustly outrank} de
 \item $x$ is positively outranked by $y$ at stability level $-2$ or lower and
 \item we may not observe any considerable better performance of $x$ on a discordant criterion.
 \end{itemize}     
-
+\end{definition}
 The corresponding \emph{robust} outranking digraph may be computed as follows with the \texttt{RobustOutrankingDigraph} class\index{RobustOutrankingDigraph@\texttt{RobustOutrankingDigraph} class}:
 \begin{lstlisting}[caption={Computing a robust outranking digraph},label=list:19.7]
 >>> from outrankingDigraphs import\
@@ -342,7 +343,7 @@ The corresponding \emph{robust} outranking digraph may be computed as follows wi
 We may notice that all outranking situations, qualified at stability level $\pm 1$, are now put to an \emph{indeterminate} status. In the example here, we actually drop three positive outrankings: between \texttt{p3} and \texttt{p7}, between \texttt{p7} and \texttt{p3}, and between \texttt{p6} and \texttt{p3}, where the last situation is actually already put to doubt by a veto situation (see Listing \ref{list:19.7} Lines 22-35). We drop as well three negative outrankings: between \texttt{p1} and \texttt{p7}, between \texttt{p4} and \texttt{p2}, and between \texttt{p7} and \texttt{p4} (see Lines 22-35).
 
 Notice by the way that outranking or outranked situations, although qualified at level $\pm 2$ or $\pm 3$ may nevertheless be put to doubt by considerable performance differences. We may observe such an outranking situation when comparing, for instance, alternatives \texttt{p2} and \texttt{p4} (see Listing \ref{list:19.7} Lines 24-25).
-\begin{lstlisting}[caption={Comparing alternatives 'p2' and 'p4'},label=list:19.8,basicstyle=\ttfamily\scriptsize]
+\begin{lstlisting}[caption={Comparing alternatives \texttt{p2} and \texttt{p4}},label=list:19.8,basicstyle=\ttfamily\scriptsize]
 >>> rg.showPairwiseComparison('p2','p4')
    *------------  pairwise comparison ----*
     Comparing actions : (p2, p4)
@@ -504,7 +505,7 @@ For easily computing this kind of \emph{unopposed multiobjective} outranking dig
 \end{lstlisting}
 The resulting \emph{unopposed} outranking digraph keeps in fact 13 (see Listing \ref{list:19.10} Lines 12-13) out of the 23 positively validated \emph{standard} outranking situations, leading to a degree of \emph{oppositeness} --preferential disagreement between decision objectives-- of $(1.0 - 13/23)\,=\,0.4348$.
 
-We may now, for instance, verify the unopposed status of the outranking situation observed between alternatives 'p1' and 'p5'.
+We may now, for instance, verify the unopposed status of the outranking situation observed between alternatives \texttt{p1} and \texttt{p5}.
 \begin{lstlisting}[caption={Example of unopposed multiobjective outranking situation},label=list:19.11]
 >>> uopg.showPairwiseComparison('p1','p5')
  *------------  pairwise comparison ----*
@@ -522,7 +523,7 @@ We may now, for instance, verify the unopposed status of the outranking situatio
   Valuation in range: -72.00 to +72.00;           -------
                                global concordance: +28.00
 \end{lstlisting}
-In Listing \ref{list:19.11} we see that alternative 'p1' does indeed positively outrank alternative 'p5' from the economic perspective ($r(p1 \succsim_{Eco} p5) = +16/24$) as well as from the environmental perspective ($r(p1 \succsim_{Env} p5) = +12/24$). Whereas, from the societal perspective, both alternatives appear incomparable ($r(p1 \succsim_{Soc} p5) = 0/24$).
+In Listing \ref{list:19.11} we see that alternative \texttt{p1} does indeed positively outrank alternative \texttt{p5} from the economic perspective ($r(p1 \succsim_{Eco} p5) = +16/24$) as well as from the environmental perspective ($r(p1 \succsim_{Env} p5) = +12/24$). Whereas, from the societal perspective, both alternatives appear incomparable ($r(p1 \succsim_{Soc} p5) = 0/24$).
 
 When fixed proportional criteria significances per objective are given, these outranking situations appear hence \emph{stable} with respect to all possible importance weights we could allocate to the decision objectives.
 
@@ -553,7 +554,7 @@ Indeed, best choice recommendations, computed from an \emph{unopposed multiobjec
       determinateness (%) : 50.00
 \end{lstlisting}
 
-Our previous \emph{robust} best choice recommendation ('p2' and 'p4', see Fig. \ref{fig:19.1}) remains, in this example here, \emph{stable}. We recover indeed the best choice recommendation ['p2', 'p4', 'p7'] (see Listing \ref{list:19.12} Line 6). Yet, notice that decision alternative 'p7' appears to be at the same time a potential \emph{best} as well as a potential \emph{worst} choice recommendation (see Line 13), a consequence of 'p7' being completely \emph{incomparable} to the other decision alternatives when restricting the comparability to only unopposed strict outranking situations. 
+Our previous \emph{robust} best choice recommendation (\texttt{p2} and \texttt{p4}, see Fig. \ref{fig:19.1}) remains, in this example here, \emph{stable}. We recover indeed the best choice recommendation [\texttt{p2}, \texttt{p4}, \texttt{p7}] (see Listing \ref{list:19.12} Line 6). Yet, notice that decision alternative \texttt{p7} appears to be at the same time a potential \emph{best} as well as a potential \emph{worst} choice recommendation (see Line 13), a consequence of \texttt{p7} being completely \emph{incomparable} to the other decision alternatives when restricting the comparability to only unopposed strict outranking situations. 
 
 We may visualize this kind of Pareto efficientresult in Fig. \ref{fig:19.3} below.
 \begin{lstlisting}

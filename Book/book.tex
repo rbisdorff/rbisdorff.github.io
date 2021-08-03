@@ -90,23 +90,23 @@
 %\makeatother
 
 
-\newcommand{\Condorcet}{{\sc Condorcet}\xspace}
-\newcommand{\Borda}{{\sc Borda}\xspace}    
-\newcommand{\Digraph}{{\sc Digraph3}\xspace}
-\newcommand{\Copeland}{{\sc Copeland}\xspace}
-\newcommand{\NetFlows}{{\sc NetFlows}\xspace}
-\newcommand{\Kendall}{{\sc Kendall}\xspace}
-\newcommand{\Kemeny}{{\sc Kemeny}\xspace}
-\newcommand{\Slater}{{\sc Slater}\xspace}
-\newcommand{\Rubis}{{\sc Rubis}\xspace}
-\newcommand{\Kohler}{{\sc Kohler}\xspace}
-\newcommand{\RankedPairs}{{\sc RankedPairs}\xspace}
 \newcommand{\Berge}{{\sc Berge}\xspace}
-\newcommand{\Pruefer}{{\sc Prüfer}\xspace}
+\newcommand{\Borda}{{\sc Borda}\xspace}    
+\newcommand{\Condorcet}{{\sc Condorcet}\xspace}
+\newcommand{\Copeland}{{\sc Copeland}\xspace}
+\newcommand{\Digraph}{{\sc Digraph3}\xspace}
+\newcommand{\Kemeny}{{\sc Kemeny}\xspace}
+\newcommand{\Kendall}{{\sc Kendall}\xspace}
+\newcommand{\Kohler}{{\sc Kohler}\xspace}
 \newcommand{\Kruskal}{{\sc Kruskal}\xspace}
-\newcommand{\Wilson}{{\sc Wilson}\xspace}
+\newcommand{\NetFlows}{{\sc NetFlows}\xspace}
 \newcommand{\Neumann}{{\sc von Neumann}\xspace}
 \newcommand{\Promethee}{{\sc Promethee}\xspace}
+\newcommand{\Pruefer}{{\sc Prüfer}\xspace}
+\newcommand{\RankedPairs}{{\sc RankedPairs}\xspace}
+\newcommand{\Rubis}{{\sc Rubis}\xspace}
+\newcommand{\Slater}{{\sc Slater}\xspace}
+\newcommand{\Wilson}{{\sc Wilson}\xspace}
 
 \definecolor{LightGray}{rgb}{0.92,0.92,0.92}
 \definecolor{White}{rgb}{1.0,1.0,1.0}
@@ -186,17 +186,13 @@
 \frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{01-frontMatters/dedic}
-%\include{01-frontMatters/foreword}
 \include{01-frontMatters/preface}
-%\include{01-fromtMatters/acknow}
 
 \tableofcontents
 
 %\include{01-frontMatters/acronym}
 
-
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\citeindextrue
 \lstset{style=pythonstyle}
 % \lstset{language=Python,
 %        backgroundcolor=\color{LightGray},
@@ -219,7 +215,6 @@
        
 \include{02-mainMatters/part1}
 \include{02-mainMatters/01-chapterIntroDigraph3}
-\lstset{style=pythonstyle}
 \include{02-mainMatters/02-chapterDigraphs}
 \include{02-mainMatters/03-chapterOutrankingDigraphs}
 
@@ -252,8 +247,6 @@
 \include{02-mainMatters/23-chapterPerfectGraphs}
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\include{03-backMatters/appendix}
-% included in the appendix
 %\bibliographystyle{spbasic}
 %\bibliography{03-backMatters/reference}
 \phantomsection
@@ -261,7 +254,9 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{List of listings}
 \lstlistoflistings
-%\listoffigures
+\phantomsection
+\addcontentsline{toc}{chapter}{List of figures}
+\listoffigures
 \phantomsection
 \addcontentsline{toc}{chapter}{List of tables}
 \listoftables
