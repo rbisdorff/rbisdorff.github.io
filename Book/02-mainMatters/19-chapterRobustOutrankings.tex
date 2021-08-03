@@ -53,20 +53,19 @@ A random example of such a decision problem with equally important decision obje
 \end{lstlisting}
 In Listing~\ref{list:19.1} one may notice a performance tableau \texttt{pt} describing seven decision alternatives that are assessed with respect to three equally important decision objectives concerning: --first, an \emph{economical} aspect (Line 24) with a coalition of three performance criteria of significance weight 8, --secondly, a \emph{societal} aspect (Line 29) with a coalition of two performance criteria of significance weight 12, and --thirdly, an \emph{environmental} aspect (Line 33) with a coalition four performance criteria of significance weight 6.
 
-The question we tackle is the following: How \emph{dependent} on the actual values of the significance weights appears the corresponding bipolar-valued outranking digraph ? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights. In our example we see indeed three increasing weight equivalence classes.
+The question we tackle is the following: How \emph{dependent} on the actual values of the significance weights appears to be the corresponding bipolar-valued outranking digraph ? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights. In our example we see indeed three increasing weight equivalence classes.
 \begin{lstlisting}[caption={The significance weights preorder},label=list:19.2]
 >>> pt.showWeightPreorder()
     ['en3', 'en5', 'en6', 'en9'] (6) <
     ['ec1', 'ec4', 'ec8'] (8) <
     ['so2', 'so7'] (12)
 \end{lstlisting}
-
-How stable appear now the outranking situations when allowing only significance weights that are compatible with this weights preorder shown in Listing~\ref{list:19.2} ?
+How stable appear now to be the outranking situations when allowing all possible significance weights that are compatible with this weights preorder shown in Listing~\ref{list:19.2} ?
 
 \section{Qualifying the stability of outranking situations}
 \label{sec:19.2}
 
-Let us construct the bipolar-valued outranking digraph corresponding to this 3-Objectives performance tableau \texttt{pt}.
+Let us construct the bipolar-valued outranking digraph corresponding to the random 3-Objectives performance tableau \texttt{pt}.
 \begin{lstlisting}[caption={Example Bipolar Outranking Digraph},label=list:19.3]
 >>> from outrankingDigraphs import BipolarOutrankingDigraph
 >>> g = BipolarOutrankingDigraph(pt)
@@ -82,10 +81,10 @@ Let us construct the bipolar-valued outranking digraph corresponding to this 3-O
     'p6' | +0.22  -0.42  +0.00  -1.00  +0.17  +1.00  -0.11  
     'p7' | +0.22  -0.50  +0.17  -0.06  +0.78  +0.42  +1.00  
 \end{lstlisting}
-We notice on the principal diagonal of the relation table the certainly validated reflexive terms +1.00 (see Listing \ref{list:19.3} Lines 7-13). Now, we know for sure that \emph{unanimous} outranking situations are completely independent of the significance weights. Similarly, all outranking situations that are supported by a majority significance in each coalition of equi-significant criteria are also in fact independent of the actual importance we attach to each individual criteria coalition. But we are also able to test if an outranking situation is independent of all the potential significance weights that respect the given preordering of the weights (see Listing \ref{list:19.2}, and \citet{BIS-2014}). Mind that there are, for sure, always outranking situations that are indeed \emph{dependent} on the very values we allocate to the criteria significances.
+In Listing~\ref{list:19.3} Lines 7-13, we notice on the principal diagonal of the relation table the certainly validated reflexive terms $+1.00$ that are trivially independent of any significance weights. Now, we know for sure that \emph{unanimous} outranking situations are also completely independent of the significance weights. And, all outranking situations that are supported by a majority significance in each coalition of equi-significant criteria are as well independent of the actual importance we attach to each individual criteria coalition. We are furthermore able to effectively test if an outranking situation is in fact independent of all the potential significance weights that are compatible with the given preordering of the weights shown in Listing \ref{list:19.2} \citep{BIS-2014}. Mind that usually one also obtains outranking situations that are \emph{dependent} on the precise cardinal weights we allocate to the criteria significances.
 
-Such a stability denotation of outranking situations may be inspected by using the \texttt{StabilityDenotation=True} flag with the common \texttt{showRelationTable()} method.
-\begin{lstlisting}[caption={Relation Table with Stability Denotation},label=list:19.4]
+Such a stability denotation of outranking situations may be inspected by using the \texttt{StabilityDenotation=True} flag \index{StabilityDenotation@\texttt{StabilityDenotation} flag} with the common \texttt{showRelationTable()} method.
+\begin{lstlisting}[caption={Bipolar-valued outranking relation table with stability denotation},label=list:19.4]
 >>> g.showRelationTable(StabilityDenotation=True)
   * ---- Relation Table -----
    r/(stab)  |  'p1'  'p2'  'p3'  'p4'  'p5'  'p6'  'p7'   
@@ -105,23 +104,18 @@ Such a stability denotation of outranking situations may be inspected by using t
      'p7'    | +0.22 -0.50 +0.17 -0.06 +0.78 +0.42 +1.00  
              |  (+2)  (-2)  (+1)  (-1)  (+3)  (+2)  (+4)  
 \end{lstlisting}
-           
-We may thus distinguish the following bipolar-valued stability levels:
-\begin{itemize}[topsep=0pt]
-\item $\mathbf{+4 | -4}$ : \emph{unanimous} outranking, resp. outranked, situation. The pairwise trivial reflexive outrankings, for instance, all show this stability level;
-\item $\mathbf{+3 | -3}$ : validated outranking, resp. outranked, situation in \emph{each} coalition of equisignificant criteria. This is, for instance, the case for the outranking situation observed between alternatives \texttt{p1} and \texttt{p4} (see Listing \ref{list:19.4} Lines 6 and 12);
-\item $\mathbf{+2 | -2}$ : outranking, resp. outranked, situation validated with \emph{all} potential significance weights that are compatible with the given significance preorder (see Listing \ref{list:19.2}). This is case for the comparison of alternatives \texttt{p1} and \texttt{p2}  (see Lines 6 and 8);
-\item $\mathbf{+1 | -1}$ : validated outranking, resp. outranked, situation with the given significance weights, a situation we may observe between alternatives \texttt{p3} and \texttt{p7} (see Lines 10 and 16);
-\item $\mathbf{0}$ : indeterminate relational situation, like the one between alternatives \texttt{p1} and \texttt{p3} (see Lines 6 and 10).
+In Listing~\ref{list:19.4} we may hence distinguish the following bipolar-valued stability levels:
+\begin{itemize}[leftmargin=1.5cm]
+\item [$\mathbf{+4 | -4}$] \emph{unanimous} outranking, resp. outranked, situation. The pairwise trivial reflexive outrankings, for instance, all show this stability level;
+\item [$\mathbf{+3 | -3}$] validated outranking, resp. outranked, situation in \emph{each} coalition of equisignificant criteria. This is, for instance, the case for the outranking situation observed between alternatives \texttt{p1} and \texttt{p4} (see Listing \ref{list:19.4} Lines 6 and 12);
+\item [$\mathbf{+2 | -2}$] outranking, resp. outranked, situation validated with \emph{all} potential significance weights that are compatible with the given significance preorder (see Listing \ref{list:19.2}). This is the case when compariing alternatives \texttt{p1} and \texttt{p2} (see Lines 6 and 8);
+\item [$\mathbf{+1 | -1}$] validated outranking, resp. outranked, situation with the precisely given significance weights, a situation we may observe between alternatives \texttt{p3} and \texttt{p7} (see Lines 10 and 16);
+\item [$\mathbf{0}$] indeterminate outranking situation, like the one between alternatives \texttt{p1} and \texttt{p3} (see Lines 6 and 10).
 \end{itemize}
 
-It is worthwhile noticing that, in the one limit case where all performance criteria appear equi-significant, i.e. there is given a single equivalence class containing all the performance criteria, we may only distinguish stability levels $\pm 4$ and $\pm 3$. Furthermore, when in such a case an outranking (resp. outranked) situation is validated at level $+3$ (resp. $-3$) no potential preordering of the criteria significances exists that could qualify the same situation as outranked (resp. outranking) at level $-2$ (resp. $+2$).
+It is worthwhile noticing that, in the one limit case where all performance criteria appear equi-significant, i.e. there is given a single equivalence class containing all the criteria significance weights, we may only distinguish stability levels $\pm 4$ and $\pm 3$. In the other limit case, when all performance criteria admit different significanceweights, i.e. the significance weights may be linearly ordered without ties, no stability level $+3$ or $-3$ may be observed.
 
-In the other limit case, when all performance criteria admit different significances, i.e. the significance weights may be linearly ordered, no stability level $+3$ or $-3$ may be observed.
-
-As mentioned above, all reflexive comparisons trivially confirm an unanimous outranking situation: all decision alternatives are indeed always``\emph{performing as well as}'' themselves. But there appear also two non reflexive unanimous outranking situations: when comparing, for instance, alternative \texttt{p4} with alternatives \texttt{p5} and \texttt{p6} (see Listing \ref{list:19.4} Lines 14 and 16).
-
-Let us inspect the details of how alternatives \texttt{p4} and \texttt{p5} compare. 
+As mentioned above, all reflexive comparisons trivially confirm an unanimous outranking situation: all decision alternatives are indeed always``\emph{performing as well as}'' themselves. But there appear also two non reflexive unanimous outranking situations: when comparing, for instance, alternative \texttt{p4} with alternatives \texttt{p5} and \texttt{p6} (see Listing \ref{list:19.4} Lines 14 and 16). Let us inspect the details of how alternatives \texttt{p4} and \texttt{p5} compare.
 \begin{lstlisting}
 >>> g.showPairwiseComparison('p4','p5')
  *------------  pairwise comparison ----*
@@ -159,7 +153,7 @@ The converse comparison does not, however, deliver such an unanimous outranked s
   Valuation in range: -72.00 to +72.00;           ------
                              global concordance:  -64.00
 \end{lstlisting}
-This comparison only qualifies at stability level $-3$ (see Listing \ref{list:19.4} Line 13); $r(p5 \succsim p4)\; =\; -64/72\; =\; -0.89$). Indeed, on criterion \texttt{ec8} we observe a small negative performance difference of $-8.71$ (see Line 7 above) which is effectively below the supposed preference discrimination threshold of $10.00$. Yet, the outranked situation is supported by a majority of criteria in each decision objective. Hence, the reported preferential situation is completely independent of any chosen significance weights.
+This comparison only qualifies at stability level $-3$ (see Listing \ref{list:19.4} Line 13); $r(p5 \succsim p4)\; =\; -64/72\; =\; -0.89$). On criterion \texttt{ec8} we observe indeed a small negative performance difference of $-8.71$ (see Line 7 above) which is effectively below the supposed preference discrimination threshold of $10.00$. Yet, the outranked situation is supported by a majority of criteria in each decision objective. Hence, the reported preferential situation is completely independent of any chosen significance weights.
 
 Let us now consider a comparison, like the one between alternatives \texttt{p2} and \texttt{p1}, that is qualified at stability level $+2$, resp. $-2$.
 \begin{lstlisting}[caption={Comparison of alternatives \texttt{p2} and \texttt{p1}},label=list:19.5]
@@ -193,7 +187,7 @@ Let us now consider a comparison, like the one between alternatives \texttt{p2} 
     Valuation in range: -72.00 to +72.00;          -------
                                 global concordance: -30.00
 \end{lstlisting}
-In both comparisons, the performances observed with respect to the environmental decision objective are not validating with a significant majority the otherwise unanimous outranking, resp. outranked situations. Hence, the stability of the reported preferential situations is in fact dependent on choosing significance weights that are compatible with the given significance weights preorder (see Listing \ref{list:19.2}).
+In both comparisons, the performances observed with respect to the environmental decision objective are not validating with a significant majority the outranking, resp. outranked situation. Hence, the stability of the reported preferential situations is in fact dependent on choosing significance weights that are compatible with the given significance weights preorder (see Listing \ref{list:19.2}).
 
 Let us finally inspect a comparison that is only qualified at stability level $+1$, like the one between alternatives \texttt{p7} and \texttt{p3}.
 \begin{lstlisting}[caption={Comparison of alternatives \texttt{p7} and \texttt{p3}},label=list:19.6]
@@ -227,7 +221,7 @@ Let us finally inspect a comparison that is only qualified at stability level $+
   Valuation in range: -72.00 to +72.00;          -------
                               global concordance: +18.00
 \end{lstlisting}
-In both cases, choosing significances that are just compatible with the given weights preorder will not always result in positively validated  outranking situations.
+In both cases, choosing only significances that are compatible with the given weights preorder will not always result in positively validated outranking situations.
 
 \section{Computing the stability denotation of outranking situations}
 \label{sec:19.3}
