@@ -293,12 +293,12 @@ Using this stability denotation, we may, hence, define the following \emph{robus
 \begin{definition}[Robust outranking situation]\label{def:19.1}
 \begin{itemize}
 \item We say that decision alternative \texttt{x} \emph{robustly outranks} decision alternative \texttt{y} when:
-\begin{itemize}
+\begin{itemize}[nosep]
 \item \texttt{x} positively outranks \texttt{y} at stability level $+2$ or higher and
 \item we may not observe any considerable counter-performance of \texttt{x} on a discordant criterion.
 \end{itemize}
 \item Dually, we say that decision alternative \texttt{x} \emph{does not robustly outrank} decision alternative \texttt{y} when:
-\begin{itemize}
+\begin{itemize}[nosep]
 \item \texttt{x} is positively outranked by \texttt{y} at stability level $-2$ or lower and
 \item we may not observe any considerable better performance of \texttt{x} on a discordant criterion.
 \end{itemize}
@@ -344,9 +344,9 @@ The corresponding \emph{robust} outranking digraph may be computed as follows wi
      'p7'   | +0.22 -0.50 +0.00 +0.00 +0.78 +0.42 +1.00  
             |  (+2)  (-2)  (+1)  (-1)  (+3)  (+2)  (+4)  
 \end{lstlisting}
-We may notice that all outranking situations, qualified at stability level $\pm 1$, are now put to an \emph{indeterminate} status. In the example here, we actually drop three positive outrankings: between \texttt{p3} and \texttt{p7}, between \texttt{p7} and \texttt{p3}, and between \texttt{p6} and \texttt{p3}, where the last situation is actually already put to doubt by a veto situation (see Listing \ref{list:19.7} Lines 22-35). We drop as well three negative outrankings: between \texttt{p1} and \texttt{p7}, between \texttt{p4} and \texttt{p2}, and between \texttt{p7} and \texttt{p4} (see Lines 22-35).
+We may notice that all outranking situations, qualified at stability level $\pm 1$, are now put to an \emph{indeterminate} status. In the example here, three positive outrankings get dropped: between \texttt{p3} and \texttt{p7}, between \texttt{p7} and \texttt{p3}, and between \texttt{p6} and \texttt{p3}, where the last situation is actually already doubtful because of a veto situation (see Listing \ref{list:19.7} Lines 22-35). Three negative outrankings get dropped as well: between \texttt{p1} and \texttt{p7}, between \texttt{p4} and \texttt{p2}, and between \texttt{p7} and \texttt{p4} (see Lines 22-35).
 
-Notice by the way that outranking or outranked situations, although qualified at level $\pm 2$ or $\pm 3$ may nevertheless be put to doubt by considerable performance differences. We may observe such an outranking situation when comparing, for instance, alternatives \texttt{p2} and \texttt{p4} (see Listing \ref{list:19.7} Lines 24-25).
+Notice by the way that outranking or outranked situations, although qualified at level $\pm 2$ or $\pm 3$ may nevertheless become doubtful because of considerable performance differences. We may observe such a doubtful situation when comparing, for instance, alternatives \texttt{p2} and \texttt{p4} (see Listing \ref{list:19.7} Lines 24-25).
 \begin{lstlisting}[caption={Comparing alternatives \texttt{p2} and \texttt{p4}},label=list:19.8,basicstyle=\ttfamily\scriptsize]
 >>> rg.showPairwiseComparison('p2','p4')
    *------------  pairwise comparison ----*
@@ -390,15 +390,17 @@ We may finally compare in Fig. \ref{fig:19.1} the \emph{standard} and the \emph{
     covered      :  1.000
 \end{lstlisting}
 \begin{figure}[h]
-%\sidecaption
-\includegraphics[width=12cm]{Figures/robStdStrictOutranking.png}
-\caption{Standard versus robust strict outranking digraphs oriented by their initial and terminal prekernels} 
+  % \sidecaption
+  Standard strict outranking digraph \hfill Robust strict outranking digraph \\
+  \includegraphics[height=6cm]{Figures/stdg.png}\hfill
+  \includegraphics[height=6cm]{Figures/robg.png}
+\caption{\emph{Standard} versus \emph{robust} strict outranking digraphs oriented by their initial and terminal prekernels} 
 \label{fig:19.1}       % Give a unique label
 \end{figure}
    
-The robust version drops two strict outranking situations: between \texttt{p4} and \texttt{p7} and between \texttt{p7} and \texttt{p1}. The remaining 14 strict outranking (resp. outranked) situations are now all verified at a stability level of $+2$ and more (resp. $-2$ and less). They are, hence, only depending on potential significance weights that are compatible with the given significance weights preordering (see Listing \ref{list:19.2}).
+The robust version (right in Fig.~\ref{fig:19.1}) drops two strict outranking situations: between \texttt{p4} and \texttt{p7} and between \texttt{p7} and \texttt{p1}. The remaining 14 strict outranking (resp. outranked) situations are now all verified at a stability level of $+2$ and more (resp. $-2$ and less). They remain stably validated, hence, with all potential significance weights that are compatible with the given significance weights preordering (see Listing~\ref{list:19.2}).
 
-To appreciate the apparent orientation of the standard and robust strict outranking digraphs shown in Fig. \ref{fig:19.1}, let us have a final heat map view in Fig. \ref{fig:19.2} on the underlying performance tableau ordered by the \NetFlows ranking rule applied to the robust outranking digraph (see the \texttt{outrankingModel='this'} flag in Line 4 below).
+To appreciate the apparent partial ordering of both the standard and the robust strict outranking digraphs shown in Fig.~\ref{fig:19.1}, let us have a final heat map view in Fig.~\ref{fig:19.2} on the underlying performance tableau ordered by the \NetFlows ranking rule actually applied to the robust version of the outranking digraph (see the \texttt{outrankingModel='this'} flag in Line 4 below).
 \begin{lstlisting}[caption={Computing a robust performance heatmap view},label=list:19.9]
 >>> rg.showHTMLPerformanceHeatmap(\
 ...           Correlations=True,\
@@ -412,7 +414,7 @@ To appreciate the apparent orientation of the standard and robust strict outrank
 \caption{Robust heatmap of the random 3 objectives performance tableau ordered by the \NetFlows ranking rule.} 
 \label{fig:19.2}       % Give a unique label
 \end{figure}
- As the inital prekernel \{\texttt{p2}, \texttt{p4}\} is in the robust outranking digraph validated at least at stability level $\pm 2$, recommending alternatives \texttt{p4}, as well as \texttt{p2}, as potential best choices, appears well justified. Alternative \texttt{p4} represents indeed an overall \emph{best compromise choice} between all decision objectives, whereas alternative \texttt{p2} gives an unanimous best choice with respect to two out of three decision objectives. Up to the decision maker to make his final choice.
+ As the inital prekernel \{\texttt{p2}, \texttt{p4}\} is in the robust outranking digraph validated at least at stability level $\pm 2$, recommending alternatives \texttt{p4}, as well as \texttt{p2}, as potential best choices, appears robustly justified. Alternative \texttt{p4} represents indeed an overall \emph{best compromise choice} between all decision objectives, whereas alternative \texttt{p2} gives an unanimous best choice with respect to two out of three decision objectives. Up to the decision maker to make his final choice.
 
 \section{Characterising unopposed multiobjective outranking situations}
 \label{sec:19.5}
@@ -479,7 +481,7 @@ We may obtain such unopposed multiobjective outranking situations by operating a
 \end{lstlisting}
 Positive (resp. negative) $r(x \succsim y)$ characteristic values, like $r(p1 \succsim p5) = +0.39$ (see Listing \ref{list:19.9} Line 20), show hence only outranking situations being validated (resp. invalidated) by one or more decision objectives without being invalidated (resp. validated) by any other decision objective.
 
-For easily computing this kind of \emph{unopposed multiobjective} outranking digraphs, the \texttt{outrankingDigraphs} module conveniently provides a corresponding \texttt{UnOpposedBipolarOutrankingDigraph} constructor \index{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph} class}.
+For easily computing this kind of \emph{unopposed multiobjective} outranking digraphs, the \texttt{outrankingDigraphs} module conveniently provides a corresponding\\ \texttt{UnOpposedBipolarOutrankingDigraph} constructor \index{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph} class}.
 \begin{lstlisting}[caption={Computing unopposed outranking digraphs},label=list:19.10]
 >>> from outrankingDigraphs import\
 ...              UnOpposedBipolarOutrankingDigraph
@@ -504,7 +506,7 @@ For easily computing this kind of \emph{unopposed multiobjective} outranking dig
   {'standardSize': 23, 'unopposedSize': 13,
    'oppositeness': 43.47826086956522}			   
 \end{lstlisting}
-The resulting \emph{unopposed} outranking digraph keeps in fact 13 (see Listing \ref{list:19.10} Lines 12-13) out of the 23 positively validated \emph{standard} outranking situations, leading to a degree of \emph{oppositeness} --preferential disagreement between decision objectives-- of $(1.0 - 13/23)\,=\,0.4348$.
+The resulting \emph{unopposed} outranking digraph keeps in fact 13 (see Listing \ref{list:19.10} Lines 20-22) out of the 23 positively validated \emph{standard} outranking situations, leading to a degree of \emph{oppositeness} --preferential disagreement between decision objectives-- of $(1.0 - 13/23)\,=\,0.4348$.
 
 We may now, for instance, verify the unopposed status of the outranking situation observed between alternatives \texttt{p1} and \texttt{p5}.
 \begin{lstlisting}[caption={Example of unopposed multiobjective outranking situation},label=list:19.11]
@@ -533,7 +535,7 @@ This gives way for computing multiobjective \emph{Pareto efficient} choice recom
 \section{Computing Pareto efficient multiobjective choices}
 \label{sec:19.6}
 
-Indeed, best choice recommendations, computed from an \emph{unopposed multiobjective} outranking digraph, will in fact deliver \emph{Pareto efficient} choices. 
+Indeed, best choice recommendations, computed from an \emph{unopposed multiobjective} outranking digraph, deliver the case given \emph{Pareto efficient} choices. 
 \begin{lstlisting}[caption={Pareto efficient multiobjective choice},label=list:19.12]
 >>> uopg.showBestChoiceRecommendation()
   Best choice recommendation(s) (BCR)
