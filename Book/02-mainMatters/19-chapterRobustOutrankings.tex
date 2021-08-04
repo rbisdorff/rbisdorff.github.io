@@ -559,7 +559,7 @@ Indeed, best choice recommendations, computed from an \emph{unopposed multiobjec
 
 Our previous \emph{robust} best choice recommendation (\texttt{p2} and \texttt{p4}, see Fig. \ref{fig:19.1}) remains, in this example here, \emph{stable}. We recover indeed the best choice recommendation [\texttt{p2}, \texttt{p4}, \texttt{p7}] (see Listing \ref{list:19.12} Line 6). Yet, notice that decision alternative \texttt{p7} appears to be at the same time a potential \emph{best} as well as a potential \emph{worst} choice recommendation (see Line 13), a consequence of \texttt{p7} being completely \emph{incomparable} to the other decision alternatives when restricting the comparability to only unopposed strict outranking situations. 
 
-We may visualize this kind of Pareto efficient result in Fig. \ref{fig:19.3} below.
+We may visualize this kind of Pareto efficient result in Fig. \ref{fig:19.3}.
 \begin{lstlisting}
 >>> (~(-uopg)).exportGraphViz(fileName = 'unopDigraph',\
 ...                           bestChoice = ['p2','p4'],\
@@ -577,10 +577,14 @@ We may visualize this kind of Pareto efficient result in Fig. \ref{fig:19.3} bel
 
 In order to make now an eventual best unique choice, a decision maker will necessarily have to weight, in a second stage of the decision aiding process, the relative importance of the individual decision objectives.
 
+In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient best choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously temper plurality tyranny effects. This idea is developped in the following Chapte~\ref{sec:20}.
+
 \vspace{1cm}
 
-For concluding, let us mention that it is precisely again our bipolar-valued logical characteristic framework that provides us here with a first order distributional dominance test for effectively qualifying the stability level $\pm 2$ robustness of an outranking digraph when facing performance tableaux with criteria of only ordinal-valued significances. A real world application of our stability analysis with such a kind of performance tableau may be consulted in \citep{BIS-2015}.
- 
+For concluding, let us mention that it is precisely again our bipolar-valued logical characteristic framework that provides us here with a first order distributional dominance test for effectively qualifying the stability level $\pm 2$ robustness of an outranking digraph when facing performance tableaux with criteria of only ordinal-valued significances. A real world application of our stability analysis with such a kind of performance tableau may be consulted in \citep{BIS-2015bestPoster}.
+
+
+
 %%%%%%% The chapter bibliography
 %\normallatexbib
 \clearpage

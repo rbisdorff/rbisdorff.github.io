@@ -2,26 +2,28 @@
 \label{sec:20}
 
 
-\abstract*{}
+\abstract*{ In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously deliver the primary selection in a two stage election system. Our outranking model is based on bipolar approvals-disapprovals of ``\emph{as well as performing as}'' statements. A similar approach is put into practice with bipolar approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, we obtain a $(-1,0,1)$-valued evaluative voting system. We eventually show that in a bipolar-approval voting system, the winner tends to be among the more or less multipartisan candidates.}
 
 \begin{quotation}\emph{The choice of a voting procedure shapes the democracy in which we live}.\\
     -- \citet*{BAU-2012}.
 \end{quotation}
 \vspace{1cm}
 
-\abstract{}
+\abstract{ In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously deliver the primary selection in a two stage election system. Our outranking model is based on bipolar approvals-disapprovals of ``\emph{as well as performing as}'' statements. A similar approach is put into practice with bipolar approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, we obtain a $(-1,0,1)$-valued evaluative voting system. We eventually show that in a bipolar-approval voting system, the winner tends to be among the more or less multipartisan candidates.}
+
+\paragraph{Introduction}
+
+Tempering plurality tyranny effects is, from the seminal work by B. Roy on \citep{ROY-1966}, achieved in the outranking approach by taking into account considerable negative performance differences that may render doubtful otherwise positive ``\emph{at least as well as performing}'' situations. In the social choice context with general elections, such a polarisation is not feasable as the genuine uninominal voting ballots do not contain a rich enough preferential information. Yet, when matching decision objectives with political parties, the Pareto efficient outranking situations seen in Section~\ref{sec:19.6}, correspond to multipartisan ``\emph{at least as well approved as}'' situtations when pairwisely comparing the eligible candidates. A best choice recommendation based of the corresponding multipartisan strict ``\emph{better approved as}'' situations may, the case given, deliver a convincing primary selection in a two-stage election. 
 
 \section{Two-stage elections with multipartisan primary selection}
 \label{sec:20.1}
 
-In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that could judiciously deliver the primary selection in a two stage election system.
-
-To compute such Pareto efficient social choices we need to, first, convert a given linear voting profile (with polls) into a corresponding performance tableau.
+To compute multipartisan social choices we need to, first, convert a given linear voting profile with pre-election polls into a corresponding performance tableau.
 
 \subsection{Converting voting profiles into performance tableaux}
 \label{sec:20.1.1}
 
-We shall illustrate this point with a voting profile we discussed already in Chapter \ref{sec:7}.
+We shall illustrate this point with a voting profile we discussed already in Chapter~\ref{sec:7}.
 \begin{lstlisting}[caption={Example of a 3 parties voting profile},label=list:20.1]
 >>> from votingProfiles import RandomLinearVotingProfile
 >>> lvp = RandomLinearVotingProfile(numberOfCandidates=15,
@@ -149,7 +151,7 @@ We may visualize the corresponding bipolar-valued relation table by orienting th
 \label{fig:20.1}       % Give a unique label
 \end{figure}
 
-In Fig. \ref{fig:20.1}, we may notice that the dominating outranking prekernel \{\texttt{a06}, \texttt{a11}, \texttt{a13}, \texttt{a15}\} gathers in fact a multipartisan selection of potential election winners. It is worthwhile noticing that in the majority margins obtained from a linear voting profile do verify the zero-sum rule: $\big(\,r(x \succsim y) \,+\, r(y \succsim x) \;=\; 0.0\,\big)$. To each positive outranking situation corresponds indeed an equivalent negative converse situation and the resulting outranking and strict outranking digraphs are the same.
+In Fig.~\ref{fig:20.1}, we may notice that the dominating outranking prekernel \{\texttt{a06}, \texttt{a11}, \texttt{a13}, \texttt{a15}\} gathers in fact a multipartisan selection of potential election winners. It is worthwhile noticing that in the majority margins obtained from a linear voting profile do verify the zero-sum rule: $\big(\,r(x \succsim y) \,+\, r(y \succsim x) \;=\; 0.0\,\big)$. To each positive outranking situation corresponds indeed an equivalent negative converse situation and the resulting outranking and strict outranking digraphs are the same.
 
 \subsection{Secondary election winner determination}
 \label{sec:20.1.3}
@@ -173,9 +175,9 @@ When restricting now, in a secondary election stage, the set of eligible candida
 >>> g2.computeCopelandRanking()
   ['a06', 'a11', 'a13', 'a15']
 \end{lstlisting}
-Candidate \texttt{a06} appears clearly to be the winner of this election. Notice by the way that the restricted pairwise outranking relation shown in Listing \ref{list:20.5} represents a linear ordering of the preselected candidates.
+Candidate \texttt{a06} appears clearly to be the winner of this election. Notice by the way that the restricted pairwise outranking relation shown in Listing~\ref{list:20.5} models a linear ordering of the preselected candidates.
 
-We may eventually check the quality of this best choice by noticing that candidate \texttt{a06} represents indeed the \emph{simple majority}, the \emph{instant-run-off}, the \Borda, as well as the \Condorcet winner of the initially given linear voting profile $lvp$.
+We may eventually check the quality of this best choice by noticing that candidate \texttt{a06} represents indeed the \emph{simple majority}, the \emph{instant-run-off}, the \Borda, as well as the \Condorcet winner of the initially given linear voting profile \texttt{lvp}.
 \begin{lstlisting}
 >>> lvp.computeSimpleMajorityWinner()
   ['a06']
@@ -196,7 +198,7 @@ In our example voting profile here, the multipartisan primary selection stage ap
 
 However, in a very \emph{divisive} two major parties system, like in the US, where preferences of the supporters of one major party appear to be very opposite to the preferences of the supporters of the other major party, the multipartisan outranking digraph will become nearly indeterminate.
 
-In Listing \ref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag \footnote{The \texttt{RandomLinearVotingProfile} constructor provides a \texttt{DivisivePolitics} flag (\emph{False} by default) for generating random linear voting profiles based on a divisive polls strucure.} (see Lines 4 and 13-19). When now converting the voting profile into a performance tableau (Lines 20-21), we may compute the corresponding unopposed outranking digraph.
+In Listing \ref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag \footnote{The \texttt{RandomLinearVotingProfile} constructor provides a \texttt{DivisivePolitics} flag (\emph{False} by default) for generating random linear voting profiles based on a divisive polls strucure.} (see Lines 4 and 13-19 in Listing~\ref{list:20.6}). When now converting the voting profile into a performance tableau (Lines 20-21), we may compute the corresponding unopposed outranking digraph.
 \begin{lstlisting}[caption={A divisive two-party example of a random linear voting profile},label=list:20.6]
 >>> from votingProfiles import RandomLinearVotingProfile		     
 >>> lvp = RandomLinearVotingProfile(\
@@ -226,7 +228,7 @@ In Listing \ref{list:20.6} below we generate such a divisive kind of linear voti
 >>> uodg
   *------- Object instance description ------*
    Instance class : UnOpposedBipolarOutrankingDigraph
-   Instance name  : unopposed_outrankings
+   Instance name  : divisiveExample
    Actions        : 7
    Criteria       : 500
    Size           : 0
@@ -234,7 +236,7 @@ In Listing \ref{list:20.6} below we generate such a divisive kind of linear voti
    Determinateness (%) : 50.00
    Valuation domain    : [-1.00;1.00]
 \end{lstlisting}
-With an oppositeness degree of $100.0\%$ (see Listing \ref{list:20.6} Lines 31-32), the preferential disagreement between the political parties is complete, and the unopposed outranking digraph $uodg$ becomes completely indeterminate as shown in the relation table below.
+With an oppositeness degree of $100.0\%$ (see Listing \ref{list:20.6} Lines 31-32), the preferential disagreement between the political parties is complete, and the unopposed outranking digraph \texttt{uodg} becomes completely indeterminate as shown in the relation table below.
 \begin{lstlisting}
 >>> uodg.showRelationTable(ReflexiveTerms=False)
   * ---- Relation Table -----
@@ -295,7 +297,7 @@ Valuation domain: [-500;+500]
 \end{lstlisting}
 But in our example here, we are lucky. When constructing with the pairwise majority margins digraph (Line 6), a \Condorcet winner, namely \texttt{a3} becomes apparent (Lines 13,20), which is also one of the two \Borda winners (Line 22). More interesting even is to notice that the apparent majority margins digraph models in fact a linear ranking [\texttt{a3}, \texttt{a7}, \texttt{a6}, \texttt{a2}, \texttt{a5}, \texttt{a4}, \texttt{a1}] of all the eligible candidates, as shown with a \Copeland ranking rule (Line 24).
 
-We may eventually visualize in Fig. \ref{fig:20.2} this linear ranking with a graphviz drawing where we drop all transitive arcs (Line 1) and orient the drawing with \Condorcet winner \texttt{a3} and loser \texttt{a1} (Line 2 below).
+We may eventually visualize in Fig.~\ref{fig:20.2} this linear ranking with a graphviz drawing where we drop all transitive arcs (Line 1) and orient the drawing with \Condorcet winner \texttt{a3} and loser \texttt{a1} (Line 2 below).
 \begin{lstlisting}
 >>> cg.closeTransitive(Reverse=True)
 >>> cg.exportGraphViz('divGraph',\
@@ -315,10 +317,12 @@ We may eventually visualize in Fig. \ref{fig:20.2} this linear ranking with a gr
 \section{Bipolar approval voting systems}
 \label{sec:20.2}
 
+Traditionally, most of the voting systems in use in the World, do only collect approval votes and abstentions, dismissing potentially strong disapproval opinions, not to be assimilated to voting abstentions. Collecting both explicit approvals ($+1$) and explicit disapprovals ($-1$) essentially enriches the expression of voters' preferences. 
+
 In the \texttt{votingProfiles} module\index{votingProfiles@\texttt{votingProfiles} module} we provide a \texttt{BipolarApprovalVotingProfile} class\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class} for handling voting results where, for each eligible candidate $c$, the voters are invited  to \emph{approve} ($+1$), \emph{disapprove} ($-1$), or \emph{ignore} ($0$) the statement that candidate $c$ should win the election \citep{BAU-2012}.
 
-File \texttt{bpApVotingProfile.py} contains such a bipolar approval voting profile concerning 100 voters and 15 eligible candidates \footnote{The file \texttt{bpApVotingProfile.py} may be found in the \texttt{examples} directory of the \Digraph resources.}. We may inspect its content as follows.
-\begin{lstlisting}
+File \texttt{bpApVotingProfile.py} contains an example of such a bipolar approval voting profile concerning 100 voters and 15 eligible candidates \footnote{The file \texttt{bpApVotingProfile.py} may be found in the \texttt{examples} directory of the \Digraph resources.}. We may inspect its content as follows.\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class}
+\begin{lstlisting}[caption={Bipolar approval vonting profiles},label=list:20.9]
 >>> from votingProfiles import \
 ...                 BipolarApprovalVotingProfile
 >>> bavp = BipolarApprovalVotingProfile('bpApVotingProfile')
@@ -332,7 +336,7 @@ File \texttt{bpApVotingProfile.py} contains such a bipolar approval voting profi
                  'approvalBallot', 'netApprovalScores',
                  'ballot']
 \end{lstlisting}
-Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Line 11 above the \texttt{approvalBallot} attribute which gathers bipolar approval votes. Its content is the following.
+Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Listing~\ref{list:20.9} Line 11 above the \texttt{approvalBallot} attribute which gathers bipolar approval votes. Its content is the following.
 \begin{lstlisting}[caption={Inspecting a bipolar approval ballot},label=list:20.9]
 >>> bavp.approvalBallot
   {'v001':
@@ -357,7 +361,7 @@ Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Li
      }
     }
 \end{lstlisting}	
-Let us denote $A_v$ the set of candidates approved by voter $v$. In the \texttt{approvalBallot} attribute we hence record in fact the bipolar-valued truth characteristic values $r(c \in A_v)$ of the statements that candidate $c$ \emph{is approved} by voter $v$. In Listing \ref{list:20.9} Line 5, we observe for instance that voter \texttt{v001} positively approves candidate \texttt{a04}. And, in Line 10, we see that voter \texttt{v002} negatively approves, i.e. positively disapproves candidate \texttt{a01}.
+Let us denote $A_v$ the set of candidates approved by voter $v$. In the \texttt{approvalBallot} attribute we hence record in fact the bipolar-valued truth characteristic values $r(C \in A_v)$ of the statements that candidate $C$ \emph{is approved} by voter $v$. In Listing \ref{list:20.9} Line 5, we observe for instance that voter \texttt{v001} positively approves candidate \texttt{a04}. And, in Line 10, we see that voter \texttt{v002} negatively approves, i.e. positively disapproves candidate \texttt{a01}.
 
 We may now consult with the \texttt{showApprovalResults()} method\index{showApprovalResults@\texttt{showApprovalResults()}} and the \texttt{showDisapprovalResults()} method\index{showDisapprovalResults@\texttt{showDisapprovalResults()}} how many approvals or disapprovals each candidate receives.
 \begin{lstlisting}
