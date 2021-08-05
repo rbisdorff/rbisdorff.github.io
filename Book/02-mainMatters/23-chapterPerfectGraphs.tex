@@ -1,9 +1,9 @@
 \chapter{About split, interval and permutation graphs}
 \label{sec:23}
 
-\abstract*{ The last Chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, triangulated, interval, permutation and split graphs. We first present an example of a graph which is at the same time a triangulated, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognize that a given graph is in fact a permutation graph.}
+\abstract*{ The last chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, triangulated, interval, permutation and split graphs. We first generate a random graph instance which models at the same time a triangulated, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognize that a given graph is in fact a permutation graph.}
 
-\abstract{ The last Chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, triangulated, interval, permutation and split graphs. We first present an example of a graph which is at the same time a triangulated, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognize that a given graph is in fact a permutation graph.}
+\abstract{ The last chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, triangulated, interval, permutation and split graphs. We first present an example of a graph which is at the same time a triangulated, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognize that a given graph is in fact a permutation graph.}
 
 \section{A multiply perfect graph}
 \label{sec:23.1}
@@ -11,7 +11,7 @@
 \begin{definition}[Perfect graph classes]
 
 \noindent Following Martin Golumbic (see \citet[p. 149]{GOL-2004}), we call a given graph \texttt{g}:
-\begin{itemize}[nosep]
+\begin{itemize}
 \item \emph{Comparability} graph when \texttt{g}  is \emph{transitively orientable};\index{comparability graph}
 \item \emph{Triangulated} graph when \texttt{g} does not contain any \emph{chordless cycle} of length 4 and more;\index{triangulated graph}
 \item \emph{Interval} graph when \texttt{g} is \emph{triangulated} and its dual \texttt{-g} is a \emph{comparability} graph;\index{comparability graph}
@@ -41,7 +41,7 @@ To illustrate these \emph{perfect} graph classes, we will generate from 8 interv
   [(2,7), (2,7), (5,6), (6,8), (1,8), (1,1), (4,7), (0,10)]
 \end{lstlisting}
 
-With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \emph{perfect graph}, which is \emph{conjointly} a \emph{triangulated}, a \emph{comparability}, a \emph{split} and a \emph{permutation} graph (see Listing \ref{list:23.1} Lines 6, 10, 14).
+With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \emph{perfect graph}, which is \emph{conjointly} a \emph{triangulated}, a \emph{comparability}, a \emph{split} and a \emph{permutation} graph (see Listing \ref{list:23.1} Lines 6, 10, 14).\index{isPerfectGraph@\texttt{isPerfectGraph()}}\index{isSpliGraph@\texttt{isSplitGraph()}}\index{isIntervalGraph@\texttt{isIntervalGraph()}}\index{isPermutationGraph@\texttt{isPermutationGraph()}}
 \begin{lstlisting}[caption={Testing perfect graph categories.},label=list:23.1,basicstyle=\ttfamily\scriptsize]
 >>> g.isPerfectGraph(Comments=True)
   Graph randIntervalIntersections is perfect !
@@ -157,7 +157,7 @@ From graph theory we know that time interval intersections graphs must in fact b
 \end{lstlisting}
 We see in the Listing above three intersection cycles of length 4, which is impossible to occur on the linear time line. Obviously one professor lied!
 
-And it is \emph{Desmond}. If we put to doubt his testimony that he saw \emph{Abe} (see Line 1 below), we obtain indeed a triangulated graph instance whose dual is a comparability graph.
+And it is \emph{Desmond}. If we put to doubt his testimony that he saw \emph{Abe} (see Line 1 below), we obtain indeed a triangulated graph instance whose dual is a comparability graph.\index{setEdgeValue@\texttt{setEdgeValue()}}
 \begin{lstlisting}
 >>> g.setEdgeValue( ('D','A'), 0)
 >>> g.showShort()
@@ -191,7 +191,7 @@ And it is \emph{Desmond}. If we put to doubt his testimony that he saw \emph{Abe
 \section{Generating permutation graphs}
 \label{sec:23.3}
 
-A graph is called a \emph{permutation} or \emph{inversion} graph if there exists a permutation of its list of vertices such that the graph is isomorphic to the inversions operated by the permutation in this list (see \citet[Chapter 7, pp 157-170]{GOL-2004}). This kind is also part of the class of perfect graphs.
+A graph is called a \emph{permutation} or \emph{inversion} graph if there exists a permutation of its list of vertices such that the graph is isomorphic to the inversions operated by the permutation in this list (see \citet[Chapter 7, pp 157-170]{GOL-2004}). This kind is also part of the class of perfect graphs.\index{PermutationGraph@\texttt{PermutationGraph} class}
 \begin{lstlisting}
 >>> from graphs import PermutationGraph
 >>> g = PermutationGraph(permutation = [4,3,6,1,5,2])
@@ -244,7 +244,7 @@ By using color sorting queues, the minimal vertex coloring for a permutation gra
 \label{fig:23.5}       % Give a unique label
 \end{figure}
 
-The correspondingly colored \emph{matching diagram} of the nine inversions --the actual edges of the permutation graph--, which are induced by the given [4,3,6,1,5,2] permutation, may as well be drawn with the graphviz \texttt{neato} layout and explicitly positioned horizontal lists of vertices (see Fig. \ref{fig:23.6}).
+The correspondingly colored \emph{matching diagram} of the nine inversions --the actual edges of the permutation graph--, which are induced by the given [4,3,6,1,5,2] permutation, may as well be drawn with the graphviz \texttt{neato} layout and explicitly positioned horizontal lists of vertices (see Fig. \ref{fig:23.6}).\index{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}}
 \begin{lstlisting}
 >>> g.exportPermutationGraphViz(\
 ...                    WithEdgeColoring=True)
@@ -260,7 +260,7 @@ The correspondingly colored \emph{matching diagram} of the nine inversions --the
 \label{fig:23.6}       % Give a unique label
 \end{figure}
 
-As mentioned before, a permutation graph and its dual are \emph{transitively orientable}. The \texttt{transitiveOrientation()} method\index{transitiveOrientation@\texttt{transitiveOrientation()}} constructs from a given permutation graph a digraph where each edge of the permutation graph is converted into an arc oriented in increasing alphabetic order of the adjacent vertices' keys (see \citet{GOL-2004}). This orientation of the edges of a permutation graph is always transitive and delivers a \emph{transitive ordering} of the vertices.
+As mentioned before, a permutation graph and its dual are \emph{transitively orientable}. The \texttt{transitiveOrientation()} method\index{transitiveOrientation@\texttt{transitiveOrientation()}} constructs from a given permutation graph a digraph where each edge of the permutation graph is converted into an arc oriented in increasing alphabetic order of the adjacent vertices' keys (see \citet{GOL-2004}). This orientation of the edges of a permutation graph is always transitive and delivers a \emph{transitive ordering} of the vertices.\index{transitiveOrientation@\texttt{transitiveOrientation()}}
 \begin{lstlisting}
 >>> dg = g.transitiveOrientation()
 >>> dg

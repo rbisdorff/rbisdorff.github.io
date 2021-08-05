@@ -3,10 +3,11 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 02-mainMatters/22-chapterTreeGraphs.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
+Warning--I didn't find a database entry for "JPB-1991"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 2 entries,
             3270 wiz_defined-function locations,
-            680 strings with 5156 characters,
+            682 strings with 5172 characters,
 and the built_in function-call counts, 1875 in all, are:
 = -- 200
 > -- 30
@@ -45,3 +46,4 @@ warning$ -- 0
 while$ -- 12
 width$ -- 0
 write$ -- 31
+(There was 1 warning)

@@ -171,16 +171,34 @@
 \indexentry{readPerrinMisset@\texttt{readPerrinMisset()}|hyperpage}{327}
 \indexentry{automorphismGenerators@\texttt{automorphismGenerators()}|hyperpage}{327}
 \indexentry{dreadnaut@\texttt{dreadnaut} shell command|hyperpage}{327}
-\indexentry{comparability graph|hyperpage}{341}
-\indexentry{triangulated graph|hyperpage}{341}
-\indexentry{comparability graph|hyperpage}{341}
-\indexentry{permutation graph|hyperpage}{341}
-\indexentry{split graph|hyperpage}{341}
-\indexentry{RandomIntervalIntersectionsGraph@\texttt{RandomIntervalIntersectionsGraph} class|hyperpage}{341}
-\indexentry{computeChordlessCycles@\emph{computeChordlessCycles()}|hyperpage}{345}
-\indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{347}
-\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{348}
-\indexentry{isComparabilityGraph@\texttt{isComparabilityGraph()}|hyperpage}{350}
-\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOrientedDigraph()}|hyperpage}{352}
-\indexentry{computeCopelandRanking@\texttt{computeCopelandRanking()}|hyperpage}{353}
-\indexentry{computePermutation@\texttt{computePermutation()}|hyperpage}{353}
+\indexentry{RandomTree@\texttt{RandomTree} class|hyperpage}{331}
+\indexentry{isTree@\texttt{isTree()}|hyperpage}{334}
+\indexentry{tree2Pruefer@\texttt{tree2Pruefer()}|hyperpage}{335}
+\indexentry{TreeGraph@\texttt{TreeGraph()}|hyperpage}{335}
+\indexentry{computeGraphCentres@\texttt{computeGraphCentres()}|hyperpage}{335}
+\indexentry{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}|hyperpage}{335}
+\indexentry{RandomSpanningTree@\texttt{RandomSpanningTree} class|hyperpage}{336}
+\indexentry{RandomSpanningForest@\texttt{RandomSpanningForest} class|hyperpage}{336}
+\indexentry{RandomValuationGraph@\texttt{RandomValuationGraph} class|hyperpage}{337}
+\indexentry{BestDeterminedSpanningForest@\texttt{BestDeterminedSpanningForest} class|hyperpage}{338}
+\indexentry{comparability graph|hyperpage}{343}
+\indexentry{triangulated graph|hyperpage}{343}
+\indexentry{comparability graph|hyperpage}{343}
+\indexentry{permutation graph|hyperpage}{343}
+\indexentry{split graph|hyperpage}{343}
+\indexentry{RandomIntervalIntersectionsGraph@\texttt{RandomIntervalIntersectionsGraph} class|hyperpage}{343}
+\indexentry{isPerfectGraph@\texttt{isPerfectGraph()}|hyperpage}{344}
+\indexentry{isSpliGraph@\texttt{isSplitGraph()}|hyperpage}{344}
+\indexentry{isIntervalGraph@\texttt{isIntervalGraph()}|hyperpage}{344}
+\indexentry{isPermutationGraph@\texttt{isPermutationGraph()}|hyperpage}{344}
+\indexentry{computeChordlessCycles@\emph{computeChordlessCycles()}|hyperpage}{347}
+\indexentry{setEdgeValue@\texttt{setEdgeValue()}|hyperpage}{347}
+\indexentry{PermutationGraph@\texttt{PermutationGraph} class|hyperpage}{348}
+\indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{349}
+\indexentry{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}|hyperpage}{350}
+\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{350}
+\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{351}
+\indexentry{isComparabilityGraph@\texttt{isComparabilityGraph()}|hyperpage}{352}
+\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOrientedDigraph()}|hyperpage}{354}
+\indexentry{computeCopelandRanking@\texttt{computeCopelandRanking()}|hyperpage}{355}
+\indexentry{computePermutation@\texttt{computePermutation()}|hyperpage}{355}
