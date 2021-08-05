@@ -1,25 +1,28 @@
 \chapter{Working with undirected graphs}
 \label{sec:21}
 
-\abstract*{}
+\abstract*{ The chapter illustrates several special graph models and methods like q-coloring, MIS and clique enumeration, line graphs and maximal matchings, grid graphs and the Ising model, and $n$-cycle graphs and their non-isomorphic MISs.}
 
-\abstract{}
+\abstract{ The chapter illustrates several special graph models and methods like q-coloring, MIS and clique enumeration, line graphs and maximal matchings, grid graphs and the Ising model, and $n$-cycle graphs and their non-isomorphic MISs.}
 
 \section{Implementing simple graphs}
 \label{sec:21.1}
 
-In the \Digraph {\tt graphs} module, the root \texttt{Graph} class provides a generic simple graph model, without loops and multiple links. A given object of this class contains at least the following attributes in:
+In the \Digraph {\tt graphs} module\index{graphs@\texttt{graphs} module}, the root \texttt{Graph} class \index{Graph@\texttt{Graph} class} provides a generic simple graph model, without loops and multiple links. A given object of this class contains at least the following attributes:
 \begin{enumerate}
+\item \texttt{name}: usually the name of the stored instance.
 \item \texttt{vertices}: a dictionary of vertices with \texttt{name} and \texttt{shortName} attributes,
-\item \texttt{edges} : a dictionary with \emph{frozensets} \footnote{\href{https://docs.python.org/3.9/library/stdtypes.html?highlight=frozenset\#frozenset}{Python documentation}} of pairs of vertices as entries carrying a characteristic value in the range of the previous valuation domain,
+\item \texttt{order}: the number of vertices,
 \item \texttt{valuationDomain}: a dictionary with three entries: the minimum ($-1$, means certainly no link), the median ($0$, means missing information) and the maximum characteristic value ($+1$, means certainly a link),
+\item \texttt{edges} : a dictionary with \emph{frozensets} \footnote{\href{https://docs.python.org/3.9/library/stdtypes.html?highlight=frozenset\#frozenset}{Python documentation}} of pairs of vertices as entries carrying a characteristic value in the range of the previous valuation domain,
+\item size: the number of g
 \item \texttt{gamma}: a dictionary containing the direct neighbors of each vertex, automatically added by the object constructor.
 \end{enumerate}
 
-Example Python3 session:
-\begin{lstlisting}
->>> from graphs import Graph
->>> g = Graph(numberOfVertices=7,edgeProbability=0.5)
+\noindent Example Python3 session:
+\begin{lstlisting}[caption={Generating a randm graph instance},label=list:21.1]
+>>> from graphs import RandomGraph
+>>> g = RandomGraph(order=7,edgeProbability=0.5)
 >>> g.save(fileName='tutorialGraph')
 \end{lstlisting}
 
@@ -61,8 +64,8 @@ The saved \texttt{Graph} instance named \texttt{tutorialGraph.py} is encoded as 
     }
 \end{lstlisting}
 
-The stored graph can be reloaded and plotted with the generic \\
-\texttt{exportGraphViz()} Footnote[1] method as follows:
+The stored graph instance may be reloaded and plotted with the generic
+\texttt{export\-GraphViz()} method as follows:
 \begin{lstlisting}
 >>> g = Graph('tutorialGraph')
 >>> g.exportGraphViz()
@@ -71,9 +74,9 @@ The stored graph can be reloaded and plotted with the generic \\
    fdp -Tpng tutorialGraph.dot -o tutorialGraph.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=7cm]{Figures/tutorialGraph.png}
-\caption{Example simple graph instance} 
+\sidecaption[t]
+\includegraphics[width=7cm]{Figures/tutorialGraph.pdf}
+\caption{Example simple graph instance.} 
 \label{fig:21.1}       % Give a unique label
 \end{figure}
 
@@ -98,7 +101,7 @@ Properties, like the gamma function and vertex degrees and neighbourhood depths 
    distribution :  [0, 0, 1, 4, 2, 0, 0, 0]
 \end{lstlisting}
 
-A \texttt{Graph} instance corresponds bijectively to a symmetric \texttt{Digraph} instance and we may easily convert from one to the other with the \texttt{graph2Digraph()}, and vice versa with the \texttt{digraph2Graph()} method. Thus, all computing resources of the \texttt{Digraph} class, suitable for symmetric digraphs, become readily available, and vice versa.
+A \texttt{Graph} instance corresponds bijectively to a symmetric \texttt{Digraph} instance and we may easily convert from one to the other with the \texttt{graph2Digraph()}\index{graph2Digraph@\texttt{graph2Digraph()}}, and vice versa with the \texttt{digraph2Graph()} method.\index{digraph2Graph@\texttt{digraph2Graph()}} Thus, all computing resources of the \texttt{Digraph} class, suitable for symmetric digraphs, become readily available, and vice versa.
 \begin{lstlisting}
 >>> dg = g.graph2Digraph()
 >>> dg.showRelationTable(ndigits=0,ReflexiveTerms=False)
@@ -113,29 +116,23 @@ A \texttt{Graph} instance corresponds bijectively to a symmetric \texttt{Digraph
   'v6' |   -1     1    -1    -1     1     -    -1	 
   'v7' |   -1    -1    -1     1    -1    -1     -
 >>> g1 = dg.digraph2Graph()
->>> g1.showShort()
-  *---- short description of the graph ----*
-   Name         : 'tutorialGraph'
-   Vertices     :  ['v1','v2','v3','v4','v5','v6','v7']
-   Valuation domain :   {'med': 0, 'min': -1, 'max': 1}
-   Gamma function   : 
-    v1 -> ['v5']
-    v2 -> ['v3', 'v6', 'v4']
-    v3 -> ['v2']
-    v4 -> ['v5', 'v7', 'v2']
-    v5 -> ['v6', 'v1', 'v4']
-    v6 -> ['v5', 'v2']
-    v7 -> ['v4']
-   degrees      :  [0, 1, 2, 3, 4, 5, 6]
-   distribution :  [0, 3, 1, 3, 0, 0, 0]
-   nbh depths   :  [0, 1, 2, 3, 4, 5, 6, 'inf.']
-   distribution :  [0, 0, 1, 4, 2, 0, 0, 0]
+>>> g1
+  *------- Digraph instance description ------*
+   Instance class      : Digraph
+   Instance name       : tutorialGraph
+   Digraph Order       : 7
+   Digraph Size        : 14
+   Valuation domain    : [-1.00;1.00]
+   Determinateness (%) : 100.00
+   Attributes          : ['name', 'order', 'actions',
+                          'valuationdomain', 'relation',
+                          'gamma', 'notGamma']
 \end{lstlisting}
 
 \section{q-coloring of a graph}
 \label{25.2}
 
-A 3-coloring of the tutorial graph $g$ may for instance be computed and plotted with the \texttt{Q\_Coloring} class as follows.
+With the \texttt{Q\_Coloring} class\index{Q\_Coloring@\texttt{Q\_Coloring} class}, a 3-coloring of the tutorial graph \texttt{g} may for instance be computed with a Gibbs sampler\index{Gibbs sampler} and plotted as follows.
 \begin{lstlisting}
 >>> from graphs import Q_Coloring
 >>> qc = Q_Coloring(g)
@@ -155,13 +152,6 @@ A 3-coloring of the tutorial graph $g$ may for instance be computed and plotted 
    fdp -Tpng tutorial-3-coloring.dot\
                     -o tutorial-3-coloring.png
 \end{lstlisting}
-\begin{figure}[h]
-\sidecaption
-\includegraphics[width=7cm]{Figures/tutorial-3-coloring.png}
-\caption{3-Coloring of the tutorial graph} 
-\label{fig:21.2}       % Give a unique label
-\end{figure}
-
 Actually, with the given tutorial graph instance, a 2-coloring is already feasible.
 \begin{lstlisting}
 >>> qc = Q_Coloring(g,colors=['gold','coral'])
@@ -181,16 +171,17 @@ Actually, with the given tutorial graph instance, a 2-coloring is already feasib
                     -o tutorial-2-coloring.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=7cm]{Figures/tutorial-2-coloring.png}
-\caption{3-Coloring of the tutorial graph} 
-\label{fig:21.3}       % Give a unique label
+\sidecaption[t]
+\includegraphics[width=6cm]{Figures/tutorial-3-coloring.pdf}\hfill
+\includegraphics[width=6cm]{Figures/tutorial-2-coloring.pdf}
+\caption{3-Coloring and 2-Coloring of the tutorial graph.} 
+\label{fig:21.2}       % Give a unique label
 \end{figure}
 
 \section{MIS and clique enumeration}
 \label{sec:21.3}
 
-2-colorings define independent sets of vertices that are maximal in cardinality. Computing such MISs in a given \texttt{Graph} instance may be achieved by the \texttt{showMIS} method.
+2-colorings define independent sets of vertices that are maximal in cardinality. Computing such MISs in a given \texttt{Graph} instance may be achieved by the \texttt{showMIS} method \index{showMIS@\texttt{showMIS()}}.
 \begin{lstlisting}
 >>> g = Graph('tutorialGraph')
 >>> g.showMIS()
@@ -214,7 +205,7 @@ Actually, with the given tutorial graph instance, a 2-coloring is already feasib
      frozenset({'v1', 'v6', 'v4', 'v3'})]
 \end{lstlisting}
 
-A MIS in the dual of a graph instance $g$, corresponds to a maximal \emph{clique}, i.e. a maximal complete subgraph in $g$. Maximal cliques may be directly enumerated with the \texttt{showCliques()} method.
+A MIS in the dual \texttt{-g} of a graph instance \texttt{g}, corresponds to a maximal \emph{clique}, i.e. a maximal complete subgraph in \texttt{g}. Maximal cliques may be directly enumerated with the \texttt{showCliques()} method.\index{showCliques@\texttt{showCliques()}}
 \begin{lstlisting}
 >>> g.showCliques()
   *---  Maximal Cliques ---*
@@ -241,7 +232,7 @@ A MIS in the dual of a graph instance $g$, corresponds to a maximal \emph{clique
 \section{Line graphs and maximal matchings}
 \label{sec:21.4}
 
-The \texttt{graphs} module also provides a \texttt{LineGraph} constructor. A \emph{line graph} represents the adjacencies between edges of the given graph instance. We may compute for instance the line graph of the 5-cycle graph.
+The \texttt{graphs} module also provides a \texttt{LineGraph}\index{LineGraph@\texttt{LineGraph} class} constructor. A \emph{line graph} represents the adjacencies between edges of the given graph instance. We may compute for instance the line graph of the 5-cycle graph.
 \begin{lstlisting}
 >>> from graphs import CycleGraph, LineGraph
 >>> g = CycleGraph(order=5)
@@ -294,7 +285,7 @@ The \texttt{graphs} module also provides a \texttt{LineGraph} constructor. A \em
 Iterated line graph constructions are usually expanding, except for chordless cycles, where the same cycle is repeated, and for non-closed paths, where iterated line graphs progressively reduce one by one the number of vertices and edges and become eventually an empty graph.
 
 Notice that the MISs in the line graph provide \emph{maximal matchings} --maximal sets of independent edges-- of the original graph.
-\begin{lstlisting}[basicstyle=\scriptsize]
+\begin{lstlisting}[caption={Generating the 8-cycle graph.},label=list:21.6,basicstyle=\ttfamily\scriptsize]
 >>> c8 = CycleGraph(order=8)
 >>> lc8 = LineGraph(c8)
 >>> lc8.showMIS()
@@ -317,7 +308,7 @@ Notice that the MISs in the line graph provide \emph{maximal matchings} --maxima
     freq.:  [0, 0, 0, 8, 2, 0, 0, 0, 0]
     execution time: 0.00029 sec.
 \end{lstlisting}
-The two last MISs of cardinality 4 (see Lines 13-16 above) give isomorphic perfect maximum matchings of the 8-cycle graph. Every vertex of the cycle is adjacent to a matching edge. Odd cycle graphs do not admit any perfect matching.
+The two last MISs of cardinality 4 (see Lines 13-16 in Listing~\ref{list:21.6} above) give isomorphic perfect maximum matchings of the 8-cycle graph. Every vertex of the cycle is adjacent to a matching edge. Odd cycle graphs do not admit any perfect matching.
 \begin{lstlisting}
 >>> maxMatching = c8.computeMaximumMatching()
 >>> c8.exportGraphViz(fileName='maxMatchingcycleGraph',\
@@ -332,16 +323,16 @@ The two last MISs of cardinality 4 (see Lines 13-16 above) give isomorphic perfe
                   -o maxMatchingcyleGraph.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=7cm]{Figures/maxMatchingcycleGraph.png}
-\caption{A perfect maximum matching of the 8-cycle graph} 
-\label{fig:21.4}       % Give a unique label
+\sidecaption[t]
+\includegraphics[width=7cm]{Figures/maxMatchingcycleGraph.pdf}
+\caption{A perfect maximum matching of the 8-cycle graph.} 
+\label{fig:21.3}       % Give a unique label
 \end{figure}
 	    
 \section{Grids and the Ising model}
 \label{sec:21.5}
 
-Special classes of graphs, like $n \times m$ rectangular or triangular grids (\texttt{GridGraph} and \texttt{IsingModel}) are available from the \texttt{graphs} module. For instance, we may use a \emph{Gibbs} sampler again for simulating an \emph{Ising Model} on such a grid.
+Special classes of graphs, like $n \times m$ rectangular or triangular grids (\texttt{GridGraph}\index{GridGraph@\texttt{GridGraph} class} and \texttt{IsingModel}\index{IsingModel@\texttt{IsingModel} class}) are available from the \texttt{graphs} module. For instance, we may use a \emph{Gibbs} sampler again for simulating an \emph{Ising Model} on such a grid.
 \begin{lstlisting}
 >>> from graphs import GridGraph, IsingModel
 >>> g = GridGraph(n=15,m=15)
@@ -351,7 +342,7 @@ Special classes of graphs, like $n \times m$ rectangular or triangular grids (\t
    n             :  6
    m             :  6
    order         :  36
->>> im = IsingModel(g,beta=0.3,nSim=100000,Debug=False)
+>>> im = IsingModel(g,beta=0.3,nSim=100000)
   Running a Gibbs Sampler for 100000 step !
 >>> im.exportGraphViz(colors=['lightblue','lightcoral'])
   *---- exporting a dot file for GraphViz tools ---------*
@@ -360,15 +351,15 @@ Special classes of graphs, like $n \times m$ rectangular or triangular grids (\t
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption
-\includegraphics[width=11cm]{Figures/grid-15-15-ising.png}
-\caption{Ising model of the 15x15 grid graph} 
-\label{fig:21.5}       % Give a unique label
+\includegraphics[width=11cm]{Figures/grid-15-15-ising.pdf}
+\caption{Ising model of the 15x15 grid graph.} 
+\label{fig:21.4}       % Give a unique label
 \end{figure}
 
 \section{Simulating Metropolis random walks}
 \label{sec:21.6}
 
-Finally, we provide the \texttt{MetropolisChain} class, a specialization of the \texttt{Graph} class, for implementing a generic \emph{Metropolis} Monte Carlo Markov Chain (MCMC) sampler for simulating random walks on a given graph $g$:
+Finally, we provide the \texttt{MetropolisChain} class, a specialization of the \texttt{Graph} class, for implementing a generic \emph{Metropolis} Monte Carlo Markov Chain (MCMC) sampler for simulating random walks on a given graph \texttt{g}:
 \begin{lstlisting}
 >>> from graphs import Graph
 >>> g = Graph(numberOfVertices=5,edgeProbability=0.5)
@@ -384,19 +375,21 @@ Finally, we provide the \texttt{MetropolisChain} class, a specialization of the 
     v4 -> ['v2', 'v5', 'v1']
     v5 -> ['v3', 'v4']
 \end{lstlisting}
-following a given probability $probs$ = \{‘v1’: $x$, ‘v2’: $y$, ...\} for visiting each vertex:
+following a given probability \texttt{probs} = \{\texttt{'v1'}’: $x$, \texttt{'v2'}: $y$, ...\} for visiting each vertex:
 \begin{lstlisting}
->>> probs = {}  # initialize a potential stationary probability vector 
->>> n = g.order # for instance: probs[v_i] = n-i/Sum(1:n) for i in 1:n
->>> i = 0
+>>>  # initialize a potential stationary probability vector 
+>>>  # for instance: probs[v_i] = n-i/Sum(1:n) for i in 1:n
+>>>  # where n = g.order
 >>> verticesList = [x for x in g.vertices]
 >>> verticesList.sort()
+>>> n = g.order
+>>> i = 0
 >>> for v in verticesList:
 ...     probs[v] = (n - i)/(n*(n+1)/2)
 ...     i += 1
 \end{lstlisting}
 
-The \texttt{checkSampling()} method of the the \texttt{MetropolisChain} class (see below) generates a random walk of $nSim = 30000$ steps on the given graph and records by the way the observed relative frequency with which each vertex is passed by:
+The \texttt{checkSampling()} method \index{checkSampling@\texttt{checkSampling()}} of the the \texttt{MetropolisChain} class\index{MetropolisChain@\texttt{MetropolisChain} class} (see below) generates a random walk of $nSim = 30000$ steps on the given graph and records by the way the observed relative frequency with which each vertex is passed by:
 \begin{lstlisting}
 >>> from graphs import MetropolisChain     
 >>> met = MetropolisChain(g,probs)
@@ -409,7 +402,7 @@ The \texttt{checkSampling()} method of the the \texttt{MetropolisChain} class (s
     v4 0.1333 0.1311
     v5 0.0666 0.0635
 \end{lstlisting}
-  In this example, the stationary transition probability distribution (see Listing above), shown by the \texttt{showTransitionMatrix()} method below is quite adequately simulated.
+  In this example, the stationary transition probability distribution (see Listing above), shown by the \texttt{showTransitionMatrix()} method\index{showTransitionMatrix@\texttt{showTransitionMatrix()}} below is quite adequately simulated.
 \begin{lstlisting}
 >>> met.showTransitionMatrix()
   * ---- Transition Matrix -----
@@ -422,13 +415,13 @@ The \texttt{checkSampling()} method of the the \texttt{MetropolisChain} class (s
     'v5' |  0.00   0.00    0.50    0.50    0.00
 \end{lstlisting}
 
-For the reader interested in algorithmic applications of Markov Chains we may recommend consulting O. Häggström's 2002 book: \citep{FMCAA}.
+For the reader interested in algorithmic applications of Markov Chains we may recommend consulting \citet{FMCAA}.
 
 %%%%%%%%%
 \section{Computing the non isomorphic MISs of the n-cycle graph}
 \label{sec:21.7}
 
-Due to the public success of our common 2008 publication with Jean-Luc Marichal \citep{ISOMIS-08} , we present in this chapter an example Python session for computing the non isomorphic maximal independent sets (MISs) from the 12-cycle graph, i.e. a \texttt{CirculantDigraph} class instance of order 12 and symmetric circulants $1$ and $-1$.
+Due to the public success of our common 2008 publication with Jean-Luc Marichal \citep{ISOMIS-08} , we present in this chapter an example Python session for computing the non isomorphic maximal independent sets (MISs) from the 12-cycle graph, i.e. a \texttt{CirculantDigraph} class\index{CirculantDigraph@\texttt{CirculantDigraph} class} instance of order 12 and symmetric circulants $1$ and $-1$.
 \begin{lstlisting}
 >>> from digraphs import CirculantDigraph
 >>> c12 = CirculantDigraph(order=12,circulants=[1,-1])
@@ -554,7 +547,7 @@ For computing the corresponding non isomorphic MISs, we actually need the automo
 \end{lstlisting}
 The 12-cycle graph automorphism group is generated with both the permutations above and has group size 24.
 
-\subsection{Computing the isomorphic MISs}
+\subsection{Computing the non isomorphic MISs}
 \label{sec:21.7.3}
 
 The \texttt{showOrbits()} method renders now the labelled representatives of each of the four orbits of isomorphic MISs observed in the 12-cycle graph (see Lines 7-10 below).
