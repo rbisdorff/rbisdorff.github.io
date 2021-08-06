@@ -132,7 +132,7 @@ A \texttt{Graph} instance corresponds bijectively to a symmetric \texttt{Digraph
 \section{q-coloring of a graph}
 \label{25.2}
 
-With the \texttt{Q\_Coloring} class\index{Q\_Coloring@\texttt{Q\_Coloring} class}, a 3-coloring of the tutorial graph \texttt{g} may for instance be computed with a Gibbs sampler\index{Gibbs sampler} and plotted as follows.
+With the \texttt{Q\_Coloring} class\index{Q\_Coloring@\texttt{Q\_Coloring} class}, a 3-coloring of the tutorial graph \texttt{g} may for instance be computed with a Gibbs sampler\index{Gibbs sampler} \citep{GEM-1984} and plotted as follows.
 \begin{lstlisting}
 >>> from graphs import Q_Coloring
 >>> qc = Q_Coloring(g)
@@ -332,7 +332,7 @@ The two last MISs of cardinality 4 (see Lines 13-16 in Listing~\ref{list:21.6} a
 \section{Grids and the Ising model}
 \label{sec:21.5}
 
-Special classes of graphs, like $n \times m$ rectangular or triangular grids (\texttt{GridGraph}\index{GridGraph@\texttt{GridGraph} class} and \texttt{IsingModel}\index{IsingModel@\texttt{IsingModel} class}) are available from the \texttt{graphs} module. For instance, we may use a \emph{Gibbs} sampler again for simulating an \emph{Ising Model} on such a grid.
+Special classes of graphs, like $n \times m$ rectangular or triangular grids (\texttt{GridGraph}\index{GridGraph@\texttt{GridGraph} class} and \texttt{IsingModel}\index{IsingModel@\texttt{IsingModel} class}) are available from the \texttt{graphs} module. For instance, we may use a \emph{Gibbs} sampler\footnote{\citet{GEM-1984}} again for simulating an \emph{Ising Model} on such a grid \citep{ISI-1925}.
 \begin{lstlisting}
 >>> from graphs import GridGraph, IsingModel
 >>> g = GridGraph(n=15,m=15)
@@ -359,7 +359,7 @@ Special classes of graphs, like $n \times m$ rectangular or triangular grids (\t
 \section{Simulating Metropolis random walks}
 \label{sec:21.6}
 
-Finally, we provide the \texttt{MetropolisChain} class, a specialization of the \texttt{Graph} class, for implementing a generic \emph{Metropolis} Monte Carlo Markov Chain (MCMC) sampler for simulating random walks on a given graph \texttt{g}:
+Finally, we provide the \texttt{MetropolisChain} class, a specialization of the \texttt{Graph} class, for implementing a generic \emph{Metropolis} Monte Carlo Markov Chain (MCMC) sampler for simulating random walks on a given graph \texttt{g}\citep{MET-1953} :
 \begin{lstlisting}
 >>> from graphs import Graph
 >>> g = Graph(numberOfVertices=5,edgeProbability=0.5)
@@ -415,7 +415,7 @@ The \texttt{checkSampling()} method \index{checkSampling@\texttt{checkSampling()
     'v5' |  0.00   0.00    0.50    0.50    0.00
 \end{lstlisting}
 
-For the reader interested in algorithmic applications of Markov Chains we may recommend consulting \citet{FMCAA}.
+For the reader interested in algorithmic applications of Markov Chains we may recommend consulting \citet{HAG-2002}.
 
 %%%%%%%%%
 \section{Computing the non isomorphic MISs of the n-cycle graph}

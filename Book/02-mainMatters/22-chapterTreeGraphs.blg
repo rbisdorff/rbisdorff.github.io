@@ -3,47 +3,45 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 02-mainMatters/22-chapterTreeGraphs.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
-Warning--I didn't find a database entry for "JPB-1991"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 2 entries,
+You've used 3 entries,
             3270 wiz_defined-function locations,
-            682 strings with 5172 characters,
-and the built_in function-call counts, 1875 in all, are:
-= -- 200
-> -- 30
-< -- 3
-+ -- 17
-- -- 9
-* -- 106
-:= -- 221
-add.period$ -- 2
-call.type$ -- 2
-change.case$ -- 14
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 189
-empty$ -- 149
-format.name$ -- 15
-if$ -- 396
+            687 strings with 5321 characters,
+and the built_in function-call counts, 3202 in all, are:
+= -- 355
+> -- 40
+< -- 4
++ -- 25
+- -- 12
+* -- 197
+:= -- 371
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 20
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 335
+empty$ -- 261
+format.name$ -- 19
+if$ -- 678
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 17
-newline$ -- 16
-num.names$ -- 8
-pop$ -- 66
+missing$ -- 26
+newline$ -- 19
+num.names$ -- 12
+pop$ -- 99
 preamble$ -- 1
-purify$ -- 11
+purify$ -- 16
 quote$ -- 0
-skip$ -- 93
+skip$ -- 141
 stack$ -- 0
-substring$ -- 135
-swap$ -- 110
+substring$ -- 294
+swap$ -- 177
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 15
+type$ -- 24
 warning$ -- 0
-while$ -- 12
+while$ -- 19
 width$ -- 0
-write$ -- 31
-(There was 1 warning)
+write$ -- 42
