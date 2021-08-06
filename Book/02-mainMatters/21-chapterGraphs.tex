@@ -359,7 +359,7 @@ Special classes of graphs, like $n \times m$ rectangular or triangular grids (\t
 \section{Simulating Metropolis random walks}
 \label{sec:21.6}
 
-Finally, we provide the \texttt{MetropolisChain} class, a specialization of the \texttt{Graph} class, for implementing a generic \emph{Metropolis} Monte Carlo Markov Chain (MCMC) sampler for simulating random walks on a given graph \texttt{g}\citep{MET-1953} :
+Finally, we provide the \texttt{MetropolisChain} class, a specialization of the \texttt{Graph} class, for implementing a generic \emph{Metropolis} Monte Carlo Markov Chain (MCMC) sampler for simulating random walks on a given graph \citep{MET-1953}.
 \begin{lstlisting}
 >>> from graphs import Graph
 >>> g = Graph(numberOfVertices=5,edgeProbability=0.5)
@@ -415,7 +415,7 @@ The \texttt{checkSampling()} method \index{checkSampling@\texttt{checkSampling()
     'v5' |  0.00   0.00    0.50    0.50    0.00
 \end{lstlisting}
 
-For the reader interested in algorithmic applications of Markov Chains we may recommend consulting \citet{HAG-2002}.
+For the reader interested in algorithmic applications of Markov Chains we recommend consulting \citet{HAG-2002}.
 
 %%%%%%%%%
 \section{Computing the non isomorphic MISs of the n-cycle graph}
@@ -438,7 +438,7 @@ Due to the public success of our common 2008 publication with Jean-Luc Marichal 
                        'relation', 'gamma', 'notGamma']
 \end{lstlisting}
 
-Such $n$-cycle graphs are also provided as undirected graph instances by the \texttt{CycleGraph} class.
+Such $n$-cycle graphs are also provided as undirected graph instances by the \texttt{CycleGraph} class. \index{CycleGraph@\texttt{CycleGraph} class}
 \begin{lstlisting}
 >>> from graphs import CycleGraph
 >>> cg12 = CycleGraph(order=12)
@@ -461,8 +461,8 @@ Such $n$-cycle graphs are also provided as undirected graph instances by the \te
 \label{fig:21.7.1}       % Give a unique label
 \end{figure}
 
-\subsection{Computing maximal independent sets (MISs)}
-\label{sec:21.7.1}
+% \subsection{Computing maximal independent sets (MISs)}
+% \label{sec:21.7.1}
 
 A non isomorphic MIS corresponds in fact to a set of isomorphic MISs, i.e. an orbit of MISs under the automorphism group of the 12-cycle graph. We are now first computing all maximal independent sets that are detectable in the 12-cycle digraph with the \texttt{showMIS()} method.
 \begin{lstlisting}
@@ -528,10 +528,10 @@ Reading in the result of the \texttt{perrinMIS} shell command, stored in a file 
     }
 \end{lstlisting}
 
-\subsection{Computing the automorphism group}
-\label{sec:21.7.2}
+% \subsection{Computing the automorphism group}
+% \label{sec:21.7.2}
 
-For computing the corresponding non isomorphic MISs, we actually need the automorphism group of the c12-cycle graph. The \texttt{Digraph} class therefore provides the \texttt{automorphismGenerators()} method\index{automorphismGenerators@\texttt{automorphismGenerators()}} which adds automorphism group generators to a \texttt{Digraph} class instance with the help of the external shell \texttt{dreadnaut} shell command\index{dreadnaut@\texttt{dreadnaut} shell command} from the \emph{nauty} software package \footnote{The \texttt{automorphismGenerators} method uses the \texttt{dreadnaut} shell command from the \emph{nauty} software package. See https://www3.cs.stonybrook.edu/~algorith/implement/nauty/implement.shtml . On Mac OS there exist dmg installers and on Ubuntu Linux or Debian, one may easily install it with \texttt{...\$ sudo apt-get install nauty}.}.
+For computing the corresponding non isomorphic MISs, we actually need the automorphism group of the 12-cycle graph. The \texttt{Digraph} class therefore provides the \texttt{automorphismGenerators()} method\index{automorphismGenerators@\texttt{automorphismGenerators()}} which adds automorphism group generators to a \texttt{Digraph} class instance with the help of the external shell \texttt{dreadnaut} shell command\index{dreadnaut@\texttt{dreadnaut} shell command} from the \emph{nauty} software package \footnote{The \texttt{automorphismGenerators} method uses the \texttt{dreadnaut} shell command from the \emph{nauty} software package. See https://www3.cs.stonybrook.edu/~algorith/implement/nauty/implement.shtml . On Mac OS there exist dmg installers and on Ubuntu Linux or Debian, one may easily install it with \texttt{...\$ sudo apt-get install nauty}.}.
 \begin{lstlisting}
 >>> c12.automorphismGenerators()
       ...
@@ -547,8 +547,8 @@ For computing the corresponding non isomorphic MISs, we actually need the automo
 \end{lstlisting}
 The 12-cycle graph automorphism group is generated with both the permutations above and has group size 24.
 
-\subsection{Computing the non isomorphic MISs}
-\label{sec:21.7.3}
+% \subsection{Computing the non isomorphic MISs}
+% \label{sec:21.7.3}
 
 The \texttt{showOrbits()} method renders now the labelled representatives of each of the four orbits of isomorphic MISs observed in the 12-cycle graph (see Lines 7-10 below).
 \begin{lstlisting}
@@ -566,7 +566,7 @@ The \texttt{showOrbits()} method renders now the labelled representatives of eac
    stabilizer size: [1, 2, 3, ..., 8, 9, ..., 12, 13, ...]
    frequency      : [0, 2, 0, ..., 1, 0, ...,  1,  0, ...]
 \end{lstlisting}
-The corresponding group stabilizers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines 12-13 above), are illustrated in the corresponding unlabelled graphs of Fig.~\ref{fig:21.7.2} below.
+The corresponding group stabilizers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines 12-13 above), are illustrated in the corresponding unlabelled graphs of Fig.~\ref{fig:21.7.2}.
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/c12.png}

@@ -41,7 +41,7 @@ To illustrate these \emph{perfect} graph classes, we will generate from 8 interv
   [(2,7), (2,7), (5,6), (6,8), (1,8), (1,1), (4,7), (0,10)]
 \end{lstlisting}
 
-With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \emph{perfect graph}, which is \emph{conjointly} a \emph{triangulated}, a \emph{comparability}, a \emph{split} and a \emph{permutation} graph (see Listing \ref{list:23.1} Lines 6, 10, 14).\index{isPerfectGraph@\texttt{isPerfectGraph()}}\index{isSpliGraph@\texttt{isSplitGraph()}}\index{isIntervalGraph@\texttt{isIntervalGraph()}}\index{isPermutationGraph@\texttt{isPermutationGraph()}}
+With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \emph{perfect graph}, which is \emph{conjointly} a \emph{triangulated}, a \emph{comparability}, a \emph{split} and a \emph{permutation} graph (see Listing~\ref{list:23.1} Lines 6, 10, 14).\index{isPerfectGraph@\texttt{isPerfectGraph()}}\index{isSpliGraph@\texttt{isSplitGraph()}}\index{isIntervalGraph@\texttt{isIntervalGraph()}}\index{isPermutationGraph@\texttt{isPermutationGraph()}}
 \begin{lstlisting}[caption={Testing perfect graph categories.},label=list:23.1,basicstyle=\ttfamily\scriptsize]
 >>> g.isPerfectGraph(Comments=True)
   Graph randIntervalIntersections is perfect !
@@ -244,7 +244,7 @@ By using color sorting queues, the minimal vertex coloring for a permutation gra
 \label{fig:23.5}       % Give a unique label
 \end{figure}
 
-The correspondingly colored \emph{matching diagram} of the nine inversions --the actual edges of the permutation graph--, which are induced by the given [4,3,6,1,5,2] permutation, may as well be drawn with the graphviz \texttt{neato} layout and explicitly positioned horizontal lists of vertices (see Fig. \ref{fig:23.6}).\index{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}}
+The correspondingly colored \emph{matching diagram} of the nine inversions --the actual edges of the permutation graph--, which are induced by the given [4,3,6,1,5,2] permutation, may as well be drawn with the graphviz \texttt{neato} layout and explicitly positioned horizontal lists of vertices (see Fig.~\ref{fig:23.6}).\index{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}}
 \begin{lstlisting}
 >>> g.exportPermutationGraphViz(\
 ...                    WithEdgeColoring=True)
@@ -409,7 +409,7 @@ The \texttt{PartiallyDetermined = True} flag (see Lines 2 and 7 above) is requir
 
 As both graphs are indeed transitively orientable (see Lines 5 and 10 above), we may conclude that the given random graph \texttt{g} is actually a permutation graph instance. Yet, we still need to find now its corresponding permutation. We therefore implement a recipee given by Martin Golumbic \citep[p. 159]{GOL-2004}.
 
-We will first \emph{fuse} both $og$ and $ogd$ orientations above with an \emph{epistemic disjunction} operated with the symmetric \texttt{o-max} operator (see Section \ref{sec:2.5}).
+We will first \emph{fuse} both $og$ and $ogd$ orientations above with an \emph{epistemic disjunction} operated with the symmetric \texttt{o-max} operator (see Section~\ref{sec:2.5}).
 \begin{lstlisting}
 >>> from digraphs import FusionDigraph
 >>> f1 = FusionDigraph(og,ogd,operator='o-max')
@@ -474,7 +474,7 @@ We may finally check that, for instance, the two permutations [2, 3, 4, 8, 6, 1,
 \caption{Isomorphic permutation graphs.} 
 \label{fig:23.11}       % Give a unique label
 \end{figure}
-And, we indeed recover in Fig. \ref{fig:23.11} indeed two isomorphic copies of the original random graph (compare with Fig. \ref{fig:23.8}).
+And, we indeed recover in Fig.~\ref{fig:23.11} indeed two isomorphic copies of the original random graph (compare with Fig.~\ref{fig:23.8}).
  
 %%%%%%% The chapter bibliography
 %\normallatexbib

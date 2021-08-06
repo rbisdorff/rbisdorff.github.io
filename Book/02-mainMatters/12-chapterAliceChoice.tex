@@ -1,19 +1,18 @@
 \chapter{Alice's best choice: A selection case study}
 \label{sec:12}
+\abstract*{ The Chapter presents a case study concerning the building of a best choice recommendation for Alice, a German student who wants some advice concerning the choice of her future University studies. We present Alice's performance tableau --potential foreign language study programs, her decision objectives, performance criteria and performance grades-- and build a best choice recommendation for her. A thorough robustness analysis confirms a very best choice.}
 
-\abstract*{ The Chapter present a case study concerning the building of a best choice recommendation for Alice, a German student who wants some advice concerning the choice of her future University studies. We present Alice's performance tableau --potential study programs, decision objectives, performance criteria and performance grades-- and build a best choice recommendation for her. A thorough robustness analysis confirms her very best choice.}
-
-\abstract{ The Chapter present a case study concerning the building of a best choice recommendation for Alice, a German student who wants some advice concerning the choice of her future University studies. We present Alice's performance tableau --potential study programs, decision objectives, performance criteria and performance grades-- and build a best choice recommendation for her. A thorough robustness analysis confirms her very best choice.}
+\abstract{ The Chapter presents a case study concerning the building of a best choice recommendation for Alice, a German student who wants some advice concerning the choice of her future University studies. We present Alice's performance tableau --potential foreign language study programs, her decision objectives, performance criteria and performance grades-- and build a best choice recommendation for her. A thorough robustness analysis confirms a very best choice.}
 
 
 \begin{figure}[h]
 \sidecaption
-\includegraphics[width=5cm]{Figures/AliceF.png}
+\includegraphics[width=4cm]{Figures/AliceF.png}
 \caption{Alice D. , 19 years old German student finishing her secondary studies in Köln (Germany), desires to undertake foreign languages studies.}
 \label{fig:12.1}       % Give a unique label
 \end{figure}
 
-This case study is inspired by a multiple criteria decision analysis case study published by \citealp[pp. 1-17]{EIS-2001}.
+\noindent This case study is inspired by a multiple criteria decision analysis case study published by \citealp[pp. 1-17]{EIS-2001}.
 
 \section{The decision problem}
 \label{sec:12.1}
@@ -21,7 +20,6 @@ This case study is inspired by a multiple criteria decision analysis case study 
 Alice will probably receive her "Abitur" with satisfactory and/or good marks and  wants to start her further studies thereafter. She would not mind staying in Köln, yet is ready to move elsewhere if necessary. The length of the higher studies do concern her, as she wants to earn her life as soon as possible.  Her parents however agree to financially support her study fees as well as her living costs during her studies.
 
 Alice has already identified 10 potential study programs.
-
 \begin{table}[h]
 \caption{The potential study programs}
 \label{tab:12.1}       % Give a unique label
@@ -31,30 +29,29 @@ Alice has already identified 10 potential study programs.
       \svhline\noalign{\smallskip}
       ID & Diploma & Institution & City\\
       \noalign{\smallskip}\hline\noalign{\smallskip}
-      T-UD   & Qualified translator (T)  &   University (UD)               &  Düsseldorf\\
-      T-FHK  & Qualified translator (T)  &   Higher Technical School (FHK) &  Köln\\
-      T-FHM  & Qualified translator (T)  &   Higher Technical School (FHM) &  München\\
-      I-FHK  & Graduate interpreter (I)  &   Higher Technical School (FHK) &  Köln\\
-      T-USB  & Qualified translator (T)  &   University (USB)              &  Saarbrücken\\
-      I-USB  & Graduate interpreter (I)  &   University (USB)              &  Saarbrücken\\
-      T-UHB  & Qualified translator (T)  &   University (UHB)              &  Heidelberg\\
-      I-UHB  & Graduate interpreter (I)  &   University (UHB)              &  Heidelberg\\
-      S-HKK  & Specialized secretary (S) &   Chamber of Commerce (HKK)     &  Köln\\
-      C-HKK  & Foreign correspondent (C) &   Chamber of Commerce (HKK)     &  Köln\\
+      \texttt{T-UD}   & Qualified translator (T)  &   University (UD)               &  Düsseldorf\\
+      \texttt{T-FHK}  & Qualified translator (T)  &   Higher Technical School (FHK) &  Köln\\
+      \texttt{T-FHM}  & Qualified translator (T)  &   Higher Technical School (FHM) &  München\\
+      \texttt{I-FHK}  & Graduate interpreter (I)  &   Higher Technical School (FHK) &  Köln\\
+      \texttt{T-USB}  & Qualified translator (T)  &   University (USB)              &  Saarbrücken\\
+      \texttt{I-USB}  & Graduate interpreter (I)  &   University (USB)              &  Saarbrücken\\
+      \texttt{T-UHB}  & Qualified translator (T)  &   University (UHB)              &  Heidelberg\\
+      \texttt{I-UHB}  & Graduate interpreter (I)  &   University (UHB)              &  Heidelberg\\
+      \texttt{S-HKK}  & Specialized secretary (S) &   Chamber of Commerce (HKK)     &  Köln\\
+      \texttt{C-HKK}  & Foreign correspondent (C) &   Chamber of Commerce (HKK)     &  Köln\\
       \noalign{\smallskip}\hline
     \end{tabular}
   %\end{small}
 \end{center}
 \end{table}
-
-In Table \ref{tab:12.1} we notice that Alice considers three \emph{Graduate Interpreter} studies (8 or 9 Semesters), respectively in Köln, in Saarbrücken or in Heidelberg; and five \emph{Qualified translator} studies (8 or 9 Semesters), respectively in Köln, in Düsseldorf, in Saarbrücken, in Heidelberg or in Munich. She also considers two short (4 Semesters) study programs at the Chamber of Commerce in Köln. 
+In Table~\ref{tab:12.1} we notice that Alice considers three \emph{Graduate Interpreter} studies (8 or 9 Semesters), respectively in Köln, in Saarbrücken or in Heidelberg; and five \emph{Qualified translator} studies (8 or 9 Semesters), respectively in Köln, in Düsseldorf, in Saarbrücken, in Heidelberg or in Munich. She also considers two short (4 Semesters) study programs at the Chamber of Commerce in Köln. 
 
 Four \textbf{decision objectives} of more or less equal importance are guiding Alice's choice:
-\begin{enumerate}
-\item \emph{maximize} the attractiveness of the study place (GEO),
-\item \emph{maximize} the attractiveness of her further studies (LEA),
-\item \emph{minimize}  her financial dependency on her parents (FIN),
-\item \emph{maximize} her professional perspectives (PRA).
+\begin{enumerate}[leftmargin=1cm,topsep=2pt]
+\item \emph{maximize} the attractiveness of the study place (\texttt{GEO}),
+\item \emph{maximize} the attractiveness of her further studies (\texttt{LEA}),
+\item \emph{minimize}  her financial dependency on her parents (\texttt{FIN}),
+\item \emph{maximize} her professional perspectives (\texttt{PRA}).
 \end{enumerate}
 
 The decision consequences Alice wishes to take into account for evaluating the potential study programs with respect to each of the four objectives are modelled by the following \emph{coherent family of criteria}\footnote{See \citet{ROY-2000}}. Such a family of performance criteria verifies:
@@ -72,31 +69,29 @@ The decision consequences Alice wishes to take into account for evaluating the p
       \svhline\noalign{\smallskip}
       ID & Name & Comment & Objective & Weight\\
       \noalign{\smallskip}\hline\noalign{\smallskip}
-       DH  & Proximity  &  Distance in km to her home (min)      &   GEO    &     3\\
-       BC  & Big City   &  Number of inhabitants (max)           &   GEO    &     3\\
+       \texttt{DH}  & Proximity  &  Distance in km to her home (min)      &   \texttt{GEO}    &     3\\
+       \texttt{BC}  & Big City   &  Number of inhabitants (max)           &   \texttt{GEO}    &     3\\
        \   & \          &  \                                     &   \      &     \ \\
-       AS  & Studies    &  Attractiveness of the studies (max)   &   LEA    &     6\\
+       \texttt{AS}  & Studies    &  Attractiveness of the studies (max)   &   \texttt{LEA}    &     6\\
        \   & \          &  \                                     &  \       &    \ \\
-       SF  & Fees       &  Annual study fees (min)               &   FIN    &     2\\
-       LC  & Living     &  Monthly living costs (min)            &   FIN    &     2\\
-       SL  & Length     &  Length of the studies (min)           &   FIN    &     2\\
+       \texttt{SF}  & Fees       &  Annual study fees (min)               &   \texttt{FIN}    &     2\\
+       \texttt{LC}  & Living     &  Monthly living costs (min)            &   \texttt{FIN}    &     2\\
+       \texttt{SL}  & Length     &  Length of the studies (min)           &   \texttt{FIN}    &     2\\
        \   &  \         &   \                                    &   \      &     \ \\
-       AP  & Profession &  Attractiveness of the profession (max)&   PRA    &     2\\
-       AI  & Income     &  Annual income after studying (max)    &   PRA    &     2\\
-       PR  & Prestige   &  Occupational prestige (max)           &   PRA    &     2\\
+       \texttt{AP}  & Profession &  Attractiveness of the profession (max)&   \texttt{PRA}    &     2\\
+       \texttt{AI}  & Income     &  Annual income after studying (max)    &   \texttt{PRA}    &     2\\
+       \texttt{PR}  & Prestige   &  Occupational prestige (max)           &   \texttt{PRA}    &     2\\
       \noalign{\smallskip}\hline
     \end{tabular}
   %\end{small}
 \end{center}
 \end{table}
-
-Within each decision objective, the performance criteria are considered to be \emph{equisignificant}. Hence, the four decision objectives get a same \emph{importance weight} of $6$ (see Table \ref{tab:12.2} Column 5).
+Within each decision objective, the performance criteria are considered to be \emph{equisignificant}. Hence, the four decision objectives get a same \emph{importance weight} of $6$ (see Table~\ref{tab:12.2} Column 5).
 
 \section{The performance tableau}
 \label{sec:12.2}
 
 The actual evaluations of Alice's potential study programs are stored in a file named \texttt{AliceChoice.py} of \texttt{PerformanceTableau} format \footnote{Alice's performance tableau \texttt{AliceChoice.py} is available in the \texttt{examples} directory of the \Digraph software collection}.
-
 \begin{lstlisting}[caption={Alice's performance tableau},label=list:12.1]
 >>> from perfTabs import PerformanceTableau
 >>> t = PerformanceTableau('AliceChoice')
@@ -121,8 +116,7 @@ The actual evaluations of Alice's potential study programs are stored in a file 
      Total weight: 6.00 (3 criteria)
 \end{lstlisting}
 
-Details of the performance criteria may be consulted in a browser view (see Fig. \ref{fig:12.2} below).
-
+Details of the performance criteria may be consulted in a browser view (see Fig.~\ref{fig:12.2} below).
 \begin{lstlisting}
 >>> t.showHTMLCriteria()
 \end{lstlisting}
@@ -132,13 +126,11 @@ Details of the performance criteria may be consulted in a browser view (see Fig.
 \caption{Alice's performance criteria.}
 \label{fig:12.2}       % Give a unique label
 \end{figure}
+It is worthwhile noticing in Fig.~\ref{fig:12.2} that, on her subjective attractiveness scale of the study programs (criterion \texttt{AS}), Alice considers a performance differences of 7 points to be \emph{considerable} and triggering, the case given, an outranking polarisation \citep{BIS-2013}. Notice also the proportional \emph{indifference} ($1\%$) and \emph{preference} ($5\%$) discrimination thresholds shown on criterion \texttt{BC} --number of inhabitants.
 
-It is worthwhile noticing in Fig. \ref{fig:12.2} that, on her subjective attractiveness scale of the study programs (criterion $AS$), Alice considers a performance differences of 7 points to be \emph{considerable} and triggering, the case given, an outranking polarisation \citep{BIS-2013}. Notice also the proportional \emph{indifference} ($1\%$) and \emph{preference} ($5\%$) discrimination thresholds shown on criterion $BC$-number of inhabitants.
-
-Alice is subjectively evaluating the \emph{Attractiveness} of the studies (criterion $AS$) on an ordinal scale from 0 (weak) to 10 (excellent). Similarly, she is subjectively evaluating the \emph{Attractiveness} of the respective professions (criterion $AP$) on a three level ordinal scale from 0 (\emph{weak}), 1 (\emph{fair}) to 2 (\emph{good}). Considering the \emph{Occupational Prestige} (criterion $OP$), she looked up the SIOPS \footnote{See \citet*{GAN-1996}.}. All the other evaluation data she found on the internet (see Fig. \ref{fig:12.3}).
+Alice is subjectively evaluating the \emph{Attractiveness} of the studies (criterion \texttt{AS}) on an ordinal scale from \emph{weak} ($0$) to \emph{excellent} ($10$). Similarly, she is subjectively evaluating the \emph{Attractiveness} of the respective professions (criterion \texttt{AP}) on a three level ordinal scale from \emph{weak} ($0$), \emph{fair} ($1$) to \emph{good} ($2$). Considering the \emph{Occupational Prestige} (criterion \texttt{OP}), she looked up the SIOPS \footnote{See \citet*{GAN-1996}.}. All the other evaluation data she found on the internet (see Fig.~\ref{fig:12.3}).
 
 In the following \emph{heatmap view}, we may now consult Alice's performance evaluations.
-
 \begin{lstlisting}
 >>> t.showHTMLPerformanceHeatmap(\
 ...       colorLevels=5,Correlations=True,ndigits=0)
@@ -150,11 +142,11 @@ In the following \emph{heatmap view}, we may now consult Alice's performance eva
 \label{fig:12.3}       % Give a unique label
 \end{figure}
 
-Notice by the way that evaluations on performance criteria to be \emph{minimized}, like \emph{Distance to Home} (criterion $DH$) or \emph{Study time} (criterion \emph{SL}), are registered as \emph{negative} values, so that smaller measures are, in this case, preferred to larger ones.
+Notice by the way that evaluations on performance criteria to be \emph{minimized}, like \emph{Distance to Home} (criterion \texttt{DH}) or \emph{Study time} (criterion \texttt{SL}), are registered as \emph{negative} values, so that smaller measures are, in this case, preferred to larger ones.
 
-Her ten potential study programs are ordered with the \NetFlows ranking rule applied to the corresponding bipolar-valued outranking digraph \footnote{See Section \ref{sec:8.3}.}. \emph{Graduate interpreter} studies in Köln ($I-FHK$) or Saarbrücken ($I-USB$), followed by \emph{Qualified Translator} studies in Köln ($T-FHK$) appear to be Alice's most preferred alternatives. The least attractive study programs for her appear to be studies at the Chamber of Commerce of Köln ($C-HKK$, $S-HKK$).
+Her ten potential study programs are ordered with the \NetFlows ranking rule applied to the corresponding bipolar-valued outranking digraph \footnote{See Section~\ref{sec:8.3}.}. \emph{Graduate interpreter} studies in Köln (\texttt{I-FHK}) or Saarbrücken (\texttt{I-USB}), followed by \emph{Qualified Translator} studies in Köln (\texttt{T-FHK}) appear to be Alice's most preferred alternatives. The least attractive study programs for her appear to be studies at the Chamber of Commerce of Köln (\texttt{C-HKK}, \texttt{S-HKK}).
 
-It is finally interesting to observe in Fig. \ref{fig:12.3} (third row) that the \emph{most significant} performance criteria, appear to be for Alice, on the one side, the \emph{Attractiveness} of the study program (criterion $AS$, tau = $+0.72$) followed by the \emph{Attractiveness} of the future profession (criterion $AP$, tau = $+0.62$). On the other side, \emph{Study times} (criterion $SL$, tau = $-0.24$), \emph{Big city} (criterion $BC$, tau = $-0.07$) as well as \emph{Monthly living costs} (criterion $LC$, tau = $-0.04$) appear to be for her  \emph{not so significant} \footnote{see Chapter \ref{sec:16}.}.
+It is finally interesting to observe in Fig.~\ref{fig:12.3} (third row) that the \emph{most significant} performance criteria, appear to be for Alice, on the one side, the \emph{Attractiveness} of the study program (criterion \texttt{AS}, tau = $+0.72$) followed by the \emph{Attractiveness} of the future profession (criterion \texttt{AP}, tau = $+0.62$). On the other side, \emph{Study times} (criterion \texttt{SL}, tau = $-0.24$), \emph{Big city} (criterion \texttt{BC}, tau = $-0.07$) as well as \emph{Monthly living costs} (criterion \texttt{LC}, tau = $-0.04$) appear to be for her  \emph{not so significant} \footnote{see Chapter~\ref{sec:16}.}.
 
 
 \section{Building a best choice recommendation}
@@ -177,9 +169,9 @@ Let us now have a look at the resulting pairwise outranking situations.
 >>> dg.computeSymmetryDegree(Comments=True)
   Symmetry degree of graph <rel_AliceChoice> : 0.49
 \end{lstlisting}
-From Alice's performance tableau we obtain 67 positively validated pairwise outranking situations in the digraph $dg$, supported by a $74\%$ majority of criteria significance (see Listing \ref{list:12.2} Line 9-10).
+From Alice's performance tableau we obtain 67 positively validated pairwise outranking situations in the digraph \texttt{dg}, supported by a $74\%$ majority of criteria significance (see Lines 9-10 in Listing~\ref{list:12.2}).
 
-Due to the poorly discriminating performance evaluations, nearly half of these outranking situations (see Line 12) are \emph{symmetric} and reveal actually \emph{more or less indifference} situations between the potential study programs. This is well illustrated in the \emph{relation map} of the outranking digraph (see Fig. \ref{fig:12.4}).
+Due to the poorly discriminating performance evaluations, nearly half of these outranking situations (see Line 12) are \emph{symmetric} and reveal actually \emph{more or less indifference} situations between the potential study programs. This is well illustrated in the \emph{relation map} of the outranking digraph shown in Fig.~\ref{fig:12.4}.
 \begin{lstlisting}
 >>> dg.showHTMLRelationMap(\
 ...           tableTitle='Outranking relation map',\
@@ -192,7 +184,7 @@ Due to the poorly discriminating performance evaluations, nearly half of these o
 \label{fig:12.4}       % Give a unique label
 \end{figure}
 
-We have mentioned that Alice considers a performance difference of 7 points on the \emph{Attractiveness of studies} criterion $AS$ to be considerable which triggers, the case given, a potential polarisation of the outranking characteristics. In Fig. \ref{fig:12.4}, these polarisations appear in the last column and last row. We may inspect the occurrence of such polarisations as follows.
+We have mentioned that Alice considers a performance difference of $7$ points on the \emph{Attractiveness of studies} criterion \texttt{AS} to be considerable which triggers, the case given, a potential polarisation of the outranking characteristics. In Fig.~\ref{fig:12.4}, these polarisations appear in the last column and last row. We may inspect the occurrence of such polarisations with the \texttt{showVetos()} method. \index{showVetos@\texttt{showVetos()}}
 \begin{lstlisting}[caption={Polarised outranking situations},label=list:12.3]
 >>> dg.showVetos()
     *----  Veto situations ---
@@ -230,10 +222,10 @@ We have mentioned that Alice considers a performance difference of 7 points on t
      Counter-veto threshold              : 7.00
      Polarisation: r(I-UHB >= S-HKK) = 0.17 ==> +1.00
 \end{lstlisting}
-In Listing \ref{list:12.3}, we see that \emph{considerable} performance differences concerning the \emph{Attractiveness of the studies} ($AS$ criterion) are indeed observed between the \emph{Specialised Secretary} study programm offered in Köln and the \emph{Graduate Interpreter} study programs offered in Köln, Saarbrücken and Heidelberg. They polarise, hence, three \emph{more or less invalid} outranking situations to \emph{certainly invalid} (Lines 8, 13, 18) and corresponding three \emph{more or less valid} converse outranking situations to \emph{certainly valid} ones (Lines 25, 30, 35). 
+In Listing~\ref{list:12.3}, we see that \emph{considerable} performance differences concerning the \emph{Attractiveness of the studies} (\texttt{AS} criterion) are indeed observed between the \emph{Specialised Secretary} study programm offered in Köln and the \emph{Graduate Interpreter} study programs offered in Köln, Saarbrücken and Heidelberg. They polarise, hence, three \emph{more or less invalid} outranking situations to \emph{certainly invalid} (Lines 8, 13, 18) and corresponding three \emph{more or less valid} converse outranking situations to \emph{certainly valid} ones (Lines 25, 30, 35). 
 
-We may finally notice in the relation map, shown in Fig. \ref{fig:12.4}, that the four best-ranked study programs, $I-FHK$, $I-USB$, $I-UHB$ and $T-FHK$,  are in fact \Condorcet winners (see Listing \ref{list:12.4} Line 2), i.e. they are all four \emph{indifferent} one of the other \textbf{and} positively \emph{outrank} all other alternatives, a result confirmed below by our best choice recommendation (Line 8).
-   \begin{lstlisting}[caption={Alice's best choice recommendation},label=list:12.4]
+We may finally notice in the relation map, shown in Fig.~\ref{fig:12.4}, that the four best-ranked study programs, \texttt{I-FHK}, \texttt{I-USB}, \texttt{I-UHB} and \texttt{T-FHK},  are in fact \Condorcet winners (see Listing~\ref{list:12.4} Line 2), i.e. they are all four \emph{indifferent} one of the other \textbf{and} positively \emph{outranking} all other alternatives, a result confirmed in Listing~\ref{list:12.4} below by our best choice recommendation (Line 8).
+\begin{lstlisting}[caption={Alice's best choice recommendation},label=list:12.4]
 >>> dg.computeCondorcetWinners()
   ['I-FHK', 'I-UHB', 'I-USB', 'T-FHK'] 
 >>> dg.showBestChoiceRecommendation()
@@ -258,11 +250,9 @@ We may finally notice in the relation map, shown in Fig. \ref{fig:12.4}, that th
      determinateness (%) : 58.33
      most credible action(s) = {'S-HKK': 0.17,'C-HKK': 0.17}
 \end{lstlisting}
-   
-Most credible best choice among the four best-ranked study programs eventually becomes the \emph{Graduate Interpreter} study program at the Technical High School in Köln (see Listing \ref{list:12.4} Line 14) supported by a $(0.75 + 1)/2.0 \,=\,87.5\% (18/24)$ majority of global criteria significance \footnote{see Chapter \ref{sec:17}}.
+   Most credible best choice among the four best-ranked study programs eventually becomes the \emph{Graduate Interpreter} study program at the Technical High School in Köln (see Line 14) supported by a $(0.75 + 1)/2.0 \,=\,87.5\% (18/24)$ majority of global criteria significance \footnote{See Section~\ref{sec:17.6} on solving \Berge kernel equation systems.}.
 
-In the relation map, shown in Fig. \ref{fig:12.4}, we see in the left lower corner that the \emph{asymmetric part} of the outranking relation, i.e. the corresponding \emph{strict} outranking relation, is actually \emph{transitive} (see Line 2 below). Hence, a \emph{graphviz} drawing of its \emph{skeleton}, oriented by the previous \emph{best}, respectively \emph{worst} choice, may well illustrate our \emph{best choice recommendation}.
-
+In the relation map, shown in Fig.~\ref{fig:12.4}, we see in the left lower corner that the \emph{asymmetric part} of the outranking relation, i.e. the corresponding \emph{strict} outranking relation, is actually \emph{transitive} (see Line 2 below). Hence, a \emph{graphviz} drawing of its \emph{skeleton}, oriented by the previous \emph{best}, respectively \emph{worst} choice, may well illustrate our \emph{best choice recommendation}.
 \begin{lstlisting}
 >>> dgcd = ~(-dg)
 >>> dgcd.isTransitive()
@@ -276,21 +266,19 @@ In the relation map, shown in Fig. \ref{fig:12.4}, we see in the left lower corn
    dot -Grankdir=BT -Tpng aliceBestChoice.dot -o aliceBestChoice.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=7cm]{Figures/aliceBestChoice.png}
-\caption{In Alice's best choice recommendation, we notice that the \emph{Graduate Interpreter} studies come first, followed by the \emph{Qualified Translator} studies. Last come the \emph{Chamber of Commerce}'s specialised studies. This confirms again the high significance that Alice attaches to the \emph{attractiveness} of her further studies and of her future profession (see criteria $AS$ and $AP$ in Fig. \ref{fig:12.3}).
+\sidecaption[t]
+\includegraphics[width=7cm]{Figures/aliceBestChoice.pdf}
+\caption{In Alice's best choice recommendation, we notice that the \emph{Graduate Interpreter} studies come first, followed by the \emph{Qualified Translator} studies. Last come the \emph{Chamber of Commerce}'s specialised studies. This confirms again the high significance that Alice attaches to the \emph{attractiveness} of her further studies and of her future profession (see criteria \texttt{AS} and \texttt{AP} in Fig.~\ref{fig:12.3}).
 }
 \label{fig:12.5}       % Give a unique label
 \end{figure}
 
-Let us now, for instance, check the pairwise outranking situations observed between the first and second-ranked alternative, i.e. \emph{Garduate Interpreter} studies in Köln versus \emph{Graduate Interpreter} studies in Saabrücken (see $I-FHK$ and $I-USB$ in Fig. \ref{fig:12.3}).
-
+Let us now, for instance, check the pairwise outranking situations observed between the first and second-ranked alternative, i.e. \emph{Garduate Interpreter} studies in Köln versus \emph{Graduate Interpreter} studies in Saabrücken (see \texttt{I-FHK} and \texttt{I-USB} in Fig.~\ref{fig:12.3}).
 \begin{lstlisting}
 >>> dg.showHTMLPairwiseOutrankings('I-FHK','I-USB')
 \end{lstlisting}
-
 \begin{figure}[h]
-\sidecaption
+\sidecaption[t]
 \includegraphics[width=7cm]{Figures/pairwiseComparison.png}
 \caption{Comparing the first and second best-ranked study programs. The Köln alternative is performing \emph{at least as well as} the Saarbrücken alternative on all the performance criteria, except the \emph{Annual income} (of significance $2/24$). Conversely, the Saarbrücken alternative is clearly \emph{outperformed} from the geographical ($0/6$) as well as from the financial perspective ($2/6$).
 }
@@ -298,12 +286,10 @@ Let us now, for instance, check the pairwise outranking situations observed betw
 \end{figure}
 \clearpage
 
-In a similar way, we may finally compute a \emph{weak ranking} of all the potential study programs with the help of the \texttt{RankingByChoosingDigraph} constructor, who computes a bipolar ranking by conjointly \emph{best-choosing} and \emph{last-rejecting} \citep{BIS-1999}.
-
+In a similar way, we may finally compute a \emph{weak ranking} of all the potential study programs with the help of the \texttt{RankingByChoosingDigraph} constructor\index{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class}, who computes a bipolar ranking by conjointly \emph{best-choosing} and \emph{last-rejecting} \citep{BIS-1999}.
 \begin{lstlisting}[caption={Weakly ranking by bipolar best-choosing and last-rejecting},label=list:12.5]
 >>> from transitiveDigraphs import\
 ...               RankingByChoosingDigraph
-
 >>> rbc = RankingByChoosingDigraph(dg)
 >>> rbc.showRankingByChoosing()
     Ranking by Choosing and Rejecting
@@ -318,8 +304,7 @@ In a similar way, we may finally compute a \emph{weak ranking} of all the potent
        2nd last ranked ['C-HKK']
      1st last ranked ['S-HKK']
 \end{lstlisting}
-
-In Listing \ref{list:12.5}, we find confirmed that the \emph{Interpreter} studies appear all preferrred to the \emph{Translator} studies. Furthermore, the \emph{Interpreter} studies in Saarbrücken appear preferred to the same studies in Heidelberg. The Köln alternative is apparently the preferred one of all the \emph{Translater} studies. And, the \emph{Foreign Correspondent} and the \emph{Specialised Secretary} studies appear second-last and last ranked.
+In Listing~\ref{list:12.5}, we find confirmed that the \emph{Interpreter} studies appear all preferrred to the \emph{Translator} studies. Furthermore, the \emph{Interpreter} studies in Saarbrücken appear preferred to the same studies in Heidelberg. The Köln alternative is apparently the preferred one of all the \emph{Translater} studies. And, the \emph{Foreign Correspondent} and the \emph{Specialised Secretary} studies appear second-last and last ranked.
 
 Yet, how \emph{robust} are our findings with respect to potential settings of the decision objectives' importance and the performance criteria significance?
 		
@@ -328,15 +313,12 @@ Yet, how \emph{robust} are our findings with respect to potential settings of th
 
 Alice considers her four decision objectives as being \emph{more or less} equally important. Here we have, however, allocated \emph{strictly equal} importance weights with \emph{strictly equi-significant} criteria per objective. How robust is our previous best choice recommendation when, now, we would consider the importance of the objectives and, hence, the significance of the respective performance criteria to be \emph{more or less uncertain}?
 
-To answer this question, we will consider the respective criteria significance weights $w_j$ for $j=1,...,9$ to be \emph{triangular random variables} in the range 0 to $2w_j$ with mode = $w_j$. We may compute a corresponding $90\%$-\emph{confident} outranking digraph with the help of the \texttt{ConfidentBipolarOutrankingDigraph} constructor \footnote{see Chapter \ref{sec:18}}.
-
+To answer this question, we will consider the respective criteria significance weights $w_j$ for $j=1,...,9$ to be \emph{triangular random variables} in the range 0 to $2w_j$ with mode = $w_j$. We may compute a corresponding $90\%$-\emph{confident} outranking digraph with the help of the \texttt{ConfidentBipolarOutrankingDigraph} constructor \footnote{see Chapter~\ref{sec:18}}.
 \begin{lstlisting}[caption={Computing the 90\% confident outranking digraph},label=list:12.6]
 >>> from outrankingDigraphs import\
 ...         ConfidentBipolarOutrankingDigraph
-
 >>> cdg = ConfidentBipolarOutrankingDigraph(t,\
 ...         distribution='triangular',confidence=90.0)
-
 >>> cdg
   *------- Object instance description ------*
     Instance class       : ConfidentBipolarOutrankingDigraph
@@ -351,12 +333,10 @@ To answer this question, we will consider the respective criteria significance w
     Confident majority   : 14/24 (58.3%) 
     Determinateness (%)  : 68.19
 \end{lstlisting}
+Of the original 67 valid outranking situations, we retain 44 outranking situations as being $90\%$-confident (see Listing~\ref{list:12.6} Line 11). The corresponding $90\%$-confident \emph{qualified majority} of criteria significance amounts to $14/24 = 58.3\%$ (Line 16).  
 
-Of the original 67 valid outranking situations, we retain 44 outranking situations as being 90\%-confident (see Listing \ref{list:12.6} Line 13). The corresponding 90\%-*confident* \textbf{qualified majority} of criteria significance amounts to $14/24 = 58.3\%$ (Line 18).  
-
-Concerning now a 90\%-confident best choice recommendation, we are lucky. 
-
-\begin{lstlisting}[caption={Computing the 90\% confident best choice recommendation},label=list:12.7]
+Concerning now a $90\%$-confident best choice recommendation, we are lucky. 
+\begin{lstlisting}[caption={Computing the $90\%$-confident best choice recommendation.},label=list:12.7]
 >>> cdg.computeCondorcetWinners()
   ['I-FHK']
 >>> cdg.showBestChoiceRecommendation()
@@ -374,32 +354,31 @@ Concerning now a 90\%-confident best choice recommendation, we are lucky.
       determinateness (%) : 61.25
    - most credible action(s) = { 'I-FHK': 0.75, }
 \end{lstlisting}
- 
-The \emph{Graduate Interpreter} studies in Köln remain indeed a 90\%-confident \Condorcet winner (see Fig. \ref{fig:12.7} Line 2). Hence, the same study program also remains our 90\%-confident most credible best choice supported by a continual $18/24 (87.5\%)$ majority of the global criteria significance (see Lines 9-10 and 16).
+The \emph{Graduate Interpreter} studies in Köln remain indeed a 90\%-confident \Condorcet winner (see Fig.~\ref{fig:12.7} Line 2). Hence, the same study program also remains our 90\%-confident most credible best choice supported by a continual $18/24 (87.5\%)$ majority of the global criteria significance (see Lines 9-10 and 16 in Listing~\ref{list:12.7}).
 
-When previously comparing the two best-ranked study programs (see Fig. \ref{fig:12.6}), we have observed that $I-FHK$ actually positively outranks $I-USB$ on all four decision objectives. When admitting equi-significant criteria significances per objective, this outranking situation is hence valid independently of the importance weights Alice may allocate to each of her decision objectives. 
+When previously comparing the two best-ranked study programs (see Fig.~\ref{fig:12.6}), we have observed that \texttt{I-FHK} actually positively outranks \texttt{I-USB} on all four decision objectives. When admitting equi-significant criteria significances per objective, this outranking situation is hence valid independently of the importance weights Alice may allocate to each of her decision objectives. 
 
-We may compute these \textbf{unopposed} outranking situations with help of\\ the \texttt{UnOpposedBipolarOutrankingDigraph} constructor (see Section \ref{sec:19.5}).
-
+We may compute these \emph{unopposed} outranking situations with help of the \texttt{UnOpposedBipolarOutrankingDigraph} constructor (see Section~\ref{sec:19.5}).
 \begin{lstlisting}[caption={Computing the unopposed outranking situations},label=list:12.8]
->>> from outrankingDigraphs import UnOpposedBipolarOutrankingDigraph
+>>> from outrankingDigraphs import\
+...                     UnOpposedBipolarOutrankingDigraph
 >>> uop = UnOpposedBipolarOutrankingDigraph(t)
 >>> uop
   *------- Object instance description ------*
-    Instance class       : UnOpposedBipolarOutrankingDigraph
-    Instance name        : AliceChoice_unopposed_outrankings
-    Actions              : 10
-    Criteria             : 9
-    Size                 : 28
-    Oppositeness (%)     : 58.21
-    Determinateness (%)  : 62.94
-    Valuation domain     : [-1.00;1.00]
+   Instance class       : UnOpposedBipolarOutrankingDigraph
+   Instance name        : AliceChoice_unopposed_outrankings
+   Actions              : 10
+   Criteria             : 9
+   Size                 : 28
+   Oppositeness (%)     : 58.21
+   Determinateness (%)  : 62.94
+   Valuation domain     : [-1.00;1.00]
 >>> uop.isTransitive()
   True
 \end{lstlisting}
-We keep 28 out the 67 standard outranking situations, which leads to an \emph{oppositeness degree} of $(1.0 - 28/67) = 58.21\%$ (see Listing \ref{list:12.8} Line 10). Remarkable furthermore is that this unopposed outranking digraph $uop$ is actually \emph{transitive}, i.e. modelling a \emph{partial ranking} of the study programs (Line 14).
+We keep 28 out the 67 standard outranking situations, which leads to an \emph{oppositeness degree} of $(1.0 - 28/67) = 58.21\%$ (see Lines 10-11 in Listing~\ref{list:12.8}). Remarkable furthermore is that this unopposed outranking digraph \texttt{uop} is actually \emph{transitive}, i.e. modelling a \emph{partial ranking} of the study programs (Lines 14-15).
 
-We may hence make use of the \texttt{exportGraphViz()} method of the\\ \texttt{TransitiveDigraph} class for drawing the corresponding partial ranking.
+We may hence make use of the \texttt{exportGraphViz()} method of the \texttt{TransitiveDigraph} class\index{TransitiveDigraph@\texttt{TransitiveDigraph} class} for drawing the corresponding partial ranking.
 \begin{lstlisting}
 >>> from transitiveDigraphs import TransitiveDigraph
 >>> TransitiveDigraph.exportGraphViz(uop,\
@@ -409,15 +388,15 @@ We may hence make use of the \texttt{exportGraphViz()} method of the\\ \texttt{T
    dot -Grankdir=TB -Tpng choice_unopposed.dot -o choice_unopposed.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
-\includegraphics[width=4cm]{Figures/AliceChoice_unopposed.png}
+\sidecaption[t]
+\includegraphics[width=4cm]{Figures/AliceChoice_unopposed.pdf}
 \caption{Unopposed partial ranking of the potential study programs. Again, when \emph{equi-signficant} performance criteria are assumed per decision objective, we observe in here that $I-FHK$ remains the stable best choice, \emph{independently} of the actual importance weights that Alice may wish to allocate to her four decision objectives.}
 \label{fig:12.7}       % Give a unique label
 \end{figure}
 \clearpage
-In view of her performance tableau in Fig. \ref{fig:12.3}, \emph{Graduate Interpreter} studies at the Technical High School Köln, thus, represent definitely \textbf{Alice's very best choice}.
+In view of her performance tableau shown in Fig.~\ref{fig:12.3}, \emph{Graduate Interpreter} studies at the Technical High School Köln, thus, represent definitely \textbf{Alice's very best choice}.
 
-For further reading about the \emph{Rubis Best Choice} methodology, one may consult in \citep{BIS-2015} the study of a \emph{real decision aid case} about choosing a best poster in a scientific conference.
+For further reading about the \emph{Rubis Best Choice} methodology, one may consult in \citet{BIS-2015bestPoster} the study of a \emph{real decision aid case} about choosing a best poster in a scientific conference.
  
 %%%%%%% The chapter bibliography
 %\normallatexbib

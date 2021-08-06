@@ -105,7 +105,7 @@ Assertion A3, for instance, gives a simple test for recognizing a tree graph. In
 >>> g.isTree()
   True  
 \end{lstlisting}
-The random graph of order 8 and edge probability $30\%$, generated with seed $62$, is actually a tree graph instance, as confirmed by its graphviz drawing shown in Fig. \ref{fig:22.3}.
+The random graph of order 8 and edge probability $30\%$, generated with seed $62$, is actually a tree graph instance, as confirmed by its graphviz drawing shown in Fig.~\ref{fig:22.3}.
 \begin{lstlisting}
 >>> g.exportGraphViz('test62')
   *---- exporting a dot file for GraphViz tools ---*
@@ -127,7 +127,7 @@ Yet, we still have to recover its corresponding \Pruefer code. Therefore, we may
   ['v6', 'v1', 'v2', 'v1', 'v2', 'v5']
 \end{lstlisting}
 
-In Fig. \ref{fig:22.3}, we noticed that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighborhood depth of 2. Centres of a graph are the vertices with minimal neighbourhood depth. For finding such centre(s), the \texttt{Graph} class provides the \texttt{computeGraphCentres()} method.\index{computeGraphCentres@\texttt{computeGraphCentres()}} (see Lines 1-2 in Listing~\ref{list:22.4}). Knowing now the centre of graph \texttt{g}, we may draw a correspondingly rooted and oriented tree with the \texttt{exportOrientedTreeGraphViz()} method from the \texttt{TreeGraph} class.\index{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}}  
+In Fig.~\ref{fig:22.3}, we noticed that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighborhood depth of 2. Centres of a graph are the vertices with minimal neighbourhood depth. For finding such centre(s), the \texttt{Graph} class provides the \texttt{computeGraphCentres()} method.\index{computeGraphCentres@\texttt{computeGraphCentres()}} (see Lines 1-2 in Listing~\ref{list:22.4}). Knowing now the centre of graph \texttt{g}, we may draw a correspondingly rooted and oriented tree with the \texttt{exportOrientedTreeGraphViz()} method from the \texttt{TreeGraph} class.\index{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}}  
 \begin{lstlisting}[caption={Computing the centres of a tree and drawing a rooted and oriented tree.},label=list:22.5]
 >>> g.computeGraphCentres()
   {'v2': 2}
@@ -209,7 +209,7 @@ More general, and in case of a not connected graph, we may generate with the \te
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=8cm]{Figures/spanningForest.pdf}
+\includegraphics[width=7cm]{Figures/spanningForest.pdf}
 \caption{Random spanning forest instance} 
 \label{fig:22.6}       % Give a unique label
 \end{figure}
@@ -272,7 +272,7 @@ To compute the most determined spanning tree or forest, we may use the\texttt{Be
    Average determination(s) : [Decimal('0.655')]
 \end{lstlisting}
 
-The given graph is connected and, hence, admits a single spanning tree of maximum mean determination = $(0.47 + 0.91 + 0.90 + 0.34)/4 = 0.655$ (see Lines 9, 6 and 10 in Listing \ref{list:22.8} above).
+The given graph is connected and, hence, admits a single spanning tree of maximum mean determination = $(0.47 + 0.91 + 0.90 + 0.34)/4 = 0.655$ (see Lines 9, 6 and 10 in Listing~\ref{list:22.8} above).
 \begin{lstlisting}
 >>> mt.exportGraphViz(\
 ...      fileName='bestDeterminedspanningTree',\
