@@ -48,7 +48,7 @@ The {\tt Digraph} class provides some generic {\tt show...()} methods for explor
 >>> rdg.showComponents()
   *--- Connected Components ---*
   1: ['1', '2', '3', '4', '5', '6', '7']
->>> rdg.showNeighborhood()
+>>> rdg.showNeighborhoods()
   *---- Neighborhoods ------*
      Gamma:
      '1': in => {'5','7','4'}, out => {'5','7','6','3','4'}
@@ -288,7 +288,7 @@ The same \texttt{closeTransitive()} with a \texttt{Reverse = True} flag may be r
 As the original digraph \texttt{rdg} was connected (see above the result of the showShort() command), both the symmetric and the transitive closures operated together, will necessarily produce a single strong component, i.e. a \textbf{complete} digraph. We may sometimes wish to collapse all strong components in a given digraph and construct the so \emph{collapsed} digraph. Using the \texttt{StrongComponentsCollapsedDigraph} constructor \index{StrongComponentsCollapsedDigraph@\texttt{StrongComponentsCollapsedDigraph} class} here will render a single hyper-node gathering all the original nodes (see Line 7 below).
 \begin{lstlisting}[caption={Computing the strong components in a digraph},label=list:2.10]
 >>> from digraphs import StrongComponentsCollapsedDigraph
->>> sc = StrongComponentsCollapsedDigraph(dg)
+>>> sc = StrongComponentsCollapsedDigraph(rdg)
 >>> sc.showAll()
   *----- show detail -----*
    Digraph          : tutRandValDigraph_Scc
