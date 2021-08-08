@@ -32,7 +32,7 @@ book.pdf:
 	bibtex 02-mainMatters/12-chapterAliceChoice.aux
 	bibtex 02-mainMatters/13-chapterBestCSDpts.aux
 	bibtex 02-mainMatters/14-chapterBestStudents.aux
-	#bibtex 02-mainMatters/15-chapterExercises.aux
+	bibtex 02-mainMatters/15-chapterExercises.aux
 	bibtex 02-mainMatters/16-chapterCorrelation.aux
 	bibtex 02-mainMatters/17-chapterKernels.aux
 	bibtex 02-mainMatters/18-chapterConfidentOutrankings.aux
