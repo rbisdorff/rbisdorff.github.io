@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  8 AUG 2021 11:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  8 AUG 2021 15:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2665,106 +2665,125 @@ line 289.
 ]
 Chapter 23.
 [341]
-<Figures/randomSplitGraph.pdf, id=10394, 299.1175pt x 358.33875pt>
+<Figures/randomSplitGraph.pdf, id=10397, 299.1175pt x 358.33875pt>
 File: Figures/randomSplitGraph.pdf Graphic file (type pdf)
 <use Figures/randomSplitGraph.pdf>
-Package pdftex.def Info: Figures/randomSplitGraph.pdf  used on input line 72.
+Package pdftex.def Info: Figures/randomSplitGraph.pdf  used on input line 76.
 (pdftex.def)             Requested size: 199.16928pt x 238.60394pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[342] [343 <./Figures/randomSplitGraph.pdf>] [344
-
-]
-<Figures/berge1.pdf, id=10511, 299.1175pt x 240.9pt>
+[342] [343 <./Figures/randomSplitGraph.pdf>]
+<Figures/berge1.pdf, id=10499, 299.1175pt x 240.9pt>
 File: Figures/berge1.pdf Graphic file (type pdf)
 <use Figures/berge1.pdf>
-Package pdftex.def Info: Figures/berge1.pdf  used on input line 144.
+Package pdftex.def Info: Figures/berge1.pdf  used on input line 147.
 (pdftex.def)             Requested size: 199.16928pt x 160.40599pt.
- [345 <./Figures/berge1.pdf>]
-<Figures/berge2.pdf, id=10562, 299.1175pt x 240.9pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[344]
+<Figures/berge2.pdf, id=10540, 299.1175pt x 240.9pt>
 File: Figures/berge2.pdf Graphic file (type pdf)
 <use Figures/berge2.pdf>
-Package pdftex.def Info: Figures/berge2.pdf  used on input line 187.
+Package pdftex.def Info: Figures/berge2.pdf  used on input line 190.
 (pdftex.def)             Requested size: 199.16928pt x 160.40599pt.
-[346 <./Figures/berge2.pdf>]
-<Figures/permutationGraph.pdf, id=10617, 299.1175pt x 266.9975pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[345 <./Figures/berge1.pdf>]
+<Figures/permutationGraph.pdf, id=10593, 299.1175pt x 266.9975pt>
 File: Figures/permutationGraph.pdf Graphic file (type pdf)
 <use Figures/permutationGraph.pdf>
-Package pdftex.def Info: Figures/permutationGraph.pdf  used on input line 220.
+Package pdftex.def Info: Figures/permutationGraph.pdf  used on input line 223.
 (pdftex.def)             Requested size: 199.16928pt x 177.78331pt.
-<Figures/coloredPermutationGraph.pdf, id=10620, 299.1175pt x 266.9975pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[346 <./Figures/berge2.pdf>]
+<Figures/coloredPermutationGraph.pdf, id=10658, 299.1175pt x 266.9975pt>
 File: Figures/coloredPermutationGraph.pdf Graphic file (type pdf)
 <use Figures/coloredPermutationGraph.pdf>
 Package pdftex.def Info: Figures/coloredPermutationGraph.pdf  used on input lin
-e 243.
+e 246.
 (pdftex.def)             Requested size: 170.71652pt x 152.3857pt.
- [347 <./Figures/permutationGraph.pdf>]
-<Figures/perm_permutationGraph.pdf, id=10681, 417.56pt x 251.94125pt>
+<Figures/perm_permutationGraph.pdf, id=10660, 417.56pt x 251.94125pt>
 File: Figures/perm_permutationGraph.pdf Graphic file (type pdf)
 <use Figures/perm_permutationGraph.pdf>
 Package pdftex.def Info: Figures/perm_permutationGraph.pdf  used on input line 
-259.
+262.
 (pdftex.def)             Requested size: 284.52756pt x 171.68298pt.
 
 
 Class SVMono Warning: \sidecaption: No sufficient room for the legend; 
-using normal \caption on input line 259.
+using normal \caption on input line 262.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[347 <./Figures/permutationGraph.pdf> <./Figures/coloredPermutationGraph.pdf
+
+pdfTeX warning: pdflatex (file ./Figures/coloredPermutationGraph.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+>]
+<Figures/oriented_permutationGraph.png, id=10725, 209.78375pt x 308.15125pt>
+File: Figures/oriented_permutationGraph.png Graphic file (type png)
+<use Figures/oriented_permutationGraph.png>
+Package pdftex.def Info: Figures/oriented_permutationGraph.png  used on input l
+ine 292.
+(pdftex.def)             Requested size: 142.26378pt x 208.97112pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [348pdfTeX warning (ext4): destination with the same identifier (name{figure.23
 .6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.264 \begin{lstlisting}
-                         <./Figures/coloredPermutationGraph.pdf> <./Figures/per
-m_permutationGraph.pdf
-
-pdfTeX warning: pdflatex (file ./Figures/perm_permutationGraph.pdf): PDF inclus
-ion: multiple pdfs with page group included in a single page
->]
-<Figures/oriented_permutationGraph.png, id=10743, 209.78375pt x 308.15125pt>
-File: Figures/oriented_permutationGraph.png Graphic file (type png)
-<use Figures/oriented_permutationGraph.png>
-Package pdftex.def Info: Figures/oriented_permutationGraph.png  used on input l
-ine 289.
-(pdftex.def)             Requested size: 142.26378pt x 208.97112pt.
- [349 <./Figures/oriented_permutationGraph.png>]
-<Figures/randomGraph4335.pdf, id=10773, 299.1175pt x 319.1925pt>
+l.301    Dual 
+              transitivity degree: 1.00 <./Figures/perm_permutationGraph.pdf>]
+[349 <./Figures/oriented_permutationGraph.png>]
+<Figures/randomGraph4335.pdf, id=10802, 299.1175pt x 319.1925pt>
 File: Figures/randomGraph4335.pdf Graphic file (type pdf)
 <use Figures/randomGraph4335.pdf>
-Package pdftex.def Info: Figures/randomGraph4335.pdf  used on input line 334.
+Package pdftex.def Info: Figures/randomGraph4335.pdf  used on input line 337.
 (pdftex.def)             Requested size: 170.71652pt x 182.17538pt.
+<Figures/transOrientGraph.png, id=10808, 398.48875pt x 329.23pt>
+File: Figures/transOrientGraph.png Graphic file (type png)
+<use Figures/transOrientGraph.png>
+Package pdftex.def Info: Figures/transOrientGraph.png  used on input line 365.
+(pdftex.def)             Requested size: 199.16928pt x 164.5543pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[350]
-<Figures/transOrientGraph.png, id=10819, 398.48875pt x 329.23pt>
-File: Figures/transOrientGraph.png Graphic file (type png)
-<use Figures/transOrientGraph.png>
-Package pdftex.def Info: Figures/transOrientGraph.png  used on input line 362.
-(pdftex.def)             Requested size: 199.16928pt x 164.5543pt.
- [351 <./Figures/randomGraph4335.pdf> <./Figures/transOrientGraph.png>]
-<Figures/transOrientDualGraph.png, id=10862, 441.65pt x 277.035pt>
+[350 <./Figures/randomGraph4335.pdf>]
+<Figures/transOrientDualGraph.png, id=10864, 441.65pt x 277.035pt>
 File: Figures/transOrientDualGraph.png Graphic file (type png)
 <use Figures/transOrientDualGraph.png>
 Package pdftex.def Info: Figures/transOrientDualGraph.png  used on input line 3
-91.
+94.
 (pdftex.def)             Requested size: 199.16928pt x 124.93513pt.
-
-[352 <./Figures/transOrientDualGraph.png>] [353]
-<Figures/isomorphicPerms.png, id=10934, 921.4425pt x 396.48125pt>
+ [351 <./Figures/transOrientGraph.png> <./Figures/transOrientDualGraph.png>] [3
+52]
+<Figures/isomorphicPerms.png, id=10927, 921.4425pt x 396.48125pt>
 File: Figures/isomorphicPerms.png Graphic file (type png)
 <use Figures/isomorphicPerms.png>
-Package pdftex.def Info: Figures/isomorphicPerms.png  used on input line 473.
+Package pdftex.def Info: Figures/isomorphicPerms.png  used on input line 476.
 (pdftex.def)             Requested size: 341.43306pt x 146.9075pt.
 
-Overfull \hbox (8.53583pt too wide) in paragraph at lines 473--474
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 476--477
 [][] 
  []
 
-[354 <./Figures/isomorphicPerms.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[353] [354 <./Figures/isomorphicPerms.png>]
 (./02-mainMatters/23-chapterPerfectGraphs.bbl (./book.brf))) [355
 
 ] [356
@@ -2799,52 +2818,52 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 473--474
 
 
 ]
-Overfull \hbox (23.5711pt too wide) in paragraph at lines 54--56
+Overfull \hbox (23.5711pt too wide) in paragraph at lines 55--57
 []\OT1/pcr/m/n/8.5 computeTransitivelyOrientedDigraph() 
  []
 
 [373]
-Overfull \hbox (18.47112pt too wide) in paragraph at lines 79--81
+Overfull \hbox (18.47112pt too wide) in paragraph at lines 80--82
 []\OT1/pcr/m/n/8.5 export3DplotOfCriteriaCorrelation() 
  []
 
 
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 84--86
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 85--87
 []\OT1/pcr/m/n/8.5 ExtendedTriangularRandomVariable 
  []
 
 
-Overfull \hbox (28.6711pt too wide) in paragraph at lines 191--193
+Overfull \hbox (28.6711pt too wide) in paragraph at lines 192--194
 []\OT1/pcr/m/n/8.5 Random3ObjectivesPerformanceTableau() 
  []
 
 
-Overfull \hbox (18.47112pt too wide) in paragraph at lines 193--195
+Overfull \hbox (18.47112pt too wide) in paragraph at lines 194--196
 []\OT1/pcr/m/n/8.5 Random3ObjectivesPerformanceTableau 
  []
 
 
-Overfull \hbox (13.37112pt too wide) in paragraph at lines 195--197
+Overfull \hbox (13.37112pt too wide) in paragraph at lines 196--198
 []\OT1/pcr/m/n/8.5 RandomAcademicPerformanceTableau() 
  []
 
 
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 197--199
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 198--200
 []\OT1/pcr/m/n/8.5 RandomAcademicPerformanceTableau 
  []
 
 [374]
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 204--206
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 205--207
 []\OT1/pcr/m/n/8.5 RandomIntervalIntersectionsGraph 
  []
 
 
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 276--278
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 277--279
 []\OT1/pcr/m/n/8.5 StrongComponentsCollapsedDigraph 
  []
 
 
-Overfull \hbox (8.27113pt too wide) in paragraph at lines 297--299
+Overfull \hbox (8.27113pt too wide) in paragraph at lines 298--300
 []\OT1/pcr/m/n/8.5 UnOpposedBipolarOutrankingDigraph 
  []
 
@@ -2884,23 +2903,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 5A0EAA4ECAEBC9D9AD887EC0C265DC05;43362.
+(rerunfilecheck)             Checksum: 4C7AC39FE9AE6BB959BC5641E6E7D203;43372.
 Package rerunfilecheck Info: File `book.brf' has not changed.
-(rerunfilecheck)             Checksum: 260DAB55B8EA5B41A847D8EF318D37D1;6298.
+(rerunfilecheck)             Checksum: C2D79FB201719F4676DC9FBE33932602;6402.
  ) 
 Here is how much of TeX's memory you used:
- 24261 strings out of 478994
- 368889 string characters out of 5858184
- 1121653 words of memory out of 5000000
- 33876 multiletter control sequences out of 15000+600000
+ 24294 strings out of 478994
+ 369197 string characters out of 5858184
+ 1121978 words of memory out of 5000000
+ 33908 multiletter control sequences out of 15000+600000
  485706 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,12n,102p,1716b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{page.348,\\relax\040\\hskip\0400.2em\\ignorespace
-s\040349} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{page.33,\\relax\040\\hskip\0400.2em\\ignorespaces\0
-4034} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{page.33,\\relax\040\\hskip\0400.2em\\ignorespaces
+\04034} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
@@ -2923,10 +2939,10 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (390 pages, 7344959 bytes).
+Output written on book.pdf (390 pages, 7345277 bytes).
 PDF statistics:
- 13268 PDF objects out of 15390 (max. 8388607)
- 12324 compressed objects within 124 object streams
- 7129 named destinations out of 7423 (max. 500000)
+ 13279 PDF objects out of 15390 (max. 8388607)
+ 12335 compressed objects within 124 object streams
+ 7130 named destinations out of 7423 (max. 500000)
  2058 words of extra memory for PDF output out of 10000 (max. 10000000)
 
