@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  8 AUG 2021 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  9 AUG 2021 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,7 +536,7 @@ File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
 
 Writing index file book.idx
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-81.
+83.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -599,24 +599,24 @@ LaTeX Warning: Label `sec:22.2' multiply defined.
 ) (./02-mainMatters/23-chapterPerfectGraphs.aux))
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 183.
+LaTeX Font Info:    ... okay on input line 183.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -641,7 +641,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count323
-Package hyperref Info: Link coloring ON on input line 181.
+Package hyperref Info: Link coloring ON on input line 183.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -656,15 +656,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 \c@section@level=\count324
 LaTeX Info: Redefining \Ref on input line 520.
 )
-LaTeX Info: Redefining \ref on input line 181.
-LaTeX Info: Redefining \pageref on input line 181.
-LaTeX Info: Redefining \nameref on input line 181.
+LaTeX Info: Redefining \ref on input line 183.
+LaTeX Info: Redefining \pageref on input line 183.
+LaTeX Info: Redefining \nameref on input line 183.
  (./book.out) (./book.out)
 \@outlinefile=\write4
 \openout4 = `book.out'.
 
-LaTeX Info: Redefining \Ref on input line 181.
-Package backref Info: ** backref set up for natbib ** on input line 181.
+LaTeX Info: Redefining \Ref on input line 183.
+Package backref Info: ** backref set up for natbib ** on input line 183.
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
@@ -2460,102 +2460,111 @@ Chapter 21.
 
 
 ]
-Overfull \hbox (2.17033pt too wide) in paragraph at lines 67--69
+Overfull \hbox (2.17033pt too wide) in paragraph at lines 68--70
 []\OT1/ptm/m/n/10 The stored graph in-stance may be reloaded and plot-ted with 
 the generic \OT1/pcr/m/n/10 export-
  []
 
-<Figures/tutorialGraph.pdf, id=9278, 299.1175pt x 261.97874pt>
+<Figures/tutorialGraph.pdf, id=9279, 299.1175pt x 261.97874pt>
 File: Figures/tutorialGraph.pdf Graphic file (type pdf)
 <use Figures/tutorialGraph.pdf>
-Package pdftex.def Info: Figures/tutorialGraph.pdf  used on input line 79.
+Package pdftex.def Info: Figures/tutorialGraph.pdf  used on input line 80.
 (pdftex.def)             Requested size: 199.16928pt x 174.44153pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[314] [315 <./Figures/tutorialGraph.pdf>]
-<Figures/tutorial-3-coloring.pdf, id=9389, 299.1175pt x 261.97874pt>
+[314] [315 <./Figures/tutorialGraph.pdf>] [316]
+<Figures/tutorial-3-coloring.pdf, id=9434, 299.1175pt x 261.97874pt>
 File: Figures/tutorial-3-coloring.pdf Graphic file (type pdf)
 <use Figures/tutorial-3-coloring.pdf>
 Package pdftex.def Info: Figures/tutorial-3-coloring.pdf  used on input line 17
-7.
+9.
 (pdftex.def)             Requested size: 170.71652pt x 149.5213pt.
-<Figures/tutorial-2-coloring.pdf, id=9390, 299.1175pt x 261.97874pt>
+<Figures/tutorial-2-coloring.pdf, id=9435, 299.1175pt x 261.97874pt>
 File: Figures/tutorial-2-coloring.pdf Graphic file (type pdf)
 <use Figures/tutorial-2-coloring.pdf>
 Package pdftex.def Info: Figures/tutorial-2-coloring.pdf  used on input line 17
-7.
+9.
 (pdftex.def)             Requested size: 170.71652pt x 149.5213pt.
 
 
 Class SVMono Warning: \sidecaption: No sufficient room for the legend; 
-using normal \caption on input line 177.
+using normal \caption on input line 179.
 
 
-Overfull \hbox (8.53581pt too wide) in paragraph at lines 177--177
+Overfull \hbox (8.53581pt too wide) in paragraph at lines 179--179
 [][] [][] 
  []
+
+[317pdfTeX warning (ext4): destination with the same identifier (name{figure.21
+.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.200     execution 
+                    time: 0.00032 sec. <./Figures/tutorial-3-coloring.pdf> <./F
+igures/tutorial-2-coloring.pdf
+
+pdfTeX warning: pdflatex (file ./Figures/tutorial-2-coloring.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Hyper reference `ist:21.7' on page 318 undefined on input line 2
+10.
+
+
+LaTeX Warning: Reference `ist:21.7' on page 318 undefined on input line 210.
+
+
+LaTeX Warning: Reference `ist:21.7' on page 318 undefined on input line 210.
+
+[318] [319]
+<Figures/maxMatchingcycleGraph.pdf, id=9605, 403.5075pt x 438.63875pt>
+File: Figures/maxMatchingcycleGraph.pdf Graphic file (type pdf)
+<use Figures/maxMatchingcycleGraph.pdf>
+Package pdftex.def Info: Figures/maxMatchingcycleGraph.pdf  used on input line 
+331.
+(pdftex.def)             Requested size: 199.16928pt x 216.50774pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[316] [317pdfTeX warning (ext4): destination with the same identifier (name{fig
-ure.21.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.215     ['v
-             4', 'v5'] <./Figures/tutorial-3-coloring.pdf> <./Figures/tutorial-
-2-coloring.pdf
-
-pdfTeX warning: pdflatex (file ./Figures/tutorial-2-coloring.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
->] [318] [319]
-<Figures/maxMatchingcycleGraph.pdf, id=9615, 403.5075pt x 438.63875pt>
-File: Figures/maxMatchingcycleGraph.pdf Graphic file (type pdf)
-<use Figures/maxMatchingcycleGraph.pdf>
-Package pdftex.def Info: Figures/maxMatchingcycleGraph.pdf  used on input line 
-328.
-(pdftex.def)             Requested size: 199.16928pt x 216.50774pt.
- [320 <./Figures/maxMatchingcycleGraph.pdf>]
-<Figures/grid-15-15-ising.pdf, id=9667, 569.12625pt x 578.16pt>
+[320]
+<Figures/grid-15-15-ising.pdf, id=9659, 569.12625pt x 578.16pt>
 File: Figures/grid-15-15-ising.pdf Graphic file (type pdf)
 <use Figures/grid-15-15-ising.pdf>
-Package pdftex.def Info: Figures/grid-15-15-ising.pdf  used on input line 355.
+Package pdftex.def Info: Figures/grid-15-15-ising.pdf  used on input line 358.
 (pdftex.def)             Requested size: 312.9803pt x 317.96251pt.
 
 
 Class SVMono Warning: \sidecaption: No sufficient room for the legend; 
-using normal \caption on input line 355.
+using normal \caption on input line 358.
 
-[321pdfTeX warning (ext4): destination with the same identifier (name{figure.21
-.4}) has been already used, duplicate ignored
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[321 <./Figures/maxMatchingcycleGraph.pdf>] [322pdfTeX warning (ext4): destinat
+ion with the same identifier (name{figure.21.4}) has been already used, duplica
+te ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.363 \begin{lstlisting}
-                         <./Figures/grid-15-15-ising.pdf>] [322]
-<Figures/cg12.pdf, id=9752, 546.04pt x 578.16pt>
+l.392 >>> 
+          met = MetropolisChain(g,probs) <./Figures/grid-15-15-ising.pdf>]
+[323]
+<Figures/cg12.pdf, id=9795, 546.04pt x 578.16pt>
 File: Figures/cg12.pdf Graphic file (type pdf)
 <use Figures/cg12.pdf>
-Package pdftex.def Info: Figures/cg12.pdf  used on input line 460.
+Package pdftex.def Info: Figures/cg12.pdf  used on input line 458.
 (pdftex.def)             Requested size: 170.71652pt x 180.75395pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[323]
+ [324 <./Figures/cg12.pdf>]
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <8.5> not available
-(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 480.
- [324 <./Figures/cg12.pdf>] [325]
-<Figures/c12.png, id=9893, 372.1905pt x 341.47575pt>
+(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 478.
+ [325] [326]
+<Figures/c12.png, id=9939, 372.1905pt x 341.47575pt>
 File: Figures/c12.png Graphic file (type png)
 <use Figures/c12.png>
-Package pdftex.def Info: Figures/c12.png  used on input line 573.
+Package pdftex.def Info: Figures/c12.png  used on input line 565.
 (pdftex.def)             Requested size: 170.71652pt x 156.62743pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[326] [327 <./Figures/c12.png (PNG copy)>]
+ [327 <./Figures/c12.png (PNG copy)>]
 
 (./02-mainMatters/21-chapterGraphs.bbl (./book.brf)
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
@@ -2570,7 +2579,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
 
  (./02-mainMatters/22-chapterTreeGraphs.tex
 Chapter 22.
-<Figures/tutRandomTree.pdf, id=9945, 361.35pt x 505.89pt>
+<Figures/tutRandomTree.pdf, id=9961, 361.35pt x 505.89pt>
 File: Figures/tutRandomTree.pdf Graphic file (type pdf)
 <use Figures/tutRandomTree.pdf>
 Package pdftex.def Info: Figures/tutRandomTree.pdf  used on input line 36.
@@ -2586,13 +2595,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ] [330 <./Figures/tutRandomTree.pdf>]
-<Figures/tutPruefTree.pdf, id=10018, 431.6125pt x 388.45125pt>
+<Figures/tutPruefTree.pdf, id=10034, 431.6125pt x 388.45125pt>
 File: Figures/tutPruefTree.pdf Graphic file (type pdf)
 <use Figures/tutPruefTree.pdf>
 Package pdftex.def Info: Figures/tutPruefTree.pdf  used on input line 76.
 (pdftex.def)             Requested size: 199.16928pt x 179.25282pt.
  [331 <./Figures/tutPruefTree.pdf>]
-<Figures/test62.pdf, id=10068, 299.1175pt x 348.30125pt>
+<Figures/test62.pdf, id=10084, 299.1175pt x 348.30125pt>
 File: Figures/test62.pdf Graphic file (type pdf)
 <use Figures/test62.pdf>
 Package pdftex.def Info: Figures/test62.pdf  used on input line 118.
@@ -2602,7 +2611,7 @@ Package pdftex.def Info: Figures/test62.pdf  used on input line 118.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [332]
-<Figures/rootedTree.pdf, id=10101, 279.0425pt x 303.1325pt>
+<Figures/rootedTree.pdf, id=10117, 279.0425pt x 303.1325pt>
 File: Figures/rootedTree.pdf Graphic file (type pdf)
 <use Figures/rootedTree.pdf>
 Package pdftex.def Info: Figures/rootedTree.pdf  used on input line 143.
@@ -2612,7 +2621,7 @@ Package pdftex.def Info: Figures/rootedTree.pdf  used on input line 143.
 pdfTeX warning: pdflatex (file ./Figures/rootedTree.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >]
-<Figures/randomSpanningTree.pdf, id=10160, 326.21875pt x 322.20375pt>
+<Figures/randomSpanningTree.pdf, id=10176, 326.21875pt x 322.20375pt>
 File: Figures/randomSpanningTree.pdf Graphic file (type pdf)
 <use Figures/randomSpanningTree.pdf>
 Package pdftex.def Info: Figures/randomSpanningTree.pdf  used on input line 185
@@ -2623,7 +2632,7 @@ Package pdftex.def Info: Figures/randomSpanningTree.pdf  used on input line 185
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [334]
-<Figures/spanningForest.pdf, id=10205, 512.91624pt x 447.6725pt>
+<Figures/spanningForest.pdf, id=10221, 512.91624pt x 447.6725pt>
 File: Figures/spanningForest.pdf Graphic file (type pdf)
 <use Figures/spanningForest.pdf>
 Package pdftex.def Info: Figures/spanningForest.pdf  used on input line 213.
@@ -2639,7 +2648,7 @@ we can use the\OT1/pcr/m/n/10 BestDeterminedSpanningForest
  []
 
 [336 <./Figures/spanningForest.pdf>]
-<Figures/bestDeterminedSpanningTree.pdf, id=10311, 299.1175pt x 282.05376pt>
+<Figures/bestDeterminedSpanningTree.pdf, id=10327, 299.1175pt x 282.05376pt>
 File: Figures/bestDeterminedSpanningTree.pdf Graphic file (type pdf)
 <use Figures/bestDeterminedSpanningTree.pdf>
 Package pdftex.def Info: Figures/bestDeterminedSpanningTree.pdf  used on input 
@@ -2666,7 +2675,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ]
 Chapter 23.
 [341]
-<Figures/randomSplitGraph.pdf, id=10407, 299.1175pt x 358.33875pt>
+<Figures/randomSplitGraph.pdf, id=10423, 299.1175pt x 358.33875pt>
 File: Figures/randomSplitGraph.pdf Graphic file (type pdf)
 <use Figures/randomSplitGraph.pdf>
 Package pdftex.def Info: Figures/randomSplitGraph.pdf  used on input line 76.
@@ -2676,7 +2685,7 @@ Package pdftex.def Info: Figures/randomSplitGraph.pdf  used on input line 76.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [342] [343 <./Figures/randomSplitGraph.pdf>]
-<Figures/berge1.pdf, id=10509, 299.1175pt x 240.9pt>
+<Figures/berge1.pdf, id=10525, 299.1175pt x 240.9pt>
 File: Figures/berge1.pdf Graphic file (type pdf)
 <use Figures/berge1.pdf>
 Package pdftex.def Info: Figures/berge1.pdf  used on input line 147.
@@ -2686,7 +2695,7 @@ Package pdftex.def Info: Figures/berge1.pdf  used on input line 147.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [344]
-<Figures/berge2.pdf, id=10554, 299.1175pt x 240.9pt>
+<Figures/berge2.pdf, id=10570, 299.1175pt x 240.9pt>
 File: Figures/berge2.pdf Graphic file (type pdf)
 <use Figures/berge2.pdf>
 Package pdftex.def Info: Figures/berge2.pdf  used on input line 190.
@@ -2696,7 +2705,7 @@ Package pdftex.def Info: Figures/berge2.pdf  used on input line 190.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [345 <./Figures/berge1.pdf>]
-<Figures/permutationGraph.pdf, id=10609, 299.1175pt x 266.9975pt>
+<Figures/permutationGraph.pdf, id=10625, 299.1175pt x 266.9975pt>
 File: Figures/permutationGraph.pdf Graphic file (type pdf)
 <use Figures/permutationGraph.pdf>
 Package pdftex.def Info: Figures/permutationGraph.pdf  used on input line 223.
@@ -2706,7 +2715,7 @@ Package pdftex.def Info: Figures/permutationGraph.pdf  used on input line 223.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [346 <./Figures/berge2.pdf>]
-<Figures/coloredPermutationGraph.pdf, id=10674, 299.1175pt x 266.9975pt>
+<Figures/coloredPermutationGraph.pdf, id=10690, 299.1175pt x 266.9975pt>
 File: Figures/coloredPermutationGraph.pdf Graphic file (type pdf)
 <use Figures/coloredPermutationGraph.pdf>
 Package pdftex.def Info: Figures/coloredPermutationGraph.pdf  used on input lin
@@ -2717,7 +2726,7 @@ e 246.
 pdfTeX warning: pdflatex (file ./Figures/coloredPermutationGraph.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >]
-<Figures/perm_permutationGraph.pdf, id=10738, 417.56pt x 251.94125pt>
+<Figures/perm_permutationGraph.pdf, id=10754, 417.56pt x 251.94125pt>
 File: Figures/perm_permutationGraph.pdf Graphic file (type pdf)
 <use Figures/perm_permutationGraph.pdf>
 Package pdftex.def Info: Figures/perm_permutationGraph.pdf  used on input line 
@@ -2728,7 +2737,7 @@ Package pdftex.def Info: Figures/perm_permutationGraph.pdf  used on input line
 Class SVMono Warning: \sidecaption: No sufficient room for the legend; 
 using normal \caption on input line 262.
 
-<Figures/oriented_permutationGraph.png, id=10742, 209.78375pt x 308.15125pt>
+<Figures/oriented_permutationGraph.png, id=10758, 209.78375pt x 308.15125pt>
 File: Figures/oriented_permutationGraph.png Graphic file (type png)
 <use Figures/oriented_permutationGraph.png>
 Package pdftex.def Info: Figures/oriented_permutationGraph.png  used on input l
@@ -2744,18 +2753,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 l.297 \begin{lstlisting}
                          <./Figures/perm_permutationGraph.pdf>] [349 <./Figures
 /oriented_permutationGraph.png>]
-<Figures/randomGraph4335.pdf, id=10816, 299.1175pt x 319.1925pt>
+<Figures/randomGraph4335.pdf, id=10833, 299.1175pt x 319.1925pt>
 File: Figures/randomGraph4335.pdf Graphic file (type pdf)
 <use Figures/randomGraph4335.pdf>
 Package pdftex.def Info: Figures/randomGraph4335.pdf  used on input line 337.
 (pdftex.def)             Requested size: 170.71652pt x 182.17538pt.
  [350 <./Figures/randomGraph4335.pdf>]
-<Figures/transOrientGraph.png, id=10877, 398.48875pt x 329.23pt>
+<Figures/transOrientGraph.png, id=10893, 398.48875pt x 329.23pt>
 File: Figures/transOrientGraph.png Graphic file (type png)
 <use Figures/transOrientGraph.png>
 Package pdftex.def Info: Figures/transOrientGraph.png  used on input line 365.
 (pdftex.def)             Requested size: 199.16928pt x 164.5543pt.
-<Figures/transOrientDualGraph.png, id=10880, 441.65pt x 277.035pt>
+<Figures/transOrientDualGraph.png, id=10896, 441.65pt x 277.035pt>
 File: Figures/transOrientDualGraph.png Graphic file (type png)
 <use Figures/transOrientDualGraph.png>
 Package pdftex.def Info: Figures/transOrientDualGraph.png  used on input line 3
@@ -2767,12 +2776,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [351 <./Figures/transOrientGraph.png>] [352 <./Figures/transOrientDualGraph.png
 >]
-<Figures/gtesta.pdf, id=10942, 299.1175pt x 316.18124pt>
+<Figures/gtesta.pdf, id=10959, 299.1175pt x 316.18124pt>
 File: Figures/gtesta.pdf Graphic file (type pdf)
 <use Figures/gtesta.pdf>
 Package pdftex.def Info: Figures/gtesta.pdf  used on input line 477.
 (pdftex.def)             Requested size: 170.71652pt x 180.45676pt.
-<Figures/gtestb.pdf, id=10943, 299.1175pt x 307.1475pt>
+<Figures/gtestb.pdf, id=10960, 299.1175pt x 307.1475pt>
 File: Figures/gtestb.pdf Graphic file (type pdf)
 <use Figures/gtestb.pdf>
 Package pdftex.def Info: Figures/gtestb.pdf  used on input line 478.
@@ -2858,17 +2867,17 @@ Overfull \hbox (3.17114pt too wide) in paragraph at lines 198--200
  []
 
 [374]
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 205--207
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 206--208
 []\OT1/pcr/m/n/8.5 RandomIntervalIntersectionsGraph 
  []
 
 
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 277--279
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 279--281
 []\OT1/pcr/m/n/8.5 StrongComponentsCollapsedDigraph 
  []
 
 
-Overfull \hbox (8.27113pt too wide) in paragraph at lines 298--300
+Overfull \hbox (8.27113pt too wide) in paragraph at lines 300--302
 []\OT1/pcr/m/n/8.5 UnOpposedBipolarOutrankingDigraph 
  []
 
@@ -2908,15 +2917,15 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 4C7AC39FE9AE6BB959BC5641E6E7D203;43372.
+(rerunfilecheck)             Checksum: D47CDAF0A94DFF8C155EC7BB0D341B1F;43338.
 Package rerunfilecheck Info: File `book.brf' has not changed.
-(rerunfilecheck)             Checksum: EACA0004F97C780CA78DF25565FAD677;6455.
+(rerunfilecheck)             Checksum: 6E0A29B32C63091DE3C87440A2B6FF1A;6456.
  ) 
 Here is how much of TeX's memory you used:
- 24358 strings out of 478994
- 369805 string characters out of 5858184
- 1122516 words of memory out of 5000000
- 33971 multiletter control sequences out of 15000+600000
+ 24417 strings out of 478994
+ 370365 string characters out of 5858184
+ 1124271 words of memory out of 5000000
+ 34034 multiletter control sequences out of 15000+600000
  485706 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,12n,102p,1716b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2944,10 +2953,10 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (390 pages, 7303666 bytes).
+Output written on book.pdf (390 pages, 7309428 bytes).
 PDF statistics:
- 13345 PDF objects out of 15390 (max. 8388607)
- 12387 compressed objects within 124 object streams
- 7130 named destinations out of 7423 (max. 500000)
+ 13379 PDF objects out of 15390 (max. 8388607)
+ 12420 compressed objects within 125 object streams
+ 7126 named destinations out of 7423 (max. 500000)
  2063 words of extra memory for PDF output out of 10000 (max. 10000000)
 
