@@ -1,47 +1,30 @@
 \chapter{On computing digraph kernels}
 \label{sec:17}
 
-\abstract*{}
+\abstract*{ We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and serates into initial and terminal kernels. In, furthermore, lateralized outranking digraphs, initial and terminal kernels become separate and may deliver suitable best resp. worst choice recommendations. After commenting the tractability of kernel computations, we close the chpater with the solving of bipolar-valued \Berge kernel equation systems.}
 
-\abstract{}
+\abstract{We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and serates into initial and terminal kernels. In, furthermore, lateralized outranking digraphs, initial and terminal kernels become separate and may deliver suitable best resp. worst choice recommendations. After commenting the tractability of kernel computations, we close the chpater with the solving of bipolar-valued \Berge kernel equation systems.}
 
 \section{What is a graph kernel ?}
 \label{sec:17.1}
 
 We call \emph{choice} in a graph, respectively a digraph, a subset of its vertices, resp. of its nodes or actions. A choice $Y$ is called \emph{internally stable} or \emph{independent} when there exist no links --(edges) or relations (arcs)-- between its members. Furthermore, a choice $Y$ is called \emph{externally stable} when for each vertex, node or action $x$ not in $Y$, there exists at least a member $y$ of $Y$ such that $x$ is linked or related to $y$. Now, an internally \emph{and} externally stable choice is called a \emph{kernel}.  
 
-A first trivial example is immediately given by the maximal independent vertices sets (MISs) of the $n$-cycle graph (see Fig.~\ref{fig:22.7.2}). Indeed, each MIS in the $n$-cycle graph is by definition independent, i.e. \emph{internally stable}, and each non selected vertex in the $n$-cycle graph is in relation with either one or even two members of the MIS.
+A first trivial example is immediately given by the maximal independent vertices sets (MISs) of the $n$-cycle graph (see Fig.~\vref{fig:22.7.2}). Indeed, each MIS in the $n$-cycle graph is by definition independent, i.e. \emph{internally stable}, and each non selected vertex in the $n$-cycle graph is in relation with either one or even two members of the MIS.
 
-In all graph or symmetric digraph, the \emph{maximality condition} imposed on the internal stability is equivalent to the \emph{external stability} condition. Indeed, if there would exist a vertex or node not related to any of the elements of a choice, then we may safely add this vertex or node to the given choice without violating its internal stability. All kernels must hence be maximal independent choices. In fact, in a topological sense, they correspond to maximal \emph{holes} in the given graph.
+In all graphs or symmetric digraphs, the \emph{maximality condition} imposed on the internal stability is equivalent to the \emph{external stability} condition. Indeed, if there would exist a vertex or node not related to any of the elements of a choice, we may safely add this vertex or node to the given choice without violating its internal stability. All kernels must hence be maximal independent choices. In fact, in a topological sense, they correspond to maximal \emph{holes} in the given graph.
 
-We may illustrate this coincidence between MISs and kernels in graphs
-and symmetric digraphs with the following random 3-regular graph
-instance.
-\begin{lstlisting}
+We may illustrate in Fig.~\vref{fig:17.1} this coincidence between MISs and kernels in graphs and symmetric digraphs with a random 3-regular graph instance generated in Listing~\vref{list:17.1}\index{RandomRegularGraph@\texttt{RandomRegularGraph} class}. A random MIS in this graph may be computed by using the \texttt{MISModel} class\index{MISModel@\texttt{MISModel} class} (see Lines 5-8 below).
+\begin{lstlisting}[caption={Generating a random 3-regular graph of order 12},label=list:17.1]
 >>> from graphs import RandomRegularGraph
 >>> g = RandomRegularGraph(order=12,\
 ...                        degree=3,seed=100)
->>> g.exportGraphViz('random3RegularGraph')
-  *---- exporting a dot file for GraphViz tools --*
-   Exporting to random3RegularGraph.dot
-   fdp -Tpng random3RegularGraph.dot\
-                   -o random3RegularGraph.png
-\end{lstlisting}
-\begin{figure}[h]
-\sidecaption[t]
-\includegraphics[width=7cm]{Figures/random3RegularGraph.png}
-\caption{A random 3-regular graph instance}
-\label{fig:17.1}       % Give a unique label
-\end{figure}
-
-A random MIS in this graph may be computed for instance by using the \texttt{MISModel} class.
-\begin{lstlisting}
 >>> from graphs import MISModel
 >>> mg = MISModel(g)
   Iteration:  1
     Running a Gibbs Sampler for 660 step !
     {'a06', 'a02', 'a12', 'a10'}  is maximal !
->>> mg.exportGraphViz('random3RegularGraph_mis')
+>>> mg.exportGraphViz('random3RegularGraph-mis')
   *---- exporting a dot file for GraphViz tools ---*
    Exporting to random3RegularGraph-mis.dot
    fdp -Tpng random3RegularGraph-mis.dot\
@@ -50,12 +33,12 @@ A random MIS in this graph may be computed for instance by using the \texttt{MIS
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/random3RegularGraph-mis.png}
-\caption{A random MIS colored in the random 3-regular graph}
-\label{fig:17.2}       % Give a unique label
+\caption{A random MIS colored in the random 3-regular graph. All non blue vertices are covered by at least one blue vertex.}
+\label{fig:17.1}       % Give a unique label
 \end{figure}
 
-It is easily verified in Fig. \ref{fig:17.2} above, that the computed MIS renders indeed a valid kernel of the given graph. The complete set of kernels of this 3-regular graph instance coincides hence with the set of its MISs. 
-\begin{lstlisting}
+It is easily verified in Fig.~\vref{fig:17.1}, that the computed MIS renders indeed a valid kernel of the given graph. The complete set of kernels of this 3-regular graph instance coincides hence with the set of its MISs. 
+\begin{lstlisting}[caption={Printing out all maximal independent sets of the random 3-regular graph.},label=list:17.2]
 >>> g.showMIS()
   *---  Maximal Independent Sets ---*
    ['a01', 'a02', 'a03', 'a07']
@@ -103,20 +86,19 @@ All graphs and symmetric digraphs admit MISs, hence also kernels. In the context
 \label{sec:17.2}
 
 In an oriented graph context, the internal stability condition of the kernel concept remains untouched; however, the external stability condition gets indeed split up by the orientation into two lateral cases:
-\begin{enumerate}[nosep]
+\begin{enumerate}[topsep=1pt]
 \item A \emph{dominant} stability condition, where each non selected node is dominated by at least one member of the kernel;
 \item An \emph{absorbent} stability condition, where each non selected node is absorbed by at least one member of the kernel.
 \end{enumerate}
 
-A both internally \textbf{and} dominant, resp. absorbent stable choice is called a dominant or \emph{initial}, resp. an absorbent or \emph{terminal} kernel. From a topological perspective, the initial kernel concept looks from the outside of the digraph into its interior, whereas the terminal kernel looks from the interior of a digraph toward its outside. From an algebraic perspective, the initial kernel is a prefix operand, and the terminal kernel is a postfix operand in the \Berge kernel equation systems (see Section \ref{sec:17.6}).
+A both internally stable \textbf{and} dominant, resp. absorbent choice is called a dominant or \emph{initial}, resp. an absorbent or \emph{terminal} kernel. From a topological perspective, the initial kernel concept looks from the outside of the digraph into its interior, whereas the terminal kernel looks from the interior of a digraph toward its outside. From an algebraic perspective, the initial kernel is a prefix operand, and the terminal kernel is a postfix operand in the \Berge kernel equation systems (see Section \ref{sec:17.6}).
 
-Furthermore, as the kernel concept involves conjointly a positive logical refutation (the internal stability) and a positive logical affirmation (the external stability), it appeared rather quickly necessary in our operational developments to adopt a bipolar characteristic $[-1.0,1.0]$ valuation domain, modelling logical negation by a change of numerical sign and including explicitly a third median logical value ($0.0$) expressing logical \emph{indeterminateness} --neither positive, nor negative.\footnote{It is D. Bouyssou \index{Bouyssou@\emph{D. Bouyssou}} who first suggested us to adopt bipolar-valued relational characteristics (see \citep{BIS-2000,BIS-2002,BIS-2004a}).}.
+Furthermore, as the kernel concept involves conjointly a positive logical refutation (the internal stability) and a positive logical affirmation (the external stability), it appeared rather quickly necessary in our operational developments to adopt a bipolar characteristic $[-1.0,1.0]$ valuation domain, modelling logical negation by a change of numerical sign and including explicitly a third median value ($0.0$), expressing logical \emph{indeterminateness} --neither positive, nor negative.\footnote{It is D. Bouyssou \index{Bouyssou@\emph{D. Bouyssou}} who first suggested us to adopt bipolar-valued relational characteristics (see \citep{BIS-2000,BIS-2002,BIS-2004a}).}.
 
 In such a  bipolar-valued context, we call \emph{prekernel}\index{prekernel} a choice who is \emph{externally stable} and for which the internal stability condition is \emph{valid or indeterminate}. We say that the independence condition is in this case only \emph{weakly validated}. Notice that all kernels are hence prekernels, but not vice-versa.
 
 In graphs or symmetric digraphs, where there is essentially no apparent \emph{laterality}; all prekernels are initial and terminal at the same time. A universal example is given by the \emph{complete} digraph \index{CompleteDigraph@\texttt{CompleteDigraph} class}.
-
-\begin{lstlisting}
+\begin{lstlisting}[caption={The prekernels of a complete digraph},label=list:17.3]
 >>> from digraphs import CompleteDigraph
 >>> u = CompleteDigraph(order=5)
 >>> u
@@ -156,8 +138,8 @@ In graphs or symmetric digraphs, where there is essentially no apparent \emph{la
 \end{lstlisting}
 In a complete digraph, each single node is indeed both an initial and a terminal prekernel candidate and there is no definite begin or end of the digraph to be detected. Laterality is here entirely relative to a specific singleton chosen as reference point of view.
 
-The same absence of laterality is apparent in two other universal digraph models, the \emph{empty}\index{EmptyDigraph@\texttt{EmptyDigraph} class} and the \emph{indeterminate} digraph\index{IndeterminateDigraph@\texttt{IndeterminateDigraph} class}. 
-\begin{lstlisting}
+The same absence of laterality is apparent (see Listing~\vref{list:17.4}) in two other universal digraph models, the \emph{empty}\index{EmptyDigraph@\texttt{EmptyDigraph} class} and the \emph{indeterminate} digraph\index{IndeterminateDigraph@\texttt{IndeterminateDigraph} class}. 
+\begin{lstlisting}[caption={The prekernels of the empty or indeterminate digraph},label=list:17.4]
 >>> from digraphs import EmptyDigraph
 >>> ed = EmptyDigraph(order=5)
 >>> ed.showPreKernels()
@@ -172,9 +154,6 @@ The same absence of laterality is apparent in two other universal digraph models
        independence :  1.0 
        dominance    :  1.0
        absorbency   :  1.0
-\end{lstlisting}
-In the empty digraph, the whole set of nodes gives indeed at the same time the unique initial and terminal prekernel. Similarly, for the \emph{indeterminate} digraph.
-\begin{lstlisting}
 >>> from digraphs import IndeterminateDigraph
 >>> id = IndeterminateDigraph(order=5)
 >>> id.showPreKernels()
@@ -190,11 +169,12 @@ In the empty digraph, the whole set of nodes gives indeed at the same time the u
        dominance    :  1.0
        absorbency   :  1.0
 \end{lstlisting}
+In the empty digraph, the whole set of nodes gives indeed at the same time the unique initial and terminal prekernel (see Lines 6 and 11). Similarly, for the \emph{indeterminate} digraph (see Lines 20 and 25).
 
-Both these results make sense, as in a completely empty or indeterminate digraph, there is no \emph{interior} of the digraph defined, only a \emph{border} which is hence at the same time an initial and terminal prekernel.  Notice however, that in the latter indeterminate case, the complete set of nodes verifies only weakly the internal stability condition (see above).
+Both these results make sense, as in a completely empty or indeterminate digraph, there is no \emph{interior} of the digraph defined, only a \emph{border} which is hence at the same time an initial and terminal prekernel (see Section~\vref{sec:2.4}).  Notice however, that in the latter indeterminate case, the complete set of nodes verifies only weakly the internal stability condition (see Lines 21 and 26).
 
 Other common digraph models, although being clearly oriented, may show nevertheless no apparent laterality, like \emph{chordless circuits}\index{chordless circuits}, i.e. holes surrounded by an oriented cycle -a circuit- of odd length. They do not admit in fact any initial or terminal prekernel.\index{CirculantDigraph@\texttt{CirculantDigraph} class}
-\begin{lstlisting}
+\begin{lstlisting}[caption={The prekernels of the 5-circuit digraph},label=list:17.5]
 >>> from digraphs import CirculantDigraph
 >>> c5 = CirculantDigraph(order=5,circulants=[1])
 >>> c5.showPreKernels()
@@ -206,7 +186,7 @@ Other common digraph models, although being clearly oriented, may show neverthel
 \end{lstlisting}
 
 Chordless circuits of \emph{even} length $2 \times k$, with $k > 1$, contain however two isomorphic prekernels of cardinality $k$ which qualify conjointly as initial and terminal candidates.
-\begin{lstlisting}
+\begin{lstlisting}[caption={The prekernels of the 6-circuit digraph},label=list:17.6]
 >>> c6 = CirculantDigraph(order=6,circulants=[1])
 >>> c6.showPreKernels()
   *--- Computing preKernels ---*
@@ -217,8 +197,10 @@ Chordless circuits of \emph{even} length $2 \times k$, with $k > 1$, contain how
     ['1', '3', '5'] ind. : 1.0, dom. : 1.0, abs. : 1.0
     ['2', '4', '6'] ind. : 1.0, dom. : 1.0, abs. : 1.0
 \end{lstlisting}
-Chordless circuits of even length may thus be indifferently oriented along two opposite directions. Notice by the way that the duals of all chordless circuits of odd or even length, i.e. \emph{filled} circuits\index{filled circuits} also called \emph{anti-holes}\index{anti-holes} (see Fig. \ref{fig:17.3}), never contain any potential prekernel candidates.
-\begin{lstlisting}
+Chordless circuits of even length may thus be indifferently oriented along two opposite directions.
+
+Notice by the way in Fig.~\vref{fig:17.2} that the duals of all chordless circuits of odd or even length, i.e. \emph{filled} circuits\index{filled circuits} also called \emph{anti-holes}\index{anti-holes} (see Fig. \ref{fig:17.3}), never contain any potential prekernel candidates.\index{DualDigraph@\texttt{DualDigraph} class}
+\begin{lstlisting}[caption={The prekernels of the dual of the 6-circuit digraph},label=list:17.7]
 >>> dc6 = -c6   # dc6 = DualDigraph(c6)
 >>> dc6.showPreKernels()
   *----- statistics -----
@@ -233,22 +215,19 @@ Chordless circuits of even length may thus be indifferently oriented along two o
                -o dualChordlessCircuit.png
 \end{lstlisting}
 \begin{figure}[h]
-\sidecaption
+\sidecaption[t]
 \includegraphics[width=7cm]{Figures/dualChordlessCircuit.png}
-\caption{The dual of the chordless 6-circuit}
-\label{fig:17.3}       % Give a unique label
+\caption{The dual of the chordless 6-circuit. No inital or terminal prekernel --weakly indepent and dominant, resp. absorbent subset of nodes-- may be found in this kind of digraphs.}
+\label{fig:17.2}       % Give a unique label
 \end{figure}
 
 We call \emph{weak}, a chordless circuit with indeterminate inner part.
 
-The \texttt{CirculantDigraph} class provides a parameter for constructing such weak chordless circuits. 
-\begin{lstlisting}
+In Listing~\vref{list:17.8} we use the \texttt{IndeterminateInnerPart} parameter\index{IndeterminateInnerPart@\texttt{IndeterminateInnerPart} parameter} of the \texttt{CirculantDigraph} class for constructing such a weak chordless 6-circuit digraph. It is worth noticing in Fig.~\vref{fig:17.3} that the dual version of a weak circuit corresponds to its \emph{converse} version \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the l\emph{ess than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict converse) \emph{better than} relation.}.
+\begin{lstlisting}[caption={The weak 6-circuit digraph},label=list:17.8]
 >>> from digraphs import CirculantDigraph
 >>> c6 = CirculantDigraph(order=6,circulants=[1],\
 ...                  IndeterminateInnerPart=True)
-\end{lstlisting}
-It is worth noticing that the dual version of a weak circuit corresponds to its \emph{converse} version \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the l\emph{ess than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict converse) \emph{better than} relation.}, i.e. $-c6$ = $\sim c6$ (see Fig. \ref{fig:17.4}).
-\begin{lstlisting}
 >>> (-c6).exportGraphViz()
   *---- exporting a dot file for GraphViz tools ---------*
    Exporting to dual_c6.dot
@@ -262,18 +241,18 @@ It is worth noticing that the dual version of a weak circuit corresponds to its 
 %\sidecaption
 \includegraphics[width=10cm]{Figures/weakChordlessCircuit.png}
 \caption{Dual and converse of the weak 6-circuit}
-\label{fig:17.4}       % Give a unique label
+\label{fig:17.3}       % Give a unique label
 \end{figure}
 
-It is worthwhile noticing that weak chordless circuits of length $n$ are in fact part of the class of digraphs that are invariant under the \emph{codual} transform, $cn = - (\sim cn) = \sim (-cn )$ \footnote{The class of \emph{self-codual} bipolar-valued digraphs consists of all weakly asymmetric digraphs, i.e. digraphs containing only asymmetric and/or indeterminate links. Limit cases consists of, on the one side, full tournaments with indeterminate reflexive links, and, on the other side, fully indeterminate digraphs. In this class, the converse (inverse $\sim$) operator is indeed identical to the dual (negation $-$ ) one.}. In the case, now, of an odd weak chordless circuit, neither the weak chordless circuit, nor its dual, converse, or codual versions will admit any initial or terminal prekernels. 
+Weak chordless circuits of length $n$ are in fact part of the class of digraphs that are invariant under the \emph{codual} transform, $cn = - (\sim cn) = \sim (-cn )$ \footnote{The class of \emph{self-codual} bipolar-valued digraphs consists of all weakly asymmetric digraphs, i.e. digraphs containing only asymmetric and/or indeterminate links. Limit cases consists of, on the one side, full tournaments with indeterminate reflexive links, and, on the other side, fully indeterminate digraphs. In this class, the converse (inverse $\sim$) operator is indeed identical to the dual (negation $-$ ) one.}. When digraph $cn$ is a weak chordless n-circuit, $cn$, $-cn$, $\sim cn$ and $\sim (-cn)$ will all admit the same set of prekernels.  
 
 \section{Kernels in lateralized digraphs}
 \label{sec:17.3}
 
 Humans do live in an apparent physical space of plain transitive lateral orientation, fully empowered in finite geometrical 3D models with linear orders, where first, resp. last ranked, nodes deliver unique initial, resp. terminal, kernels. Similarly, in finite preorders, the first, resp. last, equivalence classes deliver the unique initial, resp. unique terminal, kernels. More generally, in finite partial orders, i.e. asymmetric and transitive digraphs, topological sort algorithms will easily reveal on the first, resp. last, level all unique initial, resp. terminal, kernels.
 
-In genuine random digraphs, however, we may need to check for each of its MISs, whether one, both, or none of the lateralized external stability conditions may be satisfied. Consider, for instance, the following random digraph instance of order 7 and generated with an arc probability of $30\%$. 
-\begin{lstlisting}
+In genuine random digraphs, however, we may need to check for each of its MISs, whether one, both, or none of the lateralized external stability conditions may be satisfied. Consider, for instance in Listing~\vref{list:17.9}, the following random digraph instance of order 7 and generated with an arc probability of $30\%$. 
+\begin{lstlisting}[caption={Generating a random digraph \texttt{rd} of order 7 and arc probability 0.3},label=list:17.9]
 >>> from randomDigraphs import RandomDigraph
 >>> rd = RandomDigraph(order=7,arcProbability=0.3,seed=5)
 >>> rd.exportGraphViz('randomLaterality')
@@ -286,10 +265,10 @@ In genuine random digraphs, however, we may need to check for each of its MISs, 
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/randomLaterality.png}
 \caption{A random digraph instance of order 7 and arc probability 0.3. The digraph instance is neither asymmetric (\texttt{a3} $\Leftrightarrow$ \texttt{a6}) nor symmetric (\texttt{a2} $\rightarrow$ \texttt{a1}, \texttt{a1} $\not\rightarrow$ \texttt{a2}) and, the digraph is not transitive (\texttt{a5} $\rightarrow$ \texttt{a2} $\rightarrow$ \texttt{a1}, but \texttt{a5} $\not\rightarrow$ \texttt{a1}).} 
-\label{fig:17.5}       % Give a unique label
+\label{fig:17.4}       % Give a unique label
 \end{figure}
-The random digraph shown in Fig. \ref{fig:17.5} has no apparent special properties, except from being connected (see Line 3 below).
-\begin{lstlisting}
+The random digraph shown in Fig. \ref{fig:17.4} has no apparent special properties, except from being connected (see Line 3 in Listing~\vref{list:17.10}).
+\begin{lstlisting}[caption={Inspecting the properties of random digraph \texttt{rd}},label=list:17.10]
 >>> rd.showComponents()
   *--- Connected Components ---*
   1: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7']
@@ -307,7 +286,7 @@ The random digraph shown in Fig. \ref{fig:17.5} has no apparent special properti
 There are no chordless circuits (see Line 9 above) and more than half of the required transitive closure is missing (see Line 12 above).
 
 Now, we know that its potential prekernels must be among its set of maximal independent choices. 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Inspecting the prekernels of random digraph \texttt{rd}},label=list:17.11]
 >>> rd.showMIS()
   *---  Maximal independent choices ---*
     ['a2', 'a4', 'a6']
@@ -342,7 +321,7 @@ Now, we know that its potential prekernels must be among its set of maximal inde
        covering     :  0.600
 \end{lstlisting}
      
-Among the six MISs contained in this random digraph (see above Lines 3-8) we discover two initial and two terminal kernels (Lines 12-34). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels}()} method (Lines 17, 22, 28 and 33). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. We may hence redraw the same digraph in Fig. \ref{fig:17.6} by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{\texttt{a3}, \texttt{a4}\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{\texttt{a1}, \texttt{a6}\} (coloured in blue).
+Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in Listing~\vref{list:17.11}) we discover two initial and two terminal kernels (Lines 12-34). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels}()} method (Lines 17, 22, 28 and 33). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. We may hence redraw the same digraph in Fig. \ref{fig:17.5} by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{\texttt{a3}, \texttt{a4}\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{\texttt{a1}, \texttt{a6}\} (coloured in blue).
 \begin{lstlisting}
 >>> rd.exportGraphViz(fileName='orientedLaterality',\
 ...                   bestChoice=set(['a3', 'a4']),\
@@ -357,17 +336,16 @@ Among the six MISs contained in this random digraph (see above Lines 3-8) we dis
 \includegraphics[width=7cm]{Figures/orientedLaterality.png}
 \caption{A random digraph oriented by best covering initial and
    best covered terminal kernel}
-\label{fig:17.6}       % Give a unique label
+\label{fig:17.5}       % Give a unique label
 \end{figure}
 
-In Algorithmic Decision Theory, initial and terminal prekernels may provide convincing best, resp. last, choice recommendations.
-
+As all reasonable bipolar-valued outranking digraph usually show some laterality --the marginal criteria preferences being not all totally contradictory-- initial and terminal prekernels provide convincing fist, resp. last, choice recommendations as illustrated in Chapter~\vref{sec:4}.
 
 \section{Computing first and last choice recommendations}
 \label{sec:17.4}
 
-To illustrate this idea, let us finally compute first and last choice recommendations in the following random bipolar-valued outranking digraph.
-\begin{lstlisting}
+To illustrate this idea, let us finally compute in Listing~\vref{list:17.12} first and last choice recommendations in a random bipolar-valued outranking digraph.
+\begin{lstlisting}[caption={Generating a random bipolar-valued outranking digraph},label=list:17.12]
 >>> from outrankingDigraphs import\
 ...                RandomBipolarOutrankingDigraph
 >>> g = RandomBipolarOutrankingDigraph(seed=5)
@@ -386,25 +364,25 @@ To illustrate this idea, let us finally compute first and last choice recommenda
 %\sidecaption
 \includegraphics[width=10cm]{Figures/randomOutranking.png}
 \caption{The performance tableau of a random outranking digraph instance}
-\label{fig:17.7}       % Give a unique label
+\label{fig:17.6}       % Give a unique label
 \end{figure}
 
-The underlying random performance tableau shown in Fig. \ref{fig:17.7} reveals the performance grading of 7 potential decision alternatives with respect to 7 decision criteria supporting each an increasing performance scale from $0.0$ to $100.0$. Notice the missing performance data concerning decision alaternatives \texttt{a2} and \texttt{a5}. The resulting \emph{strict} outranking - i.e. a weighted majority supported --\emph{better than without considerable counter-performance}-- digraph is shown in Fig. \ref{fig:17.8}.
+The associated random performance tableau shown in Fig. \ref{fig:17.6} reveals the performance grading of 7 potential decision alternatives with respect to 7 decision criteria supporting each an increasing performance scale from $0.0$ to $100.0$. Notice the missing performance data concerning decision alaternatives \texttt{a2} and \texttt{a5}. The resulting \emph{strict} outranking - i.e. a weighted majority supported --\emph{better than without considerable counter-performance}-- digraph is shown in Fig. \ref{fig:17.7}.
 \begin{lstlisting}
 >>> gcd = ~(-g)  # Codual: the converse of the negation
 >>> gcd.exportGraphViz(fileName='tutOutRanking')
   *---- exporting a dot file for GraphViz tools ----*
    Exporting to tutOutranking.dot
    dot -Grankdir=BT -Tpng tutOutranking.dot\
-                    -o tutOutranking.png
-\end{lstlisting}
+                    -o tutOutranking.png\end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/tutOutranking.png}
 \caption{A random strict outranking digraph instance. All decision actions appear strictly better performing than action a7. We call it a \Condorcet loser and it is an evident terminal prekernel candidate. On the other side, three actions: a1, a2 and a4 are not dominated. They give together an initial prekernel candidate.}
-\label{fig:17.8}       % Give a unique label
+\label{fig:17.7}       % Give a unique label
 \end{figure}
-\begin{lstlisting}
+
+\begin{lstlisting}[caption={Computing the prekernels of the strict outranking digraph \texttt{gcd}},label=list:17.13]
 >>> gcd.showPreKernels()
   *--- Computing preKernels ---*
    Dominant preKernels :
@@ -420,9 +398,8 @@ The underlying random performance tableau shown in Fig. \ref{fig:17.7} reveals t
        absorbency   :  16.28
        covered      :  0.800
 \end{lstlisting}
-
-With such unique disjoint initial and terminal prekernels (see Line 4 and 10), the given digraph instance is hence clearly lateralized. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \texttt{best}, resp. \emph{worst}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
-\begin{lstlisting}
+With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in Listing~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralized. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \texttt{best}, resp. \emph{worst}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
+\begin{lstlisting}[caption={Computing a best choice recommendation from digraph \texttt{gcd}},label=list:17.14]
 >>> g.showBestChoiceRecommendation()
   Rubis best choice recommendation(s) (BCR)
    (in decreasing order of determinateness)   
@@ -446,9 +423,9 @@ With such unique disjoint initial and terminal prekernels (see Line 4 and 10), t
       - most credible action(s) = { 'a7': 48.84, }
 \end{lstlisting}
 
-Notice that solving the valued \Berge kernel equations provides furthermore a positive characterization of the most credible decision actions in each respective choice recommendation (see Lines 14 and 23 above). Alternatives \texttt{a2} and \texttt{a4} are equivalent candidates for a unique best choice, and alternative \texttt{a7} is clearly confirmed as the worst choice.
+Notice in Lines 14 and 23 in Listing~\vref{list:17.14} that solving the valued \Berge kernel equations provides furthermore a positive characterization of the most credible decision alternatives in each respective choice recommendation. Alternatives \texttt{a2} and \texttt{a4} are equivalent candidates for a unique fisrt choice, and alternative \texttt{a7} is clearly confirmed as the last choice.
 
-In Fig. \ref{fig:17.9}, we orient the drawing of the strict outranking digraph instance with the help of these best and worst choice recommendations. 
+In Fig. \ref{fig:17.8}, we orient the drawing of the strict outranking digraph instance with the help of these best and worst choice recommendations. 
 \begin{lstlisting}
 >>> gcd.exportGraphViz(fileName='bestWorstOrientation',\
 ...                    bestChoice=['a2','a4'],\
@@ -461,11 +438,11 @@ In Fig. \ref{fig:17.9}, we orient the drawing of the strict outranking digraph i
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/bestWorstOrientation.png}
-\caption{The strict outranking digraph oriented by its best and worst choice recommendations. The gray arrows, like the one between actions a4 and a1, represent indeterminate preferential situations. Action a1 appears hence to be rather incomparable to all the other, except action a7.}
-\label{fig:17.9}       % Give a unique label
+\caption{The strict outranking digraph oriented by its best and worst choice recommendations. The gray arrows, like the one between alternaives \texttt{a4} and \texttt{a1}, represent indeterminate preferential situations. Alternative \texttt{a1} appears hence to be rather incomparable to all the other, except alternative \texttt{a7}.}
+\label{fig:17.8}       % Give a unique label
 \end{figure}
 
-It may be interesting to compare this result with a \Copeland ranking of the underlying performance tableau (see Chapter 8 \ref{sec:8} on ranking with incommensurable criteria).
+It may be interesting to compare this result with a \Copeland ranking of the underlying performance tableau (see Section~\vref{sec:8.2} on ranking with incommensurable criteria).
 \begin{lstlisting}
 >>> g.showHTMLPerformanceHeatmap(colorLevels=5, ndigits=0,\
 ...             Correlations=True, rankingRule='Copeland')
@@ -474,10 +451,10 @@ It may be interesting to compare this result with a \Copeland ranking of the und
 %\sidecaption
 \includegraphics[width=10cm]{Figures/outRankingResult.png}
 \caption{Heatmap with Copeland ranking of the performance tableau}
-\label{fig:17.10}       % Give a unique label
+\label{fig:17.9}       % Give a unique label
 \end{figure}
 
-In the resulting linear ranking (see Fig. \ref{fig:17.10}), alternative \texttt{a4} is set at first rank, followed by alternative \texttt{a2}. This makes sense as action \texttt{a4} shows three performances in the first quintile, whereas \texttt{a2} is only partially evaluated and shows only two such excellent performances. But \texttt{a4} also shows a very weak performance in the first quintile. Both decision actions, hence, don't show eventually a performance profile that would make apparent a clear preference situation in favour of one or the other. In this sense, the prekernels based best choice recommendations may appear more faithful with respect to the actually definite strict outranking relation than any 'forced' linear ranking result as shown in Fig. \ref{fig:17.9}.
+In the resulting linear ranking (see Fig.\vref{fig:17.9}), alternative \texttt{a4} is set at first rank, followed by alternative \texttt{a2}. This makes sense as alternative \texttt{a4} shows three performances in the first quintile, whereas \texttt{a2} is only partially evaluated and shows only two such excellent performances. But \texttt{a4} also shows a very weak performance in the first quintile. Both decision actions, hence, don't show eventually a performance profile that would make apparent a clear preference situation in favour of one or the other. In this sense, the prekernels based best choice recommendations may appear more faithful with respect to the actually definite strict outranking relation than any '\emph{forced}' linear ranking result as shown in Fig. \ref{fig:17.9}.
 
 \section{Tractability of kernel computation}
 \label{sec:17.5}
@@ -497,7 +474,7 @@ Let us give some hints on the \emph{tractability} of prekernel computations. Det
 \end{lstlisting}
 
 Now, there exist more efficient specialized algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices (see \citep{BIS-2006b}). \emph{Alain Hertz}\index{Hertz@\emph{A. Hertz}} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method)\index{showMISAH@\texttt{showMIS\_AH}()}. When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 7 above and Line 15 below).
-\begin{lstlisting}
+\begin{lstlisting}[caption={Enumerating MISs by visiting only maximal independent choices (\emph{A. Hertz}\index{Hertz@\emph{A. Hertz}}) },label=list:17.15]
 >>> e.showMIS_AH()
   # by visiting only maximal independent choices
   *-----------------------------------*
@@ -517,8 +494,8 @@ Now, there exist more efficient specialized algorithms for directly enumerating 
   iteration history:  1
 \end{lstlisting}
 
-For more or less dense strict outranking digraphs of modest order, as facing usually in Algorithmic Decision Theory applications, enumerating all independent choices remains however in most cases tractable, especially by using a very efficient Python generator (see the \texttt{independentChoices()} method below)\index{independentChoices@\texttt{independentChoices}()}.
-\begin{lstlisting}
+For more or less dense strict outranking digraphs of modest order, as facing usually in MCDA applications, enumerating all independent choices remains however in most cases tractable, especially by using a very efficient Python generator with the \texttt{independentChoices()} method shown in Listing~\vref{list:17.16}\index{independentChoices@\texttt{independentChoices}()}.
+\begin{lstlisting}[caption={Generating all independent choices in a digraph},label=list:17.16]
 def independentChoices(self,U):
     """
     Generator for all independent choices with associated
@@ -542,8 +519,8 @@ def independentChoices(self,U):
                 yield Sx
 \end{lstlisting}
 
-And, checking maximality of independent choices via the external stability conditions during their enumeration with the \texttt{computePreKernels()} method (see below) provides the effective advantage of computing all initial and terminal prekernels in a single loop (see Line 10 and \citep{BIS-2006b}).
-\begin{lstlisting}[caption={Computing dominant and absorbent preKernels},label=list:17.1]
+And, checking maximality of independent choices via the external stability conditions during their enumeration with the \texttt{computePreKernels()} method shown in Listing~\vref{list:17.17} provides the effective advantage of computing all initial and terminal prekernels in a single loop (see Line 10 and \citep{BIS-2006b}).
+\begin{lstlisting}[caption={Computing dominant and absorbent preKernels},label=list:17.17]
 def computePreKernels(self):
     """
     computing dominant and absorbent preKernels:
@@ -583,8 +560,8 @@ then $Y$ characterises an \emph{initialkernel} \citep{BER-1958}.
 When transposing now the membership characteristic vector $Y$ into a column vector $Y^t$, the following equation system: $R \circ Y^t \; = \; -Y^t$.
 makes $Y^t$ similarly characterise a \emph{terminal kernel}.
 
-Let us verify this result on a tiny random digraph.
-\begin{lstlisting}
+Let us verify this result in Listing~\vref{list:17.18} on a tiny random digraph.
+\begin{lstlisting}[caption={Verifying the \Berge kernel equation on a tiny random digraph},label=list:17.18]
 >>> from digraphs import RandomDigraph
 >>> g = RandomDigraph(order=3,seed=1)
 >>> g.showRelationTable()
@@ -609,7 +586,7 @@ Let us verify this result on a tiny random digraph.
      absorbency   :  1.0
      covered      :  1.000
 \end{lstlisting}
-It is easy to verify that the characteristic vector $[-1, -1, +1]$ satisfies the initial kernel equation system; 'a3' gives an \emph{initial} kernel. Similarly, the characteristic vector $[-1, +1, -1]$ verifies indeed the terminal kernel equation system and hence 'a2' gives a \emph{terminal} kernel.
+It is easy to verify that the characteristic vector $[-1, -1, +1]$ satisfies the initial kernel equation system; node \texttt{a3} gives an \emph{initial} kernel. Similarly, the characteristic vector $[-1, +1, -1]$ verifies indeed the terminal kernel equation system and hence node \texttt{a2} gives a \emph{terminal} kernel.
 
 We succeeded now in generalizing \Berge's kernel equation systems to genuine bipolar-valued digraphs \citep*{BIS-2006b}. The constructive proof, found by \emph{Marc Pirlot}\index{Pirlot@\textsl{M. Pirlot}}, is based on the following \emph{fixpoint equation} that may be used for computing bipolar-valued kernel membership vectors,
 \begin{equation}\label{eq:17.4}
@@ -623,7 +600,7 @@ will admit a stable high and a stable low fixpoint solution that converge both t
 
 Inspired by the crisp double fixpoint equation~\ref{eq:17.5}, we observed that for a given bipolar-valued digraph $G(X,R)$, each of its dominant or absorbent prekernels $K_i$ in $X$ determines an induced partial digraph $G(X,R/K_i)$ which is acyclyc and admits $K_i$ as unique kernel (see [BIS-2006-2p]).
 
-Following the \emph{von Neumann} fixpoint algorithm, a similar bipolar-valued extended double fixpoint algorithm, applied to $G(X,R/K_i)$, allows us to compute hence the associated bipolar-valued kernel characteristic vectors $Y_i$ in polynomial complexity.
+Following the \emph{von Neumann} fixpoint algorithm, a similar bipolar-valued extended double fixpoint algorithm, applied to $G(X,R/K_i)$, allows us to compute the associated bipolar-valued kernel characteristic vectors $Y_i$ in polynomial complexity.
 
 \noindent \textbf{Algorithm} 
 \begin{itemize}
@@ -641,26 +618,27 @@ Following the \emph{von Neumann} fixpoint algorithm, a similar bipolar-valued ex
 \item Repeat step (2) for each terminal kernel $K_j$ by using the double fixpoint equation $T^2$ with the transpose of the adjacency matrix $R/K_j$.
 \end{enumerate}
 
-Time for a practical illustration.
-\begin{lstlisting}
->>> from outrankingDigraphs import \
-           RandomBipolarOutrankingDigraph
->>> g = RandomBipolarOutrankingDigraph(seed=5)
->>> g
-  *------- Object instance description ------*
-   Instance class      : RandomBipolarOutrankingDigraph
-   Instance name       : rel_randomperftab
-   Actions             : 7
-   Criteria            : 7
-   Size                : 26
-   Determinateness (%) : 67.14
-   Valuation domain    : [-1.0;1.0]
-   Attributes          : ['name', 'actions', 'criteria',
-                          'evaluation', 'relation',
-                          'valuationdomain', 'order',
-                          'gamma', 'notGamma']
-\end{lstlisting}
-The random outranking digraph $g$, we consider above for illustration, models the pairwise outranking situations between seven decision alternatives evaluated on seven incommensurable performance criteria. We compute its corresponding bipolar-valued prekernels on the associated codual digraph $gcd$.
+\paragraph{Time for a practical illustration}
+
+% \begin{lstlisting}[caption={},label=list:17.19]
+% >>> from outrankingDigraphs import \
+%            RandomBipolarOutrankingDigraph
+% >>> g = RandomBipolarOutrankingDigraph(seed=5)
+% >>> g
+%   *------- Object instance description ------*
+%    Instance class      : RandomBipolarOutrankingDigraph
+%    Instance name       : rel_randomperftab
+%    Actions             : 7
+%    Criteria            : 7
+%    Size                : 26
+%    Determinateness (%) : 67.14
+%    Valuation domain    : [-1.0;1.0]
+%    Attributes          : ['name', 'actions', 'criteria',
+%                           'evaluation', 'relation',
+%                           'valuationdomain', 'order',
+%                           'gamma', 'notGamma']
+% \end{lstlisting}
+We reconsider the random digraph \texttt{g} generated in Listing~\vref{list:17.12}. This outranking digraph models the pairwise outranking situations between seven decision alternatives evaluated on seven incommensurable performance criteria. We recompute its corresponding bipolar-valued prekernels on the associated codual digraph $gcd$.
 \begin{lstlisting}
 >>> gcd = ~(-g) # strict outranking digraph
 >>> gcd.showPreKernels()
@@ -688,10 +666,10 @@ The random outranking digraph $g$, we consider above for illustration, models th
     absorbent kernel:  [0, 0, 1, 0, 0, 0, 0, 0]
    Execution time  : 0.00022 sec.
 \end{lstlisting}
-The codual outranking digraph, modelling a strict outranking relation, admits an initial prekernel ['a1', 'a2', 'a4'] and a terminal one ['a3', 'a7'] (see Lines 5 and 11).
+The codual outranking digraph, modelling a strict outranking relation, admits an initial prekernel $\{\mathtt{a1}, \mathtt{a2}, \mathtt{a4}\}$ and a terminal one $\{\mathtt{a3}, \mathtt{a7}\}$ (see Lines 5 and 11 above).
 
-We may now compute the initial prekernel restricted adjacency table with the \texttt{domkernelrestrict()} method.
-\begin{lstlisting}
+In Listing~\vref{list:17.19} we now compute with the \texttt{domkernelrestrict()} method\index{domkernelrestrict@\texttt{domkernelrestrict()}} the initial prekernel restricted adjacency table (see Fig.~\vref{fig:17.10}).
+\begin{lstlisting}[caption={Computing a dominant prekernel restricted adjancecy table},label=list:17.19]
 >>> k1Relation = gcd.domkernelrestrict(['a1','a2','a4'])
 >>> gcd.showHTMLRelationTable(\
 ...      actionsList=['a1','a2','a4','a3','a5','a6','a7'],\
@@ -701,12 +679,12 @@ We may now compute the initial prekernel restricted adjacency table with the \te
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/k1restricted.png}
-\caption{Initial kernel ['a1','a2','a4'] restricted adjacency table. This initial prekernel is indeed only weakly independent: The outranking situation between 'a4' and 'a1' is indeed \emph{indeterminate}. }
-\label{fig:17.11}       % Give a unique label
+\caption{Initial kernel $\\mathtt{a1}, \mathtt{a2}, \mathtt{a4}\}$ restricted adjacency table. This initial prekernel is indeed only weakly independent: The outranking situation between alternatives \texttt{a4} and \texttt{a1} is indeed \emph{indeterminate}. }
+\label{fig:17.10}       % Give a unique label
 \end{figure}
 
 The corresponding initial prekernel membership characteristic vector may be computed with the \texttt{computeKernelVector()} method.
-\begin{lstlisting}[caption={Fixpoint iterations for initial prekernel ['a1','a2','a4']},label=list:17.2]
+\begin{lstlisting}[caption={Fixpoint iterations for initial prekernel ['a1','a2','a4']},label=list:17.20]
 >>> gcd.computeKernelVector(['a1','a2','a4'],\
 ...                 Initial=True,Comments=True)
  --> Initial prekernel: {'a1', 'a2', 'a4'}
@@ -731,7 +709,7 @@ The corresponding initial prekernel membership characteristic vector may be comp
    'a5': -0.21
    'a7': -0.21
 \end{lstlisting}
-We start in Listing \ref{list:17.2} the fixpoint computation with an empty set characterisation as first low vector and a complete set $X$ characterising high vector. After each iteration, the low vector is set to the negation of the previous high vector and the high vector is set to the negation of the previous low vector.
+We start in Listing \ref{list:17.20} the fixpoint computation with an empty set characterisation as first low vector and a complete set $X$ characterising high vector. After each iteration, the low vector is set to the negation of the previous high vector and the high vector is set to the negation of the previous low vector.
 
 A unique stable prekernel characteristic vector $Y_1$ is here attained at the fourth iteration with positive members \texttt{a2}: $+0.21$ and \texttt{a4}: $+0.21$ ($60.5\%$ criteria significance majority); \texttt{a1}: $0.00$ being an ambiguous potential member. Alternatives \texttt{a3}, \texttt{a5}, \texttt{a6} and \texttt{a7} are all negative members, i.e. positive \emph{non members} of this outranking prekernel.
 
@@ -747,7 +725,7 @@ Let us now compute the restricted adjacency table for the outranked, i.e. the \e
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/k2restricted.png}
 \caption{Terminal prekernel \{\texttt{a3}, \texttt{a7}\} restricted adjacency table. Again, we notice that this terminal prekernel is indeed only weakly independent.}
-\label{fig:17.12}       % Give a unique label
+\label{fig:17.11}       % Give a unique label
 \end{figure}
 
 The corresponding bipolar-valued characteristic vector $Y_2$ may be computed as follows.
@@ -776,7 +754,7 @@ The corresponding bipolar-valued characteristic vector $Y_2$ may be computed as 
 
 A unique stable bipolar-valued high and low fixpoint is attained at the third iteration with alternative \texttt{a7} positively confirmed (about $75\%$ criteria significance majority) as member of this terminal prekernel, whereas the membership of alternative \texttt{a3} in this prekernel appears indeterminate. All the remaining nodes have negative membership characteristic values and are hence positively excluded from this prekernel.
 
-When we reconsider the graphviz drawing of this outranking digraph in Fig. \ref{fig:17.9},
+When we reconsider the graphviz drawing of this outranking digraph in Fig. \ref{fig:17.8},
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/bestWorstOrientation.png}
