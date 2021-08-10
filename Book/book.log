@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  10 AUG 2021 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  10 AUG 2021 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2219,7 +2219,8 @@ m/m/it/10 neg-a-tive mem-ber-ship \OT1/ptm/m/n/10 part, whereas,
 
 ]
 
-LaTeX Warning: Reference `sec:22.7' on page 256 undefined on input line 824.
+Package natbib Warning: Citation `ISOMIS-2008' on page 256 undefined on input l
+ine 824.
 
 [256] (./02-mainMatters/17-chapterKernels.bbl (./book.brf))) [257
 
@@ -2884,9 +2885,13 @@ Overfull \hbox (8.27113pt too wide) in paragraph at lines 307--309
 []\OT1/pcr/m/n/8.5 UnOpposedBipolarOutrankingDigraph 
  []
 
-[375] [376]) (./book.aux (./01-frontMatters/dedic.aux)
-(./01-frontMatters/preface.aux) (./02-mainMatters/00-chapterIntroduction.aux)
-(./02-mainMatters/part1.aux) (./02-mainMatters/01-chapterIntroDigraph3.aux)
+[375] [376])
+
+Package natbib Warning: There were undefined citations.
+
+(./book.aux (./01-frontMatters/dedic.aux) (./01-frontMatters/preface.aux)
+(./02-mainMatters/00-chapterIntroduction.aux) (./02-mainMatters/part1.aux)
+(./02-mainMatters/01-chapterIntroDigraph3.aux)
 (./02-mainMatters/02-chapterDigraphs.aux)
 (./02-mainMatters/03-chapterOutrankingDigraphs.aux) (./02-mainMatters/part2.aux
 ) (./02-mainMatters/04-chapterBestChoice.aux)
@@ -2925,10 +2930,10 @@ Package rerunfilecheck Info: File `book.brf' has not changed.
 (rerunfilecheck)             Checksum: 65B834737EEA80C4788929826E6B2CD3;6459.
  ) 
 Here is how much of TeX's memory you used:
- 24503 strings out of 478994
- 370877 string characters out of 5858184
+ 24502 strings out of 478994
+ 370867 string characters out of 5858184
  1126798 words of memory out of 5000000
- 34146 multiletter control sequences out of 15000+600000
+ 34145 multiletter control sequences out of 15000+600000
  485706 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,12n,102p,1716b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2957,7 +2962,7 @@ symbol/usyr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr
 xlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (390 pages, 7282671 bytes).
+Output written on book.pdf (390 pages, 7282672 bytes).
 PDF statistics:
  13408 PDF objects out of 15390 (max. 8388607)
  12449 compressed objects within 125 object streams

@@ -3,10 +3,11 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 02-mainMatters/17-chapterKernels.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
+Warning--I didn't find a database entry for "ISOMIS-2008"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 7 entries,
             3270 wiz_defined-function locations,
-            719 strings with 6243 characters,
+            721 strings with 6265 characters,
 and the built_in function-call counts, 8038 in all, are:
 = -- 886
 > -- 106
@@ -45,3 +46,4 @@ warning$ -- 0
 while$ -- 54
 width$ -- 0
 write$ -- 89
+(There was 1 warning)
