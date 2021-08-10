@@ -1,9 +1,9 @@
 \chapter{On computing digraph kernels}
 \label{sec:17}
 
-\abstract*{ We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and serates into initial and terminal kernels. In, furthermore, lateralized outranking digraphs, initial and terminal kernels become separate and may deliver suitable best resp. worst choice recommendations. After commenting the tractability of kernel computations, we close the chpater with the solving of bipolar-valued \Berge kernel equation systems.}
+\abstract*{ We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralised outranking digraphs, initial and terminal kernels become separate and may deliver suitable best resp. worst choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued \Berge kernel equation systems.}
 
-\abstract{We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and serates into initial and terminal kernels. In, furthermore, lateralized outranking digraphs, initial and terminal kernels become separate and may deliver suitable best resp. worst choice recommendations. After commenting the tractability of kernel computations, we close the chpater with the solving of bipolar-valued \Berge kernel equation systems.}
+\abstract{We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralised outranking digraphs, initial and terminal kernels become separate and may deliver suitable best resp. worst choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued \Berge kernel equation systems.}
 
 \section{What is a graph kernel ?}
 \label{sec:17.1}
@@ -33,7 +33,7 @@ We may illustrate in Fig.~\vref{fig:17.1} this coincidence between MISs and kern
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/random3RegularGraph-mis.png}
-\caption{A random MIS colored in the random 3-regular graph. All non blue vertices are covered by at least one blue vertex.}
+\caption{A random MIS coloured in the random 3-regular graph. All non blue vertices are covered by at least one blue vertex.}
 \label{fig:17.1}       % Give a unique label
 \end{figure}
 
@@ -217,7 +217,7 @@ Notice by the way in Fig.~\vref{fig:17.2} that the duals of all chordless circui
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/dualChordlessCircuit.png}
-\caption{The dual of the chordless 6-circuit. No inital or terminal prekernel --weakly indepent and dominant, resp. absorbent subset of nodes-- may be found in this kind of digraphs.}
+\caption{The dual of the chordless 6-circuit. No initial or terminal prekernel --weakly independent and dominant, resp. absorbent subset of nodes-- may be found in this kind of digraphs.}
 \label{fig:17.2}       % Give a unique label
 \end{figure}
 
@@ -246,12 +246,12 @@ In Listing~\vref{list:17.8} we use the \texttt{IndeterminateInnerPart} parameter
 
 Weak chordless circuits of length $n$ are in fact part of the class of digraphs that are invariant under the \emph{codual} transform, $cn = - (\sim cn) = \sim (-cn )$ \footnote{The class of \emph{self-codual} bipolar-valued digraphs consists of all weakly asymmetric digraphs, i.e. digraphs containing only asymmetric and/or indeterminate links. Limit cases consists of, on the one side, full tournaments with indeterminate reflexive links, and, on the other side, fully indeterminate digraphs. In this class, the converse (inverse $\sim$) operator is indeed identical to the dual (negation $-$ ) one.}. When digraph $cn$ is a weak chordless n-circuit, $cn$, $-cn$, $\sim cn$ and $\sim (-cn)$ will all admit the same set of prekernels.  
 
-\section{Kernels in lateralized digraphs}
+\section{Kernels in lateralised digraphs}
 \label{sec:17.3}
 
 Humans do live in an apparent physical space of plain transitive lateral orientation, fully empowered in finite geometrical 3D models with linear orders, where first, resp. last ranked, nodes deliver unique initial, resp. terminal, kernels. Similarly, in finite preorders, the first, resp. last, equivalence classes deliver the unique initial, resp. unique terminal, kernels. More generally, in finite partial orders, i.e. asymmetric and transitive digraphs, topological sort algorithms will easily reveal on the first, resp. last, level all unique initial, resp. terminal, kernels.
 
-In genuine random digraphs, however, we may need to check for each of its MISs, whether one, both, or none of the lateralized external stability conditions may be satisfied. Consider, for instance in Listing~\vref{list:17.9}, the following random digraph instance of order 7 and generated with an arc probability of $30\%$. 
+In genuine random digraphs, however, we may need to check for each of its MISs, whether one, both, or none of the lateralised external stability conditions may be satisfied. Consider, for instance in Listing~\vref{list:17.9}, the following random digraph instance of order 7 and generated with an arc probability of $30\%$. 
 \begin{lstlisting}[caption={Generating a random digraph \texttt{rd} of order 7 and arc probability 0.3},label=list:17.9]
 >>> from randomDigraphs import RandomDigraph
 >>> rd = RandomDigraph(order=7,arcProbability=0.3,seed=5)
@@ -367,7 +367,7 @@ To illustrate this idea, let us finally compute in Listing~\vref{list:17.12} fir
 \label{fig:17.6}       % Give a unique label
 \end{figure}
 
-The associated random performance tableau shown in Fig. \ref{fig:17.6} reveals the performance grading of 7 potential decision alternatives with respect to 7 decision criteria supporting each an increasing performance scale from $0.0$ to $100.0$. Notice the missing performance data concerning decision alaternatives \texttt{a2} and \texttt{a5}. The resulting \emph{strict} outranking - i.e. a weighted majority supported --\emph{better than without considerable counter-performance}-- digraph is shown in Fig. \ref{fig:17.7}.
+The associated random performance tableau shown in Fig. \ref{fig:17.6} reveals the performance grading of 7 potential decision alternatives with respect to 7 decision criteria supporting each an increasing performance scale from $0.0$ to $100.0$. Notice the missing performance data concerning decision alternatives \texttt{a2} and \texttt{a5}. The resulting \emph{strict} outranking - i.e. a weighted majority supported --\emph{better than without considerable counter-performance}-- digraph is shown in Fig. \ref{fig:17.7}.
 \begin{lstlisting}
 >>> gcd = ~(-g)  # Codual: the converse of the negation
 >>> gcd.exportGraphViz(fileName='tutOutRanking')
@@ -398,7 +398,7 @@ The associated random performance tableau shown in Fig. \ref{fig:17.6} reveals t
        absorbency   :  16.28
        covered      :  0.800
 \end{lstlisting}
-With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in Listing~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralized. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \texttt{best}, resp. \emph{worst}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
+With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in Listing~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralised. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \texttt{best}, resp. \emph{worst}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
 \begin{lstlisting}[caption={Computing a best choice recommendation from digraph \texttt{gcd}},label=list:17.14]
 >>> g.showBestChoiceRecommendation()
   Rubis best choice recommendation(s) (BCR)
@@ -423,7 +423,7 @@ With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in 
       - most credible action(s) = { 'a7': 48.84, }
 \end{lstlisting}
 
-Notice in Lines 14 and 23 in Listing~\vref{list:17.14} that solving the valued \Berge kernel equations provides furthermore a positive characterization of the most credible decision alternatives in each respective choice recommendation. Alternatives \texttt{a2} and \texttt{a4} are equivalent candidates for a unique fisrt choice, and alternative \texttt{a7} is clearly confirmed as the last choice.
+Notice in Lines 14 and 23 in Listing~\vref{list:17.14} that solving the valued \Berge kernel equations provides furthermore a positive characterisation of the most credible decision alternatives in each respective choice recommendation. Alternatives \texttt{a2} and \texttt{a4} are equivalent candidates for a unique first choice, and alternative \texttt{a7} is clearly confirmed as the last choice.
 
 In Fig. \ref{fig:17.8}, we orient the drawing of the strict outranking digraph instance with the help of these best and worst choice recommendations. 
 \begin{lstlisting}
@@ -450,7 +450,7 @@ It may be interesting to compare this result with a \Copeland ranking of the und
 \begin{figure}[h]
 %\sidecaption
 \includegraphics[width=10cm]{Figures/outRankingResult.png}
-\caption{Heatmap with Copeland ranking of the performance tableau}
+\caption{Heat map with Copeland ranking of the performance tableau}
 \label{fig:17.9}       % Give a unique label
 \end{figure}
 
@@ -473,7 +473,7 @@ Let us give some hints on the \emph{tractability} of prekernel computations. Det
   1048576
 \end{lstlisting}
 
-Now, there exist more efficient specialized algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices (see \citep{BIS-2006b}). \emph{Alain Hertz}\index{Hertz@\emph{A. Hertz}} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method)\index{showMISAH@\texttt{showMIS\_AH}()}. When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 7 above and Line 15 below).
+Now, there exist more efficient specialised algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices (see \citep{BIS-2006b}). \emph{Alain Hertz}\index{Hertz@\emph{A. Hertz}} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method)\index{showMISAH@\texttt{showMIS\_AH}()}. When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 7 above and Line 15 below).
 \begin{lstlisting}[caption={Enumerating MISs by visiting only maximal independent choices (\emph{A. Hertz}\index{Hertz@\emph{A. Hertz}}) },label=list:17.15]
 >>> e.showMIS_AH()
   # by visiting only maximal independent choices
@@ -540,7 +540,7 @@ def computePreKernels(self):
     self.abspreKernels = abspreKernels
 \end{lstlisting}
  
-Finally, we use our bipolar-valued epistemic logic framework for computing the credibility that an individual node of the digraph fits with being a member of an initial or terminal prekerenel. For this purpose we make use of the \Berge kernel equation systems \citep{BER-1958}.
+Finally, we use our bipolar-valued epistemic logic framework for computing the credibility that an individual node of the digraph fits with being a member of an initial or terminal prekernel. For this purpose we make use of the \Berge kernel equation systems \citep{BER-1958}.
 
 \section{\Berge kernel equation systems}
 \label{sec:17.6}
@@ -588,17 +588,17 @@ Let us verify this result in Listing~\vref{list:17.18} on a tiny random digraph.
 \end{lstlisting}
 It is easy to verify that the characteristic vector $[-1, -1, +1]$ satisfies the initial kernel equation system; node \texttt{a3} gives an \emph{initial} kernel. Similarly, the characteristic vector $[-1, +1, -1]$ verifies indeed the terminal kernel equation system and hence node \texttt{a2} gives a \emph{terminal} kernel.
 
-We succeeded now in generalizing \Berge's kernel equation systems to genuine bipolar-valued digraphs \citep*{BIS-2006b}. The constructive proof, found by \emph{Marc Pirlot}\index{Pirlot@\textsl{M. Pirlot}}, is based on the following \emph{fixpoint equation} that may be used for computing bipolar-valued kernel membership vectors,
+We succeeded now in generalising \Berge's kernel equation systems to genuine bipolar-valued digraphs \citep*{BIS-2006a,BIS-2006b}. The constructive proof, found by \emph{Marc Pirlot}\index{Pirlot@\textsl{M. Pirlot}}, is based on the following \emph{fixpoint equation} that may be used for computing bipolar-valued kernel membership vectors:
 \begin{equation}\label{eq:17.4}
-T(Y) \; := \; -(Y \circ R) = Y\;,
+T(Y) \; := \; -(Y \circ R) = Y\;.
 \end{equation}
-\emph{John von Neumann}\index{Neumann@\textsl{J. von Neumann}} showed indeed that, when a digraph $G(X,R)$ is acyclic with a unique initial kernel $K$ characterised by its membership characteristics vector $Y_k$, then the following double bipolar-valued fixpoint equation:
+\emph{John von Neumann}\index{Neumann@\textsl{J. von Neumann}} showed indeed that, when a digraph $G(X,R)$ is acyclic with a unique initial kernel $K$ characterised by its membership characteristics vector $Y_k$, then the following double fixpoint equation:
 \begin{equation}\label{eq:17.5}
 T^2(Y) \; := \; -\big( -(Y \circ R) \circ R) \; = \; Y\;.
 \end{equation}
 will admit a stable high and a stable low fixpoint solution that converge both to $Y_k$ \citep{SCH-1985}.
 
-Inspired by the crisp double fixpoint equation~\ref{eq:17.5}, we observed that for a given bipolar-valued digraph $G(X,R)$, each of its dominant or absorbent prekernels $K_i$ in $X$ determines an induced partial digraph $G(X,R/K_i)$ which is acyclyc and admits $K_i$ as unique kernel (see [BIS-2006-2p]).
+Inspired by the crisp double fixpoint equation~\ref{eq:17.5}, we observed that for a given bipolar-valued digraph $G(X,R)$, each of its dominant or absorbent prekernels $K_i$ in $X$ determines an induced partial digraph $G(X,R/K_i)$ which is acyclic and admits $K_i$ as unique kernel (see [BIS-2006-2p]).
 
 Following the \emph{von Neumann} fixpoint algorithm, a similar bipolar-valued extended double fixpoint algorithm, applied to $G(X,R/K_i)$, allows us to compute the associated bipolar-valued kernel characteristic vectors $Y_i$ in polynomial complexity.
 
@@ -819,7 +819,7 @@ It is Marc Roubens\index{Roubens@\textsl{M. Roubens}} who in Spring 1995, by com
 
 And in Summer 1995, we luckily obtained the very first valued outranking kernel from a classical example digraph of order 8 (!) well known in the multiple criteria decision aid community. The computation was done with the help of a commercial finite domain solver. It took several seconds on a CRAY 6412 superserver with 12 processors operating in a nowadays ridiculous CPU speed of 90 Mhz. The labelled solution vectors showing up for a digraph with a single kernel were structured in a way that suggested the converging stages of the \Neumann fixpoint algorithm and gave the initial idea for eventually computing all valued prekernels of an outranking digraph (see Section~\ref{sec:17.6}). 
 
-In our present Python implementation, such a tiny problem is solved in less than a thousandth of a second on a common low budget desktop computer. And this remains practically the same for any relevant example of outranking digraph observed in a real decision aid problem. Several times we wrote in our personal journal that there is certainly now no more potential for any substantial improvement of this computational efficiency; Only to discover, shortly later, that following a new theoretical idea or choosing a more efficient implementation –-using for instance the amazing instrument of itorator generators in Python–-, execution times could well be divided by 20.
+In our present Python implementation, such a tiny problem is solved in less than a thousandth of a second on a common low budget desktop computer. And this remains practically the same for any relevant example of outranking digraph observed in a real decision aid problem. Several times we wrote in our personal journal that there is certainly now no more potential for any substantial improvement of this computational efficiency; Only to discover, shortly later, that following a new theoretical idea or choosing a more efficient implementation –-using for instance the amazing instrument of iterator generators in Python–-, execution times could well be divided by 20.
 
 This nowadays available computational efficiency confers the kernel concept a methodological premium for solving specific choice decision problems on the basis of the bipolar-valued outranking digraph (see Chapter~\ref{sec:4}). But it also opens new opportunities for verifying and implementing kernel extraction algorithms for more graph theoretical purposes. New results concerning for instance unlabelled kernels in symmetric graphs could be obtained and we succeeded in enumerating the non isomorphic maximal independent sets --the kernels-- of known difficult graph instances like the n-cycle \citep*{ISOMIS-2008}.
 
