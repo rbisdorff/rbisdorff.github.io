@@ -3,47 +3,45 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 02-mainMatters/17-chapterKernels.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
-Warning--I didn't find a database entry for "ISOMIS-2008"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 9 entries,
+You've used 10 entries,
             3270 wiz_defined-function locations,
-            737 strings with 6776 characters,
-and the built_in function-call counts, 10357 in all, are:
-= -- 1137
-> -- 145
-< -- 10
-+ -- 82
-- -- 44
-* -- 693
-:= -- 1212
-add.period$ -- 9
-call.type$ -- 9
-change.case$ -- 61
-chr.to.int$ -- 9
-cite$ -- 9
-duplicate$ -- 1090
-empty$ -- 859
-format.name$ -- 61
-if$ -- 2188
+            745 strings with 6985 characters,
+and the built_in function-call counts, 11652 in all, are:
+= -- 1281
+> -- 165
+< -- 11
++ -- 92
+- -- 50
+* -- 792
+:= -- 1362
+add.period$ -- 10
+call.type$ -- 10
+change.case$ -- 68
+chr.to.int$ -- 10
+cite$ -- 10
+duplicate$ -- 1225
+empty$ -- 965
+format.name$ -- 72
+if$ -- 2461
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 85
-newline$ -- 37
-num.names$ -- 40
-pop$ -- 297
+missing$ -- 95
+newline$ -- 40
+num.names$ -- 44
+pop$ -- 323
 preamble$ -- 1
-purify$ -- 48
+purify$ -- 54
 quote$ -- 0
-skip$ -- 409
+skip$ -- 458
 stack$ -- 0
-substring$ -- 1013
-swap$ -- 549
+substring$ -- 1150
+swap$ -- 614
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 75
+type$ -- 84
 warning$ -- 0
-while$ -- 67
+while$ -- 75
 width$ -- 0
-write$ -- 114
-(There was 1 warning)
+write$ -- 126
