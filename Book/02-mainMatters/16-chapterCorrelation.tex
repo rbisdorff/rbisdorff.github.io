@@ -321,18 +321,17 @@ It would be interesting to compare similarly the correlations one may obtain wit
 \section{Illustrating preference divergences}
 \label{sec:16.4}
 
-The valued relational equivalence index gives us a further measure for studying how \emph{divergent} appear the rating opinions expressed by the movie critics.
+The bipolar-valued relational equivalence indexes gives us, via the \texttt{showCriteriaCorrelationTable(ValuedCorrelation=True)} method\index{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}}, a further measure for studying how \emph{divergent} may appear the rating opinions expressed by the movie critics. 
 \begin{figure}[h]
-\sidecaption
+%\sidecaption
 \includegraphics[width=12cm]{Figures/correlationTable.png}
 \caption{Pairwise valued correlation of movie critics.} 
 \label{fig:16.6}       % Give a unique label
 \end{figure}
 
-It is remarkable to notice here that, due to the quite numerous missing data, all pairwise valued ordinal correlation indexes $r(x\Leftrightarrow y)$ appear to be of low value, except the diagonal ones. These reflexive indexes $r(x\Leftrightarrow x)$ would trivially all amount to $+1.0$ in a plainly determined case. Here they indicate a reflexive normalized determination score $d$, i.e. the proportion of pairs of movies each critic did evaluate. Critic 'JPT' (the editor of the Graffiti magazine), for instance, evaluated all but one ($d = 24\times23/600 = 0.92$), whereas critic 'FG' evaluated only 10 movies among the 25 in discussion ($d = 10\times9/600 = 0.15$).
+It is remarkable to notice here that, due to the quite numerous missing data, all pairwise valued ordinal correlation indexes $r(x\Leftrightarrow y)$ appear to be of low value, except the diagonal ones. These reflexive indexes $r(x\Leftrightarrow x)$ would trivially all amount to $+1.0$ in a plainly determined case. Here they indicate a reflexive normalized determination score $d$, i.e. the proportion of pairs of movies each critic did evaluate. Critic \texttt{JPT} (the editor of the Graffiti magazine), for instance, evaluated all but one ($d = 24\times23/600 = 0.92$), whereas critic \texttt{FG} evaluated only 10 movies among the 25 in discussion ($d = 10\times9/600 = 0.15$).
 
-To get a picture of the actual divergence of rating opinions concerning jointly seen pairs of movies, we may develop a Principal Component Analysis of the corresponding $\tau$ correlation matrix\footnote{The 3D PCA plot method requires a running R statistics software  (https://www.r-project.org/) installation and the Calmat matrix calculator (see the \texttt{calmat} directory in the \Digraph resources)}. The 3D plot of the first 3 principal axes is shown in Fig.~\vref{fig:16.2}.
-
+To get a picture of the actual divergence of rating opinions concerning jointly seen pairs of movies, we may develop a Principal Component Analysis of the corresponding $\tau$ correlation matrix\footnote{The 3D PCA plot method requires a running R statistics software  (https://www.r-project.org/) installation and the Calmat matrix calculator (see the \texttt{calmat} directory in the \Digraph resources)}. The 3D plot of the first 3 principal axes is shown in Fig.~\vref{fig:16.2}.\index{export3DplotOfCriteriaCorrelation@\texttt{export3DplotOfCriteriaCorrelation()}}
 \begin{lstlisting}
 >>> g.export3DplotOfCriteriaCorrelation(ValuedCorrelation=False)
 \end{lstlisting}
@@ -349,8 +348,7 @@ The first 3 principal axes support together about $70\%$ of the total inertia. M
 
 In order to furthermore study the quality of a ranking result, it may be interesting to have a separate view on the asymmetric and symmetric parts of the ``\emph{at least as well rated as}'' opinions (see Section \vref{sec:2.3}).
 
-Let us first have a look at the pairwise asymmetric part, namely the ``\emph{better rated than}'' and ``\emph{less well rated than}'' opinions of the movie critics. 
-
+Let us first inspect the pairwise asymmetric part, namely the ``\emph{better rated than}'' and ``\emph{less well rated than}'' opinions of the movie critics. \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}
 \begin{lstlisting}
 >>> from digraphs import AsymmetricPartialDigraph
 >>> ag = AsymmetricPartialDigraph(g)
@@ -363,8 +361,8 @@ Let us first have a look at the pairwise asymmetric part, namely the ``\emph{bet
 \caption{Asymmetric part of \emph{graffiti07} digraph}
 \label{fig:16.8}       % Give a unique label
 \end{figure}
-We notice here that the \NetFlows ranking rule inverts in fact just three ``\emph{less well rated than}'' opinions and four ``\emph{better rated than}'' ones. A similar look at the symmetric part, the pairwise ``\emph{as well rated as}'' opinions, suggests a preordered preference structure in several equivalently rated classes.
 
+We notice in Fig.~\vref{fig:16.8} that the \NetFlows ranking rule inverts in fact just three ``\emph{less well rated than}'' opinions and four ``\emph{better rated than}'' ones. A similar look at the symmetric part, the pairwise ``\emph{as well rated as}'' opinions, suggests a preordered preference structure in several equivalently rated classes. \index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}
 \begin{lstlisting}
 >>> from digraphs import SymmetricPartialDigraph
 >>> sg = SymmetricPartialDigraph(g)
@@ -378,9 +376,8 @@ We notice here that the \NetFlows ranking rule inverts in fact just three ``\emp
 \caption{Symmetric part of \emph{graffiti07} digraph}
 \label{fig:16.9}       % Give a unique label
 \end{figure}
-Such a preordering of the movies may, for instance, be computed with the \texttt{computeRankingByChoosing()} method, where we iteratively extract dominant kernels --best remaining choices-- and absorbent kernels --worst remaining choices-- (see the next Chapter). We operate therefore on the asymmetric ``\emph{better rated than}'' opinions, i.e. the codual of the ``\emph{at least as well rated as}'' opinions \footnote{A kernel in a digraph $g$ is a clique in the dual digraph $-g$.} (see List.~\vref{list:16.9} Line 2).
-
-\begin{lstlisting}[caption={Bipolar ranking-by-choosing the Grafitti movies},label=list:16.9]
+Such a preordering of the movies may, for instance, be computed with the \texttt{computeRankingByChoosing()} method\index{computeRankingByChoosing@\texttt{computeRankingByChoosing()}}, where we iteratively extract dominant kernels --best remaining choices-- and absorbent kernels --worst remaining choices-- (see the next Chapter). We operate therefore on the asymmetric ``\emph{better rated than}'' opinions, i.e. the codual of the ``\emph{at least as well rated as}'' opinions \footnote{A kernel in a digraph $g$ is a clique in the dual digraph $-g$.} (see Line 2 in List.~\vref{list:16.11}).
+\begin{lstlisting}[caption={Bipolar ranking-by-choosing the Grafitti movies},label=list:11]
 >>> from transitiveDigraphs import RankingByChoosingDigraph
 >>> rbc = RankingByChoosingDigraph(g,CoDual=True)
 >>> rbc.showRankingByChoosing()
@@ -396,7 +393,7 @@ Such a preordering of the movies may, for instance, be computed with the \texttt
     1st Worst Choice ['mv_BI','mv_DI','mv_HP','mv_TF']
 \end{lstlisting}
 
-In the next Chapter \vref{sec:17}, we thouroughly discuss the computation of kernels in bipolar-valued digraphs.
+In the next Chapter \vref{sec:17}, we thouroughly discuss the computation of such kernels in bipolar-valued digraphs.
 
 %%%%%%% The chapter bibliography
 %\normallatexbib
