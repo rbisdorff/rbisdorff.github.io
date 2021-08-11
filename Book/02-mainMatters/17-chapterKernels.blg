@@ -5,45 +5,45 @@ The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
 Warning--I didn't find a database entry for "ISOMIS-2008"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 8 entries,
+You've used 9 entries,
             3270 wiz_defined-function locations,
-            728 strings with 6424 characters,
-and the built_in function-call counts, 9728 in all, are:
-= -- 1083
-> -- 135
-< -- 9
-+ -- 78
-- -- 41
-* -- 643
-:= -- 1119
-add.period$ -- 8
-call.type$ -- 8
-change.case$ -- 53
-chr.to.int$ -- 8
-cite$ -- 8
-duplicate$ -- 1030
-empty$ -- 792
-format.name$ -- 57
-if$ -- 2055
+            737 strings with 6776 characters,
+and the built_in function-call counts, 10357 in all, are:
+= -- 1137
+> -- 145
+< -- 10
++ -- 82
+- -- 44
+* -- 693
+:= -- 1212
+add.period$ -- 9
+call.type$ -- 9
+change.case$ -- 61
+chr.to.int$ -- 9
+cite$ -- 9
+duplicate$ -- 1090
+empty$ -- 859
+format.name$ -- 61
+if$ -- 2188
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 78
-newline$ -- 34
-num.names$ -- 36
-pop$ -- 281
+missing$ -- 85
+newline$ -- 37
+num.names$ -- 40
+pop$ -- 297
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 48
 quote$ -- 0
-skip$ -- 393
+skip$ -- 409
 stack$ -- 0
-substring$ -- 966
-swap$ -- 536
+substring$ -- 1013
+swap$ -- 549
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
+type$ -- 75
 warning$ -- 0
-while$ -- 63
+while$ -- 67
 width$ -- 0
-write$ -- 100
+write$ -- 114
 (There was 1 warning)

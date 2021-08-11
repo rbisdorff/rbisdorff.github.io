@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -13,16 +13,23 @@ Berge C (1962) {The Theory of Graphs (original title: The theory of graphs and
   its applications)}. {Dover 2001 (originally published by Wiley 1962).
   Translated from a French edition by Dunod, 1958}
 
+\bibitem[{Bisdorff(1996)}]{BIS-1996}
+Bisdorff R (1996) {On computing kernels on fuzzy simple graphs by combinatorial
+  enumeration using a CPL(FD) system}. In: {8th Benelux Workshop on Logic
+  Programming, Louvain-la-Neuve (BE), 9 September 1996}, Université catholique
+  de Louvain, \urlprefix\url{http://hdl.handle.net/10993/46933}
+
 \bibitem[{Bisdorff(2000)}]{BIS-2000}
 Bisdorff R (2000) Logical foundation of fuzzy preferential systems with
-  application to the electre decision aid methods. Computers and Operations
-  Research 27:673--687, \urlprefix\url{http://hdl.handle.net/10993/23724}
+  application to the electre decision aid methods. {Computers and Operations
+  Research} 27:673--687, \urlprefix\url{http://hdl.handle.net/10993/23724}
 
 \bibitem[{Bisdorff(2002)}]{BIS-2002}
 Bisdorff R (2002) Logical foundation of multicriteria preference aggregation.
   In: Bouyssou D, Jacquet-Lagr\`eze E, Perny P, S\l{}owi\'{n}ski R,
-  Vanderpooten D, Vincke P (eds) Aiding Decisions with Multiple Criteria,
-  Kluwer Academic Publishers, pp 379--403
+  Vanderpooten D, Vincke P (eds) {Aiding Decisions with Multiple Criteria},
+  Kluwer Academic Publishers, pp 379--403,
+  \urlprefix\url{http://hdl.handle.net/10993/45313}
 
 \bibitem[{Bisdorff(2004)}]{BIS-2004a}
 Bisdorff R (2004) On a natural fuzzification of boolean logic. In: Klement EP,
@@ -32,11 +39,13 @@ Bisdorff R (2004) On a natural fuzzification of boolean logic. In: Klement EP,
 
 \bibitem[{Bisdorff(2006)}]{BIS-2006b}
 Bisdorff R (2006) On enumerating the kernels in a bipolar-valued digraph.
-  Annales du Lamsade 6:1--38, \urlprefix\url{hdl.handle.net/10993/38741}
+  {Annales du Lamsade} 6:1--38,
+  \urlprefix\url{http://hdl.handle.net/10993/38741}
 
 \bibitem[{Bisdorff et~al(2006)Bisdorff, Pirlot, and Roubens}]{BIS-2006a}
 Bisdorff R, Pirlot M, Roubens M (2006) Choices and kernels from bipolar valued
-  digraphs. European Journal of Operational Research 175:155--170
+  digraphs. {European Journal of Operational Research} 175:155--170,
+  \urlprefix\url{http://hdl.handle.net/10993/23720}
 
 \bibitem[{Kitainik(1993)}]{KIT-1993}
 Kitainik L (1993) {Fuzzy decision procedures with binary relations: towards a
@@ -44,7 +53,7 @@ Kitainik L (1993) {Fuzzy decision procedures with binary relations: towards a
 
 \bibitem[{Schmidt and Ströhlein(1985)}]{SCH-1985}
 Schmidt G, Ströhlein T (1985) On kernels of graphs and solutions of games: a
-  synopsis based on relations and fixpoints. SIAM, J Algebraic Discrete Methods
-  6:54–65
+  synopsis based on relations and fixpoints. {SIAM, J Algebraic Discrete
+  Methods} 6:54–65
 
 \end{thebibliography}
