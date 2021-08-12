@@ -29,13 +29,13 @@ Let us consider such a performance tableau in file \texttt{graffiti07.py} \footn
 \end{figure}
 15 journalists and movie critics provide here their rating of $25$ movies: $5$ stars (\emph{masterpiece}), $4$ stars (\emph{must be seen}), $3$ stars (\emph{excellent}), $2$ stars (\emph{good}), $1$ star (\emph{could be seen}), $-1$ star (\emph{I do not like}), $-2$ (\emph{I hate}), \texttt{NA} (\emph{not seen}).
 
-To aggregate all the critics' rating opinions, the \emph{Graffiti} magazine provides for each movie a global score computed as an average grade, just ignoring the \emph{not seen} movies. These averages are thus not computed on comparable denominators; some critics do indeed use a more or less extended range of grades. The movies not seen by critic \texttt{SJ}, for instance, are favoured, as this critic is more severe than others in her grading. Dropping the movies that were not seen by all the critics is here not possible either, as no one of the $25$ movies was actually seen by all the critics. Providing any value for the missing data will as well always somehow falsify any global value scoring. What to do ?
+To aggregate all the critics' rating opinions, the \emph{Graffiti} magazine provides for each movie a global score computed as an average grade, just ignoring the \emph{not seen} movies. These averages are thus not computed on comparable denominators; some critics do indeed use a more or less extended range of grades. The movies not seen by critic \texttt{SJ}, for instance, are favoured, as this critic is more severe than others in their grading. Dropping the movies that were not graded by all the critics is not possible either, as no one of the $25$ movies was actually graded by all the $15$ critics. Providing any value for the missing data will as well always somehow falsify any global value scoring. What to do?
 
-A better approach is to rank the movies on the basis of pairwise bipolar-valued  ``\emph{at least as well rated as}'' opinions. Under this epistemic argumentation approach, missing data are naturally treated as opinion abstentions and hence do not falsify the logical computations. Such a ranking of the $25$ movies is provided, for instance, by the \textbf{heatmap} view shown in Fig.~\vref{fig:16.2}.
-\begin{lstlisting}
+A better approach is to rank the movies on the basis of pairwise bipolar-valued  ``\emph{at least as well rated as}'' statements. Under this epistemic argumentation approach, missing data are naturally treated as opinion abstentions and hence do not falsify the logical computations. Such a \NetFlows ranking of the $25$ movies is provided by the \textbf{heatmap} browser view generated with the \texttt{showHTMLPerformanceHeatmap()} method\index{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}} (see Line 2 in List.~\vref{list:16.1}). Notice also in Line 3 the \texttt{Correlations=True} flag which triggers computing ordinal correlation indexes between the individual critics' rating and the global \NetFlows ranking.
+\begin{lstlisting}[caption={Showing the movie from best to worst rated in a heatmap view},label=list:16.1]
 >>> t.showHTMLPerformanceHeatmap(\
-...                       Correlations=True,\
 ...                       rankingRule='NetFlows',
+...                       Correlations=True,\
 ...                       ndigits=0)
 \end{lstlisting}
 \begin{figure}[h]
@@ -44,13 +44,10 @@ A better approach is to rank the movies on the basis of pairwise bipolar-valued 
 \caption{\emph{Graffiti} magazine's ordered movie ratings from September 2007}
 \label{fig:16.2}       % Give a unique label
 \end{figure}
-There is no doubt that movie \texttt{mv\_QS}, with $6$ \emph{must be seen} marks, is correctly best-ranked and the movie \texttt{mv\_TV} is worst-ranked with five \emph{don't like} marks.
+There is no doubt in Fig.~\vref{fig:16.2} that movie \texttt{mv\_QS}, with $6$ \emph{must be seen} marks, is correctly best-ranked and the movie \texttt{mv\_TV} is worst-ranked with five \emph{don't like} marks.
 
-\section{Modelling pairwise bipolar-valued rating opinions}
-\label{sec:16.2}
-
-Let us explicitly construct the underlying bipolar-valued outranking digraph and consult in Fig.~\vref{fig:16.3} the pairwise characteristic values we obtain between the two best-ranked movies, namely \texttt{mv\_QS} and \texttt{mv\_RR} with the \texttt{showHTMLPairwiseOutrankings} method.\index{showHTMLPairwiseOutrankings@\texttt{showHTMLPairwiseOutrankings()}}
-\begin{lstlisting}[caption={Showing pairwise outrankings in a browser view},label=list:16.1]
+In order to inspect the epistemic reasons of the proposed ranking, let us, first, explicitly construct in List.~\vref{list:16.2} the underlying bipolar-valued outranking digraph and consult in Fig.~\vref{fig:16.3} the pairwise characteristic values we obtain between the two best-ranked movies, namely \texttt{mv\_QS} and \texttt{mv\_RR} with the \texttt{showHTMLPairwiseOutrankings} method.\index{showHTMLPairwiseOutrankings@\texttt{showHTMLPairwiseOutrankings()}}
+\begin{lstlisting}[caption={Showing pairwise outrankings in a browser view},label=list:16.2]
 >>> from outrankingDigraphs import\
 ...     BipolarOutrankingDigraph
 >>> g = BipolarOutrankingDigraph(t)
@@ -66,8 +63,8 @@ Let us explicitly construct the underlying bipolar-valued outranking digraph and
 
 Six out of the fifteen critics have not seen one or the other of these two movies. Notice the higher significance ($3$) that is granted to two locally renowned movie critics, namely \texttt{JH} and \texttt{VT}. Their opinion counts for three times the opinion of the other critics. All nine critics that have seen both movies, except critic \texttt{MR}, state that \texttt{mv\_QS} is rated ``\emph{at least as well as}'' \texttt{mv\_RR} and the balance of positive against negative opinions amounts to $+11$, a characteristic value which positively validates the outranking situation with a significance majority of $(11/19 + 1.0) / 2.0 = 79\%$.
 
-The complete table of pairwise significance majority margins of global ``\emph{at least as well rated as}'' opinions, ranked by the same rule as shown in the heatmap in Fig.~\vref{fig:16.3}, may be shown in Fig.~\vref{fig:16.4} with the help of the \texttt{showHTMLRelationTable()} method\index{showHTMLRelationTable@\texttt{showHTMLRelationTable()}}. 
-\begin{lstlisting}[caption={Showing the outranking characteristics, ranked by the \NetFlows rule in a browser view},label=list:16.2]      
+Figure~\vref{fig:16.4} shows, with the help of the \texttt{showHTMLRelationTable()} method\index{showHTMLRelationTable@\texttt{showHTMLRelationTable()}}, the complete table of pairwise significance majority margins of global ``\emph{at least as well rated as}'' opinions, ranked by the same \NetFlows rule as in Fig.~\vref{fig:16.3}.
+\begin{lstlisting}[caption={Showing the outranking characteristics, ranked by the \NetFlows rule in a browser view},label=list:16.3]      
 >>> ranking = g.computeNetFlowsRanking()
 >>> g.showHTMLRelationTable(actionsList=ranking, ndigits=0,\
 ...    tableTitle='Bipolar characteristic values of\
@@ -75,8 +72,8 @@ The complete table of pairwise significance majority margins of global ``\emph{a
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/graffiti07_3.png}
-\caption{Pairwise majority margins of ``\emph{at least as well rated as}'' rating opinions}
+\includegraphics[width=11.5cm]{Figures/graffiti07_3.png}
+\caption{Pairwise majority margins of ``\emph{at least as well rated as}'' opinions}
 \label{fig:16.4}       % Give a unique label
 \end{figure}
 

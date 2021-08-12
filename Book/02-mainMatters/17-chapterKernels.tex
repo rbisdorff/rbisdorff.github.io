@@ -17,13 +17,13 @@ In all graphs or symmetric digraphs, the \emph{maximality condition} imposed on 
 We may illustrate in Fig.~\vref{fig:17.1} this coincidence between MISs and kernels in graphs and symmetric digraphs with a random 3-regular graph instance generated in List.~\vref{list:17.1}\index{RandomRegularGraph@\texttt{RandomRegularGraph} class}. A random MIS in this graph may be computed by using the \texttt{MISModel} class\index{MISModel@\texttt{MISModel} class} (see Lines 5-8 below).
 \begin{lstlisting}[caption={Generating a random 3-regular graph of order 12},label=list:17.1]
 >>> from graphs import RandomRegularGraph
->>> g = RandomRegularGraph(order=12,\
-...                        degree=3,seed=100)
+>>> r3g12 = RandomRegularGraph(order=12,\
+...                        degree=3,seed=4)
 >>> from graphs import MISModel
->>> mg = MISModel(g)
+>>> mg = MISModel(r3g12)
   Iteration:  1
     Running a Gibbs Sampler for 660 step !
-    {'a06', 'a02', 'a12', 'a10'}  is maximal !
+    {'a05', 'a07', 'a12'}  is maximal !
 >>> mg.exportGraphViz('random3RegularGraph-mis')
   *---- exporting a dot file for GraphViz tools ---*
    Exporting to random3RegularGraph-mis.dot
@@ -32,8 +32,8 @@ We may illustrate in Fig.~\vref{fig:17.1} this coincidence between MISs and kern
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/random3RegularGraph-mis.png}
-\caption{A random MIS coloured in the random 3-regular graph. All non blue vertices are covered by at least one blue vertex}
+\includegraphics[width=6cm]{Figures/17-1-random3RegularGraph-mis.pdf}
+\caption{A random MIS coloured in the random 3-regular graph \texttt{r3g12}. All non blue vertices are covered by a blue vertex}
 \label{fig:17.1}       % Give a unique label
 \end{figure}
 
@@ -41,43 +41,51 @@ It is easily verified in Fig.~\vref{fig:17.1}, that the computed MIS renders ind
 \begin{lstlisting}[caption={Printing out all maximal independent sets of the random 3-regular graph},label=list:17.2]
 >>> g.showMIS()
   *---  Maximal Independent Sets ---*
-   ['a01', 'a02', 'a03', 'a07']
-   ['a01', 'a04', 'a05', 'a08']
-   ['a04', 'a05', 'a08', 'a09']
-   ['a01', 'a04', 'a05', 'a10']
-   ['a04', 'a05', 'a09', 'a10']
-   ['a02', 'a03', 'a07', 'a12']
-   ['a01', 'a03', 'a07', 'a11']
-   ['a05', 'a08', 'a09', 'a11']
-   ['a03', 'a07', 'a11', 'a12']
+   ['a05', 'a07', 'a12']
+   ['a01', 'a06', 'a08']
+   ['a07', 'a08', 'a11']
+   ['a01', 'a09', 'a11', 'a12']
+   ['a01', 'a02', 'a09', 'a11']
+   ['a01', 'a06', 'a09', 'a12']
+   ['a01', 'a02', 'a06', 'a09']
    ['a07', 'a09', 'a11', 'a12']
-   ['a08', 'a09', 'a11', 'a12']
-   ['a04', 'a05', 'a06', 'a08']
-   ['a04', 'a05', 'a06', 'a10']
-   ['a02', 'a04', 'a06', 'a10']
-   ['a02', 'a03', 'a06', 'a12']
-   ['a02', 'a06', 'a10', 'a12']
-   ['a01', 'a02', 'a04', 'a07', 'a10']
-   ['a02', 'a04', 'a07', 'a09', 'a10']
-   ['a02', 'a07', 'a09', 'a10', 'a12']
-   ['a01', 'a03', 'a05', 'a08', 'a11']
-   ['a03', 'a05', 'a06', 'a08', 'a11']
-   ['a03', 'a06', 'a08', 'a11', 'a12']
-   number of solutions:  22
+   ['a02', 'a07', 'a09', 'a11']
+   ['a06', 'a07', 'a09', 'a12']
+   ['a04', 'a06', 'a07', 'a08']
+   ['a02', 'a04', 'a05', 'a07']
+   ['a04', 'a05', 'a07', 'a08']
+   ['a09', 'a10', 'a11', 'a12']
+   ['a06', 'a09', 'a10', 'a12']
+   ['a04', 'a06', 'a08', 'a10']
+   ['a04', 'a06', 'a09', 'a10']
+   ['a01', 'a03', 'a11', 'a12']
+   ['a01', 'a02', 'a03', 'a11']
+   ['a01', 'a03', 'a08', 'a11']
+   ['a01', 'a03', 'a05', 'a12']
+   ['a01', 'a02', 'a03', 'a05']
+   ['a01', 'a03', 'a05', 'a08']
+   ['a02', 'a03', 'a04', 'a05']
+   ['a03', 'a10', 'a11', 'a12']
+   ['a03', 'a08', 'a10', 'a11']
+   ['a03', 'a05', 'a10', 'a12']
+   ['a02', 'a04', 'a06', 'a07', 'a09']
+   ['a03', 'a04', 'a05', 'a08', 'a10']
+   number of solutions:  29
    cardinality distribution
    card.:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-   freq.:  [0, 0, 0, 0, 16, 6, 0, 0, 0, 0, 0, 0, 0]
-   execution time: 0.00045 sec.
+   freq.:  [0, 0, 0, 3, 24, 2, 0, 0, 0, 0, 0, 0, 0]
+   stability number :  5
+   execution time: 0.00056 sec.
    Results in self.misset
 >>> g.misset
-    [frozenset({'a02', 'a01', 'a07', 'a03'}),
-     frozenset({'a04', 'a01', 'a08', 'a05'}),
-     frozenset({'a09', 'a04', 'a08', 'a05'}),
-     ...
-     ...
-     frozenset({'a06', 'a02', 'a12', 'a10'}),
-     frozenset({'a06', 'a11', 'a08', 'a03', 'a05'}),
-     frozenset({'a03', 'a06', 'a11', 'a12', 'a08'})]
+  [frozenset({'a05', 'a07', 'a12'}),
+   frozenset({'a11', 'a01', 'a12', 'a09'}),
+   frozenset({'a11', 'a01', 'a02', 'a09'}),
+    ...
+    ...
+   frozenset({'a03', 'a10', 'a08', 'a11'}),
+   frozenset({'a03', 'a10', 'a12', 'a05'}),
+   frozenset({'a03', 'a10', 'a04', 'a05', 'a08'})]
 \end{lstlisting}
 
 All graphs and symmetric digraphs admit MISs, hence also kernels. In the context of digraphs, i.e. \emph{oriented} graphs, the kernel concept gets much richer and separates from the symmetric MIS concept.  
@@ -216,14 +224,14 @@ Notice by the way in Fig.~\vref{fig:17.2} that the duals of all chordless circui
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/dualChordlessCircuit.png}
+\includegraphics[width=7cm]{Figures/17-2-dualChordlessCircuit.pdf}
 \caption{The dual of the chordless 6-circuit. No initial or terminal prekernel --weakly independent and dominant, resp. absorbent subset of nodes-- may be found in this kind of digraphs}
 \label{fig:17.2}       % Give a unique label
 \end{figure}
 
 We call \emph{weak}, a chordless circuit with indeterminate inner part.
 
-In List.~\vref{list:17.8} we use the \texttt{IndeterminateInnerPart} parameter\index{IndeterminateInnerPart@\texttt{IndeterminateInnerPart} parameter} of the \texttt{CirculantDigraph} class for constructing such a weak chordless 6-circuit digraph. It is worth noticing in Fig.~\vref{fig:17.3} that the dual version of a weak circuit corresponds to its \emph{converse} version \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the l\emph{ess than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict converse) \emph{better than} relation.}.
+In List.~\vref{list:17.8} we use the \texttt{IndeterminateInnerPart} parameter\index{IndeterminateInnerPart@\texttt{IndeterminateInnerPart} parameter} of the \texttt{Cir\-culantDigraph} class for constructing such a weak chordless 6-circuit digraph. It is worth noticing in Fig.~\vref{fig:17.3} that the \emph{dual} version of a weak circuit corresponds to its \emph{converse} version \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the l\emph{ess than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict converse) \emph{greater than} relation.}.
 \begin{lstlisting}[caption={The weak 6-circuit digraph},label=list:17.8]
 >>> from digraphs import CirculantDigraph
 >>> c6 = CirculantDigraph(order=6,circulants=[1],\
@@ -231,16 +239,18 @@ In List.~\vref{list:17.8} we use the \texttt{IndeterminateInnerPart} parameter\i
 >>> (-c6).exportGraphViz()
   *---- exporting a dot file for GraphViz tools ---------*
    Exporting to dual_c6.dot
-   circo -Tpng dual_c6.dot -o dual_c6.png
+   circo -Tpng dual_c6.dot -o dual-c6.png
 >>> (~c6).exportGraphViz()
   *---- exporting a dot file for GraphViz tools ---------*
    Exporting to converse_c6.dot
-   circo -Tpng converse_c6.dot -o converse_c6.png 
+   circo -Tpng converse_c6.dot -o converse-c6.png 
 \end{lstlisting}
 \begin{figure}[h]
-%\sidecaption
-\includegraphics[width=10cm]{Figures/weakChordlessCircuit.png}
-\caption{Dual and converse of the weak 6-circuit}
+  % \sidecaption
+  Dual of weak 6-circuit \hfill Converse of weak 6-circuit\\
+  \includegraphics[width=6cm]{Figures/17-3-dual-c6.pdf}\hfill
+  \includegraphics[width=6cm]{Figures/17-3-converse-c6.pdf}
+\caption{Dual and converse versions of the weak 6-circuit give the same digraph}
 \label{fig:17.3}       % Give a unique label
 \end{figure}
 
@@ -263,7 +273,7 @@ In genuine random digraphs, however, we may need to check for each of its MISs, 
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=5cm]{Figures/randomLaterality.png}
+\includegraphics[width=5cm]{Figures/17-4-randomLaterality.pdf}
 \caption{A random digraph instance of order 7 and arc probability 0.3. The digraph instance is neither asymmetric (\texttt{a3} $\Leftrightarrow$ \texttt{a6}) nor symmetric (\texttt{a2} $\rightarrow$ \texttt{a1}, \texttt{a1} $\not\rightarrow$ \texttt{a2}) and, the digraph is not transitive (\texttt{a5} $\rightarrow$ \texttt{a2} $\rightarrow$ \texttt{a1}, but \texttt{a5} $\not\rightarrow$ \texttt{a1})} 
 \label{fig:17.4}       % Give a unique label
 \end{figure}
@@ -333,9 +343,9 @@ Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in Lis
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/orientedLaterality.png}
+\includegraphics[width=6cm]{Figures/17-5-orientedLaterality.pdf}
 \caption{A random digraph oriented by best covering initial and
-   best covered terminal kernel}
+   best covered terminal prekernels}
 \label{fig:17.5}       % Give a unique label
 \end{figure}
 
@@ -362,7 +372,7 @@ To illustrate this idea, let us finally compute in List.~\vref{list:17.12} first
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=10cm]{Figures/randomOutranking.png}
+\includegraphics[width=10cm]{Figures/17-6-randomOutranking.png}
 \caption{The performance tableau of a random outranking digraph instance}
 \label{fig:17.6}       % Give a unique label
 \end{figure}
@@ -377,7 +387,7 @@ The associated random performance tableau shown in Fig.~\vref{fig:17.6} reveals 
                     -o tutOutranking.png\end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/tutOutranking.png}
+\includegraphics[width=7cm]{Figures/17-7-tutOutranking.pdf}
 \caption{A random strict outranking digraph instance. All decision alternatives appear strictly better performing than alternative \texttt{a7}. We call it a \Condorcet loser and it is an evident terminal prekernel candidate. On the other side, three alternatives: \texttt{a1}, \texttt{a2} and \texttt{a4} are not dominated. They give together an initial prekernel candidate}
 \label{fig:17.7}       % Give a unique label
 \end{figure}
@@ -437,7 +447,7 @@ In Fig.~\vref{fig:17.8}, we orient the drawing of the strict outranking digraph 
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/bestWorstOrientation.png}
+\includegraphics[width=7cm]{Figures/17-8-bestWorstOrientation.pdf}
 \caption{The strict outranking digraph oriented by its best and worst choice recommendations. The gray arrows, like the one between alternaives \texttt{a4} and \texttt{a1}, represent indeterminate preferential situations. Alternative \texttt{a1} appears hence to be rather incomparable to all the other, except alternative \texttt{a7}}
 \label{fig:17.8}       % Give a unique label
 \end{figure}
@@ -449,7 +459,7 @@ It may be interesting to compare this result with a \Copeland ranking of the und
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=10cm]{Figures/outRankingResult.png}
+\includegraphics[width=10cm]{Figures/17-9-outRankingResult.png}
 \caption{Heat map with Copeland ranking of the performance tableau}
 \label{fig:17.9}       % Give a unique label
 \end{figure}
@@ -660,7 +670,7 @@ In List.~\vref{list:17.19} we now compute, with the \texttt{domkernelrestrict()}
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/k1restricted.png}
+\includegraphics[width=7cm]{Figures/17-10-k1restricted.png}
 \caption{Initial kernel $\\mathtt{a1}, \mathtt{a2}, \mathtt{a4}\}$ restricted adjacency table. This initial prekernel is indeed only weakly independent: The outranking situation between alternatives \texttt{a4} and \texttt{a1} is indeed \emph{indeterminate}. }
 \label{fig:17.10}       % Give a unique label
 \end{figure}
@@ -705,7 +715,7 @@ Let us also compute the restricted adjacency table for the outranked, i.e. the \
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/k2restricted.png}
+\includegraphics[width=7cm]{Figures/17-11-k2restricted.png}
 \caption{Terminal prekernel \{\texttt{a3}, \texttt{a7}\} restricted adjacency table. Again, we notice that this terminal prekernel is indeed only weakly independent.}
 \label{fig:17.11}       % Give a unique label
 \end{figure}
@@ -738,9 +748,9 @@ A unique stable bipolar-valued high and low fixpoint is attained at the third it
 When we reconsider the graphviz drawing of this outranking digraph in Fig.~\vref{fig:17.8},
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/bestWorstOrientation.png}
+\includegraphics[width=6cm]{Figures/17-12-bestWorstOrientation.pdf}
 \caption{The strict outranking digraph oriented by its initial and terminal prekernels. Notice the indeterminate outranking situation between alternatives \texttt{a4} and \texttt{a1}, and the same indeterminate outranking situation between alternatives \texttt{a3} and \texttt{a7}}
-\label{fig:17.13}       % Give a unique label
+\label{fig:17.12}       % Give a unique label
 \end{figure}
 it becomes obvious here why alternative \texttt{a1} is \emph{neither included nor excluded} from the initial prekernel. Same observation is applicable to alternative \texttt{a3} who can \emph{neither be included nor excluded} from the terminal prekernel. it may even happen, in case of more indeterminate outranking situations, that no alternative  is positively included or excluded from a weakly independent prekernel; the corresponding bipolar-valued membership characteristic vector being completely indeterminate.
 \clearpage
