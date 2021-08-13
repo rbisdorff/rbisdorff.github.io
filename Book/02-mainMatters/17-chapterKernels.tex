@@ -745,7 +745,7 @@ The corresponding bipolar-valued characteristic vector $Y_2$ may be computed as 
 \end{lstlisting}
 A unique stable bipolar-valued high and low fixpoint is attained at the third iteration with alternative \texttt{a7} positively confirmed (about $(1.0+0.49)/2 = 0.75\%$ criteria significance majority, see Line 14) as member of this terminal prekernel, whereas the membership of alternative \texttt{a3} in this prekernel appears indeterminate. All the remaining nodes have negative membership characteristic values and are hence positively excluded from this prekernel.
 
-When we reconsider the graphviz drawing of this outranking digraph in Fig.~\vref{fig:17.8},
+When we reconsider the graphviz drawing of this outranking digraph in Fig.~\vref{fig:17.12},
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/17-12-bestWorstOrientation.pdf}
@@ -753,7 +753,7 @@ When we reconsider the graphviz drawing of this outranking digraph in Fig.~\vref
 \label{fig:17.12}       % Give a unique label
 \end{figure}
 it becomes obvious here why alternative \texttt{a1} is \emph{neither included nor excluded} from the initial prekernel. Same observation is applicable to alternative \texttt{a3} who can \emph{neither be included nor excluded} from the terminal prekernel. it may even happen, in case of more indeterminate outranking situations, that no alternative  is positively included or excluded from a weakly independent prekernel; the corresponding bipolar-valued membership characteristic vector being completely indeterminate.
-\clearpage
+
 To illustrate finally why sometimes we need to operate an epistemic disjunctive fusion of unequal stable low and high membership characteristics vectors (see Step 2.c.), let us consider, for instance, the following crisp 7-cycle graph.
 \begin{lstlisting}
 >>> from digraphs import CirculantDigraph
