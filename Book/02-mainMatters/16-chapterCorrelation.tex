@@ -244,15 +244,14 @@ We provide for convenience a direct \texttt{showCorrelation()} method\index{show
     Bipolar-valued equivalence : +0.026
 \end{lstlisting}
 
-We may now illustrate the quality of the global ranking of the movies shown with the heat map in Fig.~\vref{fig:16.2}. 
+We are now ready for assessing the quality of the \NetFlows ranking of the movies shown in the heat map view of Fig.~\vref{fig:16.2}. 
 
 \section{Fitness of ranking heuristics}
 \label{sec:16.3}
 
-We reconsider the bipolar-valued outranking digraph \texttt{g} modelling the pairwise global ``\emph{at least as well rated as}'' relation among the $25$ movies seen in the beginning.
-
+Before, we will inspect the bipolar-valued outranking digraph modelling the pairwise global ``\emph{rated at least as well as}'' relation among the $25$ movies.
 \begin{lstlisting}[caption={Global movies outranking digraph},label=list:16.8]
->>> g = BipolarOutrankingDigraph(t,Normalized=True)
+>>> bod = BipolarOutrankingDigraph(gt07,Normalized=True)
   *------- Object instance description ------*
    Instance class   : BipolarOutrankingDigraph
    Instance name    : rel_grafittiPerfTab.xml
@@ -266,19 +265,19 @@ We reconsider the bipolar-valued outranking digraph \texttt{g} modelling the pai
 >>> g.computeCoSize()
   188
 \end{lstlisting}
-Listing~\vref{list:16.8} reveals that digraph \texttt{g} contains $390$ positively validated (Line 7), $188$ positively invalidated (Line 13)\index{computeCoSize@\texttt{computeCoSize()}}, and 22 indeterminate outranking situations (see the zero-valued cells in Fig.~\vref{fig:16.4}) from the potential $25 \times 24 = 600$ irreflexive movie pairs.
+Listing~\vref{list:16.8} reveals that digraph \texttt{bod} contains $390$ positively validated (Line 7), $188$ positively invalidated (Line 13)\index{computeCoSize@\texttt{computeCoSize()}}, and 22 indeterminate outranking situations from the potential $25 \times 24 = 600$ irreflexive movie pairs.
 
-Let us now compute in List.~\vref{list:16.9} the global \NetFlows ranking shown in the ordered heat map of Fig.~\vref{fig:16.2} and the normalized majority margin $r(\Leftrightarrow)$  of the equivalence between the marginal critic's pairwise ratings.
+Let us now compute the global \NetFlows ranking shown in the ordered heat map of Fig.~\vref{fig:16.2} and the normalized majority margin $r(\Leftrightarrow)$  of the equivalence between the marginal critic's pairwise ratings.
 \begin{lstlisting}[caption={Computing marginal criterion correlations with global \NetFlows ranking},label=list:16.9]
 >>> from linearOrders import NetFlowsOrder
->>> nf = NetFlowsOrder(g)
+>>> nf = NetFlowsOrder(bod)
 >>> nf.netFlowsRanking
   ['mv_QS', 'mv_RR', 'mv_DG', 'mv_NP', 'mv_HN', 'mv_HS', 'mv_SM',
    'mv_JB', 'mv_PE', 'mv_FC', 'mv_TP', 'mv_CM', 'mv_DF', 'mv_TM',
    'mv_DJ', 'mv_AL', 'mv_RG', 'mv_MB', 'mv_GH', 'mv_HP', 'mv_BI',
    'mv_DI', 'mv_FF', 'mv_GG', 'mv_TF']
 >>> for i,item in enumerate(\
-...       g.computeMarginalVersusGlobalRankingCorrelations(\
+...       bod.computeMarginalVersusGlobalRankingCorrelations(\
 ...              nf.netFlowsRanking,ValuedCorrelation=True) ):\
 ...     print('r(%s<=>nf) = %+.3f' % (item[1],item[0]) )   
 
@@ -299,18 +298,18 @@ Let us now compute in List.~\vref{list:16.9} the global \NetFlows ranking shown 
   r(FG<=>nf)  = +0.027
 \end{lstlisting}
 
-In List.~\vref{list:16.9} (see Lines 13-27), we recover in fact the relational equivalence characteristic values shown in the third row of the table in Fig.~\vref{fig.16.2}. The global \NetFlows ranking represents obviously a rather balanced compromise with respect to all movie critics' opinions as there appears no valued negative correlation with anyone of them. The \NetFlows ranking apparently takes also correctly in account that the journalist $JH$, a locally renowned movie critic, shows a higher significance weight (see Line 13).
+In List.~\vref{list:16.9} (see Lines 13-27), we recover in fact the relational equivalence characteristic values shown in the third row of the table in Fig.~\vref{fig.16.2}. The global \NetFlows ranking represents obviously a rather balanced compromise with respect to all movie critics' opinions as there appears no negative correlation with anyone of them. The ranking apparently takes also correctly in account that the journalist $JH$, a locally renowned movie critic, shows a higher significance weight (see Line 13).
 
-The ordinal correlation between the global \NetFlows ranking and the digraph $g$ may be furthermore computed as shown in List.~\vref{list:16.10}: 
+The ordinal correlation between the global \NetFlows ranking and the outranking digraph \texttt{bod} may be furthermore computed as shown in List.~\vref{list:16.10}: 
 \begin{lstlisting}[caption={Computing correlation between \NetFlows and global outranking},label=list:16.10]
->>> corrgnf = g.computeOrdinalCorrelation(nf)
->>> g.showCorrelation(corrgnf)
+>>> corrgnf = bod.computeOrdinalCorrelation(nf)
+>>> bod.showCorrelation(corrgnf)
   Correlation indexes:
     Extended Kendall tau       : +0.780
     Epistemic determination    :  0.300
     Bipolar-valued equivalence : +0.234
 \end{lstlisting}
-One may notice in Line 4 that the ordinal correlation $\tau(\mathtt{g},\mathtt{nf})$ index between the \NetFlows ranking $\mathtt{nf}$ and the determined part of the outranking digraph $\mathtt{g}$ is quite high ($+0.78$). Due to the rather high number of missing data, the $r$ -valued relational equivalence between the $\mathtt{nf}$ and the $\mathtt{g}$ digraph, with a characteristics value of only $+0.234$, may be misleading. Yet, $+0.234$ still corresponds to a $62\%$ majority support of nthe movie critics' rating opinions.
+One may notice in Line 4 that the ordinal correlation $\tau(\mathtt{bod},\mathtt{nf})$ index between the \NetFlows ranking $\mathtt{nf}$ and the determined part of the outranking digraph $\mathtt{bod}$ is quite high ($+0.78$). Due to the rather high number of missing data, the $r$ -valued relational equivalence between the $\mathtt{nf}$ and the $\mathtt{bod}$ digraph, with a characteristics value of only $+0.234$, may be misleading. Yet, $+0.234$ still corresponds to a $62\%$ majority support of nthe movie critics' rating opinions.
 
 It would be interesting to compare similarly the correlations one may obtain with other global ranking heuristics, like the \Copeland ranking rule.
 
@@ -320,7 +319,7 @@ It would be interesting to compare similarly the correlations one may obtain wit
 The bipolar-valued relational equivalence indexes gives us, via the \texttt{showCriteriaCorrelationTable(ValuedCorrelation=True)} method\index{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}}, a further measure for studying how \emph{divergent} may appear the rating opinions expressed by the movie critics. 
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/correlationTable.png}
+\includegraphics[width=11.5cm]{Figures/correlationTable.png}
 \caption{Pairwise valued correlation of movie critics.} 
 \label{fig:16.6}       % Give a unique label
 \end{figure}
@@ -329,7 +328,7 @@ It is remarkable to notice here that, due to the quite numerous missing data, al
 
 To get a picture of the actual divergence of rating opinions concerning jointly seen pairs of movies, we may develop a Principal Component Analysis of the corresponding $\tau$ correlation matrix\footnote{The 3D PCA plot method requires a running R statistics software  (https://www.r-project.org/) installation and the Calmat matrix calculator (see the \texttt{calmat} directory in the \Digraph resources)}. The 3D plot of the first 3 principal axes is shown in Fig.~\vref{fig:16.2}.\index{export3DplotOfCriteriaCorrelation@\texttt{export3DplotOfCriteriaCorrelation()}}
 \begin{lstlisting}
->>> g.export3DplotOfCriteriaCorrelation(ValuedCorrelation=False)
+>>> bod.export3DplotOfCriteriaCorrelation(ValuedCorrelation=False)
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
@@ -347,7 +346,7 @@ In order to furthermore study the quality of a ranking result, it may be interes
 Let us first inspect the pairwise asymmetric part, namely the ``\emph{better rated than}'' and ``\emph{less well rated than}'' opinions of the movie critics. \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}
 \begin{lstlisting}
 >>> from digraphs import AsymmetricPartialDigraph
->>> ag = AsymmetricPartialDigraph(g)
+>>> ag = AsymmetricPartialDigraph(bod)
 >>> ag.showHTMLRelationTable(\
 ...    actionsList=g.computeNetFlowsRanking(),ndigits=0)
 \end{lstlisting}
@@ -361,7 +360,7 @@ Let us first inspect the pairwise asymmetric part, namely the ``\emph{better rat
 We notice in Fig.~\vref{fig:16.8} that the \NetFlows ranking rule inverts in fact just three ``\emph{less well rated than}'' opinions and four ``\emph{better rated than}'' ones. A similar look at the symmetric part, the pairwise ``\emph{as well rated as}'' opinions, suggests a preordered preference structure in several equivalently rated classes. \index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}
 \begin{lstlisting}
 >>> from digraphs import SymmetricPartialDigraph
->>> sg = SymmetricPartialDigraph(g)
+>>> sg = SymmetricPartialDigraph(bod)
 >>> sg.showHTMLRelationTable(\
 ...          actionsList=g.computeNetFlowsRanking(),\
 ...          ndigits=0)
@@ -375,7 +374,7 @@ We notice in Fig.~\vref{fig:16.8} that the \NetFlows ranking rule inverts in fac
 Such a preordering of the movies may, for instance, be computed with the \texttt{computeRankingByChoosing()} method\index{computeRankingByChoosing@\texttt{computeRankingByChoosing()}}, where we iteratively extract dominant kernels --best remaining choices-- and absorbent kernels --worst remaining choices-- (see the next Chapter). We operate therefore on the asymmetric ``\emph{better rated than}'' opinions, i.e. the codual of the ``\emph{at least as well rated as}'' opinions \footnote{A kernel in a digraph $g$ is a clique in the dual digraph $-g$.} (see Line 2 in List.~\vref{list:16.11}).
 \begin{lstlisting}[caption={Bipolar ranking-by-choosing the Grafitti movies},label=list:11]
 >>> from transitiveDigraphs import RankingByChoosingDigraph
->>> rbc = RankingByChoosingDigraph(g,CoDual=True)
+>>> rbc = RankingByChoosingDigraph(bod,CoDual=True)
 >>> rbc.showRankingByChoosing()
   Ranking by Choosing and Rejecting
     1st Best Choice ['mv_QS']
@@ -389,7 +388,7 @@ Such a preordering of the movies may, for instance, be computed with the \texttt
     1st Worst Choice ['mv_BI','mv_DI','mv_HP','mv_TF']
 \end{lstlisting}
 
-In the next Chapter \vref{sec:17}, we thouroughly discuss the computation of such kernels in bipolar-valued digraphs.
+In the next Chapter~\vref{sec:17}, we thouroughly discuss the computation of such kernels in bipolar-valued digraphs.
 
 %%%%%%% The chapter bibliography
 %\normallatexbib
