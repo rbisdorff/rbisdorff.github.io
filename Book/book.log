@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  16 AUG 2021 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  16 AUG 2021 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2449,39 +2449,40 @@ Chapter 21.
 
 
 ]
-Overfull \hbox (2.17033pt too wide) in paragraph at lines 68--70
+Overfull \hbox (2.17033pt too wide) in paragraph at lines 69--71
 []\OT1/ptm/m/n/10 The stored graph in-stance may be reloaded and plot-ted with 
 the generic \OT1/pcr/m/n/10 export-
  []
 
-<Figures/tutorialGraph.pdf, id=9653, 299.1175pt x 261.97874pt>
-File: Figures/tutorialGraph.pdf Graphic file (type pdf)
-<use Figures/tutorialGraph.pdf>
-Package pdftex.def Info: Figures/tutorialGraph.pdf  used on input line 80.
+<Figures/21-1-tutorialGraph.pdf, id=9653, 299.1175pt x 261.97874pt>
+File: Figures/21-1-tutorialGraph.pdf Graphic file (type pdf)
+<use Figures/21-1-tutorialGraph.pdf>
+Package pdftex.def Info: Figures/21-1-tutorialGraph.pdf  used on input line 81.
+
 (pdftex.def)             Requested size: 199.16928pt x 174.44153pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[312] [313 <./Figures/tutorialGraph.pdf>] [314]
-<Figures/tutorial-3-coloring.pdf, id=9808, 299.1175pt x 261.97874pt>
-File: Figures/tutorial-3-coloring.pdf Graphic file (type pdf)
-<use Figures/tutorial-3-coloring.pdf>
-Package pdftex.def Info: Figures/tutorial-3-coloring.pdf  used on input line 17
-9.
+[312] [313 <./Figures/21-1-tutorialGraph.pdf>] [314]
+<Figures/21-2-tutorial-3-coloring.pdf, id=9808, 299.1175pt x 261.97874pt>
+File: Figures/21-2-tutorial-3-coloring.pdf Graphic file (type pdf)
+<use Figures/21-2-tutorial-3-coloring.pdf>
+Package pdftex.def Info: Figures/21-2-tutorial-3-coloring.pdf  used on input li
+ne 180.
 (pdftex.def)             Requested size: 170.71652pt x 149.5213pt.
-<Figures/tutorial-2-coloring.pdf, id=9809, 299.1175pt x 261.97874pt>
-File: Figures/tutorial-2-coloring.pdf Graphic file (type pdf)
-<use Figures/tutorial-2-coloring.pdf>
-Package pdftex.def Info: Figures/tutorial-2-coloring.pdf  used on input line 17
-9.
+<Figures/21-2-tutorial-2-coloring.pdf, id=9809, 299.1175pt x 261.97874pt>
+File: Figures/21-2-tutorial-2-coloring.pdf Graphic file (type pdf)
+<use Figures/21-2-tutorial-2-coloring.pdf>
+Package pdftex.def Info: Figures/21-2-tutorial-2-coloring.pdf  used on input li
+ne 180.
 (pdftex.def)             Requested size: 170.71652pt x 149.5213pt.
 
 
 Class SVMono Warning: \sidecaption: No sufficient room for the legend; 
-using normal \caption on input line 179.
+using normal \caption on input line 180.
 
 
-Overfull \hbox (8.53581pt too wide) in paragraph at lines 179--179
+Overfull \hbox (8.53581pt too wide) in paragraph at lines 180--180
 [][] [][] 
  []
 
@@ -2489,80 +2490,81 @@ Overfull \hbox (8.53581pt too wide) in paragraph at lines 179--179
 .2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.200     execution 
-                    time: 0.00032 sec. <./Figures/tutorial-3-coloring.pdf> <./F
-igures/tutorial-2-coloring.pdf
+l.201     execution 
+                    time: 0.00032 sec. <./Figures/21-2-tutorial-3-coloring.pdf>
+ <./Figures/21-2-tutorial-2-coloring.pdf
 
-pdfTeX warning: pdflatex (file ./Figures/tutorial-2-coloring.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./Figures/21-2-tutorial-2-coloring.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
 >]
 
 LaTeX Warning: Hyper reference `ist:21.7' on page 316 undefined on input line 2
-10.
+11.
 
 
-LaTeX Warning: Reference `ist:21.7' on page 316 undefined on input line 210.
+LaTeX Warning: Reference `ist:21.7' on page 316 undefined on input line 211.
 
 
-LaTeX Warning: Reference `ist:21.7' on page 316 undefined on input line 210.
+LaTeX Warning: Reference `ist:21.7' on page 316 undefined on input line 211.
 
 [316] [317]
-<Figures/maxMatchingcycleGraph.pdf, id=9979, 403.5075pt x 438.63875pt>
-File: Figures/maxMatchingcycleGraph.pdf Graphic file (type pdf)
-<use Figures/maxMatchingcycleGraph.pdf>
-Package pdftex.def Info: Figures/maxMatchingcycleGraph.pdf  used on input line 
-331.
+<Figures/21-3-maxMatchingcycleGraph.pdf, id=9979, 403.5075pt x 438.63875pt>
+File: Figures/21-3-maxMatchingcycleGraph.pdf Graphic file (type pdf)
+<use Figures/21-3-maxMatchingcycleGraph.pdf>
+Package pdftex.def Info: Figures/21-3-maxMatchingcycleGraph.pdf  used on input 
+line 332.
 (pdftex.def)             Requested size: 199.16928pt x 216.50774pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [318]
-<Figures/grid-15-15-ising.pdf, id=10033, 569.12625pt x 578.16pt>
-File: Figures/grid-15-15-ising.pdf Graphic file (type pdf)
-<use Figures/grid-15-15-ising.pdf>
-Package pdftex.def Info: Figures/grid-15-15-ising.pdf  used on input line 358.
+<Figures/21-4-grid-15-15-ising.pdf, id=10033, 569.12625pt x 578.16pt>
+File: Figures/21-4-grid-15-15-ising.pdf Graphic file (type pdf)
+<use Figures/21-4-grid-15-15-ising.pdf>
+Package pdftex.def Info: Figures/21-4-grid-15-15-ising.pdf  used on input line 
+359.
 (pdftex.def)             Requested size: 312.9803pt x 317.96251pt.
 
 
 Class SVMono Warning: \sidecaption: No sufficient room for the legend; 
-using normal \caption on input line 358.
+using normal \caption on input line 359.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[319 <./Figures/maxMatchingcycleGraph.pdf>] [320pdfTeX warning (ext4): destinat
-ion with the same identifier (name{figure.21.4}) has been already used, duplica
-te ignored
+[319 <./Figures/21-3-maxMatchingcycleGraph.pdf>] [320pdfTeX warning (ext4): des
+tination with the same identifier (name{figure.21.4}) has been already used, du
+plicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.392 >>> 
-          met = MetropolisChain(g,probs) <./Figures/grid-15-15-ising.pdf>]
+l.393 >>> 
+          met = MetropolisChain(g,probs) <./Figures/21-4-grid-15-15-ising.pdf>]
 
 Package natbib Warning: Citation `ISOMIS-08' on page 321 undefined on input lin
-e 422.
+e 423.
 
 [321]
-<Figures/cg12.pdf, id=10164, 546.04pt x 578.16pt>
-File: Figures/cg12.pdf Graphic file (type pdf)
-<use Figures/cg12.pdf>
-Package pdftex.def Info: Figures/cg12.pdf  used on input line 458.
+<Figures/21-5-cg12.pdf, id=10164, 546.04pt x 578.16pt>
+File: Figures/21-5-cg12.pdf Graphic file (type pdf)
+<use Figures/21-5-cg12.pdf>
+Package pdftex.def Info: Figures/21-5-cg12.pdf  used on input line 459.
 (pdftex.def)             Requested size: 170.71652pt x 180.75395pt.
- [322 <./Figures/cg12.pdf>]
+ [322 <./Figures/21-5-cg12.pdf>]
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <8.5> not available
-(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 478.
+(Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 479.
  [323] [324]
-<Figures/c12.png, id=10310, 372.1905pt x 341.47575pt>
-File: Figures/c12.png Graphic file (type png)
-<use Figures/c12.png>
-Package pdftex.def Info: Figures/c12.png  used on input line 565.
+<Figures/21-5-c12.png, id=10310, 372.1905pt x 341.47575pt>
+File: Figures/21-5-c12.png Graphic file (type png)
+<use Figures/21-5-c12.png>
+Package pdftex.def Info: Figures/21-5-c12.png  used on input line 566.
 (pdftex.def)             Requested size: 170.71652pt x 156.62743pt.
 
 
 Package natbib Warning: Citation `ISOMIS-08' on page 325 undefined on input lin
-e 569.
+e 570.
 
-[325 <./Figures/c12.png (PNG copy)>]
+[325 <./Figures/21-5-c12.png (PNG copy)>]
 
 (./02-mainMatters/21-chapterGraphs.bbl (./book.brf))) [326
 
@@ -2914,7 +2916,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: AE8B4B792DC899463AE5E169F8D85CFD;43679.
+(rerunfilecheck)             Checksum: C4620E5E93DD3AF846001DB12CE307B0;43679.
 
 Package rerunfilecheck Warning: File `book.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
@@ -2925,8 +2927,8 @@ Package rerunfilecheck Info: Checksums for `book.brf':
  ) 
 Here is how much of TeX's memory you used:
  24710 strings out of 478994
- 374316 string characters out of 5858184
- 1128640 words of memory out of 5000000
+ 374526 string characters out of 5858184
+ 1128633 words of memory out of 5000000
  34323 multiletter control sequences out of 15000+600000
  483998 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2956,7 +2958,7 @@ symbol/usyr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr
 xlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (388 pages, 6665263 bytes).
+Output written on book.pdf (388 pages, 6665148 bytes).
 PDF statistics:
  13799 PDF objects out of 15390 (max. 8388607)
  12760 compressed objects within 128 object streams
