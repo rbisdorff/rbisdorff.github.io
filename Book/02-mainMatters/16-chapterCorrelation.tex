@@ -12,7 +12,7 @@ In a stubborn keeping with a two-valued logic, where every argument can only be 
 
 In social choice problems, voting abstentions are, however, frequently observed and represent a social expression that may be significant for revealing non represented social preferences. And, in marketing studies, interviewees will not always respond to all the submitted questions. Again, such abstentions do sometimes contain nevertheless valid information concerning consumer preferences.
 
-Such a case is given with  a list of a set of star-rated movies that could be seen in town in September 2003 (source: \emph{Graffiti Star wars}, Edition Revue Luxembourg, September 2007, p. 30.). The underlying performance tableau data, stored in a file named \texttt{graffiti07.py}\footnote{to be found in the \texttt{examples} directory of the \Digraph resources}, is shown below with the \texttt{showHTMLPerformance\-Tableau()} method\index{showHTMLPerformanceTableau@\texttt{showHTMLPerformanceTableau()}}  : 
+Such a case is given with  a list of star-rated movies that could be seen in town in September 2003 (source: \emph{Graffiti Star wars}, Edition Revue Luxembourg, September 2007, p. 30.). The underlying performance tableau data, stored in a file named \texttt{graffiti07.py}\footnote{to be found in the \texttt{examples} directory of the \Digraph resources}, is shown below with the \texttt{showHTMLPerformance\-Tableau()} method\index{showHTMLPerformanceTableau@\texttt{showHTMLPerformanceTableau()}}  : 
 \begin{lstlisting}
 >>> from outrankingDigraphs import\
 ...                        PerformanceTableau 
@@ -28,9 +28,9 @@ Such a case is given with  a list of a set of star-rated movies that could be se
 \label{fig:16.1}       % Give a unique label
 \end{figure}
 
-Figure~\vref{fig:16.1} shows the star-ratings of $25$ movies by $15$ journalists and movie critics: $5$ stars (\emph{masterpiece}), $4$ stars (\emph{must be seen}), $3$ stars (\emph{excellent}), $2$ stars (\emph{good}), $1$ star (\emph{could be seen}), $-1$ star (\emph{I do not like}), $-2$ stars (\emph{I hate}), \texttt{NA} (\emph{not seen}). Notice in the second row the higher significance ($3.00$) that is granted to two locally renowned movie critics, namely \texttt{JH} and \texttt{VT}. Their opinion counts for three times the opinion of the other critics. With six times a 4 stars (\emph{must be seen}) grade, \texttt{mv\_QS} is best-rated, followed by \texttt{mv\_RR} with four times 4 stars marks. Fewest stars obtains movie \texttt{mv\_TF} with three times $-1$ star (\emph{don't like}) mark and five times a $1$ star mark. Notice that many movies, like movie \texttt{mv\_BI}, are only rated by some of the critics. 
+Figure~\vref{fig:16.1} shows the star-ratings of $25$ movies by $15$ journalists and movie critics: $5$ stars (\emph{masterpiece}), $4$ stars (\emph{must be seen}), $3$ stars (\emph{excellent}), $2$ stars (\emph{good}), $1$ star (\emph{could be seen}), $-1$ star (\emph{I do not like}), $-2$ stars (\emph{I hate}), \texttt{NA} (\emph{not seen}). Notice in the second row the higher significance ($3.00$) that is granted to two locally renowned movie critics, namely \texttt{JH} and \texttt{VT}. Their opinion counts for three times the opinion of the other critics. With six times a 4 stars (\emph{must be seen}) grade, \texttt{mv\_QS} is best-rated, followed by \texttt{mv\_RR} with four times a 4 stars mark. Fewest stars obtains movie \texttt{mv\_TF} with three times a $-1$ star (\emph{don't like}) mark and five times a $1$ star mark. Notice that many movies, like movie \texttt{mv\_BI}, are only rated by some of the critics. 
 
-To aggregate all the critics' star-ratings, the \emph{Graffiti} magazine computes for each movie a global score --average weighted number of obtained stars-- just ignoring the \emph{not seen} movies. Listing~\vref{list:16.1} illustrates below how to compute these global scores using the data stored in the \texttt{gt07} performance tableau. Attribute \texttt{gt07.actions}, resp. \texttt{gt07.criteria}, contains the description of the movies, resp. the critics. The actual star-ratings are to be found in the \texttt{gt07.evaluation} attribute.
+To aggregate all the critics' star-ratings, the \emph{Graffiti} magazine computes for each movie a global score --the average weighted number of stars it obtained-- just ignoring the \emph{not seen} movies. Listing~\vref{list:16.1} illustrates below how to compute these global scores using the data stored in the \texttt{gt07} performance tableau. Attribute \texttt{gt07.actions}, resp. \texttt{gt07.criteria}, contains the description of the 25 movies, resp. the 15 critics. The actual star-ratings are to be found in the \texttt{gt07.evaluation} attribute.
 \begin{lstlisting}[caption={Computing the average weighted number of stars per movie},label=list:16.1,basicstyle=\ttfamily\scriptsize]
 >>> # gt07 = PerformanceTableau('graffiti07')
 >>> globalScores = {}
@@ -75,9 +75,9 @@ To aggregate all the critics' star-ratings, the \emph{Graffiti} magazine compute
   mv_TF: 0.55
 \end{lstlisting}
 
-The global scrores ranking confirms in Lines 17-18 both leading movies --\texttt{mv\_QS} ($3.60$) and \texttt{mv\_RR} ($2.88$) -- as well as the weakest rated one in Line 41--\texttt{mv\_TF} ($0.55$). Mind however that these global averages, due to the numerous missing grades, are not computed with commensurable denominators; some critics do indeed use a more or less extended range of stars. The movies not seen for instance by critic \texttt{SJ} are favoured, as this critic is severer than others in her rating. Dropping the movies that were not graded by all the critics is not possible either, as none of the $25$ movies was actually rated by all $15$ critics. Providing a fictive value for the many not seen situations, will as well always somehow falsify the global scores. What to do?
+The global scrores ranking confirms in Lines 17-18 both leading movies --\texttt{mv\_QS} ($3.60$) and \texttt{mv\_RR} ($2.88$) -- as well as in Line 41 the weakest rated one --\texttt{mv\_TF} ($0.55$). Mind however that these global averages, due to the numerous missing grades, are not computed with commensurable denominators; some critics do indeed use a more or less extended range of stars. The movies not seen for instance by critic \texttt{SJ} are favoured, as this critic is severer than others in her rating. Dropping the movies that were not graded by all the critics is not possible either, as none of the $25$ movies was actually rated by all the $15$ critics. Providing a fictive value for the many not seen situations, will as well always somehow falsify the global scores. What to do?
 
-A better approach is to rank the movies on the basis of pairwise bipolar-valued  ``\emph{at least as well rated as}'' statements. Under this epistemic argumentation approach, missing grades are naturally treated as opinion abstentions and hence do not falsify the logical computations. Such a \NetFlows ranking from best-rated to weakest-rated is provided by the \textbf{heatmap} browser view generated with the \texttt{showHTMLPerformanceHeatmap()} method\index{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}} (see List.~\vref{list:16.2}).
+A better approach is to rank the movies on the basis of pairwise bipolar-valued  ``\emph{rated at least as well as}'' statements. Under this epistemic argumentation approach, missing grades are naturally treated as opinion abstentions and hence do not falsify the logical computations. Such a \NetFlows ranking from best-rated to weakest-rated is provided by the \textbf{heatmap} browser view generated with the \texttt{showHTMLPerformanceHeatmap()} method\index{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}} (see List.~\vref{list:16.2}).
 \begin{lstlisting}[caption={Showing the movie from best to worst rated in a heatmap view},label=list:16.2]
 >>> gt07.showHTMLPerformanceHeatmap(\
 ...            pageTitle='Ranking the movies',\  
@@ -94,13 +94,12 @@ A better approach is to rank the movies on the basis of pairwise bipolar-valued 
 
 The \NetFlows ranking shown in Fig.~\vref{fig:16.2} confirms again that movie \texttt{mv\_QS}, with $6$ \emph{must be seen} marks, is correctly best-ranked and the movie \texttt{mv\_TF} is worst-ranked with five \emph{don't like} marks. 
 
-It is fair, however, to eventually mention here that the \emph{Graffiti} magazine's average stars ranking rule is actually showing a very similar result. Indeed, average scores usually confirm well all evident pairwise comparisons, yet \emph{enforce} comparability for all less evident ones.
+It is fair, however, to eventually mention here that the \emph{Graffiti} magazine's average stars ranking rule is actually showing a very similar result. Indeed, average scores usually confirm well all evident pairwise comparisons, yet \emph{enforce} comparability for all less evident ones. How to judge now the fitness of a given ranking rule?
 
-How to judge now the fitness of a given ranking rule? This is the purpose of the ordinal correlation \emph{tau} indexes shown in Fig.~\vref{fig:16.2} 3rd row. Computing these ordinal correlation indexes is the subject of the next Section.
+This is the purpose of the ordinal correlation \emph{tau} indexes shown in Fig.~\vref{fig:16.2} 3rd row. Computing these ordinal correlation indexes is the subject of the next Section.
  
-\section{\Kendall 's tau index}
+\section{\Kendall 's ordinal correlation tau index}
 \label{sec:16:2}
-
 
 M. G. Kendall\index{Kendall@\emph{Kendall M.G.}} defined his ordinal correlation $\tau$ (\emph{tau}) index for linear orders of dimension $n$ as a balancing of the number $Co$ of correctly oriented pairs against the number $In$ of incorrectly oriented pairs \citep{KEN-1938}. The total number of irreflexive pairs being $n(n-1)$, in the case of linear orders, $Co + In \;=\; n(n-1)$.  Hence $\tau \;=\; \big(\frac{Co}{n(n-1)}\big) \,-\, \big(\frac{In}{n(n-1)}\big)$. In case $In$ is zero, $\tau \;=\; +1$  (all pairs are equivalently oriented); inversely, in case $Co$ is zero, $\tau \;=\; -1$ (all pairs are differently oriented).
 
@@ -110,7 +109,7 @@ Noticing that $\frac{Co}{n(n-1)} \;=\; 1 \,-\, \frac{In}{n(n-1)}$, and recalling
 \end{equation} 
 \Kendall 's original \emph{tau} definition implemented in fact the bipolar-valued negation of the non equivalence of two linear orders, i.e. the normalized majority margin of equivalently oriented irreflexive pairs.
 
-Let \texttt{r1} and \texttt{r2} be two random crisp relations defined on a same set of 5 alternatives. We may compute \Kendall 's \emph{tau} index shown in List.~\vref{list:16.3}.
+Let \texttt{r1} and \texttt{r2} be two random crisp relations defined on a same set of 5 alternatives. We may compute \Kendall 's \emph{tau} index as shown in List.~\vref{list:16.3}.
 \begin{lstlisting}[caption={Computing a relational equivalence digraph},label=list:16.3]
 >>> from randomDigraphs import RandomDigraph
 >>> r1 = RandomDigraph(order=5,Bipolar=True)
@@ -130,7 +129,7 @@ Let \texttt{r1} and \texttt{r2} be two random crisp relations defined on a same 
 >>> eqd.correlation
   {'correlation': -0.1, 'determination': 1.0}
 \end{lstlisting}
-In the table of the equivalence relation $(\mathtt{r1} \Leftrightarrow \mathtt{r2})$ above (see List.~\vref{list:16.1} Lines 10-14), we observe that the normalized majority margin of equivalent versus non equivalent irreflexive pairs amounts to $(9 - 11)/20 = -0.1$, i.e. the value of \Kendall 's \emph{tau} index in this plainly determined crisp case (see Line 17).
+In the table of the equivalence relation $(\mathtt{r1}\, \Leftrightarrow\, \mathtt{r2})$ above (see List.~\vref{list:16.1} Lines 10-14), we observe that the normalized majority margin of equivalent versus non equivalent irreflexive pairs amounts to $(9 - 11)/20 = -0.1$, i.e. the value of \Kendall 's \emph{tau} index in this plainly determined crisp case (see Line 17).
 
 What happens now with more or less determined and even partially indeterminate relations? May we proceed in a similar way?
 
@@ -179,7 +178,7 @@ In the generated random digraphs \texttt{d1} and \texttt{d2}, 9 pairs, like \tex
    Valuation domain: [-1.00;1.00]
 \end{lstlisting}
 
-In our bipolar-valued epistemic logic, logical disjunctions and conjunctions are implemented as $\max$, respectively $\min$ operations. Notice also that the logical equivalence $(\mathtt{d1} \Leftrightarrow \mathtt{d2})$ corresponds to a double implication $(\mathtt{d1} \Rightarrow \mathtt{d2})\, \wedge \, (\mathtt{d2} \Rightarrow  \mathtt{d1})$ and that the implication $(\mathtt{d1} \Rightarrow \mathtt{d2})$ is logically equivalent to the disjunction $(\neg \mathtt{d1} \vee \mathtt{d2})$.
+In our bipolar-valued epistemic logic, logical disjunctions and conjunctions are implemented as $\max$, respectively $\min$ operations. Notice also that the logical equivalence $(\mathtt{d1}\, \Leftrightarrow\, \mathtt{d2})$ corresponds to a double implication $(\mathtt{d1}\, \Rightarrow\, \mathtt{d2})\; \wedge \; (\mathtt{d2}\, \Rightarrow\,  \mathtt{d1})$ and that the implication $(\mathtt{d1} \Rightarrow \mathtt{d2})$ is logically equivalent to the disjunction $(\neg \mathtt{d1} \vee \mathtt{d2})$.
 
 When $r(x\,\mathtt{d1}\, y)$ and $r(x\,\mathtt{d2}\; y)$ denote the bipolar-valued characteristic values of relation \texttt{d1}, resp. \texttt{d2}, we may hence compute as follows a majority margin $M(\mathtt{d1} \Leftrightarrow \mathtt{d2})$ between equivalently and not equivalently oriented irreflexive pairs $(x,y)$:
 \begin{equation}\label{eq:16:2}
@@ -189,24 +188,24 @@ When $r(x\,\mathtt{d1}\, y)$ and $r(x\,\mathtt{d2}\; y)$ denote the bipolar-valu
 \end{split}
 \end{equation}
 
-$M(\mathtt{d1} \Leftrightarrow \mathtt{d2})$ is thus given by the sum of the non reflexive terms of the relation table of $eqd$, the relational equivalence digraph computed above (see List.~\vref{list:16.5}). In the crisp case, $M(\mathtt{d1} \Leftrightarrow \mathtt{d2})$  is normalized with the maximum number of possible irreflexive pairs, namely $n(n-1)$. In the extended $r$-valued case, the maximal possible equivalence majority margin $M$ corresponds to the sum $D$ of the conjoint determinations of $(x \,\mathtt{d1}\, y)$ and $(x \,R2\, y)$ (see \citet{BIS-2012a}):
+$M(\mathtt{d1} \Leftrightarrow \mathtt{d2})$ is thus given by the sum of the non reflexive terms of the relation table of $eqd$, the relational equivalence digraph computed above (see List.~\vref{list:16.5}). In the crisp case, $M(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2})$  is normalized with the maximum number of possible irreflexive pairs, namely $n(n-1)$. In the extended $r$-valued case, the maximal possible equivalence majority margin $M$ corresponds to the sum $D$ of the conjoint determinations of $(x \,\mathtt{d1}\, y)$ and $(x \,d2\, y)$ (see \citet{BIS-2012a}):
 \begin{equation}
   D \;=\; \sum_{x \neq y} \min \Big[ abs\big(r(x \,\mathtt{d1}\, y) \big), abs \big( r(x \,\mathtt{d2}\, y \big)  \Big]\;,
 \end{equation}
 and we obtain hence in the general $r$ -valued case:
 \begin{equation}\label{eq:16.4}
-  \tau(\mathtt{d1},\mathtt{d2}) \;=\; \frac{M(\mathtt{d1} \Leftrightarrow \mathtt{d2})}{D}\;.
+  \tau(\mathtt{d1},\mathtt{d2}) \;=\; \frac{M(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2})}{D}\;.
 \end{equation}
 
 $\tau(\mathtt{d1},\mathtt{d2})$ corresponds so to the classical ordinal correlation index, yet restricted to the conjointly determined parts of the given digraphs $\mathtt{d1}$ and $\mathtt{d2}$. In the limit case of two crisp linear orders, $D$ equals $n(n-1)$, i.e. the number of irreflexive pairs, and we recover \Kendall 's original \emph{tau} index definition.
 
 It is worthwhile noticing that the ordinal correlation index $\tau(\mathtt{d1},\mathtt{d2})$ one obtains above corresponds in fact to the ratio of:
 \begin{itemize}
-\item $r(\mathtt{d1} \Leftrightarrow \mathtt{d2}) \;=\; \frac{M(\mathtt{d1} \Leftrightarrow \mathtt{d2})}{n(n-1)}$:\\the normalized majority margin of the pairwise \emph{relational} equivalence statements, also called \emph{valued ordinal correlation}, and 
+\item $r(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2}) \;=\; \frac{M(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2})}{n(n-1)}$:\\the normalized majority margin of the pairwise \emph{relational} equivalence statements, also called \emph{valued ordinal correlation}, and 
 \item $d \;=\; \frac{D}{n(n-1)}$:\\ the normalized determination of the corresponding pairwise relational equivalence statements, in fact the \emph{determinateness} of the relational equivalence digraph.
 \end{itemize}
 
-The epistemic determination effect is thus successfully \emph{out-factored} from the ordinal correlation effect. With completely determined relations, $\tau(\mathtt{d1},\mathtt{d2}) \;=\; r(\mathtt{d1} \Leftrightarrow \mathtt{d2})$. The ordinal correlation with a completely indeterminate digraph, i.e. when $D = 0$, is set by convention to the indeterminate correlation value $0.0$. With uniformly chosen random $r$-valued digraphs, the expected $\tau$ index is $0.0$, denoting in fact an indeterminate relational equivalence. The corresponding expected normalized determination $d$ is about $0.333$ (see \citep{BIS-2012a}).
+The epistemic determination effect is thus successfully \emph{out-factored} from the ordinal correlation effect. With completely determined relations, $\tau(\mathtt{d1},\mathtt{d2}) \;=\; r(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2})$. The ordinal correlation with a completely indeterminate digraph, i.e. when $D = 0$, is set by convention to the indeterminate correlation value $0.0$. With uniformly chosen random $r$-valued digraphs, the expected $\tau$ index is $0.0$, denoting in fact an indeterminate relational equivalence. The corresponding expected normalized determination $d$ is about $0.333$ (see \citep{BIS-2012a}).
 
 We may below verify Eq.~\vref{eq:6.4} with help of the equivalence digraph $eqd$ computed in List.~\vref{list:16.5}.
 \begin{lstlisting}[caption={Computing the ordinal correlation index from the equivalence digraph},label=list:16.6]
@@ -222,7 +221,7 @@ We may below verify Eq.~\vref{eq:6.4} with help of the equivalence digraph $eqd$
   r(rd1<=>rd2) = +0.026, d = 0.356, tau = +0.073  
 \end{lstlisting}
 
-The \Digraph resources directly provide for the preceding computations the \texttt{compute\-OrdinalCorrelation()} method\index{computeOrdinalCorrelation@\texttt{computeOrdinalCorrelation()}} which renders a dictionary with a \texttt{correlation} ($\tau$) and a \texttt{determina\-tion} ($d$) attribute. We may recover $r(d1 \Leftrightarrow d2)$ by multiplying $\tau$ with $d$ (see List.~\vref{list:16.7} Line 4). 
+The \Digraph resources directly provide for the preceding computations the \texttt{compute\-OrdinalCorrelation()} method\index{computeOrdinalCorrelation@\texttt{computeOrdinalCorrelation()}} which renders a dictionary with a \texttt{correlation} ($\tau$) and a \texttt{determina\-tion} ($d$) attribute. We may recover $r(d1\,\Leftrightarrow\, d2)$ by multiplying $\tau$ with $d$ (see List.~\vref{list:16.7} Line 4). 
 \begin{lstlisting}[caption={Computing the valued ordinal correlation index},label=list:16.7]
 >>> corrd1d2 = d1.computeOrdinalCorrelation(d2)
 >>> tau = corrd1d2['correlation']

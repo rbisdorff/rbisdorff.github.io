@@ -1,7 +1,7 @@
 \chapter{Robustness analysis of outranking digraphs}
 \label{sec:19}
 
-\abstract*{ The required cardinal significance weights of the performance criteria represent the '\emph{Achilles}' heel of our outranking approach. Rarely will indeed a decision maker be cognitively competent for suggesting precise decimal-valued criteria significance weights. More often, the decision problem will involve more or less equally important decision objectives with more or less equi-significant criteria per objective.In this chapter, we study the robustness of the outranking digraph when the criteria significance weights faithfully indicate solely an order of importance.}
+\abstract*{ The required cardinal significance weights of the performance criteria represent the '\emph{Achilles}' heel of our outranking approach. Rarely will indeed a decision maker be cognitively competent for suggesting precise decimal-valued criteria significance weights. More often, the decision problem will involve more or less equally important decision objectives with more or less equi-significant criteria per objective. In this chapter, we study the robustness of the outranking digraph when the criteria significance weights faithfully indicate solely an order of importance.}
 
 \abstract{ The required cardinal significance weights of the performance criteria represent the '\emph{Achilles}' heel of our outranking approach. Rarely will indeed a decision maker be cognitively competent for suggesting precise decimal-valued criteria significance weights. More often, the decision problem will involve more or less equally important decision objectives with more or less equi-significant criteria per objective. In this chapter, we study the robustness of the outranking digraph when the criteria significance weights faithfully indicate solely an order of importance.}
 
@@ -312,7 +312,7 @@ The corresponding \emph{robust} outranking digraph may be computed as follows wi
 \begin{lstlisting}[caption={Computing a robust outranking digraph},label=list:19.7]
 >>> from outrankingDigraphs import\
 ...              RobustOutrankingDigraph
->>> rg = RobustOutrankingDigraph(pt) # same t as before
+>>> rg = RobustOutrankingDigraph(pt) # same pt
 >>> rg
   *------- Object instance description ------*
    Instance class      : RobustOutrankingDigraph
@@ -395,8 +395,8 @@ We may finally compare in Fig. \ref{fig:19.1} the \emph{standard} and the \emph{
 \begin{figure}[h]
   % \sidecaption
   Standard strict outranking digraph \hfill Robust strict outranking digraph \\
-  \includegraphics[height=6cm]{Figures/stdg.png}\hfill
-  \includegraphics[height=6cm]{Figures/robg.png}
+  \includegraphics[height=6cm]{Figures/19-1-stdg.pdf}\hfill
+  \includegraphics[height=6cm]{Figures/19-1-robg.pdf}
 \caption{\emph{Standard} versus \emph{robust} strict outranking digraphs oriented by their initial and terminal prekernels} 
 \label{fig:19.1}       % Give a unique label
 \end{figure}
@@ -413,7 +413,7 @@ To appreciate the apparent partial ordering of both the standard and the robust 
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/robustHeatmap.png}
+\includegraphics[width=12cm]{Figures/19-2-robustHeatmap.png}
 \caption{Robust heatmap of the random 3 objectives performance tableau ordered by the \NetFlows ranking rule.} 
 \label{fig:19.2}       % Give a unique label
 \end{figure}
@@ -573,18 +573,20 @@ We may visualize this kind of Pareto efficient result in Fig. \ref{fig:19.3}.
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/unopDigraph.png}
-\caption{Standard versus \emph{unopposed} strict outranking digraphs oriented by best and worst choice recommendations.} 
+  Standard strict outranking digraph \hfill Unopposed strict outranking digraph \\
+  \includegraphics[height=6cm]{Figures/19-1-stdg.pdf}\hfill
+  \includegraphics[height=6cm]{Figures/19-3-unopDigraph.pdf}
+\caption{Standard versus \emph{unopposed} strict outranking digraphs oriented by best and worst choice recommendations} 
 \label{fig:19.3}       % Give a unique label
 \end{figure}
 
-In order to make now an eventual best unique choice, a decision maker will necessarily have to weight, in a second stage of the decision aiding process, the relative importance of the individual decision objectives.
+In order to make now an eventual best unique choice, a decision maker will necessarily have to weigh, in a second stage of the decision aiding process, the relative importance of the individual decision objectives.
 
-In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient best choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously temper plurality tyranny effects. This idea is developped in the following Chapte~\ref{sec:20}.
+In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient best choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously temper plurality tyranny effects. This idea is developped in the following Chapter~\ref{sec:20}.
 
 \vspace{1cm}
 
-For concluding, let us mention that it is precisely again our bipolar-valued logical characteristic framework that provides us here with a first order distributional dominance test for effectively qualifying the stability level $\pm 2$ robustness of an outranking digraph when facing performance tableaux with criteria of only ordinal-valued significances. A real world application of our stability analysis with such a kind of performance tableau may be consulted in \citep{BIS-2015bestPoster}.
+For concluding, let us mention that it is precisely again our bipolar-valued logical characteristic framework that provides us here with a first order distributional dominance test for effectively qualifying the stability level $\pm 2$ robustness of an outranking digraph when facing performance tableaux with criteria of only ordinal-valued significance. A real-world application of our stability analysis with such a kind of performance tableau may be consulted in \citep{BIS-2015bestPoster}.
 
 
 

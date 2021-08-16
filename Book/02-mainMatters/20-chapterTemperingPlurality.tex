@@ -4,14 +4,14 @@
 
 \abstract*{ In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously deliver the primary selection in a two stage election system. Our outranking model is based on bipolar approvals-disapprovals of ``\emph{as well as performing as}'' statements. A similar approach is put into practice with bipolar approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, we obtain a $(-1,0,1)$-valued evaluative voting system. We eventually show that in a bipolar-approval voting system, the winner tends to be among the more or less multipartisan candidates.}
 
+\abstract{ In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously deliver the primary selection in a two stage election system. Our outranking model is based on bipolar approvals-disapprovals of ``\emph{as well as performing as}'' statements. A similar approach is put into practice with bipolar approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, we obtain a $(-1,0,1)$-valued evaluative voting system. We eventually show that in a bipolar-approval voting system, the winner tends to be among the more or less multipartisan candidates.}
+
+\paragraph{\textbf{Introduction}}
+
 \begin{quotation}\emph{The choice of a voting procedure shapes the democracy in which we live}.\\
     -- \citet*{BAU-2012}.
 \end{quotation}
-\vspace{1cm}
-
-\abstract{ In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously deliver the primary selection in a two stage election system. Our outranking model is based on bipolar approvals-disapprovals of ``\emph{as well as performing as}'' statements. A similar approach is put into practice with bipolar approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, we obtain a $(-1,0,1)$-valued evaluative voting system. We eventually show that in a bipolar-approval voting system, the winner tends to be among the more or less multipartisan candidates.}
-
-\paragraph{Introduction}
+%\vspace{1cm}
 
 Tempering plurality tyranny effects is, from the seminal work by B. Roy on \citep{ROY-1966}, achieved in the outranking approach by taking into account considerable negative performance differences that may render doubtful otherwise positive ``\emph{at least as well as performing}'' situations. In the social choice context with general elections, such a polarisation is not feasable as the genuine uninominal voting ballots do not contain a rich enough preferential information. Yet, when matching decision objectives with political parties, the Pareto efficient outranking situations seen in Section~\ref{sec:19.6}, correspond to multipartisan ``\emph{at least as well approved as}'' situtations when pairwisely comparing the eligible candidates. A best choice recommendation based of the corresponding multipartisan strict ``\emph{better approved as}'' situations may, the case given, deliver a convincing primary selection in a two-stage election. 
 
@@ -20,8 +20,8 @@ Tempering plurality tyranny effects is, from the seminal work by B. Roy on \cite
 
 To compute multipartisan social choices we need to, first, convert a given linear voting profile with pre-election polls into a corresponding performance tableau.
 
-\subsection{Converting voting profiles into performance tableaux}
-\label{sec:20.1.1}
+% \subsection{Converting voting profiles into performance tableaux}
+% \label{sec:20.1.1}
 
 We shall illustrate this point with a voting profile we discussed already in Chapter~\ref{sec:7}.
 \begin{lstlisting}[caption={Example of a 3 parties voting profile},label=list:20.1]
@@ -95,8 +95,8 @@ We may convert this linear voting profile into a PerformanceTableau object where
 \end{lstlisting}
 In Listing \ref{list:20.2} we first store the linear voting in a \texttt{PerformanceTableau} format (see Line 1). In Line 3, we reload this performance tableau data. The three parties of the linear voting profile represent three decision objectives and the 1000 voters are distributed as 10000 performance criteria according to the party they support.
 
-\subsection{Multipartisan primary selection of eligible candidates}
-\label{sec:20.1.2}
+% \subsection{Multipartisan primary selection of eligible candidates}
+% \label{sec:20.1.2}
 
 In order to operate now a \emph{primary multipartisan selection} of potential election winners, we compute the corresponding unopposed multiobjective outranking digraph (see Section \ref{sec:19.5}).
 \begin{lstlisting}[caption={Computing unopposed multiobjective outranking situations},label=list:20.3]
@@ -146,15 +146,15 @@ We may visualize the corresponding bipolar-valued relation table by orienting th
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/unOpposedOutrankings.png}
+\includegraphics[width=12cm]{Figures/20-1-unOpposedOutrankings.png}
 \caption{Relation table of multipartisan outranking digraph} 
 \label{fig:20.1}       % Give a unique label
 \end{figure}
 
 In Fig.~\ref{fig:20.1}, we may notice that the dominating outranking prekernel \{\texttt{a06}, \texttt{a11}, \texttt{a13}, \texttt{a15}\} gathers in fact a multipartisan selection of potential election winners. It is worthwhile noticing that in the majority margins obtained from a linear voting profile do verify the zero-sum rule: $\big(\,r(x \succsim y) \,+\, r(y \succsim x) \;=\; 0.0\,\big)$. To each positive outranking situation corresponds indeed an equivalent negative converse situation and the resulting outranking and strict outranking digraphs are the same.
 
-\subsection{Secondary election winner determination}
-\label{sec:20.1.3}
+% \subsection{Secondary election winner determination}
+% \label{sec:20.1.3}
 
 When restricting now, in a secondary election stage, the set of eligible candidates to this dominating prekernel, we may compute the actual best social choice.
 \begin{lstlisting}[caption={Recommending the secondary election winner},label=list:20.5]
@@ -193,8 +193,8 @@ We may eventually check the quality of this best choice by noticing that candida
 
 In our example voting profile here, the multipartisan primary selection stage appears quite effective in reducing the number of eligible candidates to four out of a set of 15 candidates without btw rejecting the actual winning candidate.
 
-\subsection{Multipartisan preferences in divisive politics}
-\label{sec:20.1.4}
+% \subsection{Multipartisan preferences in divisive politics}
+% \label{sec:20.1.4}
 
 However, in a very \emph{divisive} two major parties system, like in the US, where preferences of the supporters of one major party appear to be very opposite to the preferences of the supporters of the other major party, the multipartisan outranking digraph will become nearly indeterminate.
 
@@ -308,7 +308,7 @@ We may eventually visualize in Fig.~\ref{fig:20.2} this linear ranking with a gr
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption
-\includegraphics[width=5cm]{Figures/divGraph.png}
+\includegraphics[width=5cm]{Figures/20-2-divGraph.pdf}
 \caption{The linear ranking moddelled by the majority margins digraph.} 
 \label{fig:20.2}       % Give a unique label
 \end{figure}
@@ -479,7 +479,7 @@ We may inspect these pairwise $r(x \succ y)$ values in a browser view:
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/majMargAV.png}
+\includegraphics[width=11cm]{Figures/20-3-majMargAV.png}
 \caption{The bipolar-valued pairwise majority margins} 
 \label{fig:20.3}       % Give a unique label
 \end{figure}
@@ -750,7 +750,7 @@ Fig. \ref{fig:20.4}, showing the \NetFlows ranked relation table of the ``\emph{
 \end{lstlisting}	   
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/majMargDAV.png}
+\includegraphics[width=11cm]{Figures/20-4-majMargDAV.png}
 \caption{The pairwise \emph{better approved than} majority margins} 
 \label{fig:20.4}       % Give a unique label
 \end{figure}
