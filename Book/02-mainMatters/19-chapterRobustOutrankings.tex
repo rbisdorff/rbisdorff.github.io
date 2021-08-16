@@ -1,13 +1,11 @@
-\chapter[On robust outrankings]{Robustness analysis of outranking digraphs}
+\chapter{Robustness analysis of outranking digraphs}
 \label{sec:19}
 
-\abstract*{ The required cardinal significance weights of the performance criteria represent the '\emph{Achilles}' heel of our outranking approach. Rarely will indeed a decision maker be cognitively competent for suggesting precise decimal-valued criteria significance weights. More often, the decision problem will involve more or less equally important decision objectives with more or less equi-significant criteria.
-In this chapter, we study the stability of the outranking digraph when the criteria significance weights faithfully indicate solely an order of importance.}
+\abstract*{ The required cardinal significance weights of the performance criteria represent the '\emph{Achilles}' heel of our outranking approach. Rarely will indeed a decision maker be cognitively competent for suggesting precise decimal-valued criteria significance weights. More often, the decision problem will involve more or less equally important decision objectives with more or less equi-significant criteria per objective.In this chapter, we study the robustness of the outranking digraph when the criteria significance weights faithfully indicate solely an order of importance.}
 
-\abstract{ The required cardinal significance weights of the performance criteria represent the '\emph{Achilles}' heel of our outranking approach. Rarely will indeed a decision maker be cognitively competent for suggesting precise decimal-valued criteria significance weights. More often, the decision problem will involve more or less equally important decision objectives with more or less equi-significant criteria.
-In this chapter, we study the stability of the outranking digraph when the criteria significance weights faithfully indicate solely an order of importance.}
+\abstract{ The required cardinal significance weights of the performance criteria represent the '\emph{Achilles}' heel of our outranking approach. Rarely will indeed a decision maker be cognitively competent for suggesting precise decimal-valued criteria significance weights. More often, the decision problem will involve more or less equally important decision objectives with more or less equi-significant criteria per objective. In this chapter, we study the robustness of the outranking digraph when the criteria significance weights faithfully indicate solely an order of importance.}
 
-\section{Cardinal or ordinal criteria significance weights}
+\section{Cardinal or ordinal criteria significance weights?}
 \label{sec:19.1}
 
 A random example of such a decision problem with equally important decision objectives and equi-significant criteria may be generated with the \texttt{Random3\-Objectives\-PerformanceTableau} class \index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformanceTableau()}}.
@@ -52,16 +50,21 @@ A random example of such a decision problem with equally important decision obje
      en9 criterion of objective Env 6
      Total weight: 24.00 (4 criteria)
 \end{lstlisting}
-In Listing~\ref{list:19.1} one may notice a performance tableau \texttt{pt} describing seven decision alternatives that are assessed with respect to three equally important decision objectives concerning: --first, an \emph{economical} aspect (Line 24) with a coalition of three performance criteria of significance weight 8, --secondly, a \emph{societal} aspect (Line 29) with a coalition of two performance criteria of significance weight 12, and --thirdly, an \emph{environmental} aspect (Line 33) with a coalition four performance criteria of significance weight 6.
+In Listing~\ref{list:19.1} one may notice a performance tableau \texttt{pt} describing seven decision alternatives that are assessed with respect to three equally important decision objectives concerning:
+\begin{enumerate}[topsep=1pt]
+\item An \emph{economical} aspect (Line 24) with a coalition of three performance criteria of significance weight 8,
+\item A \emph{societal} aspect (Line 29) with a coalition of two performance criteria of significance weight 12, and
+\item An \emph{environmental} aspect (Line 33) with a coalition of four performance criteria of significance weight 6.
+\end{enumerate}
 
-The question we tackle is the following: How \emph{dependent} on the actual values of the significance weights appears to be the corresponding bipolar-valued outranking digraph ? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights. In our example we see indeed three increasing weight equivalence classes.
+The question we tackle is the following: How \emph{dependent} on the actual values of the significance weights appears to be the corresponding bipolar-valued outranking digraph? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights. In the random outranking digraph, generated in List.~\vref{list:19.1}, we observe three increasing weight equivalence classes.
 \begin{lstlisting}[caption={The significance weights preorder},label=list:19.2]
 >>> pt.showWeightPreorder()
     ['en3', 'en5', 'en6', 'en9'] (6) <
     ['ec1', 'ec4', 'ec8'] (8) <
     ['so2', 'so7'] (12)
 \end{lstlisting}
-How stable appear now to be the outranking situations when allowing all possible significance weights that are compatible with this weights preorder shown in Listing~\ref{list:19.2} ?
+How robust appear now the validated outranking and outranked situations when allowing all possible significance weights that are compatible with the weights preorder shown in Listing~\ref{list:19.2} above?
 
 \section{Qualifying the stability of outranking situations}
 \label{sec:19.2}
@@ -82,9 +85,9 @@ Let us construct the bipolar-valued outranking digraph corresponding to the rand
     'p6' | +0.22  -0.42  +0.00  -1.00  +0.17  +1.00  -0.11  
     'p7' | +0.22  -0.50  +0.17  -0.06  +0.78  +0.42  +1.00  
 \end{lstlisting}
-In Listing~\ref{list:19.3} Lines 7-13, we notice on the principal diagonal of the relation table the certainly validated reflexive terms $+1.00$ that are trivially independent of any significance weights. Now, we know for sure that \emph{unanimous} outranking situations are also completely independent of the significance weights. And, all outranking situations that are supported by a majority significance in each coalition of equi-significant criteria are as well independent of the actual importance we attach to each individual criteria coalition. We are furthermore able to effectively test if an outranking situation is in fact independent of all the potential significance weights that are compatible with the given preordering of the weights shown in Listing \ref{list:19.2} \citep{BIS-2014}. Mind that usually one also obtains outranking situations that are \emph{dependent} on the precise cardinal weights we allocate to the criteria significances.
+In Listing~\ref{list:19.3} Lines 7-13, we notice on the principal diagonal of the relation table the certainly validated reflexive terms $+1.00$; they are trivially independent of any significance weights. Now, we know for sure that \emph{unanimous} outranking situations are also completely independent of the significance weights. And, all outranking situations that are supported by a majority significance in each coalition of equi-significant criteria are as well independent of the actual importance we attach to each individual criteria coalition. We are furthermore able to effectively test if an outranking situation is in fact independent of all the potential significance weights that are compatible with the given preordering of the weights shown in Listing \ref{list:19.2} \citep{BIS-2014}. Mind that usually one also obtains outranking situations that are \emph{dependent} on the precise cardinal weights we allocate to the criteria significances.
 
-Such a stability denotation of outranking situations may be inspected by using the \texttt{StabilityDenotation=True} flag \index{StabilityDenotation@\texttt{StabilityDenotation} flag} with the common \texttt{showRelationTable()} method.
+Such a stability denotation\index{stability denotation} of outranking situations may be inspected by using the \texttt{StabilityDenotation=True} flag \index{StabilityDenotation@\texttt{StabilityDenotation} flag} with the common \texttt{showRelationTable()} method.
 \begin{lstlisting}[caption={Bipolar-valued outranking relation table with stability denotation},label=list:19.4]
 >>> g.showRelationTable(StabilityDenotation=True)
   * ---- Relation Table -----
@@ -114,7 +117,7 @@ In Listing~\ref{list:19.4} we may hence distinguish the following bipolar-valued
 \item [$\mathbf{0}$:] \texttt{indeterminate} outranking situation, like the one between alternatives \texttt{p1} and \texttt{p3} (see Lines 6 and 10).
 \end{itemize}
 
-It is worthwhile noticing that, in the one limit case where all performance criteria appear equi-significant, i.e. there is given a single equivalence class containing all the criteria significance weights, one may only distinguish stability levels $\pm 4$ and $\pm 3$. In the other limit case, when all performance criteria admit different significanceweights, i.e. the significance weights may be linearly ordered without ties and no stability level $+3$ or $-3$ may be observed.
+It is worthwhile noticing that, in the one limit case where all performance criteria appear equi-significant --there is given a single equivalence class containing all the criteria significance weights-- one may only distinguish stability levels $\pm 4$ and $\pm 3$. In the other limit case, when all performance criteria admit different significanceweights, the significance weights may be linearly ordered without ties and no stability level $+3$ or $-3$ can be observed.
 
 As mentioned above, all reflexive comparisons trivially confirm an unanimous outranking situation: all decision alternatives are indeed always``\emph{performing as well as}'' themselves. But there appear also two non reflexive unanimous outranking situations: when comparing, for instance, alternative \texttt{p4} with alternatives \texttt{p5} and \texttt{p6} (see Listing \ref{list:19.4} Lines 14 and 16). Let us inspect the details of how alternatives \texttt{p4} and \texttt{p5} compare.
 \begin{lstlisting}
