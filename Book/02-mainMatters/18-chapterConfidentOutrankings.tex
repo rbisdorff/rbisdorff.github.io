@@ -21,7 +21,7 @@ When considering, for instance, that the potential range of a significance weigh
 \end{itemize}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/weightDistributions.png}
+\includegraphics[width=12cm]{Figures/18-1-weightDistributions.png}
 \caption{Four models of uncertain criteria significance weights}
 \label{fig:18.1}       % Give a unique label
 \end{figure}
@@ -43,8 +43,8 @@ Semantics of the marginal bipolar-valued characteristic function:
 \end{itemize}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/rCharacteristic.png}
-\caption{Bipolar-valued outranking characteristic function.}
+\includegraphics[width=11cm]{Figures/18-2-rCharacteristic.pdf}
+\caption{Bipolar-valued outranking characteristic function}
 \label{fig:18.2}       % Give a unique label
 \end{figure}
 Each criterion $j$ in $F$ contributes the random significance $W_j$ of his ``\emph{performing at least as well as}'' characteristic $r(x \geq_j y)$ to the global characteristic $\tilde{r}(x \geq y)$ in the following way:
@@ -81,8 +81,9 @@ Indeed, $\tilde{r}(x \geq y) \leadsto Y = \mathcal{N}(1.03,1.089)$, with an empi
 \section{Confidence level of outranking digraphs}
 \label{sec:18.3}
 
-Now, following the classical outranking approach (see \citep{BIS-2013}), we may say, from an epistemic perspective, that decision action $x$ \emph{outranks} decision action $y$ at \emph{confidence} level $\alpha \%$, when:
-\begin{itemize}[topsep=0pt]
+\begin{definition}[Confident outranking situation]\label{def:18.1}
+Following the classical outranking approach (see \citep{BIS-2013}), we say, from an epistemic perspective, that decision action $x$ \emph{outranks} decision action $y$ at \emph{confidence} level $\alpha \%$, when:
+\begin{itemize}[topsep=1pt]
 \item An expected majority of criteria validates, at confidence level $\alpha \%$ or higher, a global ``\emph{performing at least as well as}'' situation between $x$ and $y$, and
 \item no considerably less performing is observed on a discordant criterion.
 \end{itemize}
@@ -91,6 +92,8 @@ Dually, decision action $x$ \emph{does not outrank} decision action $y$ at confi
 \item An expected majority of criteria at confidence level $\alpha \%$ or higher, invalidates a global ``\emph{performing at least as well as}'' situation between $x$ and $y$, and
 \item no considerably better performing situation is observed on a discordant criterion.
 \end{itemize}
+Otherwise, the situation is indeterminate.
+\end{definition}
 
 \noindent \textbf{Time for a coded example}
 Let us consider the following random performance tableau.
