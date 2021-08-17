@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  17 AUG 2021 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  17 AUG 2021 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2571,10 +2571,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
 
  (./02-mainMatters/22-chapterTreeGraphs.tex
 Chapter 22.
-<Figures/tutRandomTree.pdf, id=10312, 361.35pt x 505.89pt>
-File: Figures/tutRandomTree.pdf Graphic file (type pdf)
-<use Figures/tutRandomTree.pdf>
-Package pdftex.def Info: Figures/tutRandomTree.pdf  used on input line 36.
+<Figures/22-1-tutRandomTree.pdf, id=10312, 361.35pt x 505.89pt>
+File: Figures/22-1-tutRandomTree.pdf Graphic file (type pdf)
+<use Figures/22-1-tutRandomTree.pdf>
+Package pdftex.def Info: Figures/22-1-tutRandomTree.pdf  used on input line 36.
+
 (pdftex.def)             Requested size: 170.71652pt x 239.0034pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2586,71 +2587,68 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-] [328 <./Figures/tutRandomTree.pdf>]
-<Figures/tutPruefTree.pdf, id=10384, 431.6125pt x 388.45125pt>
-File: Figures/tutPruefTree.pdf Graphic file (type pdf)
-<use Figures/tutPruefTree.pdf>
-Package pdftex.def Info: Figures/tutPruefTree.pdf  used on input line 76.
+] [328 <./Figures/22-1-tutRandomTree.pdf>]
+<Figures/22-2-tutPruefTree.pdf, id=10383, 431.6125pt x 388.45125pt>
+File: Figures/22-2-tutPruefTree.pdf Graphic file (type pdf)
+<use Figures/22-2-tutPruefTree.pdf>
+Package pdftex.def Info: Figures/22-2-tutPruefTree.pdf  used on input line 76.
 (pdftex.def)             Requested size: 199.16928pt x 179.25282pt.
- [329 <./Figures/tutPruefTree.pdf>]
-<Figures/test62.pdf, id=10435, 299.1175pt x 348.30125pt>
-File: Figures/test62.pdf Graphic file (type pdf)
-<use Figures/test62.pdf>
-Package pdftex.def Info: Figures/test62.pdf  used on input line 118.
+ [329 <./Figures/22-2-tutPruefTree.pdf>]
+<Figures/22-3-test62.pdf, id=10435, 299.1175pt x 348.30125pt>
+File: Figures/22-3-test62.pdf Graphic file (type pdf)
+<use Figures/22-3-test62.pdf>
+Package pdftex.def Info: Figures/22-3-test62.pdf  used on input line 118.
 (pdftex.def)             Requested size: 199.16928pt x 231.92035pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [330]
-<Figures/rootedTree.pdf, id=10468, 279.0425pt x 303.1325pt>
-File: Figures/rootedTree.pdf Graphic file (type pdf)
-<use Figures/rootedTree.pdf>
-Package pdftex.def Info: Figures/rootedTree.pdf  used on input line 143.
+<Figures/22-4-rootedTree.pdf, id=10468, 279.0425pt x 303.1325pt>
+File: Figures/22-4-rootedTree.pdf Graphic file (type pdf)
+<use Figures/22-4-rootedTree.pdf>
+Package pdftex.def Info: Figures/22-4-rootedTree.pdf  used on input line 143.
 (pdftex.def)             Requested size: 170.71652pt x 185.46098pt.
- [331 <./Figures/test62.pdf> <./Figures/rootedTree.pdf
+ [331 <./Figures/22-3-test62.pdf> <./Figures/22-4-rootedTree.pdf
 
-pdfTeX warning: pdflatex (file ./Figures/rootedTree.pdf): PDF inclusion: multip
-le pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./Figures/22-4-rootedTree.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
 >]
-<Figures/randomSpanningTree.pdf, id=10527, 326.21875pt x 322.20375pt>
-File: Figures/randomSpanningTree.pdf Graphic file (type pdf)
-<use Figures/randomSpanningTree.pdf>
-Package pdftex.def Info: Figures/randomSpanningTree.pdf  used on input line 185
-.
+<Figures/22-5-randomSpanningTree.pdf, id=10527, 326.21875pt x 322.20375pt>
+File: Figures/22-5-randomSpanningTree.pdf Graphic file (type pdf)
+<use Figures/22-5-randomSpanningTree.pdf>
+Package pdftex.def Info: Figures/22-5-randomSpanningTree.pdf  used on input lin
+e 185.
 (pdftex.def)             Requested size: 199.16928pt x 196.7259pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [332]
-<Figures/spanningForest.pdf, id=10572, 512.91624pt x 447.6725pt>
-File: Figures/spanningForest.pdf Graphic file (type pdf)
-<use Figures/spanningForest.pdf>
-Package pdftex.def Info: Figures/spanningForest.pdf  used on input line 213.
+<Figures/22-6-spanningForest.pdf, id=10572, 512.91624pt x 447.6725pt>
+File: Figures/22-6-spanningForest.pdf Graphic file (type pdf)
+<use Figures/22-6-spanningForest.pdf>
+Package pdftex.def Info: Figures/22-6-spanningForest.pdf  used on input line 21
+3.
 (pdftex.def)             Requested size: 199.16928pt x 173.83333pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[333 <./Figures/randomSpanningTree.pdf>]
-Overfull \hbox (127.10025pt too wide) in paragraph at lines 252--253
-[]\OT1/ptm/m/n/10 To com-pute the most de-ter-mined span-ning tree or for-est, 
-we can use the\OT1/pcr/m/n/10 BestDeterminedSpanningForest
- []
-
-[334 <./Figures/spanningForest.pdf>]
-<Figures/bestDeterminedSpanningTree.pdf, id=10677, 299.1175pt x 282.05376pt>
-File: Figures/bestDeterminedSpanningTree.pdf Graphic file (type pdf)
-<use Figures/bestDeterminedSpanningTree.pdf>
-Package pdftex.def Info: Figures/bestDeterminedSpanningTree.pdf  used on input 
-line 289.
+[333 <./Figures/22-5-randomSpanningTree.pdf>] [334 <./Figures/22-6-spanningFore
+st.pdf>]
+<Figures/22-7-bestDeterminedSpanningTree.pdf, id=10677, 299.1175pt x 282.05376p
+t>
+File: Figures/22-7-bestDeterminedSpanningTree.pdf Graphic file (type pdf)
+<use Figures/22-7-bestDeterminedSpanningTree.pdf>
+Package pdftex.def Info: Figures/22-7-bestDeterminedSpanningTree.pdf  used on i
+nput line 289.
 (pdftex.def)             Requested size: 199.16928pt x 187.8087pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[335] [336 <./Figures/bestDeterminedSpanningTree.pdf>]
+[335] [336 <./Figures/22-7-bestDeterminedSpanningTree.pdf>]
 (./02-mainMatters/22-chapterTreeGraphs.bbl (./book.brf))) [337
 
 ]
@@ -2920,7 +2918,7 @@ Package rerunfilecheck Info: Checksums for `book.brf':
  ) 
 Here is how much of TeX's memory you used:
  24707 strings out of 478994
- 374424 string characters out of 5858184
+ 374634 string characters out of 5858184
  1128646 words of memory out of 5000000
  34319 multiletter control sequences out of 15000+600000
  483998 words of font info for 183 fonts, out of 8000000 for 9000
@@ -2951,7 +2949,7 @@ symbol/usyr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr
 xlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (388 pages, 6649119 bytes).
+Output written on book.pdf (388 pages, 6648796 bytes).
 PDF statistics:
  13788 PDF objects out of 15390 (max. 8388607)
  12757 compressed objects within 128 object streams

@@ -1,15 +1,15 @@
 \chapter{On tree graphs and graph forests}
 \label{sec:22}
 
-\abstract*{ We show how to generate and recognize random tree graphs. Tools for computing spanning trees and forests are illustrated. Finally we show how to compute the centres of a tree and draw a rooted and oriented tree.}
+\abstract*{ The chapter specifically addresses working with tree graphs and graph forests. We illustrate how to generate and recognize random tree graphs and how to compute the centres of a tree and draw a rooted and oriented tree. Finally, algorithms for computing spanning trees and forests are presented.}
 
-\abstract{ We show how to generate and recognize random tree graphs. Tools for computing spanning trees and forests are illustrated. Finally we show how to compute the centres of a tree and draw a rooted and oriented tree.}
+\abstract{ The chapter specifically addresses working with tree graphs and graph forests. We illustrate how to generate and recognize random tree graphs and how to compute the centres of a tree and draw a rooted and oriented tree. Finally, algorithms for computing spanning trees and forests are presented. }
 
 \section{Generating random tree graphs}
 \label{sec:22.1}
 
 Using the \texttt{RandomTree} class\index{RandomTree@\texttt{RandomTree} class} from the \texttt{graphs} module, we may, for instance, generate a random tree graph with 9 vertices.
-\begin{lstlisting}[caption={Generating a random tree graph.},label=list:22.1]
+\begin{lstlisting}[caption={Generating a random tree graph},label=list:22.1]
 >>> from graphs import RandomTree
 >>> rt = RandomTree(order=9,seed=100)
 >>> rt
@@ -32,8 +32,8 @@ Using the \texttt{RandomTree} class\index{RandomTree@\texttt{RandomTree} class} 
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/tutRandomTree.pdf}
-\caption{Random tree graph instance of order 9. One may distinguish vertices like \texttt{v1}, \texttt{v2}, \texttt{v4}, \texttt{v5} or \texttt{v9}  of degree 1, called the \emph{leaves} of the tree, and vertices like \texttt{v3}, \texttt{v6}, \texttt{v7} or \texttt{v8} of degree 2 or more, called the \emph{nodes} of the tree.} 
+\includegraphics[width=6cm]{Figures/22-1-tutRandomTree.pdf}
+\caption{Random tree graph instance of order 9. One may distinguish vertices like \texttt{v1}, \texttt{v2}, \texttt{v4}, \texttt{v5} or \texttt{v9}  of degree 1, called the \emph{leaves} of the tree, and vertices like \texttt{v3}, \texttt{v6}, \texttt{v7} or \texttt{v8} of degree 2 or more, called the \emph{nodes} of the tree} 
 \label{fig:22.1}       % Give a unique label
 \end{figure}
 
@@ -72,8 +72,8 @@ It is, as well possible to, first, generate a random \Pruefer code of length $n-
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/tutPruefTree.pdf}
-\caption{Tree instance generated with a random \Pruefer code \texttt{['v5',} \texttt{'v7',} \texttt{'v2',} \texttt{'v5',} \texttt{'v3']}.} 
+\includegraphics[width=7cm]{Figures/22-2-tutPruefTree.pdf}
+\caption{Tree instance generated with a random \Pruefer code \texttt{['v5',} \texttt{'v7',} \texttt{'v2',} \texttt{'v5',} \texttt{'v3']}} 
 \label{fig:22.2}       % Give a unique label
 \end{figure}
 
@@ -114,7 +114,7 @@ The random graph of order $8$ and edge probability $30\%$, generated with seed $
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/test62.pdf}
+\includegraphics[width=7cm]{Figures/22-3-test62.pdf}
 \caption{Recognizing a tree instance. We may notive that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighborhood depth of 2} 
 \label{fig:22.3}       % Give a unique label
 \end{figure}
@@ -139,8 +139,8 @@ In Fig.~\vref{fig:22.3}, we noticed that vertex \texttt{v2} is actually situated
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/rootedTree.pdf}
-\caption{Drawing an oriented tree rooted at its centre.} 
+\includegraphics[width=6cm]{Figures/22-4-rootedTree.pdf}
+\caption{Drawing an oriented tree rooted at its centre} 
 \label{fig:22.4}       % Give a unique label
 \end{figure}
 
@@ -181,7 +181,7 @@ With the \texttt{RandomSpanningTree} class\index{RandomSpanningTree@\texttt{Rand
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/randomSpanningTree.pdf}
+\includegraphics[width=7cm]{Figures/22-5-randomSpanningTree.pdf}
 \caption{Random spanning tree} 
 \label{fig:22.5}       % Give a unique label
 \end{figure}
@@ -209,8 +209,8 @@ With the \texttt{RandomSpanningTree} class\index{RandomSpanningTree@\texttt{Rand
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/spanningForest.pdf}
-\caption{Random spanning forest instance} 
+\includegraphics[width=7cm]{Figures/22-6-spanningForest.pdf}
+\caption{Random spanning forest} 
 \label{fig:22.6}       % Give a unique label
 \end{figure}
 
@@ -249,7 +249,7 @@ To inspect the edges' actual weights, we first transform the graph into a corres
    Valuation domain: [-1.00;1.00]
 \end{lstlisting}
 
-To compute the most determined spanning tree or forest, we can use the\texttt{BestDeterminedSpanningForest} constructor.\index{BestDeterminedSpanningForest@\texttt{BestDeterminedSpanningForest} class}
+To compute the most determined spanning tree or forest, we can use the \texttt{Best\-DeterminedSpanningForest} constructor.\index{BestDeterminedSpanningForest@\texttt{BestDeterminedSpanningForest} class}
 \begin{lstlisting}[caption={Computing best determined spanning forests.},label=list:22.10]
 >>> from graphs import\
                 BestDeterminedSpanningForest
@@ -285,8 +285,8 @@ The random graph \texttt{g} is connected and, hence, admits a single spanning tr
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/bestDeterminedSpanningTree.pdf}
-\caption{Best determined spanning tree. } 
+\includegraphics[width=7cm]{Figures/22-7-bestDeterminedSpanningTree.pdf}
+\caption{Best determined spanning tree} 
 \label{fig:22.7}       % Give a unique label
 \end{figure}
 
