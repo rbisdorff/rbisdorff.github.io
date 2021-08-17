@@ -72,8 +72,8 @@ With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \em
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/randomSplitGraph.pdf}
-\caption{A conjointly triangulated, comparability, interval, permutation and split graph. In the Figure here one may readily recognize the essential characteristic of split graphs, namely being always splitable into two disjoint sub-graphs: an \emph{independent choice} \{\texttt{v6}\} and a \emph{clique}  --\{\texttt{v1}, \texttt{v2}, \texttt{v3}, \texttt{v4}, \texttt{v5}, \texttt{v7}, \texttt{v8}\}-- which explains their name.} 
+\includegraphics[width=7cm]{Figures/23-1-randomSplitGraph.pdf}
+\caption{A conjointly triangulated, comparability, interval, permutation and split graph. In the Figure here one may readily recognize the essential characteristic of split graphs, namely being always splitable into two disjoint sub-graphs: an \emph{independent choice} \{\texttt{v6}\} and a \emph{clique}  --\{\texttt{v1}, \texttt{v2}, \texttt{v3}, \texttt{v4}, \texttt{v5}, \texttt{v7}, \texttt{v8}\}-- which explains their name} 
 \label{fig:23.1}       % Give a unique label
 \end{figure}
 Notice however that the four properties:
@@ -143,7 +143,7 @@ Six professors (labeled \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/berge1.pdf}
+\includegraphics[width=7cm]{Figures/23-2-berge1.pdf}
 \caption{Graph representation of the testimonies of the professors} 
 \label{fig:23.2}       % Give a unique label
 \end{figure}
@@ -186,7 +186,7 @@ And it is \emph{Desmond}. If we doubt his testimony that he saw \emph{Abe} (see 
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/berge2.pdf}
+\includegraphics[width=7cm]{Figures/23-3-berge2.pdf}
 \caption{The triangulated testimonies graph} 
 \label{fig:23.3}       % Give a unique label
 \end{figure}
@@ -219,7 +219,7 @@ A graph is called a \emph{permutation} or \emph{inversion} graph if there exists
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/permutationGraph.pdf}
+\includegraphics[width=7cm]{Figures/23-4-permutationGraph.pdf}
 \caption{The default \Digraph permutation graph} 
 \label{fig:23.4}       % Give a unique label
 \end{figure}
@@ -242,7 +242,7 @@ By using color sorting queues, the minimal vertex coloring shown in Fig.~\vref{f
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/coloredPermutationGraph.pdf}
+\includegraphics[width=6cm]{Figures/23-5-coloredPermutationGraph.pdf}
 \caption{Minimal vertex coloring of the permutation graph.} 
 \label{fig:23.5}       % Give a unique label
 \end{figure}
@@ -258,8 +258,8 @@ The correspondingly colored \emph{matching diagram} of the nine inversions --the
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption
-\includegraphics[width=10cm]{Figures/perm_permutationGraph.pdf}
-\caption{Colored matching diagram of the permutation [4,3,6,1,5,2].} 
+\includegraphics[width=10cm]{Figures/23-6-perm_permutationGraph.pdf}
+\caption{Colored matching diagram of the permutation [4,3,6,1,5,2]} 
 \label{fig:23.6}       % Give a unique label
 \end{figure}
 
@@ -288,8 +288,8 @@ As mentioned before, a permutation graph and its dual are \emph{transitively ori
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=5cm]{Figures/oriented_permutationGraph.png}
-\caption{The transitive orientation of the permutation graph.} 
+\includegraphics[width=5cm]{Figures/23-7-orientedPermGraph.pdf}
+\caption{The transitive orientation of the permutation graph} 
 \label{fig:23.7}       % Give a unique label
 \end{figure}
 
@@ -333,7 +333,7 @@ Let us consider, for instance, the following random graph of order 8 generated w
 \end{lstlisting}		    
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/randomGraph4335.pdf}
+\includegraphics[width=6cm]{Figures/23-8-randomGraph4335.pdf}
 \caption{Random graph of order 8 generated with edge probability $0.4$.} 
 \label{fig:23.8}       % Give a unique label
 \end{figure}
@@ -358,11 +358,16 @@ If the random perfect graph instance \texttt{g}, shown in Fig.~\vref{fig:23.8}, 
   ('v7','v5'): -1, ('v5','v8'): 1, ('v8','v5'): -1, ('v6','v6'): 0,
   ('v6','v7'): 0, ('v7','v6'): 0, ('v6','v8'): 1, ('v8','v6'): -1,
   ('v7','v7'): 0, ('v7','v8'): 1, ('v8','v7'): -1, ('v8','v8'): 0}
+>>> g.exportEdgeOrientationsGraphViz('transOrientGraph')
+   *---- exporting a dot file for GraphViz tools ---------*
+    Exporting to transOrientGraph.dot
+    fdp -Tpng transOrientGraph.dot \
+             -o transOrientGraph.png
 \end{lstlisting}		    
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/transOrientGraph.png}
-\caption{Transitive neighbourhoods of the graph \texttt{g}.} 
+\includegraphics[width=7cm]{Figures/23-9-transOrientGraph.pdf}
+\caption{Transitive neighbourhoods of the graph \texttt{g}} 
 \label{fig:23.9}       % Give a unique label
 \end{figure}
 
@@ -387,18 +392,23 @@ The resulting orientation of the edges of \texttt{g}, shown in Fig.~\vref{fig:23
    ('v7','v5'): 0, ('v5','v8'): 0, ('v8','v5'): 0, ('v6','v6'): 0,
    ('v6','v7'): 1, ('v7','v6'): -1, ('v6','v8'): 0, ('v8','v6'): 0,
    ('v7','v7'): 0, ('v7','v8'): 0, ('v8','v7'): 0, ('v8','v8'): 0}
+>>> gd.exportEdgeOrientationsGraphViz('transOrientDualGraph')
+   *---- exporting a dot file for GraphViz tools ---------*
+    Exporting to transOrientDualGraph.dot
+    fdp -Tpng transOrientDualGraph.dot \
+             -o transOrientDualGraph.png
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/transOrientDualGraph.png}
-\caption{Transitive neighbourhoods of the dual graph \texttt{-g}. It is worthwhile noticing that the orientation of \texttt{g} is achieved with a single neighbourhood decomposition, covering all the vertices. Whereas, the orientation of the dual graph \texttt{-g} here needs a decomposition into three subsequent neighbourhoods marked in black, red and blue.} 
+\includegraphics[width=7cm]{Figures/23-10-transOrientDualGraph.pdf}
+\caption{Transitive neighbourhoods of the dual graph \texttt{-g}. It is worthwhile noticing that the orientation of \texttt{g} is achieved with a single neighbourhood decomposition, covering all the vertices. Whereas, the orientation of the dual graph \texttt{-g} here needs a decomposition into three subsequent neighbourhoods marked in black, red and blue} 
 \label{fig:23.10}       % Give a unique label
 \end{figure}
  
 Let us recheck these facts by explicitly constructing transitively oriented digraph instances with the \texttt{computeTransitivelyOrientedDigraph()} method\index{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOrientedDigraph()}}.
 \begin{lstlisting}
 >>> og = g.computeTransitivelyOrientedDigraph(\
-...                      PartiallyDetermined = )
+...                      PartiallyDetermined = True)
 >>> print('Transitivity degree: %.3f' %\
 ...                      (og.transitivityDegree)) 
   Transitivity degree: 1.000
@@ -474,8 +484,8 @@ We may finally check that, for instance, the two permutations [2, 3, 4, 8, 6, 1,
 \begin{figure}[h]
   % \sidecaption
   [2, 3, 4, 8, 6, 1, 7, 5]\hfill [4, 2, 8, 3, 1, 5, 6, 7]\\
-  \includegraphics[width=6cm]{Figures/gtesta.pdf}\hfill
-  \includegraphics[width=6cm]{Figures/gtestb.pdf}
+  \includegraphics[width=6cm]{Figures/23-11-gtesta.pdf}\hfill
+  \includegraphics[width=6cm]{Figures/23-11-gtestb.pdf}
 \caption{Isomorphic permutation graphs.} 
 \label{fig:23.11}       % Give a unique label
 \end{figure}
