@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -7,6 +7,11 @@
   \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Bisdorff and Marichal(2008)}]{ISO-2008}
+Bisdorff R, Marichal JL (2008) Counting non-isomorphic maximal independent sets
+  of the n-cycle graph. {Journal of Integer Sequences} 11(Art. 08.5.7):1--16,
+  \urlprefix\url{https://cs.uwaterloo.ca/journals/JIS/VOL11/Marichal/marichal.html}
 
 \bibitem[{Geman and Geman(1984)}]{GEM-1984}
 Geman S, Geman D (1984) {Stochastic Relaxation, Gibbs Distributions, and the
