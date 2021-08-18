@@ -83,8 +83,8 @@ We may have an even better insight into the \texttt{Digraph} object \texttt{rdg}
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/tutRandValDigraph.png}
-\caption{\emph{The tutorial random valuation digraph}. Double links are drawn in bold black with an arrowhead at each end, whereas single asymmetric links are drawn in black with an arrowhead showing the direction of the link. Notice the undetermined relational situation ($r(6\,S\,2) = 0.00$) observed between nodes '6' and '2'. The corresponding link is marked in gray with an open arrowhead in the drawing.}
+\includegraphics[width=6cm]{Figures/2-1-tutRandValDigraph.pdf}
+\caption{\emph{The tutorial random valuation digraph}. Double links are drawn in bold black with an arrowhead at each end, whereas single asymmetric links are drawn in black with an arrowhead showing the direction of the link. Notice the undetermined relational situation ($r(6\,S\,2) = 0.00$) observed between nodes '6' and '2'. The corresponding link is marked in gray with an open arrowhead in the drawing}
 \label{fig:2.1}       % Give a unique label
 \end{figure}
   
@@ -101,9 +101,11 @@ We may now extract both the \emph{}\emph{symmetric} as well as the \emph{asymmet
 >>> symDg.exportGraphViz()
 \end{lstlisting}
 \begin{figure}[h]
-%\sidecaption
-\includegraphics[width=12cm]{Figures/asymSymParts.png}
-\caption{Asymmetric and symmetric part of the tutorial random valuation digraph.}
+  % \sidecaption
+  Asymmetric Part \hfill Symmetric Part \\
+  \includegraphics[height=6cm]{Figures/2-2-asymmetricPart.pdf}\hfill
+  \includegraphics[height=6cm]{Figures/2-2-symmetricPart.pdf}\hfill
+\caption{Asymmetric and symmetric part of the tutorial random valuation digraph}
 \label{fig:2.2}       % Give a unique label
 \end{figure}
 The constructor of the partial objects \texttt{asymDg} and \texttt{symDg} puts to the indeterminate characteristic value all non-asymmetric, respectively non-symmetric links between nodes (see Fig. \ref{fig:2.2}).
@@ -137,6 +139,14 @@ def _constructRelation(self):
 
 We may also extract the border --the part of a digraph induced by the union of its initial and terminal prekernels (see Chapter \ref{sec:17})--  as well as, the inner part --the complement of the border-- with the help of two corresponding class constructors: \texttt{GraphBorder}\index{GraphBorder@\texttt{GraphBorder} class} and \texttt{GraphInner}\index{GraphInner@\texttt{GraphInner} class} (see Fig. \ref{fig:2.3}).
 
+\begin{figure}[h]
+%\sidecaption
+  Border Part \hfill Inner Part \\
+  \includegraphics[height=6cm]{Figures/2-3-linearOrderBorder.pdf}\hfill
+  \includegraphics[height=6cm]{Figures/2-3-linearOrderInner.pdf}\hfill
+\caption{\emph{Border} and \emph{inner} part of a linear order oriented by \emph{terminal} and \emph{initial} kernels.}
+\label{fig:2.3}       % Give a unique label
+\end{figure}
 Let us illustrate the digraph border and inner parts on a linear ordering obtained from the tutorial random valuation digraph \texttt{rdg}  with the \NetFlows ranking rule  (see Section \ref{sec:8.3}).  
 \begin{lstlisting}[caption={Border and inner part of a linear order},label=list:2.5]
 >>> from digraphs import GraphBorder, GraphInner
@@ -149,22 +159,17 @@ Let us illustrate the digraph border and inner parts on a linear ordering obtain
 >>> inf = GraphInner(nf)
 >>> inf.exportGraphViz(worstChoice=['6'],bestChoice=['7'])
 \end{lstlisting}
-\begin{figure}[h]
-%\sidecaption
-\includegraphics[width=11cm]{Figures/graphBorderAndInner1.png}
-\caption{\emph{Border} and \emph{inner} part of a linear order oriented by \emph{terminal} and \emph{initial} kernels.}
-\label{fig:2.3}       % Give a unique label
-\end{figure}
 We may orient the \texttt{graphviz} drawings in Fig. \ref{fig:2.3}  with the terminal node 6 (\texttt{worstChoice} parameter) and initial node 7 (\texttt{bestChoice} parameter) (see Listing \ref{list:2.5} Lines 7 and 9).
 
-The constructor of the partial digraphs \texttt{bnf} and \texttt{inf}  (see Lines 3 and 6) puts to the \emph{indeterminate} characteristic value all links not in the \emph{border}, respectively \emph{not} in the \emph{inner} part (see Fig. \ref{fig:2.3}). Being much {\em denser\/} than a linear order, the actual inner part of our tutorial random valuation digraph \texttt{rdg} is reduced to a single arc between nodes 3 and 4 (see Fig. \ref{fig:2.4}).
+The constructor of the partial digraphs \texttt{bnf} and \texttt{inf}  (see Lines 3 and 6) puts to the \emph{indeterminate} characteristic value all links not in the \emph{border}, respectively \emph{not} in the \emph{inner} part (see Fig. \ref{fig:2.3}). Being much {\em denser\/} than a linear order, the actual inner part of our tutorial random valuation digraph \texttt{rdg} is reduced to a single arc between nodes 3 and 4 (see Fig. \ref{fig:2.4}). Indeed, a complete digraph on the limit has no inner part (privacy!) at all, whereas empty and indeterminate digraphs admit both, an empty border and an empty inner part.
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/graphBorderAndInner.png}
-\caption{Border and inner part of the tutorial random valuation digraph $rdg$.}
+  Border Part \hfill Inner Part \\
+  \includegraphics[height=6cm]{Figures/2-4-tutRandValDigraph_border.pdf}\hfill
+  \includegraphics[height=6cm]{Figures/2-4-tutRandValDigraph_inner.pdf}\hfill
+\caption{Border and inner part of the tutorial random valuation digraph \texttt{rdg}}
 \label{fig:2.4}       % Give a unique label
 \end{figure}
-Indeed, a complete digraph on the limit has no inner part (privacy!) at all, whereas empty and indeterminate digraphs admit both, an empty border and an empty inner part.
 
 \section{Fusion by epistemic disjunction}
 \label{sec:2.5}
@@ -273,7 +278,7 @@ Symmetric and transitive closures, by default in-site constructors, are also ava
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/strongComponents.png}
+\includegraphics[width=6cm]{Figures/2-5-strongComponents.pdf}
 \caption{Symmetric and transitive closure of the tutorial random valuation digraph $rdg$.}
 \label{fig:2.5}       % Give a unique label
 \end{figure}

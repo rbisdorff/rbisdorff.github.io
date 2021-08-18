@@ -230,7 +230,7 @@ The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} me
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/1-1-tutorialDigraph.pdf}
-\caption{The tutorial crisp digraph. The \texttt{exportGraphViz()} method is depending on drawing tools from \texttt{https://graphviz.org}. On Linux Ubuntu or Debian you may try '\texttt{sudo apt-get install graphviz}’ to install them. There are ready $dmg$ installers for Mac OSX.}
+\caption{The tutorial crisp digraph. The \texttt{exportGraphViz()} method is depending on drawing tools from \texttt{https://graphviz.org}. On Linux Ubuntu or Debian you may try '\texttt{sudo apt-get install graphviz}’ to install them. There are ready $dmg$ installers for Mac OSX}
 \label{fig:1.1}       % Give a unique label
 \end{figure}
 
@@ -294,15 +294,21 @@ Mind that \texttt{show...()} methods output their results in the \emph{Python} c
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/relationMap1.png}
-\caption{Browsing the relation map of the tutorial digraph. $+$ indicates a certainly valid and $-$ indicates a certainly  invalid relation, Here we find confirmed again that our random digraph instance \texttt{dg}, is indeed a crisp, i.e. 100\% determined irreflexive digraph instance.}
+\includegraphics[width=5cm]{Figures/1-2-relationMap1.png}
+\caption{Browsing the relation map of the tutorial digraph. $+$ indicates a certainly valid and $-$ indicates a certainly  invalid relation, Here we find confirmed again that our random digraph instance \texttt{dg}, is indeed a crisp, i.e. $100\%$ determined irreflexive digraph instance}
 \label{fig:1.2}       % Give a unique label
 \end{figure}
 
 \section{Special digraph instances}
 \label{sec:1.5}
 
-Some constructors for universal digraph instances, like the \texttt{CompleteDigraph}, the \texttt{EmptyDigraph} or the \texttt{GridDigraph}\index{GridDigraph@texttt{GridDigraph} class} constructor, are readily available (see Fig. \ref{fig:1.3}).
+Some types of universal digraph instances, like the \texttt{CompleteDigraph}, the \texttt{EmptyDigraph} or the \texttt{GridDigraph}\index{GridDigraph@texttt{GridDigraph} class} classes, are readily available (see Fig. \ref{fig:1.3}).
+\begin{figure}[h]
+\sidecaption[t]
+\includegraphics[width=5.5cm]{Figures/1-3-tutorialGrid.pdf}
+\caption{The 5x5 grid graph. Notice the median split orientation. This kind of oriented grids show the highest possible number of chordless circuits}
+\label{fig:1.3}       % Give a unique label
+\end{figure}
 \begin{lstlisting}
 >>> from digraphs import GridDigraph
 >>> grid = GridDigraph(n=5,m=5,\
@@ -313,13 +319,8 @@ Some constructors for universal digraph instances, like the \texttt{CompleteDigr
  dot -Grankdir=BT -Tpng TutorialGrid.dot\
                   -o tutorialGrid.png
 \end{lstlisting}
-\begin{figure}[h]
-\sidecaption[t]
-\includegraphics[width=5cm]{Figures/tutorialGrid.png}
-\caption{The 5x5 grid graph. Notice the median split orientation. This kind of oriented grids show the highest possible number of chordless circuits. }
-\label{fig:1.3}       % Give a unique label
-\end{figure}
 
+%\clearpage
 \vspace{1cm}
 The next Chapter \ref{sec:3} will introduce the fondamental \emph{bipolar-valued digraph} model which is \emph{root object type} to all the specialised digraph models implemented in the \Digraph modules.    
 
