@@ -5,13 +5,24 @@
 
 \abstract{ The chapter introduces bipolar-valued undirected graphs and illustrates several special graph models and algorithms like Q-coloring, MIS and clique enumeration, line graphs and maximal matchings, grid graphs, and $n$-cycle graphs with their non-isomorphic maximal independent sets of vertices.}
 
+% \paragraph{Introduction}
+
+% \noindent The \Digraph resoureces provide the \texttt{graphs} module module\index{graphs@\texttt{graphs} module} with the following graph models:
+% \begin{figure}[h]
+% %\sidecaption[t]
+% \includegraphics[width=11cm]{Figures/21-0-graphsInheritance.png}
+% \caption{Inheritance digram of the \texttt{graphs} module} 
+% \label{fig:21.0}       % Give a unique label
+% \end{figure}
+
+
 \section{Implementing simple graphs}
 \label{sec:21.1}
 
-In the \Digraph \texttt{graphs} module\index{graphs@\texttt{graphs} module}, the root \texttt{Graph} class \index{Graph@\texttt{Graph} class} provides a generic simple graph model, without loops and multiple links. A given object of this class contains at least the following attributes:
+In the \Digraph \texttt{graphs} module\index{graphs@\texttt{graphs} module}, the root \texttt{Graph} class \index{Graph@\texttt{Graph} class} provides a generic simple graph model, without loops and multiple links. A given object of this \texttt{Graph} type contains at least the following attributes:
 \begin{enumerate}[topsep=1pt]
 \item \texttt{name}: usually the name of the stored instance.
-\item \texttt{vertices}: an ordered dictionary with \texttt{name} and \texttt{shortName} attributes,
+\item \texttt{vertices}: a dictionary with \texttt{name} and \texttt{shortName} attributes,
 \item \texttt{order}: the number of vertices,
 \item \texttt{valuationDomain}: a dictionary with three entries: the minimum ($-1$, means certainly no link), the median ($0$, means missing information) and the maximum characteristic value ($+1$, means certainly a link),
 \item \texttt{edges} : a dictionary with \emph{frozensets} \footnote{\href{https://docs.python.org/3.9/library/stdtypes.html?highlight=frozenset\#frozenset}{Python documentation}} of pairs of vertices as keys carrying a characteristic value in the range of the previous valuation domain,
@@ -29,7 +40,7 @@ In the \Digraph \texttt{graphs} module\index{graphs@\texttt{graphs} module}, the
 \end{lstlisting}
 
 The saved \texttt{Graph} instance, named \texttt{tutorialGraph.py}, is encoded as shown in Listing~\vref{list:21.2}.
-\begin{lstlisting}[caption={Stored instance of the random graph},label=list:21.2]
+\begin{lstlisting}[caption={Stored instance of a random graph},label=list:21.2]
   # Graph instance saved in Python format
    from decimal import Decimal
    vertices = {
@@ -41,7 +52,9 @@ The saved \texttt{Graph} instance, named \texttt{tutorialGraph.py}, is encoded a
     'v6': {'shortName': 'v6', 'name': 'random vertex'},
     'v7': {'shortName': 'v7', 'name': 'random vertex'},
    }
-   valuationDomain = {'min':-1,'med':0,'max':1}
+   valuationDomain = {
+     'min':Decimal('-1'),'med':Decimal('0'),
+     'max':Decimal('1')}
    edges = {
     frozenset(['v1','v2']) : Decimal('-1'), 
     frozenset(['v1','v3']) : Decimal('-1'), 
@@ -67,7 +80,7 @@ The saved \texttt{Graph} instance, named \texttt{tutorialGraph.py}, is encoded a
     }
 \end{lstlisting}
 
-The stored graph instance may be reloaded and plotted with the generic \texttt{export\-GraphViz()} method (see Fig.~\vref{fig:21.1}):
+The stored graph instance may be reloaded and plotted with the \texttt{export\-GraphViz()} method (see Fig.~\vref{fig:21.1}):
 \begin{lstlisting}
 >>> g = Graph('tutorialGraph')
 >>> g.exportGraphViz()
@@ -560,7 +573,7 @@ The \texttt{showOrbits()} method renders now the labelled representatives of eac
    stabilizer size: [1, 2, 3, ..., 8, 9, ..., 12, 13, ...]
    frequency      : [0, 2, 0, ..., 1, 0, ...,  1,  0, ...]
 \end{lstlisting}
-The corresponding group stabilizers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines 12-13 in Listing~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Fig.~\vref{fig:21.6}.
+The corresponding group stabilizers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines 12-13 in Listing~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Fig.~\vref{fig:21.5}.
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/21-5-c12.png}
