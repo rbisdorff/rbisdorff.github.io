@@ -1,20 +1,20 @@
 \chapter{Working with outranking digraphs}
 \label{sec:3}
 
-\abstract*{ In this chapter, we introduce the main formal object of this book, namely the outranking digraph. With a randomly generated mulitiple criteria performance tableau, we construct the corresponding bipolar-valued outranking relation from pairwise comparisons. The resulting bipolar-valued outranking characteristics may be recoded. Finally, the dual outranking digraph gives us the associated strict outranking relation.}
+\abstract*{ In this chapter, we introduce the main formal object of this book, namely the bipolar-valued outranking digraph. With a randomly generated multiple criteria performance tableau, we construct the corresponding bipolar-valued outranking relation from pairwise comparisons. The resulting bipolar-valued outranking characteristics may be recoded. Finally, the codual outranking digraph gives us the associated strict outranking relation.}
 
 \begin{quotation}
-“On what principles may we base the arcs to be added to [the unanimous dominance digraph] in order to deduce a digraph which is both – in best possible concordance with the [given] multiple [preferential] points of view and – not too poor in comparable pairs [of decision actions]?” \citep*[p.6]{ROY-1966}\index{Roy@\textsl{B. Roy}}
+``\emph{The rule for the combination of independent concurrent arguments takes a very simple form when expressed in terms of the intensity of belief ... It is this: Take the sum of all the feelings of belief which would be produced separately by all the arguments pro, subtract from that the similar sum for arguments con, and the remainder is the feeling of belief which ought to have the whole. This is a proceeding which men often resort to, under the name of balancing reasons.}'' -- C.S. Peirce, The probability of induction (1878)
 \end{quotation}
 \vspace{1cm}
 
-\abstract{ In this chapter, we introduce the main formal object of this book, namely the bipolar-valued outranking digraph. With a randomly generated mulitiple criteria performance tableau, we construct the corresponding bipolar-valued outranking relation from pairwise comparisons. The resulting bipolar-valued outranking characteristics may be recoded. Finally, the dual outranking digraph gives us the associated strict outranking relation.}
+\abstract{ In this chapter, we introduce the main formal object of this book, namely the bipolar-valued outranking digraph. With a randomly generated multiple criteria performance tableau, we construct the corresponding bipolar-valued outranking relation from pairwise comparisons. The resulting bipolar-valued outranking characteristics may be recoded. Finally, the codual outranking digraph gives us the associated strict outranking relation.}
 
 
 \section{The hybrid outranking digraph model}
 \label{sec:3.1}
 
-In the \texttt{outrankingDigraphs} module\index{outrankingDigraphs@\texttt{outrankingDigraphs}}, the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class provides our standard \emph{outranking digraph} constructor. Such an instance represents a \emph{hybrid} object of both:\\ the {\tt PerformanceTableau} type and the {\tt OutrankingDigraph} type.
+In the \texttt{outrankingDigraphs} module\index{outrankingDigraphs@\texttt{outrankingDigraphs}}, the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class provides our standard \emph{outranking digraph} constructor. Such an instance represents a \emph{hybrid} object of both the {\tt PerformanceTableau} type \textbf{and} the {\tt Outran\-kingDigraph} type.
 
 A given \texttt{BipolarOutrankingDigraph} object contains hence always at least the following attributes:
 \begin{enumerate}[topsep=3pt,partopsep=0pt]
@@ -101,7 +101,7 @@ It is noteworthy to mention the three \emph{missing data} (\texttt{NA}) cases: a
 \section{The bipolar-valued outranking digraph}
 \label{sec:3.2}
 
-Given the previous random performance tableau \texttt{pt}, the {\tt BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} constructor computes the corresponding \emph{bipolar-valued outranking digraph}. 
+Given the previous random performance tableau \texttt{pt}, the {\tt BipolarOutranking\-Digraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} constructor computes the corresponding \emph{bipolar-valued outranking digraph}. 
 \begin{lstlisting}[caption={Example of random bipolar-valued outranking digraph.},label=list:3.4]
 >>> from outrankingDigraphs import \
 ...                       BipolarOutrankingDigraph
@@ -229,7 +229,7 @@ We may visualize the \emph{codual} ({\em strict\/}) outranking digraph with a gr
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=5cm]{Figures/codualOdg.png}
+\includegraphics[width=5cm]{Figures/3-1-codualOdg.pdf}
 \caption{The codual outranking digraph. It becomes readily clear now from the picture above that both alternatives \texttt{a1}  and \texttt{a7} are {\em not outranked\/} by any other alternatives. Hence, \texttt{a1}  and \texttt{a7} appear as \emph{weak} \Condorcet winners and may be recommended as potential \emph{best} decision alternatives in this illustrative preference modelling example.}
 \label{fig:3.1}       % Give a unique label
 \end{figure}

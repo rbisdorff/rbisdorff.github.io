@@ -107,7 +107,7 @@ In view of Table~\vref{tab:4.3}, what is now the office site we may recommend to
 In file \texttt{officeChoice.py}, stored in the \texttt{examples} directory of the \Digraph resources, a corresponding, \texttt{PerformanceTableau}\index{PerformanceTableau@\texttt{PerformanceTableau} class} object, is provided. We may inspect its actual content with the computing resources provided by the \texttt{perfTabs} module \index{perfTabs@\texttt{perfTabs} module}.
 \begin{lstlisting}[caption={Inspecting the \texttt{officeChoice} performance tableau.},label=list:4.1]
 >>> from perfTabs import PerformanceTableau
->>> t = PerformanceTableau('examples/officeChoice')
+>>> t = PerformanceTableau('officeChoice')
 >>> t
  *------- PerformanceTableau instance description ------*
    Instance class     : PerformanceTableau
@@ -159,8 +159,8 @@ A colorful comparison of all the performances is shown in Figure~\vref{fig:4.1} 
 \end{lstlisting}
     \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/officeChoiceHeatmap.png}
-\caption{Unranked heatmap of the office choice performance tableau.}
+\includegraphics[width=11cm]{Figures/4-1-officeChoiceHeatmap.png}
+\caption{Unranked heatmap of the office choice performance tableau}
 \label{fig:4.1}       % Give a unique label
 \end{figure}
 
@@ -199,8 +199,8 @@ For computing such a bipolar-valued binary outranking relation from the given pe
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/officeChoiceOutranking.png}
-\caption{Bipolar-valued adjacency matrix. In the resulting outranking relation we may notice, on the one hand, that Alternative \texttt{D} is \emph{positively outranking} all other potential office sites. On the other hand, alternatives \texttt{A} (the most expensive) and \texttt{C} (the cheapest) are \emph{not outranked} by any other site.}
+\includegraphics[width=7cm]{Figures/4-2-officeChoiceOutranking.png}
+\caption{Bipolar-valued adjacency matrix. In the resulting outranking relation we may notice, on the one hand, that Alternative \texttt{D} is \emph{positively outranking} all other potential office sites. On the other hand, alternatives \texttt{A} (the most expensive) and \texttt{C} (the cheapest) are \emph{not outranked} by any other site}
 \label{fig:4.2}       % Give a unique label
 \end{figure}
 Alternative \texttt{D} gives a \Condorcet winner\footnote{See Chapter~\vref{sec:7} on computing the winner of an election.}, whereas alternatives \texttt{A} (the most expensive) and \texttt{C} (the cheapest) give in fact \emph{weak} \Condorcet winners.\index{computeCondorcetWinners@\texttt{computeCondorcetWinners()}}\index{computeWeakCondorcetWinners@\texttt{computeWeakCondorcetWinners()}}
@@ -301,7 +301,7 @@ To compute now our \Rubis best choice recommendation\index{showBestChoiceRecomme
         'G': 0.00, 'F': 0.00, 'E': 0.00, 'D': 0.00,
         'C': 0.00, 'B': 0.00, 'A': 0.00, }
 \end{lstlisting}				  
-It is interesting to notice in Listing~\vref{list:4.4} (Line 8) that our \emph{best choice recommendation} consists actually in the previously mentioned set of weak \Condorcet winners\index{Condorcet!winner}: \texttt{A}, \texttt{C} and \texttt{D} (see Fig.~\vref{fig:4.2}). In the corresponding characteristic vector (see Lines 15-16 and Section~\vref{sec:17.6}), representing the bipolar credibility degree with which each alternative may indeed be included in, or excluded from this recommendation, we find that alternative \texttt{D} is the only positively validated one, whereas both extreme alternatives --\texttt{A} (the most expensive) and \texttt{C} (the cheapest)-- stay in an indeterminate situation (see \citet{BIS-2006a,BIS-2006b}). They may \emph{be or not be} potential best choices. Notice furthermore that compromise alternative \texttt{G}, while not actually being included in this stricly outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} recommended as potential best choice. Alternatives \texttt{B}, \texttt{E} and \texttt{F} are all positively excluded from this best choice recommendation.
+It is interesting to notice in List.~\vref{list:4.4} (Line 8) that our \emph{best choice recommendation} consists actually in the previously mentioned set of weak \Condorcet winners\index{Condorcet!winner}: \texttt{A}, \texttt{C} and \texttt{D} (see Fig.~\vref{fig:4.2}). In the corresponding characteristic vector (see Lines 15-16 and Section~\vref{sec:17.6}), representing the bipolar credibility degree with which each alternative may indeed be included in, or excluded from this recommendation, we find that alternative \texttt{D} is the only positively validated one, whereas both extreme alternatives --\texttt{A} (the most expensive) and \texttt{C} (the cheapest)-- stay in an indeterminate situation (see \citet{BIS-2006a,BIS-2006b}). They may \emph{be or not be} potential best choices. Notice furthermore that compromise alternative \texttt{G}, while not actually being included in this stricly outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} recommended as potential best choice. Alternatives \texttt{B}, \texttt{E} and \texttt{F} are all positively excluded from this best choice recommendation.
 
 To inspect why alternative \texttt{D} is the only positive best choice recommendation, we shall compare now the performances of alternatives \texttt{D} and \texttt{G} in a pairwise perspective\index{showPairwiseComparison@\texttt{showPairwiseComparison()}}.
 \begin{lstlisting}[caption={Inspecting pairwise comparison between alternatives \texttt{G} and \texttt{D}},label=list:4.5,basicstyle=\ttfamily\scriptsize]
@@ -340,27 +340,34 @@ Yet, we must as well acknowledge in Listing~\vref{list:4.6}, that the cheapest a
     Valuation in range: -145 to +145;      r(C >= G)/r(G >= c): +15.00/-15.00
 \end{lstlisting}
 
+\begin{figure}[h]
+\sidecaption[t]
+\includegraphics[width=5cm]{Figures/4-3-bestOfficeChoice.pdf}
+\caption{Best office choice recommendation from strict outranking digraph. Notice that site \texttt{A} (\emph{Ave}) (the most expensive) is appearing \emph{incomparable} to all the other aternatives}
+\label{fig:4.3}       % Give a unique label
+\end{figure}
 We may finally notice in Listing~\vref{list:4.4} (Lines 16 and 19) that both alternatives \texttt{A} and \texttt{F} are reported as potential worst choice recommendation. Yet, this potential worst choice recommendation appears to be globally indeterminate. This confirms the \emph{incomparability} status of alternative \texttt{A} (see Fig.~\vref{fig:4.3}).
 \begin{lstlisting}
 >>> gcd = ~(-g) # codual of g
 >>> gcd.exportGraphViz(fileName='bestOfficeChoice',\
-...                    bestChoice=['A','C','D'],\
+...                    bestChoice=['C','D'],\
 ...                    worstChoice=['F'])
- *---- exporting a dot file for GraphViz tools ---------*
-  Exporting to bestOfficeChoice.dot
-  dot -Grankdir=BT -Tpng bestOfficeChoice.dot -o bestOfficeChoice.png
+  *---- exporting a dot file for GraphViz tools ---------*
+   Exporting to bestOfficeChoice.dot
+   dot -Grankdir=BT -Tpng bestOfficeChoice.dot \
+                    -o bestOfficeChoice.png
 \end{lstlisting}
-\begin{figure}[h]
-\sidecaption[t]
-\includegraphics[width=5cm]{Figures/bestOfficeChoice.pdf}
-\caption{Best office choice recommendation from strict outranking digraph. Notice that site \texttt{A} (\emph{Ave}) (the most expensive) is appearing \emph{incomparable} to all the other aternatives}
-\label{fig:4.3}       % Give a unique label
-\end{figure}
 
 \section{Weakly ordering the outranking digraph}
 \label{sec:4.6}
 
-To get a global insight in the overall strict outranking situations, we may use the \texttt{RankingByChoosingDigraph}\index{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class} constructor imported from the \texttt{transitiveDigraphs}\index{transitiveDigraphs@\texttt{transitiveDigraphs} module} module for computing a \emph{ranking-by-choosing} result from the codual, i.e. the strict outranking digraph instance $gcd$ (see above). If the computing node supports multiple processor cores, \emph{first} and \emph{last} choosing iterations may be run in parallel (see Line 3 in Listing~\vref{list:4.7}).
+To get a global insight in the overall strict outranking situations, we may use the \texttt{RankingByChoosingDigraph}\index{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class} constructor imported from the \texttt{transitive\-Digraphs}\index{transitiveDigraphs@\texttt{transitiveDigraphs} module} module for computing a \emph{ranking-by-choosing} result from the codual, i.e. the strict outranking digraph instance $gcd$ (see above). If the computing node supports multiple processor cores, \emph{first} and \emph{last} choosing iterations may be run in parallel (see Line 3 in Listing~\vref{list:4.7}).
+\begin{figure}[h]
+\sidecaption[t]
+\includegraphics[width=5cm]{Figures/4-4-officeChoiceRanking.pdf}
+\caption{In this \emph{ranking-by-choosing} method, where we operate the \emph{epistemic fusion} of iterated (strict) first and last choices, compromise alternative \texttt{D} is now ranked before compromise alternative \texttt{G}. The overall partial ordering result shows again the important fact that the most expensive site \texttt{A}, and the cheapest site \texttt{C}, due to their contradictory performances, appear both \emph{incomparable} with most of the other alternatives.} 
+\label{fig:4.4}       % Give a unique label
+\end{figure}
 \begin{lstlisting}[caption={Ranking-by-choosing the outranking digraph},label=list:4.7]
 >>> from transitiveDigraphs import\
 ...                  RankingByChoosingDigraph
@@ -379,12 +386,6 @@ To get a global insight in the overall strict outranking situations, we may use 
   dot -Grankdir=TB -Tpng officeChoiceRanking.dot\
                    -o officeChoiceRanking.png
 \end{lstlisting}
-\begin{figure}[h]
-\sidecaption[t]
-\includegraphics[width=5cm]{Figures/officeChoiceRanking.pdf}
-\caption{In this \emph{ranking-by-choosing} method, where we operate the \emph{epistemic fusion} of iterated (strict) first and last choices, compromise alternative \texttt{D} is now ranked before compromise alternative \texttt{G}. The overall partial ordering result shows again the important fact that the most expensive site \texttt{A}, and the cheapest site \texttt{C}, due to their contradictory performances, appear both \emph{incomparable} with most of the other alternatives.} 
-\label{fig:4.4}       % Give a unique label
-\end{figure}
 The best choice recommendation appears hence depending on the very importance the CEO is attaching to each of the three decision objectives he is considering. In the given setting here, where he considers that \emph{maximizing the future turnover} is the most important objective followed by \emph{minimizing the Costs} and, less important, \emph{maximizing the working conditions}, site \texttt{D} represents actually the \emph{best compromise}. However, if \emph{Costs} do not play much a role, it would be perhaps better to decide to move to the most advantageous site \texttt{A}; or if, on the contrary, \emph{Costs} do matter a lot, moving to the cheapest alternative \texttt{C} could definitely represent a more convincing recommendation. 
 
 It might be worth editing the criteria significance weights in the\\
