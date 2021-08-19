@@ -175,10 +175,10 @@ The outranking characteristic value $r(a1 \succsim a2)$ represents the \emph{maj
 
 Such a situation is, however, observed when we pairwise compare the performances of alternatives \texttt{a1} and \texttt{a7}.
 \begin{lstlisting}[caption={Pairwise comparison with considerable performance difference},label=list:3.7,basicstyle=\scriptsize]
->>> odg.showPairwiseComparison('a1','a7')
+>>> odg.showPairwiseoutrankings('a1','a7')
   *------------  pairwise comparison ----*
    Comparing actions : (a1, a7)
-   crit. wght.  g(x)  g(y)    diff  | ind   pref    r()  |  v     veto
+   crit. wght. g(a1)  g(a7)   diff  | ind   pref    r()  |  v     veto
    -------------------------------   ------------------   -----------
     g1   1.00  15.17  96.58  -81.41 | 2.50  5.00   -1.00 | 80.00 -1.00
     g2   1.00  82.29  62.22  +20.07 | 2.50  5.00   +1.00 | 
@@ -189,8 +189,25 @@ Such a situation is, however, observed when we pairwise compare the performances
     g7   1.00  82.88   6.05  +76.83 | 2.50  5.00   +1.00 | 
    ----------------------------------------
    Valuation in range: -7.00 to +7.00; r(x,y)= +1/7 => 0.0
+  *------------  pairwise comparison ----*
+   Comparing actions : (a1, a7)
+   crit. wght. g(a7)  g(a1)   diff  | ind   pref    r()  |  v     veto
+   -------------------------------   ------------------   -----------
+    g1   1.00  96.58  15.17  +81.41 | 2.50  5.00   +1.00 | 80.00 +1.00
+    g2   1.00  62.22  82.29  -20.07 | 2.50  5.00   -1.00 | 
+    g3   1.00  56.90  44.23  +12.67 | 2.50  5.00   +1.00 | 
+    g4   1.00  32.06  46.37  -14.31 | 2.50  5.00   -1.00 | 
+    g5   1.00  80.16  47.67  +32.49 | 2.50  5.00   +1.00 | 
+    g6   1.00  48.80  69.62  -20.82 | 2.50  5.00   -1.00 | 
+    g7   1.00   6.05  82.88  -76.83 | 2.50  5.00   -1.00 | 
+   ----------------------------------------
+   Valuation in range: -7.00 to +7.00; r(x,y)= -1/7 => 0.0
 \end{lstlisting}
-This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting an ``\emph{as well as performing}'' situation. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Listing~\ref{list:3.7} Line 6 above and first row in the relation table shown in Listing~\ref{list:3.5}). Both contradictory facts trigger eventually an \emph{indeterminate} outranking situation \citep{BIS-2013}. 
+This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting an ``\emph{as well as performing}'' situation between alternative \texttt{a1} and alternative \texttt{a7}. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Listing~\ref{list:3.7} Line 6 above and first row in the relation table shown in Listing~\ref{list:3.5}). Both contradictory facts trigger eventually in Line 14 an \emph{indeterminate} outranking situation.
+
+The inverse polarisation effect appears when considering in Lines 19-25 the converse performance differences between alternative \texttt{a7} and alternative \texttt{a1}. The considerable better performing situation on criterion \texttt{g1} makes doubtful the otherwise ``\emph{not as well performing}'' situation (see Line 19 and 27).
+
+Notice that the occurrence in a pairwise comparison of conjointly considerable positive and negative performance differences will also trigger an indeterminate outranking situation. When observing at the same time a positive (resp. negative) ``\emph{at least as well performng}'' situation and one or more considerable positive (resp. negative) performance difference, the outranking situation gets validated (resp. invalidated) for certain \citep{BIS-2013}.
 
 \section{Recoding the digraph valuation}
 \label{sec:3.4}
