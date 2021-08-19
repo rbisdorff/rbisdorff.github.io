@@ -1,29 +1,29 @@
 \chapter{Generating random performance tableaux}
 \label{sec:6}
 
-\abstract*{ The Chapter describes the \Digraph resources for generating random multiple criteria performance tableaux. These random performance tableaux instances, mainly meant for illustration and training purposes, are serving the preparation and illustration of the \emph{Algorithmic Decision Theory} Course lectures. The random generators propose several useful models, like a \emph{Cost-Benefit} tableau, a three Objectives --\emph{economic}, \emph{societal} and \emph{environmental}-- tableau, and evetually an \emph{academic} performance tableau.}
+\abstract*{ The chapter describes the \Digraph resources for generating random multiple criteria performance tableaux. These random performance tableaux instances, mainly meant for illustration and training purposes, are serving the preparation and illustration of the \emph{Algorithmic Decision Theory} Course lectures. The random generators propose several useful models, like a \emph{Cost-Benefit} tableau, a three Objectives --\emph{economic}, \emph{societal} and \emph{environmental}-- tableau, and evetually an \emph{academic} performance tableau.}
 
-\abstract{ The Chapter describes the \Digraph resources for generating random multiple criteria performance tableaux. These random performance tableaux instances, mainly meant for illustration and training purposes, are serving the preparation and illustration of the \emph{Algorithmic Decision Theory} Course lectures. The random generators propose several useful models, like a \emph{Cost-Benefit} tableau, a three Objectives --\emph{economic}, \emph{societal} and \emph{environmental}-- tableau, and evetually an \emph{academic} performance tableau.}
+\abstract{ The chapter describes the \Digraph resources for generating random multiple criteria performance tableaux. These random performance tableaux instances, mainly meant for illustration and training purposes, were serving the preparation and illustration of the \emph{Algorithmic Decision Theory} Course lectures. The random generators propose several useful models like a \emph{Cost-Benefit} tableau, a three Objectives --\emph{economic}, \emph{societal} and \emph{environmental}-- tableau, and evetually an \emph{academic} performance tableau.}
 
 \section{Introduction}
 \label{sec:6.1}
 
-The {\tt randomPerfTabs} module provides several constructors for generating random performance tableaux models of different kind, mainly for the purpose of testing implemented methods and tools presented and discussed in the Algorithmic Decision Theory course lectures at the University of Luxembourg. This chapter introduces the most useful models.
+The \texttt{randomPerfTabs} module provides several classes for generating random performance tableaux models of different kind, mainly for the purpose of testing implemented methods and tools presented and discussed in the Algorithmic Decision Theory course lectures at the University of Luxembourg. This chapter introduces the most useful models.
 
-The simplest model, called \emph{RandomPerformanceTableau}, generates a set of $n$ decision actions, a set of $m$ real-valued performance criteria, ranging by default from $0.0$ to $100.0$, associated with default discrimination thresholds: $2.5$ (ind.), $5.0$ (pref.) and $60.0$ (veto). The generated performances are Beta(2,2) distributed on each measurement scale.
+The simplest model, called \texttt{RandomPerformanceTableau}, generates a set of $n$ decision actions, a set of $m$ real-valued performance criteria, ranging by default from $0.0$ to $100.0$, associated with default discrimination thresholds: $2.5$ (ind.), $5.0$ (pref.) and $60.0$ (veto). The generated performances are \texttt{Beta(2,2)} distributed on each measurement scale.
 
-One of the most useful models, called \emph{RandomCBPerformanceTableau}, proposes a performance tableau involving two decision objectives, named \emph{Costs} (to be minimized) respectively \emph{Benefits} (to be maximized); its purpose being to generate more or less contradictory performances on these two, usually conflicting, objectives. \emph{Low costs} will randomly be coupled with \emph{low benefits}, whereas \emph{high costs} will randomly be coupled with \emph{high benefits}.
+One of the most useful models, called \texttt{RandomCBPerformanceTableau}, proposes a performance tableau involving two decision objectives, named \emph{Costs} (to be minimized) respectively \emph{Benefits} (to be maximized); its purpose being to generate more or less contradictory performances on these two, usually conflicting, objectives. \emph{Low costs} will randomly be coupled with \emph{low benefits}, whereas \emph{high costs} will randomly be coupled with \emph{high benefits}.
 
-Many public policy decision problems involve three often conflicting decision objectives taking into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. For this type of performance tableau model, we provide a specific model, called \emph{Random3ObjectivesPerformanceTableau}.
+Many public policy decision problems involve three often conflicting decision objectives taking into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. For this type of performance tableau model, we provide a specific model, called \texttt{Random3ObjectivesPerformanceTableau}.
 
-Deciding which students, based on the grades obtained in a number of examinations, validate or not their academic studies, is the genuine decision practice of universities and academies. To thouroughly study these kind of decision problems, we provide a corresponding performance tableau model, called \emph{RandomAcademicPerformanceTableau}, which gathers grades obtained by a given number of students in a given number of weighted courses.    
+Deciding which students, based on the grades obtained in a number of examinations, validate or not their academic studies, is the genuine decision practice of universities and academies. To thouroughly study these kind of decision problems, we provide a corresponding performance tableau model, called \texttt{RandomAcademicPerformanceTableau}, which gathers grades obtained by a given number of students in a given number of weighted courses.    
 
-In order to study aggregation of election results (see Chapter \ref{sec:7}) in the context of bipolar-valued outranking digraphs, we provide furthermore a specific performance tableau model called \emph{RandomRankPerformanceTableau} which provides ranks (linearly ordered performances without ties) of a given number of election candidates (decision actions) for a given number of weighted voters (performance criteria).
+In order to study aggregation of election results (see Chapter~\vref{sec:7}) in the context of bipolar-valued outranking digraphs, we provide furthermore a specific performance tableau model called \texttt{RandomRankPerformanceTableau} which provides ranks (linearly ordered performances without ties) of a given number of election candidates (decision actions) for a given number of weighted voters (performance criteria).
  
 \section{Random standard performance tableaux}
 \label{sec:6.2}
     
-The {\tt RandomPerformanceTableau} class\index{RandomPerformanceTableau@\texttt{RandomPerformanceTableau} class}, the simplest of the kind, specializes the generic {\tt PerformanceTableau} class, and takes the following parameters:
+The \texttt{RandomPerformanceTableau} class\index{RandomPerformanceTableau@\texttt{RandomPerformanceTableau} class}, the simplest of the kind, specializes the generic \texttt{PerformanceTableau} class, and takes the following parameters:
 \begin{itemize}[leftmargin=0.5cm,rightmargin=0.5cm]
 \item \texttt{numberOfActions} := number of decision actions.
 \item \texttt{numberOfCriteria} := number of performance criteria.
@@ -90,11 +90,11 @@ The {\tt RandomPerformanceTableau} class\index{RandomPerformanceTableau@\texttt{
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/randomPerfTab1.png}
+\includegraphics[width=11cm]{Figures/6-1-randomPerfTab1.png}
 \caption{Browser view on random performance tableau instance}
 \label{fig:6.1}       % Give a unique label
 \end{figure}
-Best and worst performance on each criterion are marked in \emph{light green}, respectively in \emph{light red}. Notice that missing (\texttt{NA}) evaluation are registered in a performance tableau by default as \texttt{Decimal('-999')} value (see Listing \ref{list:6.1} Line 24).	    
+Best and worst performance on each criterion are marked in \emph{light green}, respectively in \emph{light red}. Notice that missing (\texttt{NA}) evaluation are registered in a performance tableau by default as \texttt{Decimal('-999')} value (see Listing~\vref{list:6.1} Line 24).	    
 \section{Random Cost-Benefit performance tableaux}
 \label{sec:6.3}
 
@@ -161,7 +161,7 @@ Minimal number of decision actions required is 3 !
     Threshold veto : 73.19 + 0.00x ; percentile: 95.2
     ...}
 \end{lstlisting}
-In the example above, we may notice the three types of decision actions (see Listing \ref{list:6.2} Lines 10-20), as well as the two types (Lines 22-32) of criteria with either an \emph{ordinal} or a \emph{cardinal} performance measuring scale. In the latter case, by default about $5\%$ of the random performance differences will be below the \emph{indifference} and $10\%$ below the \emph{preference} discriminating threshold. About $5\%$ will be considered as \emph{considerably large}. More statistics about the generated performances may be inspected with the \texttt{showStatistics()} method.\index{showStatistics@\texttt{showStatistics()}}
+In the example above, we may notice the three types of decision actions (see Listing~\vref{list:6.2} Lines 10-20), as well as the two types (Lines 22-32) of criteria with either an \emph{ordinal} or a \emph{cardinal} performance measuring scale. In the latter case, by default about $5\%$ of the random performance differences will be below the \emph{indifference} and $10\%$ below the \emph{preference} discriminating threshold. About $5\%$ will be considered as \emph{considerably large}. More statistics about the generated performances may be inspected with the \texttt{showStatistics()} method.\index{showStatistics@\texttt{showStatistics()}}
 \begin{lstlisting}
 >>> t.showStatistics()
     *-------- Performance tableau summary statistics -------*
@@ -196,7 +196,7 @@ In the example above, we may notice the three types of decision actions (see Lis
      ...
 \end{lstlisting}
 
-A heatmap view with 5 color levels gives the result shown in Fig.~\ref{fig:6.2}.
+A heatmap view with 5 color levels gives the result shown in Fig.~\vref{fig:6.2}.
 \begin{lstlisting}
 >>> t.showHTMLPerformanceHeatmap(colorLevels=5,\
 ...        rankingRule=None,\
@@ -204,7 +204,7 @@ A heatmap view with 5 color levels gives the result shown in Fig.~\ref{fig:6.2}.
  \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=10cm]{Figures/randomCBHeatmap.png}
+\includegraphics[width=10cm]{Figures/6-2-randomCBHeatmap.png}
 \caption{Unordered heatmap of a random Cost-Benefit performance tableau}
 \label{fig:6.2}       % Give a unique label
 \end{figure}
@@ -271,7 +271,7 @@ Generator directives are the following:
     en10 criterion of objective Env 12
     Total weight: 72.00 (6 criteria)
 \end{lstlisting}
-In Listing \ref{list:6.3} above, we notice that four \emph{equisignificant} criteria (\texttt{ec01}, \texttt{ec05}, \texttt{ec06}, and \texttt{ec12}) evaluate for instance the performance of the public policies from an \emph{economic} point of view (Lines 16-22). Three \emph{equisignificant} criteria do the same from a \emph{societal} (Lines 10-15), and six from an \emph{environmental} point of view (Lines 23-28). The '\texttt{equiobjectives}' directive results hence in a balanced total weight ($72.00$) for each decision objective. 
+In Listing~\vref{list:6.3} above, we notice that four \emph{equisignificant} criteria (\texttt{ec01}, \texttt{ec05}, \texttt{ec06}, and \texttt{ec12}) evaluate for instance the performance of the public policies from an \emph{economic} point of view (Lines 16-22). Three \emph{equisignificant} criteria do the same from a \emph{societal} (Lines 10-15), and six from an \emph{environmental} point of view (Lines 23-28). The '\texttt{equiobjectives}' directive (see Line 6) results hence in a balanced total weight ($72.00$) for each decision objective. 
 
 Variable \emph{triangular} modes ($0.3$, $0.5$ or $0.7$ of the span of the measure scale) for each objective result in a different performance status for each public policy with respect to the three objectives.
 \begin{lstlisting}
@@ -290,21 +290,21 @@ Variable \emph{triangular} modes ($0.3$, $0.5$ or $0.7$ of the span of the measu
    name:       action p7 Eco+ Soc- Env-
    profile:    {'Eco':'good', 'Soc':'weak', 'Env':'weak'}
 \end{lstlisting}
-Policy \texttt{p01}, for instance, will probably show \emph{good} performances wrt the \emph{societal} and \emph{environmental} aspects, and \emph{weak} performances wrt the \emph{economical} aspect, whereas policy p2 will probably appear among the potential worst choices.
+Policy \texttt{p01}, for instance, will probably show \emph{good} performances wrt the \emph{societal} and \emph{environmental} aspects, and \emph{weak} performances wrt the \emph{economical} aspect, whereas policy \texttt{p2} will probably appear among the potential worst choices.
 
-We may inspect in Fig.~\ref{fig:6.3} the given random three-objectives performance tableau with the \texttt{showHTMPerformanceTableau()} method.
+We may inspect in Fig.~\vref{fig:6.3} the given random three-objectives performance tableau with the \texttt{showHTMPerformanceTableau()} method\index{showHTMPerformanceTableau@\texttt{showHTMPerformanceTableau()}}.
 \begin{lstlisting}
 >>> t.showHTMLPerformanceTableau()
 \end{lstlisting}
 \begin{figure}[h]
 %\sidecaption[t]
-\includegraphics[width=12cm]{Figures/random3ObjPerfTab.png}
+\includegraphics[width=12cm]{Figures/6-3-random3ObjPerfTab.png}
 \caption{Browser view on the given random three-objectives performance tableau.}
 \label{fig:6.3}       % Give a unique label
 \end{figure}
 Light green cells show best performances and light red worst performances. Policy \texttt{p01} shows thus the worst performance ($17.09/100.00$) on the environmental criterion \texttt{en09}, whereas policy \texttt{p03} shows the best performances on four out of the six \emph{environmental} criteria.
 
-No trivial best choice becomes apparent when looking at the performance tableau shown in Fig.~\ref{fig:6.3}. Let us therefore compute a \Rubis best choice recommendation (see Chapter~\ref{sec:4}).
+No trivial best choice becomes apparent when looking at the performance tableau shown in Fig.~\vref{fig:6.3}. Let us therefore compute a \Rubis best choice recommendation (see Chapter~\vref{sec:4}).
 \begin{lstlisting}[caption={What is the public policy to recommend as best choice ?},label=list:6.4]
 >>> from outrankingDigraphs import\
 ...       BipolarOutrankingDigraph
@@ -331,7 +331,7 @@ No trivial best choice becomes apparent when looking at the performance tableau 
    determinateness (%) : 50.79
    - most credible action(s) = { 'p7': 0.06, }
 \end{lstlisting}
-Policy \texttt{p3} gives the most credible best choice candidate with the support of a $57.5\%$ majority of significance, whereas policy \texttt{p7} appears to be the less supported. Policy \texttt{p5} gives an ambiguous best and worst choice candidate. A drawing of the strict outranking digraph oriented by best and worst choices gives a more complete preferential picture (see Fig.~\ref{fig:6.4}).
+Policy \texttt{p3} gives the most credible best choice candidate with the support of a $57.5\%$ majority of significance, whereas policy \texttt{p7} appears to be the less supported. Policy \texttt{p5} gives an ambiguous best and worst choice candidate. A drawing of the strict outranking digraph oriented by best and worst choices gives a more complete preferential picture (see Fig.~\vref{fig:6.4}).
 \begin{lstlisting}
 >>> (~(-g)).exportGraphViz(\
 ...             fileName='3ObjPerfTabBestChoice',\
@@ -343,12 +343,12 @@ Policy \texttt{p3} gives the most credible best choice candidate with the suppor
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/3ObjPerfTabBestChoice.pdf}
+\includegraphics[width=6cm]{Figures/6-4-3ObjPerfTabBestChoice.pdf}
 \caption{The strict outranking digraph oriented by best and worst choices. Policy \texttt{p5} is indeed incomparable --in a strict  outranking sense-- to all the other six policies. Policies \texttt{p1}, \texttt{p2} and \texttt{p7} appear strictly outranked.}
 \label{fig:6.4}       % Give a unique label
 \end{figure}
 
-A heatmap view on the \Copeland ranked performance tableau confirms the best choice recommendation (see Section~\ref{sec:8.2}).
+A heatmap view on the \Copeland ranked performance tableau confirms the best choice recommendation (see Section~\vref{sec:8.2}).
 \begin{lstlisting}
 >>> t.showHTMLPerformanceHeatmap(Correlations=True,\
 ...                        colorLevels=5,ndigits=1,\
@@ -420,7 +420,7 @@ When Parameter \texttt{WithTypes} is set to \texttt{True}, the students are rand
   [['m2', 'm5', 'm6'], ['m1'], ['m3'], ['m4'], ['m7']]
 \end{lstlisting}
   
-The example tableau, generated for instance above with \texttt{missingDataProbability} = $0.03$, \texttt{WithTypes} = \texttt{True} and \texttt{seed} = 100 (see Listing \ref{list:6.5} Lines 2-5), results in a set of two excellent (\texttt{s05e} and \texttt{s07e}), five good (\texttt{s02g}, \texttt{s03g}, \texttt{s06g}, \texttt{s09g} and \texttt{s10g}), three fair (\texttt{s01f}, \texttt{s04f} and \texttt{s08f}) and one weak (\texttt{s11w}) students. Notice that six students get a grade below the course validating threshold of $10$ and we observe four missing grades (\texttt{NA}), two in course \texttt{m5} and, one in courses \texttt{m3} and \texttt{m6} (see Lines 20-30).
+The example tableau, generated for instance above with \texttt{missingDataProbability} = $0.03$, \texttt{WithTypes} = \texttt{True} and \texttt{seed} = 100 (see Listing~\vref{list:6.5} Lines 2-5), results in a set of two excellent (\texttt{s05e} and \texttt{s07e}), five good (\texttt{s02g}, \texttt{s03g}, \texttt{s06g}, \texttt{s09g} and \texttt{s10g}), three fair (\texttt{s01f}, \texttt{s04f} and \texttt{s08f}) and one weak (\texttt{s11w}) students. Notice that six students get a grade below the course validating threshold of $10$ and we observe four missing grades (\texttt{NA}), two in course \texttt{m5} and, one in courses \texttt{m3} and \texttt{m6} (see Lines 20-30).
 
 A statistical summary of the students' grades obtained in the heighest weighted course, namely \texttt{m7}, is shown with the \texttt{showCourseStatistics()} method. \index{showCourseStatistics@\texttt{showCourseStatistics()}}
 \begin{lstlisting}[caption={Student performance summary statistics per course},label=list:6.6]
@@ -441,18 +441,18 @@ A statistical summary of the students' grades obtained in the heighest weighted 
    Mean absolute difference      : 4.30
    Standard difference deviation : 5.35
 \end{lstlisting}
-In Listing~\ref{list:6.6}, the Course \texttt{m7} evaluation statistics show a mean grade of $12.82$ and a median grade of $14$. Maximal (resp. minimal) grade is $18$ (resp. $6$).
+In Listing~\vref{list:6.6}, the Course \texttt{m7} evaluation statistics show a mean grade of $12.82$ and a median grade of $14$. Maximal (resp. minimal) grade is $18$ (resp. $6$).
 
 With a ranked heatmap view on all the grades we get a global pictures of the performance of all the eleven students. 
 \begin{figure}[h]
 %\sidecaption[t]
-\includegraphics[width=12cm]{Figures/rankingStudents.png}
+\includegraphics[width=12cm]{Figures/6-6-rankingStudents.png}
 \caption{Ranking the students in a performance heatmap view.}
 \label{fig:6.6}       % Give a unique label
 \end{figure}
-The ranking shown here in Fig.~\ref{fig:6.6}, produced with the \NetFlows ranking rule (see Section~\ref{sec:8.3}), reports a high correlation of $+0.887$ with the corresponding bipolar-valued outranking digraph (see Section~\ref{sec:8.3}).
+The ranking shown here in Fig.~\vref{fig:6.6}, produced with the \NetFlows ranking rule (see Section~\vref{sec:8.3}), reports a high correlation of $+0.887$ with the corresponding bipolar-valued outranking digraph (see Section~\vref{sec:8.3}).
 
-The \NetFlows ranking represents also a rather \emph{fair weighted consensus} between the individual courses' marginal rankings as made apparent in Listing~\ref{list:6.7} below with the \texttt{showRankingConsensusQuality()} method. \index{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}}
+The \NetFlows ranking represents also a rather \emph{fair weighted consensus} between the individual courses' marginal rankings as made apparent in Listing~\vref{list:6.7} below with the \texttt{showRankingConsensusQuality()} method. \index{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}}
 \begin{lstlisting}[caption={Consensus quality of the students's ranking},label=list:6.7]
 >>> from outrankingDigraphs import\
 ...                  BipolarOutrankingDigraph
@@ -479,7 +479,7 @@ The \NetFlows ranking represents also a rather \emph{fair weighted consensus} be
 The correlation with the marginal course rankings follows precisely the given ECTS weights. Course \texttt{m7}, with the highest relative weight ($0.294$) is most present ($+0.727$) in the global \NetFlows ranking and no course marginal ranking appears negatively correlated with this ranking. The mean weighted correlation is $+0.361$.
 
 \vspace{1cm}
-Useful multiple incommensuarble criteria ranking rules are presented and discussed in detail in Chapter~\ref{sec:8}. In the next Chapter~\ref{sec:7}, we first show how to compute the winner of an election on the basis of a different kind of performance evaluation models, namely \emph{linear voting profiles} who are discussed in social choice theory.
+Useful multiple incommensuarble criteria ranking rules are presented and discussed in detail in Chapter~\vref{sec:8}. In the next Chapter~\vref{sec:7}, we first show how to compute the winner of an election on the basis of a different kind of performance evaluation models, namely \emph{linear voting profiles} who are discussed in social choice theory.
 
 %%%%%%%
 %The chapter bibliography
