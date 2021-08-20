@@ -1,33 +1,38 @@
 \chapter{HPC ranking of big performance tableaux}
 \label{sec:11}
 
-\abstract*{ In Chapter~\ref{sec:9} we introduced the sparse outranking digraph. This digraph model is suitable for tackling ranking problems concerning big performance tableaux with thausands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this Chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
+\abstract*{ The sparse outranking digraph, introduced inn Chapter~\ref{sec:9} is suitable for tackling the ranking of big multiple criteria performance tableaux with thausands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
 
-\abstract{ In Chapter~\ref{sec:9} we introduced the sparse outranking digraph. This digraph model is suitable for tackling ranking problems concerning big performance tableaux with thausands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this Chapter a collection of C-compiled \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
+\abstract{ The sparse outranking digraph, introduced inn Chapter~\ref{sec:9} is suitable for tackling the ranking of big multiple criteria performance tableaux with thausands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
 
 \section{C-compiled Python modules}
 \label{sec:11.1}
 
-The \Digraph collection provides cythonized \footnote{see https://cython.org/}, i.e. C-compiled and optimised versions of the main python modules for tackling multiple criteria decision problems facing very large sets of decision alternatives ( $> 10000$ ). Such problems appear usually with a combinatorial organisation of the potential decision alternatives, as is frequently the case in bioinformatics for instance. If HPC facilities with nodes supporting numerous cores ($> 20$) and big RAM ($>$ 50GB) are available, ranking up to several millions of alternatives becomes effectively tractable (see \citep{BIS-2016}).
+The \Digraph collection provides cythonized \footnote{\Cython C-extension for Python, https://cython.org/}, i.e. C-compiled and optimised versions of the main python modules for tackling multiple criteria decision problems facing very large sets of decision alternatives ( $> 10000$ ). Such problems appear usually with a combinatorial organisation of the potential decision alternatives, as is frequently the case in bioinformatics for instance. If HPC facilities with nodes supporting numerous cores ($> 20$) and big RAM ($>$ 50GB) are available, ranking up to several millions of alternatives becomes effectively tractable (see \citep{BIS-2016}).
 
 Four cythonized \Digraph modules, prefixed with the letter \texttt{c} and taking a \texttt{pyx} extension, are provided with their corresponding setup tools in the \texttt{cython} directory of the \Digraph resources, namely:
-\begin{itemize}
+\begin{itemize}[topsep=1pt]
 \item[] \texttt{cRandPerfTabs.pyx},
 \item[] \texttt{cIntegerOutrankingDigraphs.pyx},
 \item[] \texttt{cIntegerSortingDigraphs.pyx}, and
 \item[] \texttt{cSparseIntegerOutrankingDigraphs.pyx}.
 \end{itemize}
 
-Their automatic compilation and installation, alongside the standard \Digraph python3 modules, requires the \emph{cython} compiler \footnote{see https://cython.org/} ( \texttt{...\$ python3 -m pip install cython} ) and a C compiler (\texttt{...\$ sudo apt install gcc} on Ubuntu).
+Their automatic compilation and installation, alongside the standard \Digraph python3 modules, requires the \emph{cython} compiler:
 
-These cythonized modules, specifically designed for being run on HPC clusters (see \href{https://hpc.uni.lu}{https://hpc.uni.lu}), require the Unix \emph{forking} start method of subprocesses (see start methods of the \href{https://docs.python.org/3/library/multiprocessing.html#contexts-and-start-methods}{multiprocessing library})  and therefore, due to forking problems on Mac OS platforms, may only operate safely on Linux platforms.
+\texttt{...\$ python3 -m pip install cython}
+
+\noindent and a C compiler:
+
+\texttt{...\$ sudo apt install gcc} on Ubuntu, for instance.
+
+These cythonized modules, specifically designed for being run on HPC clusters (see \href{https://hpc.uni.lu}{https://hpc.uni.lu}), require the Unix \emph{forking} start method of subprocesses (see start methods of the \href{https://docs.python.org/3/library/multiprocessing.html#contexts-and-start-methods}{Python multiprocessing library})  and therefore, due to forking problems on Mac OS platforms, may only operate safely on Linux platforms.
 
 \section{Big Data performance tableaux}
 \label{sec:11.2}
 
-In order to efficiently type the C variables, the \texttt{cRandPerfTabs} module provides the usual random performance tableau models, but, with \emph{integer} action keys, \emph{float} performance evaluations, \emph{integer} criteria weights and \emph{float} discrimination thresholds. And, to limit as much as possible memory occupation of class instances, all the usual verbose comments are dropped from the description of the \texttt{actions} and \texttt{criteria} dictionaries. 
-
-\begin{lstlisting}[caption={Big data performance tableau format},label=list:11.1]
+In order to efficiently type the C variables, the \texttt{cRandPerfTabs} module\index{cRandPerfTabs@\texttt{cRandPerfTabs} module} provides the root \texttt{cPerformanceTableau} class\index{cPerformanceTableau@\texttt{cPerformanceTableau} class}, but, with \emph{integer} action keys, \emph{float} performance evaluations, \emph{integer} criteria weights and \emph{float} discrimination thresholds. And, to limit as much as possible memory occupation of class instances, all the usual verbose comments are dropped from the description of the \texttt{actions} and \texttt{criteria} dictionaries. A random instance may be generated with the  \texttt{cRandomPerformanceTableau} class\index{cRandomPerformanceTableau@\texttt{cRandomPerformanceTableau} class}:
+\begin{lstlisting}[caption={Big data performance tableau format},label=list:11.1,basicstyle=\ttfamily\scriptsize]
 >>> from cRandPerfTabs import cRandomPerformanceTableau
 >>> t = cRandomPerformanceTableau(numberOfActions=4,\
 ...                               numberOfCriteria=2)
@@ -72,8 +77,7 @@ In order to efficiently type the C variables, the \texttt{cRandPerfTabs} module 
 	   '#4'  |   7.78   37.64  
 \end{lstlisting}
 
-Conversions from the Big Data model to the standard model and vice versa are provided.
-
+Several methods for converting from the Big Data model to the standard model and vice versa are provided by the \texttt{cPerformanceTableau} class.\index{convert2Standard@\texttt{convert2Standard()}}\index{convertWeight2Decimal@\texttt{convertWeight2Decimal()}}\index{convertEvaluation2Decimal@\texttt{convertEvaluation2Decimal()}}
 \begin{lstlisting}   
 >>> t1 = t.convert2Standard()
 >>> t1.convertWeight2Decimal()
@@ -93,10 +97,8 @@ Conversions from the Big Data model to the standard model and vice versa are pro
 \section{C-implemented integer-valued outranking digraphs}
 \label{sec:11.3}
 
-
-The C compiled version of the bipolar-valued digraph model takes integer relation characteristic values.
-
-\begin{lstlisting}[caption={Constructing big outranking digraphs},label=list:11.2]
+The C compiled version of the \texttt{BipolarOutrankingDigraph} class takes integer $r$-characteristic values.\index{cIntegerOutrankingDigraphs@\texttt{cIntegerOutrankingDigraphs} module}\index{IntegerBipolarOutrankingDigraph@\texttt{IntegerBipolarOutrankingDigraph} class}
+\begin{lstlisting}[caption={Constructing big bipolar-valued outranking digraphs},label=list:11.2]
 >>> t = cRandomPerformanceTableau(numberOfActions=1000,\
 ...                               numberOfCriteria=2)
 >>> from cIntegerOutrankingDigraphs import\
@@ -126,8 +128,7 @@ The C compiled version of the bipolar-valued digraph model takes integer relatio
        'relation', 'gamma', 'notGamma']
 \end{lstlisting}
 
-On a classic intel-i7 equipped PC with four single threaded cores, the\\ \texttt{IntegerBipolarOutrankingDigraph} constructor takes about four seconds for computing a \emph{million} pairwise outranking characteristic values (see Listing \ref{list:11.2}). In a similar setting, the standard \texttt{BipolarOutrankingDigraph} constructor operates more than two times slower.
-
+On a classical intel-i7 equipped PC with four single threaded cores, the \texttt{Inte\-ger\-BipolarOutrankingDigraph} class constructor takes about four seconds for computing a \emph{million} pairwise outranking characteristic values (see Listing~\vref{list:11.2}). In a similar setting, the standard \texttt{BipolarOutranking\-Digraph} constructor operates more than two times slower.
 \begin{lstlisting}
 >>> from outrankingDigraphs import BipolarOutrankingDigraph
 >>> t1 = t.convert2Standard()
@@ -153,8 +154,7 @@ On a classic intel-i7 equipped PC with four single threaded cores, the\\ \texttt
     Threads         : 4
 \end{lstlisting}
 
-By far, most of the run time is in each case needed for computing the individual pairwise outranking characteristic values. Notice also below the memory occupations of both outranking digraph instances. 
-
+By far, most of the run time is in each case needed for computing the individual pairwise outranking characteristic values ($3.61$sec versus $7.53$sec.). Notice also below the memory occupations --about 103MB for $g$ and 202MB for $g1$-- of both outranking digraph instances.\index{digraphsTools@\texttt{digraphsTools} module}\index{total-size@\texttt{total\_size()}}
 \begin{lstlisting}
 >>> from digraphsTools import total_size
 >>> total_size(g)
@@ -167,22 +167,20 @@ By far, most of the run time is in each case needed for computing the individual
     0.45
 \end{lstlisting}
 
-About 103MB for $g$ and 202MB for $g1$. The standard \texttt{Decimal} valued \\
-\texttt{BipolarOutrankingDigraph} instance $g1$ thus nearly doubles the memory\\ occupation of the corresponding \texttt{IntegerBipolarOutrankingDigraph} $g$ instance (see Line 3 and 5 above). 3/4 of this memory occupation is due to the \texttt{g1.relation} ($34\%$) and the \texttt{g1.gamma} ($45\%$) dictionaries. And these ratios quadratically grow with the digraph order. To limit the object sizes for really big outranking digraphs, we need to abandon the complete implementation of adjacency tables and gamma functions.
+The standard \texttt{Decimal} valued
+\texttt{BipolarOutrankingDigraph} instance $g1$ thus nearly doubles the memory occupation of the corresponding \texttt{IntegerBipo\-larOutrankingDigraph} $g$ instance (see Line 3 and 5 above). $3/4$ of this memory occupation is due to the \texttt{g1.relation} ($34\%$) and the \texttt{g1.gamma} ($45\%$) dictionaries. And these ratios quadratically grow with the digraph order. To limit the object sizes for really big outranking digraphs, we need to abandon the complete implementation of adjacency tables and gamma functions.
 
 \section{The sparse implementation of big outranking digraphs}
 \label{sec:11.4}
 
 The idea is to first decompose the complete outranking relation into an ordered collection of equivalent quantile performance classes. Let us consider for this illustration a random performance tableau with 100 decision alternatives evaluated on 7 criteria.
-
 \begin{lstlisting}
 >>> from cRandPerfTabs import cRandomPerformanceTableau
 >>> t = cRandomPerformanceTableau(numberOfActions=100,\
 ...                       numberOfCriteria=7,seed=100)
 \end{lstlisting}
 
-We sort the 100 decision alternatives into overlapping quartile classes and rank with respect to the average quantile limits.
-
+The \texttt{cSparseIntegerOutrankingDigraphs} module\index{cSparseIntegerOutrankingDigraphs@\texttt{cSparseIntegerOutrankingDigraphs} module} provides the\\ \texttt{SparseIntegerOutrankingDigraph} class\index{SparseIntegerOutrankingDigraph@\texttt{SparseIntegerOutrankingDigraph} class} for sorting the $100$ decision alternatives into overlapping quartile classes and rank all $100$ with respect to the average quantile limits.
 \begin{lstlisting}[caption={Constructing the sparse integer outranking digraph},label=list:11.3]
 >>> from cSparseIntegerOutrankingDigraphs import\
 ...                    SparseIntegerOutrankingDigraph
@@ -236,31 +234,26 @@ We obtain in this example here a decomposition into 6 linearly ordered component
   c6. ]<-0.25]    : [79,83,84]
 \end{lstlisting}
 
-A restricted outranking relation is stored for each component with more than one alternative. The resulting global relation map of the first ranked 75 alternatives looks as follows.
-
+A restricted outranking relation is stored for each component with more than one alternative. The resulting global relation map of the first ranked 75 alternatives looks as follows (see Fig:~\vref{fig:11.1}):
 \begin{lstlisting}
 >>> sg.showRelationMap(toIndex=75)
 \end{lstlisting}  
-
 \begin{figure}[h]
 \sidecaption
-\includegraphics[width=7cm]{Figures/sparseRelationMap.png}
-\caption{Sparse quartiles-sorting decomposed outranking relation (extract). \textbf{Legend}: \emph{outranking} for certain ($\top$); \emph{outranked} for certain ($\bot$); more or less \emph{outranking} ($+$); more or less \emph{outranked} ($-$); \emph{indeterminate} (\ ).
-}
+\includegraphics[width=7cm]{Figures/11-1-sparseRelationMap.png}
+\caption{Sparse quartiles-sorting decomposed outranking relation (extract). \textbf{Legend}: \emph{outranking} for certain ($\top$); \emph{outranked} for certain ($\bot$); more or less \emph{outranking} ($+$); more or less \emph{outranked} ($-$); \emph{indeterminate}}
 \label{fig:11.1}       % Give a unique label
 \end{figure}
-\clearpage
+%\clearpage
 
-With a fill rate of $25\%$, the memory occupation of this sparse outranking digraph $sg$ instance takes now only 769kB, compared to the 1.7MB required by a corresponding standard \texttt{BipolarOutrankingDigraph} instance (see Listing \ref{list:113}).
-
+With a fill rate of $25\%$, the memory occupation of this sparse outranking digraph $sg$ instance takes now only $769$kB, compared to the $1.7$MB required by a corresponding standard \texttt{BipolarOutrankingDigraph} instance (see Listing~\vref{list:113}).
 \begin{lstlisting}
 >>> print('%.0fkB' % (total_size(sg)/1024) )
     769kB
 \end{lstlisting}
 
 For sparse outranking digraphs, the adjacency table is implemented as a dynamic \texttt{relation()} function instead of a double dictionary.
-
-\begin{lstlisting}[caption={The \texttt{relation()} function of a sparse outranking digraph},label=list:11.4,basicstyle=\scriptsize]
+\begin{lstlisting}[caption={The \texttt{relation()} function of a sparse outranking digraph},label=list:11.4,basicstyle=\ttfamily\scriptsize]
    def relation(self, int x, int y):
        """
        *Parameters*:
@@ -297,10 +290,9 @@ For sparse outranking digraphs, the adjacency table is implemented as a dynamic 
 \end{lstlisting}
 
 \section{Quantiles ranking of big performance tableaux}
-\label{sec:12.5}
+\label{sec:11.4}
 
-We may now rank the complete set of 100 decision alternatives by locally ranking with the \Copeland or the \NetFlows rule, for instance, all these individual components.
-
+We may now rank the complete set of 100 decision alternatives by locally ranking all these individual components with the \Copeland or the \NetFlows rule.
 \begin{lstlisting}
    >>> sg.boostedRanking
     [22, 53, 3, 34, 56, 62, 24, 44, 50, 93, 41, 63, 29, 58,
@@ -312,13 +304,13 @@ We may now rank the complete set of 100 decision alternatives by locally ranking
      52, 15, 32, 49, 51, 74, 16, 14, 75, 79, 83, 84]
 \end{lstlisting}
 
-When actually computing linear rankings of a set of alternatives, the local outranking relations are of no practical usage, and we may furthermore reduce the memory occupation of the resulting digraph by
-\begin{enumerate}
+When actually computing linear rankings of a set of alternatives, the local outranking relations are of no practical usage, and we may furthermore reduce the memory occupation of the resulting digraph by:
+\begin{enumerate}[topsep=1pt]
 \item refining the ordering of the quantile classes by taking into account how well an alternative is outranking the lower limit of its quantile class, respectively the upper limit of its quantile class is \emph{not} outranking the alternative;
 \item dropping the local outranking digraphs and keeping for each quantile class only a locally ranked list of alternatives.
 \end{enumerate}
-We provide therefore the \texttt{cQuantilesRankingDigraph} class.
 
+We provide therefore the \texttt{cQuantilesRankingDigraph} class\index{cQuantilesRankingDigraph@\texttt{cQuantilesRankingDigraph} class} from the \texttt{cSparseIntegerOutrankingDigraphs} module.
 \begin{lstlisting}[caption={Ranking the sparse integer outranking digraph},label=list:11.5]
 >>> from cSparseIntegerOutrankingDigraphs import\
 ...           cQuantilesRankingDigraph
@@ -351,9 +343,8 @@ We provide therefore the \texttt{cQuantilesRankingDigraph} class.
   'maximalComponentSize', 'componentRankingRule', 'boostedRanking']
 \end{lstlisting}
 
-With this \emph{optimised} quantile ordering strategy, we obtain now 47 performance equivalence classes (see Listing \ref{list:11.5} Line 13)
-
-\begin{lstlisting}
+With this \emph{optimised} quantile ordering strategy, we obtain now 47 performance equivalence classes (see Listing~\vref{list:11.5} Line 13)
+\begin{lstlisting}[caption={The ordered components of the sparse outranking digraph},label=list:11.6]
 >>> qr.components
     OrderedDict([
     ('c01', {'rank': 1,
@@ -387,11 +378,8 @@ With this \emph{optimised} quantile ordering strategy, we obtain now 47 performa
     208kB
 \end{lstlisting}
 
-We observe in the Listing above an even more considerably less voluminous memory occupation: 208kB compared to the 769kB of the \texttt{SparseIntegerOutrankingDigraph} instance. It is opportune, however, to measure the loss of quality of the resulting \Copeland ranking when working with sparse outranking digraphs.
-
-.. code-block:: pycon
-   :linenos:
-\begin{lstlisting}[caption={Measuring the loss of quality with respect to the standard outranking digraph},label=list:11.6]
+We observe in Listing~\vref{list:11.6} an even more considerably less voluminous memory occupation 208kB, compared to the 769kB of the \texttt{SparseIntegerOutran\-king\-Digraph} instance. It is opportune, however, to measure the loss of quality of the resulting \Copeland ranking when working with sparse outranking digraphs.
+\begin{lstlisting}[caption={Measuring the loss of quality with respect to the standard outranking digraph},label=list:11.7]
 >>> from cIntegerOutrankingDigraphs import *
 >>> ig = IntegerBipolarOutrankingDigraph(t)
 >>> print('Complete outranking : %+.4f'\
@@ -412,26 +400,26 @@ We observe in the Listing above an even more considerably less voluminous memory
     Optimzed sparse 4-tiling: +0.7051
 \end{lstlisting}
 
-The best ranking correlation with the pairwise outranking situations ($+0.75$) is naturally given when we apply the \Copeland rule to the complete outranking digraph (see Listing \ref{list:10.6} Line 6). When we apply the same rule to the sparse 4-tiled outranking digraph, we get a correlation of $+0.72$ (Line 12), and when applying the \Copeland rule to the optimised 4-tiled digraph, we still obtain a correlation of $+0.71$ (Line 18). These results actually depend on the number of quantiles we use as well as on the given model of random performance tableau.
+The best ranking correlation with the pairwise outranking situations ($+0.75$) is naturally given when we apply the \Copeland rule to the complete outranking digraph (see Listing~\vref{list:10.7} Line 6). When we apply the same rule to the sparse 4-tiled outranking digraph, we get a correlation of $+0.72$ (Line 12), and when applying the \Copeland rule to the optimised 4-tiled digraph, we still obtain a correlation of $+0.71$ (Line 18). These results actually depend on the number of quantiles we use as well as on the given model of random performance tableau.
 
 In case of \texttt{Random3ObjectivesPerformanceTableau} instances, for instance, we would get in a similar setting a complete outranking correlation of $+0.86$, a sparse 4-tiling correlation of $+0.82$, and an optimzed sparse 4-tiling correlation of $+0.81$.
 
 \section{HPC quantiles ranking records}
-\label{sec:12.6}
+\label{sec:11.5}
 
 Following from the separability property of the $q$-tiles sorting of each action into each $q$-tiles class, the $q$-sorting algorithm may be safely split into as much threads as are multiple processing cores available in parallel. Furthermore, the ranking procedure being local to each diagonal component, these procedures may as well be safely processed in parallel threads on each component restricted outrankingdigraph.
 
 Using the HPC platform of the University of Luxembourg (\href{https://hpc.uni.lu/}{https://hpc.uni.lu/}), the following run times for very big ranking problems could be achieved both:
-\begin{itemize}
-\item on Iris -skylake nodes with 28 cores \footnote{See https://hpc.uni.lu/systems/iris/}, and
-\item on the 3TB -bigmem Gaia-183 node with 64 cores \footnote{See https://hpc.uni.lu/systems/gaia/},
+\begin{itemize}[topsep=1pt]
+\item on Iris -skylake nodes with 28 cores \footnote{The \texttt{iris} cluster: https://hpc.uni.lu/systems/iris/}, and
+\item on the 3TB -bigmem Gaia-183 node with 64 cores \footnote{The \texttt{gaia} cluster: https://hpc.uni.lu/systems/gaia/},
 \end{itemize}
-by running the cythonized python modules in an Intel compiled virtual Python 3.6.5 environment [GCC Intel(R) 17.0.1 –enable-optimizations c++ gcc 6.3 mode] on Debian 8 Linux.
+by running the cythonized Python modules in an Intel compiled virtual Python 3.6.5 environment [GCC Intel(R) 17.0.1 –enable-optimizations c++ gcc 6.3 mode] on Debian 8 Linux.
 
 \begin{figure}[h]
 \sidecaption
-\includegraphics[width=7cm]{Figures/rankingRecords.png}
-\caption{HPC-UL Ranking Performance Records (Spring 2018). On the big memory equipped Gaia-183 node, we were able to rank a million decision alternatives in about 2 minutes. We even could linearly rank up to 6 million decision alternatives in about 40 minutes.}
+\includegraphics[width=7cm]{Figures/11-2-rankingRecords.png}
+\caption{HPC-UL Ranking Performance Records (Spring 2018). On the big memory equipped Gaia-183 node, we were able to rank a million decision alternatives in about 2 minutes. We even could linearly rank up to 6 million decision alternatives in about 40 minutes}
 \label{fig:11.2}       % Give a unique label
 \end{figure}
   
