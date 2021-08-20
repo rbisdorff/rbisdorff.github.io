@@ -235,14 +235,13 @@ The highest quintile class ($]80\%-100\%]$) contains decision alternatives 5, 42
 \begin{figure}[h]
 %\sidecaption
 \includegraphics[width=11cm]{Figures/9-1-sparse75RelationMap.png}
-\caption{The relation map of a sparse outranking digraph.}
+\caption{The relation map of a sparse outranking digraph}
 \label{fig:9.1}       % Give a unique label
 \end{figure}
 %\clearpage
 In Fig.~\vref{fig:9.1} we easily recognize the 9 linearly ordered quantile equivalence classes. \emph{Green} and \emph{light-green} show positive \textbf{outranking} situations, whereas positive \textbf{outranked} situations are shown in \emph{red} and \emph{light-red}. Indeterminate situations appear in white. In each one of the 9 quantile equivalence classes we recover in fact the corresponding bipolar-valued outranking \emph{sub-relation}, which leads to an actual \textbf{fill-rate} of $20.4\%$ (see Listing~\vref{list:9.4} Line 19).
 
 We may now check how faithful the sparse model represents the complete outranking relation.
-
 \begin{lstlisting}
    >>> g = BipolarOutrankingDigraph(tp)
    >>> corr = prg.computeOrdinalCorrelation(g)
@@ -252,7 +251,6 @@ We may now check how faithful the sparse model represents the complete outrankin
      Epistemic determination    :  0.315
      Bipolar-valued equivalence : +0.272
 \end{lstlisting}   
-
 The ordinal correlation index between the standard and the sparse outranking relations is quite high ($+0.863$) and their bipolar-valued equivalence is supported by a mean criteria significance majority of $(1.0+0.272)/2 = 64\%$.
 
 It is worthwhile noticing in Listing~\vref{list:9.4} (Lines 20- ) that sparse pre-ranked outranking digraphs do not contain a \texttt{relation} attribute. The access to pairwise outranking characteristic values is here provided via a corresponding \texttt{relation()} function.
