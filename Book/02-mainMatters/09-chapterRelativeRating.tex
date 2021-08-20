@@ -50,7 +50,7 @@ r(x \in \mathbf{q}_k) \; = \; \min \big[ r\big(x \succsim \mathbf{q}(p_{q-1})\bi
 
 The outranking relation $\succsim$ verifying the coduality principle, $-r\big(\mathbf{q}(p_{q-1}) \succsim x\big) \,=\, r\big(\mathbf{q}(p_{q-1}) \prec x\big)$, resp. $-r\big(x \succsim \mathbf{q}(p_{q}) \,=\, r\big(x \prec \mathbf{q}(p_{q}\big)$.
 
-We may compute, for instance, a five-tiling of a given random performance tableau with the help of the \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\texttt{QuantilesSortingDigraph} class}.
+We may compute, for instance, a five-tiling of a given random performance tableau with the help of the \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\texttt{QuantilesSortingDigraph} class} provided by the \texttt{sortingDigraphs} module\index{sortingDigraphs@\texttt{sortingDigraphs} module}.
 \begin{lstlisting}[caption={Computing a quintiles sorting result},label=list:9.1]
 >>> from randomPerfTabs import RandomPerformanceTableau
 >>> t = RandomPerformanceTableau(numberOfActions=50,seed=5)
@@ -143,8 +143,8 @@ Alternative \texttt{a22} verifies indeed positively both sorting conditions only
 Quantiles sorting results indeed always verify the following \textbf{Properties}:
 \begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm,topsep=1pt]
 \item \textbf{Coherence}: Each object is sorted into a non-empty subset of \emph{adjacent} $q$-tiles classes. An alternative that would \emph{miss} evaluations on all the criteria will be sorted conjointly in all $q$-tiled classes.
-\item \textbf{Uniqueness}: If $r(x \in \mathbf{q}^k) \neq 0$  for $k = 1, ..., q$, then performance $x$ is sorted into \emph{exactly one single} $q$-tiled class.
-\item \textbf{Separability}: Computing the sorting result for performance $x$ is independent from the computing of the other performances’ sorting results. This property gives access to efficient parallel processing of class membership characteristics.
+\item \textbf{Uniqueness}: When $r(x \in \mathbf{q}^k) \neq 0.0$  for $k = 1, ..., q$, the performance $x$ is sorted into \emph{exactly one single} $q$-tiled class.
+\item \textbf{Separability}: Computing the sorting result for performance $x$ is \emph{independent} from the computing of the other performances’ sorting results. This property gives access to efficient parallel processing of class membership characteristics.
 \end{enumerate}
 
 The $q$-tiles sorting result leaves us hence with more or less \emph{overlapping} ordered quantile equivalence classes. For constructing now a linearly ranked q-tiles partition of $X$ , we may apply three strategies:

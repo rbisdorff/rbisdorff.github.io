@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  20 AUG 2021 12:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  20 AUG 2021 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1505,6 +1505,12 @@ ine 127.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Overfull \hbox (26.17978pt too wide) in paragraph at lines 134--135
+\OT1/ptm/m/n/10 for-mance quan-tiles es-ti-mated from his-tor-i-cal data, we pr
+o-vide in the \OT1/pcr/m/n/10 sortingDigraphs
+ []
+
 [136] [137 <./Figures/10-1-examplePerfQuantiles.png>] [138] [139]
 <Figures/10-2-heatMap1.png, id=5002, 528.97626pt x 669.50125pt>
 File: Figures/10-2-heatMap1.png Graphic file (type png)
@@ -2874,12 +2880,12 @@ Overfull \hbox (3.17114pt too wide) in paragraph at lines 223--225
  []
 
 
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 303--305
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 304--306
 []\OT1/pcr/m/n/8.5 StrongComponentsCollapsedDigraph 
  []
 
 [377]
-Overfull \hbox (8.27113pt too wide) in paragraph at lines 325--327
+Overfull \hbox (8.27113pt too wide) in paragraph at lines 326--328
 []\OT1/pcr/m/n/8.5 UnOpposedBipolarOutrankingDigraph 
  []
 
@@ -2958,10 +2964,10 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (392 pages, 6210790 bytes).
+Output written on book.pdf (392 pages, 6210891 bytes).
 PDF statistics:
- 14284 PDF objects out of 15390 (max. 8388607)
- 13115 compressed objects within 132 object streams
+ 14285 PDF objects out of 15390 (max. 8388607)
+ 13116 compressed objects within 132 object streams
  7151 named destinations out of 7423 (max. 500000)
  2055 words of extra memory for PDF output out of 10000 (max. 10000000)
 

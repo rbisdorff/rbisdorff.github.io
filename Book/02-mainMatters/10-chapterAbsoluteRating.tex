@@ -131,7 +131,7 @@ With \texttt{historySize = None} (the default setting), the balance in the examp
 \section{Rating-by-ranking new performances with quantile norms}
 \label{sec:10.3}
 
-For \emph{rating} a newly given set of decision alternatives with the help of empirical performance quantiles estimated from historical data, we provide the \texttt{Learned\-QuantilesRatingDigraph} class\index{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class}, a specialisation of the \texttt{QuantilesSor\-tingDigraph} class (see Chapter~\vref{sec:9}). The absolute rating result is computed by \emph{ranking} the new performance records together with the learned quantile limits.
+For \emph{rating} a newly given set of decision alternatives with the help of empirical performance quantiles estimated from historical data, we provide in the \texttt{sortingDigraphs} module the \texttt{Learned\-QuantilesRatingDigraph} class\index{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class}, a specialisation of the \texttt{QuantilesSor\-tingDigraph} class (see Chapter~\vref{sec:9}). The absolute rating result is computed by \emph{ranking} the new performance records together with the learned quantile limits.
 
 The constructor requires a valid \texttt{PerformanceQuantiles} instance and, by default, uses \Copeland 's or the \NetFlows ranking rule, whichever fits best in an ordinal correlation sense with the underlying outranking digraph.
 
