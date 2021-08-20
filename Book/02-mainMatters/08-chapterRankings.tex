@@ -74,7 +74,7 @@ To discover how \emph{difficult} this ranking problem can get here, we have a lo
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=5.5cm]{Figures/8-1-rankingTutorial.pdf}
+\includegraphics[width=6cm]{Figures/8-1-rankingTutorial.pdf}
 \caption{The strict outranking relation $\succnsim$ shown here is, for instance, \emph{not transitive}: alternative \texttt{a8} outranks alternative \texttt{a6} and alternative \texttt{a6} outranks \texttt{a4}, however, \texttt{a8} does not outrank \texttt{a4}. Furthermore, alternatives \texttt{a6}, \texttt{a7} and \texttt{a8} show a cyclic outranking relation}
 \label{fig:8.1}       % Give a unique label
 \end{figure}
@@ -160,7 +160,7 @@ We recover in Listing~\vref{list:8.4} above, the ranking with ties delivered by 
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=3cm]{Figures/8-2-weakCopelandRanking.pdf}
+\includegraphics[width=5cm]{Figures/8-2-weakCopelandRanking.pdf}
 \caption{Drawing of the weak \Copeland ranking. The graph show the skeleton of the preorder produced by the corresponding ties of the \Copeland scores}
 \label{fig:8.2}       % Give a unique label
 \end{figure}
@@ -245,13 +245,13 @@ We may visualize the partial order defined by the epistemic disjunction (see Sec
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=3cm]{Figures/8-3-tutorialKemeny.pdf}
+\includegraphics[width=5cm]{Figures/8-3-tutorialKemeny.pdf}
 \caption{Epistemic disjunction of optimal \Kemeny rankings. It is interesting to notice that both \Kemeny rankings only differ in their respective positioning of alternative \texttt{a8}; either before or after alternatives \texttt{a9}, \texttt{a4} and \texttt{a1}. }
 \label{fig:8.3}       % Give a unique label
 \end{figure}
 
-To retain now a specific representative among all the potential rankings with maximal \Kemeny index, we will choose, with the help of the \\
-\texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@Showrankingconsensusquality()}, the one proposing the best performance criteria consensus.
+To retain now a specific representative among all the potential rankings with maximal \Kemeny index, we will choose, with the help of the
+\texttt{showRankingCon\-sensusQuality()} method\index{showRankingConsensusQuality@Showrankingconsensusquality()}, the one proposing the best performance criteria consensus.
 \begin{lstlisting}[caption={Computing the consensus quality of a ranking},label=list:8.10]   
 >>> g.showRankingConsensusQuality(ke.maximalRankings[0])
  Consensus quality of ranking:
@@ -300,12 +300,12 @@ To retain now a specific representative among all the potential rankings with ma
 \end{lstlisting}
 Both \Kemeny rankings show the same \emph{weighted mean marginal correlation} ($+0.099$, see Listing~\vref{list:8.10} Lines 19-22, 42-44) with all thirteen performance criteria. However, the second ranking shows a slightly lower \emph{standard deviation} ($+0.132$ versus $+0.177$), resulting in a slightly \emph{fairer} ranking result ($-0.033$ versus $-0.079$).
 
-When several rankings with maximal \Kemeny index are given,\\ the \texttt{KemenyRanking} class constructor instantiates the ranking with \emph{highest} mean marginal correlation and, in case of ties, with \emph{lowest} weighted standard deviation. Here we obtain ranking: [\texttt{a5}, \texttt{a6}, \texttt{a7}, \texttt{a3}, \texttt{a9}, \texttt{a4}, \texttt{a1}, \texttt{a8}, \texttt{a2}] (see Line 4 in Listing~\vref{list:8.10} above).
+When several rankings with maximal \Kemeny index are given, the \texttt{Kemeny\-Ranking} class constructor instantiates the ranking with \emph{highest} mean marginal correlation and, in case of ties, with \emph{lowest} weighted standard deviation. Here we obtain ranking: [\texttt{a5}, \texttt{a6}, \texttt{a7}, \texttt{a3}, \texttt{a9}, \texttt{a4}, \texttt{a1}, \texttt{a8}, \texttt{a2}] (see Line 4 in Listing~\vref{list:8.10} above).
 
 \section{\Slater rankings}
 \label{sec:8.5}
 
-The \Slater ranking rule is identical to \Kemeny 's, but it is working, instead, on the \Condorcet --\emph{median cut polarised}-- digraph \texttt{ccd} \citep{SLA-1961}. \Slater 's rule is also \emph{invariant} Under the codual transform and delivers again indifferently on \texttt{g} or \texttt{gcd} the following results:
+The \Slater ranking rule is identical to \Kemeny 's, but it is working, instead, on the \Condorcet --\emph{median cut polarised}-- digraph \texttt{ccd} \citep{SLA-1961}. \Slater 's rule is also \emph{invariant} under the codual transform and delivers again indifferently on \texttt{g} or \texttt{gcd} the following results:
 \begin{lstlisting}[caption={Computing a \Slater ranking},label=list:8.11]   
 >>> from linearOrders import SlaterRanking
 >>> sl = SlaterRanking(gcd,orderLimit=9)
@@ -331,7 +331,7 @@ We notice in Listing~\vref{list:8.11} Line 8 that the first \Slater ranking is a
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[width=4cm]{Figures/8-4-tutorialSlater.pdf}
+\includegraphics[width=5cm]{Figures/8-4-tutorialSlater.pdf}
 \caption{Epistemic disjunction of optimal \Slater rankings. What precise \Slater ranking result should we hence adopt?}
 \label{fig:8.4}       % Give a unique label
 \end{figure}

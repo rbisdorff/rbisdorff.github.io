@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  19 AUG 2021 17:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  20 AUG 2021 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1278,51 +1278,46 @@ File: Figures/7-1-tutorialBallots.pdf Graphic file (type pdf)
 <use Figures/7-1-tutorialBallots.pdf>
 Package pdftex.def Info: Figures/7-1-tutorialBallots.pdf  used on input line 17
 6.
-(pdftex.def)             Requested size: 170.71652pt x 174.15509pt.
+(pdftex.def)             Requested size: 199.16928pt x 203.18094pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [93] [94 <./Figures/7-1-tutorialBallots.pdf>]
-<Figures/7-2-cycles.pdf, id=3750, 299.1175pt x 455.7025pt>
+<Figures/7-2-cycles.pdf, id=3748, 299.1175pt x 455.7025pt>
 File: Figures/7-2-cycles.pdf Graphic file (type pdf)
 <use Figures/7-2-cycles.pdf>
 Package pdftex.def Info: Figures/7-2-cycles.pdf  used on input line 219.
-(pdftex.def)             Requested size: 113.81102pt x 173.39125pt.
-<Figures/7-3-votingHeatmap.png, id=3753, 624.3325pt x 368.37625pt>
+(pdftex.def)             Requested size: 170.71652pt x 260.08688pt.
+ [95 <./Figures/7-2-cycles.pdf>]
+<Figures/7-3-votingHeatmap.png, id=3791, 624.3325pt x 368.37625pt>
 File: Figures/7-3-votingHeatmap.png Graphic file (type png)
 <use Figures/7-3-votingHeatmap.png>
 Package pdftex.def Info: Figures/7-3-votingHeatmap.png  used on input line 241.
 
 (pdftex.def)             Requested size: 199.16928pt x 117.51181pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[95 <./Figures/7-2-cycles.pdf>] [96 <./Figures/7-3-votingHeatmap.png>]
+[96 <./Figures/7-3-votingHeatmap.png>] [97]
 Overfull \hbox (20.46086pt too wide) in paragraph at lines 313--314
 \OT1/ptm/m/n/10 ing \OT1/ptm/m/it/10 ma-jor-ity mar-gins \OT1/ptm/m/n/10 di-gra
 ph $\OML/ztmcm/m/it/10 mmdg$ \OT1/ptm/m/n/10 with the help of the \OT1/pcr/m/n/
 10 MajorityMarginsDigraph
  []
 
-[97]
-<Figures/7-4-majorityMargins.png, id=3868, 837.1275pt x 607.26875pt>
+<Figures/7-4-majorityMargins.png, id=3861, 837.1275pt x 607.26875pt>
 File: Figures/7-4-majorityMargins.png Graphic file (type png)
 <use Figures/7-4-majorityMargins.png>
 Package pdftex.def Info: Figures/7-4-majorityMargins.png  used on input line 34
 0.
 (pdftex.def)             Requested size: 113.81102pt x 82.55225pt.
- [98 <./Figures/7-4-majorityMargins.png>] [99]
-(./02-mainMatters/07-chapterWinnerElection.bbl (./book.brf))) [100
+[98 <./Figures/7-4-majorityMargins.png>] [99] [100]
+(./02-mainMatters/07-chapterWinnerElection.bbl (./book.brf))) [101
 
 ]
 \openout2 = `02-mainMatters/08-chapterRankings.aux'.
 
 
-(./02-mainMatters/08-chapterRankings.tex
-Chapter 8.
-[101
+(./02-mainMatters/08-chapterRankings.tex [102
 
 
 
@@ -1330,28 +1325,30 @@ Chapter 8.
 
 
 ]
-<Figures/8-1-rankingTutorial.pdf, id=3969, 330.23375pt x 578.16pt>
+Chapter 8.
+[103]
+<Figures/8-1-rankingTutorial.pdf, id=3978, 330.23375pt x 578.16pt>
 File: Figures/8-1-rankingTutorial.pdf Graphic file (type pdf)
 <use Figures/8-1-rankingTutorial.pdf>
 Package pdftex.def Info: Figures/8-1-rankingTutorial.pdf  used on input line 78
 .
-(pdftex.def)             Requested size: 156.49014pt x 273.98485pt.
+(pdftex.def)             Requested size: 170.71652pt x 298.88934pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[102] [103 <./Figures/8-1-rankingTutorial.pdf>] [104]
-<Figures/8-2-weakCopelandRanking.pdf, id=4087, 224.84pt x 519.9425pt>
+[104] [105 <./Figures/8-1-rankingTutorial.pdf>] [106]
+<Figures/8-2-weakCopelandRanking.pdf, id=4094, 224.84pt x 519.9425pt>
 File: Figures/8-2-weakCopelandRanking.pdf Graphic file (type pdf)
 <use Figures/8-2-weakCopelandRanking.pdf>
 Package pdftex.def Info: Figures/8-2-weakCopelandRanking.pdf  used on input lin
 e 164.
-(pdftex.def)             Requested size: 85.35826pt x 197.3898pt.
+(pdftex.def)             Requested size: 142.26378pt x 329.00151pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[105] [106 <./Figures/8-2-weakCopelandRanking.pdf>] [107]
+[107] [108 <./Figures/8-2-weakCopelandRanking.pdf>] [109]
 
 Package Listings Warning: Text dropped after begin of listing on input line 230
 .
@@ -1363,16 +1360,16 @@ Overfull \hbox (19.70085pt too wide) in paragraph at lines 237--238
 gsFusion
  []
 
-<Figures/8-3-tutorialKemeny.pdf, id=4206, 168.63pt x 578.16pt>
+<Figures/8-3-tutorialKemeny.pdf, id=4202, 168.63pt x 578.16pt>
 File: Figures/8-3-tutorialKemeny.pdf Graphic file (type pdf)
 <use Figures/8-3-tutorialKemeny.pdf>
 Package pdftex.def Info: Figures/8-3-tutorialKemeny.pdf  used on input line 249
 .
-(pdftex.def)             Requested size: 85.35826pt x 292.66101pt.
+(pdftex.def)             Requested size: 142.26378pt x 487.76837pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[108]
+[110] [111 <./Figures/8-3-tutorialKemeny.pdf>]
 Overfull \hbox (7.31958pt too wide) in paragraph at lines 301--302
 \OT1/ptm/m/n/10 Both \OT1/ptm/m/sc/10 Ke-meny \OT1/ptm/m/n/10 rank-ings show th
 e same \OT1/ptm/m/it/10 weighted mean marginal cor-re-la-tion \OT1/ptm/m/n/10 (
@@ -1380,32 +1377,30 @@ $\OT1/ztmcm/m/n/10 +0\OML/ztmcm/m/it/10 :\OT1/ztmcm/m/n/10 099$\OT1/ptm/m/n/10
 ,
  []
 
-[109 <./Figures/8-3-tutorialKemeny.pdf>]
-<Figures/8-4-tutorialSlater.pdf, id=4303, 181.67876pt x 578.16pt>
+[112]
+<Figures/8-4-tutorialSlater.pdf, id=4317, 181.67876pt x 578.16pt>
 File: Figures/8-4-tutorialSlater.pdf Graphic file (type pdf)
 <use Figures/8-4-tutorialSlater.pdf>
 Package pdftex.def Info: Figures/8-4-tutorialSlater.pdf  used on input line 335
 .
-(pdftex.def)             Requested size: 113.81102pt x 362.1872pt.
+(pdftex.def)             Requested size: 142.26378pt x 452.7362pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[110] [111 <./Figures/8-4-tutorialSlater.pdf>] [112] [113] [114] [115]
+[113] [114 <./Figures/8-4-tutorialSlater.pdf>] [115] [116] [117] [118]
 (./02-mainMatters/08-chapterRankings.bbl (./book.brf)
 Underfull \hbox (badness 1360) in paragraph at lines 29--29
 []\OT1/ptm/m/n/10 Brans JP, Vincke P (1985) A pref-er-ence rank-ing or-gan-i-sa
 -tion method: The
  []
 
-)) [116
+)) [119
 
 ]
 \openout2 = `02-mainMatters/09-chapterRelativeRating.aux'.
 
- (./02-mainMatters/09-chapterRelativeRating.tex
-Chapter 9.
-[117
+ (./02-mainMatters/09-chapterRelativeRating.tex [120
 
 
 
@@ -1413,6 +1408,8 @@ Chapter 9.
 
 
 ]
+Chapter 9.
+[121]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
 
@@ -1432,43 +1429,45 @@ ls $\OT1/ztmcm/m/n/10 [\OML/ztmcm/m/it/10 q[]\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it
 /m/it/10 p[]\OT1/ztmcm/m/n/10 )[$
  []
 
-[118] [119]
+[122] [123]
 Overfull \hbox (6.31201pt too wide) in paragraph at lines 112--113
 \OT1/ptm/m/n/10 With the \OT1/pcr/m/n/10 showCriteriaQuantileLimits()[] \OT1/pt
 m/m/n/10 and the \OT1/pcr/m/n/10 showSorting()[] \OT1/ptm/m/n/10 meth-
  []
 
-[120] [121]
+[124] [125]
 Overfull \hbox (8.80624pt too wide) in paragraph at lines 208--209
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[122]
-<Figures/9-1-sparse75RelationMap.png, id=4672, 815.045pt x 865.2325pt>
+[126]
+<Figures/9-1-sparse75RelationMap.png, id=4691, 815.045pt x 865.2325pt>
 File: Figures/9-1-sparse75RelationMap.png Graphic file (type png)
 <use Figures/9-1-sparse75RelationMap.png>
 Package pdftex.def Info: Figures/9-1-sparse75RelationMap.png  used on input lin
-e 239.
-(pdftex.def)             Requested size: 256.0748pt x 271.83675pt.
- [123 <./Figures/9-1-sparse75RelationMap.png>] [124
+e 237.
+(pdftex.def)             Requested size: 312.9803pt x 332.2508pt.
 
-] [125]
-(./02-mainMatters/09-chapterRelativeRating.bbl (./book.brf))) [126
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[127] [128 <./Figures/9-1-sparse75RelationMap.png>] [129] [130]
+(./02-mainMatters/09-chapterRelativeRating.bbl (./book.brf))) [131
 
 ]
 \openout2 = `02-mainMatters/10-chapterAbsoluteRating.aux'.
 
 
-(./02-mainMatters/10-chapterAbsoluteRating.tex
+(./02-mainMatters/10-chapterAbsoluteRating.tex [132
+
+
+
+
+
+
+]
 Chapter 10.
-[127
-
-
-
-
-
-
-] [128]
+[133] [134]
 Overfull \hbox (3.70619pt too wide) in paragraph at lines 89--90
 [][][][][][]  
  []
@@ -1478,8 +1477,8 @@ Overfull \hbox (8.80624pt too wide) in paragraph at lines 94--95
 [][][][][][]  
  []
 
-[129]
-<Figures/examplePerfQuantiles.png, id=4852, 426.59375pt x 331.2375pt>
+[135]
+<Figures/examplePerfQuantiles.png, id=4879, 426.59375pt x 331.2375pt>
 File: Figures/examplePerfQuantiles.png Graphic file (type png)
 <use Figures/examplePerfQuantiles.png>
 Package pdftex.def Info: Figures/examplePerfQuantiles.png  used on input line 1
@@ -1489,14 +1488,14 @@ Package pdftex.def Info: Figures/examplePerfQuantiles.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[130] [131 <./Figures/examplePerfQuantiles.png>] [132] [133]
-<Figures/heatMap1.png, id=4975, 528.97626pt x 669.50125pt>
+[136] [137 <./Figures/examplePerfQuantiles.png>] [138] [139]
+<Figures/heatMap1.png, id=5002, 528.97626pt x 669.50125pt>
 File: Figures/heatMap1.png Graphic file (type png)
 <use Figures/heatMap1.png>
 Package pdftex.def Info: Figures/heatMap1.png  used on input line 257.
 (pdftex.def)             Requested size: 199.16928pt x 252.07372pt.
- [134 <./Figures/heatMap1.png>]
-<Figures/normedRatingDigraph.png, id=4999, 670.505pt x 648.4225pt>
+ [140 <./Figures/heatMap1.png>]
+<Figures/normedRatingDigraph.png, id=5026, 670.505pt x 648.4225pt>
 File: Figures/normedRatingDigraph.png Graphic file (type png)
 <use Figures/normedRatingDigraph.png>
 Package pdftex.def Info: Figures/normedRatingDigraph.png  used on input line 27
@@ -1507,8 +1506,8 @@ Overfull \hbox (13.50609pt too wide) in paragraph at lines 282--283
 [][][][][][][][][][][][][]  
  []
 
-[135 <./Figures/normedRatingDigraph.png>]
-<Figures/heatMap2.png, id=5018, 482.80376pt x 793.96625pt>
+[141 <./Figures/normedRatingDigraph.png>]
+<Figures/heatMap2.png, id=5046, 482.80376pt x 793.96625pt>
 File: Figures/heatMap2.png Graphic file (type png)
 <use Figures/heatMap2.png>
 Package pdftex.def Info: Figures/heatMap2.png  used on input line 301.
@@ -1517,8 +1516,8 @@ Package pdftex.def Info: Figures/heatMap2.png  used on input line 301.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[136] [137 <./Figures/heatMap2.png>]
-(./02-mainMatters/10-chapterAbsoluteRating.bbl (./book.brf))) [138
+[142] [143 <./Figures/heatMap2.png>]
+(./02-mainMatters/10-chapterAbsoluteRating.bbl (./book.brf))) [144
 
 ]
 \openout2 = `02-mainMatters/11-chapterHPCRanking.aux'.
@@ -1526,15 +1525,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (./02-mainMatters/11-chapterHPCRanking.tex
 Chapter 11.
-[139
+[145
 
 
 
 
 
 
-] [140] [141] [142] [143]
-<Figures/sparseRelationMap.png, id=5242, 453.695pt x 865.2325pt>
+] [146] [147] [148] [149]
+<Figures/sparseRelationMap.png, id=5269, 453.695pt x 865.2325pt>
 File: Figures/sparseRelationMap.png Graphic file (type png)
 <use Figures/sparseRelationMap.png>
 Package pdftex.def Info: Figures/sparseRelationMap.png  used on input line 248.
@@ -1544,20 +1543,20 @@ Package pdftex.def Info: Figures/sparseRelationMap.png  used on input line 248.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[144] [145 <./Figures/sparseRelationMap.png>]
+[150] [151 <./Figures/sparseRelationMap.png>]
 
-LaTeX Warning: Reference `list:113' on page 146 undefined on input line 254.
+LaTeX Warning: Reference `list:113' on page 152 undefined on input line 254.
 
-[146
+[152
 
-] [147]
+] [153]
 Overfull \hbox (77.51001pt too wide) in paragraph at lines 390--391
 \OT1/ptm/m/n/10 mem-ory oc-cu-pa-tion: 208kB com-pared to the 769kB of the \OT1
 /pcr/m/n/10 SparseIntegerOutrankingDigraph
  []
 
-[148]
-<Figures/rankingRecords.png, id=5423, 748.7975pt x 351.3125pt>
+[154]
+<Figures/rankingRecords.png, id=5450, 748.7975pt x 351.3125pt>
 File: Figures/rankingRecords.png Graphic file (type png)
 <use Figures/rankingRecords.png>
 Package pdftex.def Info: Figures/rankingRecords.png  used on input line 434.
@@ -1567,39 +1566,39 @@ Package pdftex.def Info: Figures/rankingRecords.png  used on input line 434.
 Class-Warning: Legend of \sidecaption for figure 11.2
 is 2.41066pt taller than the corresponding float - 
 you'd better switch the environment. 
-[149 <./Figures/rankingRecords.png>] (./02-mainMatters/11-chapterHPCRanking.bbl
-(./book.brf))) [150
+[155 <./Figures/rankingRecords.png>] (./02-mainMatters/11-chapterHPCRanking.bbl
+(./book.brf))) [156
 
 ]
 \openout2 = `02-mainMatters/part3.aux'.
 
- (./02-mainMatters/part3.tex [151
+ (./02-mainMatters/part3.tex [157
 
 
 
 
 
 
-] [152])
+] [158])
 \openout2 = `02-mainMatters/12-chapterAliceChoice.aux'.
 
 
 (./02-mainMatters/12-chapterAliceChoice.tex
 Chapter 12.
-<Figures/AliceF.png, id=5453, 315.1775pt x 461.725pt>
+<Figures/AliceF.png, id=5480, 315.1775pt x 461.725pt>
 File: Figures/AliceF.png Graphic file (type png)
 <use Figures/AliceF.png>
 Package pdftex.def Info: Figures/AliceF.png  used on input line 11.
 (pdftex.def)             Requested size: 113.81102pt x 166.72813pt.
-[153
+[159
 
 
 
 
 
 
- <./Figures/AliceF.png>] [154] [155]
-<Figures/aliceCriteria.png, id=5501, 1115.16624pt x 603.25375pt>
+ <./Figures/AliceF.png>] [160] [161]
+<Figures/aliceCriteria.png, id=5528, 1115.16624pt x 603.25375pt>
 File: Figures/aliceCriteria.png Graphic file (type png)
 <use Figures/aliceCriteria.png>
 Package pdftex.def Info: Figures/aliceCriteria.png  used on input line 125.
@@ -1609,8 +1608,8 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 125--126
 [][] 
  []
 
-[156 <./Figures/aliceCriteria.png>]
-<Figures/aliceHeatmap.png, id=5530, 773.89125pt x 511.9125pt>
+[162 <./Figures/aliceCriteria.png>]
+<Figures/aliceHeatmap.png, id=5557, 773.89125pt x 511.9125pt>
 File: Figures/aliceHeatmap.png Graphic file (type png)
 <use Figures/aliceHeatmap.png>
 Package pdftex.def Info: Figures/aliceHeatmap.png  used on input line 140.
@@ -1620,8 +1619,8 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 140--141
 [][] 
  []
 
-[157 <./Figures/aliceHeatmap.png>]
-<Figures/aliceRelationmap.png, id=5550, 691.58376pt x 527.9725pt>
+[163 <./Figures/aliceHeatmap.png>]
+<Figures/aliceRelationmap.png, id=5578, 691.58376pt x 527.9725pt>
 File: Figures/aliceRelationmap.png Graphic file (type png)
 <use Figures/aliceRelationmap.png>
 Package pdftex.def Info: Figures/aliceRelationmap.png  used on input line 182.
@@ -1630,13 +1629,13 @@ Package pdftex.def Info: Figures/aliceRelationmap.png  used on input line 182.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[158] [159 <./Figures/aliceRelationmap.png>] [160]
-<Figures/aliceBestChoice.pdf, id=5654, 578.16pt x 548.0475pt>
+[164] [165 <./Figures/aliceRelationmap.png>] [166]
+<Figures/aliceBestChoice.pdf, id=5682, 578.16pt x 548.0475pt>
 File: Figures/aliceBestChoice.pdf Graphic file (type pdf)
 <use Figures/aliceBestChoice.pdf>
 Package pdftex.def Info: Figures/aliceBestChoice.pdf  used on input line 271.
 (pdftex.def)             Requested size: 199.16928pt x 188.79227pt.
-<Figures/pairwiseComparison.png, id=5658, 656.4525pt x 803.0pt>
+<Figures/pairwiseComparison.png, id=5686, 656.4525pt x 803.0pt>
 File: Figures/pairwiseComparison.png Graphic file (type png)
 <use Figures/pairwiseComparison.png>
 Package pdftex.def Info: Figures/pairwiseComparison.png  used on input line 283
@@ -1646,8 +1645,8 @@ Package pdftex.def Info: Figures/pairwiseComparison.png  used on input line 283
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[161 <./Figures/aliceBestChoice.pdf>] [162 <./Figures/pairwiseComparison.png>]
-[163
+[167 <./Figures/aliceBestChoice.pdf>] [168 <./Figures/pairwiseComparison.png>]
+[169
 
 ]
 Overfull \hbox (164.11023pt too wide) in paragraph at lines 361--362
@@ -1656,13 +1655,13 @@ Overfull \hbox (164.11023pt too wide) in paragraph at lines 361--362
 larOutrankingDigraph
  []
 
-[164]
+[170]
 Overfull \hbox (57.61156pt too wide) in paragraph at lines 381--382
 []\OT1/ptm/m/n/10 We may hence make use of the \OT1/pcr/m/n/10 exportGraphViz()
  \OT1/ptm/m/n/10 method of the \OT1/pcr/m/n/10 TransitiveDigraph
  []
 
-<Figures/AliceChoice_unopposed.pdf, id=5781, 259.97125pt x 578.16pt>
+<Figures/AliceChoice_unopposed.pdf, id=5809, 259.97125pt x 578.16pt>
 File: Figures/AliceChoice_unopposed.pdf Graphic file (type pdf)
 <use Figures/AliceChoice_unopposed.pdf>
 Package pdftex.def Info: Figures/AliceChoice_unopposed.pdf  used on input line 
@@ -1671,10 +1670,10 @@ Package pdftex.def Info: Figures/AliceChoice_unopposed.pdf  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[165] [166 <./Figures/AliceChoice_unopposed.pdf>] [167
+[171] [172 <./Figures/AliceChoice_unopposed.pdf>] [173
 
 ]
-(./02-mainMatters/12-chapterAliceChoice.bbl (./book.brf))) [168
+(./02-mainMatters/12-chapterAliceChoice.bbl (./book.brf))) [174
 
 ]
 \openout2 = `02-mainMatters/13-chapterBestCSDpts.aux'.
@@ -1682,15 +1681,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (./02-mainMatters/13-chapterBestCSDpts.tex
 Chapter 13.
-[169
+[175
 
 
 
 
 
 
-] [170] [171] [172] [173]
-<Figures/the_cs_2016Criteria.png, id=6092, 966.61125pt x 351.3125pt>
+] [176] [177] [178] [179]
+<Figures/the_cs_2016Criteria.png, id=6120, 966.61125pt x 351.3125pt>
 File: Figures/the_cs_2016Criteria.png Graphic file (type png)
 <use Figures/the_cs_2016Criteria.png>
 Package pdftex.def Info: Figures/the_cs_2016Criteria.png  used on input line 27
@@ -1704,14 +1703,14 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 279--280
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[174] [175 <./Figures/the_cs_2016Criteria.png>]
+[180] [181 <./Figures/the_cs_2016Criteria.png>]
 Overfull \hbox (36.56068pt too wide) in paragraph at lines 330--331
 []\OT1/ptm/m/n/10 A cor-re-spond-ing di-graph con-struc-tor is pro-vided by the
  \OT1/pcr/m/n/10 RobustOutrankingDigraph
  []
 
-[176] [177] [178] [179] [180] [181]
-<Figures/the_cs_RelationMap.png, id=6430, 1101.11375pt x 950.55125pt>
+[182] [183] [184] [185] [186] [187]
+<Figures/the_cs_RelationMap.png, id=6457, 1101.11375pt x 950.55125pt>
 File: Figures/the_cs_RelationMap.png Graphic file (type png)
 <use Figures/the_cs_RelationMap.png>
 Package pdftex.def Info: Figures/the_cs_RelationMap.png  used on input line 591
@@ -1725,13 +1724,13 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 591--592
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[182] [183 <./Figures/the_cs_RelationMap.png>]
+[188] [189 <./Figures/the_cs_RelationMap.png>]
 Overfull \hbox (3.55138pt too wide) in paragraph at lines 627--628
 []\OT1/ptm/m/n/10 We can fur-ther-more in-spect with the \OT1/pcr/m/n/10 showCr
 iteriaCorrelationTable()
  []
 
-<Figures/the_cs_3DCorrelation.pdf, id=6458, 433.62pt x 433.62pt>
+<Figures/the_cs_3DCorrelation.pdf, id=6485, 433.62pt x 433.62pt>
 File: Figures/the_cs_3DCorrelation.pdf Graphic file (type pdf)
 <use Figures/the_cs_3DCorrelation.pdf>
 Package pdftex.def Info: Figures/the_cs_3DCorrelation.pdf  used on input line 6
@@ -1740,8 +1739,8 @@ Package pdftex.def Info: Figures/the_cs_3DCorrelation.pdf  used on input line 6
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[184] [185 <./Figures/the_cs_3DCorrelation.pdf>]
-<Figures/theHeatmap.png, id=6515, 841.1425pt x 971.63pt>
+[190] [191 <./Figures/the_cs_3DCorrelation.pdf>]
+<Figures/theHeatmap.png, id=6543, 841.1425pt x 971.63pt>
 File: Figures/theHeatmap.png Graphic file (type png)
 <use Figures/theHeatmap.png>
 Package pdftex.def Info: Figures/theHeatmap.png  used on input line 691.
@@ -1750,8 +1749,8 @@ Package pdftex.def Info: Figures/theHeatmap.png  used on input line 691.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[186] [187 <./Figures/theHeatmap.png>]
-(./02-mainMatters/13-chapterBestCSDpts.bbl (./book.brf))) [188
+[192] [193 <./Figures/theHeatmap.png>]
+(./02-mainMatters/13-chapterBestCSDpts.bbl (./book.brf))) [194
 
 ]
 \openout2 = `02-mainMatters/14-chapterBestStudents.aux'.
@@ -1765,7 +1764,7 @@ Overfull \hbox (14.33197pt too wide) in paragraph at lines 11--12
 y \OT1/ptm/m/n/10 of \OT1/pcr/m/n/10 PerformanceTableau
  []
 
-[189
+[195
 
 
 
@@ -1773,7 +1772,7 @@ y \OT1/ptm/m/n/10 of \OT1/pcr/m/n/10 PerformanceTableau
 
 
 ]
-<Figures/ratingData.png, id=6567, 657.45625pt x 919.435pt>
+<Figures/ratingData.png, id=6594, 657.45625pt x 919.435pt>
 File: Figures/ratingData.png Graphic file (type png)
 <use Figures/ratingData.png>
 Package pdftex.def Info: Figures/ratingData.png  used on input line 33.
@@ -1786,8 +1785,8 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 33--34
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[190] [191 <./Figures/ratingData.png>]
-<Figures/spiegelCriteria.png, id=6596, 1157.32375pt x 463.7325pt>
+[196] [197 <./Figures/ratingData.png>]
+<Figures/spiegelCriteria.png, id=6623, 1157.32375pt x 463.7325pt>
 File: Figures/spiegelCriteria.png Graphic file (type png)
 <use Figures/spiegelCriteria.png>
 Package pdftex.def Info: Figures/spiegelCriteria.png  used on input line 50.
@@ -1797,15 +1796,15 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 50--51
 [][] 
  []
 
-[192
+[198
 
- <./Figures/spiegelCriteria.png>] [193]
-<Figures/score9Limits.png, id=6637, 552.0625pt x 528.97626pt>
+ <./Figures/spiegelCriteria.png>] [199]
+<Figures/score9Limits.png, id=6664, 552.0625pt x 528.97626pt>
 File: Figures/score9Limits.png Graphic file (type png)
 <use Figures/score9Limits.png>
 Package pdftex.def Info: Figures/score9Limits.png  used on input line 96.
 (pdftex.def)             Requested size: 199.16928pt x 190.84294pt.
-<Figures/nineTilingResult.png, id=6638, 494.84875pt x 888.31876pt>
+<Figures/nineTilingResult.png, id=6665, 494.84875pt x 888.31876pt>
 File: Figures/nineTilingResult.png Graphic file (type png)
 <use Figures/nineTilingResult.png>
 Package pdftex.def Info: Figures/nineTilingResult.png  used on input line 119.
@@ -1817,8 +1816,8 @@ LaTeX Warning: Float too large for page by 35.23218pt on input line 122.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[194 <./Figures/score9Limits.png>] [195 <./Figures/nineTilingResult.png>]
-<Figures/ratingResult.pdf, id=6665, 416.55624pt x 939.51pt>
+[200 <./Figures/score9Limits.png>] [201 <./Figures/nineTilingResult.png>]
+<Figures/ratingResult.pdf, id=6692, 416.55624pt x 939.51pt>
 File: Figures/ratingResult.pdf Graphic file (type pdf)
 <use Figures/ratingResult.pdf>
 Package pdftex.def Info: Figures/ratingResult.pdf  used on input line 159.
@@ -1839,10 +1838,10 @@ Overfull \hbox (21.77136pt too wide) in paragraph at lines 185--186
  the \OT1/pcr/m/n/10 RankingsFusionDigraph
  []
 
-[196
+[202
 
-] [197 <./Figures/ratingResult.pdf>]
-<Figures/fusionResult.png, id=6731, 475.7775pt x 2573.615pt>
+] [203 <./Figures/ratingResult.pdf>]
+<Figures/fusionResult.png, id=6758, 475.7775pt x 2573.615pt>
 File: Figures/fusionResult.png Graphic file (type png)
 <use Figures/fusionResult.png>
 Package pdftex.def Info: Figures/fusionResult.png  used on input line 206.
@@ -1854,8 +1853,8 @@ LaTeX Warning: Float too large for page by 226.09029pt on input line 208.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[198] [199] [200]
-<Figures/nineTilingOrdering.png, id=6858, 686.565pt x 610.28pt>
+[204] [205] [206]
+<Figures/nineTilingOrdering.png, id=6886, 686.565pt x 610.28pt>
 File: Figures/nineTilingOrdering.png Graphic file (type png)
 <use Figures/nineTilingOrdering.png>
 Package pdftex.def Info: Figures/nineTilingOrdering.png  used on input line 330
@@ -1875,7 +1874,7 @@ Overfull \hbox (6.23155pt too wide) in paragraph at lines 334--335
 w-ing of the \OT1/pcr/m/n/10 LearnedQuantilesRatingDigraph
  []
 
-<Figures/nineTilingDrawing.png, id=6859, 943.525pt x 934.49126pt>
+<Figures/nineTilingDrawing.png, id=6887, 943.525pt x 934.49126pt>
 File: Figures/nineTilingDrawing.png Graphic file (type png)
 <use Figures/nineTilingDrawing.png>
 Package pdftex.def Info: Figures/nineTilingDrawing.png  used on input line 345.
@@ -1889,8 +1888,8 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 345--346
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[201] [202 <./Figures/fusionResult.png>] [203 <./Figures/nineTilingOrdering.png
-> <./Figures/nineTilingDrawing.png>] [204
+[207] [208 <./Figures/fusionResult.png>] [209 <./Figures/nineTilingOrdering.png
+> <./Figures/nineTilingDrawing.png>] [210
 
 ]
 (./02-mainMatters/14-chapterBestStudents.bbl (./book.brf)
@@ -1935,12 +1934,12 @@ Overfull \hbox (35.60278pt too wide) in paragraph at lines 21--21
 []000037494731$[][]
  []
 
-)) [205
+)) [211
 
 ]
 \openout2 = `02-mainMatters/15-chapterExercises.aux'.
 
- (./02-mainMatters/15-chapterExercises.tex [206
+ (./02-mainMatters/15-chapterExercises.tex [212
 
 
 
@@ -1952,8 +1951,8 @@ Chapter 15.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[207]
-<Figures/moviesRatingData.png, id=6931, 869.2475pt x 598.235pt>
+[213]
+<Figures/moviesRatingData.png, id=6958, 869.2475pt x 598.235pt>
 File: Figures/moviesRatingData.png Graphic file (type png)
 <use Figures/moviesRatingData.png>
 Package pdftex.def Info: Figures/moviesRatingData.png  used on input line 65.
@@ -1962,30 +1961,30 @@ Package pdftex.def Info: Figures/moviesRatingData.png  used on input line 65.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[208] [209 <./Figures/moviesRatingData.png>] [210]
+[214] [215 <./Figures/moviesRatingData.png>] [216]
 Overfull \hbox (27.37175pt too wide) in paragraph at lines 160--161
 \OT1/ptm/m/n/10 Use the \OT1/pcr/m/n/10 RandomAcademicPerformanceTableau \OT1/p
 tm/m/n/10 class[] from the \OT1/pcr/m/n/10 randomPerfTab
  []
 
-[211] (./02-mainMatters/15-chapterExercises.bbl (./book.brf))) [212]
+[217] (./02-mainMatters/15-chapterExercises.bbl (./book.brf))) [218]
 \openout2 = `02-mainMatters/part4.aux'.
 
 
-(./02-mainMatters/part4.tex [213
+(./02-mainMatters/part4.tex [219
 
 
 
 
 
 
-] [214])
+] [220])
 \openout2 = `02-mainMatters/16-chapterCorrelation.aux'.
 
 
 (./02-mainMatters/16-chapterCorrelation.tex
 Chapter 16.
-[215
+[221
 
 
 
@@ -1993,13 +1992,13 @@ Chapter 16.
 
 
 ]
-<Figures/16-1-graffiti07_1.png, id=7040, 767.86874pt x 783.92876pt>
+<Figures/16-1-graffiti07_1.png, id=7067, 767.86874pt x 783.92876pt>
 File: Figures/16-1-graffiti07_1.png Graphic file (type png)
 <use Figures/16-1-graffiti07_1.png>
 Package pdftex.def Info: Figures/16-1-graffiti07_1.png  used on input line 26.
 (pdftex.def)             Requested size: 312.9803pt x 319.53487pt.
- [216 <./Figures/16-1-graffiti07_1.png>] [217]
-<Figures/16-2-graffiti07_2.png, id=7101, 925.4575pt x 966.61125pt>
+ [222 <./Figures/16-1-graffiti07_1.png>] [223]
+<Figures/16-2-graffiti07_2.png, id=7128, 925.4575pt x 966.61125pt>
 File: Figures/16-2-graffiti07_2.png Graphic file (type png)
 <use Figures/16-2-graffiti07_2.png>
 Package pdftex.def Info: Figures/16-2-graffiti07_2.png  used on input line 90.
@@ -2008,19 +2007,19 @@ Package pdftex.def Info: Figures/16-2-graffiti07_2.png  used on input line 90.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[218] [219 <./Figures/16-2-graffiti07_2.png>] [220] [221]
+[224] [225 <./Figures/16-2-graffiti07_2.png>] [226] [227]
 
-LaTeX Warning: Hyper reference `eq:6.4' on page 222 undefined on input line 210
+LaTeX Warning: Hyper reference `eq:6.4' on page 228 undefined on input line 210
 .
 
 
-LaTeX Warning: Reference `eq:6.4' on page 222 undefined on input line 210.
+LaTeX Warning: Reference `eq:6.4' on page 228 undefined on input line 210.
 
 
-LaTeX Warning: Reference `eq:6.4' on page 222 undefined on input line 210.
+LaTeX Warning: Reference `eq:6.4' on page 228 undefined on input line 210.
 
-[222] [223]
-<Figures/16-3-correlationTable.png, id=7277, 847.165pt x 355.3275pt>
+[228] [229]
+<Figures/16-3-correlationTable.png, id=7305, 847.165pt x 355.3275pt>
 File: Figures/16-3-correlationTable.png Graphic file (type png)
 <use Figures/16-3-correlationTable.png>
 Package pdftex.def Info: Figures/16-3-correlationTable.png  used on input line 
@@ -2031,8 +2030,8 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 320--321
 [][] 
  []
 
-[224]
-<Figures/16-4-correlationPCA.pdf, id=7308, 433.62pt x 433.62pt>
+[230]
+<Figures/16-4-correlationPCA.pdf, id=7335, 433.62pt x 433.62pt>
 File: Figures/16-4-correlationPCA.pdf Graphic file (type pdf)
 <use Figures/16-4-correlationPCA.pdf>
 Package pdftex.def Info: Figures/16-4-correlationPCA.pdf  used on input line 33
@@ -2042,8 +2041,8 @@ Package pdftex.def Info: Figures/16-4-correlationPCA.pdf  used on input line 33
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[225 <./Figures/16-3-correlationTable.png>]
-<Figures/16-5-asymmetricPart.png, id=7320, 1210.5225pt x 600.2425pt>
+[231 <./Figures/16-3-correlationTable.png>]
+<Figures/16-5-asymmetricPart.png, id=7347, 1210.5225pt x 600.2425pt>
 File: Figures/16-5-asymmetricPart.png Graphic file (type png)
 <use Figures/16-5-asymmetricPart.png>
 Package pdftex.def Info: Figures/16-5-asymmetricPart.png  used on input line 35
@@ -2057,8 +2056,8 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 354--355
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[226 <./Figures/16-4-correlationPCA.pdf>]
-<Figures/16-6-symmetricPart.png, id=7341, 1209.51875pt x 602.25pt>
+[232 <./Figures/16-4-correlationPCA.pdf>]
+<Figures/16-6-symmetricPart.png, id=7368, 1209.51875pt x 602.25pt>
 File: Figures/16-6-symmetricPart.png Graphic file (type png)
 <use Figures/16-6-symmetricPart.png>
 Package pdftex.def Info: Figures/16-6-symmetricPart.png  used on input line 369
@@ -2069,14 +2068,14 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 369--370
 [][] 
  []
 
-[227 <./Figures/16-5-asymmetricPart.png> <./Figures/16-6-symmetricPart.png>]
-[228] (./02-mainMatters/16-chapterCorrelation.bbl (./book.brf))) [229
+[233 <./Figures/16-5-asymmetricPart.png> <./Figures/16-6-symmetricPart.png>]
+[234] (./02-mainMatters/16-chapterCorrelation.bbl (./book.brf))) [235
 
 ]
 \openout2 = `02-mainMatters/17-chapterKernels.aux'.
 
 
-(./02-mainMatters/17-chapterKernels.tex [230
+(./02-mainMatters/17-chapterKernels.tex [236
 
 
 
@@ -2086,37 +2085,37 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 369--370
 ]
 Chapter 17.
 
-LaTeX Warning: Hyper reference `fig:21.6' on page 231 undefined on input line 1
+LaTeX Warning: Hyper reference `fig:21.6' on page 237 undefined on input line 1
 3.
 
 
-LaTeX Warning: Reference `fig:21.6' on page 231 undefined on input line 13.
+LaTeX Warning: Reference `fig:21.6' on page 237 undefined on input line 13.
 
 
-LaTeX Warning: Reference `fig:21.6' on page 231 undefined on input line 13.
+LaTeX Warning: Reference `fig:21.6' on page 237 undefined on input line 13.
 
-[231]
-<Figures/17-1-random3RegularGraph-mis.pdf, id=7396, 384.43625pt x 482.80376pt>
+[237]
+<Figures/17-1-random3RegularGraph-mis.pdf, id=7424, 384.43625pt x 482.80376pt>
 File: Figures/17-1-random3RegularGraph-mis.pdf Graphic file (type pdf)
 <use Figures/17-1-random3RegularGraph-mis.pdf>
 Package pdftex.def Info: Figures/17-1-random3RegularGraph-mis.pdf  used on inpu
 t line 36.
 (pdftex.def)             Requested size: 170.71652pt x 214.40129pt.
- [232 <./Figures/17-1-random3RegularGraph-mis.pdf>] [233] [234] [235]
-[236]
-<Figures/17-2-dualChordlessCircuit.pdf, id=7609, 323.2075pt x 331.2375pt>
+ [238 <./Figures/17-1-random3RegularGraph-mis.pdf>] [239] [240] [241]
+[242]
+<Figures/17-2-dualChordlessCircuit.pdf, id=7637, 323.2075pt x 331.2375pt>
 File: Figures/17-2-dualChordlessCircuit.pdf Graphic file (type pdf)
 <use Figures/17-2-dualChordlessCircuit.pdf>
 Package pdftex.def Info: Figures/17-2-dualChordlessCircuit.pdf  used on input l
 ine 228.
 (pdftex.def)             Requested size: 199.16928pt x 204.11671pt.
- [237 <./Figures/17-2-dualChordlessCircuit.pdf>]
-<Figures/17-3-dual-c6.pdf, id=7660, 323.2075pt x 331.2375pt>
+ [243 <./Figures/17-2-dualChordlessCircuit.pdf>]
+<Figures/17-3-dual-c6.pdf, id=7687, 323.2075pt x 331.2375pt>
 File: Figures/17-3-dual-c6.pdf Graphic file (type pdf)
 <use Figures/17-3-dual-c6.pdf>
 Package pdftex.def Info: Figures/17-3-dual-c6.pdf  used on input line 251.
 (pdftex.def)             Requested size: 170.71652pt x 174.95862pt.
-<Figures/17-3-converse-c6.pdf, id=7661, 323.2075pt x 331.2375pt>
+<Figures/17-3-converse-c6.pdf, id=7688, 323.2075pt x 331.2375pt>
 File: Figures/17-3-converse-c6.pdf Graphic file (type pdf)
 <use Figures/17-3-converse-c6.pdf>
 Package pdftex.def Info: Figures/17-3-converse-c6.pdf  used on input line 252.
@@ -2126,38 +2125,38 @@ Overfull \hbox (8.53581pt too wide) in paragraph at lines 250--253
 [] [] 
  []
 
-[238 <./Figures/17-3-dual-c6.pdf> <./Figures/17-3-converse-c6.pdf
+[244 <./Figures/17-3-dual-c6.pdf> <./Figures/17-3-converse-c6.pdf
 
 pdfTeX warning: pdflatex (file ./Figures/17-3-converse-c6.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-<Figures/17-4-randomLaterality.pdf, id=7721, 299.1175pt x 530.98375pt>
+<Figures/17-4-randomLaterality.pdf, id=7748, 299.1175pt x 530.98375pt>
 File: Figures/17-4-randomLaterality.pdf Graphic file (type pdf)
 <use Figures/17-4-randomLaterality.pdf>
 Package pdftex.def Info: Figures/17-4-randomLaterality.pdf  used on input line 
 277.
 (pdftex.def)             Requested size: 142.26378pt x 252.54398pt.
- [239 <./Figures/17-4-randomLaterality.pdf>]
+ [245 <./Figures/17-4-randomLaterality.pdf>]
 Overfull \hbox (4.34026pt too wide) in paragraph at lines 334--335
 []\OT1/ptm/m/n/10 Among the six MISs con-tained in ran-dom di-graph \OT1/pcr/m/
 n/10 rd \OT1/ptm/m/n/10 (see Lines 3-8 in List. [][]17.11[][][][][])
  []
 
-[240]
-<Figures/17-5-orientedLaterality.pdf, id=7815, 299.1175pt x 455.7025pt>
+[246]
+<Figures/17-5-orientedLaterality.pdf, id=7842, 299.1175pt x 455.7025pt>
 File: Figures/17-5-orientedLaterality.pdf Graphic file (type pdf)
 <use Figures/17-5-orientedLaterality.pdf>
 Package pdftex.def Info: Figures/17-5-orientedLaterality.pdf  used on input lin
 e 347.
 (pdftex.def)             Requested size: 170.71652pt x 260.08688pt.
- [241 <./Figures/17-5-orientedLaterality.pdf>]
-<Figures/17-6-randomOutranking.png, id=7854, 945.5325pt x 389.455pt>
+ [247 <./Figures/17-5-orientedLaterality.pdf>]
+<Figures/17-6-randomOutranking.png, id=7882, 945.5325pt x 389.455pt>
 File: Figures/17-6-randomOutranking.png Graphic file (type png)
 <use Figures/17-6-randomOutranking.png>
 Package pdftex.def Info: Figures/17-6-randomOutranking.png  used on input line 
 375.
 (pdftex.def)             Requested size: 284.52756pt x 117.19395pt.
-<Figures/17-7-tutOutranking.pdf, id=7857, 393.47pt x 530.98375pt>
+<Figures/17-7-tutOutranking.pdf, id=7885, 393.47pt x 530.98375pt>
 File: Figures/17-7-tutOutranking.pdf Graphic file (type pdf)
 <use Figures/17-7-tutOutranking.pdf>
 Package pdftex.def Info: Figures/17-7-tutOutranking.pdf  used on input line 391
@@ -2167,9 +2166,9 @@ Package pdftex.def Info: Figures/17-7-tutOutranking.pdf  used on input line 391
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[242 <./Figures/17-6-randomOutranking.png>] [243 <./Figures/17-7-tutOutranking.
+[248 <./Figures/17-6-randomOutranking.png>] [249 <./Figures/17-7-tutOutranking.
 pdf>]
-<Figures/17-8-bestWorstOrientation.pdf, id=7935, 361.35pt x 380.42125pt>
+<Figures/17-8-bestWorstOrientation.pdf, id=7962, 361.35pt x 380.42125pt>
 File: Figures/17-8-bestWorstOrientation.pdf Graphic file (type pdf)
 <use Figures/17-8-bestWorstOrientation.pdf>
 Package pdftex.def Info: Figures/17-8-bestWorstOrientation.pdf  used on input l
@@ -2179,7 +2178,7 @@ ine 451.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figures/17-9-outRankingResult.png, id=7937, 850.17625pt x 486.81876pt>
+<Figures/17-9-outRankingResult.png, id=7964, 850.17625pt x 486.81876pt>
 File: Figures/17-9-outRankingResult.png Graphic file (type png)
 <use Figures/17-9-outRankingResult.png>
 Package pdftex.def Info: Figures/17-9-outRankingResult.png  used on input line 
@@ -2188,18 +2187,18 @@ Package pdftex.def Info: Figures/17-9-outRankingResult.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[244] [245 <./Figures/17-8-bestWorstOrientation.pdf> <./Figures/17-9-outRanking
-Result.png>] [246] [247] [248] [249]
-<Figures/17-10-k1restricted.png, id=8160, 644.4075pt x 375.4025pt>
+[250] [251 <./Figures/17-8-bestWorstOrientation.pdf> <./Figures/17-9-outRanking
+Result.png>] [252] [253] [254] [255]
+<Figures/17-10-k1restricted.png, id=8187, 644.4075pt x 375.4025pt>
 File: Figures/17-10-k1restricted.png Graphic file (type png)
 <use Figures/17-10-k1restricted.png>
 Package pdftex.def Info: Figures/17-10-k1restricted.png  used on input line 674
 .
 (pdftex.def)             Requested size: 199.16928pt x 116.02415pt.
- [250 <./Figures/17-10-k1restricted.png>]
+ [256 <./Figures/17-10-k1restricted.png>]
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <8.5> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 679.
-<Figures/17-11-k2restricted.png, id=8201, 648.4225pt x 372.39125pt>
+<Figures/17-11-k2restricted.png, id=8228, 648.4225pt x 372.39125pt>
 File: Figures/17-11-k2restricted.png Graphic file (type png)
 <use Figures/17-11-k2restricted.png>
 Package pdftex.def Info: Figures/17-11-k2restricted.png  used on input line 719
@@ -2214,8 +2213,8 @@ Overfull \hbox (13.50609pt too wide) in paragraph at lines 725--726
 [][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[251]
-<Figures/17-12-bestWorstOrientation.pdf, id=8241, 361.35pt x 380.42125pt>
+[257]
+<Figures/17-12-bestWorstOrientation.pdf, id=8268, 361.35pt x 380.42125pt>
 File: Figures/17-12-bestWorstOrientation.pdf Graphic file (type pdf)
 <use Figures/17-12-bestWorstOrientation.pdf>
 Package pdftex.def Info: Figures/17-12-bestWorstOrientation.pdf  used on input 
@@ -2225,27 +2224,27 @@ line 752.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[252 <./Figures/17-11-k2restricted.png>] [253 <./Figures/17-12-bestWorstOrienta
+[258 <./Figures/17-11-k2restricted.png>] [259 <./Figures/17-12-bestWorstOrienta
 tion.pdf>]
 Overfull \hbox (4.22908pt too wide) in paragraph at lines 798--799
 \OT1/ptm/m/n/10 Notice that the sta-ble low vec-tor char-ac-terises the \OT1/pt
 m/m/it/10 neg-a-tive mem-ber-ship \OT1/ptm/m/n/10 part, whereas,
  []
 
-[254] [255] (./02-mainMatters/17-chapterKernels.bbl (./book.brf)
+[260] [261] (./02-mainMatters/17-chapterKernels.bbl (./book.brf)
 Underfull \hbox (badness 10000) in paragraph at lines 49--49
 [][]$\OT1/pcr/m/n/10 https : / / cs . uwaterloo . ca / journals / JIS / VOL11 /
  Marichal /
  []
 
-)) [256
+)) [262
 
 ]
 \openout2 = `02-mainMatters/18-chapterConfidentOutrankings.aux'.
 
  (./02-mainMatters/18-chapterConfidentOutrankings.tex
 Chapter 18.
-[257
+[263
 
 
 
@@ -2253,7 +2252,7 @@ Chapter 18.
 
 
 ]
-<Figures/18-1-weightDistributions.png, id=8391, 738.76pt x 669.50125pt>
+<Figures/18-1-weightDistributions.png, id=8419, 738.76pt x 669.50125pt>
 File: Figures/18-1-weightDistributions.png Graphic file (type png)
 <use Figures/18-1-weightDistributions.png>
 Package pdftex.def Info: Figures/18-1-weightDistributions.png  used on input li
@@ -2264,18 +2263,18 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 24--25
 [][] 
  []
 
-[258 <./Figures/18-1-weightDistributions.png>]
+[264 <./Figures/18-1-weightDistributions.png>]
 
 pdfTeX warning: pdflatex (file ./Figures/18-2-rCharacteristic.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/18-2-rCharacteristic.pdf, id=8403, 845.1575pt x 597.23125pt>
+<Figures/18-2-rCharacteristic.pdf, id=8431, 845.1575pt x 597.23125pt>
 File: Figures/18-2-rCharacteristic.pdf Graphic file (type pdf)
 <use Figures/18-2-rCharacteristic.pdf>
 Package pdftex.def Info: Figures/18-2-rCharacteristic.pdf  used on input line 4
 6.
 (pdftex.def)             Requested size: 312.9803pt x 221.17258pt.
-[259 <./Figures/18-2-rCharacteristic.pdf>]
-<Figures/simulLikelihood.pdf, id=8426, 361.35pt x 252.945pt>
+[265 <./Figures/18-2-rCharacteristic.pdf>]
+<Figures/simulLikelihood.pdf, id=8453, 361.35pt x 252.945pt>
 File: Figures/simulLikelihood.pdf Graphic file (type pdf)
 <use Figures/simulLikelihood.pdf>
 Package pdftex.def Info: Figures/simulLikelihood.pdf  used on input line 74.
@@ -2288,8 +2287,8 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 74--75
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[260] [261 <./Figures/simulLikelihood.pdf>] [262]
-<Figures/confidentOutranking.png, id=8514, 383.4325pt x 428.60126pt>
+[266] [267 <./Figures/simulLikelihood.pdf>] [268]
+<Figures/confidentOutranking.png, id=8542, 383.4325pt x 428.60126pt>
 File: Figures/confidentOutranking.png Graphic file (type png)
 <use Figures/confidentOutranking.png>
 Package pdftex.def Info: Figures/confidentOutranking.png  used on input line 20
@@ -2299,8 +2298,8 @@ Package pdftex.def Info: Figures/confidentOutranking.png  used on input line 20
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[263] [264 <./Figures/confidentOutranking.png>] [265]
-(./02-mainMatters/18-chapterConfidentOutrankings.bbl (./book.brf))) [266
+[269] [270 <./Figures/confidentOutranking.png>] [271]
+(./02-mainMatters/18-chapterConfidentOutrankings.bbl (./book.brf))) [272
 
 ]
 \openout2 = `02-mainMatters/19-chapterRobustOutrankings.aux'.
@@ -2308,36 +2307,36 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (./02-mainMatters/19-chapterRobustOutrankings.tex
 Chapter 19.
-[267
+[273
 
 
 
 
 
 
-] [268]
+] [274]
 Overfull \hbox (14.60208pt too wide) in paragraph at lines 90--91
 \OT1/pcr/m/n/10 StabilityDenotation=True \OT1/ptm/m/n/10 flag []with the com-mo
 n \OT1/pcr/m/n/10 showRelationTable()
  []
 
-[269] [270] [271] [272] [273] [274] [275]
-<Figures/19-1-stdg.pdf, id=8933, 393.47pt x 380.42125pt>
+[275] [276] [277] [278] [279] [280] [281]
+<Figures/19-1-stdg.pdf, id=8961, 393.47pt x 380.42125pt>
 File: Figures/19-1-stdg.pdf Graphic file (type pdf)
 <use Figures/19-1-stdg.pdf>
 Package pdftex.def Info: Figures/19-1-stdg.pdf  used on input line 398.
 (pdftex.def)             Requested size: 176.57355pt x 170.71652pt.
-<Figures/19-1-robg.pdf, id=8934, 381.425pt x 455.7025pt>
+<Figures/19-1-robg.pdf, id=8962, 381.425pt x 455.7025pt>
 File: Figures/19-1-robg.pdf Graphic file (type pdf)
 <use Figures/19-1-robg.pdf>
 Package pdftex.def Info: Figures/19-1-robg.pdf  used on input line 399.
 (pdftex.def)             Requested size: 142.89433pt x 170.71652pt.
- [276 <./Figures/19-1-stdg.pdf> <./Figures/19-1-robg.pdf
+ [282 <./Figures/19-1-stdg.pdf> <./Figures/19-1-robg.pdf
 
 pdfTeX warning: pdflatex (file ./Figures/19-1-robg.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
 >]
-<Figures/19-2-robustHeatmap.png, id=9010, 743.77875pt x 489.83pt>
+<Figures/19-2-robustHeatmap.png, id=9037, 743.77875pt x 489.83pt>
 File: Figures/19-2-robustHeatmap.png Graphic file (type png)
 <use Figures/19-2-robustHeatmap.png>
 Package pdftex.def Info: Figures/19-2-robustHeatmap.png  used on input line 416
@@ -2348,12 +2347,12 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 416--417
 [][] 
  []
 
-[277 <./Figures/19-2-robustHeatmap.png>] [278] [279] [280]
+[283 <./Figures/19-2-robustHeatmap.png>] [284] [285] [286]
 File: Figures/19-1-stdg.pdf Graphic file (type pdf)
 <use Figures/19-1-stdg.pdf>
 Package pdftex.def Info: Figures/19-1-stdg.pdf  used on input line 577.
 (pdftex.def)             Requested size: 176.57355pt x 170.71652pt.
-<Figures/19-3-unopDigraph.pdf, id=9133, 341.275pt x 402.50375pt>
+<Figures/19-3-unopDigraph.pdf, id=9160, 341.275pt x 402.50375pt>
 File: Figures/19-3-unopDigraph.pdf Graphic file (type pdf)
 <use Figures/19-3-unopDigraph.pdf>
 Package pdftex.def Info: Figures/19-3-unopDigraph.pdf  used on input line 578.
@@ -2362,14 +2361,14 @@ Package pdftex.def Info: Figures/19-3-unopDigraph.pdf  used on input line 578.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[281] [282 <./Figures/19-3-unopDigraph.pdf>]
-(./02-mainMatters/19-chapterRobustOutrankings.bbl (./book.brf))) [283
+[287] [288 <./Figures/19-3-unopDigraph.pdf>]
+(./02-mainMatters/19-chapterRobustOutrankings.bbl (./book.brf))) [289
 
 ]
 \openout2 = `02-mainMatters/20-chapterTemperingPlurality.aux'.
 
 
-(./02-mainMatters/20-chapterTemperingPlurality.tex [284
+(./02-mainMatters/20-chapterTemperingPlurality.tex [290
 
 
 
@@ -2378,8 +2377,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 Chapter 20.
-[285] [286] [287]
-<Figures/20-1-unOpposedOutrankings.png, id=9318, 779.91376pt x 528.97626pt>
+[291] [292] [293]
+<Figures/20-1-unOpposedOutrankings.png, id=9345, 779.91376pt x 528.97626pt>
 File: Figures/20-1-unOpposedOutrankings.png Graphic file (type png)
 <use Figures/20-1-unOpposedOutrankings.png>
 Package pdftex.def Info: Figures/20-1-unOpposedOutrankings.png  used on input l
@@ -2393,14 +2392,14 @@ Overfull \hbox (8.53583pt too wide) in paragraph at lines 149--150
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[288] [289 <./Figures/20-1-unOpposedOutrankings.png>] [290]
+[294] [295 <./Figures/20-1-unOpposedOutrankings.png>] [296]
 Overfull \hbox (135.82983pt too wide) in paragraph at lines 255--256
 []\OT1/ptm/m/n/10 As a con-se-quence, a mul-ti-par-ti-san pri-mary se-lec-tion,
  com-puted with a \OT1/pcr/m/n/10 showBestChoiceRecommendation()
  []
 
-[291]
-<Figures/20-2-divGraph.pdf, id=9476, 299.1175pt x 455.7025pt>
+[297]
+<Figures/20-2-divGraph.pdf, id=9504, 299.1175pt x 455.7025pt>
 File: Figures/20-2-divGraph.pdf Graphic file (type pdf)
 <use Figures/20-2-divGraph.pdf>
 Package pdftex.def Info: Figures/20-2-divGraph.pdf  used on input line 312.
@@ -2415,20 +2414,20 @@ Overfull \hbox (41.4522pt too wide) in paragraph at lines 322--323
 [] we pro-vide a \OT1/pcr/m/n/10 BipolarApprovalVotingProfile
  []
 
-[292] [293 <./Figures/20-2-divGraph.pdf>]
+[298] [299 <./Figures/20-2-divGraph.pdf>]
 Overfull \hbox (5.0967pt too wide) in paragraph at lines 364--365
 \OT1/ptm/m/n/10 Let us de-note $\OML/ztmcm/m/it/10 A[]$ \OT1/ptm/m/n/10 the set
  of can-di-dates ap-proved by voter $\OML/ztmcm/m/it/10 v$\OT1/ptm/m/n/10 . In 
 the \OT1/pcr/m/n/10 approvalBallot
  []
 
-[294] [295] [296]
-<Figures/20-3-majMargAV.png, id=9667, 635.37375pt x 440.64626pt>
+[300] [301] [302]
+<Figures/20-3-majMargAV.png, id=9694, 635.37375pt x 440.64626pt>
 File: Figures/20-3-majMargAV.png Graphic file (type png)
 <use Figures/20-3-majMargAV.png>
 Package pdftex.def Info: Figures/20-3-majMargAV.png  used on input line 482.
 (pdftex.def)             Requested size: 312.9803pt x 217.0683pt.
- [297 <./Figures/20-3-majMargAV.png>]
+ [303 <./Figures/20-3-majMargAV.png>]
 Overfull \hbox (3.47209pt too wide) in paragraph at lines 524--525
 \OT1/pcr/m/n/10 BipolarApprovalVotingProfile \OT1/ptm/m/n/10 in-stance into a \
 OT1/pcr/m/n/10 PerformanceTableau
@@ -2440,33 +2439,33 @@ Overfull \hbox (61.50024pt too wide) in paragraph at lines 528--529
 r stan-dard \OT1/pcr/m/n/10 BipolarOutrankingDigraph
  []
 
-[298] [299] [300] [301] [302] [303]
-<Figures/20-4-majMargDAV.png, id=9917, 618.31pt x 435.6275pt>
+[304] [305] [306] [307] [308] [309]
+<Figures/20-4-majMargDAV.png, id=9944, 618.31pt x 435.6275pt>
 File: Figures/20-4-majMargDAV.png Graphic file (type png)
 <use Figures/20-4-majMargDAV.png>
 Package pdftex.def Info: Figures/20-4-majMargDAV.png  used on input line 753.
 (pdftex.def)             Requested size: 312.9803pt x 220.51195pt.
- [304 <./Figures/20-4-majMargDAV.png>]
-[305] (./02-mainMatters/20-chapterTemperingPlurality.bbl (./book.brf)))
-[306
+ [310 <./Figures/20-4-majMargDAV.png>]
+[311] (./02-mainMatters/20-chapterTemperingPlurality.bbl (./book.brf)))
+[312
 
 ]
 \openout2 = `02-mainMatters/part5.aux'.
 
- (./02-mainMatters/part5.tex [307
+ (./02-mainMatters/part5.tex [313
 
 
 
 
 
 
-] [308])
+] [314])
 \openout2 = `02-mainMatters/21-chapterGraphs.aux'.
 
 
 (./02-mainMatters/21-chapterGraphs.tex
 Chapter 21.
-[309
+[315
 
 
 
@@ -2474,20 +2473,20 @@ Chapter 21.
 
 
 ]
-<Figures/21-1-tutorialGraph.pdf, id=9997, 299.1175pt x 261.97874pt>
+<Figures/21-1-tutorialGraph.pdf, id=10025, 299.1175pt x 261.97874pt>
 File: Figures/21-1-tutorialGraph.pdf Graphic file (type pdf)
 <use Figures/21-1-tutorialGraph.pdf>
 Package pdftex.def Info: Figures/21-1-tutorialGraph.pdf  used on input line 94.
 
 (pdftex.def)             Requested size: 199.16928pt x 174.44153pt.
- [310] [311 <./Figures/21-1-tutorialGraph.pdf>] [312]
-<Figures/21-2-tutorial-3-coloring.pdf, id=10151, 299.1175pt x 261.97874pt>
+ [316] [317 <./Figures/21-1-tutorialGraph.pdf>] [318]
+<Figures/21-2-tutorial-3-coloring.pdf, id=10178, 299.1175pt x 261.97874pt>
 File: Figures/21-2-tutorial-3-coloring.pdf Graphic file (type pdf)
 <use Figures/21-2-tutorial-3-coloring.pdf>
 Package pdftex.def Info: Figures/21-2-tutorial-3-coloring.pdf  used on input li
 ne 193.
 (pdftex.def)             Requested size: 170.71652pt x 149.5213pt.
-<Figures/21-2-tutorial-2-coloring.pdf, id=10152, 299.1175pt x 261.97874pt>
+<Figures/21-2-tutorial-2-coloring.pdf, id=10179, 299.1175pt x 261.97874pt>
 File: Figures/21-2-tutorial-2-coloring.pdf Graphic file (type pdf)
 <use Figures/21-2-tutorial-2-coloring.pdf>
 Package pdftex.def Info: Figures/21-2-tutorial-2-coloring.pdf  used on input li
@@ -2503,7 +2502,7 @@ Overfull \hbox (8.53581pt too wide) in paragraph at lines 193--193
 [][] [][] 
  []
 
-[313pdfTeX warning (ext4): destination with the same identifier (name{figure.21
+[319pdfTeX warning (ext4): destination with the same identifier (name{figure.21
 .2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -2513,15 +2512,15 @@ s/21-2-tutorial-2-coloring.pdf
 
 pdfTeX warning: pdflatex (file ./Figures/21-2-tutorial-2-coloring.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
->] [314] [315]
-<Figures/21-3-maxMatchingcycleGraph.pdf, id=10322, 403.5075pt x 438.63875pt>
+>] [320] [321]
+<Figures/21-3-maxMatchingcycleGraph.pdf, id=10349, 403.5075pt x 438.63875pt>
 File: Figures/21-3-maxMatchingcycleGraph.pdf Graphic file (type pdf)
 <use Figures/21-3-maxMatchingcycleGraph.pdf>
 Package pdftex.def Info: Figures/21-3-maxMatchingcycleGraph.pdf  used on input 
 line 331.
 (pdftex.def)             Requested size: 199.16928pt x 216.50774pt.
- [316 <./Figures/21-3-maxMatchingcycleGraph.pdf>]
-<Figures/21-4-grid-15-15-ising.pdf, id=10385, 569.12625pt x 578.16pt>
+ [322 <./Figures/21-3-maxMatchingcycleGraph.pdf>]
+<Figures/21-4-grid-15-15-ising.pdf, id=10412, 569.12625pt x 578.16pt>
 File: Figures/21-4-grid-15-15-ising.pdf Graphic file (type pdf)
 <use Figures/21-4-grid-15-15-ising.pdf>
 Package pdftex.def Info: Figures/21-4-grid-15-15-ising.pdf  used on input line 
@@ -2535,17 +2534,17 @@ using normal \caption on input line 373.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[317] [318pdfTeX warning (ext4): destination with the same identifier (name{fig
+[323] [324pdfTeX warning (ext4): destination with the same identifier (name{fig
 ure.21.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.404 T
        he \texttt{checkSampling()} method \index{checkSampling@\texttt{check...
- <./Figures/21-4-grid-15-15-ising.pdf>] [319] [320]
+ <./Figures/21-4-grid-15-15-ising.pdf>] [325] [326]
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <8.5> not available
 (Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 493.
- [321]
-<Figures/21-5-c12.png, id=10611, 372.1905pt x 341.47575pt>
+ [327]
+<Figures/21-5-c12.png, id=10638, 372.1905pt x 341.47575pt>
 File: Figures/21-5-c12.png Graphic file (type png)
 <use Figures/21-5-c12.png>
 Package pdftex.def Info: Figures/21-5-c12.png  used on input line 580.
@@ -2554,7 +2553,7 @@ Package pdftex.def Info: Figures/21-5-c12.png  used on input line 580.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[322] [323 <./Figures/21-5-c12.png (PNG copy)>]
+[328] [329 <./Figures/21-5-c12.png (PNG copy)>]
 
 (./02-mainMatters/21-chapterGraphs.bbl (./book.brf)
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
@@ -2562,14 +2561,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
  Marichal /
  []
 
-)) [324
+)) [330
 
 ]
 \openout2 = `02-mainMatters/22-chapterTreeGraphs.aux'.
 
  (./02-mainMatters/22-chapterTreeGraphs.tex
 Chapter 22.
-<Figures/22-1-tutRandomTree.pdf, id=10663, 361.35pt x 505.89pt>
+<Figures/22-1-tutRandomTree.pdf, id=10691, 361.35pt x 505.89pt>
 File: Figures/22-1-tutRandomTree.pdf Graphic file (type pdf)
 <use Figures/22-1-tutRandomTree.pdf>
 Package pdftex.def Info: Figures/22-1-tutRandomTree.pdf  used on input line 36.
@@ -2578,21 +2577,21 @@ Package pdftex.def Info: Figures/22-1-tutRandomTree.pdf  used on input line 36.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[325
+[331
 
 
 
 
 
 
-] [326 <./Figures/22-1-tutRandomTree.pdf>]
-<Figures/22-2-tutPruefTree.pdf, id=10734, 431.6125pt x 388.45125pt>
+] [332 <./Figures/22-1-tutRandomTree.pdf>]
+<Figures/22-2-tutPruefTree.pdf, id=10761, 431.6125pt x 388.45125pt>
 File: Figures/22-2-tutPruefTree.pdf Graphic file (type pdf)
 <use Figures/22-2-tutPruefTree.pdf>
 Package pdftex.def Info: Figures/22-2-tutPruefTree.pdf  used on input line 76.
 (pdftex.def)             Requested size: 199.16928pt x 179.25282pt.
- [327 <./Figures/22-2-tutPruefTree.pdf>]
-<Figures/22-3-test62.pdf, id=10785, 299.1175pt x 348.30125pt>
+ [333 <./Figures/22-2-tutPruefTree.pdf>]
+<Figures/22-3-test62.pdf, id=10813, 299.1175pt x 348.30125pt>
 File: Figures/22-3-test62.pdf Graphic file (type pdf)
 <use Figures/22-3-test62.pdf>
 Package pdftex.def Info: Figures/22-3-test62.pdf  used on input line 118.
@@ -2601,18 +2600,18 @@ Package pdftex.def Info: Figures/22-3-test62.pdf  used on input line 118.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[328]
-<Figures/22-4-rootedTree.pdf, id=10819, 279.0425pt x 303.1325pt>
+[334]
+<Figures/22-4-rootedTree.pdf, id=10846, 279.0425pt x 303.1325pt>
 File: Figures/22-4-rootedTree.pdf Graphic file (type pdf)
 <use Figures/22-4-rootedTree.pdf>
 Package pdftex.def Info: Figures/22-4-rootedTree.pdf  used on input line 143.
 (pdftex.def)             Requested size: 170.71652pt x 185.46098pt.
- [329 <./Figures/22-3-test62.pdf> <./Figures/22-4-rootedTree.pdf
+ [335 <./Figures/22-3-test62.pdf> <./Figures/22-4-rootedTree.pdf
 
 pdfTeX warning: pdflatex (file ./Figures/22-4-rootedTree.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]
-<Figures/22-5-randomSpanningTree.pdf, id=10878, 326.21875pt x 322.20375pt>
+<Figures/22-5-randomSpanningTree.pdf, id=10905, 326.21875pt x 322.20375pt>
 File: Figures/22-5-randomSpanningTree.pdf Graphic file (type pdf)
 <use Figures/22-5-randomSpanningTree.pdf>
 Package pdftex.def Info: Figures/22-5-randomSpanningTree.pdf  used on input lin
@@ -2622,8 +2621,8 @@ e 185.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[330]
-<Figures/22-6-spanningForest.pdf, id=10924, 512.91624pt x 447.6725pt>
+[336]
+<Figures/22-6-spanningForest.pdf, id=10951, 512.91624pt x 447.6725pt>
 File: Figures/22-6-spanningForest.pdf Graphic file (type pdf)
 <use Figures/22-6-spanningForest.pdf>
 Package pdftex.def Info: Figures/22-6-spanningForest.pdf  used on input line 21
@@ -2633,9 +2632,9 @@ Package pdftex.def Info: Figures/22-6-spanningForest.pdf  used on input line 21
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[331 <./Figures/22-5-randomSpanningTree.pdf>] [332 <./Figures/22-6-spanningFore
+[337 <./Figures/22-5-randomSpanningTree.pdf>] [338 <./Figures/22-6-spanningFore
 st.pdf>]
-<Figures/22-7-bestDeterminedSpanningTree.pdf, id=11028, 299.1175pt x 282.05376p
+<Figures/22-7-bestDeterminedSpanningTree.pdf, id=11056, 299.1175pt x 282.05376p
 t>
 File: Figures/22-7-bestDeterminedSpanningTree.pdf Graphic file (type pdf)
 <use Figures/22-7-bestDeterminedSpanningTree.pdf>
@@ -2646,14 +2645,14 @@ nput line 289.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[333] [334 <./Figures/22-7-bestDeterminedSpanningTree.pdf>]
-(./02-mainMatters/22-chapterTreeGraphs.bbl (./book.brf))) [335
+[339] [340 <./Figures/22-7-bestDeterminedSpanningTree.pdf>]
+(./02-mainMatters/22-chapterTreeGraphs.bbl (./book.brf))) [341
 
 ]
 \openout2 = `02-mainMatters/23-chapterPerfectGraphs.aux'.
 
 
-(./02-mainMatters/23-chapterPerfectGraphs.tex [336
+(./02-mainMatters/23-chapterPerfectGraphs.tex [342
 
 
 
@@ -2662,8 +2661,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 Chapter 23.
-[337]
-<Figures/23-1-randomSplitGraph.pdf, id=11124, 299.1175pt x 358.33875pt>
+[343]
+<Figures/23-1-randomSplitGraph.pdf, id=11152, 299.1175pt x 358.33875pt>
 File: Figures/23-1-randomSplitGraph.pdf Graphic file (type pdf)
 <use Figures/23-1-randomSplitGraph.pdf>
 Package pdftex.def Info: Figures/23-1-randomSplitGraph.pdf  used on input line 
@@ -2673,8 +2672,8 @@ Package pdftex.def Info: Figures/23-1-randomSplitGraph.pdf  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[338] [339 <./Figures/23-1-randomSplitGraph.pdf>]
-<Figures/23-2-berge1.pdf, id=11226, 299.1175pt x 240.9pt>
+[344] [345 <./Figures/23-1-randomSplitGraph.pdf>]
+<Figures/23-2-berge1.pdf, id=11253, 299.1175pt x 240.9pt>
 File: Figures/23-2-berge1.pdf Graphic file (type pdf)
 <use Figures/23-2-berge1.pdf>
 Package pdftex.def Info: Figures/23-2-berge1.pdf  used on input line 147.
@@ -2683,8 +2682,8 @@ Package pdftex.def Info: Figures/23-2-berge1.pdf  used on input line 147.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[340]
-<Figures/23-3-berge2.pdf, id=11272, 299.1175pt x 240.9pt>
+[346]
+<Figures/23-3-berge2.pdf, id=11299, 299.1175pt x 240.9pt>
 File: Figures/23-3-berge2.pdf Graphic file (type pdf)
 <use Figures/23-3-berge2.pdf>
 Package pdftex.def Info: Figures/23-3-berge2.pdf  used on input line 190.
@@ -2693,8 +2692,8 @@ Package pdftex.def Info: Figures/23-3-berge2.pdf  used on input line 190.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[341 <./Figures/23-2-berge1.pdf>]
-<Figures/23-4-permutationGraph.pdf, id=11327, 299.1175pt x 266.9975pt>
+[347 <./Figures/23-2-berge1.pdf>]
+<Figures/23-4-permutationGraph.pdf, id=11354, 299.1175pt x 266.9975pt>
 File: Figures/23-4-permutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-4-permutationGraph.pdf>
 Package pdftex.def Info: Figures/23-4-permutationGraph.pdf  used on input line 
@@ -2704,26 +2703,26 @@ Package pdftex.def Info: Figures/23-4-permutationGraph.pdf  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[342 <./Figures/23-3-berge2.pdf>]
-<Figures/23-5-coloredPermutationGraph.pdf, id=11393, 299.1175pt x 266.9975pt>
+[348 <./Figures/23-3-berge2.pdf>]
+<Figures/23-5-coloredPermutationGraph.pdf, id=11420, 299.1175pt x 266.9975pt>
 File: Figures/23-5-coloredPermutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-5-coloredPermutationGraph.pdf>
 Package pdftex.def Info: Figures/23-5-coloredPermutationGraph.pdf  used on inpu
 t line 246.
 (pdftex.def)             Requested size: 170.71652pt x 152.3857pt.
- [343 <./Figures/23-4-permutationGraph.pdf> <./Figures/23-5-coloredPermutationG
+ [349 <./Figures/23-4-permutationGraph.pdf> <./Figures/23-5-coloredPermutationG
 raph.pdf
 
 pdfTeX warning: pdflatex (file ./Figures/23-5-coloredPermutationGraph.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/23-6-perm_permutationGraph.pdf, id=11455, 417.56pt x 251.94125pt>
+<Figures/23-6-perm_permutationGraph.pdf, id=11482, 417.56pt x 251.94125pt>
 File: Figures/23-6-perm_permutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-6-perm_permutationGraph.pdf>
 Package pdftex.def Info: Figures/23-6-perm_permutationGraph.pdf  used on input 
 line 262.
 (pdftex.def)             Requested size: 199.16928pt x 120.1731pt.
-<Figures/23-7-orientedPermGraph.pdf, id=11459, 204.765pt x 303.1325pt>
+<Figures/23-7-orientedPermGraph.pdf, id=11486, 204.765pt x 303.1325pt>
 File: Figures/23-7-orientedPermGraph.pdf Graphic file (type pdf)
 <use Figures/23-7-orientedPermGraph.pdf>
 Package pdftex.def Info: Figures/23-7-orientedPermGraph.pdf  used on input line
@@ -2733,15 +2732,15 @@ Package pdftex.def Info: Figures/23-7-orientedPermGraph.pdf  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[344 <./Figures/23-6-perm_permutationGraph.pdf>] [345 <./Figures/23-7-orientedP
+[350 <./Figures/23-6-perm_permutationGraph.pdf>] [351 <./Figures/23-7-orientedP
 ermGraph.pdf>]
-<Figures/23-8-randomGraph4335.pdf, id=11566, 299.1175pt x 319.1925pt>
+<Figures/23-8-randomGraph4335.pdf, id=11593, 299.1175pt x 319.1925pt>
 File: Figures/23-8-randomGraph4335.pdf Graphic file (type pdf)
 <use Figures/23-8-randomGraph4335.pdf>
 Package pdftex.def Info: Figures/23-8-randomGraph4335.pdf  used on input line 3
 37.
 (pdftex.def)             Requested size: 170.71652pt x 182.17538pt.
-<Figures/23-9-transOrientGraph.pdf, id=11572, 299.1175pt x 319.1925pt>
+<Figures/23-9-transOrientGraph.pdf, id=11599, 299.1175pt x 319.1925pt>
 File: Figures/23-9-transOrientGraph.pdf Graphic file (type pdf)
 <use Figures/23-9-transOrientGraph.pdf>
 Package pdftex.def Info: Figures/23-9-transOrientGraph.pdf  used on input line 
@@ -2751,8 +2750,8 @@ Package pdftex.def Info: Figures/23-9-transOrientGraph.pdf  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[346 <./Figures/23-8-randomGraph4335.pdf>]
-<Figures/23-10-transOrientDualGraph.pdf, id=11630, 403.5075pt x 280.04625pt>
+[352 <./Figures/23-8-randomGraph4335.pdf>]
+<Figures/23-10-transOrientDualGraph.pdf, id=11657, 403.5075pt x 280.04625pt>
 File: Figures/23-10-transOrientDualGraph.pdf Graphic file (type pdf)
 <use Figures/23-10-transOrientDualGraph.pdf>
 Package pdftex.def Info: Figures/23-10-transOrientDualGraph.pdf  used on input 
@@ -2762,14 +2761,14 @@ line 404.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[347 <./Figures/23-9-transOrientGraph.pdf>] [348 <./Figures/23-10-transOrientDu
+[353 <./Figures/23-9-transOrientGraph.pdf>] [354 <./Figures/23-10-transOrientDu
 alGraph.pdf>]
-<Figures/23-11-gtesta.pdf, id=11741, 299.1175pt x 316.18124pt>
+<Figures/23-11-gtesta.pdf, id=11768, 299.1175pt x 316.18124pt>
 File: Figures/23-11-gtesta.pdf Graphic file (type pdf)
 <use Figures/23-11-gtesta.pdf>
 Package pdftex.def Info: Figures/23-11-gtesta.pdf  used on input line 487.
 (pdftex.def)             Requested size: 170.71652pt x 180.45676pt.
-<Figures/23-11-gtestb.pdf, id=11742, 299.1175pt x 307.1475pt>
+<Figures/23-11-gtestb.pdf, id=11769, 299.1175pt x 307.1475pt>
 File: Figures/23-11-gtestb.pdf Graphic file (type pdf)
 <use Figures/23-11-gtestb.pdf>
 Package pdftex.def Info: Figures/23-11-gtestb.pdf  used on input line 488.
@@ -2782,41 +2781,41 @@ Overfull \hbox (8.53581pt too wide) in paragraph at lines 486--489
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[349] [350 <./Figures/23-11-gtesta.pdf> <./Figures/23-11-gtestb.pdf
+[355] [356 <./Figures/23-11-gtesta.pdf> <./Figures/23-11-gtestb.pdf
 
 pdfTeX warning: pdflatex (file ./Figures/23-11-gtestb.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
->] (./02-mainMatters/23-chapterPerfectGraphs.bbl (./book.brf))) [351
+>] (./02-mainMatters/23-chapterPerfectGraphs.bbl (./book.brf))) [357
 
-] [352
+] [358
 
 
 
 
 ]
-(./book.lol [353
+(./book.lol [359
 
 
-] [354] [355] [356] [357])
+] [360] [361] [362] [363])
 \tf@lol=\write7
 \openout7 = `book.lol'.
 
- [358] (./book.lof [359
+ [364] (./book.lof [365
 
 
-] [360]
-[361] [362] [363] [364])
+] [366]
+[367] [368] [369] [370])
 \tf@lof=\write8
 \openout8 = `book.lof'.
 
- [365] [366
+ [371] [372
 
 
 ] (./book.lot)
 \tf@lot=\write9
 \openout9 = `book.lot'.
 
- (./book.ind [367] [368
+ (./book.ind [373] [374
 
 
 ]
@@ -2824,7 +2823,7 @@ Overfull \hbox (23.5711pt too wide) in paragraph at lines 60--62
 []\OT1/pcr/m/n/8.5 computeTransitivelyOrientedDigraph() 
  []
 
-[369]
+[375]
 Overfull \hbox (18.47112pt too wide) in paragraph at lines 89--91
 []\OT1/pcr/m/n/8.5 export3DplotOfCriteriaCorrelation() 
  []
@@ -2834,7 +2833,7 @@ Overfull \hbox (3.17114pt too wide) in paragraph at lines 94--96
 []\OT1/pcr/m/n/8.5 ExtendedTriangularRandomVariable 
  []
 
-[370]
+[376]
 Overfull \hbox (28.6711pt too wide) in paragraph at lines 209--211
 []\OT1/pcr/m/n/8.5 Random3ObjectivesPerformanceTableau() 
  []
@@ -2864,12 +2863,12 @@ Overfull \hbox (3.17114pt too wide) in paragraph at lines 303--305
 []\OT1/pcr/m/n/8.5 StrongComponentsCollapsedDigraph 
  []
 
-[371]
+[377]
 Overfull \hbox (8.27113pt too wide) in paragraph at lines 325--327
 []\OT1/pcr/m/n/8.5 UnOpposedBipolarOutrankingDigraph 
  []
 
-[372]) (./book.aux (./01-frontMatters/dedic.aux) (./01-frontMatters/preface.aux
+[378]) (./book.aux (./01-frontMatters/dedic.aux) (./01-frontMatters/preface.aux
 ) (./02-mainMatters/00-chapterIntroduction.aux) (./02-mainMatters/part1.aux)
 (./02-mainMatters/01-chapterIntroDigraph3.aux)
 (./02-mainMatters/02-chapterDigraphs.aux)
@@ -2905,19 +2904,19 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: C18D87D54B4FB74378B530479F330A91;43694.
+(rerunfilecheck)             Checksum: 8E619FEC6CB72296DCA20499BE8C5A9D;43757.
 
 Package rerunfilecheck Warning: File `book.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
 
 Package rerunfilecheck Info: Checksums for `book.brf':
-(rerunfilecheck)             Before: 73EE96E49A149D4E0C04CFE6C7C381D1;6783
-(rerunfilecheck)             After:  D6A7D61645B5F07A238FD2A90ECE5D0C;6783.
+(rerunfilecheck)             Before: A106E6813BEA6D765590CD10DE0BFDF3;6784
+(rerunfilecheck)             After:  B83B068D3D65A08CC381FAFB707ADA84;6784.
  ) 
 Here is how much of TeX's memory you used:
- 24949 strings out of 478994
- 378895 string characters out of 5858184
- 1130467 words of memory out of 5000000
+ 24955 strings out of 478994
+ 378943 string characters out of 5858184
+ 1130484 words of memory out of 5000000
  34548 multiletter control sequences out of 15000+600000
  483998 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2944,10 +2943,10 @@ sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (386 pages, 6230058 bytes).
+Output written on book.pdf (392 pages, 6230413 bytes).
 PDF statistics:
- 14218 PDF objects out of 15390 (max. 8388607)
- 13066 compressed objects within 131 object streams
- 7145 named destinations out of 7423 (max. 500000)
+ 14246 PDF objects out of 15390 (max. 8388607)
+ 13088 compressed objects within 131 object streams
+ 7151 named destinations out of 7423 (max. 500000)
  2055 words of extra memory for PDF output out of 10000 (max. 10000000)
 
