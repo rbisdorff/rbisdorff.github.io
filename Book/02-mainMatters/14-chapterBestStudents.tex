@@ -63,7 +63,7 @@ The apparent incommensurability and very likely imprecision of the recorded aver
 
 The \emph{Spiegel} authors opted indeed for a simple 3-tiling of the Universities per valuated academic subject, followed by an average \Borda scores based global ranking. Here, our epistemic logic based outranking approach, allows us, with adequate choices of \emph{indifference} ($0.1$) and \emph{preference} ($0.5$) discrimination thresholds, to estimate \emph{lower-closed} 9-tiles of the enrolment quality scores per subject and rank conjointly, with the help of the \Copeland ranking rule Footnote[34] applied to a corresponding bipolar-valued outranking digraph, the 41 Universities \textbf{and} the lower limits of the estimated 9-tiles limits.
 
-We therefore need in Listing~\vref{list:14.2}, first, to import from the \texttt{performanceQuantiles} module\index{performanceQuantiles@\texttt{performanceQuantiles} module} the \texttt{PerformanceQuantiles} class constructor \index{PerformanceQuantiles@\texttt{PerformanceQuantiles} class} and estimate the lowerclosed 9-tiling of the average enrolment quality scores per academic subject.
+We therefore need in Listing~\vref{list:14.2}, first, to import from the \texttt{performanceQuan\-tiles} module\index{performanceQuantiles@\texttt{performanceQuantiles} module} the \texttt{PerformanceQuantiles} class constructor \index{PerformanceQuantiles@\texttt{PerformanceQuantiles} class} and estimate the lowerclosed 9-tiling of the average enrolment quality scores per academic subject.
 \begin{lstlisting}[caption={Computing 9-tiles of the enrolment quality scores per subject},label=list:14.2]
 >>> from performanceQuantiles import PerformanceQuantiles
 >>> pq = PerformanceQuantiles(t,numberOfBins=9,LowerClosed=True)
@@ -115,7 +115,7 @@ The resulting ranking of the 41 Universities including the lower-closed 9-tiling
 \caption{Heatmap view of the 9-tiles rating-by-ranking result}
 \label{fig:14.4}       % Give a unique label
 \end{figure}
-%\clearpage
+\clearpage
 
 The ordinal correlation ($+0.967$) of the \Copeland ranking with the underlying bipolar-valued outranking digraph is very high (see Fig.~\vref{fig:14.4} Row 1). Most correlated subjects with this rating-by-ranking result appear to be \emph{German Studies} ($+0.51$), \emph{Chemistry} ($+0.48$), \emph{Management} ($+0.47$) and \emph{Physics} ($+0.46$). Both \emph{Electrical} ($+0.07$) and \emph{Mechanical Engineering} ($+0.05$) are the less correlated subjects (see Row 3).
 
@@ -149,10 +149,11 @@ A corresponding \emph{graphviz} drawing may well illustrate all these enrolment 
 \end{lstlisting}
 \begin{figure}[ht]
 %\sidecaption
-\includegraphics[height=0.9\vsize]{Figures/14-5-ratingResult.pdf}
+\includegraphics[height=0.95\vsize]{Figures/14-5-ratingResult.pdf}
 \caption{Drawing of the 9-tiles rating-by-ranking result}
 \label{fig:14.5}       % Give a unique label
 \end{figure}
+\clearpage 
 
 We have noticed in Chapter~\vref{sec:8}, that there is not a single optimal rule for ranking from a given outranking digraph. The \Copeland rule, for instance, has the advantage of being \Condorcet consistent, i.e. when the outranking digraph models in fact a linear ranking, this ranking will necessarily be the result of the \Copeland* rule. When this is not the case, and especially when the outranking digraph shows many circuits, all potential ranking rules may give very divergent ranking results, and hence also substantially divergent rating-by-ranking results.
 
@@ -176,10 +177,11 @@ It is, hence, interesting, to verify if the epistemic fusion of the rating-by-ra
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
-\includegraphics[height=0.9\vsize]{Figures/14-6-fusionResult.pdf}
+\includegraphics[height=0.95\vsize]{Figures/14-6-fusionResult.pdf}
 \caption{Disjunctive fusion of the \Copeland and the \NetFlows rankings (extract).}
 \label{fig:14.6}       % Give a unique label
 \end{figure}
+\clearpage
 
 In Fig.~\vref{fig:14.6} we notice that many Universities appear now rated into several adjacent 9-tiles. The previously best-rated Universities: TU München, Freiburg, München, Leipzig, as well as  Heidelberg, for instance, appear now sorted into the $7^{th}$ and $8^{th}$ 9-tile ($[0.67 - 0.89]$), whereas Konstanz is now, even more imprecisely, rated into the $6^{th}$, the $7^{th}$ and the $8^{th}$ 9-tile.
 How confident, hence, is our precise \Copeland rating-by-ranking result? To investigate this question, let us now inspect the outranking digraph on which we actually apply the \Copeland ranking rule.
@@ -320,7 +322,7 @@ With a special \emph{graphviz} drawing of the \texttt{LearnedQuantilesRatingDigr
 \caption{Graphviz drawing of the 9-tiles sorting digraph.}
 \label{fig:14.8}       % Give a unique label
 \end{figure}
-%\clearpage
+\clearpage
 
 In Fig.~\vref{fig:14.8} we actually see the \emph{skeleton} (transitive closure removed) of a partial order, where an oriented arc is drawn between Universities x and y when their 9-tiles sorting results are disjoint and the one of x is higher rated than the one of $y$. The rating for TU München (see Listing~\vref{list:14.6} Lines 45), for instance, is disjoint and higher rated than the one of the Universities Freiburg and Konstanz (Lines 23, 32). And, both the ratings of Feiburg and Konstanz are, however, not disjoint from the one, for instance, of the Universty of Stuttgart (Line 42).
 
