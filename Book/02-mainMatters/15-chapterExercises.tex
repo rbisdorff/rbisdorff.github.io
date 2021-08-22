@@ -1,13 +1,13 @@
 \chapter{Exercises}
 \label{sec:15}
-\abstract*{ We propose hereafter some decision problems which may serve as exercises and exam questions in an \emph{Algorithmic Decision Theory} Course. They cover \emph{selection}, \emph{ranking} and \emph{rating} decision problems.}
+\abstract*{ In this chapter, we propose a series decision problems of various difficulties which may serve as exercises and exam questions for an Algorithmic Decision Theory or Multiple Criteria Decision Analysis course. They cover \emph{selection}, \emph{ranking} and \emph{rating} decision problems.}
 
-\abstract{ We propose hereafter some decision problems which may serve as exercises and exam questions in an \emph{Algorithmic Decision Theory} Course. They cover \emph{selection}, \emph{ranking} and \emph{rating} decision problems.}
+\abstract{  In this chapter, we propose a series decision problems of various difficulties which may serve as exercises and exam questions for an Algorithmic Decision Theory or Multiple Criteria Decision Analysis course. They cover \emph{selection}, \emph{ranking} and \emph{rating} decision problems.}
 
 
 \paragraph{Introduction}
 
-The following exercises are marked as follows: \emph{warming up} (§), \emph{home work} (§§), \emph{research work} (§§§). Solutions should be supported both by computational Python code using the \Digraph programming resources as well as by methodological and algorithmic arguments from the \emph{Algorithmic Decision Theory} Lectures \citep{ADT-2020}.
+The following exercises are marked as follows: \emph{warming up} (§), \emph{home work} (§§), \emph{research work} (§§§). Solutions should be supported both by computational Python code using the \Digraph programming resources as well as by methodological and algorithmic arguments from the \emph{Algorithmic Decision Theory} Lectures \citep{ADT-2020,BIS-2021b}.
 
 \section{Who will receive the best student award? (§)}
 \label{sec:15.1}
@@ -50,7 +50,7 @@ The student grades are measured on an ordinal performance scale from $0$ pts (we
 
 \paragraph{\textbf{Data}}
 
-File \texttt{graffiti03.py}\footnote{Source: \citet{GRA-2003}. The file is provided in the \texttt{examples} directory of the \Digraph ressources.} contains a performance tableau about the rating of movies that could be seen in the city of Luxembourg during Spring 2003. Its content is shown in Fig.~\vref{fig:15.1}.
+File \texttt{graffiti03.py} \footnote{The file is provided in the \texttt{examples} directory of the \Digraph ressources \citep{BIS-2021b}.} contains a performance tableau about the star-rating of movies that could be seen in the city of Luxembourg during Spring 2003 (source: \citet{GRA-2003}). Its content is shown in Fig.~\vref{fig:15.1}.
 \begin{lstlisting}
    >>> from perfTabs import PerformanceTableau
    >>> t = PerformanceTableau('graffiti03')
@@ -59,20 +59,20 @@ File \texttt{graffiti03.py}\footnote{Source: \citet{GRA-2003}. The file is provi
    ...                        rankingRule=None,colorLevels=5,
    ...                        ndigits=0)   
 \end{lstlisting}
-
 \begin{figure}[h]
 %\sidecaption
-\includegraphics[width=11.5cm]{Figures/moviesRatingData.png}
+\includegraphics[width=\hsize]{Figures/15-1-moviesRatingData.png}
 \caption{Graffiti magazine's movie ratings from February 2003}
 \label{fig:15.1}       % Give a unique label
 \end{figure}
+
 The critic's opinions are expressed on seven rating levels: $-2$ (two zeros, \emph{I hate}), $-1$ (one zero, \emph{I don't like}), $1$ (one star, \emph{maybe}), $2$ (two stars, \emph{good}), $3$ (three stars, \emph{excellent}), $4$ (four stars, \emph{not to be missed}), and $5$ (five stares, \emph{a master piece}). Notice the many missing data (\texttt{NA}) when a critic had not seen the respective movie. Mind also that the ratings of two movie critics (\texttt{jh} and \texttt{vt}) are given a higher significance weight.
 
 \paragraph{\textbf{Questions}}
 
 \begin{enumerate}
 \item The \Graffiti magazine suggests a best rated movie by computing the average number of stars it received, ignoring the missing data and any significance weights of the critics. What movie gets the highest average? 
-\item By taking into account missing data and varying significance weights, how may one find the best rated movie without computing any average rating scores?
+\item By taking into account missing data and varying significance weights, how may one find the best rated movie without computing any average of stars?
 \item How would one rank these movies so as to at best respect the weighted rating opinions of each movie critic?
 \item In what ranking position would appear a movie not seen by any critic? Confirm computationally your answer by adding such a fictive, \emph{not at all evaluated}, movie to the given performance tableau instance.
 \item How robust are the preceding results when the significance weights of the movie critics are considered to be only ordinal grades?
@@ -84,7 +84,7 @@ The critic's opinions are expressed on seven rating levels: $-2$ (two zeros, \em
 
 \paragraph{\textbf{Data}}
 
-A person, who wants to by a TV set, retains after a first selection, eight potential TV models \footnote{The data is taken from \citet[pp.33-35]{VIN-1992}}. To make their best choice these eight models were evaluated with respect to three decision objectives of equal importance:
+A person, who wants to buy a TV set, retains after a first selection, eight potential TV models \footnote{This didactic decision problem is discussed in \citet[pp.33-35]{VIN-1992}}. To make their best choice these eight models were graded with respect to three decision objectives of equal importance:
 \begin{enumerate}[topsep=0pt]
 \item \emph{Costs} of the set (to be minimised); 
 \item \emph{Picture and Sound} quality of the TV (to be maximised):
@@ -135,7 +135,7 @@ The \emph{Price} criterion \texttt{Pr} supports furthermore an indifference thre
 \paragraph{\textbf{Data files}}
 
 \begin{itemize}
-\item File \texttt{perfTab\_1.py} \footnote{Files \texttt{perfTab\_1.py} and \texttt{historicalData\_1.py} are provided in the \texttt{examples} directory of the \Digraph resources.} contains a 3-Objectives performance tableau with $100$ performance records concerning public policies evaluated with respect to an \emph{economic}, a \emph{societal} and an \emph{environmental} social decision objective.
+\item File \texttt{perfTab\_1.py} \footnote{Files \texttt{perfTab\_1.py} and \texttt{historicalData\_1.py} are provided in the \texttt{examples} directory of the \Digraph resources \citep{BIS-2021b}.} contains a 3-Objectives performance tableau with $100$ performance records concerning public policies evaluated with respect to an \emph{economic}, a \emph{societal} and an \emph{environmental} social decision objective.
 \item File \texttt{historicalData\_1.py} contains a performance tableau of the same kind with $2000$ historical performance records.
 \end{itemize}
 
@@ -149,7 +149,7 @@ The \emph{Price} criterion \texttt{Pr} supports furthermore an indifference thre
 \item Using the given historical records in file \texttt{historicalData\_1.py}, how would you rate your 100 public policies into absolute deciles classes? 
 \item Explain the differences you may observe between the absolute and the previous relative rating result.
 \item  Select among your 100 potential public policies a shortlist of up to 15 potential best policies, all reaching an absolute performance quantile of at least $66.67\%$.
-\item Based on the previous best policies shortlist (see Question 6), what is your eventual best-choice recommendation? Is it perhaps an unopposed best choice by all three objectives?
+\item Based on the previous best policies shortlist (see Question 6), what is your eventual best-choice recommendation? Is it perhaps a best choice unopposed by all three objectives?
 \end{enumerate}
 
 \section{A fair diploma validation decision (§§§)}
@@ -157,7 +157,7 @@ The \emph{Price} criterion \texttt{Pr} supports furthermore an indifference thre
 
 \paragraph{\textbf{Data}}
 
-Use the \texttt{RandomAcademicPerformanceTableau} class\index{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformanceTableau} class} from the \texttt{randomPerfTab} module for generating realistic random students performance tableaux concerning a curriculum of nine \texttt{ECTS} weighted Courses. Assume that all the gradings are done on an integer scale from $0$ (weakest) to $20$ (best). It is known that grading procedures are inevitably somehow imprecise; therefore we will assume an indifference discrimination threshold of $1$ point and a preference discrimination threshold of $2$ points. Furthermore, a performance difference of more than $12$ points is considerable and will trigger a polarisation situation. To validate eventually their curriculum, the students are required to obtain more or less $10$ points in each course. 
+Use the \texttt{RandomAcademicPerformanceTableau} class\index{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformanceTableau} class} from the \texttt{random\-PerfTab} module for generating realistic random students performance tableaux concerning a curriculum of nine \texttt{ECTS} weighted Courses \citep{BIS-2021b}. Assume that all the gradings are done on an integer scale from $0$ (weakest) to $20$ (best). It is known that grading procedures are inevitably somehow imprecise; therefore assume an indifference discrimination threshold of $1$ point and a preference discrimination threshold of $2$ points. Furthermore, a performance difference of more than $12$ points is considerable and will trigger a polarisation situation. To validate eventually their curriculum, the students are required to obtain more or less $10$ points in each course. 
 
 \paragraph{\textbf{Questions}}
 
@@ -174,4 +174,4 @@ Use the \texttt{RandomAcademicPerformanceTableau} class\index{RandomAcademicPerf
 \bibliographystyle{spbasic}
 %\typeout{}
 \bibliography{03-backMatters/reference}
-%\input{02-mainMatters/13-chapterBestCSDpts.bbl}
+%\input{02-mainMatters/15-chapterExercises.bbl}

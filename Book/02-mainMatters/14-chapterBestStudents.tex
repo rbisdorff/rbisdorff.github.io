@@ -28,7 +28,7 @@ Internet published data of the 2004 survey is stored, for our case study here, i
 >>> t.showHTMLPerformanceHeatmap(ndigits=1,\
 ...                              rankingRule=None)
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
 \includegraphics[width=\hsize]{Figures/14-1-ratingData.png}
 \caption{Average quality of enrolled students per academic subject}
@@ -36,7 +36,7 @@ Internet published data of the 2004 survey is stored, for our case study here, i
 \end{figure}
 %\clearpage
 
-In Fig.~\vref{fig:14.1}, the fifteen popular academic subjects are grouped into topical 'Faculties': - \emph{Humanities}; - \emph{Law, Economics \& Management}; - \emph{Life Sciences \& Medicine}; - \emph{Natural Sciences \& Mathematics}; and - \emph{Technology}. All fifteen subjects are considered equally significant for our rating problem (see Row 2). The recorded average enrolment quality scores appear coloured along a 7-tiling scheme per subject (see last Row).
+In Figure~\vref{fig:14.1}, the fifteen popular academic subjects are grouped into topical 'Faculties': - \emph{Humanities}; - \emph{Law, Economics \& Management}; - \emph{Life Sciences \& Medicine}; - \emph{Natural Sciences \& Mathematics}; and - \emph{Technology}. All fifteen subjects are considered equally significant for our rating problem (see Row 2). The recorded average enrolment quality scores appear coloured along a 7-tiling scheme per subject (see last Row).
 
 We may by the way notice that TU Dresden is the only Institution showing enrolment quality scores in all the fifteen academic subjects. Whereas, on the one side, TU Muenchen and Kaiserslautern are only graded in \emph{Sciences} and \emph{Technology} subjects. On the other side, Mannheim, is only graded in \emph{Humanities} and \emph{Law, Economics \& Management} studies. Most of the 41 Universities are not graded in \emph{Engineering} studies. We are, hence, facing a large part ($27.3\%$) of irreducible missing data (see Listing~\vref{list:14.1} Line 9).
 
@@ -44,7 +44,7 @@ Details of the enrolment quality criteria (the academic subjects) may be consult
 \begin{lstlisting}
 >>> t.showHTMLCriteria()
 \end{lstlisting}
- \begin{figure}[h]
+ \begin{figure}[ht]
 %\sidecaption
 \includegraphics[width=\hsize]{Figures/14-2-spiegelCriteria.png}
 \caption{Details of the rating criteria}
@@ -87,8 +87,7 @@ We may inspect the resulting 9-tiling limits in a browser view.
 >>> pq.showHTMLLimitingQuantiles(Transposed=True,Sorted=False,\
 ...	   ndigits=1,title='9-tiled quality score limits')
 \end{lstlisting}
-
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/14-3-score9Limits.png}
 \caption{9-tiling quality score limits per academic subject. We see confirmed again the incommensurability between the subjects, we noticed already in the apparent enrolment quality scoring , especially between \emph{Law Studies} ($39.1 - 51.1$) and \emph{Politology} ($50.5 - 65.9$). Universities valuated in \emph{Law studies} but not in \emph{Politology}, like the University of Bielefeld, would see their enrolment quality unfairly weakened when simply averaging the enrolment quality scores over valuated subjects}
@@ -109,7 +108,7 @@ The resulting ranking of the 41 Universities including the lower-closed 9-tiling
 ...              Correlations=True,\
 ...              ndigits=1,rankingRule='Copeland')
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
 \includegraphics[width=\hsize]{Figures/14-4-nineTilingResult.png}
 \caption{Heatmap view of the 9-tiles rating-by-ranking result}
@@ -175,7 +174,7 @@ It is, hence, interesting, to verify if the epistemic fusion of the rating-by-ra
    dot -Grankdir=TB -Tpng fusionResult.dot\
 ...                  -o fusionResult.png
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[height=0.95\vsize]{Figures/14-6-fusionResult.pdf}
 \caption{Disjunctive fusion of the \Copeland and the \NetFlows rankings (extract).}
@@ -183,7 +182,7 @@ It is, hence, interesting, to verify if the epistemic fusion of the rating-by-ra
 \end{figure}
 \clearpage
 
-In Fig.~\vref{fig:14.6} we notice that many Universities appear now rated into several adjacent 9-tiles. The previously best-rated Universities: TU München, Freiburg, München, Leipzig, as well as  Heidelberg, for instance, appear now sorted into the $7^{th}$ and $8^{th}$ 9-tile ($[0.67 - 0.89]$), whereas Konstanz is now, even more imprecisely, rated into the $6^{th}$, the $7^{th}$ and the $8^{th}$ 9-tile.
+In Figure~\vref{fig:14.6} we notice that many Universities appear now rated into several adjacent 9-tiles. The previously best-rated Universities: TU München, Freiburg, München, Leipzig, as well as  Heidelberg, for instance, appear now sorted into the $7^{th}$ and $8^{th}$ 9-tile ($[0.67 - 0.89]$), whereas Konstanz is now, even more imprecisely, rated into the $6^{th}$, the $7^{th}$ and the $8^{th}$ 9-tile.
 How confident, hence, is our precise \Copeland rating-by-ranking result? To investigate this question, let us now inspect the outranking digraph on which we actually apply the \Copeland ranking rule.
 
 \section{Inspecting the bipolar-valued outranking digraph}
@@ -240,7 +239,7 @@ We may furthermore check if there exists any \emph{cyclic} outranking situations
    92:  ['marb','saar','tri'] ,credibility : 0.067
    93:  ['mnh','mu','stu'] ,credibility : 0.133
  \end{lstlisting}
-Here we observe indeed 93 such outranking circuits, like: Berlin Humboldt $>$ Konstanz $>$ München $>$ Berlin Humboldt, supported by a $(0.133 + 1.0)/2 = 56.7\%$ majority of subjects Footnote[31] (see circuit 29 above). In the \Copeland ranking result shown in Fig.~\vref{fig:14.4}, these Universities appear positioned respectively at ranks 10, 4 and 6. In the \NetFlows ranking result they would appear respectively at ranks 10, 6 and 5, thus inverting the positions of Konstanz and München. The occurrence in digraph $dg$ of so many outranking circuits makes thus \emph{doubtful} any \emph{forced} linear ranking, independently of the specific ranking rule we might have applied.
+Here we observe indeed 93 such outranking circuits, like: Berlin Humboldt $>$ Konstanz $>$ München $>$ Berlin Humboldt, supported by a $(0.133 + 1.0)/2 = 56.7\%$ majority of subjects Footnote[31] (see circuit 29 above). In the \Copeland ranking result shown in Figure~\vref{fig:14.4}, these Universities appear positioned respectively at ranks 10, 4 and 6. In the \NetFlows ranking result they would appear respectively at ranks 10, 6 and 5, thus inverting the positions of Konstanz and München. The occurrence in digraph $dg$ of so many outranking circuits makes thus \emph{doubtful} any \emph{forced} linear ranking, independently of the specific ranking rule we might have applied.
 
 To effectively check the quality of our \Copeland rating-by-ranking result, we shall now compute a direct sorting into 9-tiles of the enrolment quality scores, without using any outranking digraph based ranking rule.
 
@@ -300,7 +299,7 @@ We shall now lexicographically sort these individual rating results per Universi
 \begin{lstlisting}
 >>> lqr.showHTMLQuantilesSorting(strategy='average')
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/14-7-nineTilingOrdering.png}
 \caption{The ranked 9-tiles rating-by-sorting result. We may notice that the Universities: Augsburg, Kaiserslautern, Mannheim and Tübingen, for instance, show in fact the same average rated 9-tiles score of $0.725$; yet, the rated upper 9-tile limit of Tuebingen reaches only $0.78$, whereas the one of the other Universities reaches $0.89$. Hence, Tuebingen is ranked below Augsburg, Kaiserslautern and Mannheim}
@@ -324,9 +323,9 @@ With a special \emph{graphviz} drawing of the \texttt{LearnedQuantilesRatingDigr
 \end{figure}
 \clearpage
 
-In Fig.~\vref{fig:14.8} we actually see the \emph{skeleton} (transitive closure removed) of a partial order, where an oriented arc is drawn between Universities x and y when their 9-tiles sorting results are disjoint and the one of x is higher rated than the one of $y$. The rating for TU München (see Listing~\vref{list:14.6} Lines 45), for instance, is disjoint and higher rated than the one of the Universities Freiburg and Konstanz (Lines 23, 32). And, both the ratings of Feiburg and Konstanz are, however, not disjoint from the one, for instance, of the Universty of Stuttgart (Line 42).
+In Figure~\vref{fig:14.8} we actually see the \emph{skeleton} (transitive closure removed) of a partial order, where an oriented arc is drawn between Universities x and y when their 9-tiles sorting results are disjoint and the one of x is higher rated than the one of $y$. The rating for TU München (see Listing~\vref{list:14.6} Lines 45), for instance, is disjoint and higher rated than the one of the Universities Freiburg and Konstanz (Lines 23, 32). And, both the ratings of Feiburg and Konstanz are, however, not disjoint from the one, for instance, of the Universty of Stuttgart (Line 42).
 
-The partial ranking, shown in Fig.~\vref{fig:14.8}, is in fact independent of any ordering strategy: - \emph{average}, - \emph{optimistic} - \emph{pessimistic}, of overlapping 9-tiles sorting results, and confirms that the same Universities as with the previous rating-by-ranking approach, namely TU München, Freiburg, Konstanz, Stuttgart, Berlin Humboldt, Heidelberg and Leipzig appear top-rated. Similarly, the Universities of Duisburg, Bielefeld, Hanover, Bochum, Giessen, Düsseldorf and Hamburg give the lowest-rated group. The midfield here is again consisting of more or less the same Universities as the one observed in the previous rating-by-ranking approach (see Listing~\vref{list:14.3}).
+The partial ranking, shown in Figure~\vref{fig:14.8}, is in fact independent of any ordering strategy: - \emph{average}, - \emph{optimistic} - \emph{pessimistic}, of overlapping 9-tiles sorting results, and confirms that the same Universities as with the previous rating-by-ranking approach, namely TU München, Freiburg, Konstanz, Stuttgart, Berlin Humboldt, Heidelberg and Leipzig appear top-rated. Similarly, the Universities of Duisburg, Bielefeld, Hanover, Bochum, Giessen, Düsseldorf and Hamburg give the lowest-rated group. The midfield here is again consisting of more or less the same Universities as the one observed in the previous rating-by-ranking approach (see Listing~\vref{list:14.3}).
 
 In the end, both the \Copeland rating-by-ranking, as well as the rating-by-sorting approach give luckily, in our case study here, very similar results. The first approach, with its \emph{forced} linear ranking, determines on the one hand, precise enrolment quality equivalence classes; a result, depending potentially a lot on the actually applied ranking rule. The rating-by-sorting approach, on the other hand, only determines for each University a less precise but prudent rating of its individual enrolment quality, furthermore supported by a known majority of performance criteria significance; a somehow fairer and robuster result, but, much less evident for easily comparing the apparent enrolment quality among Universities. Contradictorily, or sparsely valuated Universities, for instance, will appear trivially rated into a large midfield of adjacent 9-tiles.
 
@@ -340,4 +339,4 @@ Let us conclude by saying that we prefer this latter rating-by-sorting approach;
 \bibliographystyle{spbasic}
 %\typeout{}
 \bibliography{03-backMatters/reference}
-%\input{02-mainMatters/13-chapterBestCSDpts.bbl}
+%\input{02-mainMatters/14-chapterBestStudents.bbl}
