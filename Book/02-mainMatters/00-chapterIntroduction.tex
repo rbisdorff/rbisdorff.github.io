@@ -1,13 +1,9 @@
 \Extrachap{Introduction}
 \label{sec:0}
 
-\abstract*{To be written.}
-
-\abstract{To be written.}
-
 \phantomsection
 \addcontentsline{toc}{section}{The editing strategy}
-%\section{The editing strategy}
+\section*{The editing strategy}
 \label{sec:0.1}
 
 The reader will find in the five parts of this monograph several series of tutorials and adavanced topics that present and illustrate computational methods and tools mainly useful in the field of Multiple Criteria Decision Aid and Decision Analysis. These methods and tools were designed and implemented in Python3 by the author over the last decade in order to support the preparation and illustration of a Master Course on Algorithmic Decision Theory taught at the University of Luxembourg from 2010 to 2020.
@@ -22,18 +18,22 @@ Readers interested in the technical aspects of the organisation and implementati
 
 \phantomsection
 \addcontentsline{toc}{section}{Organisation of the book}
-%\section{Organisation of the book}
+\section*{Organisation of the book}
 \label{sec:0.2}
 
-The book is organised into five parts. Part I presents three chapters introducing the \Digraph programming resources and the main formal objects discussed in this book, namely \emph{bipolar-valued digraphs} and, in particular, \emph{outranking digraphs} \citep{BIS-2021}.
+The book is organised into five parts.
+\vspace{0.5cm}
+
+\textbf{Part I} presents three chapters introducing the \Digraph programming resources and the main formal objects discussed in this book, namely \emph{bipolar-valued digraphs} and, in particular, \emph{outranking digraphs} \citep{BIS-2021}.
 
 In Chapter~\vref{sec:1}, the reader will find the installation instructions for the \Digraph Python modules followed by a first Python terminal session using the main \texttt{digraphs} module. A random crisp digraph is generated, saved and inspected for illustration.
 
 Chapter~\vref{sec:2} introduces the bipolar-valued digraph model --the root type of all our digraph models--. A randomly bipolar-valued digaph instance is generated. Drawing the digraph, separating its asymmetric and symmetric parts, or its border and inner parts, is illustrated. The initial digraph instance may be reconstructed by epistemic disjunctive fusion from these respective parts. Dual, converse and codual versions, as well as symmetric and transitive closures are generated. Complete, empty and indeterminate digraphs are eventually presented.
 
 Chapter~\vref{sec:3} presents the bipolar-valued outranking digraph --the main formal object used and discussed in this monograph--. After illustrating its hybrid type --it is conjointly a multiple criteria performance tableau and a bipolar-valued digraph modelling the outranking situations between the given performance records-- pairwise comparisons and the recoding of the digraph characteristic valuation are illustrated. The codual version of the outranking renders the corresponding strict outranking digraph, i.e. its asymmetric part. 
+\vspace{0.5cm}
 
-Part II illustrates in eight methodological chapters multiple criteria performance evaluation models and decision algorithms. These chapters are mostly problem oriented.
+\textbf{Part II} illustrates in eight methodological chapters multiple criteria performance evaluation models and decision algorithms. These chapters are mostly problem oriented.
 
 Chapter~\vref{sec:4} presents the \Rubis best choice recommender system. The approach is illustrated with a best office site selection problem. We show how to explore a given performance tableau and compute the corresponding outranking digraph. After presenting the pragmatic principles that govern our best choice recommendation algorithm we solve the best office site choice problem.
 
@@ -50,8 +50,9 @@ Chapter~\vref{sec:9} applies order statistics for sorting a set $X$ of n potenti
 Chapter~\vref{sec:10} addresses the problem of rating multiple criteria performances of a set of potential decision alternatives with respect to performance quantiles learned from historical data gathered from similar decision alternatives observed in the past. We show how to learn performance quantiles from historical performance tableaux. New performance records may now be rated with respect to these learned quantile norms.
 
 Chapter~\vref{sec:11} tackles the ranking of big multiple criteria performance tableaux with thausands or millions of records. To effectively compute rankings from performance tableaux of these sizes, the chapter proposes a collection of cythonized --C-compiled and optimised-- modules that may be run on Linux Debian HPC equipement as available, for instance, at the University of Luxembourg.
+\vspace{0.5cm}
 
-Part III delivers three realistic algorithmic decision making case studies.
+\textbf{Part III} delivers three realistic algorithmic decision making case studies.
 
 Chapter~\vref{sec:12} presents a case study concerning the building of a best choice recommendation for Alice, a German student who wants some advice concerning the choice of her future University studies. We present Alice’s performance tableau –-potential foreign language study programs, her decision objectives, performance criteria and performance grades–- and build a best choice recommendation for her. A thorough robustness analysis confirms a very best choice.
 
@@ -60,8 +61,9 @@ In Chapter~\vref{sec:13} we are resolving with our \Digraph resources a ranking 
 Chapter~\vref{sec:14} presents and discusses how to rate with the help of our \Digraph resources the apparent student enrolment quality of 41 German higher education institutions. The multiple criteria performance tableau, we use, is based on internet published by \Spiegel magazine in 2004 concerning nearly 50,000 students, enroled in one of fifteen popular academic subjects, like German Studies, Life Sciences, Psychology, Law or Computer Science.
 
 In Chapter~\vref{sec:15}, we propose a series of decision problems of various difficulties which may serve as exercises and exam questions for an Algorithmic Decision Theory or Multiple Criteria Decision Analysis course. They cover selection, ranking and rating decision problems.
+\vspace{0.5cm}
 
-Part IV presents in five chapters more advanced topics showing some pearls of bipolar-valued epistemic logic.
+\textbf{Part IV} presents in five chapters more advanced topics showing some pearls of bipolar-valued epistemic logic.
 
 Starting from a motivating decision problem about how to list, from the best to the worst, a set movies that are star-rated by journalists and movie critics, Chapter~\vref{sec:16} shows that \Kendall’s ordinal correlation index tau may be extended to a relational bipolar-valued equivalence measure of bipolar-valued digraphs. This finding gives way, on the one hand, to measure the fitness and fairness of multiple criteria ranking rules. On the other hand, it provides a tool for illustrating preference divergences between decision objectives and criteria.
 
@@ -72,8 +74,9 @@ In Chapter~\vref{sec:18} we propose to link a qualifying significance majority f
 The required cardinal significance weights of the performance criteria represent the ’Achilles’ heel of our outranking approach. Rarely will indeed a decision maker be cognitively competent for suggesting precise decimal-valued criteria significance weights. More often, the decision problem will involve more or less equally important decision objectives with more or less equi-significant criteria per objective. In Chapter~\vref{sec:19} we study the robustness of the outranking digraph when the criteria significance weights faithfully indicate solely an order of importance. This approach leads furthermore to the concept of unopposed or Pareto efficent multiobjective choices.
 
 In a social choice context, where decision objectives would match different political parties, Pareto efficient choices represent in fact multipartisan social choices. Chapter~\vref{sec:20} shows that they may judiciously deliver the primary selection in a two stage election system. Our outranking model is based on bipolar approvals-disapprovals of ``\emph{as well as performing as}'' statements. A similar approach is put into practice with bipolar approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, one obtains a $(-1,0,1)$-valued evaluative voting system. We eventually show in this chapter that in bipolar-approval voting systems, the winner tends to be among the more or less multipartisan candidates.
+\vspace{0.5cm}
 
-Part V, with three chapters, concerns eventually simple undirected graphs and illustrates operational resources for working with such graphs.
+\textbf{Part V}, with three chapters, concerns eventually simple undirected graphs and illustrates computational resources for working with such graphs.
 
 Chapter~\vref{sec:21} introduces bipolar-valued undirected graphs and illustrates several special graph models and algorithms like Q-coloring, MIS and clique enumeration, line graphs and maximal matchings, grid graphs, and n-cycle graphs with their non-isomorphic maximal independent sets of vertices.
 
@@ -83,8 +86,8 @@ Chpter~\vref{sec:23} eventually presents some famous classes of perfect graphs, 
 
 \phantomsection
 \addcontentsline{toc}{section}{Highlights}
-%\section{Highlights}
-\label{asec:0.1}
+\section*{Highlights}
+\label{sec:0.3}
 
 Contrary to what is generally thought, most time in a decision problem solving takes the preparation of the performance tableau not running any decision making algorithms. Designing adequate performance grading criteria functions for each decision objective is essential for the success of the solving. This is a very critical and essential step. Chapter~\ref{sec:4} and Chapter~\ref{sec:5} illustrate both how to edit a coherent performance tableau. In order to discover examples of potential performance tableau, we provide in Chapter~\ref{sec:6} random generators for several kinds of performance tableau. 
 
