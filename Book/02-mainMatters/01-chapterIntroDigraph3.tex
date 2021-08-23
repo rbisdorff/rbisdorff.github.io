@@ -11,9 +11,9 @@
 % use \chaptermark{}
 % to alter or adjust the chapter heading in the running head
 
-\abstract*{ The first Chapter is devoted to a first contact with the \Digraph Python resources. Following installation instructions, we start a first Python session for generating, saving and inspecting a random crisp digraph.}
+\abstract*{ The chapter is devoted to a first contact with the \Digraph Python resources. Following installation instructions, we start a first Python session for generating, saving and inspecting a random crisp digraph.}
 
-\abstract{ The first Chapter is devoted to a first contact with the \Digraph Python resources. Following installation instructions, we start a first Python session for generating, saving and inspecting a random crisp digraph.}
+\abstract{ The chapter is devoted to a first contact with the \Digraph Python resources. Following installation instructions, we start a first Python session for generating, saving and inspecting a random crisp digraph.}
 
 \section{Installing the \Digraph resources}
 \label{sec:1.1}
@@ -73,8 +73,8 @@ Individual module \texttt{pytest} suites are also provided (see the \texttt{make
 \paragraph{Dependencies:}
 To be fully functional, the \Digraph resources mainly need:
 
-\begin{itemize}[leftmargin=0.5cm,listparindent=0em,rightmargin=0.2cm,nosep]
-\item The \texttt{graphviz} tools \footnote{\href{https://graphviz.org}{https://graphviz.org}, \citet{graphViz}} and 
+\begin{itemize}[leftmargin=0.5cm,listparindent=0em,rightmargin=0.2cm,topsep=1pt]
+\item The \texttt{graphviz} tools \citep{graphViz}\footnote{\href{https://graphviz.org}{https://graphviz.org}}, and 
 \item The R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
 \item When exploring digraph isomorphisms, the \texttt{nauty} isomorphism testing program is required \citep*{nauty}. On linux you may try: \texttt{sudo apt install nauty}. For Mac OS X, corresponding \texttt{dmg} installers are available for downloading.
 \item Two specific methods of the \texttt{OutrankingDigraph} class for clustering performance criteria or decision alternatives require furthermore the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
@@ -109,7 +109,7 @@ For exploring the classes and methods provided by the \Digraph modules \footnote
                        'relation','order','name',
                        'gamma','notGamma']
 \end{lstlisting}
-In Listing \ref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object \texttt{dg} of order 5 and arc probability of $50\%$. The resulting digraph of \emph{order} 5 --number of nodes called (decision) \emph{actions}-- and \emph{size} 12 --number of arcs-- is completely determined (see Line 11 in Listing~ref{list:1.1}) .
+In Listing~\vref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object \texttt{dg} of order 5 and arc probability of $50\%$. The resulting digraph of \emph{order} 5 --number of nodes called (decision) \emph{actions}-- and \emph{size} 12 --number of arcs-- is completely determined (see Line 11 in Listing~\vref{list:1.1}) .
 
 \section{Permanent storage of a digraph object}
 \label{sec:1.3}                   
@@ -159,7 +159,7 @@ actions = OrderedDict([
  }
 \end{lstlisting}
 
-In the \Digraph resources, all digraph object instances are of \texttt{Digraph}\index{Digraph@\texttt{Digraph} class} type and contain at least the following attributes (see Listing \ref{list:1.1}  Lines 11-12):
+In the \Digraph resources, all digraph object instances are of \texttt{Digraph}\index{Digraph@\texttt{Digraph} class} type and contain at least the following attributes (see Listing~\vref{list:1.1}  Lines 11-12):
 \begin{enumerate}[leftmargin=0.5cm,listparindent=0em,nosep]
 \item A \texttt{name} attribute, holding usually the actual name of the stored instance that was used to create the instance;
 \item An ordered dictionary of digraph nodes called \texttt{actions} (decision alternatives) with at least a \texttt{name} attribute;
@@ -173,7 +173,7 @@ In the \Digraph resources, all digraph object instances are of \texttt{Digraph}\
 \section{Inspecting a digraph object}
 \label{sec:1.4}
 
-Different \texttt{show...()} methods, like the \texttt{showShort()} method \index{showSort@\texttt{showShort()}}, reveal us now that \texttt{dg} is a crisp, irreflexive and connected digraph of order five (see Listing \ref{list:1.3}  Lines 1, 16, 26, 37 below).
+Different \texttt{show...()} methods, like the \texttt{showShort()} method \index{showSort@\texttt{showShort()}}, reveal us now that \texttt{dg} is a crisp, irreflexive and connected digraph of order five (see Listing~\vref{list:1.3}  Lines 1, 16, 26, 37 below).
 
 \begin{lstlisting}[caption={Random crisp digraph object},label=list:1.3]
 >>> dg.showShort()
@@ -220,7 +220,7 @@ Different \texttt{show...()} methods, like the \texttt{showShort()} method \inde
  'a5': in => {'a1', 'a4', 'a3'}, out => {'a4'}
 \end{lstlisting}
 
-The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph \texttt{dg} (see Fig. \ref{fig:1.1}), if the \emph{graphviz} tools are installed on your system \citep{graphViz}\index{graphviz@\textsl{graphviz}}.
+The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph \texttt{dg} (see Fig.~\vref{fig:1.1}), if the \emph{graphviz} tools are installed on your system \citep{graphViz}\index{graphviz@\textsl{graphviz}}.
 \begin{lstlisting}
 >>> dg.exportGraphViz('tutorialDigraph')
  *---- exporting a dot file do GraphViz tools ---------*
@@ -230,7 +230,7 @@ The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} me
 \begin{figure}[h]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/1-1-tutorialDigraph.pdf}
-\caption{The tutorial crisp digraph. The \texttt{exportGraphViz()} method is depending on drawing tools from \texttt{https://graphviz.org}. On Linux Ubuntu or Debian you may try '\texttt{sudo apt-get install graphviz}’ to install them. There are ready $dmg$ installers for Mac OSX}
+\caption{The tutorial crisp digraph. The \texttt{exportGraphViz()} method is depending on drawing tools from \texttt{https://graphviz.org}. On Linux Ubuntu or Debian you may try '\texttt{sudo apt-get install graphviz}’ to install them. For Mac OSX There are ready $dmg$ installers available}
 \label{fig:1.1}       % Give a unique label
 \end{figure}
 
@@ -302,33 +302,37 @@ Mind that \texttt{show...()} methods output their results in the \emph{Python} c
 \section{Special digraph instances}
 \label{sec:1.5}
 
-Some types of universal digraph instances, like the \texttt{CompleteDigraph}, the \texttt{EmptyDigraph} or the \texttt{GridDigraph}\index{GridDigraph@texttt{GridDigraph} class} classes, are readily available (see Fig. \ref{fig:1.3}).
+Some special types of digraph instances, like the \texttt{CirculantDigraph}\index{CirculantDigraph@\texttt{CirculantDigraph} class} or the \texttt{GridDigraph}\index{GridDigraph@texttt{GridDigraph} class} classes, are readily available (see Fig.~\vref{fig:1.3}).
+\begin{lstlisting}
+>>> from digraphs import CirculantDigraph,GridDigraph
+>>> c8 = CirculantDigraph(order=8,circulants=[1,3])
+>>> c8.exportGraphViz('c8')
+  *---- exporting a dot file for GraphViz tools ----*
+   Exporting to c8.dot
+   circo -Tpng c8.dot -o c8.png
+>>> grid3 = GridDigraph(n=3,m=3,\
+...                    hasMedianSplitOrientation=True)
+>>> grid.exportGraphViz('grid3')
+  *---- exporting a dot file for GraphViz tools ----*
+   Exporting to grid3.dot
+   dot -Grankdir=BT -Tpng grid3.dot -o grid3.png
+\end{lstlisting}
 \begin{figure}[h]
-\sidecaption[t]
-\includegraphics[width=5.5cm]{Figures/1-3-tutorialGrid.pdf}
-\caption{The 5x5 grid graph. Notice the median split orientation. This kind of oriented grids show the highest possible number of chordless circuits}
+%\sidecaption[t]
+  \includegraphics[height=6cm]{Figures/1-3-c8.pdf} \hfill
+  \includegraphics[height=6cm]{Figures/1-3-grid3.pdf} \hfill
+  \caption{The circulant [1,3] digraph and the 3x3 grid digraph}
 \label{fig:1.3}       % Give a unique label
 \end{figure}
-\begin{lstlisting}
->>> from digraphs import GridDigraph
->>> grid = GridDigraph(n=5,m=5,\
-...                    hasMedianSplitOrientation=True)
->>> grid.exportGraphViz('tutorialGrid')
- *---- exporting a dot file for GraphViz tools ------*
- Exporting to tutorialGrid.dot
- dot -Grankdir=BT -Tpng TutorialGrid.dot\
-                  -o tutorialGrid.png
-\end{lstlisting}
 
 %\clearpage
 \vspace{1cm}
-The next Chapter \ref{sec:3} will introduce the fondamental \emph{bipolar-valued digraph} model which is \emph{root object type} to all the specialised digraph models implemented in the \Digraph modules.    
+The next Chapter~\vref{sec:2} will introduce the fondamental \emph{bipolar-valued digraph} model which is \emph{root object type} to all the digraph models implemented in the \Digraph modules \citep{BIS-2021b}.    
 
 %%%%%%% The chapter bibliography
 % %\normallatexbib
-% \phantomsection
-%\addcontentsline{toc}{chapter}{Chapter Bibliography}
 \bibliographystyle{spbasic}
-% \typeout{}
 \bibliography{03-backMatters/reference}
-% %\input{02-mainMatters/01-chapterIntroDigraph3.bbl}
+%\phantomsection
+%\addcontentsline{toc}{section}{Chapter Bibliography}
+%\input{02-mainMatters/01-chapterIntroDigraph3.bbl}
