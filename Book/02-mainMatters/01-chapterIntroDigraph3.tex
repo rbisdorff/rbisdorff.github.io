@@ -80,8 +80,47 @@ To be fully functional, the \Digraph resources mainly need:
 \item Two specific methods of the \texttt{OutrankingDigraph} class for clustering performance criteria or decision alternatives require furthermore the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
 \end{itemize}
 
-\section{Starting a \Digraph terminal session}
+\section{Organisation of the \Digraph Python modules}
 \label{sec:1.2}
+
+The main data handling modules of the \Digraph resources are the following:
+
+\begin{enumerate}[leftmargin=1cm]
+\item \texttt{digraphs} module: Main part of the \Digraph source code with the root \texttt{Digraph} class.
+\item \texttt{graphs} module: Resources for handling undirected graphs with the root \texttt{Graph} class and a brigde to the \texttt{digraphs} module resources.
+\item \texttt{perfTabs} module: Tools for handling multiple criteria performance tableaux with root \texttt{PerformanceTableau} class.
+\item \texttt{outrankingDigraphs} module: Root module for handling outranking digraphs with the abstract root \texttt{OutrankingDigraph} classs and the main \texttt{BipolarOutrankingDigraph} class. \footnote{Notice that the outrankingDigraph class defines a hybrid object type, inheriting conjointly from the \texttt{Digraph} class and the \texttt{PerformanceTableau} class.}
+\item \texttt{votingProfiles} module: Classes and methods for handling voting ballots and computing election results with main \texttt{LinearVotingProfile} class.
+\end{enumerate}
+
+\noindent Various random generators are provided by the following modules:
+
+\begin{enumerate}[leftmargin=1cm]
+\item \texttt{randomDigraphs} module: Various random digraph models like random crisp digraphs (RandomDigraph class) or random bipolar-valued digraphs (\texttt{RandomValuationDigraph} class).
+\item \texttt{randomPerfTabs} module: Various implemented random performance tableau models, like Cost-Benefit tableaux (\texttt{RandomCBPerformance\-Tableau} class) or 3-Objectives tableaux (\texttt{Random3ObjectivesPer\-formance\-Tableau} class).
+\item \texttt{randomNumbers} module: Additional random number generators, not available in the standard Python \texttt{random.py} library, like a dscrete random variable (\texttt{DiscreteRandomVariable} class) or a Cauchy random variable (\texttt{CauchyRandomVariable} class)
+\end{enumerate}
+
+\noindent Following modules provide tools for \emph{sorting}, \emph{ranking} and \emph{rating} problems:
+
+\begin{enumerate}[leftmargin=1cm]
+\item \texttt{sortingDigraphs} module: Tools for solving sorting problems with the root \texttt{SortingDigraph} class and the main \texttt{QuantilesSortingDi\-graph} class;
+\item \texttt{linearOrders} module: Tools for solving linearly ranking or ordering problems with the root \texttt{LinearOrder} class;
+\item \texttt{transitiveDigraphs} module: Additional tools for handing transitive digraphs with root \texttt{TransitiveDigraph} class.
+\end{enumerate}
+
+\noindent Tools for specifically handling big data are finally provided by the following modules:
+
+\begin{enumerate}[leftmargin=1cm]
+\item \texttt{performanceQuantiles} module: Incremental representation of large performance tableaux via binned cumulated density functions per criteria; Depends on the \texttt{randomPerfTabs} module.
+\item \texttt{sparseOutrankingDigraphs} module: parse implementation design for bipolar-valued outranking digraphs of order $> 500$.
+\item \emph{Cythonized} modules: C-compiled and optimised Python modules for handling big performance tableaux and bipolar outranking digraphs of order $> 1000$.
+\end{enumerate}
+
+Readers interested in the technical implementation details are invited to consult the reference manual of the \Digraph resources, where they will find the documentation and source code of all \Digraph modules, classes and methods \cite{BIS-2021b}. 
+
+\section{Starting a \Digraph terminal session}
+\label{sec:1.3}
 You may start an interactive Python3 terminal session in the \texttt{Digraph3} directory.
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   $HOME/.../Digraph3$ python3
@@ -111,8 +150,8 @@ For exploring the classes and methods provided by the \Digraph modules \footnote
 \end{lstlisting}
 In Listing~\vref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object \texttt{dg} of order 5 and arc probability of $50\%$. The resulting digraph of \emph{order} 5 --number of nodes called (decision) \emph{actions}-- and \emph{size} 12 --number of arcs-- is completely determined (see Line 11 in Listing~\vref{list:1.1}) .
 
-\section{Permanent storage of a digraph object}
-\label{sec:1.3}                   
+% \section{Permanent storage of a digraph object}
+% \label{sec:1.3}                   
 We may save the content of \texttt{dg} in a file called \texttt{tutorialDigraph.py}.
 \begin{lstlisting}
 >>> dg.save('tutorialDigraph')
@@ -299,8 +338,8 @@ Mind that \texttt{show...()} methods output their results in the \emph{Python} c
 \label{fig:1.2}       % Give a unique label
 \end{figure}
 
-\section{Special digraph instances}
-\label{sec:1.5}
+% \section{Special digraph instances}
+% \label{sec:1.5}
 
 Some special types of digraph instances, like the \texttt{CirculantDigraph}\index{CirculantDigraph@\texttt{CirculantDigraph} class} or the \texttt{GridDigraph}\index{GridDigraph@texttt{GridDigraph} class} classes, are readily available (see Fig.~\vref{fig:1.3}).
 \begin{lstlisting}

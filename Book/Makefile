@@ -17,7 +17,7 @@ book.pdf:
 	# makes a pdf directly
 	pdflatex book.tex
 	pdflatex book.tex
-	bibtex 02-mainMatters/00-chapterIntroduction.aux
+	#bibtex 02-mainMatters/00-chapterIntroduction.aux
 	bibtex 02-mainMatters/01-chapterIntroDigraph3.aux
 	bibtex 02-mainMatters/02-chapterDigraphs.aux
 	bibtex 02-mainMatters/03-chapterOutrankingDigraphs.aux
