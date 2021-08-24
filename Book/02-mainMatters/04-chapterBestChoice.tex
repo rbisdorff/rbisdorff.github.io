@@ -194,7 +194,7 @@ To help now the CEO choosing the best office site, we are going to compute pairw
 The credibility of each pairwise outranking situation, denoted $r(x \succsim y)$, is measured in a bipolar significance valuation $[-1.0, 1.0]$, where \emph{positive} terms $r(x \succsim y)\, >\, 0.0$ indicate a \emph{validated}, and \emph{negative} terms $r(x \succsim y)\, <\, 0.0$ indicate a \emph{non-validated} outranking situation. The \emph{median} value $r(x \succsim y)\, = \,0.0$ represents an \emph{indeterminate} situation (see \citet{BIS-2004a} and \citet{BIS-2013}).   
 
 For computing such a bipolar-valued binary outranking relation from the given performance tableau $t$, we use the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph} class from the \texttt{outrankingDigraphs}\index{outrankingDigraphs} module. The corresponding
-\texttt{showHTMLRe\-lationTable}\index{showHTMLRelationTable} method shows here the resulting bipolar-valued adjacency matrix in a system browser window (see Fig.~\vref{fig:4.2}).
+\texttt{showHTMLRe\-lation\-Table()}\index{showHTMLRelationTable} method shows here the resulting bipolar-valued adjacency matrix in a system browser window (see Fig.~\vref{fig:4.2}).
 \begin{lstlisting}[caption={Computing a bipolar-valued outranking digraph},label=list:4.3]
 >>> from outrankingDigraphs import BipolarOutrankingDigraph
 >>> bod = BipolarOutrankingDigraph(t)
@@ -207,7 +207,7 @@ For computing such a bipolar-valued binary outranking relation from the given pe
 \label{fig:4.2}       % Give a unique label
 \end{figure}
 
-Alternative \texttt{D} gives a \Condorcet winner\footnote{See Chapter~\vref{sec:7} on computing the winner of an election.}, whereas alternatives \texttt{A} (the most expensive) and \texttt{C} (the cheapest) give in fact \emph{weak} \Condorcet winners.\index{computeCondorcetWinners@\texttt{computeCondorcetWinners()}}\index{computeWeakCondorcetWinners@\texttt{computeWeakCondorcetWinners()}}
+Alternative \texttt{D} gives a \Condorcet winner\footnote{See Chapter~\ref{sec:7} on computing the winner of an election.}, whereas alternatives \texttt{A} (the most expensive) and \texttt{C} (the cheapest) give in fact \emph{weak} \Condorcet winners.\index{computeCondorcetWinners@\texttt{computeCondorcetWinners()}}\index{computeWeakCondorcetWinners@\texttt{computeWeakCondorcetWinners()}}
 \begin{lstlisting}
 >>> bod.computeCondorcetWinners()
  ['D']
@@ -277,7 +277,7 @@ Luckily, our outranking digraph \texttt{bod} here does not show any chordless ou
 \section{Computing a best choice recommendation}
 \label{sec:4.5}
 
-To compute now our \Rubis best choice recommendation\index{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}} we work on the \emph{codual} outranking digraph \index{codual digraph}, i.e. the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph \texttt{g} that has a vertex for each face of \texttt{g}. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance \texttt{g} \citep{BIS-2013}.\footnote{See Section~\vref{sec:2.6}}:
+To compute now our \Rubis best choice recommendation\index{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}} we work in Listing~\vref{list:4.4} Line 2 on the \emph{codual} outranking digraph \index{codual digraph}, i.e. the converse ($\sim$) of the dual ($-$)\footnote{Not to be confused with the dual graph of a plane graph \texttt{g} that has a vertex for each face of \texttt{g}. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}, of the outranking digraph instance \texttt{g} \citep{BIS-2013}.\footnote{See Section~\ref{sec:2.6}}:
 \begin{lstlisting}[caption={Computing the best choice recommendation},label=list:4.4]
 >>> bod.showBestChoiceRecommendation(\
 ...              CoDual=True, # default setting\
@@ -307,7 +307,7 @@ To compute now our \Rubis best choice recommendation\index{showBestChoiceRecomme
         'C': 0.00, 'B': 0.00, 'A': 0.00, }
 \end{lstlisting}				  
 
-It is interesting to notice in Listing~\vref{list:4.4} (Line 8) that our \emph{best choice recommendation} consists actually in the previously mentioned set of weak \Condorcet winners\index{Condorcet!winner}: \texttt{A}, \texttt{C} and \texttt{D} (see Fig.~\vref{fig:4.2}). In the corresponding characteristic vector (see Lines 15-16 and Section~\vref{sec:17.6}), representing the bipolar credibility degree with which each alternative may indeed be included in, or excluded from this recommendation, we find that alternative \texttt{D} is the only positively validated one, whereas both extreme alternatives --\texttt{A} (the most expensive) and \texttt{C} (the cheapest)-- stay in an indeterminate situation (see \citet{BIS-2006a,BIS-2006b}). They may \emph{be or not be} potential best choices. Notice furthermore that compromise alternative \texttt{G}, while not actually being included in this stricly outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} recommended as potential best choice. Alternatives \texttt{B}, \texttt{E} and \texttt{F} are all positively excluded from this best choice recommendation.
+It is interesting to notice in Line 8 that the \Rubis \emph{best choice recommendation} consists actually in the previously mentioned set of weak \Condorcet winners\index{Condorcet!winner}: \texttt{A}, \texttt{C} and \texttt{D} (see Fig.~\vref{fig:4.2}). In the corresponding characteristic vector (see Lines 15-16 and Sec.~\vref{sec:17.6}), representing the bipolar credibility degree with which each alternative may indeed be included in, or excluded from this recommendation, we find that alternative \texttt{D} is the only positively validated one, whereas both extreme alternatives --\texttt{A} (the most expensive) and \texttt{C} (the cheapest)-- stay in an indeterminate situation (see \citet{BIS-2006a,BIS-2006b}). They may \emph{be or not be} potential best choices. Notice furthermore that compromise alternative \texttt{G}, while not actually being included in this stricly outranking prekernel, shows as well an indeterminate situation with respect to \emph{being or not being} recommended as potential best choice. Alternatives \texttt{B}, \texttt{E} and \texttt{F} are all positively excluded from this best choice recommendation.
 
 To inspect why alternative \texttt{D} is the only positive best choice recommendation, we shall compare now the performances of alternatives \texttt{D} and \texttt{G} in a pairwise perspective\index{showPairwiseComparison@\texttt{showPairwiseComparison()}}.
 \begin{lstlisting}[caption={Inspecting pairwise comparison between alternatives \texttt{G} and \texttt{D}},label=list:4.5,basicstyle=\ttfamily\scriptsize]
@@ -331,7 +331,7 @@ In Listing~\vref{list:4.5}, we notice that, with the given preference discrimina
 
 Yet, we must as well acknowledge in Listing~\vref{list:4.6}, that the cheapest alternative \texttt{C} is in fact \emph{strictly outranking} alternative \texttt{G}:  $r(C \succsim G)\, =\, +15/145\, >\, 0.0$, and $r(G \succsim C)\, =\, -15/145 \,<\, 0.0$.
 \begin{lstlisting}[caption={Inspecting pairwise comparison between alternatives \texttt{C} and \texttt{G}},label=list:4.6,basicstyle=\ttfamily\scriptsize]
->>> g.showPairwiseComparison('C','G')
+>>> bod.showPairwiseComparison('C','G')
  *------------  pairwise comparison ----*
   Comparing actions : (C,G)/(G,C)
   crit. wght.   g(x)     g(y)      diff.  |   ind.   pref.       (C,G)/(G,C)
@@ -355,8 +355,8 @@ Yet, we must as well acknowledge in Listing~\vref{list:4.6}, that the cheapest a
 
 We may finally notice in Listing~\vref{list:4.4} (Lines 16 and 19) that both alternatives \texttt{A} and \texttt{F} are reported as potential worst choice recommendation. Yet, this potential worst choice recommendation appears to be globally indeterminate. This confirms the \emph{incomparability} status of alternative \texttt{A} (see Fig.~\vref{fig:4.3}).
 \begin{lstlisting}
->>> gcd = ~(-g) # codual of g
->>> gcd.exportGraphViz(fileName='bestOfficeChoice',\
+>>> bodcd = ~(-bod) # codual of bod
+>>> bodcd.exportGraphViz(fileName='bestOfficeChoice',\
 ...                    bestChoice=['C','D'],\
 ...                    worstChoice=['F'])
   *---- exporting a dot file for GraphViz tools ---------*
@@ -368,7 +368,7 @@ We may finally notice in Listing~\vref{list:4.4} (Lines 16 and 19) that both alt
 \section{Weakly ordering the outranking digraph}
 \label{sec:4.6}
 
-To get a global insight in the overall strict outranking situations, we may use the \texttt{RankingByChoosingDigraph}\index{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class} constructor imported from the \texttt{transitive\-Digraphs}\index{transitiveDigraphs@\texttt{transitiveDigraphs} module} module for computing a \emph{ranking-by-choosing} result from the codual, i.e. the strict outranking digraph instance $gcd$ (see above). If the computing node supports multiple processor cores, \emph{first} and \emph{last} choosing iterations may be run in parallel (see Line 3 in List.~\vref{list:4.7}).
+To get a global insight in the overall strict outranking situations, we may use the \texttt{RankingByChoosingDigraph}\index{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class} class imported from the \texttt{transitive\-Digraphs}\index{transitiveDigraphs@\texttt{transitiveDigraphs} module} module for computing a \emph{ranking-by-choosing} result from the codual, i.e. the strict outranking digraph instance \texttt{bodcd} (see above). If the computing node supports multiple processor cores, \emph{first} and \emph{last} choosing iterations may be run in parallel (see Line 3 in List.~\vref{list:4.7}).
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/4-4-officeChoiceRanking.pdf}
@@ -404,7 +404,7 @@ It might be worth editing the criteria significance weights in the\\
 \end{itemize}
 What will become the best choice recommendation under this working hypothesis? \footnote{See also the notes of Lecture 7 from the MICS Algorithmic Decision Theory course \citep{ADT-L7}.} 
 
-In the next Chapter~\vref{sec:5} we precisely show how to edit a new performance tableau from a given template file. 
+In the next Chapter~\ref{sec:5} we precisely show how to edit a new performance tableau from a given template file. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \phantomsection
@@ -421,9 +421,9 @@ Following a seminar presentation in 2005 at the LAMSADE\footnote{Laboratoires d'
 
 His commentary was the following: Adding alternative \texttt{d} to the set of potential best choice candidates is not convincing as there exists in the given digraph the node \texttt{b}, which is better than \texttt{d}. The argument that the incomparability between \texttt{a} and \texttt{d} should favour \texttt{d} as potential best choice is interesting but another hypothesis could be that \texttt{b} perhaps outranks \texttt{a}. In this latter case, it seams clear that the actual best choice recommendation should be reduced to node \texttt{b}, unless one disposes of other information, like a performance tableau and/or the actual computation method of the outranking situations. In any case, one has to be very clear about the available information when judging a best choice procedure.
 
-It became thereafter clear for us all that both the lack of a specific performance tableau as well as the lack of a precisely defined algorithm for computing valid outranking situations does not allow to judge if a given digraph does indeed model a potential outranking relation. In our present bipolar-valued epistemic approach, a valid outranking digraph instance, following from a given performance tableau and the disjunctive epistemic fusion construction of the outranking relation (see Chapter~\vref{sec:3}), will necessarily verify the weak completeness condition and the coduality principle. As a consequence, incomparability situations are now modelled by epistemic indeterminateness not by the actual absence of a relation.
+It became thereafter clear for us all that both the lack of a specific performance tableau as well as the lack of a precisely defined algorithm for computing valid outranking situations does not allow to judge if a given digraph does indeed model a potential outranking relation. In our present bipolar-valued epistemic approach, a valid outranking digraph instance, following from a given performance tableau and the disjunctive epistemic fusion construction of the outranking relation (see Chapter~\ref{sec:3}), will necessarily verify the weak completeness condition and the coduality principle. As a consequence, incomparability situations are now modelled by epistemic indeterminateness not by the actual absence of a reciprocal outranking relation.
 
-The digraph put forward by D. Bouyssou in the October 2005 discussion is not weakly complete --node \texttt{a} is not outranking node \texttt{b} and vice versa-- does hence not represent, in our present sense, a valid outranking digraph instance. Yet, it may be a partial tournament and as such it is a strict outranking digraph, i.e. the asymmetric part --the codual-- of a valid outranking digraph. In this case, nodes \texttt{a} and \texttt{d} --the kernel of the strict outranking digraph-- would actually for sure outrank each other and, hence, represent both the natural best choice recommendation. However, in this codual digraph, node \texttt{a} becomes a \Condorcet winner --outranking for sure all other nodes-- and becomes the evident unique best choice recommendation.
+The digraph put forward by D. Bouyssou in the October 2005 discussion is not weakly complete --node \texttt{a} is not outranking node \texttt{b} and vice versa-- and does hence not represent, in our present sense, a valid outranking digraph instance. Yet, it may be a partial tournament and as such it may be a strict outranking digraph, i.e. the asymmetric part --the codual-- of a valid outranking digraph. In this case, nodes \texttt{a} and \texttt{d} --the kernel of the strict outranking digraph-- would actually for sure outrank each other and, hence, represent both the natural best choice recommendation. However, in this not strict codual digraph, node \texttt{a} is a \Condorcet winner --outranking for sure all other nodes-- and must become hence the evident unique best choice recommendation.
 
 It stays an interesting open mathematical problem to show (or not) that both necessary conditions: --weak completeness and the coduality principle-- are also sufficient for qualifying any bipolar-valued digraph as potential instance of an outranking digraph.
 
