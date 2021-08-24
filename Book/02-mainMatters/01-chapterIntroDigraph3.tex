@@ -30,48 +30,50 @@ or from \texttt{sourceforge.net}:
 \end{lstlisting}
 or, with a browser access, download either, from the github link above e or, from the sourceforge page the latest distribution zip archive and extract it.
 
-\noindent On Linux or Mac OS, \texttt{..\$ cd} to the extracted \texttt{Digraph3} directory:
+On Linux or Mac OS, \texttt{..\$ cd} to the extracted \texttt{Digraph3} directory. The follwoing shell command installs (with \emph{sudo} !) the \Digraph modules in the current running python environment:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White},numbers=none]
   .../Digraph3$ make install
 \end{lstlisting}
-installs (with \emph{sudo} !) the \Digraph modules in the current running python environment. Python-3.8 (or later) environment is recommended (see the makefile for adapting the \texttt{make install} command to your running python environment).
 
-\noindent Whereas:
+Python-3.8 (or later) environment is recommended (see the makefile for adapting the \texttt{make install} command to your running python environment). Whereas the following shell command installs the \Digraph modules in an activated virtual python environment:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   .../Digraph3$ make installVenv
 \end{lstlisting}
-installs the \Digraph modules in an activated virtual python environment.
+
 
 If the \emph{cython} (\href{https://cython.org}{https://cython.org}) C-compiled modules for Big Data applications are required, it is necessary to previously install the \emph{Cython} package in the running Python environment:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   ...$ python3 -m pip install cython
 \end{lstlisting}
+
 It is recommended to run a test suite:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   .../Digraph3$ make tests
 \end{lstlisting}
-Test results are stored in the \texttt{Digraph3/test} directory.
 
-\noindent Notice that the python3 \texttt{pytest} package is required:
+Test results are stored in the \texttt{Digraph3/test} directory. Notice that the python3 \texttt{pytest} package is required:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   ...$ python3 -m pip install pytest
 \end{lstlisting}
+
 A verbose (with \texttt{stdout} not captured) \texttt{pytest} suite may be run as follows:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   .../Digraph3$ make verboseTests
 \end{lstlisting}
+
 When the GNU \texttt{parallel} shell tool\index{parallel@\texttt{parallel} shell tool}\footnote{\href{https://www.gnu.org/software/parallel}{https://www.gnu.org/software/parallel}} is installed and multiple cores are detected, the tests may be executed in multiple processing mode:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   ../Digraph3$ make pTests
 \end{lstlisting}
 
-\noindent Individual module \texttt{pytest} suites are also provided (see the \texttt{makefile}), like the one for the \texttt{outrankingDigraphs} module (see Chapter{sec:2}):
+Individual module \texttt{pytest} suites are also provided (see the \texttt{makefile}), like the one for the \texttt{outrankingDigraphs} module (see Chapter \ref{sec:2}):
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
 ../Digraph3$ make outrankingDigraphsTests
 \end{lstlisting}
 
-\paragraph{Dependencies:}
-To be fully functional, the \Digraph resources mainly need:
+\paragraph{\textbf{Dependencies:}}
+
+\noindent To be fully functional, the \Digraph resources mainly need:
 
 \begin{itemize}[leftmargin=0.5cm,listparindent=0em,rightmargin=0.2cm,topsep=1pt]
 \item The \texttt{graphviz} tools \citep{graphViz}\footnote{\href{https://graphviz.org}{https://graphviz.org}}, and 
@@ -96,32 +98,32 @@ The main data handling modules of the \Digraph resources are the following:
 \noindent Various random generators are provided by the following modules:
 
 \begin{enumerate}[leftmargin=0.75cm]
-\item \texttt{randomDigraphs} module: Various random digraph models like random crisp digraphs (RandomDigraph class) or random bipolar-valued digraphs (\texttt{RandomValuationDigraph} class).
-\item \texttt{randomPerfTabs} module: Various implemented random performance tableau models, like Cost-Benefit tableaux (\texttt{RandomCBPerformance\-Tableau} class) or 3-Objectives tableaux (\texttt{Random3ObjectivesPer\-formance\-Tableau} class).
-\item \texttt{randomNumbers} module: Additional random number generators, not available in the standard Python \texttt{random.py} library, like a dscrete random variable (\texttt{DiscreteRandomVariable} class) or a Cauchy random variable (\texttt{CauchyRandomVariable} class)
+\item \texttt{randomDigraphs}: Various random digraph models like random crisp digraphs (RandomDigraph class) or random bipolar-valued digraphs (\texttt{Random\-ValuationDigraph} class).
+\item \texttt{randomPerfTabs}: Various implemented random performance tableau models, like Cost-Benefit tableaux (\texttt{RandomCBPerformance\-Tableau} class) or 3-Objectives tableaux (\texttt{Random3ObjectivesPer\-formance\-Tableau} class).
+\item \texttt{randomNumbers}: Additional random number generators, not available in the standard Python \texttt{random.py} library, like a dscrete random variable (\texttt{DiscreteRandomVariable} class) or a Cauchy random variable (\texttt{Cau\-chy\-RandomVariable} class)
 \end{enumerate}
 
 \noindent Following modules provide tools for \emph{sorting}, \emph{ranking} and \emph{rating} problems:
 
 \begin{enumerate}[leftmargin=0.75cm]
-\item \texttt{sortingDigraphs} module: Tools for solving sorting problems with the root \texttt{SortingDigraph} class and the main \texttt{QuantilesSortingDi\-graph} class;
-\item \texttt{linearOrders} module: Tools for solving linearly ranking or ordering problems with the root \texttt{LinearOrder} class;
-\item \texttt{transitiveDigraphs} module: Additional tools for handing transitive digraphs with root \texttt{TransitiveDigraph} class.
+\item \texttt{sortingDigraphs}: Tools for solving sorting problems with the root \texttt{Sor\-tingDigraph} class and the main \texttt{QuantilesSortingDi\-graph} class;
+\item \texttt{linearOrders}: Tools for solving linearly ranking or ordering problems with the root \texttt{LinearOrder} class;
+\item \texttt{transitiveDigraphs}: Additional tools for handing transitive digraphs with root \texttt{TransitiveDigraph} class.
 \end{enumerate}
 
 \noindent Tools for specifically handling Big Data are eventually provided by the following modules:
 
 \begin{enumerate}[leftmargin=0.75cm]
-\item \texttt{performanceQuantiles} module: Incremental representation of large performance tableaux via binned cumulated density functions per criteria; Depends on the \texttt{randomPerfTabs} module.
-\item \texttt{sparseOutrankingDigraphs} module: parse implementation design for bipolar-valued outranking digraphs of order $> 500$.
+\item \texttt{performanceQuantiles}: Incremental representation of large performance tableaux via binned cumulated density functions per criteria; Depends on the \texttt{randomPerfTabs} module.
+\item \texttt{sparseOutrankingDigraphs}: parse implementation design for bipolar-valued outranking digraphs of order $> 500$.
 \item \emph{Cythonized} modules: C-compiled and optimised Python modules for handling big performance tableaux and bipolar outranking digraphs of order $> 1000$.
 \end{enumerate}
 
-Readers interested in the technical implementation details are invited to consult the reference manual of the \Digraph resources, where they will find the documentation and complete source code of all \Digraph modules, classes and methods \citep{BIS-2021b}. 
+Readers interested in technical implementation details are invited to consult the reference manual of the \Digraph resources, where they will find the documentation and complete source code of all \Digraph modules, classes and methods \citep{BIS-2021b}. 
 
 \section{Starting a \Digraph terminal session}
 \label{sec:1.3}
-You may start an interactive Python3 terminal session in the \texttt{Digraph3} directory.
+After dowloading the \Digraph resources, one may start an interactive Python3 terminal session in the \texttt{Digraph3} directory.
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   $HOME/.../Digraph3$ python3
   Python 3.9.6 (v3.9.6:db3ff76da1, Jun 28 2021, 11:49:53) 
@@ -131,7 +133,7 @@ You may start an interactive Python3 terminal session in the \texttt{Digraph3} d
   >>>
 \end{lstlisting}
 
-For exploring the classes and methods provided by the \Digraph modules \footnote{See the \href{https://digraph3.readthedocs.io/en/latest/}{\Digraph documentation}} enter the Python3 commands following the session prompts marked with $>>>$ or \texttt{...}; the lines without a prompt are output from the Python3 interpreter. By convention, all class names and boolean parameters start with a capital case; names of other Python objects, like modules, methods, modules all start with a lower case. All Python names and code will be shown in a typewriting font.
+For exploring the classes and methods provided by the \Digraph modules enter the Python3 commands following the session prompts marked with $>>>$ or \texttt{...}; the lines without a prompt are output from the Python3 interpreter. Python class names and boolean parameters start by convention with a capital case; names of other Python objects, like modules, methods, modules start with a lower case. All Python names and code are shown in a \texttt{typewriting} font.
 \begin{lstlisting}[caption={Generating a digraph instance},label=list:1.1]
 >>> from randomDigraphs import RandomDigraph
 >>> dg = RandomDigraph(order=5,arcProbability=0.5,\
@@ -149,11 +151,11 @@ For exploring the classes and methods provided by the \Digraph modules \footnote
                        'gamma','notGamma']
 \end{lstlisting}
 
-In Listing~\vref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object \texttt{dg} of order 5 and arc probability of $50\%$. The resulting digraph of \emph{order} 5 --number of nodes called (decision) \emph{actions}-- and \emph{size} 12 --number of arcs-- is completely determined (see Line 11 in Listing~\vref{list:1.1}) .
+In Listing~\vref{list:1.1}  we import, for instance, from the \texttt{randomDigraphs}\index{randomDigraphs@\texttt{randomDigraphs} module} module the \texttt{RandomDigraph} class \index{RandomDigraph@\texttt{RandomDigraph} class} in order to generate a random digraph object \texttt{dg} of order 5 and arc probability of $50\%$. The resulting digraph of \emph{order} 5 --number of nodes called (decision) \emph{actions}-- and \emph{size} 12 --number of arcs-- is completely determined (see Line 11) .
 
 % \section{Permanent storage of a digraph object}
 % \label{sec:1.3}                   
-We may save the content of \texttt{dg} in a file called \texttt{tutorialDigraph.py}.
+The content of \texttt{dg} may be saved in a file named \texttt{tutorialDigraph.py}.
 \begin{lstlisting}
 >>> dg.save('tutorialDigraph')
  *--- Saving digraph in file: <tutorialDigraph.py> ---*
@@ -174,13 +176,13 @@ actions = OrderedDict([
     ('a5', {'shortName': 'a5',
           'name': 'random decision action'}),
  ])
- valuationdomain = {
+valuationdomain = {
      'min': Decimal('-1.0'),
      'med': Decimal('0.0'),
      'max': Decimal('1.0'),
      'hasIntegerValuation': True, # representation format
-}
- relation = {
+ }
+relation = {
      'a1': {'a1':Decimal('-1.0'), 'a2':Decimal('-1.0'),
               'a3':Decimal('1.0'), 'a4':Decimal('-1.0'),
               'a5':Decimal('-1.0'),},
@@ -275,7 +277,6 @@ The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} me
 \end{figure}
 
 Further methods are provided for inspecting this random \texttt{Digraph} object \texttt{dg}, like the following \texttt{showStatistics()}\index{showStatistics@\texttt{showStatistics()}} method.
-
 \begin{lstlisting}[caption={Inspecting a \texttt{Digraph} object},label=list:1.5]
 >>> dg.showStatistics()
  *----- general statistics -------------*
@@ -332,7 +333,7 @@ Mind that \texttt{show...()} methods output their results in the \emph{Python} c
 >>> dg.showHTMLRelationMap(relationName='r(x,y)',\
 ...                        rankingRule=None)
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/1-2-relationMap1.png}
 \caption{Browsing the relation map of the tutorial digraph. $+$ indicates a certainly valid and $-$ indicates a certainly  invalid relation, Here we find confirmed again that our random digraph instance \texttt{dg}, is indeed a crisp, i.e. $100\%$ determined irreflexive digraph instance}
@@ -343,7 +344,14 @@ Mind that \texttt{show...()} methods output their results in the \emph{Python} c
 % \label{sec:1.5}
 
 Some special types of digraph instances, like the \texttt{CirculantDigraph}\index{CirculantDigraph@\texttt{CirculantDigraph} class} or the \texttt{GridDigraph}\index{GridDigraph@texttt{GridDigraph} class} classes, are readily available (see Fig.~\vref{fig:1.3}).
-\begin{lstlisting}
+ \begin{figure}[ht]
+%\sidecaption[t]
+  \includegraphics[height=6cm]{Figures/1-3-c8.pdf} \hfill
+  \includegraphics[height=6cm]{Figures/1-3-grid3.pdf} \hfill
+  \caption{The circulant [1,3] digraph and the 3x3 grid digraph}
+\label{fig:1.3}       % Give a unique label
+\end{figure}
+\begin{lstlisting}[caption={Circulant digraphs and $n \times m$ grid digraphs},label=list:1.7]
 >>> from digraphs import CirculantDigraph,GridDigraph
 >>> c8 = CirculantDigraph(order=8,circulants=[1,3])
 >>> c8.exportGraphViz('c8')
@@ -356,21 +364,13 @@ Some special types of digraph instances, like the \texttt{CirculantDigraph}\inde
   *---- exporting a dot file for GraphViz tools ----*
    Exporting to grid3.dot
    dot -Grankdir=BT -Tpng grid3.dot -o grid3.png
-\end{lstlisting}
-\begin{figure}[h]
-%\sidecaption[t]
-  \includegraphics[height=6cm]{Figures/1-3-c8.pdf} \hfill
-  \includegraphics[height=6cm]{Figures/1-3-grid3.pdf} \hfill
-  \caption{The circulant [1,3] digraph and the 3x3 grid digraph}
-\label{fig:1.3}       % Give a unique label
-\end{figure}
+ \end{lstlisting}
 
-%\clearpage
 \vspace{1cm}
-The next Chapter~\vref{sec:2} will introduce the fondamental \emph{bipolar-valued digraph} model which is \emph{root object type} to all the digraph models implemented in the \Digraph modules \citep{BIS-2021b}.    
+The next Chapter~\ref{sec:2} will introduce the fondamental \emph{bipolar-valued digraph} model which is \emph{root object type} to all the digraph models implemented in the \Digraph modules \citep{BIS-2021b}.    
 
 %%%%%%% The chapter bibliography
-% %\normallatexbib
+% % \normallatexbib
 \bibliographystyle{spbasic}
 \bibliography{03-backMatters/reference}
 %\phantomsection
