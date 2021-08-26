@@ -139,17 +139,20 @@ We may use the \texttt{showCriteria()}\index{showCriteria@\texttt{showCriteria()
 >>> t.showCriteria(IntegerWeights=True)
  *----  criteria -----*
   C 'Costs'
-   Scale = (Decimal('0.00'), Decimal('50000.00'))
+   Preference direction: min
+   Scale = (-50000.00, 0.00)
    Weight = 45
    Threshold ind : 1000.00 + 0.00x ;  percentile:  9.5
    Threshold pref : 2500.00 + 0.00x ; percentile: 14.3
   Cf 'Comfort'
-   Scale = (Decimal('0.00'), Decimal('100.00'))
+   Preference direction: max
+   Scale = (0.00, 100.00)
    Weight = 6
    Threshold ind : 10.00 + 0.00x ;  percentile:   9.5
    Threshold pref : 20.00 + 0.00x ; percentile:  28.6
    Threshold veto : 80.00 + 0.00x ; percentile:  90.5
-    ...
+   ...
+   ...
 \end{lstlisting}
 
 On the \emph{Costs} criterion, $9.5\%$ of the performance differences are considered insignificant and $14.3\%$ below the preference discrimination threshold (see Lines 6-7 in List.~\vref{list:4.2}). On the qualitative \emph{Comfort} criterion, we observe again $9.5\%$ of insignificant performance differences (line 11). Due to the imprecision in the subjective grading, we notice here $28.6\%$ of performance differences below the preference discrimination threshold (Line 12). Furthermore, $100.0 - 90.5 = 9.5\%$ of the performance differences are judged \emph{considerably large} (Line 13) and will trigger hence a polarisation of the concerned outranking situations \citep{BIS-2013}. Same information is available for all the other criteria. 
@@ -166,7 +169,7 @@ A colorful comparison of all the performances is shown in Figure~\vref{fig:4.1} 
 \label{fig:4.1}       % Give a unique label
 \end{figure}
 
-Site \texttt{Ave} shows extreme and contradictory performances: highest \emph{Costs} and no \emph{Working Comfort} on the one hand, and total satisfaction with respect to \emph{Standing}, \emph{Proximity} and \emph{Parking facilities} on the other hand. Similar, but opposite, situation is given for site \texttt{Ces}: unsatisfactory \emph{Working Space}, no \emph{Standing} and no \emph{Working Comfort} on the one hand, and lowest \emph{Costs}, best \emph{Proximity} and \emph{Parking facilities} on the other hand. Contrary to these contradictory alternatives, we observe two appealing compromise decision alternatives: sites \texttt{Dom} and \texttt{Gar}. Finally, site \texttt{Fen} is clearly the less satisfactory alternative of all.
+Site \texttt{Ave} shows extreme and contradictory performances: highest \emph{Costs} and no \emph{Working Comfort} on the one hand, and total satisfaction with respect to \emph{Standing}, \emph{Proximity} and \emph{Parking facilities} on the other hand. Similar, but opposite, situation is given for site \texttt{Ces}: unsatisfactory \emph{Working Space}, no \emph{Standing} and no \emph{Working Comfort} on the one hand, and lowest \emph{Costs}, best \emph{Proximity} and \emph{Parking facilities} on the other hand. Contrary to these contradictory alternatives, we observe two appealing compromise alternatives: sites \texttt{Dom} and \texttt{Gar}. Finally, site \texttt{Fen} is clearly the less satisfactory alternative of all.
 
 To help now the CEO choosing the best office site, we are going to compute pairwise outranking situations on the set of potential decision alternatives (see \citet{BIS-2013}).
 
