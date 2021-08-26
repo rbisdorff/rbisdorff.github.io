@@ -173,7 +173,7 @@ The \texttt{objectives} attribute is methodologically useful for specifying the 
  ])
 \end{lstlisting}
 
-The importance weight sums up to 48 for each one of the three example decision objectives shown in Listing~\vref{list:5.3} so that the significance weight of each one of the 3 economic criteria is set to 16, of both societal criteria is set to 24, and of each one of the 6 environmental criteria is set to 8 (see Lines 8,13 and 19).
+The importance weight sums up to 48 for each one of the three example decision objectives shown in Listing~\vref{list:5.3} so that the significance weight of each one of the 3 economic criteria is set to 16, of both societal criteria is set to 24, and of each one of the 6 environmental criteria is set to 8 (see Lines 8, 13 and 19).
 
 Mind that the \texttt{objectives} attribute is always present in a \texttt{PerformanceTab\-leau} object instance, even when empty. In this case, we consider that each performance criterion canonically represents its own decision objective. The criterion significance weight equals in this case the corresponding decision objective's importance weight.
 
@@ -250,7 +250,8 @@ Criterion \texttt{c1} appears here to be a cardinal criterion to be minimized an
 \begin{lstlisting}
 >>> tcb.showCriteria(IntegerWeights=True)
  *----  criteria -----*
-  c1 'Costs/random cardinal cost criterion'
+   c1 'Costs/random cardinal cost criterion'
+    Preference direction: min
     Scale = (0.0, 100.0)
     Weight = 6 
     Threshold ind : 1.49 + 0.00x ; percentile: 5.13
