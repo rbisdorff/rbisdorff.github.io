@@ -1,24 +1,22 @@
 \chapter{Ranking with multiple incommensurable criteria}
 \label{sec:8}
 
-\abstract*{ The \Digraph python resources provide several algorithms for solving the ranking problem with a bipolar-valued outranking digraph. The \Copeland, \NetFlows, \Kemeny, \Slater, \Kohler, and the \RankedPairs ranking rules are presented and illustrated with a random outranking digraph.}
+\abstract*{ The \Digraph python resources provide several algorithms for solving the multiple incomensurable criteria ranking problem via bipolar-valued outranking digraphs. The \Copeland, \NetFlows, \Kemeny, \Slater, \Kohler, and the \RankedPairs ranking rules are introduced and illustrated with a random outranking digraph instance.}
 
-\begin{quotation}''... whether we are deciding between buying different commodity baskets, or making choices about what to do on a holiday, or deciding for whom to vote for in an election, we are inescapably involved in evaluating alternatives with non–commensurable aspects.''
-    
---Amartya Sen\index{Sen@\textsl{A. Sen}}, \emph{Idea of Justice}, Alle
-n Lane London, 2009.
+\begin{quotation}''... \emph{whether we are deciding between buying different commodity baskets, or making choices about what to do on a holiday, or deciding for whom to vote for in an election, we are inescapably involved in evaluating alternatives with non–commensurable aspects}.''
+
+  --\emph{Amartya Sen}, Idea of Justice, \citep{SEN-2009}\index{Sen@\emph{A. Sen}}
 \end{quotation}
 \vspace{1cm}
 
-\abstract{The \Digraph python resources provide several algorithms for solving the ranking problem with a bipolar-valued outranking digraph. The \Copeland, \NetFlows, \Kemeny, \Slater, \Kohler, and the \RankedPairs ranking rules are presented and illustrated with a random outranking digraph.}
+\abstract{The \Digraph python resources provide several algorithms for solving the the multiple incomensurable criteria ranking problem via bipolar-valued outranking digraphs. The \Copeland, \NetFlows, \Kemeny, \Slater, \Kohler, and the \RankedPairs ranking rules are introduced and illustrated with a random outranking digraph.}
 
 \section{The ranking problem}
 \label{sec:8.1}
 
-We need to rank without ties a set $X$ of items (usually decision alternatives) that are evaluated on multiple incommensurable performance criteria; yet, for which we may know their pairwise bipolar-valued \emph{strict outranking} characteristics, i.e. $r(x\, \succnsim \, y)$ for all $x, y \in X$ (see Section \ref{sec:3.5} and \citep{BIS-2013}).
+We need to rank without ties a set $X$ of items (usually decision alternatives) that are evaluated on multiple incommensurable performance criteria; yet, for which we may know their pairwise bipolar-valued \emph{strict outranking} characteristics, i.e. $r(x\, \succnsim \, y)$ for all $x, y \in X$ (see Sec.~\ref{sec:3.5} and \citep{BIS-2013}).
 
-Let us consider a didactic outranking digraph \texttt{g} generated from a random \emph{Cost-Benefit} performance tableau (see Section \ref{sec:6.3}) concerning 9 decision alternatives evaluated on 13 performance criteria. We may compute the corresponding {\em strict outranking digraph\/} with a codual transform (see Section \ref{sec:2.6}).
-
+Let us consider in Listing~\vref{list:8.1} a didactic outranking digraph \texttt{g} generated from a random \emph{Cost-Benefit} performance tableau (see Sec.~\ref{sec:6.3}) concerning 9 decision alternatives evaluated on 13 performance criteria. We may compute the corresponding \emph{strict outranking digraph} with a codual transform (see Sec. ~\ref{sec:2.6}).
 \begin{lstlisting}[caption={Random bipolar-valued strict outranking relation characteristics},label=list:8.1]
 >>> from randomPerfTabs import RandomCBPerformanceTableau   
 >>> t = RandomCBPerformanceTableau(numberOfActions=9,\
@@ -41,7 +39,7 @@ Let us consider a didactic outranking digraph \texttt{g} generated from a random
   'a9' |  0.00 +0.12 -1.00 -0.13 -0.03 -0.03 -1.00 -0.03   -   
 \end{lstlisting}
   
-Some ranking rules will work on the associated \Condorcet digraph\index{digraph!Condorcet}, i.e. the corresponding \emph{strict median cut} polarised strict outranking digraph.
+Some ranking rules will work on the associated \Condorcet digraph\index{Condorcet digrah}, i.e. the corresponding \emph{strict median cut} polarised strict outranking digraph.
  \begin{lstlisting}[caption={Median cut polarised strict outranking relation characteristics},label=list:8.2]
 >>> ccd = PolarisedOutrankingDigraph(gcd,\
 ...                   level=g.valuationdomain['med'],\
@@ -62,9 +60,9 @@ Some ranking rules will work on the associated \Condorcet digraph\index{digraph!
      'a9'  |   0   +1   -1   -1   -1   -1   -1   -1    -   
 \end{lstlisting}
 
-Unfortunately, such crisp median-cut \Condorcet digraphs, associated with a given strict outranking digraph, only exceptionally present a linear ordering. Usually, pairwise majority comparisons do not even render a \emph{complete} or, at least, a \emph{transitive} partial order. There may even frequently appear \emph{cyclic} outranking situations (see Section~\vref{sec:7.4}).
+Unfortunately, such crisp median-cut \Condorcet digraphs, associated with a given strict outranking digraph, only exceptionally model a linear ordering. Usually, pairwise majority comparisons do not even render a \emph{complete} or, at least, a \emph{transitive} partial order. There may even frequently appear \emph{cyclic} outranking situations (see Sec.~\ref{sec:7.4}).
 
-To discover how \emph{difficult} this ranking problem can get here, we have a look in Fig.~\vref{fig:8.1} at the corresponding strict outranking digraph \emph{graphviz} drawing \footnote{ The \texttt{exportGraphViz()} method is depending on drawing tools from graphviz software (https://graphviz.org/).}.
+To discover how \emph{difficult} this ranking problem can get, we have a look in Figure.~\vref{fig:8.1} at the corresponding strict outranking digraph \emph{graphviz} drawing \footnote{ The \texttt{exportGraphViz()} method is depending on drawing tools from graphviz software (https://graphviz.org/).}.
 \begin{lstlisting}
 >>> gcd.exportGraphViz(fileName='rankingTutorial')
  *---- exporting a dot file for GraphViz tools ---------*
@@ -72,14 +70,14 @@ To discover how \emph{difficult} this ranking problem can get here, we have a lo
   dot -Grankdir=BT -Tpng rankingTutorial.dot\
                    -o rankingTutorial.png
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/8-1-rankingTutorial.pdf}
+\includegraphics[width=7cm]{Figures/8-1-rankingTutorial.pdf}
 \caption{The strict outranking relation $\succnsim$ shown here is, for instance, \emph{not transitive}: alternative \texttt{a8} outranks alternative \texttt{a6} and alternative \texttt{a6} outranks \texttt{a4}, however, \texttt{a8} does not outrank \texttt{a4}. Furthermore, alternatives \texttt{a6}, \texttt{a7} and \texttt{a8} show a cyclic outranking relation}
 \label{fig:8.1}       % Give a unique label
 \end{figure}
 
-We may compute the \emph{transitivity degree} of the outranking digraph shown in Fig.~\vref{fig:8.1}, i.e. the ratio of the difference between the number of outranking arcs and the number of transitive arcs over the difference of the number of arcs of the transitive closure minus the transitive arcs of the digraph \texttt{gcd}.
+The \texttt{computeTransitivityDegree()} method\index{computeTransitivityDegree@\texttt{computeTransitivityDegree()}} computes the \emph{transitivity degree} of the outranking digraph shown in Figure~\vref{fig:8.1}, i.e. the ratio of the difference between the number of outranking arcs and the number of transitive arcs over the difference of the number of arcs of the transitive closure minus the transitive arcs of the digraph \texttt{gcd}.
 \begin{lstlisting}
 >>> gcd.computeTransitivityDegree(Comments=True)
  Transitivity degree of graph <codual_rel_randomCBperftab>
@@ -88,7 +86,7 @@ We may compute the \emph{transitivity degree} of the outranking digraph shown in
 \end{lstlisting}    
 With only $49\%$ of the required transitive arcs, the strict outranking relation here is hence very far from being transitive; a serious problem when a linear ordering of the decision alternatives is looked for.
 
-Let us furthermore see if there are any cyclic outrankings.
+Let us furthermore check out with if there are any cyclic outrankings.
 \begin{lstlisting}
 >>> gcd.computeChordlessCircuits()
 >>> gcd.showChordlessCircuits()
@@ -96,6 +94,7 @@ Let us furthermore see if there are any cyclic outrankings.
   *---- Chordless circuits ----*    
   1: ['a6', 'a7', 'a8'] , credibility : 0.033
 \end{lstlisting}
+
 There is one chordless circuit detected in the given strict outranking digraph \texttt{gcd}, namely alternative \texttt{a6} outranks alternative \texttt{a7}, the latter outranks \texttt{a8}, and \texttt{a8} outranks again alternative \texttt{a6} (see Fig.~\vref{fig:8.1}). Any potential linear ordering of these three alternatives will, in fact, always contradict somehow the given outranking relation.
 
 Now, several heuristic ranking rules have been proposed for constructing a linear ordering which is closest in some specific sense to a given outranking relation. The \Digraph resources provide some of the most common of these ranking rules, like \Copeland 's, \Kemeny 's, \Slater 's, \Kohler 's, and the \RankedPairs ranking rule.
@@ -103,7 +102,7 @@ Now, several heuristic ranking rules have been proposed for constructing a linea
 \section{The \Copeland ranking}
 \label{sec:8.2}
 
-\begin{definition}\label{def:copeland}\Copeland 'sranking rule computes for each alternative a score resulting from the sum of the differences between the crisp \emph{strict outranking} characteristics $r(x\, \succnsim \,y)_{>0}$ and the crisp \emph{strict outranked} characteristics $r(y\, \succnsim \, x)_{>0}$  for all pairs of alternatives where $y$ is different from $x$. The alternatives are ranked in decreasing order of these \Copeland scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the alternatives \citep{COP-1951}.
+\begin{definition}\label{def:8.1} \Copeland 's ranking rule computes for each alternative a score resulting from the sum of the differences between the crisp \emph{strict outranking} characteristics $r(x\, \succnsim \,y)_{>0}$ and the crisp \emph{strict outranked} characteristics $r(y\, \succnsim \, x)_{>0}$  for all pairs of alternatives where $y$ is different from $x$. The alternatives are ranked in decreasing order of these \Copeland scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the alternatives \citep{COP-1951}.
 \end{definition}
 
 \Copeland 's rule, the most intuitive one as it works well for any strict outranking relation which models a linear order on the \emph{median cut} strict outranking digraph \texttt{ccd}. 
@@ -123,9 +122,10 @@ Now, several heuristic ranking rules have been proposed for constructing a linea
   Copeland Ranking:
   ['a5','a1','a6','a7','a8','a4','a9','a3','a2']
 \end{lstlisting}
-Alternative \texttt{a5} obtains here the best \Copeland score ($+12$), followed by alternatives \texttt{a1}, \texttt{a6} and \texttt{a7} with same score ($+2$); following the lexicographic rule, \texttt{a1} is hence ranked before \texttt{a6} and \texttt{a6} before \texttt{a7}. Same situation is observed for \texttt{a4} and \texttt{a9} with a score of $-3$ (see Listing~\vref{list:8.3} Lines 4-12).
 
-\Copeland 's ranking rule is in fact \emph{invariant} under the codual transform (see Section~\vref{sec:2.6}) and renders a same linear order indifferently from digraphs \texttt{g} or \texttt{gcd} . The resulting ranking (see Listing~\vref{list:8.3} Line 14) is rather correlated ($+0.463$) with the given pairwise outranking relation in the ordinal \Kendall sense\footnote{See Chapter~\vref{sec:16} and \citet{BIS-2012a}.}.
+Alternative \texttt{a5} obtains here the best \Copeland score ($+12$), followed by alternatives \texttt{a1}, \texttt{a6} and \texttt{a7} with same score ($+2$); following the lexicographic rule, \texttt{a1} is hence ranked before \texttt{a6} and \texttt{a6} before \texttt{a7}. Same situation is observed for \texttt{a4} and \texttt{a9} with a score of $-3$ (see List.~\vref{list:8.3} Lines 4-12). \Copeland 's ranking rule is in fact \emph{invariant} under the \emph{codual} transform (see Sec.~\ref{sec:2.6}) and renders a same linear order indifferently from digraphs \texttt{g} or \texttt{gcd} .
+
+The ranking result, shown in Line 14, is rather correlated ($+0.463$) with the given pairwise outranking relation in the ordinal \Kendall sense\footnote{See Chapter~\vref{sec:16} and \citet{BIS-2012a}.}.
 \begin{lstlisting}[caption={Checking the quality of the \Copeland ranking},label=list:8.4]
 >>> corr = g.computeRankingCorrelation(cop.copelandRanking)
 >>> g.showCorrelation(corr)
@@ -134,11 +134,11 @@ Alternative \texttt{a5} obtains here the best \Copeland score ($+12$), followed 
    Valued equivalalence      : +0.107
    Epistemic determination   :  0.230
 \end{lstlisting}
-With an epistemic determination level of $0.230$ (see above), the \emph{extended} \Kendall $\tau$ index is in fact computed on $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the pairwise strict outranking comparisons. Furthermore, the bipolar-valued \emph{relational equivalence} characteristics between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the corresponding \Copeland ranking.
 
-The \Copeland scores deliver actually only a \emph{weak ranking}, i.e. a ranking with potential ties. This weak ranking may be constructed with the\\
-\texttt{WeakCopelandOrder} class \index{WeakCopelandOrder@\texttt{WeakCopelandOrder} class}.
-\begin{lstlisting}[caption={Computing a weak \Copeland ranking},label=list:8.4]
+With an epistemic determination level of $0.230$ (see List.~\vref{list:8.4} Line 6), the \emph{extended} \Kendall $\tau$ index is in fact computed on $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the pairwise strict outranking comparisons. Furthermore, the bipolar-valued \emph{relational equivalence} characteristics between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the corresponding \Copeland ranking (see Chap.~\ref{sec:16}).
+
+The \Copeland scores deliver actually only a \emph{weak ranking}, i.e. a ranking with ties. This weak ranking may be constructed with the \texttt{WeakCopelandOrder} class \index{WeakCopelandOrder@\texttt{WeakCopelandOrder} class} from the \texttt{transitiveDigraphs} module.\index{transitiveDigraphs@\texttt{transitiveDigraphs} module}
+\begin{lstlisting}[caption={Computing a weak \Copeland ranking},label=list:8.5]
 >>> from transitiveDigraphs import WeakCopelandOrder
 >>> wcop = WeakCopelandOrder(g)
 >>> wcop.showRankingByChoosing()
