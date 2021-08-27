@@ -87,6 +87,7 @@
 \indexentry{showCourseStatistics@\texttt{showCourseStatistics()}|hyperpage}{86}
 \indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}|hyperpage}{86}
 \indexentry{votingProfiles@\texttt{votingProfiles} module|hyperpage}{89}
+\indexentry{LinearVotingProfile@\texttt{LinearVotingProfile} class|hyperpage}{89}
 \indexentry{RandomLinearVotingProfile@\texttt{RandomLinearVotingProfile} class|hyperpage}{89}
 \indexentry{showLinearBallots@\texttt{showLinearBallots()}|hyperpage}{90}
 \indexentry{computeUninominalVotes@\texttt{computeUninominalVotes}()|hyperpage}{90}
@@ -103,8 +104,9 @@
 \indexentry{CondorcetWinner@\Condorcet winner|hyperpage}{93}
 \indexentry{computeCondorcetWinners@\texttt{computeCondorcetWinners()}|hyperpage}{93}
 \indexentry{computeChordlessCircuits@\texttt{computeChordlessCircuits()}|hyperpage}{95}
-\indexentry{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}|hyperpage}{95}
-\indexentry{computeRankingByChoosing@\texttt{computeRankingByChoosing()}|hyperpage}{98}
+\indexentry{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}|hyperpage}{96}
+\indexentry{computeRankingByChoosing@\texttt{computeRankingByChoosing()}|hyperpage}{100}
+\indexentry{showRankingByChoosing@\texttt{showRankingByChoosing()}|hyperpage}{100}
 \indexentry{Sen@\textsl{A. Sen}|hyperpage}{103}
 \indexentry{digraph!Condorcet|hyperpage}{104}
 \indexentry{WeakCopelandOrder@\texttt{WeakCopelandOrder} class|hyperpage}{107}

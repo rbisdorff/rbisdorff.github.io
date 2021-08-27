@@ -1,14 +1,14 @@
 \chapter{Who wins the election ?}
 \label{sec:7}
 
-\abstract*{ This chapter is more specifically devoted to handling linear voting profiles and computing the winner of such election results like the simple majority or the instant-run-off winner. By following \Condorcet recipe, we also consider pairwise comparisons of election candidates and balance the number of times the first beats the second against the number of times the second beats the first. Thus we obtain the majority margins digraph, in fact a bipolar-valued digraph. When the voters express contradictory linear voting profiles we may naturally observe cyclic social preferences without seeing any paradox in this situation. Finally we present a more politically realistic random generator for linear voting profiles who takes into account pre-election polls.}
+\abstract*{ This chapter is more specifically devoted to handling linear voting profiles and computing the winner of such election results like the plurality or the instant-run-off winner. By following \Condorcet recipe, we also consider pairwise comparisons of election candidates and balance the number of times the first beats the second against the number of times the second beats the first. Thus we obtain the majority margins digraph, in fact a bipolar-valued digraph. When the voters express contradictory linear voting profiles we may naturally observe cyclic social preferences without seeing any paradox in this situation. Finally we present a more politically realistic random generator for linear voting profiles who takes into account pre-election polls.}
   
-\abstract{ This chapter is more specifically devoted to handling linear voting profiles and computing the winner of such election results like the simple majority or the instant-run-off winner. By following \Condorcet recipe, we also consider pairwise comparisons of election candidates and balance the number of times the first beats the second against the number of times the second beats the first. Thus we obtain the majority margins digraph, in fact a bipolar-valued digraph. When the voters express contradictory linear voting profiles we may naturally observe cyclic social preferences without seeing any paradox in this situation. Finally we present a more politically realistic random generator for linear voting profiles who takes into account pre-election polls.}
+\abstract{ This chapter is more specifically devoted to handling linear voting profiles and computing the winner of such election results like the plurality or the instant-run-off winner. By following \Condorcet recipe, we also consider pairwise comparisons of election candidates and balance the number of times the first beats the second against the number of times the second beats the first. Thus we obtain the majority margins digraph, in fact a bipolar-valued digraph. When the voters express contradictory linear voting profiles we may naturally observe cyclic social preferences without seeing any paradox in this situation. Finally we present a more politically realistic random generator for linear voting profiles who takes into account pre-election polls.}
 
 \section{Linear voting profiles}
 \label{sec:7.1}
 
-The \texttt{votingProfiles}\index{votingProfiles@\texttt{votingProfiles} module} module provides resources for handling election results \citep{ADT-L2}. To illustrates these resources let us consider elections involving a finite set of candidates and a finite set of weighted voters, who express their voting preferences in a complete linear ranking (without ties) of the candidates. The module provides a \texttt{RandomLinearVotingProfile} class \index{RandomLinearVotingProfile@\texttt{RandomLinearVotingProfile} class} for generating random instances of such \texttt{LinearVotingProfile} class instances. In the interactive Python session shown in Listing~\vref{list:7.1}, a random linear voting profile is generated, for instance, for the election of 3 candidates by 5 voters:
+The \texttt{votingProfiles}\index{votingProfiles@\texttt{votingProfiles} module} module provides resources like the \texttt{LinearVoting\-Profile} class\index{LinearVotingProfile@\texttt{LinearVotingProfile} class} for handling election results \citep{ADT-L2}. To illustrates these resources let us consider elections involving a set of eligible candidates and a set of weighted voters, who express their voting preferences in a complete linear ranking (without ties) of the eligible candidates. The module provides a \texttt{RandomLinear\-VotingProfile} class \index{RandomLinearVotingProfile@\texttt{RandomLinearVotingProfile} class} for generating random instances of such \texttt{LinearVot\-ingProfile} type. In the interactive Python session shown in Listing~\vref{list:7.1}, a random linear voting profile is generated, for instance, for the election of 3 candidates by 5 voters:
 \begin{lstlisting}[caption={Example of random linear voting profile},label=list:7.1]
 >>> from votingProfiles import\
 ...                         RandomLinearVotingProfile
@@ -45,7 +45,7 @@ The \texttt{LinearVotingProfile} data concerning the eligible candidates and the
     nbr. of voters: 15
 \end{lstlisting}
 
-Editing of the linear voting profile may be done by saving first the data into a file, then edit this file, and reload it again.
+Editing of this linear voting profile may be done by saving first the data into a file, then edit this file, and reload it again.
 \begin{lstlisting}
 >>> lvp.save(fileName='tutorialLinearVotingProfile1')
    *--- Saving linear profile in file:
@@ -65,7 +65,7 @@ The \texttt{computeUninominalVotes()} and the \texttt{computeSimpleMajority\-Win
   ['c3']
 \end{lstlisting}
 
-As we observe no absolute majority ($8/15$) of votes for any of the three candidates, one may look with the \texttt{computeInstantRunoffWinner()} method for the \emph{instant runoff} winner\index{computeInstantRunoffWinner@\texttt{computeInstantRunoffWinner()}} instead (see \citet{ADT-L2}).
+As we observe no absolute majority ($8/15$) of votes for any one of the three candidates, one may look, with the \texttt{computeInstantRunoffWinner()} method, for the \emph{instant runoff} winner\index{computeInstantRunoffWinner@\texttt{computeInstantRunoffWinner()}} instead (see \citet{ADT-L2}).
 \begin{lstlisting}[caption={Example Instant Run Off Winner},label=list:7.2]
 >>> lvp.computeInstantRunoffWinner(Comments=True)
   Half of the Votes =  7.50
@@ -78,14 +78,14 @@ As we observe no absolute majority ($8/15$) of votes for any of the three candid
 	remaining candidates =  ['c1', 'c3']
     ==> stage =  2
 	remaining candidates ['c1', 'c3']
-	uninominal votes {'a1': 8, 'a3': 7}
+	uninominal votes {'c1': 8, 'c3': 7}
 	minimal number of votes =  7
 	maximal number of votes =  8
 	candidate a1 obtains an absolute majority
    Instant run off winner: ['c1']
  \end{lstlisting}
 
-In Listing~\vref{list:7.2} no candidate obtains in stage 1 an absolute majority of votes. Candidate \texttt{a2} obtains the minimal number of votes (2/15) and is, hence, eliminated. In stage 2, candidate \texttt{c1} eventually obtains an absolute majority of the votes (8/15) and is hence elected.
+In Listing~\vref{list:7.2} no candidate obtains in stage 1 an absolute majority of votes. Candidate \texttt{c2} obtains the minimal number of votes (2/15) and is, hence, eliminated. In stage 2, candidate \texttt{c1} eventually obtains an absolute majority of the votes (8/15) and is hence elected.
 
 One may also follow the \emph{Chevalier de Borda}'s advice and, after a \emph{rank analysis} of the linear ballots, compute the \Borda \emph{score}\index{Borda score} -the average rank- of each candidate and hence determine the \Borda \emph{winner(s)} \citep{BOR-1781}\index{computeRankAnalysis@\texttt{computeRankAnalysis()}}\index{computeBordaWinners@\texttt{computeBordaWinners}()}.
 \begin{lstlisting}[caption={Example of \Borda rank scores},label=list:7.3]
@@ -100,11 +100,11 @@ One may also follow the \emph{Chevalier de Borda}'s advice and, after a \emph{ra
  ['c1']
 \end{lstlisting}
 
-In  Listing~\vref{list:7.3}, Candidate \texttt{c1} obtains the minimal \Borda score, followed by candidate \texttt{c3} and finally candidate \texttt{c2} (see). The corresponding \Borda \emph{rank analysis table} may be printed out with the \texttt{showRankAnalysisTable()} method.\index{showRankAnalysisTable@\texttt{showRankAnalysisTable()}}
-\begin{lstlisting}[caption={Rank analysis example},label=list:7.4]
+In  Listing~\vref{list:7.3}, Candidate \texttt{c1} obtains the minimal \Borda score, followed by candidate \texttt{c3} and finally candidate \texttt{c2}. The corresponding \Borda \emph{rank analysis table} may be printed out with the \texttt{showRankAnalysisTable()} method.\index{showRankAnalysisTable@\texttt{showRankAnalysisTable()}}
+\begin{lstlisting}[caption={Rank analysis example with \Borda scores},label=list:7.4]
 >>> lvp.showRankAnalysisTable()
  *----  Borda rank analysis tableau -----*
-  candi- | alternative-to-rank |     Borda
+  candi- | alternative-to-rank |     Borda 
   dates  |   1     2     3     | score  average
   -------|-------------------------------------
    'c1'  |   6     9     0     | 24/15   1.60
@@ -112,12 +112,12 @@ In  Listing~\vref{list:7.3}, Candidate \texttt{c1} obtains the minimal \Borda sc
    'c2'  |   2     5     8     | 36/15   2.40
  \end{lstlisting}
 
-In our randomly generated election results, we are lucky: Candidate \texttt{c1} is both the instant runoff winner and the \emph{Borda} winner (see List.~\vref{list:7.2} and List.~\vref{list:7.3}). However, one could also follow the \emph{Marquis de Condorcet}'s advice, and compute the \emph{majority margins} obtained by voting for each individual pair of candidates \citep{CON-1784}.
+In our randomly generated election results, we are lucky: Candidate \texttt{c1} is both the instant runoff winner and the \Borda winner (see List.~\vref{list:7.2} and List.~\vref{list:7.3}). However, one could also follow the \emph{Marquis de Condorcet}'s advice, and compute the \emph{majority margins} obtained by voting for each individual pair of candidates \citep{CON-1784}.
 
 \section{The majority margins digraph}
 \label{sec:7.3}
 
-Candidate \texttt{c1} is, for instance, ranked four times before and once behind candidate \texttt{c2}. Hence the corresponding \emph{majority margin}\index{majority margin} $M(a_1,a_2)$ is $4 - 1 = +3$. These pairwise \emph{majority margins} define on the set of candidates what we call the \emph{majority margins digraph}\index{majority margins digraph}. The \texttt{MajorityMarginsDigraph} class\index{MajorityMarginsDigraph@\texttt{MajorityMarginsDigraph} class} is provided for handling such kind of digraphs.
+Candidate \texttt{c1} is, for instance, ranked four times before and once behind candidate \texttt{c2}. Hence, due to the voters' weights, the corresponding \emph{majority margin}\index{majority margin} $M(\mathtt{c1},\mathtt{c2})$ amounts to  $(3+1+5+4)\, -\,(2)\; =\; +11$ (see List.~\vref{list:7.1} Lines 10-15). These pairwise \emph{majority margins} define on the set of candidates what we call the \emph{majority margins digraph}\index{majority margins digraph}. The \texttt{MajorityMarginsDigraph} class\index{MajorityMarginsDigraph@\texttt{MajorityMarginsDigraph} class} is handling such kind of digraphs.
 \begin{lstlisting}[caption={Example of \emph{Majority Margins} digraph},label=list:7.5]
 >>> from votingProfiles import MajorityMarginsDigraph
 >>> mmdg = MajorityMarginsDigraph(lvp,\
@@ -153,15 +153,15 @@ Candidate \texttt{c1} is, for instance, ranked four times before and once behind
     Valuation domain: [-15;+15]
 \end{lstlisting}
 
-Notice in Listing~\vref{list:7.5} Lines 29-31 that, in the case of linear voting profiles, majority margins always verify a \emph{zero sum property}: $M(x,y) + M(y,x) = 0$ for all candidates $x$ and $y$. This is not true in general for arbitrary voting profiles. The \emph{majority margins} digraph of linear voting profiles defines in fact a \emph{weak tournament}\index{weak tournament} and belongs, hence, to the class of \emph{self-codual} bipolar-valued digraphs\footnote{The class of self-codual bipolar-valued digraphs consists of all weakly asymmetric digraphs, i.e. digraphs containing only asymmetric and/or indeterminate links. Limit cases consists of, on the one side, full tournaments with indeterminate reflexive links, and, on the other side, fully indeterminate digraphs. In this class, the converse (inverse $\sim$) operator is indeed identical to the dual (negation $-$ ) one.}.
+Notice in Listing~\ref{list:7.5} Lines 29-31 that, in the case of linear voting profiles, majority margins always verify a \emph{zero sum property}: $M(x,y) + M(y,x) = 0$ for all candidates $x$ and $y$. This is not true in general for arbitrary voting profiles. The \emph{majority margins} digraph of linear voting profiles defines in fact a \emph{weak tournament}\index{weak tournament} and belongs, hence, to the class of \emph{self-codual} bipolar-valued digraphs (see Sec.~\ref{sec:2.6})\footnote{The class of self-codual bipolar-valued digraphs consists of all weakly asymmetric digraphs, i.e. digraphs containing only asymmetric and/or indeterminate links. Limit cases consists of, on the one side, full tournaments with indeterminate reflexive links, and, on the other side, fully indeterminate digraphs. In this class, the converse (inverse $\sim$) operator is indeed identical to the dual (negation $-$ ) one.}.
     
-Now, a candidate $x$, showing a positive majority margin $M(x,y)$, is beating candidate $y$  with an absolute majority in a pairwise voting. Hence, a candidate showing only positive terms in their row in the \emph{majority margins} digraph relation table, beats all other candidates with absolute majority of votes. \Condorcet recommends to declare this candidate (is always unique, why?) the winner of the election. Here we are lucky, it is again candidate \texttt{c1} who is hence the \Condorcet winner\index{CondorcetWinner@\Condorcet winner} (see List.~\vref{list:7.5} Line 29). This result is confirmed below by the \texttt{computeCondorcetWinners()} method.\index{computeCondorcetWinners@\texttt{computeCondorcetWinners()}} 
+A candidate $x$, showing a positive majority margin $M(x,y)$, is beating candidate $y$  with an absolute majority in a pairwise voting. Hence, a candidate showing only positive terms in their row in the \emph{majority margins} digraph relation table, beats all other candidates with absolute majority of votes. \Condorcet recommends to declare this candidate (is always unique, why?) the winner of the election. Here we are lucky, it is again candidate \texttt{c1} who is the \Condorcet winner\index{CondorcetWinner@\Condorcet winner} (see List.~\vref{list:7.5} Line 29). This result is confirmed below by the \texttt{computeCondorcetWinners()} method.\index{computeCondorcetWinners@\texttt{computeCondorcetWinners()}} 
 \begin{lstlisting}
 >>> mmdg.computeCondorcetWinners()
- ['a1']  
+ ['c1']  
 \end{lstlisting}    
 
-By seeing the majority margins like a \emph{bipolar-valued characteristic function} of a global voters' preference relation defined on the set of candidates, we may use all operational resources of the generic \texttt{Digraph} class (see Chapter~\ref{sec:2}), and especially its \texttt{exportGraphViz()} method for visualising in Figure~\vref{fig:7.1} the election result.
+By seeing the majority margins like a \emph{bipolar-valued characteristic function} of a global voters' preference relation defined on the set of eligible candidates, we may reuse all operational resources of the generic \texttt{Digraph} class (see Chap.~\ref{sec:2}), and especially its \texttt{exportGraphViz()} method for visualising in Figure~\vref{fig:7.1} the election result.
 \begin{lstlisting}
 >>> mmdg.exportGraphViz(\
 ...            fileName='tutorialLinearBallots',\
@@ -174,14 +174,16 @@ By seeing the majority margins like a \emph{bipolar-valued characteristic functi
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/7-1-tutorialBallots.pdf}
-\caption{Visualising an election result. In the Figure we notice that the \emph{majority margins} digraph from our example linear voting profile gives a linear order of the candidates: \texttt{c1} $>$ \texttt{c3} $>$ \texttt{c2}, the same actually as given by the \Borda scores (see List.~\vref{list:7.4})}
+\caption{Visualising an election result. In the Figure we notice that the \emph{majority margins} digraph from our example linear voting profile models in fact a linear ranking of the candidates: \texttt{c1} $>$ \texttt{c3} $>$ \texttt{c2}, the same actually as modelled by the \Borda scores (see List.~\vref{list:7.4})}
 \label{fig:7.1}       % Give a unique label
 \end{figure}
+
+That a majority margins digraph models a linear ranking of the eligible candidates, as shown in Figure~\vref{fig:7.1}, represents a very unlikely event. Usually, when aggregating linear ballots, there appear cyclic social preferences.
 
 \section{Cyclic social preferences}
 \label{sec:7.4}
 
-That a majority margins digraph models a linear ranking of the election candidates represents a very unlikely event. Usually, when aggregating linear ballots, there appear cyclic social preferences. Let us consider for instance in Listing~\vref{list:7.6} the following linear voting profile $v$ and construct the corresponding majority margins digraph.
+Let us consider for instance in Listing~\vref{list:7.6} the following linear voting profile $v$ and construct the corresponding majority margins digraph.
 \begin{lstlisting}[caption={Example of cyclic social preferences},label=list:7.6]
 >>> v.showLinearBallots()
    voters(weight): candidates rankings
@@ -207,21 +209,21 @@ That a majority margins digraph models a linear ranking of the election candidat
     Valuation domain: [-9;+9]
 \end{lstlisting}    
 
-Now, we cannot find any completely positive row in the relation table (see Lines 17 - 21). No one of the five candidates is beating all the others with an absolute majority of votes. There is no \Condorcet winner anymore. In fact, when looking in Figure~\vref{fig:7.2} at a graphviz drawing of this \emph{majority margins} digraph, we may observe \textbf{cyclic} preferences, like \texttt{c1} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}) for instance.
+Now we cannot find anymore a completely positive row in the relation table (see Lines 17 - 21 above). No one of the five candidates is beating all the others with an absolute majority of votes. There is no \Condorcet winner anymore. In fact, when looking in Figure~\vref{fig:7.2} at a \texttt{graphviz} drawing of this \emph{majority margins} digraph, we may observe \emph{cyclic} preferences, like \texttt{c1} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}.
 \begin{lstlisting}
 >>> mmdg.exportGraphViz('cycles',graphType='pdf')
  *---- exporting a dot file for GraphViz tools ----*
   Exporting to cycles.dot
   dot -Grankdir=BT -Tpng cycles.dot -o cycles.pdf
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/7-2-cycles.pdf}
 \caption{Cyclic social preferences: \texttt{c1} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}) for instance}
 \label{fig:7.2}       % Give a unique label
 \end{figure}
 	   
-But, there may be many cycles appearing in a \emph{majority margins} digraph, and, we may detect and enumerate all minimal chordless circuits in a Digraph instance with the \texttt{computeChordlessCircuits} method.\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}}
+But, there may be many circuits appearing in a \emph{majority margins} digraph. Now, we can detect and enumerate all minimal chordless circuits in a \texttt{Digraph} instance with the \texttt{computeChordlessCircuits} method.\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}}
 \begin{lstlisting}
 >>> mmdg.computeChordlessCircuits()
  [(['c2', 'c3', 'c1'], frozenset({'c2', 'c3', 'c1'})), 
@@ -229,42 +231,80 @@ But, there may be many cycles appearing in a \emph{majority margins} digraph, an
   (['c2', 'c4', 'c1'], frozenset({'c2', 'c1', 'c4'}))]
 \end{lstlisting}
 
-In our example voting profile \texttt{v}, we actually obtain three chordless circuits and \Condorcet 's approach for determining the winner of an election is hence \emph{not decisive} in all circumstances. One needs exploiting more sophisticated approaches for finding the winner of the election on the basis of the majority margins of the given linear ballots (see Chap.~\ref{sec:8} and \citet{BIS-2008a}). 
-
-The browser heat map view on voting profiles\index{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}} is, for instance a tool for showing voting results. As the number of voters is usually much larger than the number of candidates, the voting heatmap is by default transposed into a voters $\times$ candidates view. In Figure~\vref{fig:7.3} Line 2 we keep however the standard view: alternatives (candidates) $\times$ criteria (voters). 
+In our example voting profile \texttt{v}, we actually obtain three chordless social preference circuits and determining the winner of this election result becomes non trivial. There is, for instance, no more any instant-runoff winner.
 \begin{lstlisting}
->>> v.showHTMLVotingHeatmap(rankingRule='NetFlows',
-...                         Transposed=False)
+>>> v.computeInstantRunoffWinner(Comments=True)
+Total number of votes =  9.000
+Half of the Votes =  4.50
+ ==> stage =  1
+    remaining candidates ['c2', 'c5', 'c1', 'c4', 'c3']
+    uninominal votes {'c2': 2.0, 'c5': 3.0, 'c1': 2.0, 'c4': 1.0, 'c3': 1.0}
+    minimal number of votes =  1.0
+    maximal number of votes =  3.0
+    candidate to remove =  c3
+    candidate to remove =  c4
+    remaining candidates =  ['c2', 'c5', 'c1']
+ ==> stage =  2
+    remaining candidates ['c2', 'c5', 'c1']
+    uninominal votes {'c2': 3.0, 'c5': 3.0, 'c1': 3.0}
+    minimal number of votes =  3.0
+    maximal number of votes =  3.0
+    candidate to remove =  c1
+    candidate to remove =  c5
+    candidate to remove =  c2
+    remaining candidates =  []
+[]
+\end{lstlisting}
+
+\Condorcet 's approach for determining the winner of an election is as well \emph{not decisive} in this example voting profile. One needs therefore, the case given, exploiting more sophisticated approaches for finding the winner of the election on the basis of the given linear ballots (see Chap.~\ref{sec:8} and \citet{BIS-2008a}). 
+
+The \NetFlows ranked heatmap view on voting profiles\index{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}} with the \texttt{showHTML\-VotingHeatmap()} method is one such tool for showing voting results.
+\begin{lstlisting}
+>>> v.showHTMLVotingHeatmap(rankingRule='Netflows',\
+...                  colorLevels=3,Correlations=True)
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/7-3-votingHeatmap.png}
-\caption{Visualising a linear voting profile in a heatmap format. Notice that the importance weights of the voters are \emph{negative}, which means that the preference direction of the criteria (in this case the individual voters) is \emph{decreasing}, i.e. goes from lowest (best) rank to highest (worst) rank}
+\caption{Visualising a linear voting profile in a \NetFlows ranked heatmap. As the number of voters is usually much larger than the number of eligible candidates, the voting heatmap is by default transposed into a voters $\times$ candidates view. Notice that the importance weights of the voters are \emph{negative}, which means that the preference direction of the criteria (in this case the individual voters) is \emph{decreasing} (\texttt{min}), i.e. goes from lowest (best) rank to highest (worst) rank}
 \label{fig:7.3}       % Give a unique label
 \end{figure}
 
-It worthwhile noticing that the compromise \emph{NetFlows} ranking \texttt{a4} $>$ \texttt{a5} $>$ \texttt{a2} $>$ \texttt{a1} $>$ \texttt{a3}, shown in this heatmap (see Fig.~\vref{fig:7.3}) results in an optimal \emph{ordinal correlation} index of $+0.778$ with the pairwise majority voting margins (see Chapter~\vref{sec:16}).
+It is worthwhile noticing in Figure~\vref{fig:7.3} that the compromise \NetFlows ranking \texttt{c4} $>$ \texttt{c5} $>$ \texttt{c2} $>$ \texttt{c1} $>$ \texttt{c3}, shown in this heatmap, results in the highest possible \emph{ordinal correlation} index of $+0.778$ with the majority margins digraph (see Chap.~\ref{sec:16}). This \NetFlows ranking result corresponds as well to the \Borda scores ranking.
+\begin{lstlisting}
+>>> v.showRankAnalysisTable()
+  *----  Borda rank analysis tableau -----*
+   candi- | alternative-to-rank       |      Borda
+   dates  |  1    2    3    4    5    | score  average
+   -------|-------------------------------------------------
+     'c4' |  1    4    3    0    1    |  23     2.56
+     'c5' |  3    0    3    2    1    |  25     2.78
+     'c2' |  2    3    0    1    3    |  27     3.00
+     'c3' |  1    2    2    2    2    |  29     3.22
+     'c1' |  2    0    1    4    2    |  31     3.44
+\end{lstlisting}
 
+Let us eventually notice in the rank analysis table above that the uninominal plurality winner would be, with three votes, candidate \texttt{c5}, whereas the best \NetFlows and \Borda ranked candidate \texttt{c1} obtains with candidate \texttt{c3} only one vote.
 
+But represent our example linear voting profiles here realistic election outcomes?
 
 \section{On generating realistic random linear voting profiles}
 \label{sec:7.5}
 
-By default, the \texttt{RandomLinearVotingProfile} class generates random linear voting profiles where every candidates has the same uniform probabilities to be ranked at a certain position by all the voters. Each voter's random linear ballot is indeed generated  via a uniform shuffling of the list of candidates.
+By default, the \texttt{RandomLinearVotingProfile} class generates random linear voting profiles where every candidate has the same uniform probabilities to be ranked at a certain position by all the voters. Each voter's random linear ballot is indeed generated  via a uniform shuffling of the list of candidates.
 
-In reality, political election data appear quite different. There usually will be different favorite and marginal candidates for each political party. To simulate these aspects into our random generator, we are using two random exponentially distributed polls of the candidates and consider a bipartisan political landscape with a certain random balance (default theoretical party repartition = $0.50$) between the two sets of potential party supporters. A certain theoretical proportion (default = $0.1$) will not support any party.
+In reality, political election data appear quite different. There usually will be different favorite and marginal candidates for each political party. To simulate these aspects with our random generator, we are using two random exponentially distributed polls of the candidates and consider a bipartisan political landscape with a certain random balance (default theoretical party repartition = $0.50$) between the two sets of potential party supporters. A certain theoretical proportion (default = $0.1$) will not support any party.
 
-Let us generate such a linear voting profile for an election with $1000$ voters and $15$ candidates.
-
+Let us generate in Listing~\vref{list:7.7} such a linear voting profile for an election with $1000$ voters and $15$ candidates.
 \begin{lstlisting}[caption={Generating a linear voting profile with random polls},label=list:7.7]
 >>> from votingProfiles import\
 ...            RandomLinearVotingProfile
 >>> lvp = RandomLinearVotingProfile(\
-...         numberOfCandidates=15,
-...         numberOfVoters=1000,
-...         WithPolls=True,
-...         partyRepartition=0.5,
-...         other=0.1,
+...         numberOfCandidates=15,\
+...         numberOfVoters=1000,\
+...         WithPolls=True,\
+...         partyRepartition=0.5,\
+...         other=0.1,\
 ...         seed=0.9189670954954139)
 >>> lvp
  *------- VotingProfile instance description ------*
@@ -279,30 +319,30 @@ Let us generate such a linear voting profile for an election with $1000$ voters 
                     'ballot']
 >>> lvp.showRandomPolls()
   Random repartition of voters
-   Party_1 supporters : 460 (46.0%)
-   Party_2 supporters : 436 (43.6%)
+   Party-1 supporters : 460 (46.0%)
+   Party-2 supporters : 436 (43.6%)
    Other voters       : 104 (10.4%)
- *---------------- random polls ----------------*
+  *---------------- random polls ----------------*
    Party-1(46.0%) | Party-2(43.6%)|  expected  
   ----------------------------------------------
-    a06 : 19.91%  | a11 : 22.94%  | a06 : 15.00%
-    a07 : 14.27%  | a08 : 15.65%  | a11 : 13.08%
-    a03 : 10.02%  | a04 : 15.07%  | a08 : 09.01%
-    a13 : 08.39%  | a06 : 13.40%  | a07 : 08.79%
-    a15 : 08.39%  | a03 : 06.49%  | a03 : 07.44%
-    a11 : 06.70%  | a09 : 05.63%  | a04 : 07.11%
-    a01 : 06.17%  | a07 : 05.10%  | a01 : 05.06%
-    a12 : 04.81%  | a01 : 05.09%  | a13 : 05.04%
-    a08 : 04.75%  | a12 : 03.43%  | a15 : 04.23%
-    a10 : 04.66%  | a13 : 02.71%  | a12 : 03.71%
-    a14 : 04.42%  | a14 : 02.70%  | a14 : 03.21%
-    a05 : 04.01%  | a15 : 00.86%  | a09 : 03.10%
-    a09 : 01.40%  | a10 : 00.44%  | a10 : 02.34%
-    a04 : 01.18%  | a05 : 00.29%  | a05 : 01.97%
-    a02 : 00.90%  | a02 : 00.21%  | a02 : 00.51%
+   c06 : 19.91%  |  c11 : 22.94%  |  c06 : 15.00%
+   c07 : 14.27%  |  c08 : 15.65%  |  c11 : 13.08%
+   c03 : 10.02%  |  c04 : 15.07%  |  c08 : 09.01%
+   c13 : 08.39%  |  c06 : 13.40%  |  c07 : 08.79%
+   c15 : 08.39%  |  c03 : 06.49%  |  c03 : 07.44%
+   c11 : 06.70%  |  c09 : 05.63%  |  c04 : 07.11%
+   c01 : 06.17%  |  c07 : 05.10%  |  c01 : 05.06%
+   c12 : 04.81%  |  c01 : 05.09%  |  c13 : 05.04%
+   c08 : 04.75%  |  c12 : 03.43%  |  c15 : 04.23%
+   c10 : 04.66%  |  c13 : 02.71%  |  c12 : 03.71%
+   c14 : 04.42%  |  c14 : 02.70%  |  c14 : 03.21%
+   c05 : 04.01%  |  c15 : 00.86%  |  c09 : 03.10%
+   c09 : 01.40%  |  c10 : 00.44%  |  c10 : 02.34%
+   c04 : 01.18%  |  c05 : 00.29%  |  c05 : 01.97%
+   c02 : 00.90%  |  c02 : 00.21%  |  c02 : 00.51%
 \end{lstlisting}
 
-In this example (see Listing~\vref{list:7.7} Lines 18-), we obtain 460 Party-1 supporters ($46\%$), 436 Party-2 supporters ($43.6\%$) and 104 other voters ($10.4\%$). Favorite candidates of Party-1 supporters, with more than $10\%$, appear to be \texttt{a06} ($19.91\%$), $a07$ ($14.27\%$) and \texttt{a03} ($10.02\%$). Whereas for Party-2 supporters, favorite candidates appear to be \texttt{a11} ($22.94\%$), followed by \texttt{a08} ($15.65\%$), $a04$ ($15.07\%$) and \texttt{a06} ($13.4\%$). Being \emph{first} choice for Party-1 supporters and \emph{fourth} choice for Party-2 supporters, this candidate \texttt{a06} is a natural candidate for clearly winning this election game (see Listing~\vref{list:7.8}).
+In this example (see Lines 21-43 above), we obtain 460 Party-1 supporters ($46\%$), 436 Party-2 supporters ($43.6\%$) and 104 other voters ($10.4\%$). Favorite candidates of Party-1 supporters, with more than $10\%$, appear to be \texttt{c06} ($19.91\%$), $a07$ ($14.27\%$) and \texttt{c03} ($10.02\%$). Whereas for Party-2 supporters, favorite candidates appear to be \texttt{c11} ($22.94\%$), followed by \texttt{c08} ($15.65\%$), $a04$ ($15.07\%$) and \texttt{c06} ($13.4\%$). Being \emph{first} choice for Party-1 supporters and \emph{fourth} choice for Party-2 supporters, this candidate \texttt{c06} is a natural candidate for clearly winning this election game (see List.~\vref{list:7.8}).
 \begin{lstlisting}[caption={The uninominal and \Borda election winner},label=list:7.8]
 >>> lvp.computeSimpleMajorityWinner()
  ['a06']
@@ -312,7 +352,7 @@ In this example (see Listing~\vref{list:7.7} Lines 18-), we obtain 460 Party-1 s
  ['a06']
 \end{lstlisting}
 
-Is it also a \Condorcet winner ? To verify, we start by creating the corresponding \emph{majority margins} digraph $mmdg$ with the help of the \texttt{MajorityMarginsDigraph} class. The created digraph instance contains 15 \emph{actions} --the candidates-- and 105 \emph{oriented arcs} --the \emph{positive} majority margins-- (see Listing~\vref{list:7.9} Lines 7-8).
+Is it also a \Condorcet winner ? To verify, we start by creating the corresponding \emph{majority margins} digraph $mmdg$ with the help of the \texttt{MajorityMarginsDigraph} class. The created digraph instance contains 15 \emph{actions} --the candidates-- and 105 \emph{oriented arcs} --the \emph{positive} majority margins-- (see List.~\vref{list:7.9} Lines 7-8).
 \begin{lstlisting}[caption={A majority margins digraph constructed from a linear voting profile},label=list:7.9]
 >>> from votingProfiles import MajorityMarginsDigraph
 >>> mmdg = MajorityMarginsDigraph(lvp)
@@ -332,61 +372,58 @@ Is it also a \Condorcet winner ? To verify, we start by creating the correspondi
 
 We may visualize the resulting pairwise majority margins by showing the HTML formated version of the $mmdg$ relation table in a browser view.
 \begin{lstlisting}
->>> cdg.showHTMLRelationTable(\
+>>> mmdg.showHTMLRelationTable(\
 ...         tableTitle='Pairwise majority margins',
-...         relationName='M(x>y)')
+...         relationName='M(x,y)')
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=4cm]{Figures/7-4-majorityMargins.png}
-\caption{Browsing the majority margins. \emph{Light green} cells contain the positive majority margins, whereas \emph{light red} cells contain the negative majority margins.}
+\includegraphics[width=7cm]{Figures/7-4-majorityMargins.png}
+\caption{Browsing the majority margins. \emph{Light green} cells contain the positive majority margins, whereas \emph{light red} cells contain the negative majority margins}
 \label{fig:7.4}       % Give a unique label
 \end{figure}
 
-A complete \emph{light green} row reveals a \Condorcet winner, whereas a complete \emph{light green} column reveals a \Condorcet loser. We recover again candidate \texttt{a06} as \emph{Condorcet} winner\footnote{The concept of \Condorcet winner --a generalisation of absolute majority winners-- proposed by \Condorcet in 1785, is an early historical example of initial digraph kernel (see Chapter~\vref{sec:17})}.), whereas the obvious \emph{Condorcet} loser is here candidate \texttt{a02}, the candidate with the lowest support in both parties (see Listing~\vref{list:7.7} Line 40).
+A complete \emph{light green} row in Figure~\vref{fig:7.4} reveals a \Condorcet winner, whereas a complete \emph{light green} column reveals a \Condorcet loser. We recover again candidate \texttt{c06} as \emph{Condorcet} winner\footnote{The concept of \Condorcet winner --a generalisation of absolute majority winners-- proposed by \Condorcet in 1785, is an early historical example of initial digraph kernel (see Chap.~\ref{sec:17}).}, whereas the obvious \emph{Condorcet} loser is here candidate \texttt{c02}, the candidate with the lowest support in both parties (see List.~\vref{list:7.7} Line 43).
 
-With a same \emph{bipolar-first ranked} and \emph{last ranked} candidate- selection procedure\index{computeRankingByChoosing@\texttt{computeRankingByChoosing()}}, we may \emph{weakly rank} the candidates (with possible ties) by iterating these \emph{first ranked} and \emph{last ranked} choices among the remaining candidates \citep{BIS-1999}.
+With a same bipolar \emph{first-ranked} and \emph{last-ranked} selection procedure\index{computeRankingByChoosing@\texttt{computeRankingByChoosing()}}, we may \emph{weakly rank} the candidates (with possible ties) by iterating these \emph{first-ranked} and \emph{last-ranked} choices among the remaining candidates \citep{BIS-1999}.
 
-Before showing the \emph{ranking-by-choosing} result, we have to compute the iterated bipolar selection procedure (see Listing~\vref{list:7.10} Line 2).
+Before showing the \emph{ranking-by-choosing} result, we have to compute the iterated bipolar selection procedure (see Listing~\vref{list:7.10} Line 2).\index{showRankingByChoosing@\texttt{showRankingByChoosing()}}
 \begin{lstlisting}[caption={Ranking by iterating choosing the \emph{first} and \emph{last} remaining candidates },label=list:7.10]
->>> cdg.showRankingByChoosing()
- Error: You must first run
-  self.computeRankingByChoosing(CoDual=False(default)|True) !
 >>> cdg.computeRankingByChoosing()
 >>> cdg.showRankingByChoosing()
  Ranking by Choosing and Rejecting
-   1st first ranked ['a06']
-     2nd first ranked ['a11']
-       3rd first ranked ['a07', 'a08']
-         4th first ranked ['a03']
-           5th first ranked ['a01']
-             6th first ranked ['a13']
-               7th first ranked ['a04']
-               7th last ranked ['a12']
-	     6th last ranked ['a14']
-	   5th last ranked ['a15']
-	 4th last ranked ['a09']
-       3rd last ranked ['a10']
-     2nd last ranked ['a05']
-   1st last ranked ['a02']
+   1st first ranked ['c06']
+     2nd first ranked ['c11']
+       3rd first ranked ['c07', 'c08']
+         4th first ranked ['c03']
+           5th first ranked ['c01']
+             6th first ranked ['c13']
+               7th first ranked ['c04']
+               7th last ranked ['c12']
+	     6th last ranked ['c14']
+	   5th last ranked ['c15']
+	 4th last ranked ['c09']
+       3rd last ranked ['c10']
+     2nd last ranked ['c05']
+   1st last ranked ['c02']
 \end{lstlisting}
-The first selection concerns \texttt{a06} (first) and \texttt{a02} (last), followed by \texttt{a11} (first) opposed to \texttt{a05} (last), and so on, until there remains at iteration step 7 a last pair of candidates, namely [\texttt{a04}, \texttt{a12}] (see Lines 13-14).
+The first selection concerns \texttt{c06} (first) and \texttt{c02} (last), followed by \texttt{c11} (first) opposed to \texttt{c05} (last), and so on, until there remains at iteration step 7 a last pair of candidates, namely [\texttt{c04}, \texttt{c12}] (see Lines 13-14).
 
-Notice furthermore the first ranked candidates at iteration step 3 (see Line 9), namely the pair (\texttt{a07}, \texttt{a08}). Both candidates represent indeed conjointly the \emph{first ranked} choice. We obtain here hence a \emph{weak ranking}, i.e. a ranking with a tie.
+Notice furthermore the first ranked candidates at iteration step 3 (see Line 9), namely the pair (\texttt{c07}, \texttt{c08}). Both candidates represent indeed conjointly the \emph{first ranked} choice. We obtain here hence a \emph{weak ranking}, i.e. a ranking with a tie.
 
-Let us mention that the \emph{instant-run-off} procedure, we used before (see Listing~\vref{list:7.8} Line 3), when operated with a \texttt{Comments=True} parameter setting, will deliver a more or less similar \emph{reversed} linear \emph{ordering-by-rejecting} result, namely \texttt{[a02, a10, a14, a05, a09, a13, a12, a15, a04, a01, a08, a03, a07, a11, a06]}, ordered from the \emph{last} to the \emph{first} choice.
+Let us mention that the \emph{instant-run-off} procedure, we used before (see List.~\vref{list:7.8} Line 3), when operated with a \texttt{Comments=True} parameter setting, will deliver a more or less similar \emph{reversed} linear \emph{ordering-by-rejecting} result, namely \texttt{[c02, c10, c14, c05, c09, c13, c12, c15, c04, c01, c08, c03, c07, c11, c06]}, ordered from the \emph{last} to the \emph{first} choice.
 
-Remarkable about both these \emph{ranking-by-choosing} or \emph{ordering-by-rejecting} results is the fact that the random voting behaviour, simulated here with the help of two discrete random variables \footnote{Discrete random variables with a given empirical probability law (here the polls) are provided in the \texttt{randomNumbers} module by the \texttt{DiscreteRandomVariable} class.}, defined respectively by the two party polls, is rendering a ranking that is more or less in accordance with the simulated balance of the polls: Party-1 supporters : 460;  Party-2 supporters: 436 (see Listing~\vref{list:7.7} Lines 26-40 third column). Despite a random voting behaviour per voter, the given polls apparently show a \emph{very strong incidence} on the eventual election result. In order to avoid any manipulation of the election outcome, public media are therefore in some countries not allowed to publish polls during the last weeks before a general election.
+Remarkable about both these \emph{ranking-by-choosing} or \emph{ordering-by-rejecting} results is the fact that the random voting behaviour, simulated here with the help of two discrete random variables \footnote{Discrete random variables with a given empirical probability law (here the polls) are provided in the \texttt{randomNumbers} module by the \texttt{DiscreteRandomVariable} class.}, defined respectively by the two party polls, is rendering a ranking that is more or less in accordance with the simulated balance of the polls: Party-1 supporters : 460;  Party-2 supporters: 436 (see List.~\vref{list:7.7} Lines 26-40 third column). Despite a random voting behaviour per voter, the given polls apparently show a \emph{very strong incidence} on the eventual election result. In order to avoid any manipulation of the election outcome, public media are therefore in some countries not allowed to publish polls during the last weeks before a general election.
 
-Mind that the specific \emph{ranking-by-choosing} procedure, we use here on the \emph{majority margins} digraph, operates the selection procedure by extracting at each step \emph{initial} and \emph{terminal} kernels, i.e. NP-hard operational problems (see Chapter~\vref{sec:17} and \citet{BIS-1999}); A technique that does not allow in general to tackle voting profiles with) much more than 30 candidates.
+Mind that the specific \emph{ranking-by-choosing} procedure, we use here on the \emph{majority margins} digraph, operates the selection procedure by extracting at each step \emph{initial} and \emph{terminal} kernels, i.e. NP-hard operational problems (see Chap.~\vref{sec:17} and \citet{BIS-1999}); A technique that does not allow in general to tackle voting profiles with much more than 30 candidates.
 
 \vspace{1cm}
 
-Next Chapter~\vref{sec:8} on ranking methods provides more adequate and efficient techniques for ranking from pairwise majority margins when a larger number of potential candidates is given.  
+Next Chapter~\vref{sec:8} on multiple incommensurable criteria ranking methods provides more methods and tools for ranking from pairwise majority margins when a larger number of potential candidates is given.  
 
 %%%%%%% The chapter bibliography
 %\normallatexbib
-\clearpage
+%\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
 \bibliographystyle{spbasic}
