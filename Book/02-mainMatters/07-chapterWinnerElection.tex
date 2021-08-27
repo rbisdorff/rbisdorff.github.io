@@ -223,7 +223,7 @@ Now we cannot find anymore a completely positive row in the relation table (see 
 \label{fig:7.2}       % Give a unique label
 \end{figure}
 	   
-But, there may be many circuits appearing in a \emph{majority margins} digraph. Now, we can detect and enumerate all minimal chordless circuits in a \texttt{Digraph} instance with the \texttt{computeChordlessCircuits} method.\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}}
+But, there may be many circuits appearing in a \emph{majority margins} digraph. We can detect and enumerate all minimal chordless circuits in a \texttt{Digraph} instance with the \texttt{computeChordlessCircuits} method.\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}}
 \begin{lstlisting}
 >>> mmdg.computeChordlessCircuits()
  [(['c2', 'c3', 'c1'], frozenset({'c2', 'c3', 'c1'})), 
@@ -387,7 +387,7 @@ A complete \emph{light green} row in Figure~\vref{fig:7.4} reveals a \Condorcet 
 
 With a same bipolar \emph{first-ranked} and \emph{last-ranked} selection procedure\index{computeRankingByChoosing@\texttt{computeRankingByChoosing()}}, we may \emph{weakly rank} the candidates (with possible ties) by iterating these \emph{first-ranked} and \emph{last-ranked} choices among the remaining candidates \citep{BIS-1999}.
 
-Before showing the \emph{ranking-by-choosing} result, we have to compute the iterated bipolar selection procedure (see Listing~\vref{list:7.10} Line 2).\index{showRankingByChoosing@\texttt{showRankingByChoosing()}}
+Before showing the \emph{ranking-by-choosing} result, we have to compute the iterated bipolar selection procedure (see List.~\vref{list:7.10} Line 1).\index{showRankingByChoosing@\texttt{showRankingByChoosing()}}
 \begin{lstlisting}[caption={Ranking by iterating choosing the \emph{first} and \emph{last} remaining candidates },label=list:7.10]
 >>> cdg.computeRankingByChoosing()
 >>> cdg.showRankingByChoosing()
