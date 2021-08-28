@@ -3,45 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 02-mainMatters/08-chapterRankings.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
+Warning--I didn't find a database entry for "BIS-2012b"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 11 entries,
+You've used 12 entries,
             3270 wiz_defined-function locations,
-            747 strings with 6334 characters,
-and the built_in function-call counts, 11197 in all, are:
-= -- 1264
-> -- 147
-< -- 12
-+ -- 95
-- -- 44
-* -- 699
-:= -- 1316
-add.period$ -- 10
-call.type$ -- 11
-change.case$ -- 69
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 1182
-empty$ -- 886
-format.name$ -- 68
-if$ -- 2341
+            754 strings with 6498 characters,
+and the built_in function-call counts, 11655 in all, are:
+= -- 1306
+> -- 157
+< -- 13
++ -- 99
+- -- 47
+* -- 729
+:= -- 1392
+add.period$ -- 11
+call.type$ -- 12
+change.case$ -- 75
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 1222
+empty$ -- 926
+format.name$ -- 72
+if$ -- 2433
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 94
-newline$ -- 43
-num.names$ -- 46
-pop$ -- 333
+missing$ -- 99
+newline$ -- 46
+num.names$ -- 50
+pop$ -- 346
 preamble$ -- 1
-purify$ -- 58
+purify$ -- 63
 quote$ -- 0
-skip$ -- 487
+skip$ -- 500
 stack$ -- 0
-substring$ -- 1032
-swap$ -- 639
+substring$ -- 1063
+swap$ -- 648
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 93
+type$ -- 102
 warning$ -- 0
-while$ -- 72
+while$ -- 76
 width$ -- 0
-write$ -- 130
+write$ -- 140
+(There was 1 warning)
