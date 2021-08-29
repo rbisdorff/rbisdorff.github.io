@@ -117,7 +117,7 @@ The so far estimated historical quantile limits must, first, be updated with thi
 \end{lstlisting}
 Parameter \texttt{historySize} of the \texttt{updateQuantiles()} method\index{updateQuantiles@\texttt{updateQuantiles()}} (Line 2 above) allows to \emph{balance} the \emph{new} evaluations against the \emph{historical} ones.
 
-With \texttt{historySize = None} (the default setting), the balance in the example above is $900/1000$ ($90\%$, the weight of historical data) against $100/1000$ ($10\%$, the weight of the new incoming observations). Putting \texttt{historySize = 0}, for instance, will ignore all historical data ($0/100$ against $100/100$) and restart building the quantile estimation with solely the new incoming data. The updated quantile limits may be shown in a browser view (see Fig.~\vref{fig:10.1}).
+With \texttt{historySize = None} (the default setting), the balance in the example above is $900/1000$ ($90\%$, the weight of historical data) against $100/1000$ ($10\%$, the weight of the new incoming observations). Setting \texttt{historySize = 0}, for instance, will ignore all historical data ($0/100$ against $100/100$) and restart building the quantile estimation with solely the new incoming data. The \texttt{showHTMLLimitingQuantiles()} method\index{showHTMLLimitingQuantiles@\texttt{showHTMLLimitingQuantiles()}} shows the updated quantile limits in a browser view (see Fig.~\vref{fig:10.1}).
 \begin{lstlisting}
 >>> # showing the updated quantile limits in a browser view
 >>> pq.showHTMLLimitingQuantiles(Transposed=True)
@@ -132,9 +132,9 @@ With \texttt{historySize = None} (the default setting), the balance in the examp
 \section{Rating-by-ranking new performances with quantile norms}
 \label{sec:10.3}
 
-For \emph{rating} a newly given set of decision alternatives with the help of empirical performance quantiles estimated from historical data, we provide in the \texttt{sortingDigraphs} module the \texttt{Learned\-QuantilesRatingDigraph} class\index{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class}, a specialisation of the \texttt{QuantilesSor\-tingDigraph} class (see Chap.~\ref{sec:9}). The absolute rating result is computed by \emph{ranking} the new performance records together with the learned quantile limits.
+For \emph{rating} a newly given set of decision alternatives with the help of empirical performance quantiles estimated from historical data, the \texttt{sortingDigraphs} module provides the \texttt{Learned\-QuantilesRatingDigraph} class\index{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class}, a specialisation of the \texttt{QuantilesSor\-tingDigraph} class (see Chap.~\ref{sec:9}). The absolute rating result is computed by \emph{ranking} the new performance records together with the learned historical quantile limits.
 
-The constructor requires a valid \texttt{PerformanceQuantiles} instance and, by default, uses the \Copeland or the \NetFlows ranking rule, whichever fits best in an ordinal correlation sense with the underlying outranking digraph.
+The class constructor requires a valid \texttt{PerformanceQuantiles} instance and, by default, uses the \Copeland or the \NetFlows ranking rule, whichever fits best in an ordinal correlation sense with the underlying outranking digraph.
 
 It is important to notice that the \texttt{LearnedQuantilesRatingDigraph} class, contrary to the generic \texttt{OutrankingDigraph} class, does not inherit from the generic \texttt{PerformanceTableau} class, but instead from the \texttt{Performance\-Quantiles} class \citep{BIS-2021b}.
 
@@ -179,9 +179,9 @@ We reconsider now the \texttt{PerformanceQuantiles} object instance \texttt{pq} 
    Compute sorting  : 0.00000
 \end{lstlisting}
 
-Data input to the \texttt{LearnedQuantilesRatingDigraph} class constructor are a valid \texttt{PerformanceQuantiles} object $pq$ and a \texttt{newActions} list of newly generated decision alternatives with the same random generator $rpg$ (see List.~\vref{list:10.4} Line 2-3).
+Data input to the \texttt{LearnedQuantilesRatingDigraph} class constructor are a valid \texttt{PerformanceQuantiles} object \texttt{pq} and a \texttt{newActions} list of newly generated decision alternatives with the same random generator \texttt{rpg} (see List.~\vref{list:10.4} Line 2-3).
 
-Let us have a look at the digraph's nodes, here called \texttt{newActions}.
+The \texttt{actionsSubset} parameter of the \texttt{showPerformanceTableau()} method\index{showPerformanceTableau@\texttt{showPerformanceTableau()}} allows a look at the digraph's nodes, here called \texttt{newActions}.
 \begin{lstlisting}[caption={Performance tableau of the new incoming decision alternatives},label=list:10.5,basicstyle=\ttfamily\scriptsize]
 >>> lqr.showPerformanceTableau(actionsSubset=lqr.newActions)
  *----  performance tableau -----*
@@ -196,7 +196,7 @@ Let us have a look at the digraph's nodes, here called \texttt{newActions}.
     'c2'  | -40.0 -23.0 -37.0 -37.0 -24.0 -27.0 -73.0 -43.0 -94.0 -35.0  
 \end{lstlisting}
 
-Among the 10 new incoming decision alternatives, we recognize alternatives \texttt{a1001} (see column 2) and \texttt{a1010} (see last column) we have shown in Table~\vref{tab:10.1} (see List.~\vref{list:10.5} Line 12).
+Among the 10 new incoming decision alternatives, we recognize alternatives \texttt{a1001} (see column 2) and \texttt{a1010} (see last column) we have shown in Table~\vref{tab:10.1}.
 
 The \texttt{actions} dictionary of a \texttt{LearnedQuantilesRatingDigraph} class instance includes, besides the 10 performance eavluations of the ten new alternatives, also the closed lower limits of the four quartile classes: \texttt{m1} = $[0.0- [$, \texttt{m2} = $[0.25- [$, \texttt{m3} = $[0.5- [$, \texttt{m4} = $[0.75 - [$. We find these limits in the \texttt{profiles} attribute (see List.~\vref{list:10.6} below).
 \begin{lstlisting}[caption={Showing the limiting profiles of the rating quantiles},label=list:10.6]
@@ -233,7 +233,7 @@ In this rating example, the \Copeland rule appears to be the more appropriate ra
 
 We achieve here in Listing.~\vref{list:10.7} a linear ranking without ties (from best to worst) of the digraph's actions set, i.e. including the new decision alternatives as well as the quartile limits $m1$ to $m4$, which is very close in an ordinal sense ($\tau = 0.945$) to the underlying strict outranking relation.
 
-The eventual rating procedure is based in this example on the \emph{lower} quartile limits, such that we may collect the quartile classes' contents in increasing order of the \emph{quartiles}.
+The eventual rating procedure is based in this example on the \emph{lower} quartile limits, such that the quartile classes' contents are filtered out in increasing order of the \emph{quartiles}.
 \begin{lstlisting}
 >>> lqr.ratingCategories
  OrderedDict([
@@ -252,7 +252,7 @@ We notice above that no new decision alternative is actually rated into the lowe
    [0.25 - 0.50[ ['a1007', 'a1004', 'a1009']
 \end{lstlisting}    
 
-The same result may also be shown in a browser view with the \texttt{showHTMLRa\-tingHeatmap()} method\index{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}} using a specialised rating heatmap format: 
+The same result may also be shown in a browser view with the \texttt{showHTMLRa\-tingHeatmap()} method\index{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}} using a specialised rating heatmap format (see Fig.~\vref{fig:10.2}): 
 \begin{lstlisting}
 >>> lqr.showHTMLRatingHeatmap(\
 ...            pageTitle='Heatmap of Quartiles Rating',\
@@ -265,7 +265,7 @@ The same result may also be shown in a browser view with the \texttt{showHTMLRa\
 \label{fig:10.2}       % Give a unique label
 \end{figure}
 	    
-Using furthermore a specialised version of the \texttt{exportGraphViz()} method allows drawing in Figure~\vref{fig:10.3} the same rating result in a Hasse diagram format.
+Using furthermore a specialised version of the \texttt{exportGraphViz()} method allows drawing in Figure~\vref{fig:10.3} the same rating result in a Hasse diagram format.\footnote{Note that the graphviz dot file was post-edited in order to mark in blue alternatives \texttt{a1001} and \texttt{a1010}.}
 \begin{lstlisting}
 >>> lqr.exportRatingGraphViz('quartileRatingDigraph')
  *---- exporting a dot file for GraphViz tools ---------*
@@ -275,7 +275,7 @@ Using furthermore a specialised version of the \texttt{exportGraphViz()} method 
 \begin{figure}[ht]
 %\sidecaption[t]
 \includegraphics[width=\hsize]{Figures/10-3-normedRatingDigraph.pdf}
-\caption{Absolute quartiles rating digraph}
+\caption{Absolute quartiles rating digraph.}
 \label{fig:10.3}       % Give a unique label
 \end{figure}
 

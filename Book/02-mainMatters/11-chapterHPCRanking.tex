@@ -26,7 +26,7 @@ Their automatic compilation and installation, alongside the standard \Digraph py
 
 \texttt{...\$ sudo apt install gcc} on Ubuntu, for instance.
 
-These cythonized modules, specifically designed for being run on HPC clusters (see \href{https://hpc.uni.lu}{https://hpc.uni.lu}), require the Unix \emph{forking} start method of subprocesses (see start methods of the \href{https://docs.python.org/3/library/multiprocessing.html#contexts-and-start-methods}{Python multiprocessing library})  and therefore, due to forking problems on Mac OS platforms, may only operate safely on Linux platforms.
+These cythonized modules, specifically designed for being run on HPC clusters, require the Unix \emph{forking} start method of subprocesses and therefore, due to forking problems on Mac OS platforms, may only operate safely on Linux platforms (see start methods of the \href{https://docs.python.org/3/library/multiprocessing.html#contexts-and-start-methods}{Python multiprocessing library}).
 
 \section{Big Data performance tableaux}
 \label{sec:11.2}
@@ -99,8 +99,9 @@ Several methods for converting from the Big Data model to the standard model and
 
 The C compiled version of the \texttt{BipolarOutrankingDigraph} class takes integer $r$-characteristic values.\index{cIntegerOutrankingDigraphs@\texttt{cIntegerOutrankingDigraphs} module}\index{IntegerBipolarOutrankingDigraph@\texttt{IntegerBipolarOutrankingDigraph} class}
 \begin{lstlisting}[caption={Constructing big bipolar-valued outranking digraphs},label=list:11.2]
+>>> from cRandPerfTabs import cRandomPerformanceTableau
 >>> t = cRandomPerformanceTableau(numberOfActions=1000,\
-...                               numberOfCriteria=2)
+...                               numberOfCriteria=2,seed=100)
 >>> from cIntegerOutrankingDigraphs import\
 ...                 IntegerBipolarOutrankingDigraph
 >>> g = IntegerBipolarOutrankingDigraph(t,\
@@ -111,21 +112,22 @@ The C compiled version of the \texttt{BipolarOutrankingDigraph} class takes inte
    Instance name    : rel_cRandomperftab
    Actions          : 1000
    Criteria         : 2
-   Size             : 465024
-   Determinateness  : 56.877
+   Size             : 460795
+   Determinateness  : 55.975
    Valuation domain : {'min': -2, 'med': 0, 'max': 2,
                        'hasIntegerValuation': True}
    ----  Constructor run times (in sec.) ----
-   Total time       : 4.23880
-   Data input       : 0.01203
-   Compute relation : 3.60788
-   Gamma sets       : 0.61889
-   Threads          : 4
+   Total time       : 4.10093
+   Data input       : 0.00955
+   Compute relation : 3.33437
+   Gamma sets       : 0.75699
+   Size             : 465024
+   Determinateness  : 56.877
    Attributes       : ['name', 'actions', 'criteria',
-       'totalWeight', 'valuationdomain',
-       'methodData', 'evaluation',
-       'order', 'runTimes', 'nbrThreads',
-       'relation', 'gamma', 'notGamma']
+                       'totalWeight', 'valuationdomain',
+                       'methodData', 'evaluation',
+                       'order', 'runTimes', 'nbrThreads',
+                       'relation', 'gamma', 'notGamma']
 \end{lstlisting}
 
 On a classical intel-i7 equipped PC with four single threaded cores, the \texttt{Inte\-ger\-BipolarOutrankingDigraph} class constructor takes about four seconds for computing a \emph{million} pairwise outranking characteristic values (see Listing~\vref{list:11.2}). In a similar setting, the standard \texttt{BipolarOutranking\-Digraph} constructor operates more than two times slower.
@@ -136,39 +138,39 @@ On a classical intel-i7 equipped PC with four single threaded cores, the \texttt
 ...                Threading=True,nbrCores=4)
 >>> g1
   *------- Object instance description ------*
-    Instance class   : BipolarOutrankingDigraph
-    Instance name    : rel_std_cRandomperftab
-    Actions        : 1000
-    Criteria       : 2
-    Size             : 465024
-    Determinateness  : 56.817
-    Valuation domain : {'min': Decimal('-1.0'),
-			'med': Decimal('0.0'),
-			'max': Decimal('1.0'),
-			'precision': Decimal('0')}
+    Instance class       : BipolarOutrankingDigraph
+    Instance name        : rel_std_cRandomperftab
+    Actions              : 1000
+    Criteria             : 2
+    Size                 : 460795
+    Determinateness (%)  : 77.99
+    Valuation domain     : [-1.00;1.00]
+    Attributes           : ['name','actions','valuationdomain',
+                            'criteria','methodData','evaluation',
+                            'NA','order','runTimes','nbrThreads',
+                            'relation','gamma','notGamma']
     ----  Constructor run times (in sec.) ----
-    Total time       : 8.63340
-    Data input       : 0.01564
-    Compute relation : 7.52787
-    Gamma sets       : 1.08987
-    Threads         : 4
+    Total time           : 14.92166
+    Data input           : 0.01506
+    Compute relation     : 13.51562
+    Gamma sets           : 1.39096
+    Threads              : 4
 \end{lstlisting}
 
-By far, most of the run time is in each case needed for computing the individual pairwise outranking characteristic values ($3.61$sec versus $7.53$sec.). Notice also below the memory occupations --about 103MB for $g$ and 202MB for $g1$-- of both outranking digraph instances.\index{digraphsTools@\texttt{digraphsTools} module}\index{total-size@\texttt{total\_size()}}
+By far, most of the run time is in each case needed for computing the individual pairwise outranking characteristic values: $4.10$ sec. versus $14.92$ sec. Notice also below the memory occupations --about 108MB for \texttt{g} and 216MB for \texttt{g1}-- of both outranking digraph instances.\index{digraphsTools@\texttt{digraphsTools} module}\index{total-size@\texttt{total\_size()}}
 \begin{lstlisting}
 >>> from digraphsTools import total_size
 >>> total_size(g)
-    108662777
+    107503580
 >>> total_size(g1)
-    212679272
+    211519995
 >>> total_size(g1.relation)/total_size(g1)
-    0.34
+    0.67
 >>> total_size(g1.gamma)/total_size(g1)
-    0.45
+    0.23
 \end{lstlisting}
 
-The standard \texttt{Decimal} valued
-\texttt{BipolarOutrankingDigraph} instance $g1$ thus nearly doubles the memory occupation of the corresponding \texttt{IntegerBipo\-larOutrankingDigraph} $g$ instance (see Line 3 and 5 above). $3/4$ of this memory occupation is due to the \texttt{g1.relation} ($34\%$) and the \texttt{g1.gamma} ($45\%$) dictionaries. And these ratios quadratically grow with the digraph order. To limit the object sizes for really big outranking digraphs, we need to abandon the complete implementation of adjacency tables and gamma functions.
+The standard \texttt{Decimal} valued \texttt{BipolarOutrankingDigraph} instance \texttt{g1} thus nearly doubles the memory occupation of the corresponding \texttt{IntegerBipo\-larOutrankingDigraph} \texttt{g} instance (see Line 3 and 5 above). $90\%$ of this memory occupation is due to the \texttt{g1.relation} ($67\%$) and the \texttt{g1.gamma} ($23\%$) dictionaries. And these ratios quadratically grow with the digraph order. To limit the object sizes for really big outranking digraphs, we need to abandon the complete implementation of adjacency tables and gamma functions.
 
 \section{The sparse implementation of big outranking digraphs}
 \label{sec:11.4}
@@ -180,7 +182,7 @@ The idea is to first decompose the complete outranking relation into an ordered 
 ...                       numberOfCriteria=7,seed=100)
 \end{lstlisting}
 
-The \texttt{cSparseIntegerOutrankingDigraphs} module\index{cSparseIntegerOutrankingDigraphs@\texttt{cSparseIntegerOutrankingDigraphs} module} provides the\\ \texttt{SparseIntegerOutrankingDigraph} class\index{SparseIntegerOutrankingDigraph@\texttt{SparseIntegerOutrankingDigraph} class} for sorting the $100$ decision alternatives into overlapping quartile classes and rank all $100$ with respect to the average quantile limits.
+The \texttt{cSparseIntegerOutrankingDigraphs} module\index{cSparseIntegerOutrankingDigraphs@\texttt{cSparseIntegerOutrankingDigraphs} module} provides the \texttt{Spar\-seIntegerOutrankingDigraph} class\index{SparseIntegerOutrankingDigraph@\texttt{SparseIntegerOutrankingDigraph} class} for sorting the $100$ decision alternatives into overlapping quartile classes and rank all $100$ with respect to the average quantile limits.
 \begin{lstlisting}[caption={Constructing the sparse integer outranking digraph},label=list:11.3]
 >>> from cSparseIntegerOutrankingDigraphs import\
 ...                    SparseIntegerOutrankingDigraph
@@ -217,7 +219,7 @@ The \texttt{cSparseIntegerOutrankingDigraphs} module\index{cSparseIntegerOutrank
        'boostedRanking']
 \end{lstlisting}
 
-We obtain in this example here a decomposition into 6 linearly ordered components with a maximal component size of 35 for component $c3$.
+We obtain in this example here a decomposition into 6 linearly ordered components with a maximal component size of 35 for component \texttt{c3}.
 
 \begin{lstlisting}
 >>> sg.showDecomposition()
@@ -234,19 +236,19 @@ We obtain in this example here a decomposition into 6 linearly ordered component
   c6. ]<-0.25]    : [79,83,84]
 \end{lstlisting}
 
-A restricted outranking relation is stored for each component with more than one alternative. The resulting global relation map of the first ranked 75 alternatives looks as follows (see Fig:~\vref{fig:11.1}):
+A restricted outranking relation is stored for each component with more than one alternative. The showRelationMap() prints out below the relation map of the sparse digraph \texttt{sg} for the 75 first-ranked alternatives. (see Fig.~\vref{fig:11.1}):
 \begin{lstlisting}
 >>> sg.showRelationMap(toIndex=75)
 \end{lstlisting}  
-\begin{figure}[h]
-\sidecaption
+\begin{figure}[ht]
+\sidecaption[t]
 \includegraphics[width=7cm]{Figures/11-1-sparseRelationMap.png}
-\caption{Sparse quartiles-sorting decomposed outranking relation (extract). \textbf{Legend}: \emph{outranking} for certain ($\top$); \emph{outranked} for certain ($\bot$); more or less \emph{outranking} ($+$); more or less \emph{outranked} ($-$); \emph{indeterminate}}
+\caption{Sparse quartiles-sorting decomposed outranking relation (extract). Legend: \emph{outranking} for certain ($\top$); \emph{outranked} for certain ($\bot$); more or less \emph{outranking} ($+$); more or less \emph{outranked} ($-$); \emph{indeterminate}}
 \label{fig:11.1}       % Give a unique label
 \end{figure}
 %\clearpage
 
-With a fill rate of $25\%$, the memory occupation of this sparse outranking digraph $sg$ instance takes now only $769$kB, compared to the $1.7$MB required by a corresponding standard \texttt{BipolarOutrankingDigraph} instance (see Listing~\vref{list:113}).
+With a fill rate of $25\%$, the memory occupation of this sparse outranking digraph \texttt{sg} instance takes now only $769$kB, compared to the $1.7$MB required by a corresponding standard \texttt{BipolarOutrankingDigraph} instance (see List.\vref{list:11.3}).
 \begin{lstlisting}
 >>> print('%.0fkB' % (total_size(sg)/1024) )
     769kB
@@ -292,22 +294,22 @@ For sparse outranking digraphs, the adjacency table is implemented as a dynamic 
 \section{Quantiles ranking of big performance tableaux}
 \label{sec:11.4}
 
-We may now rank the complete set of 100 decision alternatives by locally ranking all these individual components with the \Copeland or the \NetFlows rule.
+The \texttt{boostedRanking} attribute of the sparse outranking digraph \texttt{sg} contains the global linear ranking of the 100 decision alternatives. This ranking is computed by locally ranking the individual 6 components with the \Copeland rule (see List.~\vref{list:11.3} Lines 12 and 33).
 \begin{lstlisting}
-   >>> sg.boostedRanking
-    [22, 53, 3, 34, 56, 62, 24, 44, 50, 93, 41, 63, 29, 58,
-     96, 7, 43, 81, 91, 35, 25, 76, 66, 65, 8, 10, 1, 11, 61,
-     30, 48, 45, 68, 5, 89, 57, 59, 85, 82, 73, 33, 94, 70,
-     97, 20, 92, 71, 90, 95, 21, 28, 2, 36, 87, 40, 98, 46, 55,
-     100, 64, 17, 26, 27, 19, 69, 6, 38, 4, 37, 60, 31, 77, 78,
-     47, 99, 18, 12, 80, 54, 88, 39, 9, 72, 86, 42, 13, 23, 67,
-     52, 15, 32, 49, 51, 74, 16, 14, 75, 79, 83, 84]
+>>> sg.boostedRanking
+  [22, 53, 3, 34, 56, 62, 24, 44, 50, 93, 41, 63, 29, 58,
+   96, 7, 43, 81, 91, 35, 25, 76, 66, 65, 8, 10, 1, 11, 61,
+   30, 48, 45, 68, 5, 89, 57, 59, 85, 82, 73, 33, 94, 70,
+   97, 20, 92, 71, 90, 95, 21, 28, 2, 36, 87, 40, 98, 46, 55,
+   100, 64, 17, 26, 27, 19, 69, 6, 38, 4, 37, 60, 31, 77, 78,
+   47, 99, 18, 12, 80, 54, 88, 39, 9, 72, 86, 42, 13, 23, 67,
+   52, 15, 32, 49, 51, 74, 16, 14, 75, 79, 83, 84]
 \end{lstlisting}
 
-When actually computing linear rankings of a set of alternatives, the local outranking relations are of no practical usage, and we may furthermore reduce the memory occupation of the resulting digraph by:
+When actually computing linear rankings of the complete set of alternatives, the local outranking relations per component are of no practical usage, and we may furthermore reduce the memory occupation of the resulting digraph by:
 \begin{enumerate}[topsep=1pt]
 \item refining the ordering of the quantile classes by taking into account how well an alternative is outranking the lower limit of its quantile class, respectively the upper limit of its quantile class is \emph{not} outranking the alternative;
-\item dropping the local outranking digraphs and keeping for each quantile class only a locally ranked list of alternatives.
+\item dropping the local outranking digraphs and keeping for each component only a locally ranked list of alternatives.
 \end{enumerate}
 
 We provide therefore the \texttt{cQuantilesRankingDigraph} class\index{cQuantilesRankingDigraph@\texttt{cQuantilesRankingDigraph} class} from the \texttt{cSparseIntegerOutrankingDigraphs} module.
@@ -343,7 +345,7 @@ We provide therefore the \texttt{cQuantilesRankingDigraph} class\index{cQuantile
   'maximalComponentSize', 'componentRankingRule', 'boostedRanking']
 \end{lstlisting}
 
-With this \emph{optimised} quantile ordering strategy, we obtain now 47 performance equivalence classes (see Listing~\vref{list:11.5} Line 13)
+With this \emph{optimised} quantile ordering strategy, we obtain now 47 performance equivalence classes (see Listing~\vref{list:11.5} Line 13).
 \begin{lstlisting}[caption={The ordered components of the sparse outranking digraph},label=list:11.6]
 >>> qr.components
     OrderedDict([
@@ -378,45 +380,49 @@ With this \emph{optimised} quantile ordering strategy, we obtain now 47 performa
     208kB
 \end{lstlisting}
 
-We observe in Listing~\vref{list:11.6} an even more considerably less voluminous memory occupation 208kB, compared to the 769kB of the \texttt{SparseIntegerOutran\-king\-Digraph} instance. It is opportune, however, to measure the loss of quality of the resulting \Copeland ranking when working with sparse outranking digraphs.
+We observe in Listing~\vref{list:11.6} an even more considerably less voluminous memory occupation 208kB, compared to the 769kB of the \texttt{SparseIntegerOutran\-king\-Digraph} instance.
+
+It is opportune, however, to measure the loss of quality of the resulting \Copeland ranking when working with sparse outranking digraphs.
 \begin{lstlisting}[caption={Measuring the loss of quality with respect to the standard outranking digraph},label=list:11.7]
->>> from cIntegerOutrankingDigraphs import *
+>>> from cIntegerOutrankingDigraphs import\
+...                       IntegerBipolarOutrankingDigraph
 >>> ig = IntegerBipolarOutrankingDigraph(t)
->>> print('Complete outranking : %+.4f'\
-...  % (ig.computeOrderCorrelation(\
-...     ig.computeCopelandOrder())['correlation']))
-    Complete outranking : +0.7474
+>>> print('Complete outranking : %+.3f'\
+...    % (ig.computeOrderCorrelation(\
+...             ig.computeCopelandOrder())['correlation']))
+    Complete outranking : +0.747
 
->>> print('Sparse 4-tiling : %+.4f'\
-...  % (ig.computeOrderCorrelation(\
-...     list(reversed(sg.boostedRanking)))\
-...     ['correlation']))   
-    Sparse 4-tiling          : +0.7172
+>>> print('Sparse 4-tiling : %+.3f'\
+...     % (ig.computeOrderCorrelation(\
+...        list(reversed(sg.boostedRanking)))['correlation']))   
+    Sparse 4-tiling          : +0.717
 
->>> print('Optimzed sparse 4-tiling: %+.4f'\
+>>> print('Optimzed sparse 4-tiling: %+.3f'\
 ...  % (ig.computeOrderCorrelation(\
 ...     list(reversed(qr.boostedRanking)))\
 ...     ['correlation']))  
-    Optimzed sparse 4-tiling: +0.7051
+    Optimzed sparse 4-tiling: +0.705
 \end{lstlisting}
 
-The best ranking correlation with the pairwise outranking situations ($+0.75$) is naturally given when we apply the \Copeland rule to the complete outranking digraph (see Listing~\vref{list:10.7} Line 6). When we apply the same rule to the sparse 4-tiled outranking digraph, we get a correlation of $+0.72$ (Line 12), and when applying the \Copeland rule to the optimised 4-tiled digraph, we still obtain a correlation of $+0.71$ (Line 18). These results actually depend on the number of quantiles we use as well as on the given model of random performance tableau.
+The best ranking correlation with the pairwise outranking situations ($+0.747$) is naturally given when we apply the \Copeland rule to the standard outranking digraph (see List.~\vref{list:10.7} Line 7). When applying the same rule to the sparse 4-tiled outranking digraph, one gets a correlation of $+0.717$ (Line 12), and when applying the \Copeland rule to the optimised sparse 4-tiled digraph, we still obtain a correlation of $+0.705$ (Line 18). These optimistics results actually depend on the number of quantiles we use as well as on the given model of random performance tableau.
 
-In case of \texttt{Random3ObjectivesPerformanceTableau} instances, for instance, we would get in a similar setting a complete outranking correlation of $+0.86$, a sparse 4-tiling correlation of $+0.82$, and an optimzed sparse 4-tiling correlation of $+0.81$.
+In case of \texttt{Random3ObjectivesPerformanceTableau} instances, for instance, we would get in a similar setting an even better standrad outranking correlation of $+0.86$, a sparse 4-tiling correlation of $+0.82$, and an optimzed sparse 4-tiling correlation of $+0.81$.
 
 \section{HPC quantiles ranking records}
 \label{sec:11.5}
 
-Following from the separability property of the $q$-tiles sorting of each action into each $q$-tiles class, the $q$-sorting algorithm may be safely split into as much threads as are multiple processing cores available in parallel. Furthermore, the ranking procedure being local to each diagonal component, these procedures may as well be safely processed in parallel threads on each component restricted outrankingdigraph.
+Following from the separability property of the $q$-tiles sorting of each action into a $q$-tiles class, the $q$-sorting algorithm may be safely split into as much threads as are multiple processing cores available for working in parallel (see Prop.~\ref{prop:9.1}). Furthermore, the ranking procedure being local to each diagonal component, these procedures may as well be safely processed in parallel threads on each component restricted outranking digraph.
 
-Using the HPC platform of the University of Luxembourg (\href{https://hpc.uni.lu/}{https://hpc.uni.lu/}), the following run times for very big ranking problems could be achieved both:
+Using the HPC platform of the University of Luxembourg -- https://hpc-docs.uni.lu/ \citep{UNI-2014}-- the following run times for very big ranking problems could be achieved both on:
 \begin{itemize}[topsep=1pt]
-\item on Iris -skylake nodes with 28 cores \footnote{The \texttt{iris} cluster: https://hpc.uni.lu/systems/iris/}, and
-\item on the 3TB -bigmem Gaia-183 node with 64 cores \footnote{The \texttt{gaia} cluster: https://hpc.uni.lu/systems/gaia/},
+\item \emph{Iris -skylake} nodes with 28 cores:\\
+  (see https://hpc-docs.uni.lu/systems/iris), and
+\item the 3TB -bigmem \emph{Gaia-183} node with 64 cores \\
+  (see https://hpc.uni.lu/systems/gaia),
 \end{itemize}
 by running the cythonized Python modules in an Intel compiled virtual Python 3.6.5 environment [GCC Intel(R) 17.0.1 –enable-optimizations c++ gcc 6.3 mode] on Debian 8 Linux.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption
 \includegraphics[width=7cm]{Figures/11-2-rankingRecords.png}
 \caption{HPC-UL Ranking Performance Records (Spring 2018). On the big memory equipped Gaia-183 node, we were able to rank a million decision alternatives in about 2 minutes. We even could linearly rank up to 6 million decision alternatives in about 40 minutes}
@@ -425,10 +431,9 @@ by running the cythonized Python modules in an Intel compiled virtual Python 3.6
   
 %%%%%%% The chapter bibliography
 %\normallatexbib
-\clearpage
+%\clearpage
 %\phantomsection
 %\addcontentsline{toc}{chapter}{Chapter Bibliography}
-\bibliographystyle{spbasic}
-%\typeout{}
-\bibliography{03-backMatters/reference}
 %\input{02-mainMatters/11-chapterHPCRanking.bbl}
+\bibliographystyle{spbasic}
+\bibliography{03-backMatters/reference}

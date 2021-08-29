@@ -6,44 +6,44 @@ Database file #1: 03-backMatters/reference.bib
 Warning--I didn't find a database entry for "KIT-1985"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 14 entries,
-            3270 wiz_defined-function locations,
-            777 strings with 7918 characters,
-and the built_in function-call counts, 16382 in all, are:
-= -- 1817
+            3269 wiz_defined-function locations,
+            777 strings with 7919 characters,
+and the built_in function-call counts, 12688 in all, are:
+= -- 1146
 > -- 235
 < -- 18
-+ -- 130
++ -- 85
 - -- 71
-* -- 1078
-:= -- 1884
+* -- 1017
+:= -- 1742
 add.period$ -- 14
 call.type$ -- 14
 change.case$ -- 97
 chr.to.int$ -- 14
 cite$ -- 14
-duplicate$ -- 1727
-empty$ -- 1330
+duplicate$ -- 1178
+empty$ -- 1259
 format.name$ -- 106
-if$ -- 3467
+if$ -- 2725
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 135
 newline$ -- 52
 num.names$ -- 62
-pop$ -- 458
+pop$ -- 281
 preamble$ -- 1
 purify$ -- 76
 quote$ -- 0
-skip$ -- 704
+skip$ -- 271
 stack$ -- 0
-substring$ -- 1563
-swap$ -- 913
+substring$ -- 1380
+swap$ -- 303
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 117
 warning$ -- 0
-while$ -- 107
+while$ -- 97
 width$ -- 0
 write$ -- 171
 (There was 1 warning)
