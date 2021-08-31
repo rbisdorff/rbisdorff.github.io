@@ -137,12 +137,12 @@ We see confirmed again the incommensurability between the subjects, we noticed a
 \label{sec:14.3}
 
 
-We add, now, the estimated quintile limits to the enrolment quality records of the 5 Universities and rank, by using the \NetFlows rule, all these records conjointly together with the help of the \texttt{LearnedQuantilesRatingDigraph} class\index{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class} from the \texttt{sortingDigraphs} module\index{sortingDigraphs@\texttt{sortingDigraphs} module}.
+We add, now, the estimated quintile limits to the enrolment quality records of the 5 Universities and rank, by using the \Copeland rule, all these records conjointly together with the help of the \texttt{LearnedQuantilesRatingDigraph} class\index{LearnedQuantilesRatingDigraph@\texttt{LearnedQuantilesRatingDigraph} class} from the \texttt{sortingDigraphs} module\index{sortingDigraphs@\texttt{sortingDigraphs} module}.
 \begin{lstlisting}
 >>> from sortingDigraphs import\
 ...                 LearnedQuantilesRatingDigraph
 >>> lqr = LearnedQuantilesRatingDigraph(pq,pt,\
-...                 rankingRule='NetFlows')
+...                 rankingRule='Copeland')
 >>> lqr
   *-----  Object instance description -----------*
    Instance class      : LearnedQuantilesRatingDigraph
@@ -153,15 +153,15 @@ We add, now, the estimated quintile limits to the enrolment quality records of t
    New actions         : 5
    Size                : 44
    Determinateness (%) : 77.6
-   Ranking rule        : NetFlows
-   Ordinal correlation : +0.96
+   Ranking rule        : Copeland
+   Ordinal correlation : +0.97
 \end{lstlisting}
 
 The resulting ranking of the 5 Universities including the lower-closed quintile score limits may be nicely illustrated  with the showHTMLRatingHeatmap() method.\index{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}}
 \begin{lstlisting}
 >>> lqr.showHTMLRatingHeatmap(colorLevels=5,\
 ...              Correlations=True,\
-...              ndigits=1,rankingRule='NetFlows')
+...              ndigits=1,rankingRule='Copeland')
 \end{lstlisting}
 \begin{figure}[ht]
 % %\sidecaption
@@ -170,17 +170,18 @@ The resulting ranking of the 5 Universities including the lower-closed quintile 
 \label{fig:14.3}       % Give a unique label
 \end{figure}
 
-The ordinal correlation ($+0.957$) of the \NetFlows ranking with the underlying bipolar-valued outranking digraph is very high (see Fig.~\vref{fig:14.3} Row 1). Most correlated subjects with this \emph{rating-by-ranking} result appear to be \emph{Physics} ($+0.74$), \emph{Mathematics} ($+0.74$), \texttt{German Studies} ($+0.72$) and \emph{Chemistry} ($+0.70$). \emph{Mechanical Engineering} ($+0.38$) is the less correlated subjects (see Row 3).
+The ordinal correlation ($+0.97$) of the \Copeland ranking with the underlying bipolar-valued outranking digraph is very high (see Fig.~\vref{fig:14.3} Row 1). Most correlated subjects with this \emph{rating-by-ranking} result appear to be \emph{Physics} ($+0.79$), \emph{Mathematics} ($+0.77$) and \texttt{German Studies} ($+0.77$). \emph{Sociology} ($+0.36$) is the less correlated subjects (see Row 4).
 
-From the actual ranking position of the lower 5-tiling limits, we may now immediately deduce the quintile enrolment quality equivalence classes. No University reaches the highest quintiletile ($[0.80 - [$) and no university appears in the lowest quintile ($[0.00- 0.20[$). The complete rating result may be easily printed out with the \texttt{showQuantilesRating()} method\index{showQuantilesRating@\texttt{showQuantilesRating()}}.
+From the actual ranking position of the lower 5-tiling limits, we may now immediately deduce the quintile enrolment quality equivalence classes. No university reaches the highest quintiletile ($[0.80 - [$), whereas \texttt{U3} is rated into the lowest quintile ($[0.00- 0.20[$). The other three universities U1, U2 and U4 are rated in the second quintile ($[0.20- 0.40[$). The rating result may be easily printed out with the \texttt{showQuantilesRating()} method\index{showQuantilesRating@\texttt{showQuantilesRating()}}.
 \begin{lstlisting}[caption={Showing the quintiling of the enrolment quality of the 5 Universities},label=list:14.3]
 >>> lqr.showQuantilesRating()
-  *-------- Quantiles rating result ---------
+  *---- Quantiles rating result ----*
    [0.60 - 0.80[ ['U5']
-   [0.20 - 0.40[ ['U1', 'U4', 'U2', 'U3']
+   [0.20 - 0.40[ ['U1', 'U4', 'U2']
+   [0.00 - 0.20[ ['U3']
 \end{lstlisting}
 
-University U5 is rated into the fourth quintile ($[0.60 - 0.80[$), whereas the other four universities are equally rated into the second quintile ($[0.20 - 0.40[$). A corresponding \emph{graphviz} drawing with the special \texttt{exportRatingByRankingGraph\-Viz()} method\index{exportRatingByRankingGraphViz@\texttt{exportRatingByRankingGraphViz()}} may well illustrate in Figure~\vref{fig:14.4} these enrolment quality equivalence classes.
+A corresponding \emph{graphviz} drawing with the special \texttt{exportRatingByRankingGraph\-Viz()} method\index{exportRatingByRankingGraphViz@\texttt{exportRatingByRankingGraphViz()}} may well illustrate in Figure~\vref{fig:14.4} these enrolment quality equivalence classes.
 \begin{lstlisting}
 >>> lqr.exportRatingByRankingGraphViz('ratingResult')
   *---- exporting a dot file for GraphViz tools ---------*
@@ -189,33 +190,63 @@ University U5 is rated into the fourth quintile ($[0.60 - 0.80[$), whereas the o
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/14-4-ratingResult.pdf}
+\includegraphics[width=6cm]{Figures/14-4-ratingResult.pdf}
 \caption{Drawing of the quintiles rating-by-ranking result}
 \label{fig:14.4}       % Give a unique label
 \end{figure}
 % \clearpage 
 
-To effectively check the quality of our \NetFlows rating-by-ranking result, we shall now compute a direct sorting into quintiles of the enrolment quality scores, without using any outranking digraph based ranking rule.
+We have noticed in Chapter~\ref{sec:8}, that there is not a unique optimal rule for ranking from a given outranking digraph like digraph \texttt{lqr} here. The \Copeland rule, for instance, has the advantage of being \Condorcet consistent, i.e. when the outranking digraph models a linear ranking, this ranking will necessarily be the result of the \Copeland rule. When this is not the case, and especially when the outranking digraph shows chordless circuits, all potential ranking rules may give very divergent ranking results, and sometimes substantially divergent rating-by-ranking results. The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods allow to check this issue.
+\begin{lstlisting}
+>>> lqr.computeChordlessCircuits()
+[(['U1', 'U2', 'U4'], frozenset({'U2', 'U4', 'U1'}))]
+>>> lqr.showChordlessCircuits()
+*---- Chordless circuits ----*
+1 circuits.
+1:  ['U1', 'U2', 'U4'] , credibility : 0.200
+\end{lstlisting}
+
+Indeed, there appears an outranking circuit among the three universities \texttt{U1}, \texttt{U2} and \texttt{U4} rated into the 2nd quintile. It is, hence, interesting, to verify if the epistemic fusion of the rating-by-ranking results, one may obtain when applying two different ranking rules, like the \Copeland and \NetFlows rules, does actually confirm our rating-by-ranking result shown in Figure~\vref{fig:14.4}. For this purpose we make usage of the \texttt{RankingsFusionDigraph} class \index{RankingsFusionDigraph@\texttt{RankingsFusionDigraph} class} (see Lines 5-8 in List.~\vref{list:14.4}).
+\begin{lstlisting}[caption={Computing the epistemic fusion of two rating-by-rankig results},label=list:14.4]
+>>> lqr = LearnedQuantilesRatingDigraph(\
+...                   pq,pt,rankingRule='Copeland')
+>>> lqr1 = LearnedQuantilesRatingDigraph(\
+...                   pq,pt,rankingRule='NetFlows')
+>>> from transitiveDigraphs import\
+...                RankingsFusionDigraph
+>>> rankings = [lqr.actionsRanking,lqr1.actionsRanking]
+>>> rf = RankingsFusionDigraph(lqr,rankings)
+>>> rf.exportGraphViz(fileName='fusionResult',\
+...           WithRatingDecoration=True)
+exporting a dot file for GraphViz tools
+Exporting to fusionResult.dot
+dot -Grankdir=TB -Tpng fusionResult.dot\
+                 -o fusionResult.png
+\end{lstlisting}
+\begin{figure}[ht]
+\sidecaption[t]
+\includegraphics[width=5cm]{Figures/14-5-fusionResult.pdf}
+\caption{Disjunctive fusion of the \Copeland and the \NetFlows rankings}
+\label{fig:14.5}       % Give a unique label
+\end{figure}
+
+Figure~\vref{fig:14.5} reveals that the \Copeland and \NetFlows rules diverge solely in rating University \texttt{U3}. When the \Copeland rule rates \texttt{U3} in the first quintile ($[0.00- 0.20[$), the \NetFlows puts \texttt{U3} togeter with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$).  
+
+To eventually check the quality of our \Copeland \texttt{rating-by-ranking} result, we shall below compute a direct sorting into the historic 2004 quintiles of the enrolment quality scores, without using any outranking digraph based ranking rule.
 
 \section{Rating by quintiles sorting}
 \label{sec:14.4}
 
-In our case here, the Universities represent the decision actions: \emph{where to study}. We say now that University $x$ is sorted into the lower-closed quintile $q$ when the performance record of $x$ positively outranks the lower limit record of quintile $q$ and $x$ does not positively outrank the upper limit record of quintile $q$. 
+In the case study here, the five Universities \texttt{U1}, \texttt{U2}, \texttt{U3}, \texttt{U4} and \texttt{U5} represent the decision actions: \emph{where to study}. We say now that University $x$ is sorted into the lower-closed quintile $k$ when the performance record of $x$ positively outranks the lower limit record $\mathbf{q}(p_{k-1}$ of quintile $q$ and $x$ does not positively outrank the upper limit record $\mathbf{q}(p_{k}$ of quintile $q$, for $q = 1,...5$ (see List.~\vref{list:14.1}).
 
-\begin{lstlisting}[caption={Showing a quantiles sorting result},label=list:14.4,basicstyle=\ttfamily\scriptsize]
->>> lqr.showActionsSortingResult()
-  Quantiles sorting result per decision action
-  [0.20 - 0.40[: U1 with credibility: 0.13 = min(0.33,0.13)
-  [0.20 - 0.40[: U2 with credibility: 0.13 = min(0.13,0.20)
-  [0.00 - 0.20[: U3 with credibility: 0.13 = min(0.67,0.13)
-  [0.20 - 0.40[: U4 with credibility: 0.13 = min(0.47,0.13)
-  [0.60 - <[: U5 with credibility: 0.60 = min(0.60,1.00)
-\end{lstlisting}
+With the help of the bipolar-valued characteristic of the outranking relation $r(x \succsim y)$ we may indeed compute the bipolar-valued characteristic of the assertion: ``$x$ \emph{belongs to the lower-closed quintile class} $\mathbf{q}_k$'':
+\begin{equation}\label{eq:14.1}
+r(x \in \mathbf{q}_k) \; = \; \min \big[ r\big(x \succsim \mathbf{q}(p_{k-1})\big),\, r\big(x \not\succsim \mathbf{q}(p_{k})\big)\big]
+\end{equation}
+where $k = 1,...5$ and $(p_{k})$ denote the respective quintile proportions: $0.20$, $0.40$, $0.60$, $0.80$ and $1.00$. As bipolar-valued outranking digraphs verify the coduality principle, $r\big(x \not\succsim \mathbf{q}(p_{k}) \big) = r\big(x precnsim \mathbf{q}(p_{k})$ (see Sec.~\ref{sec:9.2}).
 
-In the quintiles sorting result, shown in Listing~\vref{list:14.4}, it appears that the Universities \texttt{U1}, \texttt{U2} and \texttt{U4} are again rated into the 2nd quintile ($[0.20 - 0.40[$), whereas the University \texttt{U3} is now less well rated into the first quintile ($[0.00 - 0.20[$). Notice that the University U5 is now less precisely rated into the fourth and the fifth quintile ($[0.60 - <[$).
-
-The showSortingCharacteristics() method gives a preciser look in Listing~\vref{list:14.5} on this quintiles sorting result.
-\begin{lstlisting}[caption={Showing a quantiles sorting result},label=list:14.5,basicstyle=\ttfamily\scriptsize]
+The \texttt{showSortingCharacteristics()} method\index{showSortingCharacteristics@\texttt{showSortingCharacteristics()}} gives a precise look in Listing~\vref{list:14.5} on these quintiles sorting characteristics.
+\begin{lstlisting}[caption={Showing quantiles sorting characteristics},label=list:14.5,basicstyle=\ttfamily\scriptsize]
 >>> lqr.showSortingCharacteristics()
 x  in  K_k	     r(x >= m_k)     r(x < M_k)	    r(x in K_k)
 U5 in [0.00 - 0.20[	 0.73		 -0.73		 -0.73
@@ -249,12 +280,28 @@ U3 in [0.60 - 0.80[	 -0.53		 0.67		 -0.53
 U3 in [0.80 - <[	 -0.67		 1.00		 -0.67
 \end{lstlisting}
 
+The performance record of University U5 cannot be positively rated into a precise quintile, but both the fourth and the fifth quintile are note positively excluded as rating result. Otherwise, the bipolar-valued sorting characteristcs verify the rating result we obtained previously with the \Copeland rating-by-ranking result. 
 
-Let us conclude by saying that we prefer this latter rating-by-sorting approach; perhaps impreciser, due the case given, to missing and contradictory performance data; yet, well grounded in a powerful bipolar-valued logical and espistemic framework.
+The \texttt{showActionsSortingResult()} method\index{showActionsSortingResult@\texttt{showActionsSortingResult()}} prints the eventual quintiles rating result:
+\begin{lstlisting}[caption={Showing a quintiles rating-by-sorting result},label=list:14.6]
+>>> lqr.showActionsSortingResult()
+  Quantiles sorting result per decision action
+  [0.20 - 0.40[: U1 with credibility: 0.13 = min(0.33,0.13)
+  [0.20 - 0.40[: U2 with credibility: 0.13 = min(0.13,0.20)
+  [0.00 - 0.20[: U3 with credibility: 0.13 = min(0.67,0.13)
+  [0.20 - 0.40[: U4 with credibility: 0.13 = min(0.47,0.13)
+  [0.60 - <[: U5 with credibility: 0.60 = min(0.60,1.00)
+\end{lstlisting}
+
+The quintiles rating-by-sorting result, shown in Listing~\vref{list:14.6}, confirms so the previous \Copeland rating-by-ranking result. However, University \texttt{U5} is here sorted conjointly into the fourth and the fifth quintile, and as such would is part of the top rated institutions. A result already convincingly illustrated in the ranked heatmap shown in Figure~\vref{fig:14.3}. 
+
+\vspace{1cm}
+
+Let us conclude this hypothetical rating cae study, by saying that we prefer this latter rating-by-sorting approach; perhaps impreciser, due the case given, to missing and contradictory performance data; yet, well grounded in a powerful bipolar-valued logical and espistemic framework.
  
 %%%%%%% The chapter bibliography
 %\normallatexbib
-\clearpage
+%\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
 \bibliographystyle{spbasic}

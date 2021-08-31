@@ -183,109 +183,112 @@
 \indexentry{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}|hyperpage}{195}
 \indexentry{showQuantilesRating@\texttt{showQuantilesRating()}|hyperpage}{196}
 \indexentry{exportRatingByRankingGraphViz@\texttt{exportRatingByRankingGraphViz()}|hyperpage}{196}
-\indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformanceTableau} class|hyperpage}{206}
-\indexentry{showHTMLPerformanceTableau@\texttt{showHTMLPerformanceTableau()}|hyperpage}{209}
-\indexentry{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}|hyperpage}{212}
-\indexentry{Kendall@\emph{Kendall M.G.}|hyperpage}{212}
-\indexentry{EquivalenceDigraph@\texttt{EquivalenceDigraph} class|hyperpage}{214}
-\indexentry{computeOrdinalCorrelation@\texttt{computeOrdinalCorrelation()}|hyperpage}{216}
-\indexentry{showCorrelation@\texttt{showCorrelation()}|hyperpage}{216}
-\indexentry{computeCoSize@\texttt{computeCoSize()}|hyperpage}{217}
-\indexentry{NetFlowsOrder@\texttt{NetFlowsOrder} class|hyperpage}{217}
-\indexentry{linearOrders@\texttt{linearOrders} module|hyperpage}{217}
-\indexentry{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}|hyperpage}{218}
-\indexentry{export3DplotOfCriteriaCorrelation@\texttt{export3DplotOfCriteriaCorrelation()}|hyperpage}{219}
-\indexentry{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class|hyperpage}{220}
-\indexentry{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class|hyperpage}{220}
-\indexentry{computeRankingByChoosing@\texttt{computeRankingByChoosing()}|hyperpage}{221}
-\indexentry{RandomRegularGraph@\texttt{RandomRegularGraph} class|hyperpage}{226}
-\indexentry{MISModel@\texttt{MISModel} class|hyperpage}{226}
-\indexentry{prekernel|hyperpage}{228}
-\indexentry{CompleteDigraph@\texttt{CompleteDigraph} class|hyperpage}{228}
-\indexentry{Bouyssou@\emph  {D. Bouyssou}|hyperpage}{228}
-\indexentry{EmptyDigraph@\texttt{EmptyDigraph} class|hyperpage}{229}
-\indexentry{IndeterminateDigraph@\texttt{IndeterminateDigraph} class|hyperpage}{229}
-\indexentry{chordless circuits|hyperpage}{230}
-\indexentry{CirculantDigraph@\texttt{CirculantDigraph} class|hyperpage}{230}
-\indexentry{filled circuits|hyperpage}{230}
-\indexentry{anti-holes|hyperpage}{230}
-\indexentry{DualDigraph@\texttt{DualDigraph} class|hyperpage}{230}
-\indexentry{IndeterminateInnerPart@\texttt{IndeterminateInnerPart} parameter|hyperpage}{231}
-\indexentry{showPreKernels@\texttt{showPreKernels}()|hyperpage}{235}
-\indexentry{Hertz@\emph{A. Hertz}|hyperpage}{240}
-\indexentry{showMISAH@\texttt{showMIS\_AH}()|hyperpage}{240}
-\indexentry{Hertz@\emph  {A. Hertz}|hyperpage}{240}
-\indexentry{independentChoices@\texttt{independentChoices}()|hyperpage}{240}
-\indexentry{Pirlot@\textsl{M. Pirlot}|hyperpage}{242}
-\indexentry{Neumann@\textsl{J. von Neumann}|hyperpage}{243}
-\indexentry{domkernelrestrict@\texttt{domkernelrestrict()}|hyperpage}{244}
-\indexentry{computeKernelVector@\texttt{computeKernelVector()}|hyperpage}{244}
-\indexentry{Roubens@\textsl{M. Roubens}|hyperpage}{248}
-\indexentry{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformanceTableau()}|hyperpage}{263}
-\indexentry{stability denotation|hyperpage}{265}
-\indexentry{StabilityDenotation@\texttt{StabilityDenotation} flag|hyperpage}{265}
-\indexentry{RobustOutrankingDigraph@\texttt{RobustOutrankingDigraph} class|hyperpage}{270}
-\indexentry{symmetricAverage@\texttt{symmetricAverage()}|hyperpage}{274}
-\indexentry{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph} class|hyperpage}{275}
-\indexentry{votingProfiles@\texttt{votingProfiles} module|hyperpage}{288}
-\indexentry{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class|hyperpage}{288}
-\indexentry{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class|hyperpage}{288}
-\indexentry{showApprovalResults@\texttt{showApprovalResults()}|hyperpage}{290}
-\indexentry{showDisapprovalResults@\texttt{showDisapprovalResults()}|hyperpage}{290}
-\indexentry{showNetApprovalScores@\texttt{showNetApprovalScores()}|hyperpage}{291}
-\indexentry{graphs@\texttt{graphs} module|hyperpage}{305}
-\indexentry{Graph@\texttt{Graph} class|hyperpage}{305}
-\indexentry{RandomGraph@\texttt{RandomGraph} class|hyperpage}{305}
-\indexentry{showShort@\texttt{showShort()}|hyperpage}{307}
-\indexentry{graph2Digraph@\texttt{graph2Digraph()}|hyperpage}{307}
-\indexentry{digraph2Graph@\texttt{digraph2Graph()}|hyperpage}{307}
-\indexentry{Q\_Coloring@\texttt{Q\_Coloring} class|hyperpage}{308}
-\indexentry{Gibbs sampler|hyperpage}{308}
-\indexentry{showMIS@\texttt{showMIS()}|hyperpage}{309}
-\indexentry{showCliques@\texttt{showCliques()}|hyperpage}{310}
-\indexentry{LineGraph@\texttt{LineGraph} class|hyperpage}{310}
-\indexentry{CycleGraph@\texttt{CycleGraph} class|hyperpage}{310}
-\indexentry{GridGraph@\texttt{GridGraph} class|hyperpage}{313}
-\indexentry{IsingModel@\texttt{IsingModel} class|hyperpage}{313}
-\indexentry{MetropolisChain@\texttt{MetropolisChain} class|hyperpage}{313}
-\indexentry{checkSampling@\texttt{checkSampling()}|hyperpage}{315}
+\indexentry{RankingsFusionDigraph@\texttt{RankingsFusionDigraph} class|hyperpage}{198}
+\indexentry{showSortingCharacteristics@\texttt{showSortingCharacteristics()}|hyperpage}{199}
+\indexentry{showActionsSortingResult@\texttt{showActionsSortingResult()}|hyperpage}{200}
+\indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformanceTableau} class|hyperpage}{208}
+\indexentry{showHTMLPerformanceTableau@\texttt{showHTMLPerformanceTableau()}|hyperpage}{211}
+\indexentry{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}|hyperpage}{214}
+\indexentry{Kendall@\emph{Kendall M.G.}|hyperpage}{214}
+\indexentry{EquivalenceDigraph@\texttt{EquivalenceDigraph} class|hyperpage}{216}
+\indexentry{computeOrdinalCorrelation@\texttt{computeOrdinalCorrelation()}|hyperpage}{218}
+\indexentry{showCorrelation@\texttt{showCorrelation()}|hyperpage}{218}
+\indexentry{computeCoSize@\texttt{computeCoSize()}|hyperpage}{219}
+\indexentry{NetFlowsOrder@\texttt{NetFlowsOrder} class|hyperpage}{219}
+\indexentry{linearOrders@\texttt{linearOrders} module|hyperpage}{219}
+\indexentry{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}|hyperpage}{220}
+\indexentry{export3DplotOfCriteriaCorrelation@\texttt{export3DplotOfCriteriaCorrelation()}|hyperpage}{221}
+\indexentry{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class|hyperpage}{222}
+\indexentry{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class|hyperpage}{222}
+\indexentry{computeRankingByChoosing@\texttt{computeRankingByChoosing()}|hyperpage}{223}
+\indexentry{RandomRegularGraph@\texttt{RandomRegularGraph} class|hyperpage}{228}
+\indexentry{MISModel@\texttt{MISModel} class|hyperpage}{228}
+\indexentry{prekernel|hyperpage}{230}
+\indexentry{CompleteDigraph@\texttt{CompleteDigraph} class|hyperpage}{230}
+\indexentry{Bouyssou@\emph  {D. Bouyssou}|hyperpage}{230}
+\indexentry{EmptyDigraph@\texttt{EmptyDigraph} class|hyperpage}{231}
+\indexentry{IndeterminateDigraph@\texttt{IndeterminateDigraph} class|hyperpage}{231}
+\indexentry{chordless circuits|hyperpage}{232}
+\indexentry{CirculantDigraph@\texttt{CirculantDigraph} class|hyperpage}{232}
+\indexentry{filled circuits|hyperpage}{232}
+\indexentry{anti-holes|hyperpage}{232}
+\indexentry{DualDigraph@\texttt{DualDigraph} class|hyperpage}{232}
+\indexentry{IndeterminateInnerPart@\texttt{IndeterminateInnerPart} parameter|hyperpage}{233}
+\indexentry{showPreKernels@\texttt{showPreKernels}()|hyperpage}{237}
+\indexentry{Hertz@\emph{A. Hertz}|hyperpage}{242}
+\indexentry{showMISAH@\texttt{showMIS\_AH}()|hyperpage}{242}
+\indexentry{Hertz@\emph  {A. Hertz}|hyperpage}{242}
+\indexentry{independentChoices@\texttt{independentChoices}()|hyperpage}{242}
+\indexentry{Pirlot@\textsl{M. Pirlot}|hyperpage}{244}
+\indexentry{Neumann@\textsl{J. von Neumann}|hyperpage}{245}
+\indexentry{domkernelrestrict@\texttt{domkernelrestrict()}|hyperpage}{246}
+\indexentry{computeKernelVector@\texttt{computeKernelVector()}|hyperpage}{246}
+\indexentry{Roubens@\textsl{M. Roubens}|hyperpage}{250}
+\indexentry{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformanceTableau()}|hyperpage}{265}
+\indexentry{stability denotation|hyperpage}{267}
+\indexentry{StabilityDenotation@\texttt{StabilityDenotation} flag|hyperpage}{267}
+\indexentry{RobustOutrankingDigraph@\texttt{RobustOutrankingDigraph} class|hyperpage}{272}
+\indexentry{symmetricAverage@\texttt{symmetricAverage()}|hyperpage}{276}
+\indexentry{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph} class|hyperpage}{277}
+\indexentry{votingProfiles@\texttt{votingProfiles} module|hyperpage}{290}
+\indexentry{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class|hyperpage}{290}
+\indexentry{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class|hyperpage}{290}
+\indexentry{showApprovalResults@\texttt{showApprovalResults()}|hyperpage}{292}
+\indexentry{showDisapprovalResults@\texttt{showDisapprovalResults()}|hyperpage}{292}
+\indexentry{showNetApprovalScores@\texttt{showNetApprovalScores()}|hyperpage}{293}
+\indexentry{graphs@\texttt{graphs} module|hyperpage}{307}
+\indexentry{Graph@\texttt{Graph} class|hyperpage}{307}
+\indexentry{RandomGraph@\texttt{RandomGraph} class|hyperpage}{307}
+\indexentry{showShort@\texttt{showShort()}|hyperpage}{309}
+\indexentry{graph2Digraph@\texttt{graph2Digraph()}|hyperpage}{309}
+\indexentry{digraph2Graph@\texttt{digraph2Graph()}|hyperpage}{309}
+\indexentry{Q\_Coloring@\texttt{Q\_Coloring} class|hyperpage}{310}
+\indexentry{Gibbs sampler|hyperpage}{310}
+\indexentry{showMIS@\texttt{showMIS()}|hyperpage}{311}
+\indexentry{showCliques@\texttt{showCliques()}|hyperpage}{312}
+\indexentry{LineGraph@\texttt{LineGraph} class|hyperpage}{312}
+\indexentry{CycleGraph@\texttt{CycleGraph} class|hyperpage}{312}
+\indexentry{GridGraph@\texttt{GridGraph} class|hyperpage}{315}
+\indexentry{IsingModel@\texttt{IsingModel} class|hyperpage}{315}
 \indexentry{MetropolisChain@\texttt{MetropolisChain} class|hyperpage}{315}
-\indexentry{showTransitionMatrix@\texttt{showTransitionMatrix()}|hyperpage}{315}
-\indexentry{CirculantDigraph@\texttt{CirculantDigraph} class|hyperpage}{315}
-\indexentry{CycleGraph@\texttt{CycleGraph} class|hyperpage}{316}
-\indexentry{perrinMIS@\texttt{perrinMIS} shell command|hyperpage}{316}
-\indexentry{readPerrinMisset@\texttt{readPerrinMisset()}|hyperpage}{317}
-\indexentry{automorphismGenerators@\texttt{automorphismGenerators()}|hyperpage}{318}
-\indexentry{dreadnaut@\texttt{dreadnaut} shell command|hyperpage}{318}
-\indexentry{RandomTree@\texttt{RandomTree} class|hyperpage}{321}
-\indexentry{isTree@\texttt{isTree()}|hyperpage}{324}
-\indexentry{tree2Pruefer@\texttt{tree2Pruefer()}|hyperpage}{324}
-\indexentry{TreeGraph@\texttt{TreeGraph()}|hyperpage}{324}
-\indexentry{computeGraphCentres@\texttt{computeGraphCentres()}|hyperpage}{324}
-\indexentry{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}|hyperpage}{324}
-\indexentry{RandomSpanningTree@\texttt{RandomSpanningTree} class|hyperpage}{326}
-\indexentry{RandomSpanningForest@\texttt{RandomSpanningForest} class|hyperpage}{326}
-\indexentry{RandomValuationGraph@\texttt{RandomValuationGraph} class|hyperpage}{327}
-\indexentry{BestDeterminedSpanningForest@\texttt{BestDeterminedSpanningForest} class|hyperpage}{328}
-\indexentry{BergeGraph@\Berge graph|hyperpage}{333}
-\indexentry{triangulated graph|hyperpage}{333}
-\indexentry{comparability graph|hyperpage}{333}
-\indexentry{comparability graph|hyperpage}{333}
-\indexentry{permutation graph|hyperpage}{333}
-\indexentry{split graph|hyperpage}{333}
-\indexentry{RandomIntervalIntersectionsGraph@\texttt{RandomIntervalIntersectionsGraph} class|hyperpage}{333}
-\indexentry{isPerfectGraph@\texttt{isPerfectGraph()}|hyperpage}{334}
-\indexentry{isSpliGraph@\texttt{isSplitGraph()}|hyperpage}{334}
-\indexentry{isIntervalGraph@\texttt{isIntervalGraph()}|hyperpage}{334}
-\indexentry{isPermutationGraph@\texttt{isPermutationGraph()}|hyperpage}{334}
-\indexentry{computeChordlessCycles@\emph{computeChordlessCycles()}|hyperpage}{336}
-\indexentry{setEdgeValue@\texttt{setEdgeValue()}|hyperpage}{337}
-\indexentry{PermutationGraph@\texttt{PermutationGraph} class|hyperpage}{338}
-\indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{338}
-\indexentry{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}|hyperpage}{339}
-\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{340}
-\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{340}
-\indexentry{isComparabilityGraph@\texttt{isComparabilityGraph()}|hyperpage}{342}
-\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOrientedDigraph()}|hyperpage}{343}
-\indexentry{computeCopelandRanking@\texttt{computeCopelandRanking()}|hyperpage}{344}
-\indexentry{computePermutation@\texttt{computePermutation()}|hyperpage}{345}
+\indexentry{checkSampling@\texttt{checkSampling()}|hyperpage}{317}
+\indexentry{MetropolisChain@\texttt{MetropolisChain} class|hyperpage}{317}
+\indexentry{showTransitionMatrix@\texttt{showTransitionMatrix()}|hyperpage}{317}
+\indexentry{CirculantDigraph@\texttt{CirculantDigraph} class|hyperpage}{317}
+\indexentry{CycleGraph@\texttt{CycleGraph} class|hyperpage}{318}
+\indexentry{perrinMIS@\texttt{perrinMIS} shell command|hyperpage}{318}
+\indexentry{readPerrinMisset@\texttt{readPerrinMisset()}|hyperpage}{319}
+\indexentry{automorphismGenerators@\texttt{automorphismGenerators()}|hyperpage}{320}
+\indexentry{dreadnaut@\texttt{dreadnaut} shell command|hyperpage}{320}
+\indexentry{RandomTree@\texttt{RandomTree} class|hyperpage}{323}
+\indexentry{isTree@\texttt{isTree()}|hyperpage}{326}
+\indexentry{tree2Pruefer@\texttt{tree2Pruefer()}|hyperpage}{326}
+\indexentry{TreeGraph@\texttt{TreeGraph()}|hyperpage}{326}
+\indexentry{computeGraphCentres@\texttt{computeGraphCentres()}|hyperpage}{326}
+\indexentry{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}|hyperpage}{326}
+\indexentry{RandomSpanningTree@\texttt{RandomSpanningTree} class|hyperpage}{328}
+\indexentry{RandomSpanningForest@\texttt{RandomSpanningForest} class|hyperpage}{328}
+\indexentry{RandomValuationGraph@\texttt{RandomValuationGraph} class|hyperpage}{329}
+\indexentry{BestDeterminedSpanningForest@\texttt{BestDeterminedSpanningForest} class|hyperpage}{330}
+\indexentry{BergeGraph@\Berge graph|hyperpage}{335}
+\indexentry{triangulated graph|hyperpage}{335}
+\indexentry{comparability graph|hyperpage}{335}
+\indexentry{comparability graph|hyperpage}{335}
+\indexentry{permutation graph|hyperpage}{335}
+\indexentry{split graph|hyperpage}{335}
+\indexentry{RandomIntervalIntersectionsGraph@\texttt{RandomIntervalIntersectionsGraph} class|hyperpage}{335}
+\indexentry{isPerfectGraph@\texttt{isPerfectGraph()}|hyperpage}{336}
+\indexentry{isSpliGraph@\texttt{isSplitGraph()}|hyperpage}{336}
+\indexentry{isIntervalGraph@\texttt{isIntervalGraph()}|hyperpage}{336}
+\indexentry{isPermutationGraph@\texttt{isPermutationGraph()}|hyperpage}{336}
+\indexentry{computeChordlessCycles@\emph{computeChordlessCycles()}|hyperpage}{338}
+\indexentry{setEdgeValue@\texttt{setEdgeValue()}|hyperpage}{339}
+\indexentry{PermutationGraph@\texttt{PermutationGraph} class|hyperpage}{340}
+\indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{340}
+\indexentry{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}|hyperpage}{341}
+\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{342}
+\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{342}
+\indexentry{isComparabilityGraph@\texttt{isComparabilityGraph()}|hyperpage}{344}
+\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOrientedDigraph()}|hyperpage}{345}
+\indexentry{computeCopelandRanking@\texttt{computeCopelandRanking()}|hyperpage}{346}
+\indexentry{computePermutation@\texttt{computePermutation()}|hyperpage}{347}
