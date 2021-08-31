@@ -50,7 +50,7 @@ The student grades are measured on an ordinal performance scale from $0$ pts (we
 
 \paragraph{\textbf{Data}}
 
-File \texttt{graffiti03.py} \footnote{The file is provided in the \texttt{examples} directory of the \Digraph ressources \citep{BIS-2021b}.} contains a performance tableau about the star-rating of movies that could be seen in the city of Luxembourg during Spring 2003 (source: \citet{GRA-2003}). Its content is shown in Fig.~\vref{fig:15.1}.
+File \texttt{graffiti03.py} \footnote{The file is provided in the \texttt{examples} directory of the \Digraph resources.} contains a performance tableau inspired by the star-rating of movies that could be seen in the city of Luxembourg during Spring 2003 (source: \citet{GRA-2003}). Its content is shown in Fig.~\vref{fig:15.1}.
 \begin{lstlisting}
    >>> from perfTabs import PerformanceTableau
    >>> t = PerformanceTableau('graffiti03')
@@ -59,9 +59,9 @@ File \texttt{graffiti03.py} \footnote{The file is provided in the \texttt{exampl
    ...                        rankingRule=None,colorLevels=5,
    ...                        ndigits=0)   
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=\hsize]{Figures/15-1-moviesRatingData.png}
+\includegraphics[width=0.9\hsize]{Figures/15-1-moviesRatingData.png}
 \caption{Graffiti magazine's movie ratings from February 2003}
 \label{fig:15.1}       % Give a unique label
 \end{figure}
@@ -84,12 +84,14 @@ The critic's opinions are expressed on seven rating levels: $-2$ (two zeros, \em
 
 \paragraph{\textbf{Data}}
 
-A person, who wants to buy a TV set, retains after a first selection, eight potential TV models \footnote{This didactic decision problem is discussed in \citet[pp.33-35]{VIN-1992}}. To make their best choice these eight models were graded with respect to three decision objectives of equal importance:
-\begin{enumerate}[topsep=0pt]
+A person, who wants to buy a TV set, retains after a first selection, eight potential TV models \footnote{A similar didactic decision problem is discussed by \citet[pp.33-35]{VIN-1992}}. To make their best choice, these eight models were graded with respect to three decision objectives of equal importance:
+
+\begin{enumerate}[topsep=3pt]
 \item \emph{Costs} of the set (to be minimised); 
 \item \emph{Picture and Sound} quality of the TV (to be maximised):
 \item \emph{Maintenance contract} quality of the provider (to be maximised).
 \end{enumerate}
+
 The \emph{Costs} objective is assessed by the price of the TV set (criterion $Pr$ to be minimised). \emph{Picture} quality (criterion $Pq$), \emph{Sound} quality (criterion $Sq$) and \emph{Maintenance contract} quality (criterion $Mq$) are each one assessed on a four levels qualitative performance scale: -1 (\emph{not good}), 0 (\emph{average}), 1 (\emph{good}) and 2 (\emph{very good}).
 
 The actual evaluation data are gathered in Table~\vref{tab:15.2}.
@@ -171,7 +173,6 @@ Use the \texttt{RandomAcademicPerformanceTableau} class\index{RandomAcademicPerf
 %\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
-\bibliographystyle{spbasic}
-%\typeout{}
-\bibliography{03-backMatters/reference}
 %\input{02-mainMatters/15-chapterExercises.bbl}
+\bibliographystyle{spbasic}
+\bibliography{03-backMatters/reference}

@@ -21,9 +21,9 @@ Such a case is given with  a list of star-rated movies that could be seen in tow
 ...               title='Graffiti Star wars',\
 ...               ndigits=0)
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/16-1-graffiti07_1.png}
+\includegraphics[width=\hsize]{Figures/16-1-graffiti07_1.png}
 \caption{\emph{Graffiti} magazine's movie ratings from September 2007}
 \label{fig:16.1}       % Give a unique label
 \end{figure}
@@ -85,18 +85,18 @@ A better approach is to rank the movies on the basis of pairwise bipolar-valued 
 ...            Correlations=True,\
 ...            ndigits=0)
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/16-2-graffiti07_2.png}
+\includegraphics[width=\hsize]{Figures/16-2-graffiti07_2.png}
 \caption{\emph{Graffiti} magazine's movie ratings from September 2007 ranked with the \NetFlows rule}
 \label{fig:16.2}       % Give a unique label
 \end{figure}
 
-The \NetFlows ranking shown in Fig.~\vref{fig:16.2} confirms again that movie \texttt{mv\_QS}, with $6$ \emph{must be seen} marks, is correctly best-ranked and the movie \texttt{mv\_TF} is worst-ranked with five \emph{don't like} marks. 
+The \NetFlows ranking shown in Figure~\vref{fig:16.2} confirms again that movie \texttt{mv\_QS}, with $6$ \emph{must be seen} marks, is correctly best-ranked and the movie \texttt{mv\_TF} is worst-ranked with five \emph{don't like} marks. 
 
 It is fair, however, to eventually mention here that the \emph{Graffiti} magazine's average stars ranking rule is actually showing a very similar result. Indeed, average scores usually confirm well all evident pairwise comparisons, yet \emph{enforce} comparability for all less evident ones. How to judge now the fitness of a given ranking rule?
 
-This is the purpose of the ordinal correlation \emph{tau} indexes shown in Fig.~\vref{fig:16.2} 3rd row. Computing these ordinal correlation indexes is the subject of the next Section.
+This is the purpose of the ordinal correlation \emph{tau} indexes shown in Figure~\vref{fig:16.2} 3rd row. Computing these ordinal correlation indexes is the subject of the next Section.
  
 \section{\Kendall 's ordinal correlation tau index}
 \label{sec:16:2}
@@ -109,7 +109,7 @@ Noticing that $\frac{Co}{n(n-1)} \;=\; 1 \,-\, \frac{In}{n(n-1)}$, and recalling
 \end{equation} 
 \Kendall 's original \emph{tau} definition implemented in fact the bipolar-valued negation of the non equivalence of two linear orders, i.e. the normalized majority margin of equivalently oriented irreflexive pairs.
 
-Let \texttt{r1} and \texttt{r2} be two random crisp relations defined on a same set of 5 alternatives. We may compute \Kendall 's \emph{tau} index as shown in List.~\vref{list:16.3}.
+Let \texttt{r1} and \texttt{r2} be two random crisp relations defined on a same set of 5 alternatives. We may compute \Kendall 's \emph{tau} index as shown in Listing~\vref{list:16.3}.
 \begin{lstlisting}[caption={Computing a relational equivalence digraph},label=list:16.3]
 >>> from randomDigraphs import RandomDigraph
 >>> r1 = RandomDigraph(order=5,Bipolar=True)
@@ -136,7 +136,7 @@ What happens now with more or less determined and even partially indeterminate r
 \section{Bipolar-valued relational equivalence}
 \label{sec:16.3}
 
-Two random bipolar-valued digraphs \texttt{d1} and \texttt{d2} of order five, generated in List.~\vref{list:16.4}, will help exploring this idea.
+Two random bipolar-valued digraphs \texttt{d1} and \texttt{d2} of order five, generated in Listing~\vref{list:16.4}, will help exploring this idea.
 \begin{lstlisting}[caption={Two random bipolar-valued digraphs},label=list:16.4]
 >>> from randomDigraphs import RandomValuationDigraph
 >>> d1 = RandomValuationDigraph(order=5,seed=1)
@@ -207,7 +207,7 @@ It is worthwhile noticing that the ordinal correlation index $\tau(\mathtt{d1},\
 
 The epistemic determination effect is thus successfully \emph{out-factored} from the ordinal correlation effect. With completely determined relations, $\tau(\mathtt{d1},\mathtt{d2}) \;=\; r(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2})$. The ordinal correlation with a completely indeterminate digraph, i.e. when $D = 0$, is set by convention to the indeterminate correlation value $0.0$. With uniformly chosen random $r$-valued digraphs, the expected $\tau$ index is $0.0$, denoting in fact an indeterminate relational equivalence. The corresponding expected normalized determination $d$ is about $0.333$ (see \citep{BIS-2012a}).
 
-We may below verify Eq.~\vref{eq:6.4} with help of the equivalence digraph $eqd$ computed in List.~\vref{list:16.5}.
+We may below verify Equation~\vref{eq:16.4} with help of the equivalence digraph \texttt{eqd} computed in Listing~\vref{list:16.5}.
 \begin{lstlisting}[caption={Computing the ordinal correlation index from the equivalence digraph},label=list:16.6]
 >>> # eqd = EquivalenceDigraph(d1,d2)
 >>> M = Decimal('0'); D = Decimal('0')
@@ -221,7 +221,7 @@ We may below verify Eq.~\vref{eq:6.4} with help of the equivalence digraph $eqd$
   r(rd1<=>rd2) = +0.026, d = 0.356, tau = +0.073  
 \end{lstlisting}
 
-The \Digraph resources directly provide for the preceding computations the \texttt{compute\-OrdinalCorrelation()} method\index{computeOrdinalCorrelation@\texttt{computeOrdinalCorrelation()}} which renders a dictionary with a \texttt{correlation} ($\tau$) and a \texttt{determina\-tion} ($d$) attribute. We may recover $r(d1\,\Leftrightarrow\, d2)$ by multiplying $\tau$ with $d$ (see List.~\vref{list:16.7} Line 4). 
+The \Digraph resources directly provide for the preceding computations the \texttt{compute\-OrdinalCorrelation()} method\index{computeOrdinalCorrelation@\texttt{computeOrdinalCorrelation()}} which renders a dictionary with a \texttt{correlation} ($\tau$) and a \texttt{determina\-tion} ($d$) attribute. We may recover $r(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2})$ by multiplying $\tau$ with $d$ (see List.~\vref{list:16.7} Line 4). 
 \begin{lstlisting}[caption={Computing the valued ordinal correlation index},label=list:16.7]
 >>> corrd1d2 = d1.computeOrdinalCorrelation(d2)
 >>> tau = corrd1d2['correlation']
@@ -242,12 +242,12 @@ The \Digraph resources provide for convenience a direct \texttt{showCorrela\-tio
     Bipolar-valued equivalence : +0.026
 \end{lstlisting}
 
-We are now ready for assessing the quality of the \NetFlows ranking of the movies shown in the heat map view of Fig.~\vref{fig:16.2}. 
+We are now ready for assessing the quality of the \NetFlows ranking of the movies shown in the heatmap view of Figure~\vref{fig:16.2}. 
 
 \section{Fitness of ranking heuristics}
 \label{sec:16.3}
 
-The \NetFlows ranking of the movies shown in the heatmap view in Fig.~\vref{fig:16.2} is based on the bipolar-valued outranking digraph modelling the pairwise global ``\emph{rated at least as well as}'' relation among the $25$ movies from the performance tableau instance \texttt{gt07}.
+The \NetFlows ranking of the movies shown in the heatmap view in Figure~\vref{fig:16.2} is based on the bipolar-valued outranking digraph modelling the pairwise global ``\emph{rated at least as well as}'' relation among the $25$ movies from the performance tableau instance \texttt{gt07}.
 \begin{lstlisting}[caption={The bipolar-valued outranking digraph of the star-rated movies},label=list:16.8]
 >>> bod = BipolarOutrankingDigraph(gt07)
   *------- Object instance description ------*
@@ -265,7 +265,7 @@ The \NetFlows ranking of the movies shown in the heatmap view in Fig.~\vref{fig:
 \end{lstlisting}
 Listing~\vref{list:16.8} reveals that the outranking digraph \texttt{bod} contains $390$ positively validated (Line 7), $188$ positively invalidated (Line 13)\index{computeCoSize@\texttt{computeCoSize()}}, and 22 indeterminate outranking situations from the potential $25 \times 24 = 600$ irreflexive movie pairs.
 
-Listing~\vref{list:16.9} illustrates with the \texttt{NetFlowsOrder} class \index{NetFlowsOrder@\texttt{NetFlowsOrder} class} from the \texttt{linearOr\-ders} module\index{linearOrders@\texttt{linearOrders} module} how to compute the global \NetFlows ranking \texttt{nf}, as shown in the ordered heat map of Fig.~\vref{fig:16.2} and the bipolar-valued relational equivalence of the \texttt{nf} ranking with each one the individual critic's star-ratings.
+Listing~\vref{list:16.9} illustrates with the \texttt{NetFlowsOrder} class \index{NetFlowsOrder@\texttt{NetFlowsOrder} class} from the \texttt{linearOr\-ders} module\index{linearOrders@\texttt{linearOrders} module} how to compute the global \NetFlows ranking \texttt{nf}, as shown in the ordered heat map of Figure~\vref{fig:16.2} and the bipolar-valued relational equivalence of the \texttt{nf} ranking with each one the individual critic's star-ratings.
 \begin{lstlisting}[caption={Computing marginal criterion correlations with global \NetFlows ranking},label=list:16.9]
 >>> from linearOrders import NetFlowsOrder
 >>> nf = NetFlowsOrder(bod)
@@ -296,9 +296,9 @@ Listing~\vref{list:16.9} illustrates with the \texttt{NetFlowsOrder} class \inde
   r(FG<=>nf)  = +0.027
 \end{lstlisting}
 
-In List.~\vref{list:16.9} (see Lines 13-27), we obtain the relational equivalence characteristic values shown in the third row of the ranked heatmap (see Fig.~\vref{fig:16.2}). The global \NetFlows ranking \texttt{nf} represents obviously a rather balanced compromise with respect to each movie critic's star-ratings, as there appears no negative correlation with anyone of them. The ranking \texttt{nf} apparently takes also correctly in account that the journalist $JH$, a locally renowned movie critic, shows a higher significance weight (see Line 13).
+In Listing~\vref{list:16.9} (see Lines 13-27), we obtain the relational equivalence characteristic values shown in the third row of the ranked heatmap (see Fig.~\vref{fig:16.2}). The global \NetFlows ranking \texttt{nf} represents obviously a rather balanced compromise with respect to each movie critic's star-ratings, as there appears no negative correlation with anyone of them. The ranking \texttt{nf} apparently takes also correctly in account that the journalist $JH$, a locally renowned movie critic, shows a higher significance weight (see Line 13).
 
-The ordinal correlation between the global \NetFlows ranking and the outranking digraph \texttt{bod} may be furthermore computed as illstrated in List.~\vref{list:16.10}: 
+The ordinal correlation between the global \NetFlows ranking and the outranking digraph \texttt{bod} may be furthermore computed as illstrated in Listing~\vref{list:16.10}: 
 \begin{lstlisting}[caption={Computing the ordinal correlation between \NetFlows and global outranking digraph},label=list:16.10]
 >>> corrgnf = bod.computeOrdinalCorrelation(nf)
 >>> bod.showCorrelation(corrgnf)
@@ -315,21 +315,21 @@ It would be interesting to compare similarly the correlations one may obtain wit
 \label{sec:16.4}
 
 The bipolar-valued relational equivalence indexes gives us, via the \texttt{showCrite\-riaCorrelationTable(ValuedCorrelation=True)} method\index{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}}, a further measure for studying how \emph{divergent} may appear the rating opinions expressed by the movie critics. 
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/16-3-correlationTable.png}
+\includegraphics[width=\hsize]{Figures/16-3-correlationTable.png}
 \caption{Pairwise valued correlation of movie critics.} 
 \label{fig:16.3}       % Give a unique label
 \end{figure}
 
-It is remarkable to notice in Fig.~\vref{fig:16.3} that, due to the quite numerous missing data, all pairwise valued ordinal correlation indexes $r(x\Leftrightarrow y)$ appear to be of low value, except the diagonal ones. These reflexive indexes $r(x\Leftrightarrow x)$ would trivially all amount to $+1.0$ in a plainly determined case. Here they indicate a reflexive normalized determination score $d$, i.e. the proportion of pairs of movies each critic did evaluate. Critic \texttt{JPT} (the editor of the Graffiti magazine), for instance, evaluated all but one ($d = 24\times23/600 = 0.92$), whereas critic \texttt{FG} evaluated only 10 movies among the 25 in discussion ($d = 10\times9/600 = 0.15$).
+It is remarkable to notice in Figure~\vref{fig:16.3} that, due to the quite numerous missing data, all pairwise valued ordinal correlation indexes $r(x\Leftrightarrow y)$ appear to be of low value, except the diagonal ones. These reflexive indexes $r(x\Leftrightarrow x)$ would trivially all amount to $+1.0$ in a plainly determined case. Here they indicate a reflexive normalized determination score $d$, i.e. the proportion of pairs of movies each critic did evaluate. Critic \texttt{JPT} (the editor of the Graffiti magazine), for instance, evaluated all but one ($d = 24\times23/600 = 0.92$), whereas critic \texttt{FG} evaluated only 10 movies among the 25 in discussion ($d = 10\times9/600 = 0.15$).
 
-To get a picture of the actual divergence of rating opinions concerning jointly seen pairs of movies, we may develop a Principal Component Analysis of the corresponding $\tau$ correlation matrix\footnote{The 3D PCA plot method requires a running R statistics software  (https://www.r-project.org/) installation and the Calmat matrix calculator (see the \texttt{calmat} directory in the \Digraph resources)}. The 3D plot of the first 3 principal axes is shown in Fig.~\vref{fig:16.2}.\index{export3DplotOfCriteriaCorrelation@\texttt{export3DplotOfCriteriaCorrelation()}}
+To get a picture of the actual divergence of rating opinions concerning jointly seen pairs of movies, we may develop a Principal Component Analysis of the corresponding $\tau$ correlation matrix\footnote{The 3D PCA plot method requires a running R statistics software  (https://www.r-project.org/) installation and the Calmat matrix calculator (see the \texttt{calmat} directory in the \Digraph resources)}. The 3D plot of the first 3 principal axes is shown in Figure~\vref{fig:16.2}.\index{export3DplotOfCriteriaCorrelation@\texttt{export3DplotOfCriteriaCorrelation()}}
 \begin{lstlisting}
 >>> bod.export3DplotOfCriteriaCorrelation(\
 ...                     ValuedCorrelation=False)
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
 \includegraphics[width=10cm]{Figures/16-4-correlationPCA.pdf}
 \caption{3D PCA plot of the criteria ordinal correlation matrix.}
@@ -340,7 +340,7 @@ The first 3 principal axes support together about $70\%$ of the total inertia. M
 \section{Exploring the ``\emph{better rated}''  and the ``\emph{as well as rated}'' opinions}
 \label{sec:16.5}
 
-In order to furthermore study the quality of a ranking result, it may be interesting to have a separate view on the asymmetric and symmetric parts of the ``\emph{at least as well rated as}'' opinions (see Section \vref{sec:2.3}).
+In order to furthermore study the quality of a ranking result, it may be interesting to have a separate view on the asymmetric and symmetric parts of the ``\emph{at least as well rated as}'' opinions (see Sec.~\ref{sec:2.3}).
 
 Let us first inspect the pairwise asymmetric part, namely the ``\emph{better rated than}'' and ``\emph{less well rated than}'' opinions of the movie critics. \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}
 \begin{lstlisting}
@@ -349,14 +349,14 @@ Let us first inspect the pairwise asymmetric part, namely the ``\emph{better rat
 >>> ag.showHTMLRelationTable(\
 ...    actionsList=g.computeNetFlowsRanking(),ndigits=0)
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/16-5-asymmetricPart.png}
+\includegraphics[width=\hsize]{Figures/16-5-asymmetricPart.png}
 \caption{Asymmetric part of \emph{graffiti07} digraph}
 \label{fig:16.5}       % Give a unique label
 \end{figure}
 
-We notice in Fig.~\vref{fig:16.5} that the \NetFlows ranking rule inverts in fact just three ``\emph{less well rated than}'' opinions and four ``\emph{better rated than}'' ones. A similar look in Fig.~\vref{fig:16.6} at the symmetric part --the pairwise ``\emph{as well rated as}'' opinions-- suggests a preordered preference structure in several equivalently rated classes. \index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}
+We notice in Figure~\vref{fig:16.5} that the \NetFlows ranking rule inverts in fact just three ``\emph{less well rated than}'' opinions and four ``\emph{better rated than}'' ones. A similar look in Figure~\vref{fig:16.6} at the symmetric part --the pairwise ``\emph{as well rated as}'' opinions-- suggests a preordered preference structure in several equivalently rated classes. \index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}
 \begin{lstlisting}
 >>> from digraphs import SymmetricPartialDigraph
 >>> sg = SymmetricPartialDigraph(bod)
@@ -364,9 +364,9 @@ We notice in Fig.~\vref{fig:16.5} that the \NetFlows ranking rule inverts in fac
 ...          actionsList=g.computeNetFlowsRanking(),\
 ...          ndigits=0)
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/16-6-symmetricPart.png}
+\includegraphics[width=\hsize]{Figures/16-6-symmetricPart.png}
 \caption{Symmetric part of \emph{graffiti07} digraph}
 \label{fig:16.6}       % Give a unique label
 \end{figure}
@@ -388,7 +388,7 @@ Such a preordering of the movies may, for instance, be computed with the \texttt
     1st Worst Choice ['mv_BI','mv_DI','mv_HP','mv_TF']
 \end{lstlisting}
 
-In the next Chapter~\vref{sec:17}, we thouroughly discuss the computation of such kernels in bipolar-valued digraphs.
+In the next Chapter~\ref{sec:17}, we thouroughly discuss the computation of such kernels in bipolar-valued digraphs.
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

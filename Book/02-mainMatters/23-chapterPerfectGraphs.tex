@@ -148,7 +148,7 @@ Six professors (labeled \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{
 \label{fig:23.2}       % Give a unique label
 \end{figure}
 
-From graph theory we know that time interval intersections graphs must in fact be interval graph instances, i.e. \emph{triangulated} and \emph{co-comparative} graphs. The testimonies graph shown in Fig.~\vref{fig:23.2} should therefore not contain any chordless cycle of four and more vertices. Now, the presence or not of such chordless cycles in the testimonies graph may be checked with the \texttt{computeChordlessCycles()} method \citep{BIS-2010}.\index{computeChordlessCycles@\emph{computeChordlessCycles()}}
+From graph theory we know that time interval intersections graphs must in fact be interval graph instances, i.e. \emph{triangulated} and \emph{co-comparative} graphs. The testimonies graph shown in Fig.~\vref{fig:23.2} should therefore not contain any chordless cycle of four and more vertices. Now, the presence or not of such chordless cycles in the testimonies graph may be checked with the \texttt{computeChordlessCycles()} method \citep{BIS-2010}.\index{computeChordlessCycles@\texttt{computeChordlessCycles()}}
 \begin{lstlisting}
 >>> g.computeChordlessCycles()
   Chordless cycle certificate: ['D','C','E','A','D']

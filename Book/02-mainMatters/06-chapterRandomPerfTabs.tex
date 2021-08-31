@@ -23,7 +23,7 @@ In order to study aggregation of election results (see Chapter~\vref{sec:7}) in 
 \section{Random standard performance tableaux}
 \label{sec:6.2}
     
-The \texttt{RandomPerformanceTableau} class\index{RandomPerformanceTableau@\texttt{RandomPerformanceTableau} class}, the simplest of the kind, specializes the generic \texttt{PerformanceTableau} class, and takes the following parameters:
+The \texttt{RandomPerformanceTableau} class\index{RandomPerformanceTableau@\texttt{RandomPerformance\-Tab\-leau} class}, the simplest of the kind, specializes the generic \texttt{PerformanceTableau} class, and takes the following parameters:
 \begin{itemize}[leftmargin=0.5cm,rightmargin=0.5cm]
 \item \texttt{numberOfActions} := number of decision actions.
 \item \texttt{numberOfCriteria} := number of performance criteria.
@@ -43,7 +43,7 @@ The \texttt{RandomPerformanceTableau} class\index{RandomPerformanceTableau@\text
          \item (\texttt{'beta'}, \texttt{None} (default setting), ($\alpha$, $\beta$)), a beta generator with default $\alpha=2$ and $\beta=2$ parameters.
          \item  (\texttt{'uniform'}, \texttt{None}, \texttt{None}), uniformly distributed float values on the given common scales' range \texttt{[Min, Max]};
          \item (\texttt{'normal'}, $\mu$, $\sigma$), truncated Gaussian distribution, by default $\mu = (b-a)/2$ and $\sigma = (b-a)/4$;
-         \item (\texttt{'triangular'}, \emph{mode}, \emph{repartition}), generalised triangular distribution with a probability repartition parameter specifying the probability mass accumulated until the mode value. By default, \emph{mode} = $(b-a)/2$ and \texttt{repartition} = $0.5$.\footnote{The \texttt{randomNumbers}\index{randomNumbers@\texttt{randomNumbers} module} module provides for this purpose the \texttt{ExtendedTriangularRandomVariable} class\index{ExtendedTriangularRandomVariable@\texttt{ExtendedTriangularRandomVariable} class}.}
+         \item (\texttt{'triangular'}, \emph{mode}, \emph{repartition}), generalised triangular distribution with a probability repartition parameter specifying the probability mass accumulated until the mode value. By default, \emph{mode} = $(b-a)/2$ and \texttt{repartition} = $0.5$.\footnote{The \texttt{randomNumbers}\index{randomNumbers@\texttt{randomNumbers} module} module provides for this purpose the \texttt{ExtendedTriangularRandomVariable} class\index{ExtendedTriangularRandomVariable@\texttt{ExtendedTriangularRandom\-Var\-iable} class}.}
       \end{itemize}
 \item \texttt{valueDigits} := \texttt{integer}, precision of performance measurements (2 decimal digits by default).
 \item \texttt{missingDataProbability} := $0.0 \leq \mathtt{float} \leq 1.0$ ; probability of missing performance evaluation on a criterion for an alternative (default $0.025$).
@@ -101,7 +101,7 @@ Best and worst performance on each criterion are marked in \emph{light green}, r
 \section{Random Cost-Benefit performance tableaux}
 \label{sec:6.3}
 
-The \texttt{randomPerfTabs} module provides a \texttt{RandomCBPerformanceTableau} class\index{RandomCBPerformanceTableau@\texttt{RandomCBPerformanceTableau} class} for generating random \emph{Costs} versus \emph{Benefits} organised performance tableaux. The random generator is following the directives below:
+The \texttt{randomPerfTabs} module provides a \texttt{RandomCBPerformanceTableau} class\index{RandomCBPerformanceTableau@\texttt{RandomCBPerformanceTab\-leau} class} for generating random \emph{Costs} versus \emph{Benefits} organised performance tableaux. The random generator is following the directives below:
 \begin{itemize}[leftmargin=0.5cm,rightmargin=0.25cm]
 \item Three types of decision actions are distinguished: \emph{cheap}, \emph{neutral} and \emph{expensive} ones with an equal proportion of 1/3. Two types of weighted criteria are also distinguished: \emph{Costs} criteria to be \emph{minimised}, and \emph{Benefits} criteria to be \emph{maximised}, in the proportions 1/3 respectively 2/3;
 \item  Random performances on each type of criteria  are drawn, either from an ordinal scale $[0;10]$, or from a cardinal scale $[0.0;100.0]$, following a parametric triangular law of mode: $30\%$ performance for cheap, $50\%$ for neutral, and $70\%$ performance for expensive decision actions, with constant probability repartition $0.5$ on each side of the respective mode;
@@ -225,7 +225,7 @@ Such a performance tableau may be stored and re-accessed as follows.
 \section{Random three objectives performance tableaux}
 \label{sec:6.4}
 
-The randomPerfTabs module provides a \texttt{Random3ObjectivesPerformance\-Tableau} class\index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformanceTableau} class} for generating random performance tableaux concerning public policies evaluated with respect to three decision objectives taking respectively into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. Each potential public policy is qualified randomly as performing \emph{weak} ($-$), \emph{fair} ($\sim$) or \emph{good} ($+$) wrt to each one of the three objectives. 
+The randomPerfTabs module provides a \texttt{Random3ObjectivesPerformance\-Tableau} class\index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tab\-leau} class} for generating random performance tableaux concerning public policies evaluated with respect to three decision objectives taking respectively into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. Each potential public policy is qualified randomly as performing \emph{weak} ($-$), \emph{fair} ($\sim$) or \emph{good} ($+$) wrt to each one of the three objectives. 
 
 \noindent \textbf{Generator directives are the following:}
 

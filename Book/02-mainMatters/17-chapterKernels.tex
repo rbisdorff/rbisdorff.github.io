@@ -101,7 +101,7 @@ In an oriented graph context, the internal stability condition of the kernel con
 
 A both internally stable \textbf{and} dominant, resp. absorbent choice is called a dominant or \emph{initial}, resp. an absorbent or \emph{terminal} kernel. From a topological perspective, the initial kernel concept looks from the outside of the digraph into its interior, whereas the terminal kernel looks from the interior of a digraph toward its outside. From an algebraic perspective, the initial kernel is a prefix operand, and the terminal kernel is a postfix operand in the kernel equation systems (see Sec.~\vref{sec:17.6}).
 
-Furthermore, as the kernel concept involves conjointly a positive logical refutation (the internal stability) and a positive logical affirmation (the external stability), it appeared rather quickly necessary in our operational developments to adopt a bipolar characteristic $[-1.0,1.0]$ valuation domain, modelling logical negation by a change of numerical sign and including explicitly a third median value ($0.0$), expressing logical \emph{indeterminateness} --neither positive, nor negative \citep{BIS-2000,BIS-2002,BIS-2004a}.\footnote{It is D. Bouyssou \index{Bouyssou@\emph{D. Bouyssou}} who first suggested us to adopt bipolar-valued relational characteristics.}.
+Furthermore, as the kernel concept involves conjointly a positive logical refutation (the internal stability) and a positive logical affirmation (the external stability), it appeared rather quickly necessary in our operational developments to adopt a bipolar characteristic $[-1.0,1.0]$ valuation domain, modelling logical negation by a change of numerical sign and including explicitly a third median value ($0.0$), expressing logical \emph{indeterminateness} --neither positive, nor negative \citep{BIS-2000,BIS-2002,BIS-2004a}.\footnote{It is \emph{D. Bouyssou} \index{Bouyssou@\emph{D. Bouyssou}} who first suggested us to adopt bipolar-valued relational characteristics.}.
 
 In such a  bipolar-valued context, we call \emph{prekernel}\index{prekernel} a choice who is \emph{externally stable} and for which the internal stability condition is \emph{valid or indeterminate}. We say that the independence condition is in this case only \emph{weakly validated}. Notice that all kernels are hence prekernels, but not vice-versa.
 
@@ -488,7 +488,7 @@ Let us give some hints on the \emph{tractability} of prekernel computations. Det
 \end{lstlisting}
 
 Now, there exist more efficient specialised algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices (see \citep{BIS-2006b}). \emph{Alain Hertz}\index{Hertz@\emph{A. Hertz}} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method)\index{showMISAH@\texttt{showMIS\_AH}()}. When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 7 above and Line 15 below).
-\begin{lstlisting}[caption={Enumerating MISs by visiting only maximal independent choices (\emph{A. Hertz}\index{Hertz@\emph{A. Hertz}}) },label=list:17.15]
+\begin{lstlisting}[caption={Enumerating MISs by visiting only maximal independent choices (\emph{A. Hertz}) },label=list:17.15]
 >>> e.showMIS_AH()
   # by visiting only maximal independent choices
   *-----------------------------------*

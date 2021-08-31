@@ -52,8 +52,8 @@
 \indexentry{showCriteria@\texttt{showCriteria()}|hyperpage}{48}
 \indexentry{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}|hyperpage}{48}
 \indexentry{outranking!situation|hyperpage}{49}
-\indexentry{BipolarOutrankingDigraph|hyperpage}{50}
-\indexentry{outrankingDigraphs|hyperpage}{50}
+\indexentry{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph} class|hyperpage}{50}
+\indexentry{outrankingDigraphs@\texttt{outrankingDigraphs} module|hyperpage}{50}
 \indexentry{showHTMLRelationTable|hyperpage}{50}
 \indexentry{computeCondorcetWinners@\texttt{computeCondorcetWinners()}|hyperpage}{50}
 \indexentry{computeWeakCondorcetWinners@\texttt{computeWeakCondorcetWinners()}|hyperpage}{50}
@@ -65,23 +65,23 @@
 \indexentry{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class|hyperpage}{52}
 \indexentry{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}|hyperpage}{53}
 \indexentry{codual digraph|hyperpage}{53}
-\indexentry{Condorcet!winner|hyperpage}{53}
+\indexentry{Condorcet@\Condorcet!winner|hyperpage}{53}
 \indexentry{showPairwiseComparison@\texttt{showPairwiseComparison()}|hyperpage}{54}
 \indexentry{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class|hyperpage}{55}
 \indexentry{transitiveDigraphs@\texttt{transitiveDigraphs} module|hyperpage}{55}
-\indexentry{Bouyssou@\textsl{D. Bouyssou}|hyperpage}{57}
+\indexentry{Bouyssou@\emph{D. Bouyssou}|hyperpage}{57}
 \indexentry{performance criteria|hyperpage}{65}
 \indexentry{performance tableau!coherent|hyperpage}{65}
 \indexentry{showPerformanceTableau@\texttt{showPerformanceTableau()}|hyperpage}{68}
 \indexentry{showRelationTable@\texttt{showRelationTable()}|hyperpage}{69}
 \indexentry{showPairwiseComparison@\texttt{showPairwiseComparison()}|hyperpage}{70}
 \indexentry{|hyperpage}{73}
-\indexentry{RandomPerformanceTableau@\texttt{RandomPerformanceTableau} class|hyperpage}{74}
+\indexentry{RandomPerformanceTableau@\texttt{RandomPerformance\-Tab\-leau} class|hyperpage}{74}
 \indexentry{randomNumbers@\texttt  {randomNumbers} module|hyperpage}{75}
-\indexentry{ExtendedTriangularRandomVariable@\texttt  {ExtendedTriangularRandomVariable} class|hyperpage}{75}
-\indexentry{RandomCBPerformanceTableau@\texttt{RandomCBPerformanceTableau} class|hyperpage}{77}
+\indexentry{ExtendedTriangularRandomVariable@\texttt  {ExtendedTriangularRandom\-Var\-iable} class|hyperpage}{75}
+\indexentry{RandomCBPerformanceTableau@\texttt{RandomCBPerformanceTab\-leau} class|hyperpage}{77}
 \indexentry{showStatistics@\texttt{showStatistics()}|hyperpage}{78}
-\indexentry{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformanceTableau} class|hyperpage}{79}
+\indexentry{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tab\-leau} class|hyperpage}{79}
 \indexentry{showHTMPerformanceTableau@\texttt{showHTMPerformanceTableau()}|hyperpage}{82}
 \indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformanceTableau()}|hyperpage}{84}
 \indexentry{showCourseStatistics@\texttt{showCourseStatistics()}|hyperpage}{86}
@@ -190,13 +190,13 @@
 \indexentry{showHTMLPerformanceTableau@\texttt{showHTMLPerformanceTableau()}|hyperpage}{211}
 \indexentry{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}|hyperpage}{214}
 \indexentry{Kendall@\emph{Kendall M.G.}|hyperpage}{214}
-\indexentry{EquivalenceDigraph@\texttt{EquivalenceDigraph} class|hyperpage}{216}
+\indexentry{EquivalenceDigraph@\texttt{EquivalenceDigraph} class|hyperpage}{217}
 \indexentry{computeOrdinalCorrelation@\texttt{computeOrdinalCorrelation()}|hyperpage}{218}
-\indexentry{showCorrelation@\texttt{showCorrelation()}|hyperpage}{218}
+\indexentry{showCorrelation@\texttt{showCorrelation()}|hyperpage}{219}
 \indexentry{computeCoSize@\texttt{computeCoSize()}|hyperpage}{219}
 \indexentry{NetFlowsOrder@\texttt{NetFlowsOrder} class|hyperpage}{219}
 \indexentry{linearOrders@\texttt{linearOrders} module|hyperpage}{219}
-\indexentry{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}|hyperpage}{220}
+\indexentry{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}|hyperpage}{221}
 \indexentry{export3DplotOfCriteriaCorrelation@\texttt{export3DplotOfCriteriaCorrelation()}|hyperpage}{221}
 \indexentry{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class|hyperpage}{222}
 \indexentry{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class|hyperpage}{222}
@@ -217,7 +217,6 @@
 \indexentry{showPreKernels@\texttt{showPreKernels}()|hyperpage}{237}
 \indexentry{Hertz@\emph{A. Hertz}|hyperpage}{242}
 \indexentry{showMISAH@\texttt{showMIS\_AH}()|hyperpage}{242}
-\indexentry{Hertz@\emph  {A. Hertz}|hyperpage}{242}
 \indexentry{independentChoices@\texttt{independentChoices}()|hyperpage}{242}
 \indexentry{Pirlot@\textsl{M. Pirlot}|hyperpage}{244}
 \indexentry{Neumann@\textsl{J. von Neumann}|hyperpage}{245}
@@ -281,7 +280,7 @@
 \indexentry{isSpliGraph@\texttt{isSplitGraph()}|hyperpage}{336}
 \indexentry{isIntervalGraph@\texttt{isIntervalGraph()}|hyperpage}{336}
 \indexentry{isPermutationGraph@\texttt{isPermutationGraph()}|hyperpage}{336}
-\indexentry{computeChordlessCycles@\emph{computeChordlessCycles()}|hyperpage}{338}
+\indexentry{computeChordlessCycles@\texttt{computeChordlessCycles()}|hyperpage}{338}
 \indexentry{setEdgeValue@\texttt{setEdgeValue()}|hyperpage}{339}
 \indexentry{PermutationGraph@\texttt{PermutationGraph} class|hyperpage}{340}
 \indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{340}
