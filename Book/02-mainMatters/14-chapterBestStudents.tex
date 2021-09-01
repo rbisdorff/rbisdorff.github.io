@@ -68,7 +68,7 @@ The university administrations would like to know now how their respective enrol
 \section{The 2004 performance quintiles}
 \label{sec:14.2}
 
-The estimated lowerclosed performance qintiles of the 2004 average enrolment quality per academic subject are stored in a file named \texttt{historicalQuantiles.py}\footnote{The file may be found in the \texttt{examples} directory of the \Digraph resources.} which can be reloaded with the \texttt{PerformanceQuantiles} class.\index{PerformanceQuantiles@\texttt{PerformanceQuantiles} class}.
+The estimated lowerclosed performance qintiles of the 2004 average enrolment quality per academic subject are stored in a file named \texttt{historicalQuan\-tiles.py}\footnote{The file may be found in the \texttt{examples} directory of the \Digraph resources.} which can be reloaded with the \texttt{PerformanceQuantiles} class.\index{PerformanceQuantiles@\texttt{PerformanceQuantiles} class}.
 \begin{lstlisting}[caption={},label=list:14.1]
 >>> from performanceQuantiles import PerformanceQuantiles
 >>> pq = PerformanceQuantiles('historicalQuintiles')
@@ -90,7 +90,7 @@ The estimated lowerclosed performance qintiles of the 2004 average enrolment qua
                        'cdf', 'perfTabType']
 \end{lstlisting}
 
-The history sizes, reported in Listing~\vref{list:14.1} above, indicate the number of Universities graded in the 2004 survey in each one of the popular fifteen subjects. \emph{German Studies}, for instance, were graded for 39 out of 41 Universities, whereas \emph{Electrical} and \emph{Mechanical Engineering} were only graded for 14, respectively 13 Institutions. None of the fifteen subjects were graded in all the 41 Universities \footnote{It would have been interesting to estimate such quantile limits from the individual quality scores of all the nearly 50,000 surveyed students. But this data was not public \citep{SPI-2004}.}.                      
+The history sizes, reported in Listing~\vref{list:14.1}, indicate the number of Universities graded in the 2004 survey in each one of the popular fifteen subjects. \emph{German Studies}, for instance, were graded for 39 out of 41 Universities, whereas \emph{Electrical} and \emph{Mechanical Engineering} were only graded for 14, respectively 13 Institutions. None of the fifteen subjects were graded in all the 41 Universities \footnote{It would have been interesting to estimate such quantile limits from the individual quality scores of all the nearly 50,000 surveyed students. But this data was not public \citep{SPI-2004}.}.                      
 
 Details of the fifteen academic subjects --the performance criteria-- may be consulted in a browser view (see Fig.~\vref{fig:14.2}).
 \begin{lstlisting}
@@ -103,7 +103,7 @@ Details of the fifteen academic subjects --the performance criteria-- may be con
 \label{fig:14.2}       % Give a unique label
 \end{figure}
 
-All fifteen subjects are considered equally significant (see Column Weight). The average scores in most subjects varies from 45 to 65. In some subjects, however, like \emph{Law Studies} ($35.0 - 65-0$) and \emph{Politology} ($50.0 - 70.0$) a different variability is observed. The average enrolment scores per subject are hence incommensurable and global average enrolment scores over all subjects become meaningless. 
+All fifteen subjects are considered equally significant (see Column Weight). The average scores in most subjects vary from 45 to 65. In some subjects, however, like \emph{Law Studies} ($35.0 - 65-0$) and \emph{Politology} ($50.0 - 70.0$) a different variability is observed. The average enrolment scores per subject are hence incommensurable and global average enrolment scores over all subjects become meaningless. 
 
 To take furthermore into account the potential and very likely imprecision of the quality scores' computation, we assume that, for all subjects, an average enrolment quality score difference of $0.1$ is \emph{insignificant}, wheras a difference of $0.5$ is sufficient to positively attest a \emph{better} enrolment quality. No considerable performance difference are assumed.
 
@@ -130,7 +130,7 @@ The \texttt{showLimitingQuantiles()} method prints in Listing~\vref{list:14.2} t
    'soc'   |   1.0   |   45.00   51.70   53.92   55.42   56.26   59.80  
 \end{lstlisting}
                      
-We see confirmed again the incommensurability between the subjects, we noticed already in the apparent enrolment quality scoring , especially between \emph{Law Studies} ($39.1 - 51.1$) and \emph{Politology} ($50.5 - 65.9$). \footnote{The \emph{Spiegel} authors opted therefore for a simple 3-tiling of the Universities per valuated academic subject, followed by an average \Borda scores based global ranking \citep{SPI-2004}.}
+We see confirmed again the incommensurability between the subjects, we noticed already in the apparent enrolment quality scoring, especially between \emph{Law Studies} ($39.1 - 51.1$) and \emph{Politology} ($50.5 - 65.9$). \footnote{The \emph{Spiegel} authors opted therefore for a simple 3-tiling of the Universities per graded academic subject, followed by an average \Borda scores based global ranking \citep{SPI-2004}.}
 
 
 \section{Rating-by-ranking with lower-closed quintile limits}
@@ -157,7 +157,7 @@ We add, now, the estimated quintile limits to the enrolment quality records of t
    Ordinal correlation : +0.97
 \end{lstlisting}
 
-The resulting ranking of the 5 Universities including the lower-closed quintile score limits may be nicely illustrated  with the showHTMLRatingHeatmap() method.\index{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}}
+The resulting ranking of the 5 Universities including the lower-closed quintile score limits may be nicely illustrated  with the \texttt{showHTMLRatingHeatmap()} method.\index{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}}
 \begin{lstlisting}
 >>> lqr.showHTMLRatingHeatmap(colorLevels=5,\
 ...              Correlations=True,\
@@ -181,7 +181,7 @@ From the actual ranking position of the lower 5-tiling limits, we may now immedi
    [0.00 - 0.20[ ['U3']
 \end{lstlisting}
 
-A corresponding \emph{graphviz} drawing with the special \texttt{exportRatingByRankingGraph\-Viz()} method\index{exportRatingByRankingGraphViz@\texttt{exportRatingByRankingGraphViz()}} may well illustrate in Figure~\vref{fig:14.4} these enrolment quality equivalence classes.
+A corresponding \emph{graphviz} drawing with the special \texttt{exportRatingByRan\-kingGraphViz()} method\index{exportRatingByRankingGraphViz@\texttt{exportRatingByRankingGraphViz()}} may well illustrate in Figure~\vref{fig:14.4} these enrolment quality equivalence classes.
 \begin{lstlisting}
 >>> lqr.exportRatingByRankingGraphViz('ratingResult')
   *---- exporting a dot file for GraphViz tools ---------*
@@ -190,7 +190,7 @@ A corresponding \emph{graphviz} drawing with the special \texttt{exportRatingByR
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/14-4-ratingResult.pdf}
+\includegraphics[width=4cm]{Figures/14-4-ratingResult.pdf}
 \caption{Drawing of the quintiles rating-by-ranking result}
 \label{fig:14.4}       % Give a unique label
 \end{figure}
@@ -206,15 +206,22 @@ We have noticed in Chapter~\ref{sec:8}, that there is not a unique optimal rule 
 1:  ['U1', 'U2', 'U4'] , credibility : 0.200
 \end{lstlisting}
 
-Indeed, there appears an outranking circuit among the three universities \texttt{U1}, \texttt{U2} and \texttt{U4} rated into the 2nd quintile. It is, hence, interesting, to verify if the epistemic fusion of the rating-by-ranking results, one may obtain when applying two different ranking rules, like the \Copeland and \NetFlows rules, does actually confirm our rating-by-ranking result shown in Figure~\vref{fig:14.4}. For this purpose we make usage of the \texttt{RankingsFusionDigraph} class \index{RankingsFusionDigraph@\texttt{RankingsFusionDigraph} class} (see Lines 5-8 in List.~\vref{list:14.4}).
+Indeed, there appears an outranking circuit among the three universities \texttt{U1}, \texttt{U2} and \texttt{U4} rated into the 2nd quintile. It is, hence, interesting, to verify if the epistemic fusion of the rating-by-ranking results, one may obtain when applying three different ranking rules, like the \Kemeny, \Copeland and \NetFlows rules, does actually confirm our rating-by-ranking result shown in Figure~\vref{fig:14.4}. For this purpose we make use in Listing~\vref{list:14.4} of the \texttt{RankingsFusionDigraph} class \index{RankingsFusionDigraph@\texttt{RankingsFusionDigraph} class}.
 \begin{lstlisting}[caption={Computing the epistemic fusion of two rating-by-rankig results},label=list:14.4]
->>> lqr = LearnedQuantilesRatingDigraph(\
-...                   pq,pt,rankingRule='Copeland')
->>> lqr1 = LearnedQuantilesRatingDigraph(\
-...                   pq,pt,rankingRule='NetFlows')
+>>> # lqr.actionsRanking is Copeland ranked
+>>> from linearOrders import KemenyOrder,\
+...                          NetFlowsOrder
+>>> ke = KemenyOrder(lqr,orderLimit=10)
+>>> nf = NetFlowsOrder(lqr)
 >>> from transitiveDigraphs import\
 ...                RankingsFusionDigraph
->>> rankings = [lqr.actionsRanking,lqr1.actionsRanking]
+>>> rankings = [lqr.actionsRanking,\
+...             nf.netFlowsRanking,\
+...             ke.kemenyRanking]
+>>> rankings
+ [['m5','u5','m4','m3','u1','u2','u4','m2','u3','m1'],
+  ['m5','u5','m4','m3','u1','u4','u2','u3','m2','m1'],
+  ['m5','u5','m4','m3','u1','u4','u2','m2','u3','m1']]
 >>> rf = RankingsFusionDigraph(lqr,rankings)
 >>> rf.exportGraphViz(fileName='fusionResult',\
 ...           WithRatingDecoration=True)
@@ -225,14 +232,68 @@ dot -Grankdir=TB -Tpng fusionResult.dot\
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=5cm]{Figures/14-5-fusionResult.pdf}
-\caption{Disjunctive fusion of the \Copeland and the \NetFlows rankings}
+\includegraphics[width=4cm]{Figures/14-5-fusionResult.pdf}
+\caption{Disjunctive fusion of the \Kemeny, \Copeland and \NetFlows rankings. They diverge in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}}
 \label{fig:14.5}       % Give a unique label
 \end{figure}
 
-Figure~\vref{fig:14.5} reveals that the \Copeland and \NetFlows rules diverge solely in rating University \texttt{U3}. When the \Copeland rule rates \texttt{U3} in the first quintile ($[0.00- 0.20[$), the \NetFlows puts \texttt{U3} togeter with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$).  
+The fusion of the three rating-by-ranking results is shown in Figure~\vref{fig:14.5} where we see that they diverge solely in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}. In Listing~\vref{list:14.5} Lines 12-14, one may more precisely notice that the \Kemeny and \Copeland rules rate \texttt{U3} in the first quintile ($[0.00- 0.20[$), whereas the \NetFlows rule puts \texttt{U3} togeter with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$). And, the \Kemeny rule inverts the position of \texttt{U2} and \texttt{U4}.
 
-To eventually check the quality of our \Copeland \texttt{rating-by-ranking} result, we shall below compute a direct sorting into the historic 2004 quintiles of the enrolment quality scores, without using any outranking digraph based ranking rule.
+In Listing~\vref{list:14.5}, the \texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensus\-Quality()}} reveals finally how fair \Kemeny and \Copeland rules actually balance the fifteen academic subjects. 
+\begin{lstlisting}[caption={Checking the consensus quality of \Kemeny and \Copeland rankings},label=list:14.5,basicstyle=\ttfamily\scriptsize]
+>>> lqr.showRankingConsensusQuality(ke.kemenyRanking)
+Consensus quality of ranking:
+['m5', 'u5', 'm4', 'm3', 'u1', 'u2', 'u4', 'm2', 'u3', 'm1']
+criterion (weight): correlation
+-------------------------------
+phys (0.067): +0.833
+germ (0.067): +0.789
+math (0.067): +0.722
+bio (0.067): +0.667
+mgt (0.067): +0.633
+chem (0.067): +0.611
+psy (0.067): +0.544
+pol (0.067): +0.500
+info (0.067): +0.478
+mec (0.067): +0.422
+law (0.067): +0.411
+soc (0.067): +0.400
+med (0.067): +0.400
+eco (0.067): +0.389
+elec (0.067): +0.367
+Summary:
+Weighted mean marginal correlation (a): +0.544
+Standard deviation (b)                : +0.150
+Ranking fairness (a)-(b)              : +0.394
+>>> lqr.showRankingConsensusQuality(lqr.actionsRanking)
+Consensus quality of ranking:
+['m5', 'u5', 'm4', 'm3', 'u1', 'u4', 'u2', 'm2', 'u3', 'm1']
+criterion (weight): correlation
+-------------------------------
+phys (0.067): +0.789
+math (0.067): +0.767
+germ (0.067): +0.767
+chem (0.067): +0.656
+bio (0.067): +0.622
+mgt (0.067): +0.589
+psy (0.067): +0.544
+info (0.067): +0.522
+pol (0.067): +0.456
+law (0.067): +0.411
+elec (0.067): +0.411
+med (0.067): +0.400
+eco (0.067): +0.389
+mec (0.067): +0.378
+soc (0.067): +0.356
+Summary:
+Weighted mean marginal correlation (a): +0.537
+Standard deviation (b)                : +0.148
+Ranking fairness (a)-(b)              : +0.389
+\end{lstlisting}
+
+The consensus quality of the two rating-by-ranking results do not sensibly differ one from the other. They both show a similar high mean marginal correlation $(+0.544, +0.537)$, similar standard deviations $(+0.150, +0.148)$ and, hence a similar ranking fairness $(+0.394, +0.389)$. 
+
+To furthermore check the quality of our \Copeland rating-by-ranking result, we shall below compute a direct rating-by-sorting into the historic 2004 quintiles of the enrolment quality scores, without making use of any outranking digraph based ranking rule.
 
 \section{Rating by quintiles sorting}
 \label{sec:14.4}
@@ -245,8 +306,8 @@ r(x \in \mathbf{q}_k) \; = \; \min \big[ r\big(x \succsim \mathbf{q}(p_{k-1})\bi
 \end{equation}
 where $k = 1,...5$ and $(p_{k})$ denote the respective quintile proportions: $0.20$, $0.40$, $0.60$, $0.80$ and $1.00$. As bipolar-valued outranking digraphs verify the coduality principle, $r\big(x \not\succsim \mathbf{q}(p_{k}) \big) = r\big(x precnsim \mathbf{q}(p_{k})$ (see Sec.~\ref{sec:9.2}).
 
-The \texttt{showSortingCharacteristics()} method\index{showSortingCharacteristics@\texttt{showSortingCharacteristics()}} gives a precise look in Listing~\vref{list:14.5} on these quintiles sorting characteristics.
-\begin{lstlisting}[caption={Showing quantiles sorting characteristics},label=list:14.5,basicstyle=\ttfamily\scriptsize]
+The \texttt{showSortingCharacteristics()} method\index{showSortingCharacteristics@\texttt{showSortingCharacteristics()}} gives a precise look in Listing~\vref{list:14.6} on these quintiles sorting characteristics.
+\begin{lstlisting}[caption={Showing quantiles sorting characteristics},label=list:14.6,basicstyle=\ttfamily\scriptsize]
 >>> lqr.showSortingCharacteristics()
 x  in  K_k	     r(x >= m_k)     r(x < M_k)	    r(x in K_k)
 U5 in [0.00 - 0.20[	 0.73		 -0.73		 -0.73
@@ -280,10 +341,9 @@ U3 in [0.60 - 0.80[	 -0.53		 0.67		 -0.53
 U3 in [0.80 - <[	 -0.67		 1.00		 -0.67
 \end{lstlisting}
 
-The performance record of University U5 cannot be positively rated into a precise quintile, but both the fourth and the fifth quintile are note positively excluded as rating result. Otherwise, the bipolar-valued sorting characteristcs verify the rating result we obtained previously with the \Copeland rating-by-ranking result. 
-
+The performance record of University U5 cannot be positively rated into a precise quintile, but both the fourth and the fifth quintile are note positively excluded as rating result. Otherwise, the bipolar-valued sorting characteristcs verify the rating-by-ranking result we obtained previously with the \Kemeny and \Copeland rating-by-ranking result. 
 The \texttt{showActionsSortingResult()} method\index{showActionsSortingResult@\texttt{showActionsSortingResult()}} prints the eventual quintiles rating result:
-\begin{lstlisting}[caption={Showing a quintiles rating-by-sorting result},label=list:14.6]
+\begin{lstlisting}[caption={Showing a quintiles rating-by-sorting result},label=list:14.7]
 >>> lqr.showActionsSortingResult()
   Quantiles sorting result per decision action
   [0.20 - 0.40[: U1 with credibility: 0.13 = min(0.33,0.13)
@@ -293,11 +353,11 @@ The \texttt{showActionsSortingResult()} method\index{showActionsSortingResult@\t
   [0.60 - <[: U5 with credibility: 0.60 = min(0.60,1.00)
 \end{lstlisting}
 
-The quintiles rating-by-sorting result, shown in Listing~\vref{list:14.6}, confirms so the previous \Copeland rating-by-ranking result. However, University \texttt{U5} is here sorted conjointly into the fourth and the fifth quintile, and as such would is part of the top rated institutions. A result already convincingly illustrated in the ranked heatmap shown in Figure~\vref{fig:14.3}. 
+The quintiles rating-by-sorting result, shown in Listing~\vref{list:14.7}, confirms the previous \Copeland rating-by-ranking result. However, University \texttt{U5} is here sorted conjointly into the fourth and the fifth quintile, and as such is part of the top rated institutions. A result already convincingly illustrated in the ranked heatmap shown in Figure~\vref{fig:14.3}. 
 
 \vspace{1cm}
 
-Let us conclude this hypothetical rating cae study, by saying that we prefer this latter rating-by-sorting approach; perhaps impreciser, due the case given, to missing and contradictory performance data; yet, well grounded in a powerful bipolar-valued logical and espistemic framework.
+Let us conclude this hypothetical rating cae study, by saying that we prefer this latter rating-by-sorting approach; perhaps impreciser, due the case given, to missing and contradictory performance data; yet, well grounded in a powerful bipolar-valued logic and espistemic framework. The next Chapter~\ref{sec:15} proposes a series of decision problems suitable for exercises and exam quations.
  
 %%%%%%% The chapter bibliography
 %\normallatexbib

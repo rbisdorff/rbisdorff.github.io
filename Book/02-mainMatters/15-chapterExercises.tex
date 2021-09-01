@@ -5,7 +5,7 @@
 \abstract{  In this chapter, we propose a series decision problems of various difficulties which may serve as exercises and exam questions for an Algorithmic Decision Theory or Multiple Criteria Decision Analysis course. They cover \emph{selection}, \emph{ranking} and \emph{rating} decision problems.}
 
 
-\paragraph{Introduction}
+\paragraph{\textbf{Introduction}}
 
 The following exercises are marked as follows: \emph{warming up} (§), \emph{home work} (§§), \emph{research work} (§§§). Solutions should be supported both by computational Python code using the \Digraph programming resources as well as by methodological and algorithmic arguments from the \emph{Algorithmic Decision Theory} Lectures \citep{ADT-2020,BIS-2021b}.
 
@@ -39,7 +39,7 @@ The student grades are measured on an ordinal performance scale from $0$ pts (we
 \paragraph{\textbf{Questions}}
 
 \begin{enumerate}
-\item Edit a \texttt{PerformanceTableau} instance with the data shown above (see Chapter~\ref{sec:5}). 
+\item Edit a \texttt{PerformanceTableau} instance with the data shown above. 
 \item Who would you nominate for the grant?
 \item Explain and motivate your selection algorithm.
 \item Assume that the grading may actually admit an indifference discrimination threshold of $1$ point and a preference discrimination threshold of $2$ points. How stable is your grant recommendation with respect to this preference discrimination power of the grading scale?
@@ -75,7 +75,7 @@ The critic's opinions are expressed on seven rating levels: $-2$ (two zeros, \em
 \item By taking into account missing data and varying significance weights, how may one find the best rated movie without computing any average of stars?
 \item How would one rank these movies so as to at best respect the weighted rating opinions of each movie critic?
 \item In what ranking position would appear a movie not seen by any critic? Confirm computationally your answer by adding such a fictive, \emph{not at all evaluated}, movie to the given performance tableau instance.
-\item How robust are the preceding results when the significance weights of the movie critics are considered to be only ordinal grades?
+\item How robust are the preceding results when the significance weights of the movie critics are considered to be only of ordinal type?
 \end{enumerate}
 
 \section{What is your best choice recommendation? (§)}
@@ -84,7 +84,7 @@ The critic's opinions are expressed on seven rating levels: $-2$ (two zeros, \em
 
 \paragraph{\textbf{Data}}
 
-A person, who wants to buy a TV set, retains after a first selection, eight potential TV models \footnote{A similar didactic decision problem is discussed by \citet[pp.33-35]{VIN-1992}}. To make their best choice, these eight models were graded with respect to three decision objectives of equal importance:
+A person, who wants to buy a TV set, retains after a first selection, eight potential TV models \footnote{A similar didactic decision problem is discussed in \citet[pp.33-35]{VIN-1992}}. To make their best choice, these eight models were graded with respect to three decision objectives of equal importance:
 
 \begin{enumerate}[topsep=3pt]
 \item \emph{Costs} of the set (to be minimised); 
@@ -137,7 +137,7 @@ The \emph{Price} criterion \texttt{Pr} supports furthermore an indifference thre
 \paragraph{\textbf{Data files}}
 
 \begin{itemize}
-\item File \texttt{perfTab\_1.py} \footnote{Files \texttt{perfTab\_1.py} and \texttt{historicalData\_1.py} are provided in the \texttt{examples} directory of the \Digraph resources \citep{BIS-2021b}.} contains a 3-Objectives performance tableau with $100$ performance records concerning public policies evaluated with respect to an \emph{economic}, a \emph{societal} and an \emph{environmental} social decision objective.
+\item File \texttt{perfTab\_1.py} \footnote{Files \texttt{perfTab\_1.py} and \texttt{historicalData\_1.py} are provided in the \texttt{examples} directory of the \Digraph resources \citep{BIS-2021b}.} contains a 3-Objectives performance tableau with $100$ performance records concerning public policies evaluated with respect to an \emph{economic}, a \emph{societal} and an \emph{environmental} decision objective.
 \item File \texttt{historicalData\_1.py} contains a performance tableau of the same kind with $2000$ historical performance records.
 \end{itemize}
 
@@ -151,7 +151,7 @@ The \emph{Price} criterion \texttt{Pr} supports furthermore an indifference thre
 \item Using the given historical records in file \texttt{historicalData\_1.py}, how would you rate your 100 public policies into absolute deciles classes? 
 \item Explain the differences you may observe between the absolute and the previous relative rating result.
 \item  Select among your 100 potential public policies a shortlist of up to 15 potential best policies, all reaching an absolute performance quantile of at least $66.67\%$.
-\item Based on the previous best policies shortlist (see Question 6), what is your eventual best-choice recommendation? Is it perhaps a best choice unopposed by all three objectives?
+\item Based on the previous best policies shortlist (see Question 7), what is your eventual best-choice recommendation? Is it perhaps a best choice unopposed by all three objectives?
 \end{enumerate}
 
 \section{A fair diploma validation decision (§§§)}
