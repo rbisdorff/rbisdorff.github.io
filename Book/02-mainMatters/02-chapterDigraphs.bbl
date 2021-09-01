@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -7,6 +7,18 @@
   \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Bisdorff(2000)}]{BIS-2000}
+Bisdorff R (2000) Logical foundation of fuzzy preferential systems with
+  application to the electre decision aid methods. {Computers and Operations
+  Research} 27:673--687, \urlprefix\url{http://hdl.handle.net/10993/23724}
+
+\bibitem[{Bisdorff(2002)}]{BIS-2002}
+Bisdorff R (2002) Logical foundation of multicriteria preference aggregation.
+  In: Bouyssou D, Jacquet-Lagr\`eze E, Perny P, S\l{}owi\'{n}ski R,
+  Vanderpooten D, Vincke P (eds) {Aiding Decisions with Multiple Criteria},
+  Kluwer Academic Publishers, pp 379--403,
+  \urlprefix\url{http://hdl.handle.net/10993/45313}
 
 \bibitem[{Bisdorff(2004)}]{BIS-2004a}
 Bisdorff R (2004) On a natural fuzzification of boolean logic. In: Klement EP,
@@ -23,6 +35,11 @@ Bisdorff R (2021{\natexlab{a}}) {Documentation of the Digraph3 collection of
 Bisdorff R (2021{\natexlab{b}}) {Technical documentation of the Digraph3
   collection of Python modules}.
   \urlprefix\url{https://digraph3.readthedocs.io/en/latest/techDoc.html}
+
+\bibitem[{Bisdorff et~al.(2006)Bisdorff, Pirlot, and Roubens}]{BIS-2006a}
+Bisdorff R, Pirlot M, Roubens M (2006) Choices and kernels from bipolar valued
+  digraphs. {European Journal of Operational Research} 175:155--170,
+  \urlprefix\url{http://hdl.handle.net/10993/23720}
 
 \bibitem[{Roy(1959)}]{ROY-1959}
 Roy B (1959) Transitivité et connexité. C R Acad Sci Paris 249:216--218
