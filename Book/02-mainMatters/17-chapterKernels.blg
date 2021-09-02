@@ -7,24 +7,24 @@ Warning--I didn't find a database entry for "KIT-1985"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 14 entries,
             3269 wiz_defined-function locations,
-            777 strings with 7919 characters,
-and the built_in function-call counts, 12688 in all, are:
-= -- 1146
+            777 strings with 7918 characters,
+and the built_in function-call counts, 12679 in all, are:
+= -- 1145
 > -- 235
 < -- 18
 + -- 85
 - -- 71
-* -- 1017
-:= -- 1742
+* -- 1016
+:= -- 1741
 add.period$ -- 14
 call.type$ -- 14
 change.case$ -- 97
 chr.to.int$ -- 14
 cite$ -- 14
-duplicate$ -- 1178
-empty$ -- 1259
+duplicate$ -- 1177
+empty$ -- 1258
 format.name$ -- 106
-if$ -- 2725
+if$ -- 2723
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 135
@@ -36,7 +36,7 @@ purify$ -- 76
 quote$ -- 0
 skip$ -- 271
 stack$ -- 0
-substring$ -- 1380
+substring$ -- 1378
 swap$ -- 303
 text.length$ -- 5
 text.prefix$ -- 0

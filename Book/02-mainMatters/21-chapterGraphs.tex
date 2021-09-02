@@ -5,17 +5,6 @@
 
 \abstract{ The chapter introduces bipolar-valued undirected graphs and illustrates several special graph models and algorithms like Q-coloring, MIS and clique enumeration, line graphs and maximal matchings, grid graphs, and $n$-cycle graphs with their non-isomorphic maximal independent sets of vertices.}
 
-% \paragraph{Introduction}
-
-% \noindent The \Digraph resoureces provide the \texttt{graphs} module module\index{graphs@\texttt{graphs} module} with the following graph models:
-% \begin{figure}[h]
-% %\sidecaption[t]
-% \includegraphics[width=11cm]{Figures/21-0-graphsInheritance.png}
-% \caption{Inheritance digram of the \texttt{graphs} module} 
-% \label{fig:21.0}       % Give a unique label
-% \end{figure}
-
-
 \section{Implementing simple graphs}
 \label{sec:21.1}
 
@@ -434,7 +423,7 @@ For the reader interested in algorithmic applications of Markov Chains we recomm
 \section{Computing the non isomorphic MISs of the n-cycle graph}
 \label{sec:21.7}
 
-Due to the public success of our common work with Jean-Luc Marichal \citep{ISO-2008}, we present in this chapter an example Python session for computing the non isomorphic maximal independent sets (MISs) of the 12-cycle graph, i.e. a \texttt{CirculantDigraph} class\index{CirculantDigraph@\texttt{CirculantDigraph} class} instance of order 12 and symmetric circulants $1$ and $-1$.
+Due to the public success of our common work with Jean-Luc Marichal \citep{ISO-2008}\index{Marichal@\emph{J.-L. Marichal}}, we present in this chapter an example Python session for computing the non isomorphic maximal independent sets (MISs) of the 12-cycle graph, i.e. a \texttt{CirculantDigraph} class\index{CirculantDigraph@\texttt{CirculantDigraph} class} instance of order 12 and symmetric circulants $1$ and $-1$.
 \begin{lstlisting}
 >>> from digraphs import CirculantDigraph
 >>> c12 = CirculantDigraph(order=12,circulants=[1,-1])

@@ -30,7 +30,7 @@ We may illustrate in Figure~\vref{fig:17.1} this coincidence between MISs and ke
    fdp -Tpng random3RegularGraph-mis.dot\
                 -o random3RegularGraph-mis.png
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/17-1-random3RegularGraph-mis.pdf}
 \caption{A random MIS coloured in the random 3-regular graph \texttt{r3g12}. All non blue vertices are covered by a blue vertex}
@@ -223,7 +223,7 @@ Chordless circuits of even length may thus be indifferently oriented along two o
     circo -Tpng dualChordlessCircuit.dot\
                -o dualChordlessCircuit.png
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/17-2-dualChordlessCircuit.pdf}
 \caption{The dual of the chordless 6-circuit. No initial or terminal prekernel --weakly independent and dominant, resp. absorbent subset of nodes-- may be found in this kind of digraphs}
@@ -246,11 +246,11 @@ In Listing~\vref{list:17.8} we use the \texttt{IndeterminateInnerPart} parameter
    Exporting to converse_c6.dot
    circo -Tpng converse_c6.dot -o converse-c6.png 
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
   % \sidecaption
   Dual of weak 6-circuit \hfill Converse of weak 6-circuit\\
-  \includegraphics[width=6cm]{Figures/17-3-dual-c6.pdf}\hfill
-  \includegraphics[width=6cm]{Figures/17-3-converse-c6.pdf}
+  \includegraphics[height=6cm]{Figures/17-3-dual-c6.pdf}\hfill
+  \includegraphics[height=6cm]{Figures/17-3-converse-c6.pdf}
 \caption{Dual and converse versions of the weak 6-circuit give the same digraph}
 \label{fig:17.3}       % Give a unique label
 \end{figure}
@@ -272,7 +272,7 @@ In genuine random digraphs, however, we may need to check for each of its MISs, 
    dot -Grankdir=BT -Tpng randomLaterality.dot\
                     -o randomLaterality.png
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/17-4-randomLaterality.pdf}
 \caption{A random digraph instance of order 7 and arc probability 0.3. The digraph instance is neither asymmetric (\texttt{a3} $\Leftrightarrow$ \texttt{a6}) nor symmetric (\texttt{a2} $\rightarrow$ \texttt{a1}, \texttt{a1} $\not\rightarrow$ \texttt{a2}) and, the digraph is not transitive (\texttt{a5} $\rightarrow$ \texttt{a2} $\rightarrow$ \texttt{a1}, but \texttt{a5} $\not\rightarrow$ \texttt{a1})} 
@@ -344,7 +344,7 @@ Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in Lis
    dot -Grankdir=BT -Tpng orientedLaterality.dot\
                     -o orientedLaterality.png
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/17-5-orientedLaterality.pdf}
 \caption{A random digraph oriented by best covering initial and
@@ -373,7 +373,7 @@ To illustrate this idea, let us finally compute in Listing~\vref{list:17.12} fir
    Valuation domain : {'min': -100.0, 'med': 0.0, 'max': 100.0}
 >>> g.showHTMLPerformanceTableau()
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
 \includegraphics[width=10cm]{Figures/17-6-randomOutranking.png}
 \caption{The performance tableau of a random outranking digraph instance}
@@ -388,7 +388,7 @@ The associated random performance tableau shown in Fig.~\vref{fig:17.6} reveals 
    Exporting to tutOutranking.dot
    dot -Grankdir=BT -Tpng tutOutranking.dot\
                     -o tutOutranking.png\end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/17-7-tutOutranking.pdf}
 \caption{A random strict outranking digraph instance. All decision alternatives appear strictly better performing than alternative \texttt{a7}. We call it a \Condorcet loser and it is an evident terminal prekernel candidate. On the other side, three alternatives: \texttt{a1}, \texttt{a2} and \texttt{a4} are not dominated. They give together an initial prekernel candidate}
@@ -449,7 +449,7 @@ In Fig.~\vref{fig:17.8}, we orient the drawing of the strict outranking digraph 
    dot -Grankdir=BT -Tpng bestWorstOrientation.dot\
                     -o bestWorstOrientation.png
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/17-8-bestWorstOrientation.pdf}
 \caption{The strict outranking digraph oriented by its best and worst choice recommendations. The gray arrows, like the one between alternaives \texttt{a4} and \texttt{a1}, represent indeterminate preferential situations. Alternative \texttt{a1} appears hence to be rather incomparable to all the other, except alternative \texttt{a7}}
@@ -461,7 +461,7 @@ It may be interesting to compare this result with a \Copeland ranking of the und
 >>> g.showHTMLPerformanceHeatmap(colorLevels=5, ndigits=0,\
 ...             Correlations=True, rankingRule='Copeland')
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
 \includegraphics[width=10cm]{Figures/17-9-outRankingResult.png}
 \caption{Heat map with Copeland ranking of the performance tableau}
@@ -666,7 +666,7 @@ In Listing~\vref{list:17.19} we now compute, with the \texttt{domkernelrestrict(
 ...      relation=k1Relation,\
 ...      tableTitle='K1 restricted adjacency table')
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/17-10-k1restricted.png}
 \caption{Initial kernel $\\mathtt{a1}, \mathtt{a2}, \mathtt{a4}\}$ restricted adjacency table. This initial prekernel is indeed only weakly independent: The outranking situation between alternatives \texttt{a4} and \texttt{a1} is indeed \emph{indeterminate}. }
@@ -712,7 +712,7 @@ Let us also compute the restricted adjacency table for the outranked, i.e. the \
 ...   relation=k2Relation,\
 ...   tableTitle='K2 restricted adjacency table')
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/17-11-k2restricted.png}
 \caption{Terminal prekernel \{\texttt{a3}, \texttt{a7}\} restricted adjacency table. Again, we notice that this terminal prekernel is indeed only weakly independent.}
@@ -744,7 +744,7 @@ The corresponding bipolar-valued characteristic vector $Y_2$ may be computed as 
 \end{lstlisting}
 
 A unique stable bipolar-valued high and low fixpoint is attained at the third iteration with alternative \texttt{a7} positively confirmed (about $(1.0+0.49)/2 = 0.75\%$ criteria significance majority, see Line 14) as member of this terminal prekernel, whereas the membership of alternative \texttt{a3} in this prekernel appears indeterminate. All the remaining nodes have negative membership characteristic values and are hence positively excluded from this prekernel.
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/17-12-bestWorstOrientation.pdf}
 \caption{The strict outranking digraph oriented by its initial and terminal prekernels. Notice the indeterminate outranking situation between alternatives \texttt{a4} and \texttt{a1}, and the same indeterminate outranking situation between alternatives \texttt{a3} and \texttt{a7}}

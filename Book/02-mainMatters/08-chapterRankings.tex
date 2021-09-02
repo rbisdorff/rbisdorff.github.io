@@ -105,7 +105,7 @@ Now, several heuristic ranking rules have been proposed for constructing a linea
 
 \begin{definition}[\Copeland ranking rule]\label{def:8.1}
 
-\noindent The \Copeland ranking rule computes for each alternative a score resulting from the sum of the differences between the crisp \emph{strict outranking} characteristics $r(x\, \succnsim \,y)_{>0}$ and the crisp \emph{strict outranked} characteristics $r(y\, \succnsim \, x)_{>0}$  for all non-reflexive pairs of alternatives. The alternatives are ranked in decreasing order of these scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the alternatives \citep{COP-1951}.
+\noindent The \Copeland ranking rule computes for each alternative a score resulting from the sum of the differences between the crisp \emph{strict outranking} characteristics $r(x\, \succnsim \,y)_{>0}$ and the crisp \emph{strict outranked} characteristics $r(y\, \succnsim \, x)_{>0}$  for all non-reflexive pairs of alternatives. The alternatives are ranked in decreasing order of these scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the alternatives \citep{COP-1951}.\index{Copeland@\emph{A.H. Copeland}}
 \end{definition}
 
 The \Copeland rule works well for any strict outranking relation which models a linear partial order on the \emph{median cut} strict outranking digraph \texttt{ccd} \citep{DIA-2010}. 
@@ -222,7 +222,7 @@ To appreciate now the ordinal correlations of both the \Copeland and the \NetFlo
 
 \begin{definition}[\Kemeny ranking rule]\label{def:8.3}
 
-  \noindent A \Kemeny ranking $k$ is a linear ranking without ties of the set of $n$ decision alternatives $X$ which is \emph{closest}, in the sense of the ordinal \Kendall distance (see Chap.~\ref{sec:16} and \citet{BIS-2012b}), to the given valued outranking digraphs \texttt{g} \citep{KEM-1959}. Formally:
+  \noindent A \Kemeny ranking $k$ is a linear ranking without ties of the set of $n$ decision alternatives $X$ which is \emph{closest}, in the sense of the ordinal \Kendall distance (see Chap.~\ref{sec:16} and \citet{BIS-2012b}), to the given valued outranking digraphs \texttt{g} \citep{KEM-1959}.\index{Kemeny@\emph{J. Kemeny}} Formally:
   \begin{equation}\label{eq:8.1}
     k \;=\; \text{argmax}_{p \in \mathcal{P}(X)} \sum_{i \neq j}\big(r(p[i] \succsim p[j]) - r(p[j] \succsim p[i]) \big),
   \end{equation}
@@ -328,7 +328,7 @@ When several rankings with maximal \Kemeny index are given, the \texttt{Kemeny\-
 \section{\Slater rankings}
 \label{sec:8.5}
 
-The \Slater ranking rule is identical to the \Kemeny rule, but it is working, instead, on the \Condorcet --\emph{median cut polarised}-- digraph \texttt{ccd} \citep{SLA-1961}. The \Slater rule is again \emph{invariant} under the codual transform and delivers hence indifferently on \texttt{g} or \texttt{gcd} the following results:
+The \Slater ranking rule is identical to the \Kemeny rule, but it is working, instead, on the \Condorcet --\emph{median cut polarised}-- digraph \texttt{ccd} \citep{SLA-1961}.\index{Slater@\emph{P. Slater}} The \Slater rule is again \emph{invariant} under the codual transform and delivers hence indifferently on \texttt{g} or \texttt{gcd} the following results:
 \begin{lstlisting}[caption={Computing a \Slater ranking},label=list:8.11]   
 >>> from linearOrders import SlaterRanking
 >>> sl = SlaterRanking(gcd,orderLimit=9)
@@ -367,7 +367,7 @@ More computationally efficient ranking heuristics, like the \Copeland and \NetFl
 \section{The \Kohler ranking-by-choosing rule}
 \label{sec:8.6}
 
-\begin{definition}[The \Kohler \emph{ranking-by-choosing} rule]\label{def:8.4}
+\begin{definition}[The \Kohler \emph{ranking-by-choosing} rule]\label{def:8.4}\index{Kohler@\emph{G. Kohler}}
   
 \noindent At step $i$ ($i$ goes from 1 to $n$) do the following:
 \begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm,topsep=1pt]
@@ -467,7 +467,7 @@ Let us finally mention another interesting \emph{ranking-by-choosing} approach.
 \section{The \RankedPairs ranking rule}
 \label{sec:8.7}
 
-\emph{N. Tideman}'s \index{Tideman@\emph{Tideman}} ranking-by-choosing heuristic, the \RankedPairs rule, working best this time on the non strict outranking digraph $g$, is based on a \emph{prudent incremental} construction of linear orders that avoids on the fly any cycling outranking situations \citep{TID-1987}.
+\emph{N. Tideman}'s \index{Tideman@\emph{N. Tideman}} ranking-by-choosing heuristic, the \RankedPairs rule, working best this time on the non strict outranking digraph $g$, is based on a \emph{prudent incremental} construction of linear orders that avoids on the fly any cycling outranking situations \citep{TID-1987}.
 
 \begin{definition}[The \RankedPairs ranking rule]\label{def:8.5}
 \begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm,topsep=1pt]
@@ -501,7 +501,7 @@ The \RankedPairs rule renders in our example here luckily one of the two optimal
     Bipolar-valued equivalence : +0.179
 \end{lstlisting}
 
-Similar to \Kohler 's rule, the \RankedPairs rule has also a prudent dual version, the \emph{Dias-Lamboray} \emph{ordering-by-choosing} rule, which produces, when working this time on the codual strict outranking digraph gcd, a similar ranking result (see \citet*{LAM-2009,DIA-2010}).
+Similar to \Kohler 's rule, the \RankedPairs rule has also a prudent dual version, the \emph{Dias-Lamboray} \emph{ordering-by-choosing} rule\index{Dias@\emph{L.C. Dias}}\index{Lamboray@\emph{Cl. Lamboray}}, which produces, when working this time on the codual strict outranking digraph gcd, a similar ranking result (see \citet*{LAM-2009,DIA-2010}).
 
 Besides of not providing a unique linear ranking, the \emph{ranking-by-choosing} rules, as well as their duals, the \emph{ordering-by-choosing} rules, are unfortunately not scalable to outranking digraphs of larger orders ($> 100$). For such bigger outranking digraphs, with several hundred or thousands of alternatives, only the \Copeland and the \NetFlows \emph{ranking-by-scoring} rules, with a polynomial complexity of $\mathcal{O}(n^2)$, where $n$ is the order of the outranking digraph, remain in fact tractable. Furthermore, as computing the \Copeland and \NetFlows scores may be done separately per alternative, the latter ranking rules can right away be processed in parallel when multiprocessing resources are available.
 

@@ -67,7 +67,7 @@ We shall illustrate this point with a voting profile we discussed already in Cha
     a04 : 01.18%  | a05 : 00.29%  | a05 : 01.97%
     a02 : 00.90%  | a02 : 00.21%  | a02 : 00.51%
 \end{lstlisting}
-In this example (see Listing \ref{list:20.1} Lines 18-), we obtained 460 Party-1 supporters ($46\%$), 436 Party-2 supporters ($43.6\%$) and 104 other voters ($10.4\%$). Favorite candidates of Party-1 supporters, with more than $10\%$, appeared to be \texttt{a06} ($19.91\%$), \texttt{a07} ($14.27\%$) and \texttt{a03} ($10.02\%$). Whereas for Party-2 supporters, favorite candidates appeared to be \texttt{a11} ($22.94\%$), followed by \texttt{a08} ($15.65\%$), \texttt{a04} ($15.07\%$) and \texttt{a06} ($13.4\%$).
+In this example (see List.~\vref{list:20.1} Lines 18-), we obtained 460 Party-1 supporters ($46\%$), 436 Party-2 supporters ($43.6\%$) and 104 other voters ($10.4\%$). Favorite candidates of Party-1 supporters, with more than $10\%$, appeared to be \texttt{a06} ($19.91\%$), \texttt{a07} ($14.27\%$) and \texttt{a03} ($10.02\%$). Whereas for Party-2 supporters, favorite candidates appeared to be \texttt{a11} ($22.94\%$), followed by \texttt{a08} ($15.65\%$), \texttt{a04} ($15.07\%$) and \texttt{a06} ($13.4\%$).
 
 We may convert this linear voting profile into a PerformanceTableau object where each political party matches to a decision objective.
 \begin{lstlisting}[caption={Converting a voting profile into a performance tableau},label=list:20.2]
@@ -93,12 +93,12 @@ We may convert this linear voting profile into a PerformanceTableau object where
       'criteria': ['v0001', 'v0004', 'v0005', ... ]})
     ])
 \end{lstlisting}
-In Listing \ref{list:20.2} we first store the linear voting in a \texttt{PerformanceTableau} format (see Line 1). In Line 3, we reload this performance tableau data. The three parties of the linear voting profile represent three decision objectives and the 1000 voters are distributed as 10000 performance criteria according to the party they support.
+In Listing~\vref{list:20.2} we first store the linear voting in a \texttt{PerformanceTableau} format (see Line 1). In Line 3, we reload this performance tableau data. The three parties of the linear voting profile represent three decision objectives and the 1000 voters are distributed as 10000 performance criteria according to the party they support.
 
 % \subsection{Multipartisan primary selection of eligible candidates}
 % \label{sec:20.1.2}
 
-In order to operate now a \emph{primary multipartisan selection} of potential election winners, we compute the corresponding unopposed multiobjective outranking digraph (see Section \ref{sec:19.5}).
+In order to operate now a \emph{primary multipartisan selection} of potential election winners, we compute the corresponding unopposed multiobjective outranking digraph (see Sec.~\ref{sec:19.5}).
 \begin{lstlisting}[caption={Computing unopposed multiobjective outranking situations},label=list:20.3]
 >>> from outrankingDigraphs import \
 ...       UnOpposedBipolarOutrankingDigraph
@@ -144,14 +144,14 @@ We may visualize the corresponding bipolar-valued relation table by orienting th
 ...    actionsList=orientedCandidatesList,\
 ...    tableTitle='Unopposed three-partisan outrankings')
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/20-1-unOpposedOutrankings.png}
+\includegraphics[width=\hsize]{Figures/20-1-unOpposedOutrankings.png}
 \caption{Relation table of multipartisan outranking digraph} 
 \label{fig:20.1}       % Give a unique label
 \end{figure}
 
-In Fig.~\ref{fig:20.1}, we may notice that the dominating outranking prekernel \{\texttt{a06}, \texttt{a11}, \texttt{a13}, \texttt{a15}\} gathers in fact a multipartisan selection of potential election winners. It is worthwhile noticing that in the majority margins obtained from a linear voting profile do verify the zero-sum rule: $\big(\,r(x \succsim y) \,+\, r(y \succsim x) \;=\; 0.0\,\big)$. To each positive outranking situation corresponds indeed an equivalent negative converse situation and the resulting outranking and strict outranking digraphs are the same.
+In Figure~\vref{fig:20.1}, we may notice that the dominating outranking prekernel \{\texttt{a06}, \texttt{a11}, \texttt{a13}, \texttt{a15}\} gathers in fact a multipartisan selection of potential election winners. It is worthwhile noticing that in the majority margins obtained from a linear voting profile do verify the zero-sum rule: $\big(\,r(x \succsim y) \,+\, r(y \succsim x) \;=\; 0.0\,\big)$. To each positive outranking situation corresponds indeed an equivalent negative converse situation and the resulting outranking and strict outranking digraphs are the same.
 
 % \subsection{Secondary election winner determination}
 % \label{sec:20.1.3}
@@ -175,7 +175,7 @@ When restricting now, in a secondary election stage, the set of eligible candida
 >>> g2.computeCopelandRanking()
   ['a06', 'a11', 'a13', 'a15']
 \end{lstlisting}
-Candidate \texttt{a06} appears clearly to be the winner of this election. Notice by the way that the restricted pairwise outranking relation shown in Listing~\ref{list:20.5} models a linear ordering of the preselected candidates.
+Candidate \texttt{a06} appears clearly to be the winner of this election. Notice by the way that the restricted pairwise outranking relation shown in Listing~\vref{list:20.5} models a linear ordering of the preselected candidates.
 
 We may eventually check the quality of this best choice by noticing that candidate \texttt{a06} represents indeed the \emph{simple majority}, the \emph{instant-run-off}, the \Borda, as well as the \Condorcet winner of the initially given linear voting profile \texttt{lvp}.
 \begin{lstlisting}
@@ -193,12 +193,9 @@ We may eventually check the quality of this best choice by noticing that candida
 
 In our example voting profile here, the multipartisan primary selection stage appears quite effective in reducing the number of eligible candidates to four out of a set of 15 candidates without btw rejecting the actual winning candidate.
 
-% \subsection{Multipartisan preferences in divisive politics}
-% \label{sec:20.1.4}
-
 However, in a very \emph{divisive} two major parties system, like in the US, where preferences of the supporters of one major party appear to be very opposite to the preferences of the supporters of the other major party, the multipartisan outranking digraph will become nearly indeterminate.
 
-In Listing \ref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag \footnote{The \texttt{RandomLinearVotingProfile} constructor provides a \texttt{DivisivePolitics} flag (\emph{False} by default) for generating random linear voting profiles based on a divisive polls strucure.} (see Lines 4 and 13-19 in Listing~\ref{list:20.6}). When now converting the voting profile into a performance tableau (Lines 20-21), we may compute the corresponding unopposed outranking digraph.
+In Listing~\vref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag \footnote{The \texttt{RandomLinearVotingProfile} constructor provides a \texttt{DivisivePolitics} flag (\emph{False} by default) for generating random linear voting profiles based on a divisive polls strucure.} (see Lines 4 and 13-19 in List.~\vref{list:20.6}). When now converting the voting profile into a performance tableau (Lines 20-21), we may compute the corresponding unopposed outranking digraph.
 \begin{lstlisting}[caption={A divisive two-party example of a random linear voting profile},label=list:20.6]
 >>> from votingProfiles import RandomLinearVotingProfile		     
 >>> lvp = RandomLinearVotingProfile(\
@@ -236,7 +233,7 @@ In Listing \ref{list:20.6} below we generate such a divisive kind of linear voti
    Determinateness (%) : 50.00
    Valuation domain    : [-1.00;1.00]
 \end{lstlisting}
-With an oppositeness degree of $100.0\%$ (see Listing \ref{list:20.6} Lines 31-32), the preferential disagreement between the political parties is complete, and the unopposed outranking digraph \texttt{uodg} becomes completely indeterminate as shown in the relation table below.
+With an oppositeness degree of $100.0\%$ (see List.~\vref{list:20.6} Lines 31-32), the preferential disagreement between the political parties is complete, and the unopposed outranking digraph \texttt{uodg} becomes completely indeterminate as shown in the relation table below.
 \begin{lstlisting}
 >>> uodg.showRelationTable(ReflexiveTerms=False)
   * ---- Relation Table -----
@@ -252,7 +249,7 @@ With an oppositeness degree of $100.0\%$ (see Listing \ref{list:20.6} Lines 31-3
   Valuation domain: [-1.0; 1.0]
 \end{lstlisting}      
 
-As a consequence, a multipartisan primary selection, computed with a \texttt{showBestChoiceRecommendation()} method,  will keep the complete initial set of eligible candidates and, hence, becomes \emph{ineffective} (see Listing \ref{list:20.7} Line 6).
+As a consequence, a multipartisan primary selection, computed with a \texttt{showBestChoiceRecommendation()} method,  will keep the complete initial set of eligible candidates and, hence, becomes \emph{ineffective} (see List.~\vref{list:20.7} Line 6).
 \begin{lstlisting}[caption={Example of ineffective primary multipartisan selection},label=list:20.7]
 >>> uodg.showBestChoiceRecommendation()
   Rubis best choice recommendation(s) (BCR)
@@ -268,7 +265,7 @@ As a consequence, a multipartisan primary selection, computed with a \texttt{sho
      - most credible action(s) = { }
 \end{lstlisting}
 
-With such kind of divisive voting profile, there may indeed not always exist an obvious winner. In Listing \ref{list:20.8} below, we see, for instance, that the simple majority winnner is \texttt{a2} (Line 2), whereas the instant-run-off winner is \texttt{a6} (Line 4).
+With such kind of divisive voting profile, there may indeed not always exist an obvious winner. In Listing~\vref{list:20.8}, we see, for instance, that the simple majority winnner is \texttt{a2} (Line 2), whereas the instant-run-off winner is \texttt{a6} (Line 4).
 \begin{lstlisting}[caption={Example of non obvious secondary selection},label=list:20.8]
 >>> lvp.computeSimpleMajorityWinner()
   ['a2']
@@ -297,7 +294,7 @@ Valuation domain: [-500;+500]
 \end{lstlisting}
 But in our example here, we are lucky. When constructing with the pairwise majority margins digraph (Line 6), a \Condorcet winner, namely \texttt{a3} becomes apparent (Lines 13,20), which is also one of the two \Borda winners (Line 22). More interesting even is to notice that the apparent majority margins digraph models in fact a linear ranking [\texttt{a3}, \texttt{a7}, \texttt{a6}, \texttt{a2}, \texttt{a5}, \texttt{a4}, \texttt{a1}] of all the eligible candidates, as shown with a \Copeland ranking rule (Line 24).
 
-We may eventually visualize in Fig.~\ref{fig:20.2} this linear ranking with a graphviz drawing where we drop all transitive arcs (Line 1) and orient the drawing with \Condorcet winner \texttt{a3} and loser \texttt{a1} (Line 2 below).
+We may eventually visualize in Figure~\vref{fig:20.2} this linear ranking with a graphviz drawing where we drop all transitive arcs (Line 1) and orient the drawing with \Condorcet winner \texttt{a3} and loser \texttt{a1} (Line 2 below).
 \begin{lstlisting}
 >>> cg.closeTransitive(Reverse=True)
 >>> cg.exportGraphViz('divGraph',\
@@ -306,7 +303,7 @@ We may eventually visualize in Fig.~\ref{fig:20.2} this linear ranking with a gr
    Exporting to divGraph.dot
    dot -Grankdir=BT -Tpng divGraph.dot -o divGraph.png
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 \sidecaption
 \includegraphics[width=5cm]{Figures/20-2-divGraph.pdf}
 \caption{The linear ranking moddelled by the majority margins digraph.} 
@@ -336,7 +333,7 @@ File \texttt{bpApVotingProfile.py} contains an example of such a bipolar approva
                  'approvalBallot', 'netApprovalScores',
                  'ballot']
 \end{lstlisting}
-Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Listing~\ref{list:20.9} Line 11 above the \texttt{approvalBallot} attribute which gathers bipolar approval votes. Its content is the following.
+Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Listing~\vref{list:20.9} Line 11 the \texttt{approvalBallot} attribute which gathers bipolar approval votes. Its content is the following.
 \begin{lstlisting}[caption={Inspecting a bipolar approval ballot},label=list:20.9]
 >>> bavp.approvalBallot
   {'v001':
@@ -361,7 +358,7 @@ Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Li
      }
     }
 \end{lstlisting}	
-Let us denote $A_v$ the set of candidates approved by voter $v$. In the \texttt{approvalBallot} attribute we hence record in fact the bipolar-valued truth characteristic values $r(C \in A_v)$ of the statements that candidate $C$ \emph{is approved} by voter $v$. In Listing \ref{list:20.9} Line 5, we observe for instance that voter \texttt{v001} positively approves candidate \texttt{a04}. And, in Line 10, we see that voter \texttt{v002} negatively approves, i.e. positively disapproves candidate \texttt{a01}.
+Let us denote $A_v$ the set of candidates approved by voter $v$. In the \texttt{approvalBallot} attribute we hence record in fact the bipolar-valued truth characteristic values $r(C \in A_v)$ of the statements that candidate $C$ \emph{is approved} by voter $v$. In Listing~\vref{list:20.9} Line 5, we observe for instance that voter \texttt{v001} positively approves candidate \texttt{a04}. And, in Line 10, we see that voter \texttt{v002} negatively approves, i.e. positively disapproves candidate \texttt{a01}.
 
 We may now consult with the \texttt{showApprovalResults()} method\index{showApprovalResults@\texttt{showApprovalResults()}} and the \texttt{showDisapprovalResults()} method\index{showDisapprovalResults@\texttt{showDisapprovalResults()}} how many approvals or disapprovals each candidate receives.
 \begin{lstlisting}
@@ -477,16 +474,16 @@ We may inspect these pairwise $r(x \succ y)$ values in a browser view:
 \begin{lstlisting}
 >>> m.showHTMLRelationTable(relationName='r(x > y)')
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/20-3-majMargAV.png}
+\includegraphics[width=\hsize]{Figures/20-3-majMargAV.png}
 \caption{The bipolar-valued pairwise majority margins} 
 \label{fig:20.3}       % Give a unique label
 \end{figure}
 
-In Fig.~\ref{fig:20.3} it gets apparent that candidate \texttt{a12} is a \Condorcet winner, i.e. the candidate who beats all the other candidates and, with the given voting profile \texttt{gavp}, should without doubt win the election. This strongly confirms the first-ranked result obtained with the previous net approval scoring. 
+In Figure~\vref{fig:20.3} it gets apparent that candidate \texttt{a12} is a \Condorcet winner, i.e. the candidate who beats all the other candidates and, with the given voting profile \texttt{gavp}, should without doubt win the election. This strongly confirms the first-ranked result obtained with the previous net approval scoring. 
 
-Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{See Section~\ref{sec:8.3}.}, a linear ranking of the 15 eligible candidates and compare the result with the net approval scores ranking.
+Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{See Sec.~\ref{sec:8.3}.}, a linear ranking of the 15 eligible candidates and compare the result with the net approval scores ranking.
 \begin{lstlisting}[caption={Comparing the net approval and the \NetFlows rankings},label=list:20.10]
 >>> from linearOrders import NetFlowsOrder
 >>> nf = NetFlowsOrder(m,Comments=True)
@@ -514,7 +511,7 @@ Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{
       'a10'	   -122.000	  -6.0
       'a01'	   -126.000	  -5.0
 \end{lstlisting}
-In Listing \ref{list:20.10} we may notice that the \NetFlows rule delivers a ranking that is very similar to the one previously obtained with the corresponding \emph{Net Approval} scores. Only minor inversions do appear, like in the midfield, where candidate \texttt{a09} advances before candidates \texttt{a13} and \texttt{a14} (see Line 16), and \texttt{a6} and \texttt{a07} swap their positions 9 and 10 (see Line 19). And, the two last-ranked candidates \texttt{a10} and \texttt{a01} also swap their positions.
+In Listing~\vref{list:20.10} we may notice that the \NetFlows rule delivers a ranking that is very similar to the one previously obtained with the corresponding \emph{Net Approval} scores. Only minor inversions do appear, like in the midfield, where candidate \texttt{a09} advances before candidates \texttt{a13} and \texttt{a14} (see Line 16), and \texttt{a6} and \texttt{a07} swap their positions 9 and 10 (see Line 19). And, the two last-ranked candidates \texttt{a10} and \texttt{a01} also swap their positions.
 
 This confirms again the pertinence of the net approval scoring approach for finding the winner in a bipolar approving voting system. Yet, voting by approving ($+1$), disapproving ($-1$) or ignoring ($0$) eligible candidates, may also be seen as a performance evaluation of the eligible candidates on a $\{-1, 0, 1\}$-graded ordinal scale.
 
@@ -527,7 +524,7 @@ Mind that, contrary to the majority margins of the ``\emph{better approved than}
 
 From the saved file \texttt{AVPerfTab.py} (see Line 1 below), we may construct an outranking relation on the eligible candidates with our standard \texttt{BipolarOutrankingDigraph} constructor. The semantics of this outranking relation are the following:
 \begin{itemize}[nosep,leftmargin=0.5cm,rightmargin=0.5cm]
-\item We say that Candidate $x$ \emph{outranks} Candidate $y$ when there is a majority of voters who consider $x$ \emph{at least as well evaluated as} $y$ (see Listing~\ref{list:20.11} Line 3 below);
+\item We say that Candidate $x$ \emph{outranks} Candidate $y$ when there is a majority of voters who consider $x$ \emph{at least as well evaluated as} $y$ (see List.~\vref{list:20.11} Line 3 below);
 \item We say that Candidate $x$ is \emph{outranked by} Candidate $y$ when there is a majority of voters who consider $x$ \emph{not at least as well evaluated as} $y$;
 \item Otherwise, the outranking situation is indeterminate.
 \end{itemize}
@@ -551,7 +548,7 @@ From the saved file \texttt{AVPerfTab.py} (see Line 1 below), we may construct a
                        'valuationdomain', 'relation',
                        'gamma', 'notGamma', ...]
 \end{lstlisting}
-The size ($210 = 15 \times 14$) of the resulting outranking digraph \texttt{odg}, shown in Listing \ref{list:20.11} Line 11 above, reveals that the corresponding ``\emph{at least as good evaluated as}'' relation models actually a trivial \emph{complete} digraph. All candidates appear to be \emph{equally} at least as well evaluated and the strict ``\emph{better evaluated than}'' (codual) outranking digraph becomes in fact empty. The converted performance tableau does apparently not contain sufficiently discriminatory performance evaluations for supporting any strict preference situations.
+The size ($210 = 15 \times 14$) of the resulting outranking digraph \texttt{odg}, shown in Listing~\vref{list:20.11} Line 11 above, reveals that the corresponding ``\emph{at least as good evaluated as}'' relation models actually a trivial \emph{complete} digraph. All candidates appear to be \emph{equally} at least as well evaluated and the strict ``\emph{better evaluated than}'' (codual) outranking digraph becomes in fact empty. The converted performance tableau does apparently not contain sufficiently discriminatory performance evaluations for supporting any strict preference situations.
 
 Yet, we may nevertheless try to apply again the \NetFlows ranking rule to this complete outranking digraph \texttt{odg} and print side by side the corresponding \NetFlows scores and the previous Net Approval scores. 
 \begin{lstlisting}[caption={Comparing the \NetFlows and the Net Approval rankings},label=list:20.12]
@@ -581,7 +578,7 @@ Yet, we may nevertheless try to apply again the \NetFlows ranking rule to this c
        'a10	  -1.220	    -6.0
        'a01	  -1.260	    -5.0
 \end{lstlisting}
-Despite its apparent poor strict preference discriminating power, we obtain in Listing \ref{list:20.12} here \NetFlows scores that are directly proportional (divided by $100$) to the scores obtained with the \emph{better approved than} majority margins digraph \texttt{m} (see Listing \ref{list:20.10}).
+Despite its apparent poor strict preference discriminating power, we obtain in Listing~\vref{list:20.12} here \NetFlows scores that are directly proportional (divided by $100$) to the scores obtained with the \emph{better approved than} majority margins digraph \texttt{m} (see List.~\vref{list:20.10}).
 
 Encouraged by this positive result, we may furthermore compute as well a best choice recommendation.
 \begin{lstlisting}[caption={Computing a best social choice recommendation},label=list:20.13]
@@ -620,7 +617,7 @@ Encouraged by this positive result, we may furthermore compute as well a best ch
          'a09': 0.28, 'a04': 0.26, 'a10': 0.24,
          'a05': 0.20, 'a03': 0.20, 'a12': 0.06, }
 \end{lstlisting}
-The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --best as well as last-- choice recommendation which trivially retains all fifteen candidates (see Listing \ref{list:20.13} Lines 6-8 above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate \texttt{a12} the most credible one with a $72\%$ majority of voters' support (see Line 15, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate \texttt{a03} ($67\%$) and Candidate \texttt{a04} ($65\%$). Similarly, Candidates \texttt{a13} and \texttt{a06} represent the most credible losers with a $68\%$ majority voters' support (Line 30).
+The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --best as well as last-- choice recommendation which trivially retains all fifteen candidates (see List.~\vref{list:20.13} Lines 6-8 above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate \texttt{a12} the most credible one with a $72\%$ majority of voters' support (see Line 15, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate \texttt{a03} ($67\%$) and Candidate \texttt{a04} ($65\%$). Similarly, Candidates \texttt{a13} and \texttt{a06} represent the most credible losers with a $68\%$ majority voters' support (Line 30).
 
 We observe here empirically that \emph{evaluative} voting systems, using three-valued ordinal performance scales, match closely a corresponding bipolar approval voting systems. The latter voting system models, however, more faithfully the very preferential information that is expressed with \emph{approved}, \emph{disapproved} and \emph{ignored} statements. The corresponding evaluation on a three-graded scale, being value (numbers) based, cannot express the fact that in bipolar approval voting systems there is no preferential information given concerning the pairwise comparison of all approved, respectively disapproved or ignored candidates.
 
@@ -665,7 +662,7 @@ In modern democracy, politics  are largely structured by political parties and a
   'a10' : 00.20% | 'a14' : 00.20% | 'a02' : 03.21%
   'a07' : 00.14% | 'a05' : 00.14% | 'a11' : 03.16%
 \end{lstlisting}   
-In Listing \ref{list:20.14}, the divisive political situation is reflected by the fact that Party-1 and Party-2 supporters show strict reversed preferences. The leading candidates of Party-1 (\texttt{a05} and \texttt{a14}) are last choices for Party-2 supporters and, Candidates \texttt{a07} and \texttt{a10}, leading candidates for Party-2 supporters, are similarly the least choices for Party-1 supporters.
+In Listing~\vref{list:20.14}, the divisive political situation is reflected by the fact that Party-1 and Party-2 supporters show strict reversed preferences. The leading candidates of Party-1 (\texttt{a05} and \texttt{a14}) are last choices for Party-2 supporters and, Candidates \texttt{a07} and \texttt{a10}, leading candidates for Party-2 supporters, are similarly the least choices for Party-1 supporters.
 
 No clear winner may be guessed from these pre-election polls. As Party-2 shows however slightly more supporters than Party-1, the expected winner in an uninominal plurality or instant-runoff voting system will be Candidate 'a07', i,e, the leading candidate of majority Party-2 (see below).
 \begin{lstlisting}
@@ -739,18 +736,18 @@ Balancing now approval against disapproval votes will favour the moderate, bipar
      Candidate: 'a14' obtains -21 net approvals
      Candidate: 'a05' obtains -21 net approvals
 \end{lstlisting}
-Candidate 'a02', appearing in the pre-electoral polls in the midfield (in position 7 for Party-2 and in position 9 for Party-1 supporters, see Listing \ref{list:20.14}), shows indeed the highest net approval score. Second highest net approval score obtains Candidate 'a13', in  position 6 for Party-2 and in position 10 for Party-1 supporters.
+Candidate 'a02', appearing in the pre-electoral polls in the midfield (in position 7 for Party-2 and in position 9 for Party-1 supporters, see List.\vref{list:20.14}), shows indeed the highest net approval score. Second highest net approval score obtains Candidate 'a13', in  position 6 for Party-2 and in position 10 for Party-1 supporters.
 
-Fig. \ref{fig:20.4}, showing the \NetFlows ranked relation table of the ``\emph{better approved than}'' majority margins digraph, confirms below this net approval scoring result.
+Figure~\vref{fig:20.4}, showing the \NetFlows ranked relation table of the ``\emph{better approved than}'' majority margins digraph, confirms below this net approval scoring result.
 \begin{lstlisting}
 >>> m = MajorityMarginsDigraph(dvp)
 >>> m.showHTMLRelationTable(\
 ...      actionsList=m.computeNetFlowsRanking(),
 ...      relationName='r(x > y)')
 \end{lstlisting}	   
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=11cm]{Figures/20-4-majMargDAV.png}
+\includegraphics[width=\hsize]{Figures/20-4-majMargDAV.png}
 \caption{The pairwise \emph{better approved than} majority margins} 
 \label{fig:20.4}       % Give a unique label
 \end{figure}
@@ -796,6 +793,6 @@ It is worthwhile noticing again the essential structural and computational role,
 \clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
+%\input{02-mainMatters/22-chapterTemperingPlurality.bbl}
 \bibliographystyle{spbasic}
-%\typeout{}
 \bibliography{03-backMatters/reference}

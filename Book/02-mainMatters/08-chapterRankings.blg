@@ -7,24 +7,24 @@ Warning--I didn't find a database entry for "BIS-2012b"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 12 entries,
             3269 wiz_defined-function locations,
-            754 strings with 6499 characters,
-and the built_in function-call counts, 8927 in all, are:
-= -- 811
+            754 strings with 6498 characters,
+and the built_in function-call counts, 8918 in all, are:
+= -- 810
 > -- 157
 < -- 13
 + -- 61
 - -- 47
-* -- 684
-:= -- 1288
+* -- 683
+:= -- 1287
 add.period$ -- 11
 call.type$ -- 12
 change.case$ -- 75
 chr.to.int$ -- 12
 cite$ -- 12
-duplicate$ -- 817
-empty$ -- 874
+duplicate$ -- 816
+empty$ -- 873
 format.name$ -- 72
-if$ -- 1886
+if$ -- 1884
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 99
@@ -36,7 +36,7 @@ purify$ -- 63
 quote$ -- 0
 skip$ -- 194
 stack$ -- 0
-substring$ -- 928
+substring$ -- 926
 swap$ -- 198
 text.length$ -- 1
 text.prefix$ -- 0
