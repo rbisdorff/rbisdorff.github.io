@@ -71,7 +71,7 @@ The decision consequences to take into account for evaluating the potential new 
 In Table~\vref{tab:4.2} we notice that the \emph{Costs} criterion admits the highest significance weight ($45$), followed by the \emph{Future turnover} criteria $(32 + 26 + 23 = 81)$, The \emph{Working conditions} criteria are the less significant $(10 + 6 + 3 = 19)$ \footnote{These criteria weights were supposedly established with a swing weighing MCDA method \citep{KEE-1976}.}. It follows that the CEO considers \emph{maximizing the future turnover} the most important objective ($81.0$), followed by minizing the future yearly costs ($45.0$), and less important, \emph{maximizing working conditions} ($19.0$). 
 
 The evaluation of the seven potential new sites on each performance criterion are gathered in a \emph{performance table} shown in Table~\vref{tab:4.3}.
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Performance evaluations of the potential office sites}
 \label{tab:4.3}       % Give a unique label
 \begin{center}
@@ -226,12 +226,12 @@ From theory, we know that outranking digraphs are \emph{weakly complete}\index{w
 \begin{itemize}[leftmargin=0.5cm,rightmargin=0.5cm]
 \item ``Alternative $x$ \emph{stricly outranks} alternative $y$'', denoted $(x \succnsim y)$, when there is:
    \begin{enumerate}[topsep=0pt]
-     \item A \emph{majority} of criteria significance concordantly supporting that alternative $x$ is \emph{better performing than} alternative $y$, and
+     \item A \emph{majority} of criteria significance concordantly supporting that alternative $x$ is \emph{better evaluated than} alternative $y$, and
      \item \emph{No considerable} counter-performance observed on any discordant criterion.      
     \end{enumerate}
 \item ``Alternative $x$ \emph{is not strictly outranking} alternative $y$'', denoted $(x \not\succnsim y)$, when there is:
    \begin{enumerate}[topsep=0pt]
-    \item A \emph{majority} of criteria concordantly supporting that alternative $x$ is \emph{not better performing than} alternative $y$, and
+    \item A \emph{majority} of criteria concordantly supporting that alternative $x$ is \emph{less well evaluated than} alternative $y$, and
     \item \emph{No considerable} better performance observed on any discordant criterion. 
     \end{enumerate}
 \item Otherwise, the \emph{strict} outranking situation between alternatives $x$ and $y$ is considered to be \emph{indeterminate}.
@@ -416,7 +416,7 @@ In the next Chapter~\ref{sec:5} we precisely show how to edit a new performance 
 \addcontentsline{toc}{section}{Notes}
 \section*{Notes}
 
-Following a seminar presentation in 2005 at the LAMSADE\footnote{Laboratoires d'Analyse et de Modélisation de Systèmes d'Aide à la Décision, Université Paris-Dauphine, UMR 7243 CNRS}, where the author promoted the use of kernels of the outranking digraph as suitable candidates for delivering best choice recommendations \citep{BIS-2005}, a critical discussion started about the methodological requirement for a convincing best choice recommendation to be internally stable (pragmatic principle \texttt{P3}). \emph{Denis Bouyssou}\index{Bouyssou@\emph{D. Bouyssou}} illustrated his doubts with the example of supposed outranking digraph shown in Figure~\vref{fig:4.5}.
+Following a seminar presentation in 2005 at the LAMSADE\footnote{Laboratoires d'Analyse et de Modélisation de Systèmes d'Aide à la Décision, Université Paris-Dauphine, UMR 7243 CNRS}, where the author promoted the use of kernels of the outranking digraph as suitable candidates for delivering best choice recommendations \citep{BIS-2005}, a critical discussion started about the methodological requirement for a convincing best choice recommendation to be internally stable (pragmatic principle \texttt{P3}). \emph{D. Bouyssou}\index{Bouyssou@\emph{D. Bouyssou}} illustrated his doubts with the example of supposed outranking digraph shown in Figure~\vref{fig:4.5}.
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/4-5-bouyssou11Oct05crisp.pdf}
@@ -428,7 +428,7 @@ His commentary was the following: Adding alternative \texttt{d} to the set of po
 
 It became thereafter clear for us all that both the lack of a specific performance tableau as well as the lack of a precisely defined algorithm for computing valid outranking situations does not allow to judge if a given digraph does indeed model a potential outranking relation. In our present bipolar-valued epistemic approach, a valid outranking digraph instance, following from a given performance tableau and the disjunctive epistemic fusion construction of the outranking relation (see Chap.~\ref{sec:3}), will necessarily verify the weak completeness condition and the coduality principle. As a consequence, incomparability situations are now modelled by epistemic indeterminateness not by the actual absence of a reciprocal outranking relation.
 
-The digraph put forward by \emph{D. Bouyssou} in the October 2005 discussion is not weakly complete --node \texttt{a} is not outranking node \texttt{b} and vice versa-- and does hence not represent, in our present sense, a valid outranking digraph instance. Yet, it may be a partial tournament and as such it may be a strict outranking digraph, i.e. the asymmetric part --the codual-- of a valid outranking digraph. In this case, nodes \texttt{a} and \texttt{d} --the kernel of the strict outranking digraph-- would actually for sure outrank each other and, hence, represent both the natural best choice recommendation. However, in this not strict codual digraph, node \texttt{a} is a \Condorcet winner --outranking for sure all other nodes-- and must become hence the evident unique best choice recommendation.
+The digraph put forward by \emph{D. Bouyssou} in the October 2005 discussion is not weakly complete --node \texttt{a} is not outranking node \texttt{d} and vice versa-- and does hence not represent, in our present sense, a valid outranking digraph instance. Yet, it may be a partial tournament and as such it could be a strict outranking digraph, i.e. the asymmetric part --the codual-- of a valid outranking digraph. In this case, nodes \texttt{a} and \texttt{d} --the kernel of the strict outranking digraph-- would actually for sure outrank each other and, hence, represent both the natural best choice recommendation. However, in this not strict codual digraph, node \texttt{a} becomes a \Condorcet winner --outranking for sure all other nodes-- and gives hence the evident unique best choice recommendation.
 
 It stays an interesting open mathematical problem to show (or not) that both necessary conditions: --weak completeness and the coduality principle-- are also sufficient for qualifying any bipolar-valued digraph as potential instance of an outranking digraph.
 

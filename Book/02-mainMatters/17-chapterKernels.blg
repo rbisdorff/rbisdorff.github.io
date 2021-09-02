@@ -3,11 +3,10 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 02-mainMatters/17-chapterKernels.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
-Warning--I didn't find a database entry for "KIT-1985"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 14 entries,
             3269 wiz_defined-function locations,
-            777 strings with 7918 characters,
+            775 strings with 7902 characters,
 and the built_in function-call counts, 12679 in all, are:
 = -- 1145
 > -- 235
@@ -46,4 +45,3 @@ warning$ -- 0
 while$ -- 97
 width$ -- 0
 write$ -- 171
-(There was 1 warning)

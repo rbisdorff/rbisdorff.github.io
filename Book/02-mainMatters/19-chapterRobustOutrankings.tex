@@ -392,7 +392,7 @@ We may finally compare in Fig.~\vref{fig:19.1} the \emph{standard} and the \emph
     absorbency   :  0.111
     covered      :  1.000
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
   % \sidecaption
   Standard strict outranking digraph \hfill Robust strict outranking digraph \\
   \includegraphics[height=6cm]{Figures/19-1-stdg.pdf}\hfill
@@ -411,9 +411,9 @@ To appreciate the apparent partial ordering of both the standard and the robust 
 ...           outrankingModel='this',\
 ...           rankingRule='NetFlows')
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=12cm]{Figures/19-2-robustHeatmap.png}
+\includegraphics[width=\hsize]{Figures/19-2-robustHeatmap.png}
 \caption{Robust heatmap of the random 3 objectives performance tableau ordered by the \NetFlows ranking rule.} 
 \label{fig:19.2}       % Give a unique label
 \end{figure}
@@ -571,7 +571,7 @@ We may visualize this kind of Pareto efficient result in Figure~\vref{fig:19.3}.
    Exporting to unopDigraph.dot
    dot -Grankdir=BT -Tpng unopDigraph.dot -o unopDigraph.png
 \end{lstlisting}
-\begin{figure}[h]
+\begin{figure}[ht]
 %\sidecaption
   Standard strict outranking digraph \hfill Unopposed strict outranking digraph \\
   \includegraphics[height=6cm]{Figures/19-1-stdg.pdf}\hfill
