@@ -39,7 +39,7 @@ Let us consider in Listing~\vref{list:8.1} a didactic outranking digraph \texttt
   'a9' |  0.00 +0.12 -1.00 -0.13 -0.03 -0.03 -1.00 -0.03   -   
 \end{lstlisting}
   
-Some ranking rules will work on the associated \Condorcet digraph\index{Condorcet digraph}, i.e. the corresponding \emph{median cut} polarised strict outranking digraph.
+Some ranking rules will work on the associated \Condorcet digraph\index{Condorcet@\Condorcet!digraph}, i.e. the corresponding \emph{median cut} polarised strict outranking digraph.
  \begin{lstlisting}[caption={Median cut polarised strict outranking relation characteristics},label=list:8.2]
 >>> ccd = PolarisedOutrankingDigraph(gcd,\
 ...                   level=g.valuationdomain['med'],\
@@ -273,7 +273,7 @@ We may visualise in Figure~\vref{fig:8.3} the partial order defined by the epist
 \label{fig:8.3}       % Give a unique label
 \end{figure}
 
-To retain now a specific representative among all the potential rankings with maximal \Kemeny index, we will choose, with the help of the \texttt{showRankingCon\-sensusQuality()} method\index{showRankingConsensusQuality@Showrankingconsensusquality()}, the one proposing the best criteria consensus.
+To retain now a specific representative among all the potential rankings with maximal \Kemeny index, we will choose, with the help of the \texttt{showRankingConsensus\-Quality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}}, the one proposing the best criteria consensus.
 \begin{lstlisting}[caption={Computing the consensus quality of a ranking},label=list:8.10]   
 >>> g.showRankingConsensusQuality(ke.maximalRankings[0])
  Consensus quality of ranking:

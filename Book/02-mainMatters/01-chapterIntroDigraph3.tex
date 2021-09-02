@@ -76,7 +76,7 @@ Individual module \texttt{pytest} suites are also provided (see the \texttt{make
 \noindent To be fully functional, the \Digraph resources mainly need:
 
 \begin{itemize}[leftmargin=0.5cm,listparindent=0em,rightmargin=0.2cm,topsep=1pt]
-\item The \texttt{graphviz} tools \citep{graphViz}\footnote{\href{https://graphviz.org}{https://graphviz.org}}, and 
+\item The \texttt{graphviz} tools \citep{graphviz}\footnote{\href{https://graphviz.org}{https://graphviz.org}}, and 
 \item The R statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed.
 \item When exploring digraph isomorphisms, the \texttt{nauty} isomorphism testing program is required \citep*{nauty}. On linux you may try: \texttt{sudo apt install nauty}. For Mac OS X, corresponding \texttt{dmg} installers are available for downloading.
 \item Two specific methods of the \texttt{OutrankingDigraph} class for clustering performance criteria or decision alternatives require furthermore the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
@@ -262,7 +262,7 @@ Different \texttt{show...()} methods, like the \texttt{showShort()} method \inde
  'a5': in => {'a1', 'a4', 'a3'}, out => {'a4'}
 \end{lstlisting}
 
-The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph \texttt{dg} (see Fig.~\vref{fig:1.1}), if the \emph{graphviz} tools are installed on your system \citep{graphViz}\index{graphviz@\textsl{graphviz}}.
+The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} method generates in the current working directory a \texttt{tutorialDigraph.dot} file and a \texttt{tutorialdigraph.png} picture of the tutorial digraph \texttt{dg} (see Fig.~\vref{fig:1.1}), if the \emph{graphviz} tools are installed on your system \citep{graphviz}.
 \begin{lstlisting}
 >>> dg.exportGraphViz('tutorialDigraph')
  *---- exporting a dot file do GraphViz tools ---------*
@@ -343,7 +343,7 @@ Mind that \texttt{show...()} methods output their results in the \emph{Python} c
 % \section{Special digraph instances}
 % \label{sec:1.5}
 
-Some special types of digraph instances, like the \texttt{CirculantDigraph}\index{CirculantDigraph@\texttt{CirculantDigraph} class} or the \texttt{GridDigraph}\index{GridDigraph@texttt{GridDigraph} class} classes, are readily available (see Fig.~\vref{fig:1.3}).
+Some special types of digraph instances, like the \texttt{CirculantDigraph}\index{CirculantDigraph@\texttt{CirculantDigraph} class} or the \texttt{GridDigraph}\index{GridDigraph@\texttt{GridDigraph} class} classes, are readily available (see Fig.~\vref{fig:1.3}).
  \begin{figure}[ht]
 %\sidecaption[t]
   \includegraphics[height=6cm]{Figures/1-3-c8.pdf} \hfill

@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -52,6 +52,11 @@ Bisdorff R (2021{\natexlab{a}}) {Documentation of the Digraph3 collection of
 Bisdorff R (2021{\natexlab{b}}) {Technical documentation of the Digraph3
   collection of Python modules}.
   \urlprefix\url{https://digraph3.readthedocs.io/en/latest/techDoc.html}
+
+\bibitem[{Gansner and North(2000)}]{graphviz}
+Gansner E, North S (2000) An open graph visualization system and its
+  applications to software engineering. {SOFTWARE - PRACTICE AND EXPERIENCE}
+  30(11):1203--1233, \urlprefix\url{https://graphviz.org/documentation/}
 
 \bibitem[{Roy(1959)}]{ROY-1959}
 Roy B (1959) Transitivité et connexité. C R Acad Sci Paris 249:216--218

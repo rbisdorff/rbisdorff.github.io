@@ -182,12 +182,12 @@ To help now the CEO choosing the best office site, we are going to compute pairw
 \begin{itemize}[leftmargin=0.5cm,rightmargin=0.5cm]
 \item ``Alternative $x$ \emph{outranks} alternative $y$'', denoted $(x \succsim y)$, is given when there is:
    \begin{enumerate}
-     \item A \emph{majority} of criteria significance concordantly supporting that alternative $x$ is \emph{at least as well assesed as} alternative $y$, and
+     \item A \emph{majority} of criteria significance concordantly supporting that alternative $x$ is \emph{at least as well evaluated as} alternative $y$, and
      \item \emph{No considerable} counter-performance observed on any discordant criterion.      
     \end{enumerate}
 \item ``Alternative $x$ \emph{does not outrank} $y$'', denoted $(x \not\succsim y)$, is given when there is:
    \begin{enumerate}
-    \item A \emph{majority} of criteria concordantly supporting that alternative $x$ is \textbf{not} \emph{at least as well assessed as} alternative $y$, and
+    \item A \emph{majority} of criteria concordantly supporting that alternative $x$ is \textbf{not} \emph{at least as well evaluated as} alternative $y$, and
     \item \emph{No considerable} better performance observed on any discordant criterion. 
     \end{enumerate}
 \item Otherwise, the outranking situation between alternatives $x$ and $y$ is considered to be \emph{indeterminate}.
@@ -197,7 +197,7 @@ To help now the CEO choosing the best office site, we are going to compute pairw
 The credibility of each pairwise outranking situation, denoted $r(x \succsim y)$, is measured in a bipolar significance valuation $[-1.0, 1.0]$, where \emph{positive} terms $r(x \succsim y)\, >\, 0.0$ indicate a \emph{validated}, and \emph{negative} terms $r(x \succsim y)\, <\, 0.0$ indicate a \emph{non-validated} outranking situation. The \emph{median} value $r(x \succsim y)\, = \,0.0$ represents an \emph{indeterminate} situation (see \citet{BIS-2004a} and \citet{BIS-2013}).   
 
 For computing such a bipolar-valued binary outranking relation from the given performance tableau $t$, we use the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph} class} class from the \texttt{outrankingDigraphs}\index{outrankingDigraphs@\texttt{outrankingDigraphs} module} module. The corresponding
-\texttt{showHTMLRe\-lation\-Table()}\index{showHTMLRelationTable} method shows here the resulting bipolar-valued adjacency matrix in a system browser window (see Fig.~\vref{fig:4.2}).
+\texttt{showHTMLRe\-lation\-Table()}\index{showHTMLRelationTable@\texttt{showHTMLRelationTable()}} method shows here the resulting bipolar-valued adjacency matrix in a system browser window (see Fig.~\vref{fig:4.2}).
 \begin{lstlisting}[caption={Computing a bipolar-valued outranking digraph},label=list:4.3]
 >>> from outrankingDigraphs import BipolarOutrankingDigraph
 >>> bod = BipolarOutrankingDigraph(t)
@@ -330,7 +330,7 @@ To inspect why alternative \texttt{D} is the only positive best choice recommend
     Valuation in range: -145.00 to +145.00; global concordance: +145.00
 \end{lstlisting}
 
-In Listing~\vref{list:4.5}, we notice that, with the given preference discrimination thresholds, alternative \texttt{G} is actually \emph{certainly at least as well assessed as} alternative \texttt{D}:  $r(G \succsim D)\, = \, +145/145\, =\, +1.0$.
+In Listing~\vref{list:4.5}, we notice that, with the given preference discrimination thresholds, alternative \texttt{G} is actually \emph{certainly at least as well evaluated as} alternative \texttt{D}:  $r(G \succsim D)\, = \, +145/145\, =\, +1.0$.
 
 Yet, we must as well acknowledge in Listing~\vref{list:4.6}, that the cheapest alternative \texttt{C} is in fact \emph{strictly outranking} alternative \texttt{G}:  $r(C \succsim G)\, =\, +15/145\, >\, 0.0$, and $r(G \succsim C)\, =\, -15/145 \,<\, 0.0$.
 \begin{lstlisting}[caption={Inspecting pairwise comparison between alternatives \texttt{C} and \texttt{G}},label=list:4.6,basicstyle=\ttfamily\scriptsize]
