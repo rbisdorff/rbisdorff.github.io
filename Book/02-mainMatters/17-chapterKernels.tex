@@ -279,7 +279,7 @@ In genuine random digraphs, however, we may need to check for each of its MISs, 
 \label{fig:17.4}       % Give a unique label
 \end{figure}
 
-The random digraph shown in Figure~\vref{fig:17.4} has no apparent special properties, except from being connected (see Line 3 in Listing~\vref{list:17.10}).
+The random digraph shown in Figure~\vref{fig:17.4} has no apparent special properties, except from being connected (see Line 3 in List.~\vref{list:17.10}).
 \begin{lstlisting}[caption={Inspecting the properties of random digraph \texttt{rd}},label=list:17.10]
 >>> rd.showComponents()
   *--- Connected Components ---*
@@ -334,7 +334,7 @@ Now, we know that its potential prekernels must be among its set of maximal inde
        covering     :  0.600
 \end{lstlisting}
      
-Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in Listing~\vref{list:17.11}) we discover two initial and two terminal kernels (Lines 12, 17, 23, 28). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels}()} method (Lines 16, 21, 27 and 32). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. We may hence redraw the same digraph in Fig.~\vref{fig:17.5} by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{\texttt{a3}, \texttt{a4}\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{\texttt{a1}, \texttt{a6}\} (coloured in blue).
+Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in List.~\vref{list:17.11}) we discover two initial and two terminal kernels (Lines 12, 17, 23, 28). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels}()} method (Lines 16, 21, 27 and 32). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. We may hence redraw the same digraph in Fig.~\vref{fig:17.5} by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{\texttt{a3}, \texttt{a4}\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{\texttt{a1}, \texttt{a6}\} (coloured in blue).
 \begin{lstlisting}
 >>> rd.exportGraphViz(fileName='orientedLaterality',\
 ...                   bestChoice=set(['a3', 'a4']),\
@@ -412,7 +412,7 @@ The associated random performance tableau shown in Fig.~\vref{fig:17.6} reveals 
        covered      :  0.800
 \end{lstlisting}
 
-With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in Listing~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralised. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \emph{best}, resp. \emph{worst}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
+With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in List.~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralised. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \emph{best}, resp. \emph{worst}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
 \begin{lstlisting}[caption={Computing a best and worst choice recommendation from digraph \texttt{gcd}},label=list:17.14]
 >>> g.showBestChoiceRecommendation()
   Rubis best choice recommendation(s) (BCR)

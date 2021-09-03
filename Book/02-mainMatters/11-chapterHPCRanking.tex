@@ -130,7 +130,7 @@ The C compiled version of the \texttt{BipolarOutrankingDigraph} class takes inte
                        'relation', 'gamma', 'notGamma']
 \end{lstlisting}
 
-On a classical intel-i7 equipped PC with four single threaded cores, the \texttt{Inte\-ger\-BipolarOutrankingDigraph} class constructor takes about four seconds for computing a \emph{million} pairwise outranking characteristic values (see Listing~\vref{list:11.2}). In a similar setting, the standard \texttt{BipolarOutranking\-Digraph} constructor operates more than two times slower.
+On a classical intel-i7 equipped PC with four single threaded cores, the \texttt{Inte\-ger\-BipolarOutrankingDigraph} class constructor takes about four seconds for computing a \emph{million} pairwise outranking characteristic values (see List.~\vref{list:11.2}). In a similar setting, the standard \texttt{BipolarOutranking\-Digraph} constructor operates more than two times slower.
 \begin{lstlisting}
 >>> from outrankingDigraphs import BipolarOutrankingDigraph
 >>> t1 = t.convert2Standard()
@@ -345,7 +345,7 @@ We provide therefore the \texttt{cQuantilesRankingDigraph} class\index{cQuantile
   'maximalComponentSize', 'componentRankingRule', 'boostedRanking']
 \end{lstlisting}
 
-With this \emph{optimised} quantile ordering strategy, we obtain now 47 performance equivalence classes (see Listing~\vref{list:11.5} Line 13).
+With this \emph{optimised} quantile ordering strategy, we obtain now 47 performance equivalence classes (see List.~\vref{list:11.5} Line 13).
 \begin{lstlisting}[caption={The ordered components of the sparse outranking digraph},label=list:11.6]
 >>> qr.components
     OrderedDict([

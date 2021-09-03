@@ -90,7 +90,7 @@ An even better insight into the \texttt{Digraph} object \texttt{rdg} is given by
 \section{Asymmetric and symmetric parts}
 \label{sec:2.3}
 
-We may now extract both the \emph{}\emph{symmetric} as well as the \emph{asymmetric} part of digraph \texttt{rdg} with the help of two corresponding constructors (see Listing~\vref{list:2.3}) \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}\index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}.
+We may now extract both the \emph{}\emph{symmetric} as well as the \emph{asymmetric} part of digraph \texttt{rdg} with the help of two corresponding constructors (see List.~\vref{list:2.3}) \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}\index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}.
 \begin{lstlisting}[caption={Computing asymmetric and symmetric Parts},label=list:2.3]
 >>> from digraphs import AsymmetricPartialDigraph,\
 ...                      SymmetricPartialDigraph
@@ -137,7 +137,7 @@ def _constructRelation(self):
 \section{Border and inner parts}
 \label{sec:2.4}
 
-We may also extract the \emph{border} --the part of a digraph induced by the union of its initial and terminal prekernels (see Chapter~\ref{sec:17})--  as well as, the \emph{inner part} --the complement of the border-- with the help of two corresponding class constructors: \texttt{GraphBorder}\index{GraphBorder@\texttt{GraphBorder} class} and \texttt{GraphInner}\index{GraphInner@\texttt{GraphInner} class} (see Fig.~\vref{fig:2.3}).
+We may also extract the \emph{border} --the part of a digraph induced by the union of its initial and terminal prekernels (see Chap.~\ref{sec:17})--  as well as, the \emph{inner part} --the complement of the border-- with the help of two corresponding class constructors: \texttt{GraphBorder}\index{GraphBorder@\texttt{GraphBorder} class} and \texttt{GraphInner}\index{GraphInner@\texttt{GraphInner} class} (see Fig.~\vref{fig:2.3}).
 
 \begin{figure}[ht]
 %\sidecaption
@@ -159,7 +159,7 @@ Let us illustrate the digraph border and inner parts on a linear ordering obtain
 >>> inf = GraphInner(nf)
 >>> inf.exportGraphViz(worstChoice=['6'],bestChoice=['7'])
 \end{lstlisting}
-We may orient the \texttt{graphviz} drawings in Fig.~\vref{fig:2.3}  with the terminal node 6 (\texttt{worstChoice} parameter) and initial node 7 (\texttt{bestChoice} parameter) (see List.~\vref{list:2.5} Lines 7 and 9).
+We may orient the \texttt{graphviz} drawings in Figure~\vref{fig:2.3}  with the terminal node 6 (\texttt{worstChoice} parameter) and initial node 7 (\texttt{bestChoice} parameter) (see List.~\vref{list:2.5} Lines 7 and 9).
 
 The constructor of the partial digraphs \texttt{bnf} and \texttt{inf}  (see Lines 3 and 6) puts to the \emph{indeterminate} characteristic value all links not in the \emph{border}, respectively \emph{not} in the \emph{inner} part (see Fig.~\vref{fig:2.3}). Being much {\em denser\/} than a linear order, the actual inner part of our tutorial random valuation digraph \texttt{rdg} is reduced to a single arc between nodes 3 and 4 (see Fig.~\vref{fig:2.4}). Indeed, a complete digraph on the limit has no inner part (privacy!) at all, whereas empty and indeterminate digraphs admit both, an empty border and an empty inner part.
 \begin{figure}[h]

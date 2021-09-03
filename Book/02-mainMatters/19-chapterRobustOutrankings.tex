@@ -57,7 +57,7 @@ In Listing~\vref{list:19.1} one may notice a performance tableau \texttt{pt} des
 \item An \emph{environmental} aspect (Line 33) with a coalition of four performance criteria of significance weight 6.
 \end{enumerate}
 
-The question we tackle is the following: How \emph{dependent} on the actual values of the significance weights appears to be the corresponding bipolar-valued outranking digraph? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights. In the random outranking digraph, generated in List.~\vref{list:19.1}, we observe three increasing weight equivalence classes.
+The question we tackle is the following: How \emph{dependent} on the actual values of the significance weights appears to be the corresponding bipolar-valued outranking digraph? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights. In the random outranking digraph, generated in Listing~\vref{list:19.1}, we observe three increasing weight equivalence classes.
 \begin{lstlisting}[caption={The significance weights preorder},label=list:19.2]
 >>> pt.showWeightPreorder()
     ['en3', 'en5', 'en6', 'en9'] (6) <
@@ -370,7 +370,7 @@ Notice by the way that outranking or outranked situations, although qualified at
 \end{lstlisting}
 Despite being robust, the apparent positive outranking situation between alternatives \texttt{p2} and \texttt{p4} becomes doubtful because of a considerable counter-performance ($-60.02$) of \texttt{p2} observed on criterion \texttt{en3}, a negative difference which exceeds slightly the assumed veto discrimination threshold $v = 60.00$ (see List.~\vref{list:19.8} Line 9).
 
-We may finally compare in Fig.~\vref{fig:19.1} the \emph{standard} and the \emph{robust} version of the corresponding strict outranking digraphs, both oriented by their respective identical initial and terminal prekernels.
+We may finally compare in Figure~\vref{fig:19.1} the \emph{standard} and the \emph{robust} version of the corresponding strict outranking digraphs, both oriented by their respective identical initial and terminal prekernels.
 \begin{lstlisting}
 >>> rg.showPreKernels()
   *--- Computing preKernels ---*

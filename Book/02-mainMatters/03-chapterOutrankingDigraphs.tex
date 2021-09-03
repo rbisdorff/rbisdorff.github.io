@@ -155,7 +155,7 @@ The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{Bip
 \section{Pairwise comparisons}
 \label{sec:3.3}
 
-From above given semantics, we notice in line 5 in List.~\vref{list:3.5} that \texttt{a1} outranks \texttt{a2}: $r(a1 \succsim a2) + 0.71$)-, but not \texttt{a7}: $r(a1 \succsim a7) = 0.0$). In order to comprehend the characteristic values shown in the outranking relation table, we can inspect with the \texttt{showPairwiseComparison()} method\index{showPairwiseComparison@\texttt{showPairwiseComparison()}} the details for instance of the pairwise multiple criteria comparison between alternatives \texttt{a1} and \texttt{a2}.
+From above given semantics, we notice in line 5 in Listing~\vref{list:3.5} that \texttt{a1} outranks \texttt{a2}: $r(a1 \succsim a2) + 0.71$)-, but not \texttt{a7}: $r(a1 \succsim a7) = 0.0$). In order to comprehend the characteristic values shown in the outranking relation table, we can inspect with the \texttt{showPairwiseComparison()} method\index{showPairwiseComparison@\texttt{showPairwiseComparison()}} the details for instance of the pairwise multiple criteria comparison between alternatives \texttt{a1} and \texttt{a2}.
 \begin{lstlisting}[caption={Inspecting a pairwise multiple criteria comparison},label=list:3.6]
 >>> odg.showPairwiseComparison('a1','a2')
   *------------  pairwise comparison ----*

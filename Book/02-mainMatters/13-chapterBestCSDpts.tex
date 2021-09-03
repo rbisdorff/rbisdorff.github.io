@@ -28,7 +28,7 @@ For this decision making case study, we use an extract of the published \THE (TH
 
 Potential decision alternatives, in our case here, are the 75 THE best-ranked CS Departments in 2016, all of them located at world renowned Institutions, like California Institute of Technology, Swiss Federal Institute of Technology Zurich, Technical University München, University of Oxford or the National University of Singapore (see List.~\vref{list:13.2} below). 
 
-Instead of using prefigured \Digraph \texttt{show...()} methods, readily available for inspecting \texttt{PerformanceTableau} instances, Listing~\vref{list:13.2} below illstrates how to write small Python scripts for printing out its content.   
+Instead of using prefigured \Digraph \texttt{show...()} methods, readily available for inspecting \texttt{PerformanceTableau} instances, Listing~\vref{list:13.2} illstrates how to write small Python scripts for printing out its content.   
 \begin{lstlisting}[caption={Printing the CS Departments},label=list:13.2,basicstyle=\ttfamily\scriptsize]
 >>> for x in cspt.actions:
 ...     print('%s:\t%s (%s)' %\
@@ -155,7 +155,7 @@ THE authors do, unfortunately, not publish the detail of their performance asses
 
 The largest part ($87.5\%$) of criteria significance is, hence canonically, allocated to the major ranking criteria: \emph{Teaching} ($30\%$), \emph{Research} ($30\%$) and \emph{Citations} ($27.5\%$). The small remaining part ($12.5\%$) goes to \emph{International outlook} ($7.5\%$) and \emph{Industry income} ($5\%$).
 
-In order to render commensurable these performance criteria, the THE authors replace, per criterion, the actual performance grade obtained by each University with the corresponding \emph{quantile} observed in the cumulative distribution of the performance grades obtained by all the surveyed institutions \citep{THE-2016}. The THE ranking is eventually determined by an \emph{overall score} per University which corresponds to the weighted average of these five criteria quantiles, as illustrated in Listing~\vref{list:13.4} below.     
+In order to render commensurable these performance criteria, the THE authors replace, per criterion, the actual performance grade obtained by each University with the corresponding \emph{quantile} observed in the cumulative distribution of the performance grades obtained by all the surveyed institutions \citep{THE-2016}. The THE ranking is eventually determined by an \emph{overall score} per University which corresponds to the weighted average of these five criteria quantiles, as illustrated in Listing~\vref{list:13.4}.     
 \begin{lstlisting}[caption={Computing the THE overall scores},label=list:13.4]
 >>> theScores = []
 >>> for x in cspt.actions:
@@ -680,7 +680,7 @@ It is, finally, interesting to similarly assess the ordinal correlation between 
      Ranking fairness (a)-(b)              : +0.302
 \end{lstlisting}
 
-The THE ranking result is similarly correlated ($+0.907$, Line 7 in Listing~\ref{list:13.14}) with the pairwise global robust outranking situations. By its overall weighted scoring rule, the THE ranking natuarlly induces marginal criterion correlations that are compatible with the given significance weight preorder (Lines 13-17). Notice that the mean marginal correlation is of a similar value ($+0.51$, Line 19) as the robust \NetFlows ranking. Yet, its standard deviation is slightly higher, which leads to a less fairer balancing of the three major ranking criteria.
+The THE ranking result is similarly correlated ($+0.907$, Line 7 in List.~\ref{list:13.14}) with the pairwise global robust outranking situations. By its overall weighted scoring rule, the THE ranking natuarlly induces marginal criterion correlations that are compatible with the given significance weight preorder (Lines 13-17). Notice that the mean marginal correlation is of a similar value ($+0.51$, Line 19) as the robust \NetFlows ranking. Yet, its standard deviation is slightly higher, which leads to a less fairer balancing of the three major ranking criteria.
 
 To conclude, let us emphasize, that, without any commensurability hypothesis and by taking, furthermore, into account, first, the always present more or less imprecision of any performance grading and, secondly, solely ordinal criteria significance weights, we may obtain here with our robust outranking approach a very similar ranking result with a slightly better preference modelling quality. A convincing heatmap view of the 25 first-ranked Institutions may eventually be generated in the default system browser with following command.
 \begin{lstlisting}

@@ -344,7 +344,7 @@ The \Slater ranking rule is identical to the \Kemeny rule, but it is working, in
   7
 \end{lstlisting}
 
-We notice in Listing~\vref{list:8.12} that the \Slater ranking shown in Line 4 represents a rather good fit ($+0.676$), slightly better apparently than the \NetFlows ranking result ($+0.638$). However, there are in fact 7 such optimal \Slater rankings (see Line 12). The corresponding epistemic disjunction gives the partial ordering shown in Fig.~\vref{fig:8.4}:
+We notice in Listing~\vref{list:8.12} that the \Slater ranking shown in Line 4 represents a rather good fit ($+0.676$), slightly better apparently than the \NetFlows ranking result ($+0.638$). However, there are in fact 7 such optimal \Slater rankings (see Line 12). The corresponding epistemic disjunction gives the partial ordering shown in Figure~\vref{fig:8.4}:
 \begin{lstlisting}[caption={Computing the epistemic disjunction of optimal \Slater rankings},label=list:8.13]   
 >>> slw = RankingsFusion(sl,sl.maximalRankings)
 >>> slw.exportGraphViz(fileName='tutorialSlater')

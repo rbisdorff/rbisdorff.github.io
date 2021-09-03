@@ -268,7 +268,7 @@ After the performance criteria descriptions, we are ready for recording the actu
 \section{Editing the performance grades}
 \label{sec:5.5}
 
-The individual grades of each decision alternative on each decision criterion are recorded in a double \emph{criterion} $\times$ \emph{action} dictionary called \texttt{evaluation} (see Listing \ref{list:5.5}). As we may encounter cases of missing data, we previously define a \emph{missing data} symbol \texttt{NA} which is set to a value disjoint from all the measurement scales, by default \texttt{Decimal('-999')} (see Line 2 in Listing~\vref{list:5.6}).
+The individual grades of each decision alternative on each decision criterion are recorded in a double \emph{criterion} $\times$ \emph{action} dictionary called \texttt{evaluation} (see List.~\ref{list:5.5}). As we may encounter cases of missing data, we previously define a \emph{missing data} symbol \texttt{NA} which is set to a value disjoint from all the measurement scales, by default \texttt{Decimal('-999')} (see Line 2 in List.~\vref{list:5.6}).
 \begin{lstlisting}[caption={Editing performance grades},label=list:5.6]
 #----------
 NA = Decimal('-999')
@@ -369,7 +369,7 @@ One may notice in this outranking relation table above that decision alternative
 \label{fig:5.1}       % Give a unique label
 \end{figure}
 
-In Fig.~\vref{fig:5.1}, alternatives \emph{action3} (\texttt{a3} ) and \emph{action4} (\texttt{a4}) appear actually \emph{incomparable}. In Listing~\vref{list:5.7}, their pairwise outranking characteritics show indeed the \emph{indeterminate} value $0.00$ (Lines 7-8).
+In Figure~\vref{fig:5.1}, alternatives \emph{action3} (\texttt{a3} ) and \emph{action4} (\texttt{a4}) appear actually \emph{incomparable}. In Listing~\vref{list:5.7}, their pairwise outranking characteritics show indeed the \emph{indeterminate} value $0.00$ (Lines 7-8).
 
 We may check their pairwise comparison with the \texttt{showPairwiseCompari\-son()} method \index{showPairwiseComparison@\texttt{showPairwiseComparison()}} as follows:
 \begin{lstlisting}
@@ -390,7 +390,7 @@ We may check their pairwise comparison with the \texttt{showPairwiseCompari\-son
 
 The incomparability situation between \texttt{a3} and \texttt{a4} results in fact from a perfect balancing of positive ($+8$) and negative ($-8$) criteria significance weights.
 
-We may eventually rank the five decision alternatives with a heatmap browser view following the \Copeland ranking rule (see Sec.~\ref{sec:8.2}) which consistently reproduces the partial outranking order shown in Fig.~\vref{fig:5.1}. 
+We may eventually rank the five decision alternatives with a heatmap browser view following the \Copeland ranking rule (see Sec.~\ref{sec:8.2}) which consistently reproduces the partial outranking order shown in Figure~\vref{fig:5.1}. 
 \begin{lstlisting}
 >>> bod.showHTMLPerformanceHeatmap(ndigits=1,\
 ...    colorLevels=5, Correlations=True,\
@@ -407,7 +407,7 @@ We may eventually rank the five decision alternatives with a heatmap browser vie
 
 Due to an 8 against 7 \emph{plurality tyranny} effect, the \Copeland ranking rule, essentially based on crisp majority outranking counts, puts here alternative \emph{action5} (\texttt{a5}) last, despite its excellent grades observed on criteria \texttt{g2}, \texttt{g5} and \texttt{g6}.
 
-A slightly \emph{fairer} ranking result may be obtained in Fig.~\vref{fig:5.3} with the \NetFlows ranking rule (see Sec.~\ref{sec:8.3}).
+A slightly \emph{fairer} ranking result may be obtained in Figure~\vref{fig:5.3} with the \NetFlows ranking rule (see Sec.~\ref{sec:8.3}).
 \begin{lstlisting}
 >>> bod.showHTMLPerformanceHeatmap(ndigits=1,\
 ...    colorLevels=5, Correlations=True,\
