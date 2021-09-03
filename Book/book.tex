@@ -52,6 +52,20 @@
 \usepackage{url}
 % \usepackage{epstopdf}
 \usepackage{listings}
+
+\makeatletter
+\AtBeginDocument{%
+\renewcommand\lstlistoflistings{\bgroup
+  \let\contentsname\lstlistlistingname
+  \def\l@lstlisting##1##2{\@dottedtocline{1}{0em}{3em}{##1}{##2}}
+  \let\lst@temp\@starttoc \def\@starttoc##1{\lst@temp{lol}}%
+  \tableofcontents \egroup}
+}
+\makeatother
+
+
+
+
 % %\usepackage{rotating}
 \usepackage[usenames]{color}
 % \usepackage{ascii}
@@ -61,6 +75,10 @@
 % \usepackage{multirow}
 % % \usepackage{dcolumn}
 \usepackage{varioref}
+\usepackage[titles]{tocloft}
+\cftsetindents{figure}{0em}{3em}
+\cftsetindents{table}{0em}{3em}
+
 
 \usepackage[pdftex,
 	draft = false,				% Mettre true pour ne pas générer les liens! 
