@@ -115,7 +115,7 @@ Decision alternatives are stored in attribute \texttt{actions} under the \texttt
 
 Required attributes of each decision alternative, besides the object identifier\footnote{Mind that \emph{graphviz} drawings require node identifier strings without any special characters like `\_` or `/`.},  are: \texttt{shortName}, \texttt{name} and \texttt{comment} (see Lines 15-17 in List.~\vref{list:5.1}). The \texttt{shortName} attribute is essentially used when showing the performance tableau or the performance heatmap in a browser view.
 
-The random performance tableau models, introduced in Chapter~\ref{sec:6}, use the \texttt{actions} attribute for storing special features of the decision alternatives. The \emph{Cost-Benefit} model, for instance, uses a \texttt{type} attribute for distinguishing between \emph{advantageous}, \emph{neutral} and \emph{cheap} alternatives (see Sec.~\ref{sec:6.3}). The \emph{3-Objectives} model keeps a detailed record of the performance profile per decision objective and the corresponding random generators per performance criteria as schown in Listing~\vref{list:5.2}.
+The random performance tableau models, introduced in Chapter~\ref{sec:6}, use the \texttt{actions} attribute for storing special features of the decision alternatives. The \emph{Cost-Benefit} model, for instance, uses a \texttt{type} attribute for distinguishing between \emph{advantageous}, \emph{neutral} and \emph{cheap} alternatives (see Sec.~\ref{sec:6.3}). The \emph{3-Objectives} model keeps a detailed record of the performance profile per decision objective and the corresponding random generators per performance criteria as shown in Listing~\vref{list:5.2}.
 \begin{lstlisting}[caption={Example of decision alternative description},label=list:5.2]
 >>> from randomPerfTabs import \
 ...           Random3ObjectivesPerformanceTableau
@@ -204,7 +204,7 @@ In order to assess how well each potential decision alternative is satisfying a 
 
 In our bipolar-valued outranking approach, all performance criteria implement \emph{decimal-valued} grading functions, where preferences are either \emph{increasing} or \emph{decreasing} with measured performances. In order to model a \emph{coherent} performance tableau\index{performance tableau!coherent}, the family of decision criteria must satisfy two methodological requirements:
 \begin{enumerate}[leftmargin=1cm,topsep=1pt]
-  \item \emph{Independance}: Each decision criterion implements a grading that is \emph{functionally independent} of the grading of the other decision criteria, i.e. the performance measured on one of the criteria does not \emph{constrain} in any sense the performance measured on any other criterion.
+  \item \emph{Independence}: Each decision criterion implements a grading that is \emph{functionally independent} of the grading of the other decision criteria, i.e. the performance measured on one of the criteria does not \emph{constrain} in any sense the performance measured on any other criterion.
   \item \emph{Non redundancy}: Each performance criterion is only \emph{significant} for a \emph{single} decision objective.
 \end{enumerate}
 
@@ -246,7 +246,7 @@ In a random \emph{Cost-Benefit} performance tableau model we may obtain by defau
  ])
 \end{lstlisting}
 
-Criterion \texttt{c1} appears here to be a cardinal criterion to be minimized and significant for the \emph{Costs} (\texttt{C}) decision objective (see Line 13 in List.~\vref{list:5.5}). We may use the \texttt{showCriteria()} method for printing the corresponding performance discrimination thresholds.
+Criterion \texttt{c1} appears here to be a cardinal criterion to be minimised and significant for the \emph{Costs} (\texttt{C}) decision objective (see Line 13 in List.~\vref{list:5.5}). We may use the \texttt{showCriteria()} method for printing the corresponding performance discrimination thresholds.
 \begin{lstlisting}
 >>> tcb.showCriteria(IntegerWeights=True)
  *----  criteria -----*
@@ -314,7 +314,7 @@ We can now inspect below the eventually edited complete template performance tab
   'action5' |   NA    9.0  -68.0  10.0   88.0   75.0
 \end{lstlisting}
 
-Computing below the associated outranking digraph \texttt{bod} allows checking the potential presence of any polarised outranking situtations.
+Computing below the associated outranking digraph \texttt{bod} allows checking the potential presence of any polarised outranking situations.
 \begin{lstlisting}
 >>> from outrankingDigraphs import BipolarOutrankingDigraph
 >>> bod = BipolarOutrankingDigraph(pt)
@@ -335,7 +335,7 @@ Computing below the associated outranking digraph \texttt{bod} allows checking t
      Polarisation: r(a2 >= a4) = 0.56 ==> +1.00
 \end{lstlisting}
 
-Indeed, due to the considerable positive performance difference ($+77.00$) oberved on performance criterion \texttt{g1}, alternative \texttt{a2} ``\emph{for sure outranks}'' alternative \texttt{a4}, respectively \texttt{a4} ``\emph{does for sure not outrank}'' \texttt{a2}.
+Indeed, due to the considerable positive performance difference ($+77.00$) observed on performance criterion \texttt{g1}, alternative \texttt{a2} ``\emph{for sure outranks}'' alternative \texttt{a4}, respectively \texttt{a4} ``\emph{does for sure not outrank}'' \texttt{a2}.
 
 \section{Inspecting the template outranking relation}
 \label{sec:5.6}
@@ -369,7 +369,7 @@ One may notice in this outranking relation table above that decision alternative
 \label{fig:5.1}       % Give a unique label
 \end{figure}
 
-In Figure~\vref{fig:5.1}, alternatives \emph{action3} (\texttt{a3} ) and \emph{action4} (\texttt{a4}) appear actually \emph{incomparable}. In Listing~\vref{list:5.7}, their pairwise outranking characteritics show indeed the \emph{indeterminate} value $0.00$ (Lines 7-8).
+In Figure~\vref{fig:5.1}, alternatives \emph{action3} (\texttt{a3} ) and \emph{action4} (\texttt{a4}) appear actually \emph{incomparable}. In Listing~\vref{list:5.7}, their pairwise outranking characteristics show indeed the \emph{indeterminate} value $0.00$ (Lines 7-8).
 
 We may check their pairwise comparison with the \texttt{showPairwiseCompari\-son()} method \index{showPairwiseComparison@\texttt{showPairwiseComparison()}} as follows:
 \begin{lstlisting}
@@ -422,7 +422,7 @@ A slightly \emph{fairer} ranking result may be obtained in Figure~\vref{fig:5.3}
 \label{fig:5.3}       % Give a unique label
 \end{figure}
 
-It might be opportun to furthermore study the robustness of the apparent outranking situations when assuming only \emph{ordinal} or \emph{uncertain} criteria significance weights (see Chapter~\ref{sec:19}). 
+It might be opportun to furthermore study the robustness of the apparent outranking situations when assuming only \emph{ordinal} or \emph{uncertain} criteria significance weights (see Chap.~\ref{sec:19}). 
  
 %%%%%%% The chapter bibliography
 %\normallatexbib

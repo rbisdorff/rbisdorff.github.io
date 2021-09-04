@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  4 SEP 2021 10:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  4 SEP 2021 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,7 +874,13 @@ LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 2
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-) [9
+)
+Overfull \hbox (11.18996pt too wide) in paragraph at lines 32--33
+[]\OT1/ptm/m/n/10 It is also pos-si-ble with a browser ac-cess, to down-load ei
+-ther, from the \OT1/pcr/m/n/10 github.com
+ []
+
+[9
 
 
 
@@ -882,58 +888,52 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 
 
 ] [10]
-Overfull \hbox (2.74039pt too wide) in paragraph at lines 94--95
-\OT1/ptm/m/n/10 with the ab-stract root \OT1/pcr/m/n/10 OutrankingDigraph \OT1/
-ptm/m/n/10 classs and the main \OT1/pcr/m/n/10 Bipolar-
- []
-
-
 Overfull \hbox (9.0206pt too wide) in paragraph at lines 101--102
 \OT1/ptm/m/n/10 graphs (\OT1/pcr/m/n/10 RandomDigraph \OT1/ptm/m/n/10 class) or
  ran-dom bipolar-valued di-graphs (\OT1/pcr/m/n/10 Random-
  []
 
 
-Overfull \hbox (3.80022pt too wide) in paragraph at lines 117--118
+Overfull \hbox (3.80022pt too wide) in paragraph at lines 115--116
 []\OT1/pcr/m/n/10 performanceQuantiles\OT1/ptm/m/n/10 : In-cre-men-tal rep-re-s
 en-ta-tion of large per-for-mance
  []
 
 [11] [12]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8.5> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 183.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 181.
  [13] [14]
-<Figures/1-1-tutorialDigraph.pdf, id=1264, 299.1175pt x 305.14pt>
+<Figures/1-1-tutorialDigraph.pdf, id=1263, 299.1175pt x 305.14pt>
 File: Figures/1-1-tutorialDigraph.pdf Graphic file (type pdf)
 <use Figures/1-1-tutorialDigraph.pdf>
 Package pdftex.def Info: Figures/1-1-tutorialDigraph.pdf  used on input line 27
-5.
+3.
 (pdftex.def)             Requested size: 199.16928pt x 203.18094pt.
 
-Overfull \hbox (1.69473pt too wide) in paragraph at lines 275--275
+Overfull \hbox (1.69473pt too wide) in paragraph at lines 273--273
 \OT1/pcr/m/n/8.5 https://graphviz.org\OT1/ptm/m/n/8.5 . 
  []
 
 
-Overfull \hbox (1.69473pt too wide) in paragraph at lines 275--275
+Overfull \hbox (1.69473pt too wide) in paragraph at lines 273--273
 \OT1/pcr/m/n/8.5 https://graphviz.org\OT1/ptm/m/n/8.5 . 
  []
 
 [15 <./Figures/1-1-tutorialDigraph.pdf>] [16]
-<Figures/1-2-relationMap1.png, id=1369, 354.32375pt x 256.96pt>
+<Figures/1-2-relationMap1.png, id=1368, 354.32375pt x 256.96pt>
 File: Figures/1-2-relationMap1.png Graphic file (type png)
 <use Figures/1-2-relationMap1.png>
-Package pdftex.def Info: Figures/1-2-relationMap1.png  used on input line 339.
+Package pdftex.def Info: Figures/1-2-relationMap1.png  used on input line 337.
 (pdftex.def)             Requested size: 142.26378pt x 103.17426pt.
-<Figures/1-3-c8.pdf, id=1372, 392.46625pt x 427.5975pt>
+<Figures/1-3-c8.pdf, id=1371, 392.46625pt x 427.5975pt>
 File: Figures/1-3-c8.pdf Graphic file (type pdf)
 <use Figures/1-3-c8.pdf>
-Package pdftex.def Info: Figures/1-3-c8.pdf  used on input line 349.
+Package pdftex.def Info: Figures/1-3-c8.pdf  used on input line 347.
 (pdftex.def)             Requested size: 156.69026pt x 170.71652pt.
-<Figures/1-3-grid3.pdf, id=1373, 299.1175pt x 487.8225pt>
+<Figures/1-3-grid3.pdf, id=1372, 299.1175pt x 487.8225pt>
 File: Figures/1-3-grid3.pdf Graphic file (type pdf)
 <use Figures/1-3-grid3.pdf>
-Package pdftex.def Info: Figures/1-3-grid3.pdf  used on input line 350.
+Package pdftex.def Info: Figures/1-3-grid3.pdf  used on input line 348.
 (pdftex.def)             Requested size: 104.67899pt x 170.71652pt.
  [17 <./Figures/1-2-relationMap1.png> <./Figures/1-3-c8.pdf> <./Figures/1-3-gri
 d3.pdf
@@ -945,25 +945,13 @@ e pdfs with page group included in a single page
 \openout6 = `book.brf'.
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 15--15
-[]\OT1/ptm/m/n/10 Bisdorff R (2021a) Doc-u-men-ta-tion of the Di-graph3 col-lec
--tion of Python
- []
-
-
-Underfull \hbox (badness 2189) in paragraph at lines 15--15
-\OT1/ptm/m/n/10 mod-ules for Al-go-rith-mic De-ci-sion The-ory. URL [][]$\OT1/p
-cr/m/n/10 https : / / digraph3 .
- []
-
-
-Underfull \hbox (badness 3179) in paragraph at lines 20--20
+Underfull \hbox (badness 3179) in paragraph at lines 15--15
 \OT1/ptm/m/n/10 mod-ules. URL [][]$\OT1/pcr/m/n/10 https : / / digraph3 . readt
 hedocs . io / en / latest /
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 25--25
+Underfull \hbox (badness 4872) in paragraph at lines 20--20
 \OT1/ptm/m/n/10 30(11):1203--1233, URL [][]$\OT1/pcr/m/n/10 https : / / graphvi
 z . org / documentation/$[][]
  []
@@ -981,20 +969,20 @@ Chapter 2.
 
 
 ] [20]
-<Figures/2-1-tutRandValDigraph.pdf, id=1532, 334.24875pt x 440.64626pt>
+<Figures/2-1-tutRandValDigraph.pdf, id=1529, 334.24875pt x 440.64626pt>
 File: Figures/2-1-tutRandValDigraph.pdf Graphic file (type pdf)
 <use Figures/2-1-tutRandValDigraph.pdf>
 Package pdftex.def Info: Figures/2-1-tutRandValDigraph.pdf  used on input line 
 86.
 (pdftex.def)             Requested size: 170.71652pt x 225.06279pt.
  [21 <./Figures/2-1-tutRandValDigraph.pdf>]
-<Figures/2-2-asymmetricPart.pdf, id=1574, 456.70625pt x 578.16pt>
+<Figures/2-2-asymmetricPart.pdf, id=1571, 456.70625pt x 578.16pt>
 File: Figures/2-2-asymmetricPart.pdf Graphic file (type pdf)
 <use Figures/2-2-asymmetricPart.pdf>
 Package pdftex.def Info: Figures/2-2-asymmetricPart.pdf  used on input line 105
 .
 (pdftex.def)             Requested size: 134.8526pt x 170.71652pt.
-<Figures/2-2-symmetricPart.pdf, id=1575, 334.24875pt x 440.64626pt>
+<Figures/2-2-symmetricPart.pdf, id=1572, 334.24875pt x 440.64626pt>
 File: Figures/2-2-symmetricPart.pdf Graphic file (type pdf)
 <use Figures/2-2-symmetricPart.pdf>
 Package pdftex.def Info: Figures/2-2-symmetricPart.pdf  used on input line 106.
@@ -1005,13 +993,13 @@ Package pdftex.def Info: Figures/2-2-symmetricPart.pdf  used on input line 106.
 pdfTeX warning: pdflatex (file ./Figures/2-2-symmetricPart.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
 >]
-<Figures/2-3-linearOrderBorder.pdf, id=1648, 456.70625pt x 578.16pt>
+<Figures/2-3-linearOrderBorder.pdf, id=1645, 456.70625pt x 578.16pt>
 File: Figures/2-3-linearOrderBorder.pdf Graphic file (type pdf)
 <use Figures/2-3-linearOrderBorder.pdf>
 Package pdftex.def Info: Figures/2-3-linearOrderBorder.pdf  used on input line 
 145.
 (pdftex.def)             Requested size: 134.8526pt x 170.71652pt.
-<Figures/2-3-linearOrderInner.pdf, id=1649, 456.70625pt x 578.16pt>
+<Figures/2-3-linearOrderInner.pdf, id=1646, 456.70625pt x 578.16pt>
 File: Figures/2-3-linearOrderInner.pdf Graphic file (type pdf)
 <use Figures/2-3-linearOrderInner.pdf>
 Package pdftex.def Info: Figures/2-3-linearOrderInner.pdf  used on input line 1
@@ -1022,13 +1010,13 @@ Package pdftex.def Info: Figures/2-3-linearOrderInner.pdf  used on input line 1
 pdfTeX warning: pdflatex (file ./Figures/2-3-linearOrderInner.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >]
-<Figures/2-4-tutRandValDigraph_border.pdf, id=1723, 299.1175pt x 440.64626pt>
+<Figures/2-4-tutRandValDigraph_border.pdf, id=1720, 299.1175pt x 440.64626pt>
 File: Figures/2-4-tutRandValDigraph_border.pdf Graphic file (type pdf)
 <use Figures/2-4-tutRandValDigraph_border.pdf>
 Package pdftex.def Info: Figures/2-4-tutRandValDigraph_border.pdf  used on inpu
 t line 168.
 (pdftex.def)             Requested size: 115.884pt x 170.71652pt.
-<Figures/2-4-tutRandValDigraph_inner.pdf, id=1724, 439.6425pt x 512.91624pt>
+<Figures/2-4-tutRandValDigraph_inner.pdf, id=1721, 439.6425pt x 512.91624pt>
 File: Figures/2-4-tutRandValDigraph_inner.pdf Graphic file (type pdf)
 <use Figures/2-4-tutRandValDigraph_inner.pdf>
 Package pdftex.def Info: Figures/2-4-tutRandValDigraph_inner.pdf  used on input
@@ -1040,7 +1028,7 @@ aph_inner.pdf
 pdfTeX warning: pdflatex (file ./Figures/2-4-tutRandValDigraph_inner.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
 >] [25] [26]
-<Figures/2-5-strongComponents.pdf, id=1865, 456.70625pt x 578.16pt>
+<Figures/2-5-strongComponents.pdf, id=1862, 456.70625pt x 578.16pt>
 File: Figures/2-5-strongComponents.pdf Graphic file (type pdf)
 <use Figures/2-5-strongComponents.pdf>
 Package pdftex.def Info: Figures/2-5-strongComponents.pdf  used on input line 2
@@ -1057,7 +1045,7 @@ Overfull \hbox (34.3065pt too wide) in paragraph at lines 347--348
 [][][][][][]  
  []
 
-<Figures/htmlTutorialDigraph.png, id=1944, 463.7325pt x 292.09125pt>
+<Figures/htmlTutorialDigraph.png, id=1941, 463.7325pt x 292.09125pt>
 File: Figures/htmlTutorialDigraph.png Graphic file (type png)
 <use Figures/htmlTutorialDigraph.png>
 Package pdftex.def Info: Figures/htmlTutorialDigraph.png  used on input line 36
@@ -1198,8 +1186,6 @@ File: Figures/4-5-bouyssou11Oct05crisp.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/4-5-bouyssou11Oct05crisp.pdf  used on input li
 ne 423.
 (pdftex.def)             Requested size: 170.71652pt x 210.24644pt.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8.5> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 423.
 
 [59 <./Figures/4-5-bouyssou11Oct05crisp.pdf>]
 (./02-mainMatters/04-chapterBestChoice.bbl (./book.brf) [60]
@@ -1953,28 +1939,28 @@ File: Figures/16-2-graffiti07_2.png Graphic file (type png)
 Package pdftex.def Info: Figures/16-2-graffiti07_2.png  used on input line 90.
 (pdftex.def)             Requested size: 332.89723pt x 347.69955pt.
  [216] [217 <./Figures/16-2-graffiti07_2.png>] [218] [219] [220] [221]
-<Figures/16-3-correlationTable.png, id=7637, 847.165pt x 355.3275pt>
+<Figures/16-3-correlationTable.png, id=7636, 847.165pt x 355.3275pt>
 File: Figures/16-3-correlationTable.png Graphic file (type png)
 <use Figures/16-3-correlationTable.png>
 Package pdftex.def Info: Figures/16-3-correlationTable.png  used on input line 
 320.
 (pdftex.def)             Requested size: 332.89723pt x 139.62357pt.
  [222]
-<Figures/16-4-correlationPCA.pdf, id=7674, 433.62pt x 433.62pt>
+<Figures/16-4-correlationPCA.pdf, id=7673, 433.62pt x 433.62pt>
 File: Figures/16-4-correlationPCA.pdf Graphic file (type pdf)
 <use Figures/16-4-correlationPCA.pdf>
 Package pdftex.def Info: Figures/16-4-correlationPCA.pdf  used on input line 33
 4.
 (pdftex.def)             Requested size: 284.52756pt x 284.54257pt.
  [223 <./Figures/16-3-correlationTable.png>]
-<Figures/16-5-asymmetricPart.png, id=7686, 1210.5225pt x 600.2425pt>
+<Figures/16-5-asymmetricPart.png, id=7685, 1210.5225pt x 600.2425pt>
 File: Figures/16-5-asymmetricPart.png Graphic file (type png)
 <use Figures/16-5-asymmetricPart.png>
 Package pdftex.def Info: Figures/16-5-asymmetricPart.png  used on input line 35
 4.
 (pdftex.def)             Requested size: 332.89723pt x 165.0626pt.
  [224 <./Figures/16-4-correlationPCA.pdf>]
-<Figures/16-6-symmetricPart.png, id=7707, 1209.51875pt x 602.25pt>
+<Figures/16-6-symmetricPart.png, id=7706, 1209.51875pt x 602.25pt>
 File: Figures/16-6-symmetricPart.png Graphic file (type png)
 <use Figures/16-6-symmetricPart.png>
 Package pdftex.def Info: Figures/16-6-symmetricPart.png  used on input line 369
@@ -1998,7 +1984,7 @@ Package pdftex.def Info: Figures/16-6-symmetricPart.png  used on input line 369
 ]
 Chapter 17.
 [229]
-<Figures/17-1-random3RegularGraph-mis.pdf, id=7765, 384.43625pt x 482.80376pt>
+<Figures/17-1-random3RegularGraph-mis.pdf, id=7764, 384.43625pt x 482.80376pt>
 File: Figures/17-1-random3RegularGraph-mis.pdf Graphic file (type pdf)
 <use Figures/17-1-random3RegularGraph-mis.pdf>
 Package pdftex.def Info: Figures/17-1-random3RegularGraph-mis.pdf  used on inpu
@@ -2006,19 +1992,19 @@ t line 36.
 (pdftex.def)             Requested size: 170.71652pt x 214.40129pt.
  [230 <./Figures/17-1-random3RegularGraph-mis.pdf>] [231] [232] [233]
 [234]
-<Figures/17-2-dualChordlessCircuit.pdf, id=7979, 323.2075pt x 331.2375pt>
+<Figures/17-2-dualChordlessCircuit.pdf, id=7978, 323.2075pt x 331.2375pt>
 File: Figures/17-2-dualChordlessCircuit.pdf Graphic file (type pdf)
 <use Figures/17-2-dualChordlessCircuit.pdf>
 Package pdftex.def Info: Figures/17-2-dualChordlessCircuit.pdf  used on input l
 ine 229.
 (pdftex.def)             Requested size: 199.16928pt x 204.11671pt.
  [235 <./Figures/17-2-dualChordlessCircuit.pdf>]
-<Figures/17-3-dual-c6.pdf, id=8029, 323.2075pt x 331.2375pt>
+<Figures/17-3-dual-c6.pdf, id=8028, 323.2075pt x 331.2375pt>
 File: Figures/17-3-dual-c6.pdf Graphic file (type pdf)
 <use Figures/17-3-dual-c6.pdf>
 Package pdftex.def Info: Figures/17-3-dual-c6.pdf  used on input line 252.
 (pdftex.def)             Requested size: 166.57454pt x 170.71652pt.
-<Figures/17-3-converse-c6.pdf, id=8030, 323.2075pt x 331.2375pt>
+<Figures/17-3-converse-c6.pdf, id=8029, 323.2075pt x 331.2375pt>
 File: Figures/17-3-converse-c6.pdf Graphic file (type pdf)
 <use Figures/17-3-converse-c6.pdf>
 Package pdftex.def Info: Figures/17-3-converse-c6.pdf  used on input line 253.
@@ -2028,7 +2014,7 @@ Package pdftex.def Info: Figures/17-3-converse-c6.pdf  used on input line 253.
 pdfTeX warning: pdflatex (file ./Figures/17-3-converse-c6.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-<Figures/17-4-randomLaterality.pdf, id=8089, 299.1175pt x 530.98375pt>
+<Figures/17-4-randomLaterality.pdf, id=8088, 299.1175pt x 530.98375pt>
 File: Figures/17-4-randomLaterality.pdf Graphic file (type pdf)
 <use Figures/17-4-randomLaterality.pdf>
 Package pdftex.def Info: Figures/17-4-randomLaterality.pdf  used on input line 
@@ -2041,20 +2027,20 @@ n/10 rd \OT1/ptm/m/n/10 (see Lines 3-8 in List. [][]17.11[][][][][])
  []
 
 [238]
-<Figures/17-5-orientedLaterality.pdf, id=8183, 299.1175pt x 455.7025pt>
+<Figures/17-5-orientedLaterality.pdf, id=8182, 299.1175pt x 455.7025pt>
 File: Figures/17-5-orientedLaterality.pdf Graphic file (type pdf)
 <use Figures/17-5-orientedLaterality.pdf>
 Package pdftex.def Info: Figures/17-5-orientedLaterality.pdf  used on input lin
 e 350.
 (pdftex.def)             Requested size: 170.71652pt x 260.08688pt.
  [239 <./Figures/17-5-orientedLaterality.pdf>]
-<Figures/17-6-randomOutranking.png, id=8223, 945.5325pt x 389.455pt>
+<Figures/17-6-randomOutranking.png, id=8222, 945.5325pt x 389.455pt>
 File: Figures/17-6-randomOutranking.png Graphic file (type png)
 <use Figures/17-6-randomOutranking.png>
 Package pdftex.def Info: Figures/17-6-randomOutranking.png  used on input line 
 378.
 (pdftex.def)             Requested size: 284.52756pt x 117.19395pt.
-<Figures/17-7-tutOutranking.pdf, id=8226, 393.47pt x 530.98375pt>
+<Figures/17-7-tutOutranking.pdf, id=8225, 393.47pt x 530.98375pt>
 File: Figures/17-7-tutOutranking.pdf Graphic file (type pdf)
 <use Figures/17-7-tutOutranking.pdf>
 Package pdftex.def Info: Figures/17-7-tutOutranking.pdf  used on input line 394
@@ -2062,13 +2048,13 @@ Package pdftex.def Info: Figures/17-7-tutOutranking.pdf  used on input line 394
 (pdftex.def)             Requested size: 199.16928pt x 268.77258pt.
  [240 <./Figures/17-6-randomOutranking.png>] [241 <./Figures/17-7-tutOutranking
 .pdf>]
-<Figures/17-8-bestWorstOrientation.pdf, id=8308, 361.35pt x 380.42125pt>
+<Figures/17-8-bestWorstOrientation.pdf, id=8307, 361.35pt x 380.42125pt>
 File: Figures/17-8-bestWorstOrientation.pdf Graphic file (type pdf)
 <use Figures/17-8-bestWorstOrientation.pdf>
 Package pdftex.def Info: Figures/17-8-bestWorstOrientation.pdf  used on input l
 ine 455.
 (pdftex.def)             Requested size: 199.16928pt x 209.67929pt.
-<Figures/17-9-outRankingResult.png, id=8310, 850.17625pt x 486.81876pt>
+<Figures/17-9-outRankingResult.png, id=8309, 850.17625pt x 486.81876pt>
 File: Figures/17-9-outRankingResult.png Graphic file (type png)
 <use Figures/17-9-outRankingResult.png>
 Package pdftex.def Info: Figures/17-9-outRankingResult.png  used on input line 
@@ -2077,7 +2063,7 @@ Package pdftex.def Info: Figures/17-9-outRankingResult.png  used on input line
  [242] [243 <./Figures/17-8-bestWorstOrientation.pdf> <./Figures/17-9-outRankin
 gResult.png>] [244]
 [245] [246] [247]
-<Figures/17-10-k1restricted.png, id=8538, 644.4075pt x 375.4025pt>
+<Figures/17-10-k1restricted.png, id=8537, 644.4075pt x 375.4025pt>
 File: Figures/17-10-k1restricted.png Graphic file (type png)
 <use Figures/17-10-k1restricted.png>
 Package pdftex.def Info: Figures/17-10-k1restricted.png  used on input line 672
@@ -2092,6 +2078,8 @@ File: Figures/17-11-k2restricted.png Graphic file (type png)
 Package pdftex.def Info: Figures/17-11-k2restricted.png  used on input line 718
 .
 (pdftex.def)             Requested size: 199.16928pt x 114.3832pt.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8.5> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 718.
 
 Overfull \hbox (13.50609pt too wide) in paragraph at lines 724--725
 [][][][][][][][][][][][][][][][][][][][][]  
@@ -2674,15 +2662,15 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 39033ED54C1E997B4C1CAF0C93CC2B14;43421.
+(rerunfilecheck)             Checksum: A8CA2E896BAEA62A8D130F71285CEF34;43494.
 Package rerunfilecheck Info: File `book.brf' has not changed.
-(rerunfilecheck)             Checksum: AF087E198D99CF3477DCA38AA8F9CF3E;9103.
+(rerunfilecheck)             Checksum: B453A0333D9EF8CAC4E75B73B95B70A6;9154.
  ) 
 Here is how much of TeX's memory you used:
- 25727 strings out of 478994
- 388933 string characters out of 5858184
- 1242628 words of memory out of 5000000
- 35244 multiletter control sequences out of 15000+600000
+ 25725 strings out of 478994
+ 388902 string characters out of 5858184
+ 1241493 words of memory out of 5000000
+ 35242 multiletter control sequences out of 15000+600000
  490676 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,19n,102p,1407b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2711,10 +2699,10 @@ symbol/usyr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr
 xlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (384 pages, 5469912 bytes).
+Output written on book.pdf (384 pages, 5469449 bytes).
 PDF statistics:
- 14663 PDF objects out of 15390 (max. 8388607)
- 13487 compressed objects within 135 object streams
+ 14664 PDF objects out of 15390 (max. 8388607)
+ 13488 compressed objects within 135 object streams
  7230 named destinations out of 7423 (max. 500000)
  2037 words of extra memory for PDF output out of 10000 (max. 10000000)
 

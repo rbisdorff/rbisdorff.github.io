@@ -225,7 +225,7 @@ Such a performance tableau may be stored and re-accessed as follows.
 \section{Random three objectives performance tableaux}
 \label{sec:6.4}
 
-The randomPerfTabs module provides a \texttt{Random3ObjectivesPerformance\-Tableau} class\index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tab\-leau} class} for generating random performance tableaux concerning public policies evaluated with respect to three decision objectives taking respectively into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. Each potential public policy is qualified randomly as performing \emph{weak} ($-$), \emph{fair} ($\sim$) or \emph{good} ($+$) wrt to each one of the three objectives. 
+The randomPerfTabs module provides a \texttt{Random3ObjectivesPerformance\-Tableau} class\index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tab\-leau} class} for generating random performance tableaux concerning public policies evaluated with respect to three decision objectives taking respectively into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. Each potential public policy is qualified randomly as performing \emph{weak} ($-$), \emph{fair} ($\sim$) or \emph{good} ($+$) with respect to to each one of the three objectives. 
 
 \noindent \textbf{Generator directives are the following:}
 
@@ -296,7 +296,7 @@ Variable \emph{triangular} modes: $0.3$, $0.5$ or $0.7$ of the span of the measu
    profile:    {'Eco':'good', 'Soc':'weak', 'Env':'weak'}
 \end{lstlisting}
 
-Policy \texttt{p1}, for instance, will probably show \emph{good} performances wrt the \emph{societal} and \emph{environmental} aspects, and \emph{weak} performances wrt the \emph{economical} aspect, whereas policy \texttt{p2}, weak wrt to all the thre objectives, will probably appear among the weakest policies.
+Policy \texttt{p1}, for instance, will probably show \emph{good} performances with respect to the \emph{societal} and \emph{environmental} aspects, and \emph{weak} performances with respect to the \emph{economical} aspect, whereas policy \texttt{p2}, weak with respect to to all the three objectives, will probably appear among the weakest policies.
 
 We may inspect in Figure~\vref{fig:6.3} the given random three-objectives performance tableau with the \texttt{showHTMPerformanceTableau()} method\index{showHTMPerformanceTableau@\texttt{showHTMPerformanceTableau()}}.
 \begin{lstlisting}
