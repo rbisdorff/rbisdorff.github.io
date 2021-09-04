@@ -14,16 +14,16 @@
 \section{The ranking problem}
 \label{sec:8.1}
 
-We need to rank without ties a set $X$ of items (usually decision alternatives) that are evaluated on multiple incommensurable performance criteria; yet, for which we may know their pairwise bipolar-valued \emph{strict outranking} characteristics, i.e. $r(x\, \succnsim \, y)$ for all $x, y \in X$ (see Sec.~\ref{sec:3.5} and \citep{BIS-2013}).
+We need to rank without ties a set $X$ of items (usually decision alternatives) that are evaluated on multiple incommensurable performance criteria; yet, for which we know their pairwise bipolar-valued \emph{strict outranking} characteristics, i.e. $r(x\, \succnsim \, y)$ for all $x, y \in X$ (see Sec.~\ref{sec:3.5} and \citep{BIS-2013}).
 
-Let us consider in Listing~\vref{list:8.1} a didactic outranking digraph \texttt{g} generated from a random \emph{Cost-Benefit} performance tableau (see Sec.~\ref{sec:6.3}) concerning 9 decision alternatives evaluated on 13 performance criteria. We can compute the corresponding \emph{strict outranking digraph} with a codual transform (see Sec. ~\ref{sec:2.6}).
+Let us consider in Listing~\vref{list:8.1} a didactic outranking digraph \texttt{g} generated from a random \emph{Cost-Benefit} performance tableau (see Sec.~\ref{sec:6.3}) concerning 9 decision alternatives evaluated on 13 performance criteria. The \texttt{BipolarOutrankingDigraph} computes the corresponding bipolar-valued \emph{outranking digraph} \texttt{g} and a codual transform gives us the requested strict outranking digraph \texttt{gcd} with the pairwise $r(x\, \succnsim \, y)$ characteresitic values (see Lines 11-19 below).
 \begin{lstlisting}[caption={Random bipolar-valued strict outranking relation characteristics},label=list:8.1]
 >>> from randomPerfTabs import RandomCBPerformanceTableau   
 >>> t = RandomCBPerformanceTableau(numberOfActions=9,\
 ...         numberOfCriteria=13,seed=200)
 >>> from outrankingDigraphs import BipolarOutrankingDigraph
 >>> g = BipolarOutrankingDigraph(t)
->>> gcd = ~(-g) # codual digraph
+>>> gcd = ~(-g) # strict (codual) outranking digraph
 >>> gcd.showRelationTable(ReflexiveTerms=False)
  * ---- Relation Table -----
   r(>) |  'a1'  'a2'  'a3'  'a4'  'a5'  'a6'  'a7'  'a8'  'a9'   
@@ -154,7 +154,7 @@ The \Copeland scores, shown in Listing~\vref{list:8.3} deliver actually only a \
    1st last ranked ['a2']
 \end{lstlisting}
 
-We recover in Listing~\vref{list:8.5}, the preorder delivered by the \Copeland scores (see List.~\vref{list:8.3}). We may draw its corresponding skeleton\footnote{The skeleton of a transitive relation drops the transitivity induced arcs.}.
+In Listing~\vref{list:8.5}, the \texttt{WeakCopelandOrder} class\index{WeakCopelandOrder@\texttt{WeakCopelandOrder} class} from the \texttt{transitiveDigraphs} module\index{transitiveDigraphs@\texttt{transitiveDigraphs} module} models the same preorder as delivered by the \Copeland scores (see List.~\vref{list:8.3}). We may draw its corresponding skeleton\footnote{The skeleton of a transitive relation drops the transitivity induced arcs.}.
 \begin{lstlisting}
 >>> wcop.exportGraphViz(fileName='weakCopelandRanking')
  *---- exporting a dot file for GraphViz tools ---------*
@@ -257,7 +257,7 @@ A \Kemeny ranking may not be unique. In our example here, we obtain in fact two 
   Decimal('12.9166667')
 \end{lstlisting}
 
-We may visualise in Figure~\vref{fig:8.3} the partial order defined by the epistemic disjunction of both optimal \Kemeny rankings by using the \texttt{RankingsFu\-sion} class\index{RankingsFusion@\texttt{RankingsFusion} class} (see Sec.~\ref{sec:2.5}).
+Figure~\vref{fig:8.3} shows the partial order defined by the epistemic disjunction of both optimal \Kemeny rankings obtained with the \texttt{RankingsFu\-sion} class\index{RankingsFusion@\texttt{RankingsFusion} class} (see Sec.~\ref{sec:2.5}).
 \begin{lstlisting}[caption={Computing the epistemic disjunction of all optimal \Kemeny rankings},label=list:8.10]   
 >>> from transitiveDigraphs import RankingsFusion
 >>> wke = RankingsFusion(ke,ke.maximalRankings)
@@ -390,7 +390,7 @@ More computationally efficient ranking heuristics, like the \Copeland and \NetFl
     Bipolar-valued equivalence : +0.172
 \end{lstlisting}
 
-With this \emph{min-max} lexicographic ranking-by-choosing strategy, we find a correlation result ($+0.747$) that is until now clearly the nearest to an optimal \Kemeny ranking (see List.~\vref{list:8.8}). Only two adjacent pairs: (\texttt{a6}, \texttt{a7}) and (\texttt{a8}, \texttt{a9}) are actually inverted here. Notice that the \Kohler ranking rule, contrary to the previously mentioned rules, is \textbf{not} invariant under the codual transform and requires to work on the \texttt{strict} outranking digraph \texttt{gcd} for a better correlation result.
+With this \emph{min-max} lexicographic ranking-by-choosing strategy, we obtain a correlation result ($+0.747$) that is until now clearly the nearest to an optimal \Kemeny ranking (see List.~\vref{list:8.8}). Only two adjacent pairs: (\texttt{a6}, \texttt{a7}) and (\texttt{a8}, \texttt{a9}) are actually inverted here. Notice that the \Kohler ranking rule, contrary to the previously mentioned rules, is \textbf{not} invariant under the codual transform and requires to work on the \texttt{strict} outranking digraph \texttt{gcd} for a better correlation result.
 \begin{lstlisting}
 >>> ko = KohlerRanking(g)  
 >>> corr = g.computeOrdinalCorrelation(ko)
@@ -445,7 +445,7 @@ The \texttt{IteratedNetFlowsRanking}\index{IteratedNetFlowsRanking@\texttt{Itera
     Bipolar-valued equivalence : +0.171
 \end{lstlisting}
 
-Like the \Kohler rule, the iterated \NetFlows rule has also a dual \emph{ordering-by-choosing} version, where instead of choosing at each step $i$ the row with maximal \NetFlows score, we choose the row with the \emph{minimal} \NetFlows score. Both the ranking and ordering result are computed by the \texttt{IteratedNetFlowsRanking} class (see Lines 12 and 13 in List.~\vref{list:8.14}).
+Like the \Kohler rule, the iterated \NetFlows rule has also a dual \emph{ordering-by-choosing} version, where instead of selecting at each step $i$ the row with maximal \NetFlows score, we choose the row with the \emph{minimal} \NetFlows score. Both the ranking and ordering result are computed by the \texttt{IteratedNetFlowsRanking} class (see Lines 12 and 13 in List.~\vref{list:8.14}).
 \begin{lstlisting}
 >>> inf.iteratedNetFlowsOrdering
   ['a2','a9','a1','a4','a3','a8','a7','a6','a5']
