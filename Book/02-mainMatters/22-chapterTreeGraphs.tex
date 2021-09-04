@@ -1,9 +1,9 @@
 \chapter{On tree graphs and graph forests}
 \label{sec:22}
 
-\abstract*{ The chapter specifically addresses working with tree graphs and graph forests. We illustrate how to generate and recognize random tree graphs and how to compute the centres of a tree and draw a rooted and oriented tree. Finally, algorithms for computing spanning trees and forests are presented.}
+\abstract*{ The chapter specifically addresses working with tree graphs and graph forests. We illustrate how to generate and recognise random tree graphs and how to compute the centres of a tree and draw a rooted and oriented tree. Finally, algorithms for computing spanning trees and forests are presented.}
 
-\abstract{ The chapter specifically addresses working with tree graphs and graph forests. We illustrate how to generate and recognize random tree graphs and how to compute the centres of a tree and draw a rooted and oriented tree. Finally, algorithms for computing spanning trees and forests are presented. }
+\abstract{ The chapter specifically addresses working with tree graphs and graph forests. We illustrate how to generate and recognise random tree graphs and how to compute the centres of a tree and draw a rooted and oriented tree. Finally, algorithms for computing spanning trees and forests are presented. }
 
 \section{Generating random tree graphs}
 \label{sec:22.1}
@@ -79,9 +79,9 @@ It is, as well possible to, first, generate a random \Pruefer code of length $n-
 
 Following from the bijection between a labelled tree and its \Pruefer code, we actually know that there exist $n^{n-2}$ different tree graphs with the same $n$ vertices.
 
-Given a genuine graph, how can we recognize that it is in fact a tree instance ?
+Given a genuine graph, how can we recognise that it is in fact a tree instance ?
 
-\section{Recognizing tree graphs}
+\section{Recognising tree graphs}
 \label{sec:22.2}
 
 Given a graph \texttt{g} of order $n$ and size $s$, the following 5 assertions A1, A2, A3, A4 and A5 are all equivalent (see \citep{JPB-1991}):
@@ -93,7 +93,7 @@ Given a graph \texttt{g} of order $n$ and size $s$, the following 5 assertions A
 \item [A5] \texttt{g} is connected and dropping any single edge will always disconnect \texttt{g}.
 \end{itemize}
 
-Assertion A3, for instance, gives a simple test for recognizing a tree graph. In case of a \emph{lazy evaluation} of the test in Listing~\vref{list:22.3} Line 3 below, it is opportune, from a computational complexity perspective, to first, check the order and size of the graph, before checking its potential connectedness. We provide the \texttt{isTree()} method\index{isTree@\texttt{isTree()}} for computing both these tests (see Line 8 in List.~\vref{list:22.3}).
+Assertion A3, for instance, gives a simple test for recognising a tree graph. In case of a \emph{lazy evaluation} of the test in Listing~\vref{list:22.3} Line 3 below, it is opportune, from a computational complexity perspective, to first, check the order and size of the graph, before checking its potential connectedness. We provide the \texttt{isTree()} method\index{isTree@\texttt{isTree()}} for computing both these tests (see Line 8 in List.~\vref{list:22.3}).
 \begin{lstlisting}[caption={Recognizing a tree graph.},label=list:22.3]
 >>> from graphs import RandomGraph
 >>> g = RandomGraph(order=8,edgeProbability=0.3,seed=62)
@@ -115,7 +115,7 @@ The random graph of order $8$ and edge probability $30\%$, generated with seed $
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/22-3-test62.pdf}
-\caption{Recognizing a tree instance. We may notive that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighborhood depth of 2} 
+\caption{Recognising a tree instance. We may notice that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighbourhood depth of 2} 
 \label{fig:22.3}       % Give a unique label
 \end{figure}
 
@@ -127,7 +127,7 @@ Yet, we still have to recover its corresponding \Pruefer code. Therefore, we may
   ['v6', 'v1', 'v2', 'v1', 'v2', 'v5']
 \end{lstlisting}
 
-In Fig.~\vref{fig:22.3}, we noticed that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighborhood depth of 2. Centres of a graph are the vertices with minimal neighbourhood depth. For finding such centre(s), the \texttt{Graph} class provides the \texttt{computeGraphCentres()} method.\index{computeGraphCentres@\texttt{computeGraphCentres()}} (see Lines 1-2 in List.~\vref{list:22.4}). Knowing now the centre of graph \texttt{g}, we may draw a correspondingly rooted and oriented tree with the \texttt{exportOrientedTreeGraphViz()} method from the \texttt{TreeGraph} class (see Fig.~\vref{fig:22.4}.\index{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}}  
+In Fig.~\vref{fig:22.3}, we noticed that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighbourhood depth of 2. Centres of a graph are the vertices with minimal neighbourhood depth. For finding such centre(s), the \texttt{Graph} class provides the \texttt{computeGraphCentres()} method.\index{computeGraphCentres@\texttt{computeGraphCentres()}} (see Lines 1-2 in List.~\vref{list:22.4}). Knowing now the centre of graph \texttt{g}, we may draw a correspondingly rooted and oriented tree with the \texttt{exportOrientedTreeGraphViz()} method from the \texttt{TreeGraph} class (see Fig.~\vref{fig:22.4}.\index{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}}  
 \begin{lstlisting}[caption={Computing the centres of a tree and drawing a rooted and oriented tree.},label=list:22.5]
 >>> g.computeGraphCentres()
   {'v2': 2}
@@ -301,7 +301,6 @@ Chapter~\ref{sec:23}, the last on undirected graphs, is devoted to different mod
 \clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
-\bibliographystyle{spbasic}
-%\typeout{}
-\bibliography{03-backMatters/reference}
 %\input{02-mainMatters/23-chapterTreeGraphs.bbl}
+\bibliographystyle{spbasic}
+\bibliography{03-backMatters/reference}

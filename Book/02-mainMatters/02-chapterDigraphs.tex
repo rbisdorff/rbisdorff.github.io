@@ -129,8 +129,8 @@ def _constructRelation(self):
 		    relationOut[a][b] = relationIn[a][b]
 		else:
 		    relationOut[a][b] = Med
-		else:
-		    relationOut[a][b] = Med
+	    else: # reflexive links are ignored
+		relationOut[a][b] = Med
     return relationOut
 \end{lstlisting}
 
@@ -174,7 +174,7 @@ The constructor of the partial digraphs \texttt{bnf} and \texttt{inf}  (see Line
 \section{Fusion by epistemic disjunction}
 \label{sec:2.5}
 
-We may recover object \texttt{rdg} from both partial objects \texttt{asymDg} and \texttt{symDg}, or as well from the border \texttt{bg} and the inner part \texttt{ig}, with a \emph{bipolar fusion} constructor, also called \emph{epistemic disjunction}, available via the \texttt{FusionDigraph}\index{FusionDigraph@\texttt{FusionDigraph} class} class. 
+We may recover object \texttt{rdg} from both partial objects \texttt{asymDg} and \texttt{symDg}, or as well from the border \texttt{bg} and the inner part \texttt{ig}, with a \emph{bipolar fusion} operator, also called \emph{epistemic disjunction}, available via the \texttt{FusionDigraph}\index{FusionDigraph@\texttt{FusionDigraph} class} class. 
 \begin{lstlisting}[caption={Epistemic fusion of partial diagraphs},label=list:2.6]
 >>> from digraphs import FusionDigraph
 >>> fusDg = FusionDigraph(asymDg,symDg,operator='o-max')
@@ -203,7 +203,7 @@ The epistemic fusion operator \texttt{o-max} (see List.~\vref{list:2.6} Line 2) 
 \end{itemize}
 \end{definition}
 
-Mind that the \texttt{o-max} operator is, like a mean operator, \emph{not associative} when more than 2 operands are given. In order to make the \texttt{o-max} fusion univocal, the following rule is applied: --first, all positive and negative terms are separately aggregated, --then the \texttt{o-max} fusion is applied on both aggregates.
+Mind that the \texttt{o-max} operator, like a mean operator, is \emph{not associative} when more than 2 operands are given. In order to make the \texttt{o-max} fusion univocal, the following rule is applied: --first, all positive and negative terms are separately aggregated, --then the \texttt{o-max} fusion is applied on both aggregates.
 
 \section{Dual, converse and codual digraphs}
 \label{sec:2.6}

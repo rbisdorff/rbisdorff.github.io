@@ -13,7 +13,7 @@
 \end{quotation}
 %\vspace{1cm}
 
-Tempering plurality tyranny effects is, from the seminal work by B. Roy on \citep{ROY-1966}, achieved in the outranking approach by taking into account considerable negative performance differences that may render doubtful otherwise positive ``\emph{at least as well evaluated as}'' situations. In the social choice context with general elections, such a polarisation is not feasable as the genuine uninominal voting ballots do not contain a rich enough preferential information. Yet, when matching decision objectives with political parties, the Pareto efficient outranking situations seen in Section~\ref{sec:19.6}, correspond to multipartisan ``\emph{at least as well approved as}'' situtations when pairwisely comparing the eligible candidates. A best choice recommendation based of the corresponding multipartisan strict ``\emph{better approved as}'' situations may, the case given, deliver a convincing primary selection in a two-stage election. 
+Tempering plurality tyranny effects is, from the seminal work by B. Roy on \citep{ROY-1966}, achieved in the outranking approach by taking into account considerable negative performance differences that may render doubtful otherwise positive ``\emph{at least as well evaluated as}'' situations. In the social choice context with general elections, such a polarisation is not feasible as the genuine uninominal voting ballots do not contain a rich enough preferential information. Yet, when matching decision objectives with political parties, the Pareto efficient outranking situations seen in Section~\ref{sec:19.6}, correspond to multipartisan ``\emph{at least as well approved as}'' situations when pair-wisely comparing the eligible candidates. A best choice recommendation based of the corresponding multipartisan strict ``\emph{better approved as}'' situations may, the case given, deliver a convincing primary selection in a two-stage election. 
 
 \section{Two-stage elections with multipartisan primary selection}
 \label{sec:20.1}
@@ -195,7 +195,7 @@ In our example voting profile here, the multipartisan primary selection stage ap
 
 However, in a very \emph{divisive} two major parties system, like in the US, where preferences of the supporters of one major party appear to be very opposite to the preferences of the supporters of the other major party, the multipartisan outranking digraph will become nearly indeterminate.
 
-In Listing~\vref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag \footnote{The \texttt{RandomLinearVotingProfile} constructor provides a \texttt{DivisivePolitics} flag (\emph{False} by default) for generating random linear voting profiles based on a divisive polls strucure.} (see Lines 4 and 13-19 in List.~\vref{list:20.6}). When now converting the voting profile into a performance tableau (Lines 20-21), we may compute the corresponding unopposed outranking digraph.
+In Listing~\vref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag \footnote{The \texttt{RandomLinearVotingProfile} constructor provides a \texttt{DivisivePolitics} flag (\emph{False} by default) for generating random linear voting profiles based on a divisive polls structure.} (see Lines 4 and 13-19 in List.~\vref{list:20.6}). When now converting the voting profile into a performance tableau (Lines 20-21), we may compute the corresponding unopposed outranking digraph.
 \begin{lstlisting}[caption={A divisive two-party example of a random linear voting profile},label=list:20.6]
 >>> from votingProfiles import RandomLinearVotingProfile		     
 >>> lvp = RandomLinearVotingProfile(\
@@ -265,7 +265,7 @@ As a consequence, a multipartisan primary selection, computed with a \texttt{sho
      - most credible action(s) = { }
 \end{lstlisting}
 
-With such kind of divisive voting profile, there may indeed not always exist an obvious winner. In Listing~\vref{list:20.8}, we see, for instance, that the simple majority winnner is \texttt{a2} (Line 2), whereas the instant-run-off winner is \texttt{a6} (Line 4).
+With such kind of divisive voting profile, there may indeed not always exist an obvious winner. In Listing~\vref{list:20.8}, we see, for instance, that the simple majority winner is \texttt{a2} (Line 2), whereas the instant-run-off winner is \texttt{a6} (Line 4).
 \begin{lstlisting}[caption={Example of non obvious secondary selection},label=list:20.8]
 >>> lvp.computeSimpleMajorityWinner()
   ['a2']
@@ -306,7 +306,7 @@ We may eventually visualize in Figure~\vref{fig:20.2} this linear ranking with a
 \begin{figure}[ht]
 \sidecaption
 \includegraphics[width=5cm]{Figures/20-2-divGraph.pdf}
-\caption{The linear ranking moddelled by the majority margins digraph.} 
+\caption{The linear ranking modelled by the majority margins digraph.} 
 \label{fig:20.2}       % Give a unique label
 \end{figure}
 
@@ -513,7 +513,7 @@ Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{
 \end{lstlisting}
 In Listing~\vref{list:20.10} we may notice that the \NetFlows rule delivers a ranking that is very similar to the one previously obtained with the corresponding \emph{Net Approval} scores. Only minor inversions do appear, like in the midfield, where candidate \texttt{a09} advances before candidates \texttt{a13} and \texttt{a14} (see Line 16), and \texttt{a6} and \texttt{a07} swap their positions 9 and 10 (see Line 19). And, the two last-ranked candidates \texttt{a10} and \texttt{a01} also swap their positions.
 
-This confirms again the pertinence of the net approval scoring approach for finding the winner in a bipolar approving voting system. Yet, voting by approving ($+1$), disapproving ($-1$) or ignoring ($0$) eligible candidates, may also be seen as a performance evaluation of the eligible candidates on a $\{-1, 0, 1\}$-graded ordinal scale.
+This confirms again the pertinence of the net approval scoring approach for finding the winner in a bipolar approving voting system. Yet, voting by approving ($+1$), disapproving ($-1$) or ignoring ($0$) eligible candidates, may also be seen as a performance evaluation of the eligible candidates on a $\{-1, 0, 1\}$-valued ordinal scale.
 
 \section{Three-valued evaluative voting systems}
 \label{sec:20.4}
@@ -619,7 +619,7 @@ Encouraged by this positive result, we may furthermore compute as well a best ch
 \end{lstlisting}
 The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --best as well as last-- choice recommendation which trivially retains all fifteen candidates (see List.~\vref{list:20.13} Lines 6-8 above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate \texttt{a12} the most credible one with a $72\%$ majority of voters' support (see Line 15, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate \texttt{a03} ($67\%$) and Candidate \texttt{a04} ($65\%$). Similarly, Candidates \texttt{a13} and \texttt{a06} represent the most credible losers with a $68\%$ majority voters' support (Line 30).
 
-We observe here empirically that \emph{evaluative} voting systems, using three-valued ordinal performance scales, match closely a corresponding bipolar approval voting systems. The latter voting system models, however, more faithfully the very preferential information that is expressed with \emph{approved}, \emph{disapproved} and \emph{ignored} statements. The corresponding evaluation on a three-graded scale, being value (numbers) based, cannot express the fact that in bipolar approval voting systems there is no preferential information given concerning the pairwise comparison of all approved, respectively disapproved or ignored candidates.
+We observe here empirically that \emph{evaluative} voting systems, using three-valued ordinal performance scales, match closely a corresponding bipolar approval voting systems. The latter voting system models, however, more faithfully the very preferential information that is expressed with \emph{approved}, \emph{disapproved} and \emph{ignored} statements. The corresponding evaluation on a three-level scale, being value (numbers) based, cannot express the fact that in bipolar approval voting systems there is no preferential information given concerning the pairwise comparison of all approved, respectively disapproved or ignored candidates.
 
 Let us finally illustrate how bipolar approval voting systems may favour multipartisan supported candidates. We shall therefore compare \emph{bipolar approval} versus \emph{uninominal plurality} election results when considering a highly divisive and partisan political context.
  

@@ -1,9 +1,9 @@
 \chapter{About split, interval and permutation graphs}
 \label{sec:23}
 
-\abstract*{ The last chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, interval, permutation and split graphs. We first generate a random graph instance which models at the same time an interval, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognize that a given graph is in fact a permutation graph.}
+\abstract*{ The last chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, interval, permutation and split graphs. We first generate a random graph instance which models at the same time an interval, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognise that a given graph is in fact a permutation graph.}
 
-\abstract{ The last chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, interval, permutation and split graphs. We first present an example of a graph which is at the same time a triangulated, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognize that a given graph is in fact a permutation graph.}
+\abstract{ The last chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, interval, permutation and split graphs. We first present an example of a graph which is at the same time a triangulated, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognise that a given graph is in fact a permutation graph.}
 
 \section{A 'multiply' perfect graph}
 \label{sec:23.1}
@@ -15,7 +15,7 @@ A graph \texttt{g} is called:
 \end{itemize}
 
 \begin{definition}[Some perfect graph classes]
-\noindent Following Martin Golumbic (see \citet[p. 149]{GOL-2004})\index{Golumbic@\emph{M.Ch. Golumbic}}, we call a given graph \texttt{g}:
+\noindent Following Martin Golumbic (see \citealp[p. 149]{GOL-2004})\index{Golumbic@\emph{M.Ch. Golumbic}}, we call a given graph \texttt{g}:
 \begin{itemize}
 \item \emph{Comparability} graph when \texttt{g}  is \emph{transitively orientable};\index{comparability graph}
 \item \emph{Interval} graph when \texttt{g} is \emph{triangulated} and its dual \texttt{-g} is a \emph{comparability} graph;\index{comparability graph}
@@ -73,7 +73,7 @@ With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \em
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/23-1-randomSplitGraph.pdf}
-\caption{A conjointly triangulated, comparability, interval, permutation and split graph. In the Figure here one may readily recognize the essential characteristic of split graphs, namely being always splitable into two disjoint sub-graphs: an \emph{independent choice} \{\texttt{v6}\} and a \emph{clique}  --\{\texttt{v1}, \texttt{v2}, \texttt{v3}, \texttt{v4}, \texttt{v5}, \texttt{v7}, \texttt{v8}\}-- which explains their name} 
+\caption{A conjointly triangulated, comparability, interval, permutation and split graph. In the Figure here one may readily recognise the essential characteristic of split graphs, namely being always splittable into two disjoint sub-graphs: an \emph{independent choice} \{\texttt{v6}\} and a \emph{clique}  --\{\texttt{v1}, \texttt{v2}, \texttt{v3}, \texttt{v4}, \texttt{v5}, \texttt{v7}, \texttt{v8}\}-- which explains their name} 
 \label{fig:23.1}       % Give a unique label
 \end{figure}
 Notice however that the four properties:
@@ -194,7 +194,7 @@ And it is \emph{Desmond}. If we doubt his testimony that he saw \emph{Abe} (see 
 \section{Generating permutation graphs}
 \label{sec:23.3}
 
-A graph is called a \emph{permutation} or \emph{inversion} graph if there exists a permutation of its list of vertices such that the graph is isomorphic to the inversions operated by the permutation in this list (see \citet[Chapter 7, pp 157-170]{GOL-2004}). This kind of graphs (see Fig.~\vref{fig:23.4} is also part of the class of perfect graphs.\index{PermutationGraph@\texttt{PermutationGraph} class}
+A graph is called a \emph{permutation} or \emph{inversion} graph if there exists a permutation of its list of vertices such that the graph is isomorphic to the inversions operated by the permutation in this list (see \citealp[Chapter 7, pp 157-170]{GOL-2004}). This kind of graphs (see Fig.~\vref{fig:23.4} is also part of the class of perfect graphs.\index{PermutationGraph@\texttt{PermutationGraph} class}
 \begin{lstlisting}
 >>> from graphs import PermutationGraph
 >>> g = PermutationGraph(permutation = [4,3,6,1,5,2])
@@ -224,7 +224,7 @@ A graph is called a \emph{permutation} or \emph{inversion} graph if there exists
 \label{fig:23.4}       % Give a unique label
 \end{figure}
 
-By using color sorting queues, the minimal vertex coloring shown in Figure~\vref{fig:23.5} is computable in $O\big(n log(n)\big)$ \citep{GOL-2004}.\index{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}}
+By using color sorting queues, the minimal vertex colouring shown in Figure~\vref{fig:23.5} is computable in $O\big(n log(n)\big)$ \citep{GOL-2004}.\index{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}}
 \begin{lstlisting}
 >>> g.computeMinimalVertexColoring(Comments=True)
     vertex 1: lightcoral
@@ -247,7 +247,7 @@ By using color sorting queues, the minimal vertex coloring shown in Figure~\vref
 \label{fig:23.5}       % Give a unique label
 \end{figure}
 
-The correspondingly colored \emph{matching diagram} of the nine inversions --the actual edges of the permutation graph--, which are induced by the given [4,3,6,1,5,2] permutation, may as well be drawn with the graphviz \texttt{neato} layout and explicitly positioned horizontal lists of vertices as shown in Figure~\vref{fig:23.6}.\index{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}}
+The correspondingly coloured \emph{matching diagram} of the nine inversions --the actual edges of the permutation graph--, which are induced by the given [4,3,6,1,5,2] permutation, may as well be drawn with the graphviz \texttt{neato} layout and explicitly positioned horizontal lists of vertices as shown in Figure~\vref{fig:23.6}.\index{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}}
 \begin{lstlisting}
 >>> g.exportPermutationGraphViz('matchingDiagram',\
 ...                    WithEdgeColoring=True)
@@ -259,11 +259,11 @@ The correspondingly colored \emph{matching diagram} of the nine inversions --the
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/23-6-perm_permutationGraph.pdf}
-\caption{Colored matching diagram of the permutation [4,3,6,1,5,2]} 
+\caption{Coloured matching diagram of the permutation [4,3,6,1,5,2]} 
 \label{fig:23.6}       % Give a unique label
 \end{figure}
 
-As mentioned before, a permutation graph and its dual are \emph{transitively orientable}. The \texttt{transitiveOrientation()} method\index{transitiveOrientation@\texttt{transitiveOrientation()}} constructs from a given permutation graph a digraph where each edge of the permutation graph is converted into an arc oriented in increasing alphabetic order of the adjacent vertices' keys (see \citet{GOL-2004}). This orientation of the edges of a permutation graph is always transitive and delivers a \emph{transitive ordering} of the vertices as shown in Figure~\vref{fig:23.7}.\index{transitiveOrientation@\texttt{transitiveOrientation()}}
+As mentioned before, a permutation graph and its dual are \emph{transitively orientable}. The \texttt{transitiveOrientation()} method\index{transitiveOrientation@\texttt{transitiveOrientation()}} constructs from a given permutation graph a digraph where each edge of the permutation graph is converted into an arc oriented in increasing alphabetic order of the adjacent vertices' keys (see \citealp{GOL-2004}). This orientation of the edges of a permutation graph is always transitive and delivers a \emph{transitive ordering} of the vertices as shown in Figure~\vref{fig:23.7}.\index{transitiveOrientation@\texttt{transitiveOrientation()}}
 \begin{lstlisting}
 >>> dg = g.transitiveOrientation()
 >>> dg

@@ -16,7 +16,7 @@ In the \Digraph \texttt{graphs} module\index{graphs@\texttt{graphs} module}, the
 \item \texttt{valuationDomain}: a dictionary with three entries: the minimum ($-1$, means certainly no link), the median ($0$, means missing information) and the maximum characteristic value ($+1$, means certainly a link),
 \item \texttt{edges} : a dictionary with \emph{frozensets} \footnote{\href{https://docs.python.org/3.9/library/stdtypes.html?highlight=frozenset\#frozenset}{Python documentation}} of pairs of vertices as keys carrying a characteristic value in the range of the previous valuation domain,
 \item \texttt{size}: the number of positive edges,
-\item \texttt{gamma}: a dictionary containing the direct neighbors of each vertex, automatically added by the object constructor.
+\item \texttt{gamma}: a dictionary containing the direct neighbours of each vertex, automatically added by the object constructor.
 \end{enumerate}
 
 \paragraph{\textbf{Example Python terminal session}}
@@ -339,7 +339,7 @@ The two last MISs of cardinality 4 (see Lines 13-16 in List.~\vref{list:21.9}) g
 \section{Grids and the \Ising model}
 \label{sec:21.5}
 
-Special classes of graphs, like the \texttt{GridGraph}\index{GridGraph@\texttt{GridGraph} class} class provide $n \times m$ rectangular or triangular grids. With a \emph{Gibbs} sampler\footnote{\citet{GEM-1984}} the \texttt{IsingModel} class\index{IsingModel@\texttt{IsingModel} class} can simulate in Figure~\vref{fig:21.4} an \Ising model on,for instance, a $15 \times 15$ grid \citep{ISI-1925}.
+Special classes of graphs, like the \texttt{GridGraph}\index{GridGraph@\texttt{GridGraph} class} class provide $n \times m$ rectangular or triangular grids. With a \emph{Gibbs} sampler\footnote{\citet{GEM-1984}} the \texttt{IsingModel} class\index{IsingModel@\texttt{IsingModel} class} can simulate in Figure~\vref{fig:21.4} an \Ising model on, for instance, a $15 \times 15$ grid \citep{ISI-1925}.
 \begin{lstlisting}[caption={Simulating an Ising model on a the $15 \times 15$ rectangular grid},label=list:21.11]
 >>> from graphs import GridGraph, IsingModel
 >>> g = GridGraph(n=15,m=15)
@@ -366,7 +366,7 @@ Special classes of graphs, like the \texttt{GridGraph}\index{GridGraph@\texttt{G
 \section{Simulating \Metropolis random walks}
 \label{sec:21.6}
 
-Finally, we provide the \texttt{MetropolisChain} class\index{MetropolisChain@\texttt{MetropolisChain} class}, a specialization of the \texttt{Graph} class, implementing a generic Monte Carlo Markov Chain (MCMC) sampler for simulating random walks on a graph following given transition probabilities \texttt{probs} = \{\texttt{'v1'}’: $x$, \texttt{'v2'}: $y$, ...\} for visiting each vertex (see List.~\vref{list:21.12})
+Finally, we provide the \texttt{MetropolisChain} class\index{MetropolisChain@\texttt{MetropolisChain} class}, a specialisation of the \texttt{Graph} class, implementing a generic Monte Carlo Markov Chain (MCMC) sampler for simulating random walks on a graph following given transition probabilities \texttt{probs} = \{\texttt{'v1'}’: $x$, \texttt{'v2'}: $y$, ...\} for visiting each vertex (see List.~\vref{list:21.12})
 \citep{MET-1953}.
 \begin{lstlisting}[caption={Simulating random walks on a graph},label=list:21.12]
 >>> from graphs import Graph
@@ -556,7 +556,7 @@ The \texttt{showOrbits()} method renders now the labelled representatives of eac
    frequency      : [0, 2, 0, ..., 1, 0, ...,  1,  0, ...]
 \end{lstlisting}
 
-The corresponding group stabilizers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines 12-13 in List.~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Figure~\vref{fig:21.5}.
+The corresponding group stabilisers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines 12-13 in List.~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Figure~\vref{fig:21.5}.
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/21-5-c12.png}
@@ -575,7 +575,6 @@ The non isomorphic MISs in the 12-cycle graph represent in fact all the ways one
 \clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
-\bibliographystyle{spbasic}
-\typeout{}
-\bibliography{03-backMatters/reference}
 %\input{02-mainMatters/22-chapterGraphs.bbl}
+\bibliographystyle{spbasic}
+\bibliography{03-backMatters/reference}

@@ -112,14 +112,14 @@ In Listing~\vref{list:19.4} we may hence distinguish the following bipolar-value
 \begin{itemize}[leftmargin=1cm]
 \item [$\mathbf{\pm 4}$:] \emph{unanimous} outranking, resp. outranked situation. The pairwise trivial reflexive outrankings, for instance, all show this stability level;
 \item [$\mathbf{\pm 3}$:] validated outranking, resp. outranked situation in \emph{each} coalition of equisignificant criteria. This is, for instance, the case for the outranking situation observed between alternatives \texttt{p1} and \texttt{p4} (see List.~\vref{list:19.4} Lines 6 and 12);
-\item [$\mathbf{\pm 2}$:] validated outranking, resp. outranked situation with \emph{all} potential significance weights that are \emph{compatible} With the given significance preorder (see List.\vref{list:19.2}). This is the case when comparing alternatives \texttt{p1} and \texttt{p2} (see Lines 6 and 8);
+\item [$\mathbf{\pm 2}$:] validated outranking, resp. outranked situation with \emph{all} potential significance weights that are \emph{compatible} With the given significance preorder (see List.~\vref{list:19.2}). This is the case when comparing alternatives \texttt{p1} and \texttt{p2} (see Lines 6 and 8);
 \item [$\mathbf{\pm 1}$:] validated outranking, resp. outranked situation with the \emph{precisely given decimal} significance weights, a situation we may observe between alternatives \texttt{p3} and \texttt{p7} (see Lines 10 and 16);
 \item [$\mathbf{0}$:] \texttt{indeterminate} outranking situation, like the one between alternatives \texttt{p1} and \texttt{p3} (see Lines 6 and 10).
 \end{itemize}
 
-It is worthwhile noticing that, in the one limit case where all performance criteria appear equi-significant --there is given a single equivalence class containing all the criteria significance weights-- one may only distinguish stability levels $\pm 4$ and $\pm 3$. In the other limit case, when all performance criteria admit different significanceweights, the significance weights may be linearly ordered without ties and no stability level $+3$ or $-3$ can be observed.
+It is worthwhile noticing that, in the one limit case where all performance criteria appear equi-significant --there is given a single equivalence class containing all the criteria significance weights-- one may only distinguish stability levels $\pm 4$ and $\pm 3$. In the other limit case, when all performance criteria admit different significance weights, the significance weights may be linearly ordered without ties and no stability level $+3$ or $-3$ can be observed.
 
-As mentioned above, all reflexive comparisons trivially confirm an unanimous outranking situation: all decision alternatives are indeed always``\emph{performing as well as}'' themselves. But there appear also two non reflexive unanimous outranking situations: when comparing, for instance, alternative \texttt{p4} with alternatives \texttt{p5} and \texttt{p6} (see List.~\vref{list:19.4} Lines 14 and 16). Let us inspect the details of how alternatives \texttt{p4} and \texttt{p5} compare.
+As mentioned above, all reflexive comparisons trivially confirm an unanimous outranking situation: all decision alternatives are indeed always``\emph{at least as well evaluated as}'' themselves. But there appear also two non reflexive unanimous outranking situations: when comparing, for instance, alternative \texttt{p4} with alternatives \texttt{p5} and \texttt{p6} (see List.~\vref{list:19.4} Lines 14 and 16). Let us inspect the details of how alternatives \texttt{p4} and \texttt{p5} compare.
 \begin{lstlisting}
 >>> g.showPairwiseComparison('p4','p5')
  *------------  pairwise comparison ----*
@@ -417,7 +417,7 @@ To appreciate the apparent partial ordering of both the standard and the robust 
 \caption{Robust heatmap of the random 3 objectives performance tableau ordered by the \NetFlows ranking rule.} 
 \label{fig:19.2}       % Give a unique label
 \end{figure}
- As the inital prekernel \{\texttt{p2}, \texttt{p4}\} is in the robust outranking digraph validated at least at stability level $\pm 2$, recommending alternatives \texttt{p4}, as well as \texttt{p2}, as potential best choices, appears robustly justified. Alternative \texttt{p4} represents indeed an overall \emph{best compromise choice} between all decision objectives, whereas alternative \texttt{p2} gives an unanimous best choice with respect to two out of three decision objectives. Up to the decision maker to make his final choice.
+ As the initial prekernel \{\texttt{p2}, \texttt{p4}\} is in the robust outranking digraph validated at least at stability level $\pm 2$, recommending alternatives \texttt{p4}, as well as \texttt{p2}, as potential best choices, appears robustly justified. Alternative \texttt{p4} represents indeed an overall \emph{best compromise choice} between all decision objectives, whereas alternative \texttt{p2} gives an unanimous best choice with respect to two out of three decision objectives. Up to the decision maker to make his final choice.
 
 \section{Characterising unopposed multiobjective outranking situations}
 \label{sec:19.5}
@@ -582,7 +582,7 @@ We may visualize this kind of Pareto efficient result in Figure~\vref{fig:19.3}.
 
 In order to make now an eventual best unique choice, a decision maker will necessarily have to weigh, in a second stage of the decision aiding process, the relative importance of the individual decision objectives.
 
-In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient best choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously temper plurality tyranny effects. This idea is developped in the following Chapter~\ref{sec:20}.
+In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient best choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously temper plurality tyranny effects. This idea is developed in the following Chapter~\ref{sec:20}.
 
 \vspace{1cm}
 
@@ -595,7 +595,6 @@ For concluding, let us mention that it is precisely again our bipolar-valued log
 \clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
-\bibliographystyle{spbasic}
-%\typeout{}
-\bibliography{03-backMatters/reference}
 %\input{02-mainMatters/19-chapterRobustOutrankings.bbl}
+\bibliographystyle{spbasic}
+\bibliography{03-backMatters/reference}
