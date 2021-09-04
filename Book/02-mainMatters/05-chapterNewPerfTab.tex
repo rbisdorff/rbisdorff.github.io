@@ -75,7 +75,7 @@ For easing the creation of a new performance tableau instance, we provide the fo
    NA = Decimal('-999')
    #####
    # edit the performance evaluations
-   # criteria to be minimized take negative grades
+   # criteria to be minimized take negative evaluations
    evaluation = {
     'g1': {
        'a1':Decimal("41.0"),
@@ -182,7 +182,7 @@ The third section of the template file concerns now the \emph{performance criter
 \section{Editing the family of performance criteria}
 \label{sec:5.4}
 
-In order to assess how well each potential decision alternative is satisfying a given decision objective, we need \emph{performance criteria}, i.e. decimal-valued grading functions gathered in an ordered \texttt{criteria} dictionary. The required attributes (see List.~\vref{list:5.4}), besides the criteria identifiers, are the usual \texttt{shortName}, \texttt{name} and \texttt{comment}. Specific for a criterion are furthermore the \texttt{objective} reference, the significance \texttt{weight}, the grading \texttt{scale} (minimum and  maximum performance values), the \texttt{preferenceDirection} ('\texttt{max}' or '\texttt{min}') and the performance discrimination \texttt{thresholds} attributes.
+In order to assess how well each potential decision alternative is satisfying a given decision objective, we need \emph{performance criteria}, i.e. decimal-valued evaluation functions gathered in an ordered \texttt{criteria} dictionary. The required attributes (see List.~\vref{list:5.4}), besides the criteria identifiers, are the usual \texttt{shortName}, \texttt{name} and \texttt{comment}. Specific for a criterion are furthermore the \texttt{objective} reference, the significance \texttt{weight}, the evaluation \texttt{scale} (minimum and  maximum performance values), the \texttt{preferenceDirection} ('\texttt{max}' or '\texttt{min}') and the performance discrimination \texttt{thresholds} attributes.
 \begin{lstlisting}[caption={Example of performance criteria description},label=list:5.4]
    criteria = OrderedDict([
     ('g1', {
@@ -202,15 +202,15 @@ In order to assess how well each potential decision alternative is satisfying a 
     ...])
 \end{lstlisting}
 
-In our bipolar-valued outranking approach, all performance criteria implement \emph{decimal-valued} grading functions, where preferences are either \emph{increasing} or \emph{decreasing} with measured performances. In order to model a \emph{coherent} performance tableau\index{performance tableau!coherent}, the family of decision criteria must satisfy two methodological requirements:
+In our bipolar-valued outranking approach, all performance criteria implement \emph{decimal-valued} evaluation functions, where preferences are either \emph{increasing} or \emph{decreasing} with measured performances. In order to model a \emph{coherent} performance tableau\index{performance tableau!coherent}, the family of decision criteria must satisfy two methodological requirements:
 \begin{enumerate}[leftmargin=1cm,topsep=1pt]
-  \item \emph{Independence}: Each decision criterion implements a grading that is \emph{functionally independent} of the grading of the other decision criteria, i.e. the performance measured on one of the criteria does not \emph{constrain} in any sense the performance measured on any other criterion.
+  \item \emph{Independence}: Each decision criterion implements an evaluation that is \emph{functionally independent} of the evaluation of the other decision criteria, i.e. the performance evaluated on one of the criteria does not \emph{constrain} in any sense the performance evaluated on any other criterion.
   \item \emph{Non redundancy}: Each performance criterion is only \emph{significant} for a \emph{single} decision objective.
 \end{enumerate}
 
-For taking into account any, usually \emph{unavoidable}, \emph{imprecision} of the performance grading procedures, we may specify three performance \emph{discrimination thresholds}: an \emph{indifference} (\texttt{'ind'}), a \emph{preference} (\texttt{'pref'}) and a \emph{considerable performance difference} (\texttt{'veto'}) threshold (see List.~\vref{list:5.4} Lines 10-12). The left decimal number of a threshold description tuple indicates a \emph{constant part}, whereas the right decimal number indicates a \emph{proportional} part.
+For taking into account any, usually \emph{unavoidable}, \emph{imprecision} of the performance evaluation procedures, we may specify three performance \emph{discrimination thresholds}: an \emph{indifference} (\texttt{'ind'}), a \emph{preference} (\texttt{'pref'}) and a \emph{considerable performance difference} (\texttt{'veto'}) threshold (see List.~\vref{list:5.4} Lines 10-12). The left decimal number of a threshold description tuple indicates a \emph{constant part}, whereas the right decimal number indicates a \emph{proportional} part.
 
-On the template performance criterion \texttt{g1}, shown in Listing~\vref{list:5.4}, we observe for instance a grading scale from $0.0$ to $100.0$ with a constant \emph{indifference} threshold of $2.5$, a constant \emph{preference} threshold of $5.0$, and a constant \emph{considerable performance difference} threshold of $60.0$. The latter threshold  will trigger, the case given, a \emph{polarisation} of the outranking statement \citep{BIS-2013}.
+On the template performance criterion \texttt{g1}, shown in Listing~\vref{list:5.4}, we observe for instance an evaluation scale from $0.0$ to $100.0$ with a constant \emph{indifference} threshold of $2.5$, a constant \emph{preference} threshold of $5.0$, and a constant \emph{considerable performance difference} threshold of $60.0$. The latter threshold  will trigger, the case given, a \emph{polarisation} of the outranking statement \citep{BIS-2013}.
 
 In a random \emph{Cost-Benefit} performance tableau model we may obtain by default the following description of a cardinal \emph{Costs} criterion:
 \begin{lstlisting}[caption={Example of cardinal \emph{Costs} criterion},label=list:5.5]
@@ -263,13 +263,13 @@ Criterion \texttt{c1} appears here to be a cardinal criterion to be minimised an
 
 The \emph{indifference} threshold on this criterion amounts to a constant value of $1.49$ (Line 6 above). More or less $5\%$ of the observed performance differences on this criterion appear hence to be \emph{insignificant}. Similarly, with a preference threshold of $3.70$, about $90\%$ of the observed performance differences are preferentially \emph{significant} (Line 7). Furthermore, $100.0 - 96.15 = 3.85\%$ of the observed performance differences appear to be \emph{considerable} (Line 8) and will trigger, the case given, a \emph{polarisation} of the corresponding outranking situations.
 
-After the performance criteria descriptions, we are ready for recording the actual \emph{performance grades}.
+After the performance criteria descriptions, we are ready for recording the actual \emph{performance evaluations}.
 
-\section{Editing the performance grades}
+\section{Editing the performance evaluations}
 \label{sec:5.5}
 
-The individual grades of each decision alternative on each decision criterion are recorded in a double \emph{criterion} $\times$ \emph{action} dictionary called \texttt{evaluation} (see List.~\ref{list:5.5}). As we may encounter cases of missing data, we previously define a \emph{missing data} symbol \texttt{NA} which is set to a value disjoint from all the measurement scales, by default \texttt{Decimal('-999')} (see Line 2 in List.~\vref{list:5.6}).
-\begin{lstlisting}[caption={Editing performance grades},label=list:5.6]
+The individual evaluations of each decision alternative on each decision criterion are recorded in a double \emph{criterion} $\times$ \emph{action} dictionary called \texttt{evaluation} (see List.~\ref{list:5.5}). As we may encounter cases of missing data, we previously define a \emph{missing data} symbol \texttt{NA} which is set to a value disjoint from all the measurement scales, by default \texttt{Decimal('-999')} (see Line 2 in List.~\vref{list:5.6}).
+\begin{lstlisting}[caption={Editing performance evaluations},label=list:5.6]
 #----------
 NA = Decimal('-999')
 #----------
@@ -296,7 +296,7 @@ evaluation = {
 }
 \end{lstlisting}
 
-Notice in Listing~\vref{list:5.6} that on a criterion with \texttt{preference\-Direction = 'min'} all performance grades are recorded as \emph{negative} values (Lines 16 and following).
+Notice in Listing~\vref{list:5.6} that on a criterion with \texttt{preference\-Direction = 'min'} all performance evaluations are recorded as \emph{negative} values (Lines 16 and following).
 
 We can now inspect below the eventually edited complete template performance tableau \texttt{perfTab\_Template.py} with the \texttt{showPerformanceTableau()} method.\index{showPerformanceTableau@\texttt{showPerformanceTableau()}}
 \begin{lstlisting}
@@ -405,7 +405,7 @@ We may eventually rank the five decision alternatives with a heatmap browser vie
 \label{fig:5.2}       % Give a unique label
 \end{figure}
 
-Due to an 8 against 7 \emph{plurality tyranny} effect, the \Copeland ranking rule, essentially based on crisp majority outranking counts, puts here alternative \emph{action5} (\texttt{a5}) last, despite its excellent grades observed on criteria \texttt{g2}, \texttt{g5} and \texttt{g6}.
+Due to an 8 against 7 \emph{plurality tyranny} effect, the \Copeland ranking rule, essentially based on crisp majority outranking counts, puts here alternative \emph{action5} (\texttt{a5}) last, despite its excellent evaluations observed on criteria \texttt{g2}, \texttt{g5} and \texttt{g6}.
 
 A slightly \emph{fairer} ranking result may be obtained in Figure~\vref{fig:5.3} with the \NetFlows ranking rule (see Sec.~\ref{sec:8.3}).
 \begin{lstlisting}
@@ -422,7 +422,7 @@ A slightly \emph{fairer} ranking result may be obtained in Figure~\vref{fig:5.3}
 \label{fig:5.3}       % Give a unique label
 \end{figure}
 
-It might be opportun to furthermore study the robustness of the apparent outranking situations when assuming only \emph{ordinal} or \emph{uncertain} criteria significance weights (see Chap.~\ref{sec:19}). 
+It might be opportun to furthermore study the robustness of the apparent outranking situations when assuming \emph{uncertain} or solely \emph{ordinal} criteria significance weights (see Chap.~\ref{sec:18} and Chap.~\ref{sec:19}). 
  
 %%%%%%% The chapter bibliography
 %\normallatexbib

@@ -93,9 +93,9 @@ The evaluation of the seven potential new sites on each performance criterion ar
     \end{tabular}
   \end{center}
 \end{table}
-All criteria, except the \emph{Costs} Criterion, admit for grading a qualitative satisfaction scale from $0\%$ (worst) to $100\%$ (best). We may thus notice that site \texttt{A} (\emph{Ave}) is the most expensive, but also $100\%$ satisfying the \emph{Proximity} as well as the  \emph{Standing} criterion. Whereas site \texttt{C} (\emph{Ces}) is the cheapest one; providing however no satisfaction at all on both the \emph{Standing} and the \emph{Working Space} criteria.
+All criteria, except the \emph{Costs} Criterion, admit for evaluation a qualitative satisfaction scale from $0\%$ (worst) to $100\%$ (best). We may thus notice that site \texttt{A} (\emph{Ave}) is the most expensive, but also $100\%$ satisfying the \emph{Proximity} as well as the  \emph{Standing} criterion. Whereas site \texttt{C} (\emph{Ces}) is the cheapest one; providing however no satisfaction at all on both the \emph{Standing} and the \emph{Working Space} criteria.
 
-Concerning yearly costs, we suppose that the CEO is indifferent up to a performance difference of $1000.00$€, and he actually prefers a site when there is at least a positive difference of $2500.00$€. The grades observed on the six qualitative criteria (measured in percentages of satisfaction) are very subjective and rather imprecise. The CEO is hence \emph{indifferent} up to a satisfaction difference of $10\%$, and he claims a significant \emph{preference} when the satisfaction difference is at least of $20\%$.  Furthermore, a satisfaction difference of $80\%$ represents for him a \emph{considerably large} performance difference, triggering the case given a \emph{polarisation} of the preferential situation \citep{BIS-2013}. 
+Concerning yearly costs, we suppose that the CEO is indifferent up to a performance difference of $1000.00$€, and he actually prefers a site when there is at least a positive difference of $2500.00$€. The evaluations observed on the six qualitative criteria (measured in percentages of satisfaction) are very subjective and rather imprecise. The CEO is hence \emph{indifferent} up to a satisfaction difference of $10\%$, and he claims a significant \emph{preference} when the satisfaction difference is at least of $20\%$.  Furthermore, a satisfaction difference of $80\%$ represents for him a \emph{considerably large} performance difference, triggering the case given a \emph{polarisation} of the preferential situation \citep{BIS-2013}. 
 
 In view of Table~\vref{tab:4.3}, what is now the office site we may recommend to the CEO as \textbf{best choice}?
 
@@ -132,7 +132,7 @@ The file \texttt{officeChoice.py}, stored in the \texttt{examples} directory of 
    'Gar'  | -12000.00  50.00  80.00  60.00  20.00 100.00  50.00  
 \end{lstlisting}
 
-We thus recover all the input data shown in Section~\ref{sec:4.1}. Notice that the \emph{negative} grades of the \emph{Costs} (\texttt{'C'}) criterion indicate a negative preference direction: the \emph{lower} the costs, the \emph{better} it is.
+We thus recover all the input data shown in Section~\ref{sec:4.1}. Notice that the \emph{negative} evaluations of the \emph{Costs} (\texttt{'C'}) criterion indicate a negative preference direction: the \emph{lower} the costs, the \emph{better} it is.
 
 We may use the \texttt{showCriteria()}\index{showCriteria@\texttt{showCriteria()}} method for measuring the actual preference discrimination we observe on each criterion.
 \begin{lstlisting}[caption={Inspecting the performance criteria.},label=list:4.2]
@@ -155,7 +155,7 @@ We may use the \texttt{showCriteria()}\index{showCriteria@\texttt{showCriteria()
    ...
 \end{lstlisting}
 
-On the \emph{Costs} criterion, $9.5\%$ of the performance differences are considered insignificant and $14.3\%$ below the preference discrimination threshold (see Lines 6-7 in List.~\vref{list:4.2}). On the qualitative \emph{Comfort} criterion, we observe again $9.5\%$ of insignificant performance differences (line 11). Due to the imprecision in the subjective grading, we notice here $28.6\%$ of performance differences below the preference discrimination threshold (Line 12). Furthermore, $100.0 - 90.5 = 9.5\%$ of the performance differences are judged \emph{considerably large} (Line 13) and will trigger hence a polarisation of the concerned outranking situations \citep{BIS-2013}. Same information is available for all the other criteria. 
+On the \emph{Costs} criterion, $9.5\%$ of the performance differences are considered insignificant and $14.3\%$ below the preference discrimination threshold (see Lines 6-7 in List.~\vref{list:4.2}). On the qualitative \emph{Comfort} criterion, we observe again $9.5\%$ of insignificant performance differences (line 11). Due to the imprecision in the subjective evaluations, we notice here $28.6\%$ of performance differences below the preference discrimination threshold (Line 12). Furthermore, $100.0 - 90.5 = 9.5\%$ of the performance differences are judged \emph{considerably large} (Line 13) and will trigger hence a polarisation of the concerned outranking situations \citep{BIS-2013}. Same information is available for all the other criteria. 
  
 A colourful comparison of all the performances is shown in Figure~\vref{fig:4.1} by the \emph{heatmap}\index{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}} statistics, illustrating the respective quantile class of each performance. As the set of potential alternatives is tiny, we choose here a classification into performance quintiles.
 \begin{lstlisting}

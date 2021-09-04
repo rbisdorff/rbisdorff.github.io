@@ -1,16 +1,16 @@
 \chapter{The best students, where do they study? A rating case study}
 \label{sec:14}
 
-\abstract*{ In 2004, the German magazine \emph{Der Spiegel}, with the help of \emph{McKinsey \& Company} and \emph{AOL}, conducted an extensive online survey, assessing the apparent quality of German University students \citep{SPI-2004}. The eventually published results by the \emph{Spiegel} magazine concerned nearly 50,000 students, enroled in one of fifteen popular academic subjects, like \emph{German Studies}, \emph{Life Sciences}, \emph{Psychology}, \emph{Law}  or \emph{CS}. Based on this published data, we present and discuss in this chapter, how to \emph{rate} with the help of our \Digraph software ressources the apparent global \emph{enrolment quality} of new performance records.}
+\abstract*{ In 2004, the German magazine \emph{Der Spiegel}, with the help of \emph{McKinsey \& Company} and \emph{AOL}, conducted an extensive online survey, assessing the apparent quality of German University students \citep{SPI-2004}. The eventually published results by the \emph{Spiegel} magazine concerned nearly 50,000 students, enrolled in one of fifteen popular academic subjects, like \emph{German Studies}, \emph{Life Sciences}, \emph{Psychology}, \emph{Law}  or \emph{CS}. Based on this published data, we present and discuss in this chapter, how to \emph{rate} with the help of our \Digraph software ressources the apparent global \emph{enrolment quality} of new performance records.}
 
-\abstract{ In 2004, the German magazine \emph{Der Spiegel}, with the help of \emph{McKinsey \& Company} and \emph{AOL}, conducted an extensive online survey, assessing the apparent quality of German University students. The eventually published results by the \emph{Spiegel} magazine concerned nearly 50,000 students, enroled in one of fifteen popular academic subjects, like \emph{German Studies}, \emph{Life Sciences}, \emph{Psychology}, \emph{Law}  or \emph{CS}. Based on this published data, we present and discuss in this chapter, how to \emph{rate} with the help of our \Digraph software ressources the apparent global \emph{enrolment quality} of new performance records.}
+\abstract{ In 2004, the German magazine \emph{Der Spiegel}, with the help of \emph{McKinsey \& Company} and \emph{AOL}, conducted an extensive online survey, assessing the apparent quality of German University students. The eventually published results by the \emph{Spiegel} magazine concerned nearly 50,000 students, enrolled in one of fifteen popular academic subjects, like \emph{German Studies}, \emph{Life Sciences}, \emph{Psychology}, \emph{Law}  or \emph{CS}. Based on this published data, we present and discuss in this chapter, how to \emph{rate} with the help of our \Digraph software ressources the apparent global \emph{enrolment quality} of new performance records.}
 
 \section{The rating problem}
 \label{sec:14.1}
 
 In the 2004 \Spiegel survey, more than 80,000 students, by participating, were questioned on their '\emph{Abitur}' and university exams' marks, time of studies and age, grants, awards and publications, IT proficiency, linguistic skills, practical work experience, foreign mobility and civil engagement. Each student received in return a quality score through a specific weighing of the collected data which depended on the subject the student is mainly studying. Publishing only those subject-University combinations, where at least 18 students had correctly filled in the questionnaire, left 41 German Universities where, for at least eight out of the fifteen subjects, an average enrolment quality score could be determined  \citep{SPI-2004,SPI-2004m}.
 
-We suppose in this rating case study that five German universities: \texttt{U1}, \texttt{U2}, \texttt{U3}, \texttt{U4} and \texttt{U5} conducted in 2005 a similar survey among their enrolled students which gave the following enrolment quality scores per academic sublect:
+We suppose in this rating case study that five German universities: \texttt{U1}, \texttt{U2}, \texttt{U3}, \texttt{U4} and \texttt{U5} conducted in 2005 a similar survey among their enrolled students which gave the following enrolment quality scores per academic subject:
 \begin{table}[ht]
 \caption{}
 \label{tab:14.1}       % Give a unique label
@@ -61,14 +61,14 @@ The average enrolment quality scores of the five universities, shown in Table~\v
 \label{fig:14.1}       % Give a unique label
 \end{figure}
 
-With the best score in nine out of fifteeen subjects, university \texttt{U5} presents the highest global enrolment quality of the five, whereas university \texttt{U3}, with five lowest scores, shows the lowest student enrolemnt quality of the five.
+With the best score in nine out of fifteen subjects, university \texttt{U5} presents the highest global enrolment quality of the five, whereas university \texttt{U3}, with five lowest scores, shows the lowest student enrolment quality of the five.
 
 The university administrations would like to know now how their respective enrolment quality scores are to be appreciated in view the results of the 2004 \Spiegel survey. Are they among the top universities, the midfield or the bottom group?
 
 \section{The 2004 performance quintiles}
 \label{sec:14.2}
 
-The estimated lowerclosed performance qintiles of the 2004 average enrolment quality per academic subject are stored in a file named \texttt{historicalQuan\-tiles.py}\footnote{The file may be found in the \texttt{examples} directory of the \Digraph resources.} which can be reloaded with the \texttt{PerformanceQuantiles} class.\index{PerformanceQuantiles@\texttt{PerformanceQuantiles} class}.
+The estimated lower-closed performance quintiles of the 2004 average enrolment quality per academic subject are stored in a file named \texttt{historicalQuan\-tiles.py}\footnote{The file may be found in the \texttt{examples} directory of the \Digraph resources.} which can be reloaded with the \texttt{PerformanceQuantiles} class.\index{PerformanceQuantiles@\texttt{PerformanceQuantiles} class}.
 \begin{lstlisting}[caption={Inspecting stored historical performance quantiles},label=list:14.1]
 >>> from performanceQuantiles import PerformanceQuantiles
 >>> pq = PerformanceQuantiles('historicalQuintiles')
@@ -90,7 +90,7 @@ The estimated lowerclosed performance qintiles of the 2004 average enrolment qua
                        'cdf', 'perfTabType']
 \end{lstlisting}
 
-The history sizes, reported in Listing~\vref{list:14.1}, indicate the number of Universities graded in the 2004 survey in each one of the popular fifteen subjects. \emph{German Studies}, for instance, were graded for 39 out of 41 Universities, whereas \emph{Electrical} and \emph{Mechanical Engineering} were only graded for 14, respectively 13 Institutions. None of the fifteen subjects were graded in all the 41 Universities \footnote{It would have been interesting to estimate such quantile limits from the individual quality scores of all the nearly 50,000 surveyed students. But this data was not public \citep{SPI-2004}.}.                      
+The history sizes, reported in Listing~\vref{list:14.1}, indicate the number of Universities evaluated in the 2004 survey in each one of the popular fifteen subjects. \emph{German Studies}, for instance, were evaluated for 39 out of 41 Universities, whereas \emph{Electrical} and \emph{Mechanical Engineering} were only evaluated for 14, respectively 13 Institutions. None of the fifteen subjects were evaluated in all the 41 Universities \footnote{It would have been interesting to estimate such quantile limits from the individual quality scores of all the nearly 50,000 surveyed students. But this data was not public \citep{SPI-2004}.}.                      
 
 Details of the fifteen academic subjects --the performance criteria-- may be consulted in a browser view (see Fig.~\vref{fig:14.2}).
 \begin{lstlisting}
@@ -99,13 +99,13 @@ Details of the fifteen academic subjects --the performance criteria-- may be con
 \begin{figure}[ht]
 %\sidecaption
 \includegraphics[width=\hsize]{Figures/14-2-spiegelCriteria.png}
-\caption{The fifteen academic subjects taken into account for assessing the stuudent enrolment quality}
+\caption{The fifteen academic subjects taken into account for assessing the student enrolment quality}
 \label{fig:14.2}       % Give a unique label
 \end{figure}
 
 All fifteen subjects are considered equally significant (see Column Weight). The average scores in most subjects vary from 45 to 65. In some subjects, however, like \emph{Law Studies} ($35.0 - 65-0$) and \emph{Politology} ($50.0 - 70.0$) a different variability is observed. The average enrolment scores per subject are hence incommensurable and global average enrolment scores over all subjects become meaningless. 
 
-To take furthermore into account the potential and very likely imprecision of the quality scores' computation, we assume that, for all subjects, an average enrolment quality score difference of $0.1$ is \emph{insignificant}, wheras a difference of $0.5$ is sufficient to positively attest a \emph{better} enrolment quality. No considerable performance difference are assumed.
+To take furthermore into account the potential and very likely imprecision of the quality scores' computation, we assume that, for all subjects, an average enrolment quality score difference of $0.1$ is \emph{insignificant}, whereas a difference of $0.5$ is sufficient to positively attest a \emph{better} enrolment quality. No considerable performance difference are assumed.
 
 The \texttt{showLimitingQuantiles()} method prints in Listing~\vref{list:14.2} the estimated quintile limits of the 2004 survey.
 \begin{lstlisting}[caption={Estimated quintile limits of the 2004 survey},label=list:14.2,basicstyle=\ttfamily\scriptsize]
@@ -130,7 +130,7 @@ The \texttt{showLimitingQuantiles()} method prints in Listing~\vref{list:14.2} t
    'soc'   |   1.0   |   45.00   51.70   53.92   55.42   56.26   59.80  
 \end{lstlisting}
                      
-We see confirmed again the incommensurability between the subjects, we noticed already in the apparent enrolment quality scoring, especially between \emph{Law Studies} ($39.1 - 51.1$) and \emph{Politology} ($50.5 - 65.9$). \footnote{The \emph{Spiegel} authors opted therefore for a simple 3-tiling of the Universities per graded academic subject, followed by an average \Borda scores based global ranking \citep{SPI-2004}.}
+We see confirmed again the incommensurability between the subjects, we noticed already in the apparent enrolment quality scoring, especially between \emph{Law Studies} ($39.1 - 51.1$) and \emph{Politology} ($50.5 - 65.9$). \footnote{The \emph{Spiegel} authors opted therefore for a simple 3-tiling of the Universities per evaluated academic subject, followed by an average \Borda scores based global ranking \citep{SPI-2004}.}
 
 
 \section{Rating-by-ranking with lower-closed quintile limits}
@@ -172,7 +172,7 @@ The resulting ranking of the 5 Universities including the lower-closed quintile 
 
 The ordinal correlation ($+0.97$) of the \Copeland ranking with the underlying bipolar-valued outranking digraph is very high (see Fig.~\vref{fig:14.3} Row 1). Most correlated subjects with this \emph{rating-by-ranking} result appear to be \emph{Physics} ($+0.79$), \emph{Mathematics} ($+0.77$) and \texttt{German Studies} ($+0.77$). \emph{Sociology} ($+0.36$) is the less correlated subjects (see Row 4).
 
-From the actual ranking position of the lower 5-tiling limits, we may now immediately deduce the quintile enrolment quality equivalence classes. No university reaches the highest quintiletile ($[0.80 - [$), whereas \texttt{U3} is rated into the lowest quintile ($[0.00- 0.20[$). The other three universities U1, U2 and U4 are rated in the second quintile ($[0.20- 0.40[$). The rating result may be easily printed out with the \texttt{showQuantilesRating()} method\index{showQuantilesRating@\texttt{showQuantilesRating()}}.
+From the actual ranking position of the lower 5-tiling limits, we may now immediately deduce the quintile enrolment quality equivalence classes. No university reaches the highest quintile ($[0.80 - [$), whereas \texttt{U3} is rated into the lowest quintile ($[0.00- 0.20[$). The other three universities U1, U2 and U4 are rated in the second quintile ($[0.20- 0.40[$). The rating result may be easily printed out with the \texttt{showQuantilesRating()} method\index{showQuantilesRating@\texttt{showQuantilesRating()}}.
 \begin{lstlisting}[caption={Showing the quintiling of the enrolment quality of the 5 Universities},label=list:14.3]
 >>> lqr.showQuantilesRating()
   *---- Quantiles rating result ----*
@@ -237,7 +237,7 @@ dot -Grankdir=TB -Tpng fusionResult.dot\
 \label{fig:14.5}       % Give a unique label
 \end{figure}
 
-The fusion of the three rating-by-ranking results is shown in Figure~\vref{fig:14.5} where we see that they diverge solely in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}. In Listing~\vref{list:14.5} Lines 12-14, one may more precisely notice that the \Kemeny and \Copeland rules rate \texttt{U3} in the first quintile ($[0.00- 0.20[$), whereas the \NetFlows rule puts \texttt{U3} togeter with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$). And, the \Kemeny rule inverts the position of \texttt{U2} and \texttt{U4}.
+The fusion of the three rating-by-ranking results is shown in Figure~\vref{fig:14.5} where we see that they diverge solely in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}. In Listing~\vref{list:14.5} Lines 12-14, one may more precisely notice that the \Kemeny and \Copeland rules rate \texttt{U3} in the first quintile ($[0.00- 0.20[$), whereas the \NetFlows rule puts \texttt{U3} together with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$). And, the \Kemeny rule inverts the position of \texttt{U2} and \texttt{U4}.
 
 In Listing~\vref{list:14.5}, the \texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensus\-Quality()}} reveals finally how fair \Kemeny and \Copeland rules actually balance the fifteen academic subjects. 
 \begin{lstlisting}[caption={Checking the consensus quality of \Kemeny and \Copeland rankings},label=list:14.5,basicstyle=\ttfamily\scriptsize]
@@ -341,7 +341,7 @@ U3 in [0.60 - 0.80[	 -0.53		 0.67		 -0.53
 U3 in [0.80 - <[	 -0.67		 1.00		 -0.67
 \end{lstlisting}
 
-The performance record of University U5 cannot be positively rated into a precise quintile, but both the fourth and the fifth quintile are note positively excluded as rating result. Otherwise, the bipolar-valued sorting characteristcs verify the rating-by-ranking result we obtained previously with the \Kemeny and \Copeland rating-by-ranking result. 
+The performance record of University U5 cannot be positively rated into a precise quintile, but both the fourth and the fifth quintile are note positively excluded as rating result. Otherwise, the bipolar-valued sorting characteristics verify the rating-by-ranking result we obtained previously with the \Kemeny and \Copeland rating-by-ranking result. 
 The \texttt{showActionsSortingResult()} method\index{showActionsSortingResult@\texttt{showActionsSortingResult()}} prints the eventual quintiles rating result:
 \begin{lstlisting}[caption={Showing a quintiles rating-by-sorting result},label=list:14.7]
 >>> lqr.showActionsSortingResult()
@@ -357,14 +357,13 @@ The quintiles rating-by-sorting result, shown in Listing~\vref{list:14.7}, confi
 
 \vspace{1cm}
 
-Let us conclude this hypothetical rating cae study, by saying that we prefer this latter rating-by-sorting approach; perhaps impreciser, due the case given, to missing and contradictory performance data; yet, well grounded in a powerful bipolar-valued logic and espistemic framework. The next Chapter~\ref{sec:15} proposes a series of decision problems suitable for exercises and exam quations.
+Let us conclude this hypothetical rating cae study, by saying that we prefer this latter rating-by-sorting approach; perhaps impreciser, due the case given, to missing and contradictory performance data; yet, well grounded in a powerful bipolar-valued logic and epistemic framework. The next Chapter~\ref{sec:15} proposes a series of decision problems suitable for exercises and exam questions.
  
 %%%%%%% The chapter bibliography
 %\normallatexbib
 %\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
-\bibliographystyle{spbasic}
-%\typeout{}
-\bibliography{03-backMatters/reference}
 %\input{02-mainMatters/14-chapterBestStudents.bbl}
+\bibliographystyle{spbasic}
+\bibliography{03-backMatters/reference}

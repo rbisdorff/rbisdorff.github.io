@@ -8,7 +8,7 @@
 \section{The absolute rating problem}
 \label{sec:10.1}
 	  
-To illustrate the \emph{absolute rating} problem we face, consider for a moment that, in a given decision making problem we observe, for instance, in Table~\vref{tab:10.1} below, the multi-criteria performance evaluations of two potential decision alternatives, named \texttt{a1001} and \texttt{a1010}, graded on 7 \emph{incommensurable} preformance criteria: 2 \emph{Costs} criteria \texttt{c1} and \texttt{c2} (to \emph{minimise}) and 5 \emph{Benefits} criteria \texttt{b1} to \texttt{b5} (to \emph{maximise}). 
+To illustrate the \emph{absolute rating} problem we face, consider for a moment that, in a given decision making problem we observe, for instance, in Table~\vref{tab:10.1} below, the multi-criteria performance evaluations of two potential decision alternatives, named \texttt{a1001} and \texttt{a1010}, evaluated on 7 \emph{incommensurable} performance criteria: 2 \emph{Costs} criteria \texttt{c1} and \texttt{c2} (to \emph{minimise}) and 5 \emph{Benefits} criteria \texttt{b1} to \texttt{b5} (to \emph{maximise}). 
 \begin{table}[ht]
 \caption{Multi-criteria performances of two potential decision alternatives}
 \label{tab:10.1}       % Give a unique label
@@ -101,7 +101,7 @@ Inspecting the estimated quartile limits may be operated with the\\ \texttt{show
        'b4'  |    2    |  3.27   30.10  50.82  70.89  98.05  
        'b5'  |    2    |  0.85   29.08  48.55  69.98  97.56  
 \end{lstlisting}
-Both objectives are \emph{equi-important}; the sum of weights (10) of the \emph{Costs} criteria balance the sum of weights (10) of the \emph{Benefits} criteria (see List.~\vref{list:10.2} column 2). The preference direction of the \emph{Costs} criteria \texttt{c1} and \texttt{c2} is \emph{negative}; the lesser the costs, the better it is, whereas all the \emph{Benefits} criteria \texttt{b1} to \texttt{b5} show \emph{positive} preference directions, i.e. the higher the benefits, the better it is. The columns entitled '$0.00$', resp. '$1.00$' show the \emph{quartile} \texttt{Q0}, resp. \texttt{Q4}, i.e. the \emph{worst}, resp. \emph{best} performance observed so far on each criterion. Column '$0.50$' shows the \emph{median} (\texttt{Q2}) performance observed on the criteria.  
+Both objectives are \emph{equally important}; the sum of weights (10) of the \emph{Costs} criteria balance the sum of weights (10) of the \emph{Benefits} criteria (see List.~\vref{list:10.2} column 2). The preference direction of the \emph{Costs} criteria \texttt{c1} and \texttt{c2} is \emph{negative}; the lesser the costs, the better it is, whereas all the \emph{Benefits} criteria \texttt{b1} to \texttt{b5} show \emph{positive} preference directions, i.e. the higher the benefits, the better it is. The columns entitled '$0.00$', resp. '$1.00$' show the \emph{quartile} \texttt{Q0}, resp. \texttt{Q4}, i.e. the \emph{worst}, resp. \emph{best} performance observed so far on each criterion. Column '$0.50$' shows the \emph{median} (\texttt{Q2}) performance observed on the criteria.  
 
 New  decision alternatives with random multiple criteria performance vectors from the same random performance tableau model as \texttt{pt} (see List.~\vref{list:10.1}) may now be generated with a generic \texttt{RandomPerformanceGenerator} class\index{RandomPerformanceGenerator@\texttt{RandomPerformanceGenerator()}} from the \texttt{randomPerfTabs} module \citep{BIS-2021b}.\footnote{The \texttt{RandomPerformanceGenerator} class works for the \emph{standard} performance tableau model (see Sec.~\ref{sec:5.2}), the \emph{Cost-Benefit} model (see Sec.~\ref{sec:5.3}), and the 3-objectives model (see Sec.~\ref{sec:5.4}).}
 \begin{lstlisting}[caption={Generating 100 new random decision alternatives of the same model},label=list:10.3]
@@ -196,9 +196,9 @@ The \texttt{actionsSubset} parameter of the \texttt{showPerformanceTableau()} me
     'c2'  | -40.0 -23.0 -37.0 -37.0 -24.0 -27.0 -73.0 -43.0 -94.0 -35.0  
 \end{lstlisting}
 
-Among the 10 new incoming decision alternatives, we recognize alternatives \texttt{a1001} (see column 2) and \texttt{a1010} (see last column) we have shown in Table~\vref{tab:10.1}.
+Among the 10 new incoming decision alternatives, we recognise alternatives \texttt{a1001} (see column 2) and \texttt{a1010} (see last column) we have shown in Table~\vref{tab:10.1}.
 
-The \texttt{actions} dictionary of a \texttt{LearnedQuantilesRatingDigraph} class instance includes, besides the 10 performance eavluations of the ten new alternatives, also the closed lower limits of the four quartile classes: \texttt{m1} = $[0.0- [$, \texttt{m2} = $[0.25- [$, \texttt{m3} = $[0.5- [$, \texttt{m4} = $[0.75 - [$. We find these limits in the \texttt{profiles} attribute (see List.~\vref{list:10.6} below).
+The \texttt{actions} dictionary of a \texttt{LearnedQuantilesRatingDigraph} class instance includes, besides the 10 performance evaluations of the ten new alternatives, also the closed lower limits of the four quartile classes: \texttt{m1} = $[0.0- [$, \texttt{m2} = $[0.25- [$, \texttt{m3} = $[0.5- [$, \texttt{m4} = $[0.75 - [$. We find these limits in the \texttt{profiles} attribute (see List.~\vref{list:10.6} below).
 \begin{lstlisting}[caption={Showing the limiting profiles of the rating quantiles},label=list:10.6]
 >>> lqr.showPerformanceTableau(actionsSubset=lqr.profiles)
     *----  Quartiles limit profiles -----*

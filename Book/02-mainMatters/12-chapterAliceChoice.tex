@@ -1,8 +1,8 @@
 \chapter{Alice's best choice: A selection case study}
 \label{sec:12}
-\abstract*{ The chapter presents a case study concerning the building of a best choice recommendation for Alice, a German student who wants some advice concerning the choice of her future University studies. We present Alice's performance tableau --potential foreign language study programs, her decision objectives, performance criteria and performance grades-- and build a best choice recommendation for her. A thorough robustness analysis confirms a very best choice.}
+\abstract*{ The chapter presents a case study concerning the building of a best choice recommendation for Alice, a German student who wants some advice concerning the choice of her future University studies. We present Alice's performance tableau --potential foreign language study programs, her decision objectives, performance criteria and performance evaluations-- and build a best choice recommendation for her. A thorough robustness analysis confirms a very best choice.}
 
-\abstract{ The chapter presents a case study concerning the building of a best choice recommendation for Alice, a German student who wants some advice concerning the choice of her future University studies. We present Alice's performance tableau --potential foreign language study programs, her decision objectives, performance criteria and performance grades-- and build a best choice recommendation for her. A thorough robustness analysis confirms a very best choice.}
+\abstract{ The chapter presents a case study concerning the building of a best choice recommendation for Alice, a German student who wants some advice concerning the choice of her future University studies. We present Alice's performance tableau --potential foreign language study programs, her decision objectives, performance criteria and performance evaluations-- and build a best choice recommendation for her. A thorough robustness analysis confirms a very best choice.}
 
 
 \begin{figure}[ht]
@@ -37,7 +37,7 @@ Alice has already identified 10 potential study programs.
       \texttt{I-USB}  & Graduate interpreter (I)  &   University (USB)              &  Saarbrücken\\
       \texttt{T-UHB}  & Qualified translator (T)  &   University (UHB)              &  Heidelberg\\
       \texttt{I-UHB}  & Graduate interpreter (I)  &   University (UHB)              &  Heidelberg\\
-      \texttt{S-HKK}  & Specialized secretary (S) &   Chamber of Commerce (HKK)     &  Köln\\
+      \texttt{S-HKK}  & Specialised secretary (S) &   Chamber of Commerce (HKK)     &  Köln\\
       \texttt{C-HKK}  & Foreign correspondent (C) &   Chamber of Commerce (HKK)     &  Köln\\
       \noalign{\smallskip}\hline
     \end{tabular}
@@ -58,8 +58,8 @@ Four \textbf{decision objectives} of more or less equal importance are guiding A
 The decision consequences Alice wishes to take into account for evaluating the potential study programs with respect to each of the four objectives are modelled by the following \emph{coherent family of criteria} \citep*{ROY-1991,ROY-1993}. Such a family of performance criteria verifies:
 \begin{enumerate}[topsep=1pt]
 \item \emph{Exhaustiveness}: No argument acceptable to Alice can be put forward to justify a preference in favour of study program $x$ versus program $y$  when $x$ and $y$ have the same performance level on each of the performance criteria;
-\item \emph{Cohesiveness}: Alice recognizes that program $x$ must be preferred to program $y$ whenever the performance level of $x$ is significantly better than that of $y$ on one of the criteria of positive weight, performance levels of $x$ and $y$ being the same on each of the other criteria; 
-\item \emph{Nonredundancy}: One of the above requirements is violated if one of the performance criteria is left out from the family.
+\item \emph{Cohesiveness}: Alice recognises that program $x$ must be preferred to program $y$ whenever the performance level of $x$ is significantly better than that of $y$ on one of the criteria of positive weight, performance levels of $x$ and $y$ being the same on each of the other criteria; 
+\item \emph{Non-redundancy}: One of the above requirements is violated if one of the performance criteria is left out from the family.
 \end{enumerate}
 
 \begin{table}[ht]
@@ -134,7 +134,7 @@ It is worthwhile noticing in Figure~\vref{fig:12.2} that, on her subjective attr
 
 Alice is subjectively evaluating the \emph{Attractiveness} of the studies (criterion \texttt{AS}) on an ordinal scale from \emph{weak} ($0$) to \emph{excellent} ($10$). Similarly, she is subjectively evaluating the \emph{Attractiveness} of the respective professions (criterion \texttt{AP}) on a three level ordinal scale from \emph{weak} ($0$), \emph{fair} ($1$) to \emph{good} ($2$). Considering the \emph{Occupational Prestige} (criterion \texttt{OP}), she looked up the SIOPS \footnote{Standard International Occupational Prestige Scale \citep*{GAN-1996}.}. All the other evaluation data she found on the internet.
 
-In the \emph{heatmap view} shown in Figure~\vref{fig:12.3}, we may now consult Alice's performance gradings.
+In the \emph{heatmap view} shown in Figure~\vref{fig:12.3}, we may now consult Alice's performance evaluations.
 \begin{lstlisting}
 >>> t.showHTMLPerformanceHeatmap(\
 ...       colorLevels=5,Correlations=True,ndigits=0)
@@ -146,7 +146,7 @@ In the \emph{heatmap view} shown in Figure~\vref{fig:12.3}, we may now consult A
 \label{fig:12.3}       % Give a unique label
 \end{figure}
 
-Her ten potential study programs are ordered with the \NetFlows ranking rule applied to the corresponding bipolar-valued outranking digraph (see Sec.~\ref{sec:8.3}). \emph{Graduate interpreter} studies in Köln (\texttt{I-FHK}) or Saarbrücken (\texttt{I-USB}), followed by \emph{Qualified Translator} studies in Köln (\texttt{T-FHK}) appear to be Alice's most preferred alternatives. The least attractive for her appear to be studies at the Chamber of Commerce of Köln (\texttt{C-HKK}, \texttt{S-HKK}). Notice by the way that evaluations on performance criteria to be \emph{minimized}, like \emph{Distance to Home} (criterion \texttt{DH}) or \emph{Study time} (criterion \texttt{SL}), are registered as \emph{negative} values, so that smaller measures are, in this case, preferred to larger ones.
+Her ten potential study programs are ordered with the \NetFlows ranking rule applied to the corresponding bipolar-valued outranking digraph (see Sec.~\ref{sec:8.3}). \emph{Graduate interpreter} studies in Köln (\texttt{I-FHK}) or Saarbrücken (\texttt{I-USB}), followed by \emph{Qualified Translator} studies in Köln (\texttt{T-FHK}) appear to be Alice's most preferred alternatives. The least attractive for her appear to be studies at the Chamber of Commerce of Köln (\texttt{C-HKK}, \texttt{S-HKK}). Notice by the way that evaluations on performance criteria to be \emph{minimised}, like \emph{Distance to Home} (criterion \texttt{DH}) or \emph{Study time} (criterion \texttt{SL}), are registered as \emph{negative} values, so that smaller measures are, in this case, preferred to larger ones.
 
 It is finally interesting to observe in Figure~\vref{fig:12.3} (third row) that the \emph{most significant} performance criteria, appear to be for Alice, on the one side, the \emph{Attractiveness} of the study program (criterion \texttt{AS}, tau = $+0.72$) followed by the \emph{Attractiveness} of the future profession (criterion \texttt{AP}, tau = $+0.62$). On the other side, \emph{Study times} (criterion \texttt{SL}, tau = $-0.24$), \emph{Big city} (criterion \texttt{BC}, tau = $-0.07$) as well as \emph{Monthly living costs} (criterion \texttt{LC}, tau = $-0.04$) appear to be \emph{not so significant} (see Chap.~\ref{sec:16}).
 
@@ -226,7 +226,7 @@ We have mentioned that Alice considers a performance difference of $7$ points on
 
 In Listing~\vref{list:12.3}, we see that \emph{considerable} performance differences concerning the \emph{Attractiveness of the studies} (\texttt{AS} criterion) are indeed observed between the \emph{Specialised Secretary} study programm offered in Köln and the \emph{Graduate Interpreter} study programs offered in Köln, Saarbrücken and Heidelberg. They polarise, hence, three \emph{more or less invalid} outranking situations to \emph{certainly invalid} (Lines 8, 13, 18) and corresponding three \emph{more or less valid} converse outranking situations to \emph{certainly valid} ones (Lines 25, 30, 35). 
 
-We may finally notice in the relation map, shown in Figure~\vref{fig:12.4}, that the four best-ranked study programs, \texttt{I-FHK}, \texttt{I-USB}, \texttt{I-UHB} and \texttt{T-FHK},  are in fact \Condorcet winners (see List.~\vref{list:12.4} Line 2), i.e. they are all four \emph{indifferent} one of the other \textbf{and} positively \emph{outranking} all other alternatives, a result confirmed in Listing~\vref{list:12.4} below by our \Rubis best choice recommendation (Chap.~\ref{sec:4} and \citet*{BIS-2008a}).
+We may finally notice in the relation map, shown in Figure~\vref{fig:12.4}, that the four best-ranked study programs, \texttt{I-FHK}, \texttt{I-USB}, \texttt{I-UHB} and \texttt{T-FHK},  are in fact \Condorcet winners (see List.~\vref{list:12.4} Line 2), i.e. they are all four \emph{indifferent} one of the other \textbf{and} positively \emph{outranking} all other alternatives, a result confirmed in Listing~\vref{list:12.4} below by our \Rubis best choice recommendation (Chap.~\ref{sec:4} and \citealp*{BIS-2008a}).
 \begin{lstlisting}[caption={Alice's best choice recommendation},label=list:12.4]
 >>> dg.computeCondorcetWinners()
   ['I-FHK', 'I-UHB', 'I-USB', 'T-FHK'] 
@@ -275,7 +275,7 @@ In the relation map, shown in Figure~\vref{fig:12.4}, we see in the left lower c
 \label{fig:12.5}       % Give a unique label
 \end{figure}
 
-Let us now, for instance, check the pairwise outranking situations observed between the first and second-ranked alternative, i.e. \emph{Garduate Interpreter} studies in Köln versus \emph{Graduate Interpreter} studies in Saabrücken (see \texttt{I-FHK} and \texttt{I-USB} in Fig.~\vref{fig:12.3}).\index{showHTMLPairwiseOutrankings@\texttt{showHTMLPairwiseOutrankings()}}
+Let us now, for instance, check the pairwise outranking situations observed between the first and second-ranked alternative, i.e. \emph{Graduate Interpreter} studies in Köln versus \emph{Graduate Interpreter} studies in Saarbrücken (see \texttt{I-FHK} and \texttt{I-USB} in Fig.~\vref{fig:12.3}).\index{showHTMLPairwiseOutrankings@\texttt{showHTMLPairwiseOutrankings()}}
 \begin{lstlisting}
 >>> dg.showHTMLPairwiseOutrankings('I-FHK','I-USB')
 \end{lstlisting}
@@ -306,7 +306,7 @@ In a similar way, one may finally compute a \emph{weak ranking} of all the poten
      1st last ranked ['S-HKK']
 \end{lstlisting}
 
-In Listing~\vref{list:12.6}, we find confirmed that the \emph{Interpreter} studies appear all preferrred to the \emph{Translator} studies. Furthermore, the \emph{Interpreter} studies in Saarbrücken appear preferred to the same studies in Heidelberg. The Köln alternative is apparently the preferred one of all the \emph{Translater} studies. And, the \emph{Foreign Correspondent} and the \emph{Specialised Secretary} studies appear second-last and last ranked.
+In Listing~\vref{list:12.6}, we find confirmed that the \emph{Interpreter} studies appear all preferred to the \emph{Translator} studies. Furthermore, the \emph{Interpreter} studies in Saarbrücken appear preferred to the same studies in Heidelberg. The Köln alternative is apparently the preferred one of all the \emph{Translater} studies. And, the \emph{Foreign Correspondent} and the \emph{Specialised Secretary} studies appear second-last and last ranked.
 
 Yet, how \emph{robust} are our findings with respect to potential settings of the decision objectives' importance and the performance criteria significance?
 		
@@ -395,7 +395,7 @@ We may hence make use of the \texttt{exportGraphViz()} method of the \texttt{Tra
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/12-7-choiceUnopposed.pdf}
-\caption{Unopposed partial ranking of the potential study programs. Again, when \emph{equi-signficant} performance criteria are assumed per decision objective, we observe in the Figure here that $I-FHK$ remains the stable best choice, \emph{independently} of the actual importance weights that Alice may wish to allocate to her four decision objectives}
+\caption{Unopposed partial ranking of the potential study programs. Again, when \emph{equally significant} performance criteria are assumed per decision objective, we observe in the Figure here that $I-FHK$ remains the stable best choice, \emph{independently} of the actual importance weights that Alice may wish to allocate to her four decision objectives}
 \label{fig:12.7}       % Give a unique label
 \end{figure}
 %\clearpage

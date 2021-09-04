@@ -1,9 +1,9 @@
 \chapter{Who wins the election ?}
 \label{sec:7}
 
-\abstract*{ This chapter is more specifically devoted to handling linear voting profiles and computing the winner of such election results. By following \Condorcet 's recipe, we consider pairwise comparisons of election candidates and balance the number of times the first beats the second against the number of times the second beats the first. Thus we obtain the majority margins digraph, in fact a bipolar-valued digraph. When the voters express contradictory linear voting profiles one naturally observescyclic social preferences without seeing any paradox in this situation. Finally we present a more politically realistic random generator for linear voting profiles that takes into account pre-election polls.}
+\abstract*{ This chapter is more specifically devoted to handling linear voting profiles and computing the winner of such election results. By following \Condorcet 's recipe, we consider pairwise comparisons of election candidates and balance the number of times the first beats the second against the number of times the second beats the first. Thus we obtain the majority margins digraph, in fact a bipolar-valued digraph. When the voters express contradictory linear voting profiles one naturally observes cyclic social preferences without seeing any paradox in this situation. Finally we present a more politically realistic random generator for linear voting profiles that takes into account pre-election polls.}
   
-\abstract{ This chapter is more specifically devoted to handling linear voting profiles and computing the winner of such election results. By following \Condorcet 's recipe, we consider pairwise comparisons of election candidates and balance the number of times the first beats the second against the number of times the second beats the first. Thus we obtain the majority margins digraph, in fact a bipolar-valued digraph. When the voters express contradictory linear voting profiles one naturally observescyclic social preferences without seeing any paradox in this situation. Finally we present a more politically realistic random generator for linear voting profiles that takes into account pre-election polls.}
+\abstract{ This chapter is more specifically devoted to handling linear voting profiles and computing the winner of such election results. By following \Condorcet 's recipe, we consider pairwise comparisons of election candidates and balance the number of times the first beats the second against the number of times the second beats the first. Thus we obtain the majority margins digraph, in fact a bipolar-valued digraph. When the voters express contradictory linear voting profiles one naturally observes cyclic social preferences without seeing any paradox in this situation. Finally we present a more politically realistic random generator for linear voting profiles that takes into account pre-election polls.}
 
 \section{Linear voting profiles}
 \label{sec:7.1}
@@ -65,7 +65,7 @@ The \texttt{computeUninominalVotes()} and the \texttt{computeSimpleMajority\-Win
   ['c3']
 \end{lstlisting}
 
-As we observe no absolute majority ($8/15$) of votes for any one of the three candidates, one may look, with the \texttt{computeInstantRunoffWinner()} method, for the \emph{instant runoff} winner\index{computeInstantRunoffWinner@\texttt{computeInstantRunoffWinner()}} instead (see \citet{ADT-L2}).
+As we observe no absolute majority ($8/15$) of votes for any one of the three candidates, one may look, with the \texttt{computeInstantRunoffWinner()} method, for the \emph{instant runoff} winner\index{computeInstantRunoffWinner@\texttt{computeInstantRunoffWinner()}} instead (see \citealp{ADT-L2}).
 \begin{lstlisting}[caption={Example Instant Run Off Winner},label=list:7.3]
 >>> lvp.computeInstantRunoffWinner(Comments=True)
   Half of the Votes =  7.50
@@ -256,7 +256,7 @@ Half of the Votes =  4.50
 []
 \end{lstlisting}
 
-\Condorcet 's approach for determining the winner of an election is \emph{not decisive} in this example voting profile. One needs therefore, the case given, exploiting more sophisticated approaches for finding the winner of the election on the basis of the given linear ballots (see Chap.~\ref{sec:8} and \citet{BIS-2008a}). 
+\Condorcet 's approach for determining the winner of an election is \emph{not decisive} in this example voting profile. One needs therefore, the case given, exploiting more sophisticated approaches for finding the winner of the election on the basis of the given linear ballots (see Chap.~\ref{sec:8} and \citealp{BIS-2008a}). 
 
 The \NetFlows ranked heatmap view on voting profiles\index{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}} with the \texttt{showHTML\-VotingHeatmap()} method is one such tool for showing convincing voting results (see Sec.~\ref{sec:8.3}).
 \begin{lstlisting}
@@ -270,7 +270,7 @@ The \NetFlows ranked heatmap view on voting profiles\index{showHTMLVotingHeatmap
 \label{fig:7.3}       % Give a unique label
 \end{figure}
 
-It is worthwhile noticing in List.~\vref{list:7.8} that the compromise \NetFlows ranking \texttt{c4} $>$ \texttt{c5} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}, shown in this heatmap, results in the highest possible \emph{ordinal correlation} index of $+0.778$ with the majority margins digraph (see Chap.~\ref{sec:16}). This \NetFlows ranking result corresponds also to the \Borda scores ranking\footnote{Mind that \Borda scores require the unrealistic working hytpothesis that one knows how to precisely code in numbers the marginal linear ranks per voter.}.
+It is worthwhile noticing in List.~\vref{list:7.8} that the compromise \NetFlows ranking \texttt{c4} $>$ \texttt{c5} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}, shown in this heatmap, results in the highest possible \emph{ordinal correlation} index of $+0.778$ with the majority margins digraph (see Chap.~\ref{sec:16}). This \NetFlows ranking result corresponds also to the \Borda scores ranking\footnote{Mind that \Borda scores require the unrealistic working hypothesis that one knows how to precisely code in numbers the marginal linear ranks per voter.}.
 \begin{lstlisting}
 >>> v.showRankAnalysisTable()
   *----  Borda rank analysis tableau -----*
@@ -415,7 +415,7 @@ Let us mention that the \emph{instant-run-off} procedure, we used before (see Li
 
 Remarkable about both these \emph{ranking-by-choosing} or \emph{ordering-by-rejecting} results is the fact that the random voting behaviour, simulated here with the help of two discrete random variables \footnote{Discrete random variables with a given empirical probability law (here the polls) are provided in the \texttt{randomNumbers} module by the \texttt{DiscreteRandomVariable} class \citep{CPSTAT-L4}.}, defined respectively by the two party polls, is rendering a ranking that is more or less in accordance with the simulated balance of the polls: Party-1 supporters : 460;  Party-2 supporters: 436 (see List.~\vref{list:7.9} Lines 29-43 third column). Despite a random voting behaviour per voter, the given polls apparently show a \emph{very strong incidence} on the eventual election result. In order to avoid any manipulation of the election outcome, public media are therefore in some countries not allowed to publish polls during the last weeks before a general election.
 
-Mind that the specific \emph{ranking-by-choosing} procedure, we use here on the majority margins digraph, operates the selection procedure by extracting at each step \emph{initial} and \emph{terminal} prekernels, i.e. NP-hard operational problems (see Chap.~\ref{sec:17} and \citet{BIS-1999}); A technique that does not allow in general to tackle voting profiles with much more than 30 candidates.
+Mind that the specific \emph{ranking-by-choosing} procedure, we use here on the majority margins digraph, operates the selection procedure by extracting at each step \emph{initial} and \emph{terminal} prekernels, i.e. NP-hard operational problems (see Chap.~\ref{sec:17} and \citealp{BIS-1999}); A technique that does not allow in general to tackle voting profiles with much more than 30 candidates.
 
 \vspace{1cm}
 

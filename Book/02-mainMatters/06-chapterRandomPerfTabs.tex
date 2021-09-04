@@ -10,15 +10,15 @@
 
 The \texttt{randomPerfTabs} module provides several classes for generating random performance tableaux models of different kind, mainly for the purpose of testing implemented methods and tools presented and discussed in the Algorithmic Decision Theory course lectures at the University of Luxembourg. This chapter introduces the most useful models.
 
-The simplest generic class, called \texttt{RandomPerformanceTableau}, generates a set of $n$ decision actions, a family of $m$ real-valued performance criteria, ranging by default from $0.0$ to $100.0$, associated with default discrimination thresholds: $2.5$ (ind.), $5.0$ (pref.) and $60.0$ (veto). The generated random grades are by default \texttt{Beta(2,2)} distributed on each measurement scale.
+The simplest generic class, called \texttt{RandomPerformanceTableau}, generates a set of $n$ decision actions, a family of $m$ real-valued performance criteria, ranging by default from $0.0$ to $100.0$, associated with default discrimination thresholds: $2.5$ (ind.), $5.0$ (pref.) and $60.0$ (veto). The generated random evaluations are by default \texttt{Beta(2,2)} distributed on each measurement scale.
 
 One of the most useful models, called \texttt{RandomCBPerformanceTableau}\index{}, proposes a performance tableau involving two decision objectives, named \emph{Costs} (to be minimised) respectively \emph{Benefits} (to be maximised); its purpose being to generate more or less contradictory performances on these two, usually conflicting, objectives. \emph{Low costs} will randomly be correlated with \emph{low benefits}, whereas \emph{high costs} will randomly be correlated with \emph{high benefits}.
 
-Many public policy decision problems involve three often conflicting decision objectives taking into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. For this type of performance tableau model, we provide a specific model, called \texttt{Random3ObjectivesPerformanceTableau}.
+Many public policy decision problems involve three often conflicting decision objectives taking into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. For this type of performance tableau model, we provide a specific class, called \texttt{Random3ObjectivesPerformanceTableau}.
 
 Deciding which students, based on the grades obtained in a number of examinations, validate or not their academic studies, is the genuine decision practice of universities and academies. To thoroughly study these kind of decision problems, we provide a corresponding performance tableau model, called \texttt{RandomAcademic\-PerformanceTableau}, which gathers grades obtained by a given number of students in a given number of weighted courses.    
 
-In order to study aggregation of election results (see Chapter~\vref{sec:7}) in the context of bipolar-valued outranking digraphs, we provide furthermore a specific performance tableau model called \texttt{RandomRankPerformanceTableau} which provides ranks (linearly ordered performances without ties) of a given number of election candidates (decision actions) for a given number of weighted voters (performance criteria).
+In order to study aggregation of election results (see Chap.~\vref{sec:7}) in the context of bipolar-valued outranking digraphs, we provide furthermore a specific performance tableau model called \texttt{RandomRankPerformanceTableau} which provides ranks (linearly ordered performances without ties) of a given number of election candidates (decision actions) for a given number of weighted voters (performance criteria).
  
 \section{Random standard performance tableaux}
 \label{sec:6.2}
@@ -165,7 +165,7 @@ The \texttt{randomPerfTabs} module provides a \texttt{RandomCBPerformanceTableau
     ...}
 \end{lstlisting}
 
-In Listing~\vref{list:6.2} one may notice the three types of decision actions (see Lines 12-22), as well as the two types (Lines 24-35) of criteria with either an \emph{ordinal} or a \emph{cardinal} performance measuring scale. In the latter case, by default about $5\%$ of the random performance differences will be below the \emph{indifference} and $10\%$ below the \emph{preference} discriminating threshold. About $5\%$ will be \emph{considerably large}. More statistics about the generated performance grades may be inspected with the \texttt{showStatistics()} method.\index{showStatistics@\texttt{showStatistics()}}
+In Listing~\vref{list:6.2} one may notice the three types of decision actions (see Lines 12-22), as well as the two types (Lines 24-35) of criteria with either an \emph{ordinal} or a \emph{cardinal} performance measuring scale. In the latter case, by default about $5\%$ of the random performance differences will be below the \emph{indifference} and $10\%$ below the \emph{preference} discriminating threshold. About $5\%$ will be \emph{considerably large}. More statistics about the generated performance evaluations can be inspected with the \texttt{showStatistics()} method.\index{showStatistics@\texttt{showStatistics()}}
 \begin{lstlisting}
 >>> t.showStatistics()
     *-------- Performance tableau summary statistics -------*
@@ -459,7 +459,7 @@ In Listing~\vref{list:6.6}, the Course \texttt{m7} evaluation statistics show a 
 \caption{Ranking the students in a performance heatmap view}
 \label{fig:6.6}       % Give a unique label
 \end{figure}
-With a ranked heatmap view on all the grades we now get in Figure~\vref{fig:6.6} a global pictures of the performance of all the eleven students. The ranking shown here, produced with the \NetFlows ranking rule (see Sec.~\ref{sec:8.3}), reports a high correlation of $+0.887$ with the corresponding bipolar-valued outranking digraph (see Chapter~\ref{sec:16}).
+With a ranked heatmap view on all the grades we now get in Figure~\vref{fig:6.6} a global pictures of the performance of all the eleven students. The ranking shown here, produced with the \NetFlows ranking rule (see Sec.~\ref{sec:8.3}), reports a high correlation of $+0.887$ with the corresponding bipolar-valued outranking digraph (see Chap.~\ref{sec:16}).
 
 The \NetFlows ranking represents also a rather \emph{fair weighted consensus} between the individual courses' marginal rankings as is made apparent with the \texttt{showRankingConsensusQuality()} method in Listing~\vref{list:6.7}.\index{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}}
 \begin{lstlisting}[caption={Consensus quality of the students's ranking},label=list:6.7]

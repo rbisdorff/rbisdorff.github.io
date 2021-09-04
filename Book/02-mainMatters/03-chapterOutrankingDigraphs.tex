@@ -20,8 +20,8 @@ A given \texttt{BipolarOutrankingDigraph} object contains hence always at least 
 \begin{enumerate}[topsep=3pt,partopsep=0pt]
 \item \texttt{actions}: An ordered dictionary describing the potential decision actions or alternatives with \texttt{name} and \texttt{comment} attributes,
 \item \texttt{objectives}: A possibly empty ordered dictionary of decision objectives with \texttt{name} and \texttt{comment} attributes, describing the multiple preference dimensions involved in the decision problem, 
-\item \texttt{criteria}: An ordered dictionary of performance criteria, i.e. \emph{preferentially independent} and \emph{non-redundant} decimal-valued grading functions used for measuring the performance of each potential decision action with respect to a decision objective,
-\item \texttt{evaluation}: A double dictionary gathering performance grades for each decision alternative on each criterion function. 
+\item \texttt{criteria}: An ordered dictionary of performance criteria, i.e. \emph{preferentially independent} and \emph{non-redundant} decimal-valued evaluation functions used for measuring the performance of each potential decision action with respect to a decision objective,
+\item \texttt{evaluation}: A double dictionary gathering performance evaluations for each decision alternative on each criterion function. 
 \item \texttt{valuationdomain}: A dictionary with three entries: the minimum ($-1.0$, \emph{certainly outranked}), the median ($0.0$, \emph{indeterminate}) and the maximum characteristic value ($+1.0$, \emph{certainly outranking}),
 \item \texttt{relation}: A double dictionary defined on the Cartesian product of the set of decision alternatives capturing the credibility of the pairwise \emph{outranking situation} computed on the basis of the performance differences observed between couples of decision alternatives on the given family of criteria functions.   
 \end{enumerate}
@@ -54,7 +54,7 @@ Let us consider, for instance, a random bipolar-valued outranking digraph with s
     comment:    RandomPerformanceTableau() generated.
 \end{lstlisting}
 
-In this example we consider a family of seven \emph{equisignificant} cardinal \emph{criteria functions} \texttt{g1}, \texttt{g2}, ..., \texttt{g7}, measuring the performance of each alternative on a rational scale from $0.0$ (worst) to $100.00$ (best). In order to capture the grading procedure's potential \emph{uncertainty} and \emph{imprecision}, each criterion function \texttt{g1} to \texttt{g7} admits three performance \emph{discrimination thresholds} of $2.5$, $5.0$ and $80.0$ pts for warranting respectively any \emph{indifference}, \emph{preference} or \emph{considerable performance difference} situation.
+In this example we consider a family of seven \emph{equisignificant} cardinal \emph{criteria functions} \texttt{g1}, \texttt{g2}, ..., \texttt{g7}, measuring the performance of each alternative on a rational scale from $0.0$ (worst) to $100.00$ (best). In order to capture the evaluation procedures' potential \emph{uncertainty} and \emph{imprecision}, each criterion function \texttt{g1} to \texttt{g7} admits three performance \emph{discrimination thresholds} of $2.5$, $5.0$ and $80.0$ pts for warranting respectively any \emph{indifference}, \emph{preference} or \emph{considerable performance difference} situation.
 \begin{lstlisting}[caption={Inspecting the performance criteria.},label=list:3.2]
 >>> pt.showCriteria()
   *----  criteria -----*
@@ -82,8 +82,8 @@ In this example we consider a family of seven \emph{equisignificant} cardinal \e
 
 On criteria function \texttt{g1} (see Lines 6-8 in List.~\vref{list:3.2}) we observe, for instance, about $5\%$ of \emph{indifference} situations, about $90\%$ of \emph{preference} situations and about $5\%$ of \emph{considerable} performance difference situations.
 
-The individual \emph{performance evaluation} of all decision alternative on each criterion are gathered in a \emph{performance table}.
-\begin{lstlisting}[caption={Inspecting the performance table},label=list:3.3]
+The individual \emph{performance evaluation} of all decision alternative on each criterion are gathered in a \emph{performance table}.\index{showPerformanceTableau@\texttt{showPerformanceTableau()}}
+\begin{lstlisting}[caption={Inspecting the performance evaluations},label=list:3.3]
 >>> pt.showPerformanceTableau()
     *----  performance tableau -----*
      criteria |  'a1'  'a2'  'a3'  'a4'  'a5'  'a6'  'a7'   
@@ -97,7 +97,7 @@ The individual \emph{performance evaluation} of all decision alternative on each
       'g7'    |  82.9  41.7  12.8  21.9  75.7  15.4   6.0  
 \end{lstlisting}
 
-It is noteworthy to mention the three \emph{missing data} (\texttt{NA}) cases: action \texttt{a3} is missing, for instance, a grade on criterion \texttt{g2} (see Line 6 in List.~\vref{list:3.3}).
+It is noteworthy to mention the three \emph{missing data} (\texttt{NA}) cases: action \texttt{a3} is missing, for instance, an evaluation on criterion \texttt{g2} (see Line 6 in List.~\vref{list:3.3}).
     
 \section{The bipolar-valued outranking digraph}
 \label{sec:3.2}
@@ -213,7 +213,7 @@ Notice that the occurrence in a pairwise comparison of conjointly considerable p
 \section{Recoding the characteristic valuation domain}
 \label{sec:3.4}
 
-All outranking digraphs, being of root \texttt{Digraph} type, inherit the methods available under this latter class. The characteristic valuation domain of a digraph may, for instance,  be recoded with the \texttt{recodeValuation()}\index{recodeValuation@\emph{recodeValuation()}} method to the \emph{integer} range $[-7,+7]$, i.e. plus or minus the total significance weights of the family of criteria considered in this example instance \texttt{odg}.
+All outranking digraphs, being of root \texttt{Digraph} type, inherit the methods available under this latter class. The characteristic valuation domain of a digraph can, for instance, be recoded with the \texttt{recodeValuation()}\index{recodeValuation@\emph{recodeValuation()}} method to the \emph{integer} range $[-7,+7]$, i.e. plus or minus the total significance weights of the family of criteria considered in this example instance \texttt{odg}.
 \begin{lstlisting}[caption={Recoding the digraph valuation},label=list:3.8]
 >>> odg.recodeValuation(-37,+37)
 >>> odg.valuationdomain['hasIntegerValuation'] = True
@@ -231,12 +231,12 @@ All outranking digraphs, being of root \texttt{Digraph} type, inherit the method
     Valuation domain: [-7;+7]
 \end{lstlisting}
 
-Notice in Listing~\vref{list:3.8} that the self comparison characteristics $r(x \succsim x)$ may be ignored by setting the \texttt{ReflexiveTerms} Boolean parameter to \texttt{False}. The case given, the diagonal reflexive terms are all shown with the \emph{indeterminate} characteristic value $0$. Mind that the trivial reflexive terms of outranking relations may be ignored in some of the \Digraph methods. 
+Notice in Listing~\vref{list:3.8} that the self comparison characteristics $r(x \succsim x)$ may be ignored by setting the \texttt{ReflexiveTerms} Boolean parameter to \texttt{False}. The case given, the diagonal reflexive terms are all shown with the \emph{indeterminate} characteristic value $0$. Mind that the trivial reflexive terms of outranking relations are ignored in some of the \Digraph methods. 
 
 \section{The strict outranking digraph}
 \label{sec:3.5}
 
-From theory we know that a bipolar-valued outranking digraph is \emph{weakly complete}, i.e. if $r(x,y) < 0.0$ then $r(y,x) \geq 0.0$ \citep{BIS-2013, ADT-L7}. From this property follows that a bipolar-valued outranking relation verifies the \emph{coduality principle}\index{coduality principle}: the \emph{dual}\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.} (strict negation $-$) of the \emph{converse} (inverse $\sim$) of the outranking relation corresponds to its asymmetric \emph{strict outranking} part.
+From theory we know that a bipolar-valued outranking digraph is \emph{weakly complete}, i.e. if $r(x \succsim y) < 0.0$ then $r(y \succsim x) \geq 0.0$ \citep{BIS-2013, ADT-L7}. From this property follows that a bipolar-valued outranking relation verifies the \emph{coduality principle}\index{coduality principle}: the \emph{dual}\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.} (strict negation $-$) of the \emph{converse} (inverse $\sim$) of the outranking relation corresponds to its asymmetric \emph{strict outranking} part $r(x \succnsim y)$.
 
 We may visualize the \emph{codual} (\emph{strict}) outranking digraph with a graphviz drawing \footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}.\index{graphviz}
 \begin{lstlisting}
@@ -249,7 +249,7 @@ We may visualize the \emph{codual} (\emph{strict}) outranking digraph with a gra
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/3-1-codualOdg.pdf}
-\caption{The codual outranking digraph. It becomes readily clear now from the picture above that both alternatives \texttt{a1}  and \texttt{a7} are {\em not outranked\/} by any other alternatives. Hence, \texttt{a1}  and \texttt{a7} appear as \emph{weak} \Condorcet winners and may be recommended as potential \emph{best} decision alternatives in this illustrative preference modelling example}
+\caption{The codual outranking digraph. It becomes readily clear now from the picture above that both alternatives \texttt{a1}  and \texttt{a7} are \emph{not outranked} by any other alternatives. Hence, \texttt{a1}  and \texttt{a7} appear as \emph{weak} \Condorcet winners and may be recommended as potential \emph{best} decision alternatives in this illustrative preference modelling example}
 \label{fig:3.1}       % Give a unique label
 \end{figure}
  
