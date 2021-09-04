@@ -473,7 +473,7 @@ In the resulting linear ranking (see Fig.~\vref{fig:17.9}), alternative \texttt{
 \section{Tractability of kernel computation}
 \label{sec:17.5}
 
-Let us give some hints on the \emph{tractability} of prekernel computations. Detecting all prekernels in a digraph is a famously NP-hard computational problem. Checking external stability conditions for an independent choice is equivalent to checking its maximality and may be done in the linear complexity of the order of the digraph. However, checking all independent choices contained in a digraph may get hard already for tiny sparse digraphs of order $n > 20$ (see \citep{BIS-2006b}). Indeed, the worst case is given by an empty or indeterminate digraph where the set of all potential independent choices to check is in fact the power set of the vertices.
+Let us give some hints on the \emph{tractability} of prekernel computations. Detecting all prekernels in a digraph is a famously NP-hard computational problem. Checking external stability conditions for an independent choice is equivalent to checking its maximality and may be done in the linear complexity of the order of the digraph. However, checking all independent choices contained in a digraph may get hard already for tiny sparse digraphs of order $n > 20$ (see \citealp{BIS-2006b}). Indeed, the worst case is given by an empty or indeterminate digraph where the set of all potential independent choices to check is in fact the power set of the vertices.
 \begin{lstlisting}
 >>> from digraphs import EmptyDigraph
 >>> e = EmptyDigraph(order=20)
@@ -487,7 +487,7 @@ Let us give some hints on the \emph{tractability} of prekernel computations. Det
   1048576
 \end{lstlisting}
 
-Now, there exist more efficient specialised algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices (see \citep{BIS-2006b}). \emph{Alain Hertz}\index{Hertz@\emph{A. Hertz}} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method)\index{showMISAH@\texttt{showMIS\_AH}()}. When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 7 above and Line 15 below).
+Now, there exist more efficient specialised algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices (see \citealp{BIS-2006b}). \emph{Alain Hertz}\index{Hertz@\emph{A. Hertz}} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method)\index{showMISAH@\texttt{showMIS\_AH}()}. When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 7 above and Line 15 below).
 \begin{lstlisting}[caption={Enumerating MISs by visiting only maximal independent choices (\emph{A. Hertz}) },label=list:17.15]
 >>> e.showMIS_AH()
   # by visiting only maximal independent choices
@@ -533,7 +533,7 @@ def independentChoices(self,U):
                 yield Sx
 \end{lstlisting}
 
-And, checking maximality of independent choices via the external stability conditions during their enumeration with the \texttt{computePreKernels()} method shown in Listing~\vref{list:17.17} provides the effective advantage of computing all initial and terminal prekernels in a single loop (see Line 10 and \citep{BIS-2006b}).
+And, checking maximality of independent choices via the external stability conditions during their enumeration with the \texttt{computePreKernels()} method shown in Listing~\vref{list:17.17} provides the effective advantage of computing all initial and terminal prekernels in a single loop (see Line 10 and \citealp{BIS-2006b}).
 \begin{lstlisting}[caption={Computing dominant and absorbent preKernels},label=list:17.17]
 def computePreKernels(self):
     """
@@ -812,7 +812,7 @@ It is M. Roubens\index{Roubens@\textsl{M. Roubens}} who in Spring 1995, by comme
 
 In our present Python3.9 implementation, such a tiny problem is solved in less than a thousandth of a second on a common laptop. And this remains practically the same for any relevant example of outranking digraph observed in a real decision aid problem. Several times we wrote in our personal journal that there is certainly now no more potential for any substantial improvement of this computational efficiency; Only to discover, shortly later, that following a new theoretical idea or choosing a more efficient implementation –-using for instance the amazing instrument of iterator generators in Python–-, execution times could well be divided by 20.
 
-This nowadays available computational efficiency confers the bipolar-valued kernel concept a methodological premium for solving specific decision problems on the basis of the bipolar-valued outranking digraph (see Chapter~\ref{sec:4} and Chapter~\ref{sec:12}). But it also opens new opportunities for verifying and implementing kernel extraction algorithms for more graph theoretical purposes. New results, like enumerating the non isomorphic maximal independent sets --the kernels-- of known difficult graph instances like the n-cycle, could be obtained (see Sec.~\ref{sec:21.7} and \citealp*{ISO-2008}).
+This nowadays available computational efficiency confers the bipolar-valued kernel concept a methodological premium for solving specific decision problems on the basis of the bipolar-valued outranking digraph (see Chap.~\ref{sec:4} and Chap.~\ref{sec:12}). But it also opens new opportunities for verifying and implementing kernel extraction algorithms for more graph theoretical purposes. New results, like enumerating the non isomorphic maximal independent sets --the kernels-- of known difficult graph instances like the n-cycle, could be obtained (see Sec.~\ref{sec:21.7} and \citealp*{ISO-2008}).
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

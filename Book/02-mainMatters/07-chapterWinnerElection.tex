@@ -34,7 +34,7 @@ The \texttt{votingProfiles}\index{votingProfiles@\texttt{votingProfiles} module}
  \end{lstlisting}
 
 The \texttt{LinearVotingProfile} data concerning the eligible candidates and the voters is internally stored in two ordered dictionaries: attribute \texttt{candidates} (Lines 6-9) and attribute \texttt{voters} (Lines 10-15). Notice that in this random example, the five voters are weighted. The linear voting ballots are stored in a standard dictionary: attribute \texttt{linearBallot} (Lines 16-21). These ballots can be inspected with the \texttt{showLinearBallots()}\index{showLinearBallots@\texttt{showLinearBallots()}} method.
-\begin{lstlisting}[caption={Shoe linera voting profiles},label=list:7.2]
+\begin{lstlisting}[caption={Showing linear voting profiles},label=list:7.2]
 >>> lvp.showLinearBallots()
     voters(weight)	 candidates rankings
     v1(2): 	 ['c2', 'c1', 'c3']
