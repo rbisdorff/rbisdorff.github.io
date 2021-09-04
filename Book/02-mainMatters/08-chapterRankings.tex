@@ -154,7 +154,7 @@ The \Copeland scores, shown in Listing~\vref{list:8.3} deliver actually only a \
    1st last ranked ['a2']
 \end{lstlisting}
 
-In Listing~\vref{list:8.5}, the \texttt{WeakCopelandOrder} class\index{WeakCopelandOrder@\texttt{WeakCopelandOrder} class} from the \texttt{transitiveDigraphs} module\index{transitiveDigraphs@\texttt{transitiveDigraphs} module} models the same preorder as delivered by the \Copeland scores (see List.~\vref{list:8.3}). We may draw its corresponding skeleton\footnote{The skeleton of a transitive relation drops the transitivity induced arcs.}.
+In Listing~\vref{list:8.5}, the \texttt{WeakCopelandOrder} class\index{WeakCopelandOrder@\texttt{WeakCopelandOrder} class} from the \texttt{transitiveDigraphs} module\index{transitiveDigraphs@\texttt{transitiveDigraphs} module} models the preorder delivered by the \Copeland scores (see List.~\vref{list:8.3}). We may draw its corresponding skeleton\footnote{The skeleton of a transitive relation drops the transitivity induced arcs.}.
 \begin{lstlisting}
 >>> wcop.exportGraphViz(fileName='weakCopelandRanking')
  *---- exporting a dot file for GraphViz tools ---------*
@@ -201,7 +201,7 @@ The \texttt{NetFlowsRanking} class\index{NetFlowsRanking@\texttt{NetFlowsRanking
 
 In Listing~\vref{list:8.6} here, the net-flow scores actually deliver a linear ranking \emph{without ties} which is rather different from the one delivered by the \Copeland rule (compare Lines 14 and 16). It may happen, however, that we obtain, as with the \Copeland scores above, only a ranking with ties, which may then be resolved similarly by following a lexicographic rule applied to the identifiers of the decision alternatives. In such cases, it is possible to construct again a \emph{weak ranking} with the corresponding \texttt{WeakNetFlowsOrder} class\index{WeakNetFlowsOrder@\texttt{WeakNetFlowsOrder} class} from the \texttt{transitiveDigraphs} module.\index{transitiveDigraphs@\texttt{transitiveDigraphs} module}
 
-It is worthwhile noticing again, that similar to the \Copeland ranking rule seen before, the \NetFlows ranking rule is also \emph{invariant} under the codual transform (see Sec.~\ref{sec:2.6}) and delivers again the same ranking result indifferently from digraph \texttt{g} or \texttt{gcd}. 
+It is worthwhile noticing again, that similar to the \Copeland ranking rule seen before, the \NetFlows ranking rule is also \emph{invariant} under the codual transform (see Sec.~\ref{sec:2.6}) and delivers the same ranking result indifferently from digraph \texttt{g} or \texttt{gcd}. 
 
 The \NetFlows ranking result appears to be better correlated ($+0.638$ vs. $+0.463$) with the given strict outranking relation than its crisp cousin, the \Copeland ranking (see Lines 4-6 in List.~\vref{list:8.7}).
 \begin{lstlisting}[caption={Checking the quality of the \NetFlows Ranking},label=list:8.7]   
