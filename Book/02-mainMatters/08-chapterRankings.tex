@@ -87,7 +87,7 @@ The \texttt{computeTransitivityDegree()} method\index{computeTransitivityDegree@
 
 With only $49\%$ of the required transitive arcs, the strict outranking digraph \texttt{gcd} is hence very far from being transitive; a serious problem when a linear ordering of the decision alternatives is looked for.
 
-Let us furthermore check whether there are any cyclic outranking situations.
+The \texttt{computeChordlessCircuits()} method\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}} followed by the \texttt{showChordlessCircuits()} method\index{showChordlessCircuits@\texttt{showChordlessCircuits()}} can check furthermore whether there appear any cyclic outranking situations.\footnote{The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods are separate because there are various methods available for enumerating the chordless circuits in a digraph \citep{BIS-2010}.}
 \begin{lstlisting}
 >>> gcd.computeChordlessCircuits()
 >>> gcd.showChordlessCircuits()

@@ -353,7 +353,7 @@ A corresponding digraph constructor is provided by the \texttt{RobustOutranking\
 
 In the resulting digraph instance \texttt{rdg} (see Line 9 in Listing~\vref{list:13.7}), we observe $2993$ such robust pairwise outranking situations validated with a mean significance of $78\%$ (Line 10). Unfortunately, in the case here, they do not deliver any complete linear ranking. The robust outranking digraph \texttt{rdg} contains 102 incomparability situations ($3.7\%$, Line 15); nearly half of its transitive closure is missing ($46.1\%$, Line 19) and $12\%$ of the positive outranking situations correspond in fact to symmetric indifference situations (Line 23).
 
-Worse even, the digraph \texttt{rdg} admits a really high number of outranking circuits.\index{showChordlessCircuits@\texttt{showChordlessCircuits()}}
+Worse even, the digraph \texttt{rdg} admits a really high number of outranking circuits \footnote{The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods are separate because there are various methods available for enumerating the chordless circuits in a digraph \citep{BIS-2010}.}.\index{showChordlessCircuits@\texttt{showChordlessCircuits()}}
 \begin{lstlisting}[caption={Inspecting outranking circuits},label=list:13.8]
 >>> rdg.computeChordlessCircuits()
 >>> rdg.showChordlessCircuits()

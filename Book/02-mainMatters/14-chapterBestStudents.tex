@@ -196,10 +196,9 @@ A corresponding \emph{graphviz} drawing with the special \texttt{exportRatingByR
 \end{figure}
 % \clearpage 
 
-We have noticed in Chapter~\ref{sec:8}, that there is not a unique optimal rule for ranking from a given outranking digraph like digraph \texttt{lqr} here. The \Copeland rule, for instance, has the advantage of being \Condorcet consistent, i.e. when the outranking digraph models a linear ranking, this ranking will necessarily be the result of the \Copeland rule. When this is not the case, and especially when the outranking digraph shows chordless circuits, all potential ranking rules may give very divergent ranking results, and sometimes substantially divergent rating-by-ranking results. The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods allow to check this issue.
+We have noticed in Chapter~\ref{sec:8}, that there is not a unique optimal rule for ranking from a given outranking digraph like digraph \texttt{lqr} here. The \Copeland rule, for instance, has the advantage of being \Condorcet consistent, i.e. when the outranking digraph models a linear ranking, this ranking will necessarily be the result of the \Copeland rule. When this is not the case, and especially when the outranking digraph shows chordless circuits, all potential ranking rules may give very divergent ranking results, and sometimes substantially divergent rating-by-ranking results. The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods allow to check this issue \footnote{The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods are separate because there are various methods available for enumerating the chordless circuits in a digraph \citep{BIS-2010}.}.
 \begin{lstlisting}
 >>> lqr.computeChordlessCircuits()
-[(['U1', 'U2', 'U4'], frozenset({'U2', 'U4', 'U1'}))]
 >>> lqr.showChordlessCircuits()
 *---- Chordless circuits ----*
 1 circuits.

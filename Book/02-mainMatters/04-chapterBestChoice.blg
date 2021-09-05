@@ -4,44 +4,44 @@ The top-level auxiliary file: 02-mainMatters/04-chapterBestChoice.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 11 entries,
+You've used 12 entries,
             3269 wiz_defined-function locations,
-            746 strings with 6887 characters,
-and the built_in function-call counts, 9381 in all, are:
-= -- 867
-> -- 184
-< -- 10
-+ -- 67
-- -- 56
-* -- 784
-:= -- 1320
-add.period$ -- 11
-call.type$ -- 11
-change.case$ -- 74
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 871
-empty$ -- 900
-format.name$ -- 78
-if$ -- 1979
+            754 strings with 7160 characters,
+and the built_in function-call counts, 10038 in all, are:
+= -- 923
+> -- 194
+< -- 12
++ -- 71
+- -- 59
+* -- 827
+:= -- 1413
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 82
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 931
+empty$ -- 968
+format.name$ -- 82
+if$ -- 2125
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 93
-newline$ -- 43
-num.names$ -- 46
-pop$ -- 196
+missing$ -- 101
+newline$ -- 46
+num.names$ -- 50
+pop$ -- 214
 preamble$ -- 1
-purify$ -- 62
+purify$ -- 67
 quote$ -- 0
-skip$ -- 175
+skip$ -- 197
 stack$ -- 0
-substring$ -- 1037
-swap$ -- 196
-text.length$ -- 2
+substring$ -- 1083
+swap$ -- 217
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 105
 warning$ -- 0
-while$ -- 66
+while$ -- 72
 width$ -- 0
-write$ -- 132
+write$ -- 145
