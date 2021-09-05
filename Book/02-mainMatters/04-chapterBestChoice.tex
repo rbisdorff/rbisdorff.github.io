@@ -68,7 +68,7 @@ The decision consequences to take into account for evaluating the potential new 
   \end{center}
 \end{table}
 
-In Table~\vref{tab:4.2} we notice that the \emph{Costs} criterion admits the highest significance weight ($45$), followed by the \emph{Future turnover} criteria $(32 + 26 + 23 = 81)$, The \emph{Working conditions} criteria are the less significant $(10 + 6 + 3 = 19)$ \footnote{These criteria weights were supposedly established with a swing weighing MCDA method \citep{KEE-1976}.}. It follows that the CEO considers \emph{maximising the future turnover} the most important objective ($81.0$), followed by minimising the future yearly costs ($45.0$), and less important, \emph{maximising working conditions} ($19.0$). 
+In Table~\vref{tab:4.2} we notice that the \emph{Costs} criterion admits the highest significance weight ($45$), followed by the \emph{Future turnover} criteria $(32, 26, 23)$, The \emph{Working conditions} criteria are the less significant $(10, 6, 3)$ \footnote{These criteria weights were supposedly established with a swing weighing MCDA method \citep{KEE-1976}.}. It follows that the CEO considers \emph{maximising the future turnover} the most important objective ($(32 + 26+ 23) = 81.0$), followed by minimising the future yearly costs ($45.0$), and less important, \emph{maximising working conditions} ($(10 + 6 + 3) = 19.0$). 
 
 The evaluation of the seven potential new sites on each performance criterion are gathered in a \emph{performance table} shown in Table~\vref{tab:4.3}.
 \begin{table}[ht]
@@ -238,8 +238,8 @@ From theory, we know that outranking digraphs are \emph{weakly complete}\index{w
 \end{itemize}
 \end{definition}
 
-Following from the coduality principle, the strict outranking digraph \texttt{bodcd} is build from the ooutranking digraph \texttt{bod} with a codual transform\index{codual transform}.
-\begin{lstlisting}
+Following from the coduality principle, the strict outranking digraph \texttt{bodcd} is build from the ooutranking digraph \texttt{bod} with a codual transform\index{codual transform} (see Sec.~\ref{sec:2.6}).
+\begin{lstlisting} 
 >>> bodcd = ~(-bod)  # codual tranform
 >>> bodcd
 *------- Object instance description ------*
@@ -267,20 +267,17 @@ Our five \emph{pragmatic principles} for computing such a \emph{best-choice reco
 \item [P5:] \emph{Maximally determined}; the BCR is, of all potential best-choice recommendations, the most determined one in the sense of the characteristics of the bipolar-valued outranking relation.
 \end{itemize}
 
-Let $X$ be the set of potential decision alternatives. Let $Y$ be a non empty subset of $X$, called a \emph{choice} in the strict outranking digraph $G(X,r(\succnsim )$. A \emph{weakly independent} and \emph{outranking} (resp. \emph{outranked}) choice is called an \emph{outranking} (resp. \emph{outranked}) strict \emph{prekernel} (see Chapter~\ref{sec:17} on computing kernels in digraphs).
-
-We may now qualify a BCR $Y$ in the following terms:
-
+Let $X$ be the set of potential decision alternatives. Let $Y$ be a non empty subset of $X$, called a \emph{choice} in the strict outranking digraph $G(X,r(\succnsim )$. We may now qualify a BCR $Y$ in the following terms:
 \begin{itemize}[leftmargin=0.5cm,listparindent=0em]
 \item [-] $Y$ is called strictly \emph{outranking} (resp. \emph{outranked}) when for all not selected alternative $x$ there exists an alternative $y \in X$ retained such that $r(y \succnsim x) > 0.0$ (resp. $r(y \precsim x) > 0.0$). Such a choice verifies principle P1.
 \item [-] $Y$ is called \emph{weakly independent} when for all $x \neq y$ in $Y$ , we observe $r(x \succnsim y) \leq 0.0$. Such a choice verifies principles P3 (\emph{internal stability}).
-\item [-] $Y$ is an initial (resp. terminal) prekernel, i.e. conjointly a strictly \emph{outranking} (resp. \emph{outranked}) \textbf{and} \emph{weakly independent} choice. This choice now verifies principles P1, P2, P3 and P4.
-\item [-] To finally verify principle P5, we recommend among all potential strict outranking (resp. strict outranked) prekernels, the \emph{most determined} one, i.e. the one supported with the highest criteria significance. And in this prekernel we eventually retain the alternatives that are included in this prekernel with highest criteria significance (see Sec.~\ref{sec:17.6}).
+\item [-] $Y$ is conjointly a strictly \emph{outranking} (resp. \emph{outranked}) \textbf{and} \emph{weakly independent} choice. This choice now verifies principles P1, P2, P3 and P4.
+\item [-] To finally verify principle P5, we recommend among all potential strict outranking and weakly independent choices, the \emph{most determined} one, i.e. the choice supported by the highest criteria significance. Such a choice is called a \emph{prekernel} (see Chap.~\ref{sec:17} on computing kernels in digraphs). And in this choice we eventually retain the alternatives that are included in this prekernel with highest criteria significance (see Sec.~\ref{sec:17.6}).
 \end{itemize}
 
 Following this best choice algorithm\index{outranking!Rubis best choice recommendation}, our potential best choice recommendations are determined by the initial \emph{prekernels}\index{prekernel} --\emph{weakly independent} and dominant choices-- of the \emph{strict outranking} digraph \texttt{bodcd} (see \citealp{BIS-2008a}). If not reduced to a singleton, the actual \emph{best choice recommendation} will have to be refined in a later stage of the decision process.
 
-Mind that a given strict outranking digraph \texttt{bodcd} may not always admit any outranking (resp. outranked) prekernels. This is the case when \texttt{bodcd} contains chordless odd circuits. The case given, we previously need to break open with the \texttt{BrokenCocsDigraph} class all these chordless odd circuits at their weakest link \citep{BIS-2021b}.\index{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class}
+Mind that a given strict outranking digraph \texttt{bodcd} may not always admit any prekernels. This is the case when \texttt{bodcd} contains chordless odd circuits. The case given, we previously need to break open with the \texttt{BrokenCocsDigraph} class all these chordless odd circuits at their weakest link \citep{BIS-2021b}.\index{BrokenCocsDigraph@\texttt{BrokenCocsDigraph} class}
 \begin{lstlisting}
 >>> from digraphs import BrokenCocsDigraph
 >>> bcg = BrokenCocsDigraph(bodcd)
@@ -299,7 +296,7 @@ Luckily, our strict outranking digraph \texttt{bodcd} here does not show any cho
 \section{Computing a best choice recommendation}
 \label{sec:4.5}
 
-To compute now our \Rubis best choice recommendation\index{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}} we work in Listing~\vref{list:4.4} Line 2 on the \emph{codual} (strict) outranking digraph \index{codual digraph}, i.e. the converse ($\sim$) of the dual ($-$), of the outranking digraph instance \texttt{bod} \citep{BIS-2013}.\footnote{See Sec.~\ref{sec:2.6}}:
+The \texttt{showBestChoiceRecommendation()} method\index{showBestChoiceRecommendation@\texttt{showBestChoiceRecommendation()}} computes now the \Rubis best choice recommendation directly from the outranking digraph $bod$. By default this method is operating on the \emph{codual} (strict) outranking digraph (see List.~\vref{list:4.4} Line 2):
 \begin{lstlisting}[caption={Computing the best choice recommendation},label=list:4.4]
 >>> bod.showBestChoiceRecommendation(\
 ...              CoDual=True, # default setting\
