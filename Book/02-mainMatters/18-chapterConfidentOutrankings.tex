@@ -72,7 +72,7 @@ If $w = 1$, $E\big(\tilde{r}(x \geq y)\big)\, = \, 1$ and $sd\big(\tilde{r}(x \g
 A \emph{Monte Carlo} simulation with $10\,000$ runs empirically confirms the effective convergence to a Gaussian (see Fig.~\vref{fig:18.3} realised with \emph{gretl} \footnote{The Gnu Regression, Econometrics and Time-series Library http://gretl.sourceforge.net/ .}.
 \begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=\hsize]{Figures/simulLikelihood.pdf}
+\includegraphics[width=\hsize]{Figures/18-3-simulLikelihood.pdf}
 \caption{Distribution of $10\,000$ random outranking characteristic values.}
 \label{fig:18.3}       % Give a unique label
 \end{figure}
@@ -197,8 +197,8 @@ Figure~\vref{fig:18.4} shows the corresponding strict $90\%$-confident outrankin
        absorbency   :  0.2857
        covered      :  0.583
 >>> gcd90.exportGraphViz(fileName='confidentOutranking',
-...        bestChoice=['a1', 'a7'],\
-...        worstChoice=['a2', 'a5', 'a6'])
+...        firstChoice=['a1', 'a7'],\
+...        lastChoice=['a2', 'a5', 'a6'])
   *---- exporting a dot file for GraphViz tools ----*
    Exporting to confidentOutranking.dot
    dot -Grankdir=BT -Tpng confidentOutranking.dot\
@@ -206,7 +206,7 @@ Figure~\vref{fig:18.4} shows the corresponding strict $90\%$-confident outrankin
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=6cm]{Figures/confidentOutranking.png}
+\includegraphics[width=7cm]{Figures/18-4-confidentOutranking.pdf}
 \caption{90\%-confident strict outranking digraph oriented by its initial and terminal prekernels}
 \label{fig:18.4}       % Give a unique label
 \end{figure}
@@ -277,7 +277,7 @@ For concluding, it is worthwhile noticing again that it is in fact the \emph{neu
  
 %%%%%%% The chapter bibliography
 %\normallatexbib
-\clearpage
+%\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
 %\input{02-mainMatters/18-chapterConfidentOutrankings.bbl}

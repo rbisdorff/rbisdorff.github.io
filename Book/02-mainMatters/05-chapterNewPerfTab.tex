@@ -356,15 +356,15 @@ In Listing~\vref{list:5.7}, the \texttt{showRelationTable()} method\index{showRe
 One may notice in this outranking relation table above that decision alternative \texttt{a2} positively \emph{outranks} all the other four alternatives  (Line 6). Similarly, alternative \texttt{a5} is positively \emph{outranked} by all the other alternatives (see Line 9). We can orient this way the \emph{graphviz} drawing of the template outranking digraph. 
 \begin{lstlisting}
 >>> bod.exportGraphViz(fileName= 'template',\
-...                  bestChoice =['a2'],\
-...                  worstChoice=['a5'])
+...                  firstChoice =['a2'],\
+...                  lastChoice=['a5'])
   *---- exporting a dot file for GraphViz tools ------*
    Exporting to template.dot
    dot -Grankdir=BT -Tpng template.dot -o template.png
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=4cm]{Figures/5-1-template.pdf}
+\includegraphics[width=5cm]{Figures/5-1-template.pdf}
 \caption{The template outranking digraph models in fact a \emph{partial order} on the five potential decision alternatives}
 \label{fig:5.1}       % Give a unique label
 \end{figure}

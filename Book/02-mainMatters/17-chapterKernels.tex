@@ -1,9 +1,9 @@
 \chapter{On computing digraph kernels}
 \label{sec:17}
 
-\abstract*{ We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralised outranking digraphs, initial and terminal kernels become separate and may deliver suitable best resp. worst choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued kernel equation systems.}
+\abstract*{ We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralised outranking digraphs, initial and terminal kernels become separate and may deliver suitable first resp. last choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued kernel equation systems.}
 
-\abstract{We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralised outranking digraphs, initial and terminal kernels become separate and may deliver suitable best resp. worst choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued kernel equation systems.}
+\abstract{We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralised outranking digraphs, initial and terminal kernels become separate and may deliver suitable first resp. last choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued kernel equation systems.}
 
 \section{What is a graph kernel ?}
 \label{sec:17.1}
@@ -337,8 +337,8 @@ Now, we know that its potential prekernels must be among its set of maximal inde
 Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in List.~\vref{list:17.11}) we discover two initial and two terminal kernels (Lines 12, 17, 23, 28). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels}()} method (Lines 16, 21, 27 and 32). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. We may hence redraw the same digraph in Fig.~\vref{fig:17.5} by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{\texttt{a3}, \texttt{a4}\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{\texttt{a1}, \texttt{a6}\} (coloured in blue).
 \begin{lstlisting}
 >>> rd.exportGraphViz(fileName='orientedLaterality',\
-...                   bestChoice=set(['a3', 'a4']),\
-...                   worstChoice=set(['a1', 'a6']))
+...                   firstChoice=set(['a3', 'a4']),\
+...                   lastChoice=set(['a1', 'a6']))
   *---- exporting a dot file for GraphViz tools ----*
    Exporting to orientedLaterality.dot
    dot -Grankdir=BT -Tpng orientedLaterality.dot\
@@ -412,8 +412,8 @@ The associated random performance tableau shown in Fig.~\vref{fig:17.6} reveals 
        covered      :  0.800
 \end{lstlisting}
 
-With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in List.~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralised. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \emph{best}, resp. \emph{worst}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
-\begin{lstlisting}[caption={Computing a best and worst choice recommendation from digraph \texttt{gcd}},label=list:17.14]
+With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in List.~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralised. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \emph{first}, resp. \emph{last}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
+\begin{lstlisting}[caption={Computing a first and last choice recommendation from digraph \texttt{gcd}},label=list:17.14]
 >>> g.showBestChoiceRecommendation()
   Rubis best choice recommendation(s) (BCR)
    (in decreasing order of determinateness)   
@@ -439,11 +439,11 @@ With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in 
 
 Notice in Lines 13 and 21 in Listing~\vref{list:17.14} that solving the valued \Berge kernel equations provides furthermore a positive characterisation of the most credible decision alternatives in each respective choice recommendation. Alternatives \texttt{a2} and \texttt{a4} give equivalent candidates for a unique \emph{first} choice, and alternative \texttt{a7} is clearly confirmed as the \emph{last} choice.
 
-In Fig.~\vref{fig:17.8}, we orient the drawing of the strict outranking digraph instance with the help of these best and worst choice recommendations. 
+In Fig.~\vref{fig:17.8}, we orient the drawing of the strict outranking digraph instance with the help of these first and last choice recommendations. 
 \begin{lstlisting}
 >>> gcd.exportGraphViz(fileName='bestWorstOrientation',\
-...                    bestChoice=['a2','a4'],\
-...                    worstChoice=['a7'])
+...                    firstChoice=['a2','a4'],\
+...                    lastChoice=['a7'])
   *---- exporting a dot file for GraphViz tools -----*
    Exporting to bestWorstOrientation.dot
    dot -Grankdir=BT -Tpng bestWorstOrientation.dot\
@@ -452,7 +452,7 @@ In Fig.~\vref{fig:17.8}, we orient the drawing of the strict outranking digraph 
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/17-8-bestWorstOrientation.pdf}
-\caption{The strict outranking digraph oriented by its best and worst choice recommendations. The gray arrows, like the one between alternatives \texttt{a4} and \texttt{a1}, represent indeterminate preferential situations. Alternative \texttt{a1} appears hence to be rather incomparable to all the other, except alternative \texttt{a7}}
+\caption{The strict outranking digraph oriented by its first and last choice recommendations. The gray arrows, like the one between alternatives \texttt{a4} and \texttt{a1}, represent indeterminate preferential situations. Alternative \texttt{a1} appears hence to be rather incomparable to all the other, except alternative \texttt{a7}}
 \label{fig:17.8}       % Give a unique label
 \end{figure}
 

@@ -96,7 +96,7 @@ The \texttt{RandomPerformanceTableau} class\index{RandomPerformanceTableau@\text
 \label{fig:6.1}       % Give a unique label
 \end{figure}
 
-Best and worst performance on each criterion are marked in \emph{light green}, respectively in \emph{light red}. Notice that missing (\texttt{NA}) evaluation are registered in a performance tableau by default as \texttt{Decimal('-999')} value (see List.~\vref{list:6.1} Line 28-29).	    
+Best and worst evaluation on each criterion are marked in \emph{light green}, respectively in \emph{light red}. Notice that missing (\texttt{NA}) evaluations are recorded in a performance tableau by default as \texttt{Decimal('-999')} value (see List.~\vref{list:6.1} Line 28-29).	    
 
 \section{Random Cost-Benefit performance tableaux}
 \label{sec:6.3}
@@ -309,7 +309,7 @@ We may inspect in Figure~\vref{fig:6.3} the given random three-objectives perfor
 \label{fig:6.3}       % Give a unique label
 \end{figure}
 
-Light green cells show best performances and light red worst performances. Policy \texttt{p1} shows thus the worst performance ($17.09/100.00$) on the environmental criterion \texttt{en09}, whereas policy \texttt{p3} shows the best performances on four out of the six \emph{environmental} criteria.
+Light green cells show the highest and light red the lowest evaluations. Policy \texttt{p1} shows thus the weakest performance ($17.09/100.00$) on the environmental criterion \texttt{en09}, whereas policy \texttt{p3} shows the best performances on four out of the six \emph{environmental} criteria.
 
 No trivial best choice becomes apparent when looking at the performance tableau shown in Figure~\vref{fig:6.3}. Let us therefore compute a \Rubis best choice recommendation (see Chapter~\vref{sec:4}).
 \begin{lstlisting}[caption={What is the public policy to recommend as best choice ?},label=list:6.4]
@@ -321,7 +321,7 @@ No trivial best choice becomes apparent when looking at the performance tableau 
   Rubis best choice recommendation(s) (BCR)
   (in decreasing order of determinateness)   
   Credibility domain: [-1.00,1.00]
-  === >> potential best choice(s)
+  === >> potential first choice(s)
   * choice              : ['p3', 'p4', 'p5', 'p6']
    independence        : 0.00
    dominance           : 0.17
@@ -329,7 +329,7 @@ No trivial best choice becomes apparent when looking at the performance tableau 
    covering (%)        : 41.67
    determinateness (%) : 52.98
    - most credible action(s) = { 'p3': 0.17, }
-  === >> potential worst choice(s) 
+  === >> potential last choice(s) 
   * choice              : ['p1', 'p2', 'p5', 'p7']
    independence        : 0.00
    dominance           : -0.44
@@ -339,11 +339,11 @@ No trivial best choice becomes apparent when looking at the performance tableau 
    - most credible action(s) = { 'p7': 0.06, }
 \end{lstlisting}
 
-Policy \texttt{p3} gives the most credible best choice candidate with the support of a $57.5\%$ majority of significance, whereas policy \texttt{p7} appears to be the weakest choice. Policy \texttt{p5} gives an ambiguous best and worst choice candidate. A drawing of the strict outranking digraph oriented by best and worst choices gives a more complete preferential picture (see Fig.~\vref{fig:6.4}).
+Policy \texttt{p3} gives a credible best choice candidate with the support of a $57.5\%$ majority of significance, whereas policy \texttt{p7} gives a credible last choice. Policy \texttt{p5} represents an ambiguous first and last choice candidate. A drawing of the strict outranking digraph oriented by first and last choices gives a more complete preferential picture (see Fig.~\vref{fig:6.4}).
 \begin{lstlisting}
 >>> (~(-g)).exportGraphViz(\
 ...             fileName='3ObjPerfTabBestChoice',\
-...             bestChoice=['p3'],worstChoice=['p7'])
+...             firstChoice=['p3'],lastChoice=['p7'])
   *---- exporting a dot file for GraphViz tools ---------*
    Exporting to 3ObjPerfTabBestChoice.dot
    dot -Grankdir=BT -Tpng 3ObjPerfTabBestChoice.dot\
@@ -352,7 +352,7 @@ Policy \texttt{p3} gives the most credible best choice candidate with the suppor
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/6-4-3ObjPerfTabBestChoice.pdf}
-\caption{The strict outranking digraph oriented by best and worst choices. Policy \texttt{p5} is indeed incomparable --in a strict outranking sense-- to all the other six policies. Policies \texttt{p1}, \texttt{p2} and \texttt{p7} appear strictly outranked}
+\caption{The strict outranking digraph oriented by first and last choices. Policy \texttt{p5} is indeed incomparable --in a strict outranking sense-- to all the other six policies. Policies \texttt{p1}, \texttt{p2} and \texttt{p7} appear strictly outranked}
 \label{fig:6.4}       % Give a unique label
 \end{figure}
 
@@ -364,7 +364,7 @@ A heatmap view on the \Copeland ranked performance tableau confirms the best cho
 \end{lstlisting}
 \begin{figure}[ht]
 %\sidecaption[t]
-\includegraphics[width=\hsize]{Figures/random3ObjHeatmap.png}
+\includegraphics[width=\hsize]{Figures/6-5-random3ObjHeatmap.png}
 \caption{Browser view on the \Copeland ranked performance tableau}
 \label{fig:6.5}       % Give a unique label
 \end{figure}

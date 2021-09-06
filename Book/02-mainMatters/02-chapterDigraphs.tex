@@ -155,11 +155,11 @@ Let us illustrate the digraph border and inner parts on a linear ordering obtain
 >>> nf.netFlowsOrder
    ['6', '4', '5', '3', '2', '1', '7']
 >>> bnf = GraphBorder(nf)
->>> bnf.exportGraphViz(worstChoice=['6'],bestChoice=['7'])
+>>> bnf.exportGraphViz(lastChoice=['6'],firstChoice=['7'])
 >>> inf = GraphInner(nf)
->>> inf.exportGraphViz(worstChoice=['6'],bestChoice=['7'])
+>>> inf.exportGraphViz(lastChoice=['6'],firstChoice=['7'])
 \end{lstlisting}
-We may orient the \texttt{graphviz} drawings in Figure~\vref{fig:2.3}  with the terminal node 6 (\texttt{worstChoice} parameter) and initial node 7 (\texttt{bestChoice} parameter) (see List.~\vref{list:2.5} Lines 7 and 9).
+We may orient the \texttt{graphviz} drawings in Figure~\vref{fig:2.3}  with the terminal node 6 (\texttt{lastChoice} parameter) and initial node 7 (\texttt{firstChoice} parameter) (see List.~\vref{list:2.5} Lines 7 and 9).
 
 The constructor of the partial digraphs \texttt{bnf} and \texttt{inf}  (see Lines 3 and 6) puts to the \emph{indeterminate} characteristic value all links not in the \emph{border}, respectively \emph{not} in the \emph{inner} part (see Fig.~\vref{fig:2.3}). Being much {\em denser\/} than a linear order, the actual inner part of our tutorial random valuation digraph \texttt{rdg} is reduced to a single arc between nodes 3 and 4 (see Fig.~\vref{fig:2.4}). Indeed, a complete digraph on the limit has no inner part (privacy!) at all, whereas empty and indeterminate digraphs admit both, an empty border and an empty inner part.
 \begin{figure}[h]
@@ -360,7 +360,7 @@ It is as well possible to show a coloured version of the valued relation table i
 \end{lstlisting}
  \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/htmlTutorialDigraph.png}
+\includegraphics[width=7cm]{Figures/2-6-htmlTutorialDigraph.png}
 \caption{The valued relation table shown in a browser window. Positive arcs are shown in green and negative arcs in red. Indeterminate --zero-valued-- links, like the reflexive diagonal ones or the link between node \texttt{'6'} and node \texttt{'2'}, are shown in gray}
 \label{fig:2.6}       % Give a unique label
 \end{figure}

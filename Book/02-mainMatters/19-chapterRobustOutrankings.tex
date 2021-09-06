@@ -565,8 +565,8 @@ Our previous \emph{robust} best choice recommendation (\texttt{p2} and \texttt{p
 We may visualize this kind of Pareto efficient result in Figure~\vref{fig:19.3}.
 \begin{lstlisting}
 >>> (~(-uopg)).exportGraphViz(fileName = 'unopDigraph',\
-...                           bestChoice = ['p2','p4'],\
-...                           worstChoice = ['p3','p5','p6'])
+...                           firstChoice = ['p2','p4'],\
+...                           lastChoice = ['p3','p5','p6'])
   *---- exporting a dot file for GraphViz tools ----*
    Exporting to unopDigraph.dot
    dot -Grankdir=BT -Tpng unopDigraph.dot -o unopDigraph.png
@@ -576,7 +576,7 @@ We may visualize this kind of Pareto efficient result in Figure~\vref{fig:19.3}.
   Standard strict outranking digraph \hfill Unopposed strict outranking digraph \\
   \includegraphics[height=6cm]{Figures/19-1-stdg.pdf}\hfill
   \includegraphics[height=6cm]{Figures/19-3-unopDigraph.pdf}
-\caption{Standard versus \emph{unopposed} strict outranking digraphs oriented by best and worst choice recommendations} 
+\caption{Standard versus \emph{unopposed} strict outranking digraphs oriented by first and last choice recommendations} 
 \label{fig:19.3}       % Give a unique label
 \end{figure}
 
