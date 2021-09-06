@@ -544,14 +544,14 @@ Indeed, best choice recommendations, computed from an \emph{unopposed multiobjec
   Best choice recommendation(s) (BCR)
    (in decreasing order of determinateness)   
    Credibility domain: [-1.00,1.00]
-   === >> potential best choice(s)
+   === >> potential first choice(s)
    choice              : ['p2', 'p4', 'p7']
       independence        : 0.00
       dominance           : 0.33
       absorbency          : 0.00
       covering (%)        : 33.33
       determinateness (%) : 50.00
-   === >> potential worst choice(s) 
+   === >> potential last choice(s) 
    choice              : ['p3', 'p5', 'p6', 'p7']
       independence        : 0.00
       dominance           : -0.61
@@ -560,7 +560,7 @@ Indeed, best choice recommendations, computed from an \emph{unopposed multiobjec
       determinateness (%) : 50.00
 \end{lstlisting}
 
-Our previous \emph{robust} best choice recommendation (\texttt{p2} and \texttt{p4}, see Fig.~\vref{fig:19.1}) remains, in this example here, \emph{stable}. We recover indeed the best choice recommendation [\texttt{p2}, \texttt{p4}, \texttt{p7}] (see List.~\vref{list:19.12} Line 6). Yet, notice that decision alternative \texttt{p7} appears to be at the same time a potential \emph{best} as well as a potential \emph{worst} choice recommendation (see Line 13), a consequence of \texttt{p7} being completely \emph{incomparable} to the other decision alternatives when restricting the comparability to only unopposed strict outranking situations. 
+Our previous \emph{robust} best choice recommendation (\texttt{p2} and \texttt{p4}, see Fig.~\vref{fig:19.1}) remains, in this example here, \emph{stable}. We recover indeed the best choice recommendation [\texttt{p2}, \texttt{p4}, \texttt{p7}] (see List.~\vref{list:19.12} Line 6). Yet, notice that decision alternative \texttt{p7} appears to be at the same time a potential \emph{first} as well as a potential \emph{last} choice recommendation (see Line 13), a consequence of \texttt{p7} being completely \emph{incomparable} to the other decision alternatives when restricting the comparability to only unopposed strict outranking situations. 
 
 We may visualize this kind of Pareto efficient result in Figure~\vref{fig:19.3}.
 \begin{lstlisting}

@@ -234,7 +234,7 @@ We may finally notice in the relation map, shown in Figure~\vref{fig:12.4}, that
   Best choice recommendation(s) (BCR)
     (in decreasing order of determinateness)   
     Credibility domain: [-1.00,1.00]
-   === >> potential best choice(s)
+   === >> potential first choice(s)
    choice                : ['I-FHK','I-UHB','I-USB','T-FHK']
      independence        : 0.17
      dominance           : 0.08
@@ -243,7 +243,7 @@ We may finally notice in the relation map, shown in Figure~\vref{fig:12.4}, that
      determinateness (%) : 68.75
      most credible action(s) = {'I-FHK': 0.75,'T-FHK': 0.17,
                                 'I-USB': 0.17,'I-UHB': 0.17}
-   === >> potential worst choice(s) 
+   === >> potential last choice(s) 
    choice                : ['C-HKK', 'S-HKK']
      independence        : 0.50
      dominance           : -0.83
@@ -255,7 +255,7 @@ We may finally notice in the relation map, shown in Figure~\vref{fig:12.4}, that
 
 Most credible best choice among the four best-ranked study programs eventually becomes the \emph{Graduate Interpreter} study program at the Technical High School in Köln (see Line 14) supported by a $(0.75 + 1)/2.0 \,=\,87.5\% (18/24)$ majority of global criteria significance \footnote{See Sec.~\ref{sec:4.5} on computing best choice recommendations and Sec.~\ref{sec:17.6} on solving kernel equation systems.}
 
-In the relation map, shown in Figure~\vref{fig:12.4}, we see in the left lower corner that the \emph{asymmetric part} of the outranking relation, i.e. the corresponding \emph{strict} outranking relation, is actually \emph{transitive} (see Line 3 in List.~\vref{list:12.5} below). Hence, a \emph{graphviz} drawing of its \emph{skeleton}, oriented by the previous \emph{best}, respectively \emph{worst} choice, may well illustrate our \emph{best choice recommendation}. The \texttt{Reverse=True} flag in Line 4 eliminates the transitivity induced arcs from digraph \texttt{dgcd}.\index{closeTransitive@\texttt{closeTransitive()}}
+In the relation map, shown in Figure~\vref{fig:12.4}, we see in the left lower corner that the \emph{asymmetric part} of the outranking relation, i.e. the corresponding \emph{strict} outranking relation, is actually \emph{transitive} (see Line 3 in List.~\vref{list:12.5} below). Hence, a \emph{graphviz} drawing of its \emph{skeleton}, oriented by the previous \emph{first}, respectively \emph{last} choice, may well illustrate our \emph{best choice recommendation}. The \texttt{Reverse=True} flag in Line 4 eliminates the transitivity induced arcs from digraph \texttt{dgcd}.\index{closeTransitive@\texttt{closeTransitive()}}
 \begin{lstlisting}[caption={Alice's strict best choice recommendation},label=list:12.5]
 >>> dgcd = ~(-dg)
 >>> dgcd.isTransitive()

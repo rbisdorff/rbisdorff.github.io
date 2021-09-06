@@ -586,7 +586,7 @@ Encouraged by this positive result, we may furthermore compute as well a best ch
   Rubis best choice recommendation(s) (BCR)
    (in decreasing order of determinateness)   
    Credibility domain: [-1.00,1.00]
-  === >> ambiguous best choice(s) 
+  === >> ambiguous first choice(s) 
    * choice        : ['a01','a02','a03','a04','a05',
                       'a06','a07','a08','a09','a10',
                       'a11','a12','a13','a14','a15']
@@ -601,7 +601,7 @@ Encouraged by this positive result, we may furthermore compute as well a best ch
         'a11': 0.20, 'a10': 0.20, 'a07': 0.20,
         'a01': 0.20, 'a08': 0.18, 'a05': 0.18,
         'a15': 0.14, 'a09': 0.14, 'a02': 0.06, }
-   === >> ambiguous worst choice(s)
+   === >> ambiguous last choice(s)
     * choice        : ['a01','a02','a03','a04','a05',
                       'a06','a07','a08','a09','a10',
                       'a11','a12','a13','a14','a15']
@@ -617,7 +617,7 @@ Encouraged by this positive result, we may furthermore compute as well a best ch
          'a09': 0.28, 'a04': 0.26, 'a10': 0.24,
          'a05': 0.20, 'a03': 0.20, 'a12': 0.06, }
 \end{lstlisting}
-The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --best as well as last-- choice recommendation which trivially retains all fifteen candidates (see List.~\vref{list:20.13} Lines 6-8 above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate \texttt{a12} the most credible one with a $72\%$ majority of voters' support (see Line 15, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate \texttt{a03} ($67\%$) and Candidate \texttt{a04} ($65\%$). Similarly, Candidates \texttt{a13} and \texttt{a06} represent the most credible losers with a $68\%$ majority voters' support (Line 30).
+The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --first as well as last-- choice recommendation which trivially retains all fifteen candidates (see List.~\vref{list:20.13} Lines 6-8 above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate \texttt{a12} the most credible one with a $72\%$ majority of voters' support (see Line 15, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate \texttt{a03} ($67\%$) and Candidate \texttt{a04} ($65\%$). Similarly, Candidates \texttt{a13} and \texttt{a06} represent the most credible losers with a $68\%$ majority voters' support (Line 30).
 
 We observe here empirically that \emph{evaluative} voting systems, using three-valued ordinal performance scales, match closely a corresponding bipolar approval voting systems. The latter voting system models, however, more faithfully the very preferential information that is expressed with \emph{approved}, \emph{disapproved} and \emph{ignored} statements. The corresponding evaluation on a three-level scale, being value (numbers) based, cannot express the fact that in bipolar approval voting systems there is no preferential information given concerning the pairwise comparison of all approved, respectively disapproved or ignored candidates.
 
@@ -765,7 +765,7 @@ We see this result furthermore confirmed when computing the corresponding best, 
   Rubis best choice recommendation(s) (BCR)
    (in decreasing order of determinateness)   
    Credibility domain: [-100.00,100.00]
-   === >> potential best choice(s)
+   === >> potential first choice(s)
     * choice              : ['a02']
       independence        : 100.00
       dominance           : 5.00
@@ -773,7 +773,7 @@ We see this result furthermore confirmed when computing the corresponding best, 
       covering (%)        : 100.00
       determinateness (%) : 52.50
       - most credible action(s) = { 'a02': 5.00, }
-   === >> potential worst choice(s) 
+   === >> potential last choice(s) 
     * choice              : ['a05', 'a14']
       independence        : 0.00
       dominance           : -23.00
@@ -782,7 +782,7 @@ We see this result furthermore confirmed when computing the corresponding best, 
       determinateness (%) : 50.00
       - most credible action(s) = { }
 \end{lstlisting}
-Candidate \texttt{a02}, being actually a \Condorcet winner, gives an initial prekernel of digraph $m$, whereas Party-1 leading Candidates \texttt{a05} and \texttt{a14}, both being weak \Condorcet losers, give together a terminal prekernel. They hence represent our \emph{best choice}, respectively, \emph{worst choice} recommendations for winning this simulated election.
+Candidate \texttt{a02}, being actually a \Condorcet winner, gives an initial prekernel of digraph $m$, whereas Party-1 leading Candidates \texttt{a05} and \texttt{a14}, both being weak \Condorcet losers, give together a terminal prekernel. They hence represent our \emph{first choice}, respectively, \emph{last choice} recommendations for winning this simulated election.
 
 Let us conclude by predicting that, for leading political candidates in an aggressively divisive political context, the perspective to easily fail election with bipolar approval voting systems, might or will induce a change in the usual way of running electoral campaigns. Political parties and politicians, who avoid aggressive competitive propaganda and instead propose multipartisan collaborative social choices, will be rewarded with better election results than any kind of extremism. It could mean the end of sterile political obstructions and war like electoral battles. \emph{Let's do it !}.
 
