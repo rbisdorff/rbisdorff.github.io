@@ -68,9 +68,9 @@ We shall illustrate this point with a voting profile we discussed already in Cha
     c02 : 00.90%  | c02 : 00.21%  | c02 : 00.51%
 \end{lstlisting}
 
-In this example (see List.~\vref{list:20.1} Lines 20-), we obtained 460 Party-1 supporters ($46\%$), 436 Party-2 supporters ($43.6\%$) and 104 other voters ($10.4\%$). Favorite candidates of Party-1 supporters, with more than $10\%$, are \texttt{c06} ($19.91\%$), \texttt{c07} ($14.27\%$) and \texttt{c03} ($10.02\%$). Whereas for Party-2 supporters, favorite candidates are \texttt{c11} ($22.94\%$), followed by \texttt{c08} ($15.65\%$), \texttt{c04} ($15.07\%$) and \texttt{c06} ($13.4\%$).
+In this example (see List.~\vref{list:20.1} Lines 20-), we observe 460 Party-1 supporters ($46\%$), 436 Party-2 supporters ($43.6\%$) and 104 other voters ($10.4\%$). Favorite candidates of Party-1 supporters, with more than $10\%$, are \texttt{c06} ($19.91\%$), \texttt{c07} ($14.27\%$) and \texttt{c03} ($10.02\%$). Whereas for Party-2 supporters, favorite candidates are \texttt{c11} ($22.94\%$), followed by \texttt{c08} ($15.65\%$), \texttt{c04} ($15.07\%$) and \texttt{c06} ($13.4\%$).
 
-We may convert this linear voting profile into a \texttt{PerformanceTableau} object where each political party matches a decision objective.
+We can convert this linear voting profile into a \texttt{PerformanceTableau} object where each political party matches a decision objective.
 \begin{lstlisting}[caption={Converting a voting profile into a performance tableau},label=list:20.2]
 >>> lvp.save2PerfTab('votingPerfTab')
 >>> from perfTabs import PerformanceTableau
@@ -95,7 +95,7 @@ We may convert this linear voting profile into a \texttt{PerformanceTableau} obj
     ])
 \end{lstlisting}
 
-In Listing~\vref{list:20.2} we first store the linear voting in a \texttt{PerformanceTableau} format (see Line 1). In Line 3, we reload this performance tableau data. The three parties of the linear voting profile represent three decision objectives and the 1000 voters are distributed as 1000 performance criteria according to the party they support.
+In Listing~\vref{list:20.2} the linear voting profile lvp is first stored in \texttt{PerformanceTableau} format (see Line 1). In Line 3, the PerformanceTableau class reloads this stored performance tableau data. The three parties of the linear voting profile represent three decision objectives and the 1000 voters are distributed as 1000 performance criteria according to the party they support.
 
 % \subsection{Multipartisan primary selection of eligible candidates}
 % \label{sec:20.1.2}
