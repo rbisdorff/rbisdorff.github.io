@@ -2,14 +2,14 @@
 \label{sec:20}
 
 
-\abstract*{ In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously deliver the primary selection in a two stage election system. Our outranking model is based on bipolar approvals-disapprovals of ``\emph{at least as well evaluated as}'' statements. A similar approach is put into practice with bipolar approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, we obtain a $(-1,0,1)$-valued evaluative voting system. We eventually show that in such a bipolar-approval voting system, the winner tends to be among the more or less multipartisan candidates.}
+\abstract*{ In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously deliver the primary selection in a two stage election system. Our bipolar-valued outranking model is based on approvals-disapprovals of ``\emph{at least as well evaluated as}'' statements. A similar approach is put into practice with approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, we obtain a $(-1,0,1)$-valued evaluative voting system. We eventually show that in such a approval-disapproval voting system, the winner tends to be among the more or less multipartisan candidates.}
 
 \begin{quotation}\emph{The choice of a voting procedure shapes the democracy in which we live}.\\
     -- \citet*{BAU-2012}.
 \end{quotation}
 \vspace{1cm}
 
-\abstract{ In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously deliver the primary selection in a two stage election system. Our outranking model is based on bipolar approvals-disapprovals of ``\emph{at least as well evaluated as}'' statements. A similar approach is put into practice with bipolar approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, we obtain a $(-1,0,1)$-valued evaluative voting system. We eventually show that in such a bipolar-approval voting system, the winner tends to be among the more or less multipartisan candidates.}
+\abstract{ In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously deliver the primary selection in a two stage election system. Our bipolar-valued outranking model is based on approvals-disapprovals of ``\emph{at least as well evaluated as}'' statements. A similar approach is put into practice with approval-disapproval voting systems. When converting such approval-disapproval voting ballots into corresponding performance records, we obtain a $(-1,0,1)$-valued evaluative voting system. We eventually show that in such a approval-disapproval voting system, the winner tends to be among the more or less multipartisan candidates.}
 
 \paragraph{\textbf{Introduction}}
 
@@ -324,7 +324,7 @@ Traditionally, most of the voting systems in use in the World, do only collect a
 
 In the \texttt{votingProfiles} module\index{votingProfiles@\texttt{votingProfiles} module} we provide a \texttt{BipolarApprovalVotingProfile} class\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class} for handling voting results where, for each eligible candidate $c$, the voters are invited  to \emph{approve} ($+1$), \emph{disapprove} ($-1$), or \emph{ignore} ($0$) the statement that candidate $c$ should win the election \citep{BAU-2012}.
 
-File \texttt{bpApVotingProfile.py} contains an example of such a bipolar approval-disapproval voting profile concerning 100 voters and 15 eligible candidates \footnote{The file \texttt{bpApVotingProfile.py} may be found in the \texttt{examples} directory of the \Digraph resources.}. We may inspect its content as follows.\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class}
+File \texttt{bpApVotingProfile.py} contains an example of such a approval-disapproval voting profile concerning 100 voters and 15 eligible candidates \footnote{The file \texttt{bpApVotingProfile.py} may be found in the \texttt{examples} directory of the \Digraph resources.}. We may inspect its content as follows.\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class}
 \begin{lstlisting}[caption={Bipolar approval vonting profiles},label=list:20.9]
 >>> from votingProfiles import \
 ...                 BipolarApprovalVotingProfile
@@ -340,8 +340,8 @@ File \texttt{bpApVotingProfile.py} contains an example of such a bipolar approva
                  'ballot']
 \end{lstlisting}
 
-Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Listing~\vref{list:20.9} the \texttt{approvalBallot} attribute which gathers bipolar approval-disapproval votes. Its content is the following.
-\begin{lstlisting}[caption={Inspecting a bipolar approval-disapproval ballot},label=list:20.9]
+Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Listing~\vref{list:20.9} the \texttt{approvalBallot} attribute which gathers approval-disapproval votes. Its content is the following.
+\begin{lstlisting}[caption={Inspecting an approval-disapproval ballot},label=list:20.9]
 >>> bavp.approvalBallot
   {'v001':
       {'c01': Decimal('0'),
@@ -440,7 +440,7 @@ These bipolar characteristic values are stored in the \texttt{netApprovalScores}
 
 We observe in Line 3 above that Candidate \texttt{c12}, with a net approval score of $34 - 16 = 18$, represents indeed the \emph{best approved} candidate for winning the election. With a net approval score of $28-22 = 6$, Candidate \texttt{c03} appears 2nd-best approved. The net approval scores define hence a potentially weak ranking on the set of eligible election candidates, and the winner(s) of the election is(are) determined by the first-ranked candidate(s).
 
-\section{Pairwise comparison of bipolar approval-disapproval votes}
+\section{Pairwise comparison of approval-disapproval votes}
 \label{sec:20.3}
 
 The approval votes of each voter define now on the set of eligible candidates three ordered categories: his approved ($+1$), his ignored ($0$) and his disapproved ($-1$) ones. Within each of these three categories we consider the voter's actual preferences as \emph{not communicated}, i.e. as missing data. This gives for each voter a partially determined strict order which we find in the \texttt{ballot} attribute.
@@ -527,7 +527,7 @@ Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{
 
 In Listing~\vref{list:20.10} we may notice that the \NetFlows rule delivers a ranking that is very similar to the one previously obtained with the corresponding \emph{Net Approval} scores. Only minor inversions do appear, like in the midfield, where candidate \texttt{c09} advances before candidates \texttt{c13} and \texttt{c14} (see Line 16), and \texttt{c06} and \texttt{c07} swap their positions 9 and 10 (see Line 19). The two last-ranked candidates \texttt{c10} and \texttt{c01} also swap their positions.
 
-This confirms again the pertinence of the net approval scoring approach for finding the winner in a bipolar approving-disapproving voting system. Yet, voting by approving ($+1$), disapproving ($-1$) or ignoring ($0$) eligible candidates, may also be seen as a performance evaluation of the eligible candidates on a $\{-1, 0, 1\}$-valued ordinal scale.
+This confirms again the pertinence of the net approval scoring approach for finding the winner in an approval-disapproval voting system. Yet, voting by approving ($+1$), disapproving ($-1$) or ignoring ($0$) eligible candidates, may also be seen as a performance evaluation of the eligible candidates on a $\{-1, 0, 1\}$-valued ordinal scale.
 
 \section{Three-valued evaluative voting systems}
 \label{sec:20.4}
@@ -636,15 +636,15 @@ Encouraged by this positive result, we may furthermore compute a \Rubis best cho
 
 The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --first as well as last-- choice recommendation which trivially retains all fifteen candidates (see List.~\vref{list:20.13} Lines 6-8 above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate \texttt{c12} the most credible one with a $72\%$ majority of voters' support (see Line 15, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate \texttt{c03} ($67\%$) and Candidate \texttt{c04} ($65\%$). Similarly, Candidates \texttt{c13} and \texttt{c06} represent the most credible losers with a $68\%$ majority voters' support (Line 30).
 
-We observe here empirically that \emph{evaluative} voting systems, using three-valued ordinal performance scales, match closely corresponding bipolar approval-disapproval voting systems. The latter systems model, however, more faithfully the very preferential information that is expressed with \emph{approved}, \emph{disapproved} and \emph{ignored} statements. The corresponding evaluation on a three-level scale, being value (numbers) based, cannot express the fact that in bipolar approval-disapproval voting system there is no preferential information given concerning the pairwise comparison of all approved, respectively disapproved or ignored candidates.
+We observe here empirically that \emph{evaluative} voting systems, using three-valued ordinal performance scales, match closely corresponding approval-disapproval voting systems. The latter systems model, however, more faithfully the very preferential information that is expressed with \emph{approved}, \emph{disapproved} and \emph{ignored} statements. The corresponding evaluation on a three-level scale, being value (numbers) based, cannot express the fact that in approval-disapproval voting system there is no preferential information given concerning the pairwise comparison of all approved, respectively disapproved or ignored candidates.
 
-Let us finally illustrate how bipolar approval-disapproval voting systems may favour multipartisan supported candidates. We shall therefore compare \emph{bipolar approval-disapproval} versus \emph{uninominal plurality} election results when considering a highly divisive and partisan political context.
+Let us finally illustrate how approval-disapproval voting systems may favour multipartisan supported candidates. We shall therefore compare \emph{approval-disapproval} versus \emph{uninominal plurality} election results when considering a highly divisive and partisan political context.
  
 \section{Favouring multipartisan candidates}
 \label{sec:20.5}
 
-In modern democracy, politics  are largely structured by political parties and activists. Let us so consider a bipolar approval-disapproval voting profile \texttt{dvp} where the random voter behaviour is simulated from two pre-electoral polls concerning a political scene with essentially two major highly competing parties, like the one existing in the US.
-\begin{lstlisting}[caption={A random bipolar approval-disapproval voting profile in a divisive political context},label=list:20.14]
+In modern democracy, politics  are largely structured by political parties and activists. Let us so consider an approval-disapproval voting profile \texttt{dvp} where the random voter behaviour is simulated from two pre-electoral polls concerning a political scene with essentially two major highly competing parties, like the one existing in the US.
+\begin{lstlisting}[caption={A random approval-disapproval voting profile in a divisive political context},label=list:20.14]
 >>> dvp = RandomBipolarApprovalVotingProfile(\
 ...                numberOfCandidates=15,\
 ...                numberOfVoters=100,
@@ -690,7 +690,7 @@ No clear winner may be guessed from these pre-election polls. As Party-2 shows h
   ['c07']
 \end{lstlisting}
 
-Now, in a corresponding bipolar approval-disapproval voting system, Party-1 supporters will usually approve their leading candidates and disapprove the leading candidates of Party-2. Vice versa, Party-2 supporters will usually approve their leading candidates and disapprove the leading candidates of Party-1. Let us consult the resulting approval votes per candidate.
+Now, in a corresponding approval-disapproval voting system, Party-1 supporters will usually approve their leading candidates and disapprove the leading candidates of Party-2. Vice versa, Party-2 supporters will usually approve their leading candidates and disapprove the leading candidates of Party-1. Let us consult the resulting approval votes per candidate.
 \begin{lstlisting}
 >>> dvp.showApprovalResults()
      Candidate: 'c07' obtains 30 votes
@@ -807,9 +807,9 @@ We see this result furthermore confirmed when computing the corresponding first,
 
 Candidate \texttt{c02}, being actually a \Condorcet winner, gives an initial prekernel of digraph $m$, whereas Party-1 leading Candidates \texttt{c05} and \texttt{c14}, both being weak \Condorcet losers, give together a terminal prekernel. They hence represent our \emph{first choice}, respectively, \emph{last choice} recommendations for winning this simulated election.
 
-Let us conclude by predicting that, for leading political candidates in an aggressively divisive political context, the perspective to easily fail election witha bipolar approval-disapproval voting system, might or will induce a change in the usual way of running electoral campaigns. Political parties and politicians, who avoid aggressive competitive propaganda and instead propose multipartisan collaborative social choices, will be rewarded with better election results than any kind of extremism. It could mean the end of sterile political obstructions and war like electoral battles. \emph{Let's do it !}.
+Let us conclude by predicting that, for leading political candidates in an aggressively divisive political context, the perspective to easily fail election withan approval-disapproval voting system, might or will induce a change in the usual way of running electoral campaigns. Political parties and politicians, who avoid aggressive competitive propaganda and instead propose multipartisan collaborative social choices, will be rewarded with better election results than any kind of extremism. It could mean the end of sterile political obstructions and war like electoral battles. \emph{Let's do it !}.
 
-It is worthwhile noticing again the essential structural and computational role, the ignored value is playing in bipolar approval-disapproval voting systems. This epistemic and logical \emph{neutral} term is needed indeed for handling in a consistent and efficient manner \emph{not communicated votes} and/or \emph{indeterminate} preferential statements.
+It is worthwhile noticing again the essential structural and computational role, the ignored value is playing in approval-disapproval voting systems. This epistemic and logical \emph{neutral} term is needed indeed for handling in a consistent and efficient manner \emph{not communicated votes} and/or \emph{indeterminate} preferential statements.
  
 %%%%%%% The chapter bibliography
 %\normallatexbib
