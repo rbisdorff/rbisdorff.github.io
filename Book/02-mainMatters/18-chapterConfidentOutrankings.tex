@@ -1,19 +1,19 @@
 \chapter{On confident outrankings with uncertain criteria significance weights}
 \label{sec:18}
 
-\abstract*{ When modelling preferences following the outranking approach, the signs of the majority margins do sharply distribute validation and invalidation of pairwise outranking situations. How can we be confident in the resulting outranking digraph, when we acknowledge the usual imprecise knowledge of criteria significance weights coupled with small majority margins? To answer this question, one usually requires \emph{qualified} majority margins for confirming outranking situations. But how to choose such a qualifying majority level: two third, three fourth of the significances ? In this chapter we propose to link the qualifying significance majority with a required $\alpha\%$-confidence level. We model therefore the significance weights as random variables following more or less widespread distributions around an average significance value that corresponds to the given deterministic weight. As the bipolar-valued random credibility of an outranking statement hence results from the simple sum of positive or negative independent random variables, we may apply the Central Limit Theorem (CLT) for computing the bipolar likelihood that the expected majority margin will indeed be positive, respectively negative.}
+\abstract*{ When modelling preferences following the outranking approach, the signs of the majority margins do sharply distribute validation and invalidation of pairwise outranking situations. How can we be confident in the resulting outranking digraph, when we acknowledge the usual imprecise knowledge of criteria significance weights coupled with small majority margins? In this chapter we propose to link the qualifying significance majority with a required $\alpha\%$-confidence level. We model therefore the significance weights as random variables following more or less widespread distributions around an average significance value that corresponds to the given deterministic weight. As the bipolar-valued random credibility of an outranking statement hence results from the simple sum of positive or negative independent random variables, we may apply the Central Limit Theorem (CLT) for computing the bipolar likelihood that the expected majority margin will indeed be positive, respectively negative.}
 
-\abstract{ When modelling preferences following the outranking approach, the signs of the majority margins do sharply distribute validation and invalidation of pairwise outranking situations. How can we be confident in the resulting outranking digraph, when we acknowledge the usual imprecise knowledge of criteria significance weights coupled with small majority margins? To answer this question, one usually requires \emph{qualified} majority margins for confirming outranking situations. But how to choose such a qualifying majority level: two third, three fourth of the significances ? In this chapter we propose to link the qualifying significance majority with a required $\alpha\%$-confidence level. We model therefore the significance weights as random variables following more or less widespread distributions around an average significance value that corresponds to the given deterministic weight. As the bipolar-valued random credibility of an outranking statement hence results from the simple sum of positive or negative independent random variables, we may apply the Central Limit Theorem (CLT) for computing the bipolar likelihood that the expected majority margin will indeed be positive, respectively negative.}
+\abstract{ When modelling preferences following the outranking approach, the signs of the majority margins do sharply distribute validation and invalidation of pairwise outranking situations. How can we be confident in the resulting outranking digraph, when we acknowledge the usual imprecise knowledge of criteria significance weights coupled with small majority margins? In this chapter we propose to link the qualifying significance majority with a required $\alpha\%$-confidence level. We model therefore the significance weights as random variables following more or less widespread distributions around an average significance value that corresponds to the given deterministic weight. As the bipolar-valued random credibility of an outranking statement hence results from the simple sum of positive or negative independent random variables, we may apply the Central Limit Theorem (CLT) for computing the bipolar likelihood that the expected majority margin will indeed be positive, respectively negative.}
 
 \section{Modelling uncertain criteria significance weights}
 \label{sec:18.1}
 
-Let us consider the significance weights of a family $F$ of $m$ criteria to be independent random variables $W_j$, distributing the potential significance weights of each criterion $j = 1, ..., m$ around a mean value $E(W_j)$ with variance $V(W_j)$.
+Let us consider the significance weights of a family $F$ of $m$ criteria to be independent random variables $W_j$, distributing the potential significance weight of each criterion $j = 1, ..., m$ around a mean value $E(W_j)$ with variance $V(W_j)$.
 
 Choosing a specific stochastic model of uncertainty is usually application specific. In the limited scope of this chapter, we will illustrate the consequence of this design decision on the resulting outranking modelling with four slightly different models for taking into account the uncertainty with which we know the numerical significance weights: \emph{uniform}, \emph{triangular}, and two models of \emph{Beta laws}, one more widespread and, the other, more concentrated.
 
 When considering, for instance, that the potential range of a significance weight is distributed between $0$ and two times its mean value, we obtain the following random variates \citep{CPSTAT-L3}:
-\begin{itemize}
+\begin{itemize}[topsep=2pt]
 \item A continuous \emph{uniform} distribution on the range $0$ to $2E(W_j)$. Thus $W_j \leadsto U(0, 2E(W_j))$ and $V(W_j) = 1/3(E(W_j))^2$;
 \item A \emph{symmetric beta} distribution with, for instance, parameters  $\alpha = 2$ and $\beta = 2$. Thus, $W_i \leadsto Beta(2,2) \times 2E(W_j)$ and $V(W_j) = 1/5(E(Wj))^2$;
 \item A \emph{symmetric triangular} distribution on the same range wit mode $E(W_j)$. Thus $W_j \leadsto Tr(0, 2E(W_j), E(Wj))$ with $V(W_j) = 1/6(E(Wj))^2$;
@@ -25,6 +25,7 @@ When considering, for instance, that the potential range of a significance weigh
 \caption{Four models of uncertain criteria significance weights}
 \label{fig:18.1}       % Give a unique label
 \end{figure}
+
 It is worthwhile noticing in Figure~\vref{fig:18.1} that these four uncertainty models all admit the same expected value, $E(W_j)$, however, with a respective variance which goes decreasing from $1/3$, to $1/9$ of the square of $E(W_j)$ \citep{BIS-2014}.
 
 \section{Bipolar-valued likelihood of outranking situations}
@@ -51,7 +52,8 @@ Semantics of the marginal bipolar-valued characteristic function:
 Each criterion $j$ in $F$ contributes the random significance $W_j$ of his ``\emph{at least as well evaluated as}'' characteristic $r(x \geq_j y)$ to the global characteristic $\tilde{r}(x \geq y)$ in the following way:
 \begin{equation}
       \tilde{r}(x \geq y) \; = \; \sum_{j \in F} W_j \times r(x \geq_j y) )
-    \end{equation}
+\end{equation}
+
 Thus, $\tilde{r}(x \geq y)$ becomes a simple sum of positive or negative independent random variables with known means and variances where $\tilde{r}(x \geq y) \, > \, 0$ signifies $x$ is globally at least as well evaluated as $y$, $\tilde{r}(x \geq y) \, < \, 0$ signifies that $x$ is not globally at least as well evaluated as $y$, and $\tilde{r}(x \geq y)\,=\,0$ signifies that it is unclear whether $x$ is globally at least as well evaluated as $y$.
 
 From the \emph{Central Limit Theorem} (CLT), we know that such a sum of random variables leads, with $m$ getting large, to a Gaussian distribution $Y$ with
@@ -59,23 +61,26 @@ From the \emph{Central Limit Theorem} (CLT), we know that such a sum of random v
 E(Y ) = &\sum_{j \in F} \big(\,E(W_j) \times r(x \geq_j y)\,\big), \text{and}\\
 V(Y) = &\sum_{j \in F} \big(\,V(W_j)\times |r(x \geq_j y)|\,\big).
 \end{eqnarray}
+
 And the \emph{likelihood of validation}, respectively \emph{invalidation} of an ``\emph{at least as well evaluated as}'' situation, denoted $lh(x \geq y)$,  may hence be assessed by the probability $P(Y > 0) = 1.0 - P(Y \leq 0)$ that $Y$ takes a positive, resp. $P(Y < 0)$ takes a negative value. In the bipolar-valued case here, we can judiciously make usage of the standard Gaussian \emph{error function} , i.e. the bipolar $2P(Z) - 1.0$ version of the standard Gaussian $P(Z)$ probability distribution function \citep{NR3-2007-6}:
 \begin{equation}
   lh(x \geq y) \;=\; -\text{erf}\big(\frac{1}{\sqrt{2}}\frac{-E(Y)}{\sqrt{V(Y)}} \big)
 \end{equation}
+
 The range of the bipolar-valued $lh(x \geq y)$ hence becomes $[-1.0;+1.0]$, and $-lh(x \geq y) \,=\, lh(x \not\geq y)$ , i.e. a \emph{negative likelihood} represents the likelihood of the correspondent \emph{negated} ``\emph{at least as well evaluated as}'' situation. A likelihood of $+1.0$ (resp. $-1.0$) means the corresponding preferential situation appears \emph{certainly} validated (resp. invalidated).
 
 \begin{example} Let $x$ and $y$ be evaluated with respect to 7 equisignificant criteria; Four criteria positively support that $x$ is \emph{as least as  well assessed as} $y$ and three criteria support that $x$ is \emph{not at least as well evaluated as} $y$. Suppose $E(W_j) = w$ for $j = 1,...,7$ and $W_j \leadsto Tr(0, 2w, w)$ for $j = 1,...7$. The expected value of the global ``\emph{at least as well evaluated as}'' characteristic value becomes: $E\big(\tilde{r}(x \geq y)\big)\, = \, 4w - 3w = w$ with a variance $V\big(\tilde{r}(x \geq y)\big)\,=\, 7\frac{1}{6}w^2$. 
 
 If $w = 1$, $E\big(\tilde{r}(x \geq y)\big)\, = \, 1$ and $sd\big(\tilde{r}(x \geq y)\big)\,=\, 1.08$. By the CLT, the bipolar likelihood of the \emph{at least as well evaluated as} situation becomes: $lh(x \geq y)\,=\, 0.66$, which corresponds to a global support of $(0.66 + 1.0)/2 = 83\%$ of the criteria significance weights.
 
-A \emph{Monte Carlo} simulation with $10\,000$ runs empirically confirms the effective convergence to a Gaussian (see Fig.~\vref{fig:18.3} realised with \emph{gretl} \footnote{The Gnu Regression, Econometrics and Time-series Library http://gretl.sourceforge.net/ .}.
+A \emph{Monte Carlo} simulation with $10\,000$ runs empirically confirms the effective convergence to a Gaussian (see Fig.~\vref{fig:18.3} realised with \emph{gretl}\footnote{The Gnu Regression, Econometrics and Time-series Library http://gretl.sourceforge.net/ .}).
 \begin{figure}[ht]
 %\sidecaption
 \includegraphics[width=\hsize]{Figures/18-3-simulLikelihood.pdf}
 \caption{Distribution of $10\,000$ random outranking characteristic values.}
 \label{fig:18.3}       % Give a unique label
 \end{figure}
+
 Indeed, $\tilde{r}(x \geq y) \leadsto Y = \mathcal{N}(1.03,1.089)$, with an empirical probability of observing a negative majority margin of about $17\%$.
 \end{example}
 
@@ -83,7 +88,8 @@ Indeed, $\tilde{r}(x \geq y) \leadsto Y = \mathcal{N}(1.03,1.089)$, with an empi
 \label{sec:18.3}
 
 \begin{definition}[Confident outranking situation]\label{def:18.1}
-Following the classical outranking approach (see \citep{BIS-2013}), we say, from an epistemic perspective, that decision action $x$ \emph{outranks} decision action $y$ at \emph{confidence} level $\alpha\%$, when:
+
+\noindent Following the classical outranking approach (see \citep{BIS-2013}), we say, from an epistemic perspective, that decision action $x$ \emph{outranks} decision action $y$ at \emph{confidence} level $\alpha\%$, when:
 \begin{itemize}[topsep=1pt]
 \item An expected majority of criteria validates, at confidence level $\alpha\%$ or higher, a global ``\emph{at least as well evaluated as}'' situation between $x$ and $y$, and
 \item no considerably less performing is observed on a discordant criterion.
@@ -97,7 +103,8 @@ Otherwise, the situation is indeterminate.
 \end{definition}
 
 \noindent \textbf{Time for a coded example}
-Let us consider the following random performance tableau.
+
+\noindent Let us consider the following random performance tableau.
 \begin{lstlisting}[label=list:18.1,basicstyle=\ttfamily\scriptsize]
 >>> from randomPerfTabs import RandomPerformanceTableau
 >>> t = RandomPerformanceTableau(\
@@ -116,9 +123,7 @@ Let us consider the following random performance tableau.
      'g7'  |     1   | 82.88  41.66  12.82  21.92  75.74  15.45   6.05  
 \end{lstlisting}
 
-For the corresponding confident outranking digraph, we assume uncertain criteria significance weights of \emph{triangular} distribution and require a confidence level of $\alpha = 90\%$.
-
-The \texttt{ConfidentBipolarOutrankingDigraph} class provides such a construction.
+For the corresponding confident outranking digraph, we assume uncertain criteria significance weights of \emph{triangular} distribution and require a confidence level of $\alpha = 90\%$. The \texttt{ConfidentBipolarOutrankingDigraph} class provides such a construction.
 \begin{lstlisting}[label=list:18.2]
 >>> from outrankingDigraphs import\
 ...        ConfidentBipolarOutrankingDigraph   
@@ -175,7 +180,7 @@ The resulting $90\%$-confident expected outranking relation is shown below.
     Determinateness    : 0.24 (62.1%)
 \end{lstlisting}
 
-The ($lh$) figures, indicated in the table above, correspond to bipolar likelihoods and the required bipolar confidence level equals $(0.90+1.0)/2 = 0.80$ (see Line 22 above). Action \texttt{a1} thus confidently outranks all other actions, except \texttt{a7} where the actual likelihood ($+0.65$) is lower than the required one ($0.80$) and we furthermore observe a considerable counter-performance on criterion \texttt{g1}.
+The ($lh$) figures, indicated in Listing~\ref{list:18.3} above, correspond to bipolar likelihoods and the required bipolar confidence level equals $(0.90+1.0)/2 = 0.80$ (see Line 22 above). Action \texttt{a1} thus confidently outranks all other actions, except \texttt{a7} where the actual likelihood ($+0.65$) is lower than the required one ($+0.80$) and we furthermore observe a considerable counter-performance on criterion \texttt{g1}.
 
 Notice also the lack of confidence in the outranking situations we observe between action \texttt{a2} and actions \texttt{a4} and \texttt{a5}. In the deterministic case we would have $r(a2 \geq a4) \,=\, -0.143$ and $r(a2 \geq a5) \,=\, +0.143$ . All outranking situations with a characteristic value lower or equal to $abs(0.143)$, i.e. a majority support of $1.143/2 = 57.1\%$ and less, appear indeed to be \emph{not confident} at $\alpha$ level $90\%$ (see Line 23 above).
 
@@ -234,16 +239,17 @@ Now, what becomes this $90\%$-confident outranking digraph when we require a str
     'a7'  |  +0.00   +0.71   +0.57   +0.43   +0.00   +0.00   +0.00  
           | (-0.65) (+1.00) (+1.00) (+0.99) (+0.95) (-0.00)  ( - )  
     Valuation domain   : [-1.000; +1.000] 
-    Uncertainty model  : triangular(a=2.0,b=2.0) 
+    Uncertainty model  : triangular(a=0.0,b=2.0) 
     Likelihood domain  : [-1.0;+1.0] 
     Confidence level   : 0.98 (99.0%) 
     Confident majority : 0.29 (64.3%) 
     Determinateness    : 0.13 (56.6%)
 \end{lstlisting}
-At $99\%$ confidence, the minimal required significance majority support amounts to $64.3\%$ (see List.~\vref{list:18.4} Line 25 above). As a result, most outranking situations don't get anymore validated, like the outranking situations between action \texttt{a1} and actions \texttt{a3}, \texttt{a4}, \texttt{a5} and \texttt{a6} (see Line 5 above). The overall epistemic determination of the digraph consequently drops from $.1\%$ to $56.6\%$ (see Line 25).
+
+At $99\%$ confidence, the minimal required significance majority support amounts to $64.3\%$ (see List.~\ref{list:18.4} Line 25 above). As a result, most outranking situations don't get anymore validated, like the outranking situations between action \texttt{a1} and actions \texttt{a3}, \texttt{a4}, \texttt{a5} and \texttt{a6} (see Line 5 above). The overall epistemic determination of the digraph consequently drops from $62.1\%$ to $56.6\%$ (see Line 26).
 
 Finally, what becomes the previous $90\%$-confident outranking digraph when the uncertainty concerning the criteria significance weights is modelled with a larger variance, like \emph{uniform} variates (see Line 2 below).
-\begin{lstlisting}[caption={$90\%$-confident outranking relation with uniform variates},label=list:18.5, basicstyle=\ttfamily\scriptsize]
+\begin{lstlisting}[caption={$90\%$-confident outranking digraph with uniform variates},label=list:18.5, basicstyle=\ttfamily\scriptsize]
 >>> gu90 = ConfidentBipolarOutrankingDigraph(t,\
 ...           confidence=90,distribution='uniform')
 >>> gu90.showRelationTable()
@@ -265,19 +271,20 @@ Finally, what becomes the previous $90\%$-confident outranking digraph when the 
     'a7' |  +0.00   +0.71   +0.57   +0.43   +0.29   +0.00   +0.00  
          | (-0.49) (+1.00) (+1.00) (+0.95) (+0.84) (-0.00)  ( - )  
     Valuation domain   : [-1.000; +1.000] 
-    Uncertainty model  : uniform(a=2.0,b=2.0) 
+    Uncertainty model  : uniform(a=0.0,b=2.0) 
     Likelihood domain  : [-1.0;+1.0] 
     Confidence level   : 0.80 (90.0%) 
     Confident majority : 0.14 (57.1%) 
     Determinateness    : 0.24 (62.1%)
 \end{lstlisting}
-Despite lower likelihood values (see the $g90$ relation in Listing~table above), we keep the same confident majority level of $57.1\%$ (see List.~\vref{list:18.5} Line 25 above) and, hence, also the same $90\%$-confident outranking digraph.
 
-For concluding, it is worthwhile noticing again that it is in fact the \emph{neutral} value of our bipolar-valued epistemic logic that allows us to easily handle $\alpha\%$ confidence or not of outranking situations when confronted with uncertain criteria significances. Remarkable furthermore is the usage, the standard Gaussian error function (erf) provides by delivering \emph{signed} likelihood values immediately concerning either a positive relational statement, or when negative, its negated version. 
+Despite lower likelihood values (see the $g90$ digraph in List.~\vref{list:18.5}), we keep here the same confident majority level of $57.1\%$ (Line 25) and, hence, also the same $90\%$-confident outranking digraph.
+
+For concluding, it is worthwhile noticing again that it is the \emph{neutral} value of the bipolar-valued epistemic logic that allows to easily handle $\alpha\%$ confidence or not of outranking situations when confronted with uncertain criteria significance weights. Remarkable furthermore is the usage, the standard Gaussian error function (erf) provides by delivering \emph{signed} likelihood values immediately concerning either a positive relational statement, or when negative, its negated version \citep{NR3-2007-6}. 
  
 %%%%%%% The chapter bibliography
 %\normallatexbib
-%\clearpage
+\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
 %\input{02-mainMatters/18-chapterConfidentOutrankings.bbl}
