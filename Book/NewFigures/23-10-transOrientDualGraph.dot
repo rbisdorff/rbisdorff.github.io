@@ -1,0 +1,31 @@
+strict graph G {
+graph [ fontname = "Helvetica-Oblique",
+ fontsize = 12,
+ label = "\nDigraph3 (graphviz), R. Bisdorff, 2019", size="7,7"];
+n1 [shape = "circle", label = "v1"];
+n2 [shape = "circle", label = "v2"];
+n3 [shape = "circle", label = "v3"];
+n4 [shape = "circle", label = "v4"];
+n5 [shape = "circle", label = "v5"];
+n6 [shape = "circle", label = "v6"];
+n7 [shape = "circle", label = "v7"];
+n8 [shape = "circle", label = "v8"];
+n1-- n5 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n1-- n7 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n2-- n3 [dir=back,style="setlinewidth(1)",color="blue", arrowhead=none, arrowtail=normal] ;
+n2-- n4 [dir=back,style="setlinewidth(1)",color="red", arrowhead=none, arrowtail=normal] ;
+n2-- n5 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n2-- n6 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n2-- n7 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n2-- n8 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n3-- n4 [dir=back,style="setlinewidth(1)",color="red", arrowhead=none, arrowtail=normal] ;
+n3-- n5 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n3-- n6 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n3-- n7 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n3-- n8 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n4-- n5 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n4-- n6 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n4-- n7 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n4-- n8 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+n6-- n7 [dir=forward,style="setlinewidth(1)",color="black", arrowhead=normal, arrowtail=none] ;
+}

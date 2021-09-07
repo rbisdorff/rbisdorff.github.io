@@ -1,0 +1,23 @@
+digraph G {
+graph [ ordering = out, fontname = "Helvetica-Oblique",
+ fontsize = 12,
+ label = "\nDigraph3 (graphviz)\n R. Bisdorff, 2020", size="7,7",fontsize=10];
+A [shape = "circle", label = "Ave", fontsize=10];
+B [shape = "circle", label = "Bon", fontsize=10];
+C [shape = "circle", label = "Ces", fontsize=10];
+D [shape = "circle", label = "Dom", fontsize=10];
+E [shape = "circle", label = "Bel", fontsize=10];
+F [shape = "circle", label = "Fen", fontsize=10];
+G [shape = "circle", label = "Gar", fontsize=10];
+{ rank = 0; C; A; D; }
+{ rank = 1; G; }
+{ rank = 2; B; E; }
+{ rank = 3; F; }
+C-> F [style="setlinewidth(1)",color=black] ;
+D-> G [style="setlinewidth(1)",color=black] ;
+G-> B [style="setlinewidth(1)",color=black] ;
+G-> E [style="setlinewidth(1)",color=black] ;
+B-> F [style="setlinewidth(1)",color=black] ;
+E-> F [style="setlinewidth(1)",color=black] ;
+}
+ 

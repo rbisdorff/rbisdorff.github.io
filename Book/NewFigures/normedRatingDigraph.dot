@@ -1,0 +1,48 @@
+digraph G {
+graph [ ordering = out, fontname = "Helvetica-Oblique",
+ fontsize = 12,
+ label = "\nDigraph3 (graphviz)\n R. Bisdorff, 2020", size="7,7",fontsize=10];
+m4 [shape = "box", fillcolor=lightcoral, style=filled, label = "[0.75 -", fontsize=10];
+a1001 [shape = "circle", label = "a1001", fontsize=10, style = "filled", color = lightblue];
+a1002 [shape = "circle", label = "a1002", fontsize=10];
+a1003 [shape = "circle", label = "a1003", fontsize=10];
+a1005 [shape = "circle", label = "a1005", fontsize=10];
+a1006 [shape = "circle", label = "a1006", fontsize=10];
+a1008 [shape = "circle", label = "a1008", fontsize=10];
+a1010 [shape = "circle", label = "a1010", fontsize=10, style = "filled", color = lightblue];
+m3 [shape = "box", fillcolor=lightcoral, style=filled, label = "[0.50 -", fontsize=10];
+a1004 [shape = "circle", label = "a1004", fontsize=10];
+a1007 [shape = "circle", label = "a1007", fontsize=10];
+a1009 [shape = "circle", label = "a1009", fontsize=10];
+m2 [shape = "box", fillcolor=lightcoral, style=filled, label = "[0.25 -", fontsize=10];
+m1 [shape = "box", fillcolor=lightcoral, style=filled, label = "[0.00 -", fontsize=10];
+m1 [shape = "box", fillcolor=lightcoral, style=filled, label = "[0.00 -", fontsize=10];
+{ rank = 6; a1005; }
+{ rank = 5; m4; }
+{ rank = 4; a1001; a1003; a1004; a1005; a1006; a1008; a1010; }
+{ rank = 3; m3; }
+{ rank = 2; a1002; a1006; a1007; a1009; }
+{ rank = 1; m2; }
+m4-> a1001 [style="setlinewidth(1)",color=black] ;
+m4-> a1002 [style="setlinewidth(1)",color=black] ;
+m4-> a1003 [style="setlinewidth(1)",color=black] ;
+m4-> a1005 [style="setlinewidth(1)",color=black] ;
+m4-> a1006 [style="setlinewidth(1)",color=black] ;
+m4-> a1008 [style="setlinewidth(1)",color=black] ;
+m4-> a1010 [style="setlinewidth(1)",color=black] ;
+a1001-> m3 [style="setlinewidth(1)",color=black] ;
+a1002-> m3 [style="setlinewidth(1)",color=black] ;
+a1003-> m3 [style="setlinewidth(1)",color=black] ;
+a1005-> m3 [style="setlinewidth(1)",color=black] ;
+a1006-> m3 [style="setlinewidth(1)",color=black] ;
+a1008-> m3 [style="setlinewidth(1)",color=black] ;
+a1010-> m3 [style="setlinewidth(1)",color=black] ;
+m3-> a1004 [style="setlinewidth(1)",color=black] ;
+m3-> a1007 [style="setlinewidth(1)",color=black] ;
+m3-> a1009 [style="setlinewidth(1)",color=black] ;
+a1004-> m2 [style="setlinewidth(1)",color=black] ;
+a1007-> m2 [style="setlinewidth(1)",color=black] ;
+a1009-> m2 [style="setlinewidth(1)",color=black] ;
+m2-> m1 [style="setlinewidth(1)",color=black] ;
+}
+ 

@@ -1,0 +1,26 @@
+digraph G {
+graph [ fontname = "Helvetica-Oblique",
+ fontsize = 12,
+ label = "\nDigraph3 (graphviz), R. Bisdorff, 2020", size="7,7"];
+n1 [shape = "circle", label = "1-1"];
+n2 [shape = "circle", label = "1-2"];
+n3 [shape = "circle", label = "1-3"];
+n4 [shape = "circle", label = "2-1"];
+n5 [shape = "circle", label = "2-2"];
+n6 [shape = "circle", label = "2-3"];
+n7 [shape = "circle", label = "3-1"];
+n8 [shape = "circle", label = "3-2"];
+n9 [shape = "circle", label = "3-3"];
+n1-> n2 [dir=forward, color=black] ;
+n1-> n4 [dir=back, color=black] ;
+n2-> n3 [dir=forward, color=black] ;
+n2-> n5 [dir=forward, color=black] ;
+n3-> n6 [dir=forward, color=black] ;
+n4-> n5 [dir=back, color=black] ;
+n4-> n7 [dir=back, color=black] ;
+n5-> n6 [dir=forward, color=black] ;
+n5-> n8 [dir=back, color=black] ;
+n6-> n9 [dir=forward, color=black] ;
+n7-> n8 [dir=back, color=black] ;
+n8-> n9 [dir=back, color=black] ;
+}
