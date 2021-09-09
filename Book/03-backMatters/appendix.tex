@@ -10,20 +10,23 @@
 %\motto{All's well that ends well}
 \phantomsection
 \addcontentsline{toc}{part}{Appendix}
-\part*{Appendix}
+\chapter*{Appendix}
 \label{Appendix} % Always give a unique label
 % use \chaptermark{}
 % to alter or adjust the chapter heading in the running head
-%\bibliographystyle{dinat}
+%\bibliographystyle{spbasic}
 %\bibliography{03-backMatters/reference}
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Bibliography}
+\input{book.bbl}
 \phantomsection
-\addcontentsline{toc}{chapter}{List of listings}
+\addcontentsline{toc}{section}{List of listings}
 \lstlistoflistings
 \phantomsection
-\addcontentsline{toc}{chapter}{List of figures}
+\addcontentsline{toc}{section}{List of figures}
 \listoffigures
 \phantomsection
-\addcontentsline{toc}{chapter}{List of tables}
+\addcontentsline{toc}{section}{List of tables}
 \listoftables
 \indexstarthook{Authors are indexed in \emph{italic} and \Digraph modules, classes and methods are indexed in a \texttt{typewriter} font. }
 \printindex

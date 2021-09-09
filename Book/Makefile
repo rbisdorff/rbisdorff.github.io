@@ -14,10 +14,9 @@ all:
 	$(MAKE) book.pdf
 
 book.pdf: 
-	# makes a pdf directly
+	# makes a pdf with chpter bibliography
 	pdflatex book.tex
 	pdflatex book.tex
-	#bibtex 02-mainMatters/00-chapterIntroduction.aux
 	bibtex 02-mainMatters/01-chapterIntroDigraph3.aux
 	bibtex 02-mainMatters/02-chapterDigraphs.aux
 	bibtex 02-mainMatters/03-chapterOutrankingDigraphs.aux
@@ -41,7 +40,18 @@ book.pdf:
 	bibtex 02-mainMatters/21-chapterGraphs.aux
 	bibtex 02-mainMatters/22-chapterTreeGraphs.aux
 	bibtex 02-mainMatters/23-chapterPerfectGraphs.aux
-	#bibtex book
+	pdflatex book.tex
+	pdflatex book.tex
+	makeindex -s svind.ist book.idx
+	pdflatex book.tex
+	pdflatex book.tex
+
+bibGen.pdf: 
+	# makes a pdf with general bibliography
+        # the chpater must be edited before
+	pdflatex book.tex
+	pdflatex book.tex
+	bibtex book
 	pdflatex book.tex
 	pdflatex book.tex
 	makeindex -s svind.ist book.idx
@@ -60,7 +70,7 @@ clean:
 	find . -name \*.log -type f -delete
 	find . -name \*~ -type f -delete
 	find . -name \*.backup -type f -delete
-	find . -name \*.bbl -type f -delete
+#	find . -name \*.bbl -type f -delete
 	find . -name \*.blg -type f -delete
 	find . -name \*.bak -type f -delete
 	find . -name \*.pyc -type f -delete
@@ -79,4 +89,5 @@ clean:
 
 veryClean:
 	$(MAKE) clean
-	rm book.pdf
+	find . -name \*.bbl -type f -delete
+	find . -name book.pdf -type f -delete
