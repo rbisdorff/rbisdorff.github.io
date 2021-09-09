@@ -8,7 +8,7 @@
 \section{Introduction}
 \label{sec:6.1}
 
-The \texttt{randomPerfTabs} module provides several classes for generating random performance tableaux models of different kind, mainly for the purpose of testing implemented methods and tools presented and discussed in the Algorithmic Decision Theory course lectures at the University of Luxembourg. This chapter introduces the most useful models.
+The \texttt{randomPerfTabs} module\index{randomPerfTabs@\texttt{randomPerfTabs} module} provides several classes for generating random performance tableaux models of different kind, mainly for the purpose of testing implemented methods and tools presented and discussed in the Algorithmic Decision Theory course lectures at the University of Luxembourg. This chapter introduces the most useful models.
 
 The simplest generic class, called \texttt{RandomPerformanceTableau}, generates a set of $n$ decision actions, a family of $m$ real-valued performance criteria, ranging by default from $0.0$ to $100.0$, associated with default discrimination thresholds: $2.5$ (ind.), $5.0$ (pref.) and $60.0$ (veto). The generated random evaluations are by default \texttt{Beta(2,2)} distributed on each measurement scale.
 
@@ -225,7 +225,7 @@ Such a performance tableau may be stored and re-accessed as follows.
 \section{Random three objectives performance tableaux}
 \label{sec:6.4}
 
-The randomPerfTabs module provides a \texttt{Random3ObjectivesPerformance\-Tableau} class\index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tab\-leau} class} for generating random performance tableaux concerning public policies evaluated with respect to three decision objectives taking respectively into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. Each potential public policy is qualified randomly as performing \emph{weak} ($-$), \emph{fair} ($\sim$) or \emph{good} ($+$) with respect to to each one of the three objectives. 
+The randomPerfTabs module provides a \texttt{Random3ObjectivesPerformance\-Tableau} class\index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tableau} class} for generating random performance tableaux concerning public policies evaluated with respect to three decision objectives taking respectively into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. Each potential public policy is qualified randomly as performing \emph{weak} ($-$), \emph{fair} ($\sim$) or \emph{good} ($+$) with respect to to each one of the three objectives. 
 
 \noindent \textbf{Generator directives are the following:}
 
@@ -374,7 +374,7 @@ The heatmap view with its \Copeland ranking based on the bipolar outranking digr
 \section{Random academic performance tableaux}
 \label{sec:6.5}
 
-The \texttt{RandomAcademicPerformanceTableau} class\index{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformanceTableau()}} generates performance tableaux with random grades for a given number of students in different courses. 
+The \texttt{RandomAcademicPerformanceTableau} class\index{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformance\-Tableau()}} generates performance tableaux with random grades for a given number of students in different courses. 
 
 \noindent \textbf{Generator directives:}
 \begin{itemize}[leftmargin=0.5cm,rightmargin=0.5cm,topsep=1pt]

@@ -37,8 +37,8 @@
 \indexentry{EmptyDigraph@\texttt{EmptyDigraph} class|hyperpage}{30}
 \indexentry{IndeterminateDigraph@\texttt{IndeterminateDigraph} class|hyperpage}{30}
 \indexentry{Bouyssou@\emph{D. Bouyssou}|hyperpage}{31}
-\indexentry{outrankingDigraphs@\texttt{outrankingDigraphs}|hyperpage}{35}
-\indexentry{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}|hyperpage}{35}
+\indexentry{outrankingDigraphs@\texttt{outrankingDigraphs} module|hyperpage}{35}
+\indexentry{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph} class|hyperpage}{35}
 \indexentry{showPerformanceTableau@\texttt{showPerformanceTableau()}|hyperpage}{37}
 \indexentry{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}|hyperpage}{38}
 \indexentry{showRelationTable@\texttt{showRelationTable()}|hyperpage}{38}
@@ -48,7 +48,7 @@
 \indexentry{recodeValuation@\emph{recodeValuation()}|hyperpage}{40}
 \indexentry{coduality principle|hyperpage}{41}
 \indexentry{graphviz|hyperpage}{41}
-\indexentry{Roy@\emph{B. Roy}|hyperpage}{42}
+\indexentry{Roy@\textsl{B. Roy}|hyperpage}{42}
 \indexentry{Barbut@\emph{M. Barbut}|hyperpage}{42}
 \indexentry{Kendall@\emph{M.G. Kendall}|hyperpage}{42}
 \indexentry{Roy@\textsl{B. Roy}|hyperpage}{47}
@@ -80,14 +80,15 @@
 \indexentry{showPerformanceTableau@\texttt{showPerformanceTableau()}|hyperpage}{70}
 \indexentry{showRelationTable@\texttt{showRelationTable()}|hyperpage}{71}
 \indexentry{showPairwiseComparison@\texttt{showPairwiseComparison()}|hyperpage}{71}
+\indexentry{randomPerfTabs@\texttt{randomPerfTabs} module|hyperpage}{75}
 \indexentry{|hyperpage}{75}
 \indexentry{RandomPerformanceTableau@\texttt{RandomPerformance\-Tab\-leau} class|hyperpage}{76}
 \indexentry{ExtendedTriangularRandomVariable@\texttt  {ExtendedTriangularRandom\-Var\-iable} class|hyperpage}{77}
 \indexentry{RandomCBPerformanceTableau@\texttt{RandomCBPerformanceTab\-leau} class|hyperpage}{79}
 \indexentry{showStatistics@\texttt{showStatistics()}|hyperpage}{80}
-\indexentry{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tab\-leau} class|hyperpage}{81}
+\indexentry{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tableau} class|hyperpage}{81}
 \indexentry{showHTMPerformanceTableau@\texttt{showHTMPerformanceTableau()}|hyperpage}{84}
-\indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformanceTableau()}|hyperpage}{86}
+\indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformance\-Tableau()}|hyperpage}{86}
 \indexentry{showCourseStatistics@\texttt{showCourseStatistics()}|hyperpage}{88}
 \indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}|hyperpage}{88}
 \indexentry{votingProfiles@\texttt{votingProfiles} module|hyperpage}{91}
@@ -167,7 +168,7 @@
 \indexentry{IntegerBipolarOutrankingDigraph@\texttt{IntegerBipolarOutrankingDigraph} class|hyperpage}{147}
 \indexentry{digraphsTools@\texttt{digraphsTools} module|hyperpage}{148}
 \indexentry{total-size@\texttt{total\_size()}|hyperpage}{148}
-\indexentry{cSparseIntegerOutrankingDigraphs@\texttt{cSparseIntegerOutrankingDigraphs} module|hyperpage}{149}
+\indexentry{cSparseIntegerOutrankingDigraphs@\texttt{cSparseIntegerOutranking\-Digraphs} module|hyperpage}{149}
 \indexentry{SparseIntegerOutrankingDigraph@\texttt{SparseIntegerOutrankingDigraph} class|hyperpage}{149}
 \indexentry{cQuantilesRankingDigraph@\texttt{cQuantilesRankingDigraph} class|hyperpage}{152}
 \indexentry{showHTMCriteria@\texttt{showHTMCriteria()}|hyperpage}{162}
@@ -176,7 +177,7 @@
 \indexentry{showHTMLPairwiseOutrankings@\texttt{showHTMLPairwiseOutrankings()}|hyperpage}{167}
 \indexentry{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class|hyperpage}{167}
 \indexentry{transitiveDigraphs@\texttt{transitiveDigraphs} module|hyperpage}{167}
-\indexentry{ConfidentBipolarOutrankingDigraph@\texttt{ConfidentBipolarOutrankingDigraph} class|hyperpage}{169}
+\indexentry{ConfidentBipolarOutrankingDigraph@\texttt{ConfidentBipolarOutranking\-Digraph} class|hyperpage}{169}
 \indexentry{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph()}|hyperpage}{170}
 \indexentry{oppositeness degree|hyperpage}{170}
 \indexentry{TransitiveDigraph@\texttt{TransitiveDigraph} class|hyperpage}{170}
@@ -237,7 +238,7 @@
 \indexentry{domkernelrestrict@\texttt{domkernelrestrict()}|hyperpage}{250}
 \indexentry{computeKernelVector@\texttt{computeKernelVector()}|hyperpage}{250}
 \indexentry{Roubens@\textsl{M. Roubens}|hyperpage}{254}
-\indexentry{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformanceTableau()}|hyperpage}{269}
+\indexentry{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tableau()}|hyperpage}{269}
 \indexentry{stability denotation|hyperpage}{271}
 \indexentry{StabilityDenotation@\texttt{StabilityDenotation} flag|hyperpage}{271}
 \indexentry{RobustOutrankingDigraph@\texttt{RobustOutrankingDigraph} class|hyperpage}{276}
@@ -304,6 +305,6 @@
 \indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{344}
 \indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{344}
 \indexentry{isComparabilityGraph@\texttt{isComparabilityGraph()}|hyperpage}{346}
-\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOrientedDigraph()}|hyperpage}{347}
+\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOriented\-Digraph()}|hyperpage}{347}
 \indexentry{computeCopelandRanking@\texttt{computeCopelandRanking()}|hyperpage}{348}
 \indexentry{computePermutation@\texttt{computePermutation()}|hyperpage}{349}

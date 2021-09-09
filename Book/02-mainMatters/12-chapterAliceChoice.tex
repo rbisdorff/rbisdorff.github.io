@@ -315,7 +315,7 @@ Yet, how \emph{robust} are our findings with respect to potential settings of th
 
 Alice considers her four decision objectives as being \emph{more or less} equally important. Here we have, however, allocated \emph{strictly equal} importance weights with \emph{strictly equi-significant} criteria per objective. How robust is the previous best choice recommendation when, now, we would consider the importance of the objectives and, hence, the significance of the respective performance criteria to be \emph{more or less uncertain}?
 
-To answer this question, we consider the respective criteria significance weights $w_j$ for $j=1,...,9$ to be \emph{triangular random variables} in the range 0 to $2w_j$ with mode = $w_j$. We may compute a corresponding $90\%$-\emph{confident} outranking digraph with the help of the \texttt{ConfidentBipolarOutrankingDigraph} constructor\index{ConfidentBipolarOutrankingDigraph@\texttt{ConfidentBipolarOutrankingDigraph} class} (see Chap.~\ref{sec:18}).
+To answer this question, we consider the respective criteria significance weights $w_j$ for $j=1,...,9$ to be \emph{triangular random variables} in the range 0 to $2w_j$ with mode = $w_j$. We may compute a corresponding $90\%$-\emph{confident} outranking digraph with the help of the \texttt{ConfidentBipolarOutrankingDigraph} constructor\index{ConfidentBipolarOutrankingDigraph@\texttt{ConfidentBipolarOutranking\-Digraph} class} (see Chap.~\ref{sec:18}).
 \begin{lstlisting}[caption={Computing the 90\% confident outranking digraph},label=list:12.7]
 >>> from outrankingDigraphs import\
 ...         ConfidentBipolarOutrankingDigraph

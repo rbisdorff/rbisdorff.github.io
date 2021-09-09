@@ -89,31 +89,31 @@ Individual module \texttt{pytest} suites are also provided (see the \texttt{make
 
 The main data handling modules of the \Digraph resources are the following:
 \begin{enumerate}[leftmargin=0.75cm]
-\item \texttt{digraphs}: Main part of the \Digraph source code with the root \texttt{Digraph} class.
-\item \texttt{graphs}: Resources for handling undirected graphs with the root \texttt{Graph} class and a bridge to the \texttt{digraphs} module resources.
-\item \texttt{perfTabs}: Tools for handling multiple criteria performance tableaux with root \texttt{PerformanceTableau} class.
-\item \texttt{outrankingDigraphs}: Root module for handling outranking digraphs with the abstract root \texttt{OutrankingDigraph} class and the main \texttt{Bipolar\-OutrankingDigraph} class. \footnote{Notice that the outrankingDigraph class defines a hybrid object type, inheriting conjointly from the \texttt{Digraph} class and the \texttt{PerformanceTableau} class.}
-\item \texttt{votingProfiles}: Classes and methods for handling voting ballots and computing election results with main \texttt{LinearVotingProfile} class.
+\item \texttt{digraphs}: main part of the \Digraph source code with the root \texttt{Digraph} class.
+\item \texttt{graphs}: resources for handling undirected graphs with the root \texttt{Graph} class and a bridge to the \texttt{digraphs} module resources.
+\item \texttt{perfTabs}: tools for handling multiple criteria performance tableaux with root \texttt{PerformanceTableau} class.
+\item \texttt{outrankingDigraphs}: root module for handling outranking digraphs with the abstract root \texttt{OutrankingDigraph} class and the main \texttt{Bipolar\-OutrankingDigraph} class. \footnote{Notice that the outrankingDigraph class defines a hybrid object type, inheriting conjointly from the \texttt{Digraph} class and the \texttt{PerformanceTableau} class.}
+\item \texttt{votingProfiles}: classes and methods for handling voting ballots and computing election results with main \texttt{LinearVotingProfile} class.
 \end{enumerate}
 
 \noindent Various random generators are provided by the following modules:
 \begin{enumerate}[leftmargin=0.75cm]
-\item \texttt{randomDigraphs}: Various random digraph models like random crisp digraphs (\texttt{RandomDigraph} class) or random bipolar-valued digraphs (\texttt{Random\-ValuationDigraph} class).
-\item \texttt{randomPerfTabs}: Various implemented random performance tableau models, like Cost-Benefit tableaux (\texttt{RandomCBPerformance\-Tableau} class) or 3-Objectives tableaux (\texttt{Random3ObjectivesPer\-formance\-Tableau} class).
-\item \texttt{randomNumbers}: Additional random number generators, not available in the standard Python \texttt{random.py} library, like a discrete random variable (\texttt{DiscreteRandomVariable} class) or a Cauchy random variable (\texttt{Cau\-chy\-RandomVariable} class)
+\item \texttt{randomDigraphs}: various random digraph models like random crisp digraphs (\texttt{RandomDigraph} class) or random bipolar-valued digraphs (\texttt{Random\-ValuationDigraph} class).
+\item \texttt{randomPerfTabs}: various implemented random performance tableau models, like Cost-Benefit tableaux (\texttt{RandomCBPerformance\-Tableau} class) or 3-Objectives tableaux (\texttt{Random3ObjectivesPer\-formance\-Tableau} class).
+\item \texttt{randomNumbers}: additional random number generators, not available in the standard Python \texttt{random.py} library, like a discrete random variable (\texttt{DiscreteRandomVariable} class) or a Cauchy random variable (\texttt{Cau\-chy\-RandomVariable} class)
 \end{enumerate}
 
 \noindent Following modules provide tools for \emph{sorting}, \emph{ranking} and \emph{rating} problems:
 \begin{enumerate}[leftmargin=0.75cm]
-\item \texttt{sortingDigraphs}: Tools for solving sorting problems with the root \texttt{Sor\-tingDigraph} class and the main \texttt{QuantilesSortingDi\-graph} class;
-\item \texttt{linearOrders}: Tools for solving linearly ranking or ordering problems with the root \texttt{LinearOrder} class;
-\item \texttt{transitiveDigraphs}: Additional tools for handing transitive digraphs with root \texttt{TransitiveDigraph} class.
+\item \texttt{sortingDigraphs}: tools for solving sorting problems with the root \texttt{Sor\-tingDigraph} class and the main \texttt{QuantilesSortingDi\-graph} class;
+\item \texttt{linearOrders}: tools for solving linearly ranking or ordering problems with the root \texttt{LinearOrder} class;
+\item \texttt{transitiveDigraphs}: additional tools for handing transitive digraphs with root \texttt{TransitiveDigraph} class.
 \end{enumerate}
 
 \noindent Tools for specifically handling Big Data are eventually provided by the following modules:
 \begin{enumerate}[leftmargin=0.75cm]
-\item \texttt{performanceQuantiles}: Incremental representation of large performance tableaux via binned cumulated density functions per criteria; Depends on the \texttt{randomPerfTabs} module.
-\item \texttt{sparseOutrankingDigraphs}: parse implementation design for bipolar-valued outranking digraphs of order $> 500$.
+\item \texttt{performanceQuantiles}: incremental representation of large performance tableaux via binned cumulated density functions per criteria; Depends on the \texttt{randomPerfTabs} module.
+\item \texttt{sparseOutrankingDigraphs}: sparse implementation design for bipolar-valued outranking digraphs of order $> 500$.
 \item \emph{Cythonized} modules: C-compiled and optimised Python modules for handling big performance tableaux and bipolar outranking digraphs of order $> 1000$.
 \end{enumerate}
 
