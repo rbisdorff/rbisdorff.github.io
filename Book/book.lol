@@ -51,10 +51,11 @@
 \contentsline {lstlisting}{\numberline {7.5}Rank analysis example with {\sc Borda}\xspace scores}{93}{lstlisting.7.5}%
 \contentsline {lstlisting}{\numberline {7.6}Example of \emph {Majority Margins} digraph}{94}{lstlisting.7.6}%
 \contentsline {lstlisting}{\numberline {7.7}Example of cyclic social preferences}{96}{lstlisting.7.7}%
-\contentsline {lstlisting}{\numberline {7.8}Generating a linear voting profile with random polls}{99}{lstlisting.7.8}%
-\contentsline {lstlisting}{\numberline {7.9}The uninominal and {\sc Borda}\xspace election winner}{101}{lstlisting.7.9}%
-\contentsline {lstlisting}{\numberline {7.10}A majority margins digraph constructed from a linear voting profile}{101}{lstlisting.7.10}%
-\contentsline {lstlisting}{\numberline {7.11}Ranking by iterating choosing the \emph {first} and \emph {last} remaining candidates}{102}{lstlisting.7.11}%
+\contentsline {lstlisting}{\numberline {7.8}{\sc NetFlows}\xspace ranked heatmap view on a voting profile}{98}{lstlisting.7.8}%
+\contentsline {lstlisting}{\numberline {7.9}Generating a linear voting profile with random polls}{100}{lstlisting.7.9}%
+\contentsline {lstlisting}{\numberline {7.10}The uninominal and {\sc Borda}\xspace election winner}{101}{lstlisting.7.10}%
+\contentsline {lstlisting}{\numberline {7.11}A majority margins digraph constructed from a linear voting profile}{101}{lstlisting.7.11}%
+\contentsline {lstlisting}{\numberline {7.12}Ranking by iterating choosing the \emph {first} and \emph {last} remaining candidates}{102}{lstlisting.7.12}%
 \contentsline {lstlisting}{\numberline {8.1}Random bipolar-valued strict outranking relation characteristics}{105}{lstlisting.8.1}%
 \contentsline {lstlisting}{\numberline {8.2}Median cut polarised strict outranking relation characteristics}{106}{lstlisting.8.2}%
 \contentsline {lstlisting}{\numberline {8.3}Computing a {\sc Copeland}\xspace Ranking}{108}{lstlisting.8.3}%

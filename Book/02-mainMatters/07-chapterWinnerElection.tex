@@ -209,7 +209,7 @@ Let us consider for instance in Listing~\vref{list:7.7} the following linear vot
     Valuation domain: [-9;+9]
 \end{lstlisting}    
 
-Now there doesn't exist anymore a completely positive row in the relation table (see Lines 17 - 21 in List.~\ref{list:7.7.}). No one of the five candidates is beating all the others with an absolute majority of votes. There is no \Condorcet winner anymore. In fact, when looking in Figure~\vref{fig:7.2} at a \texttt{graphviz} drawing of this \emph{majority margins} digraph, we may observe \emph{cyclic} voters's preferences, like \texttt{c1} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}.
+Now there doesn't exist anymore a completely positive row in the relation table (see Lines 17 - 21 in List.~\ref{list:7.7}). No one of the five candidates is beating all the others with an absolute majority of votes. There is no \Condorcet winner anymore. In fact, when looking in Figure~\vref{fig:7.2} at a \texttt{graphviz} drawing of this \emph{majority margins} digraph, we may observe \emph{cyclic} voters's preferences, like \texttt{c1} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}.
 \begin{lstlisting}
 >>> mmdg.exportGraphViz('cycles',graphType='pdf')
  *---- exporting a dot file for GraphViz tools ----*
@@ -259,7 +259,7 @@ Half of the Votes =  4.50
 \Condorcet 's approach for determining the winner of an election is \emph{not decisive} in this example voting profile. One needs therefore, the case given, exploiting more sophisticated approaches for finding the winner of the election on the basis of the given linear ballots (see Chap.~\ref{sec:8} and \citealp{BIS-2008a}). 
 
 The \NetFlows ranked heatmap view on voting profiles\index{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}} with the \texttt{showHTML\-VotingHeatmap()} method is one such tool for showing convincing voting results (see Sec.~\ref{sec:8.3}).
-\begin{lstlisting}
+\begin{lstlisting}[caption={\NetFlows ranked heatmap view on a voting profile},label=list:7.8]
 >>> v.showHTMLVotingHeatmap(rankingRule='Netflows',\
 ...                  colorLevels=3,Correlations=True)
 \end{lstlisting}

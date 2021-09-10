@@ -14,7 +14,7 @@ all:
 	$(MAKE) book.pdf
 
 book.pdf: 
-	# makes a pdf with chpter bibliography
+	# makes a pdf with chapter bibliography
 	pdflatex book.tex
 	pdflatex book.tex
 	bibtex 02-mainMatters/01-chapterIntroDigraph3.aux
@@ -48,7 +48,7 @@ book.pdf:
 
 bibGen.pdf: 
 	# makes a pdf with general bibliography
-        # the chpater must be edited before
+        # the chapters must be edited before
 	pdflatex book.tex
 	pdflatex book.tex
 	bibtex book
