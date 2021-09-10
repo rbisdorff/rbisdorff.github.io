@@ -147,6 +147,7 @@ We may visualize the corresponding bipolar-valued relation table by orienting th
 ...    actionsList=orientedCandidatesList,\
 ...    tableTitle='Unopposed three-partisan outrankings')
 \end{lstlisting}
+
 \begin{figure}[ht]
 %\sidecaption
 \includegraphics[width=0.9\hsize]{Figures/20-1-unOpposedOutrankings.png}
@@ -315,7 +316,6 @@ We may eventually visualize in Figure~\vref{fig:20.2} this linear ranking with a
 \caption{The linear ranking modelled by the majority margins digraph} 
 \label{fig:20.2}       % Give a unique label
 \end{figure}
-
 
 \section{Bipolar approval-disapproval voting systems}
 \label{sec:20.2}
@@ -489,7 +489,7 @@ We may inspect these pairwise $r(x \succ y)$ values in a browser view:
 \end{lstlisting}
 \begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=0.9\hsize]{Figures/20-3-majMargAV.png}
+\includegraphics[width=0.8\hsize]{Figures/20-3-majMargAV.png}
 \caption{The bipolar-valued pairwise majority margins} 
 \label{fig:20.3}       % Give a unique label
 \end{figure}
@@ -563,7 +563,7 @@ From the saved file \texttt{AVPerfTab.py} (see Line 1 below), we may construct a
                        'gamma', 'notGamma', ...]
 \end{lstlisting}
 
-The size ($210 = 15 \times 14$) of the resulting outranking digraph \texttt{odg}, shown in Listing~\vref{list:20.11} Line 11 above, reveals that the corresponding ``\emph{at least as good evaluated as}'' relation models actually a trivial \emph{complete} digraph. All candidates appear to be \emph{equally} at least as well evaluated and the strict ``\emph{better evaluated than}'' (codual) outranking digraph becomes in fact empty. The converted performance tableau does apparently not contain sufficiently discriminatory performance evaluations for supporting any strict preference situations.
+The size ($210 = 15 \times 14$) of the resulting outranking digraph \texttt{odg}, shown in Listing~\vref{list:20.11} Line 12 above, reveals that the corresponding ``\emph{at least as good evaluated as}'' relation models actually a trivial \emph{complete} digraph. All candidates appear to be \emph{equally} at least as well evaluated and the strict ``\emph{better evaluated than}'' (codual) outranking digraph becomes in fact empty. The converted performance tableau does apparently not contain sufficiently discriminatory performance evaluations for supporting any strict preference situations.
 
 Yet, we may nevertheless try to apply again the \NetFlows ranking rule to this complete outranking digraph \texttt{odg} and print side by side the corresponding \NetFlows scores and the previous Net Approval scores. 
 \begin{lstlisting}[caption={Comparing the \NetFlows and the Net Approval rankings},label=list:20.12]
@@ -768,7 +768,7 @@ Figure~\vref{fig:20.4}, showing the \NetFlows ranked relation table of the ``\em
 \end{lstlisting}	   
 \begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=0.9\hsize]{Figures/20-4-majMargDAV.png}
+\includegraphics[width=0.8\hsize]{Figures/20-4-majMargDAV.png}
 \caption{The pairwise \emph{better approved than} majority margins} 
 \label{fig:20.4}       % Give a unique label
 \end{figure}
@@ -816,6 +816,6 @@ It is worthwhile noticing again the essential structural and computational role,
 %\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
-%\input{02-mainMatters/20-chapterTemperingPlurality.bbl}
-\bibliographystyle{spbasic}
-\bibliography{03-backMatters/reference}
+\input{02-mainMatters/20-chapterTemperingPlurality.bbl}
+%\bibliographystyle{spbasic}
+%\bibliography{03-backMatters/reference}

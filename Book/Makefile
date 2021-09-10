@@ -17,6 +17,7 @@ book.pdf:
 	# makes a pdf with chapter bibliography
 	pdflatex book.tex
 	pdflatex book.tex
+	bibtex book.aux
 	bibtex 02-mainMatters/01-chapterIntroDigraph3.aux
 	bibtex 02-mainMatters/02-chapterDigraphs.aux
 	bibtex 02-mainMatters/03-chapterOutrankingDigraphs.aux
@@ -60,7 +61,7 @@ bibGen.pdf:
 
 reIndex:
 	pdflatex book.tex
-	makeindex -s svind.ist editor.idx
+	makeindex -s svind.ist book.idx
 	pdflatex book.tex
 
 clean:

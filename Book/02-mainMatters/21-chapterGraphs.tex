@@ -522,7 +522,7 @@ Reading in the result of the \texttt{perrinMIS} shell command, stored in a file 
     }
 \end{lstlisting}
 
-For computing the corresponding non-isomorphic MISs, we actually need the automorphism group of the 12-cycle graph. The \texttt{Digraph} class therefore provides the \texttt{automorphismGenerators()} method\index{automorphismGenerators@\texttt{automorphismGenerators()}} which adds automorphism group generators to a \texttt{Digraph} class instance with the help of the external shell \texttt{dreadnaut} shell command\index{dreadnaut@\texttt{dreadnaut} shell command} from the \emph{nauty} software package \footnote{The \texttt{automorphismGenerators} method uses the \texttt{dreadnaut} shell command from the \emph{nauty} software package. See https://www3.cs.stonybrook.edu/~algorith/implement/nauty/implement.shtml . On Mac OS there exist dmg installers and on Ubuntu Linux or Debian, one may easily install it with \texttt{...\$ sudo apt-get install nauty}.}.
+For computing the corresponding non-isomorphic MISs, we actually need the automorphism group of the 12-cycle graph. The \texttt{Digraph} class therefore provides the \texttt{automorphismGenerators()} method\index{automorphismGenerators@\texttt{automorphismGenerators()}} which adds automorphism group generators to a \texttt{Digraph} class instance with the help of the external \texttt{dreadnaut} shell command\index{dreadnaut@\texttt{dreadnaut} shell command} from the \emph{nauty} software package \footnote{The \texttt{automorphismGenerators} method uses the \texttt{dreadnaut} shell command from the \emph{nauty} software package. See https://www3.cs.stonybrook.edu/~algorith/implement/nauty/implement.shtml . On Mac OS there exist dmg installers and on Ubuntu Linux or Debian, one may easily install it with \texttt{...\$ sudo apt-get install nauty}.}.
 \begin{lstlisting}[caption={Computing the automorphism group generators},label=list:21.17]
 >>> c12.automorphismGenerators()
       ...
@@ -575,6 +575,6 @@ The non isomorphic MISs in the 12-cycle graph represent in fact all the ways one
 %\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliography}
-%\input{02-mainMatters/21-chapterGraphs.bbl}
-\bibliographystyle{spbasic}
-\bibliography{03-backMatters/reference}
+\input{02-mainMatters/21-chapterGraphs.bbl}
+%\bibliographystyle{spbasic}
+%\bibliography{03-backMatters/reference}
