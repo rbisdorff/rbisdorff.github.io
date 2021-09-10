@@ -53,12 +53,14 @@ A random example of such a decision problem with equally important decision obje
 
 In Listing~\ref{list:19.1} above one may notice a performance tableau \texttt{pt} describing seven decision alternatives that are assessed with respect to three equally important decision objectives concerning:
 \begin{enumerate}[topsep=1pt]
-\item An \emph{economical} aspect (Line 24) with a coalition of three performance criteria of significance weight 8,
-\item A \emph{societal} aspect (Line 29) with a coalition of two performance criteria of significance weight 12, and
-\item An \emph{environmental} aspect (Line 33) with a coalition of four performance criteria of significance weight 6.
+\item An \emph{economical} aspect with a coalition of three performance criteria of significance weight 8 (Line 24),
+\item A \emph{societal} aspect with a coalition of two performance criteria of significance weight 12 (Line 29), and
+\item An \emph{environmental} aspect with a coalition of four performance criteria of significance weight 6 (Line 33).
 \end{enumerate}
 
-The question we tackle is the following: How \emph{dependent} on the actual values of the significance weights appears to be the corresponding bipolar-valued outranking digraph? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights. In the random performance tableau \texttt{pt} we observe three increasing weight equivalence classes.
+The question we tackle in this chapter is the following: How \emph{dependent} on the actual values of the significance weights appears to be the corresponding bipolar-valued outranking digraph? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights.
+
+In the random performance tableau \texttt{pt} we observe three increasing weight equivalence classes.
 \begin{lstlisting}[caption={The significance weights preorder},label=list:19.2]
 >>> pt.showWeightPreorder()
     ['en3', 'en5', 'en6', 'en9'] (6) <

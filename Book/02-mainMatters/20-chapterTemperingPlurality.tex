@@ -182,7 +182,7 @@ When restricting now, in a secondary election stage, the set of eligible candida
 
 Candidate \texttt{c06} appears clearly to be the winner of this election. Notice by the way that the restricted pairwise outranking relation, shown in Listing~\ref{list:20.5} Lines 7-11, models a linear ordering of the preselected candidates.
 
-We can eventually check the quality of this best choice by noticing that candidate \texttt{c06} represents indeed the \emph{simple majority}, the \emph{instant-run-off}, the \Borda, as well as the \Condorcet winner of the initially given linear voting profile \texttt{lvp}.
+We can eventually check the quality of this best choice by noticing that Candidate \texttt{c06} represents indeed the \emph{simple majority}, the \emph{instant-run-off}, the \Borda, as well as the \Condorcet winner of the initially given linear voting profile \texttt{lvp}.
 \begin{lstlisting}
 >>> lvp.computeSimpleMajorityWinner()
   ['c06']
@@ -322,7 +322,7 @@ We may eventually visualize in Figure~\vref{fig:20.2} this linear ranking with a
 
 Traditionally, most of the voting systems in use in the World, do only collect approval votes and abstentions, dismissing potentially strong disapproval opinions, not to be assimilated to voting abstentions. Collecting both explicit approvals ($+1$) and explicit disapprovals ($-1$) essentially enriches the expression of voters' preferences. 
 
-In the \texttt{votingProfiles} module\index{votingProfiles@\texttt{votingProfiles} module} we provide a \texttt{BipolarApprovalVotingProfile} class\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class} for handling voting results where, for each eligible candidate $c$, the voters are invited  to \emph{approve} ($+1$), \emph{disapprove} ($-1$), or \emph{ignore} ($0$) the statement that candidate $c$ should win the election \citep{BAU-2012}.
+In the \texttt{votingProfiles} module\index{votingProfiles@\texttt{votingProfiles} module} we provide a \texttt{BipolarApprovalVot\-ingProfile} class\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class} for handling voting results where, for each eligible Candidate \texttt{x}, the voters are invited  to \emph{approve} ($+1$), \emph{disapprove} ($-1$), or \emph{ignore} ($0$) the statement that Candidate \texttt{c} should win the election \citep{BAU-2012}.
 
 File \texttt{bpApVotingProfile.py} contains an example of such a approval-disapproval voting profile concerning 100 voters and 15 eligible candidates \footnote{The file \texttt{bpApVotingProfile.py} may be found in the \texttt{examples} directory of the \Digraph resources.}. We may inspect its content as follows.\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class}
 \begin{lstlisting}[caption={Bipolar approval vonting profiles},label=list:20.9]
@@ -366,7 +366,7 @@ Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Li
     }
 \end{lstlisting}	
 
-Let us denote $A_v$ the set of candidates approved by voter $v$. In the \texttt{approvalBallot} attribute we hence record in fact the bipolar-valued truth characteristic values $r(C \in A_v)$ of the statements that candidate $C$ \emph{is approved} by voter $v$. In Listing~\vref{list:20.9} Line 5, we observe for instance that voter \texttt{v001} positively approves candidate \texttt{a04}. And, in Line 10, we see that voter \texttt{v002} negatively approves, i.e. positively disapproves candidate \texttt{a01}.
+Let us denote $A_{\mathtt{v}}$ the set of candidates approved by voter \texttt{v}. In the \texttt{approvalBallot} attribute we hence record in fact the bipolar-valued truth characteristic values $r(\mathtt{c} \in A_{\mathtt{v}})$ of the statements that Candidate \texttt{c} \emph{is approved} by voter \texttt{v}. In Listing~\vref{list:20.9} Line 5, we observe for instance that voter \texttt{v001} positively approves Candidate \texttt{c04}. And, in Line 10, we see that voter \texttt{v002} negatively approves, i.e. positively disapproves Candidate \texttt{c01}.
 
 The \texttt{showApprovalResults()} method\index{showApprovalResults@\texttt{showApprovalResults()}} and the \texttt{showDisapprovalResults()} method\index{showDisapprovalResults@\texttt{showDisapprovalResults()}} show how many approvals, respectively disapprovals, each candidate receives.
 \begin{lstlisting}
@@ -410,11 +410,11 @@ The \texttt{showApprovalResults()} method\index{showApprovalResults@\texttt{show
     Disapproval proportion: 376/1500 = 0.25
 \end{lstlisting}
 
-In Lines 3 and 22 above, we notice that, of all potential candidates, it is Candidate \texttt{c12} who receives the highest number of approval votes (34) and the lowest number of disapproval votes (16). Total number of approval, respectively disapproval, votes approaches more or less a proportion of $25\%$ of the $100 \times 15 = 1500$ potential approval votes. About $50\%$ of the latter remain hence ignored. 
+In Lines 3 and 22 above, we notice that, of all eligible candidates, it is Candidate \texttt{c12} who receives the highest number of approval votes (34) and the lowest number of disapproval votes (16). Total number of approval, respectively disapproval, votes approaches more or less a proportion of $25\%$ of the $100 \times 15 = 1500$ potential approval votes. About $50\%$ of the latter remain hence ignored. 
 
-When operating now, for each candidate \texttt{C}, the difference between the number of approval and the number of disapproval votes they receive, we obtain per candidate a corresponding \emph{net approval} score; in fact, the bipolar truth characteristic value of the statement ``\emph{candidate C should win the election}''.
+When operating now, for each Candidate \texttt{x}, the difference between the number of approval and the number of disapproval votes they receive, we obtain per candidate a corresponding \emph{net approval} score; in fact, the bipolar truth characteristic value of the statement ``\emph{Candidate} \texttt{x} \emph{should win the election}''.
 \begin{equation}
-r(\text{Candidate C should win the election}) \;=\; \sum_v \big(r(C \in A_v)\big)\;.
+r(\text{Candidate x should win the election}) \;=\; \sum_{\mathtt{v}} \big(r(\mathtt{x} \in A_{\mathtt{v}})\big)\;.
 \end{equation}
 
 These bipolar characteristic values are stored in the \texttt{netApprovalScores} attribute and may be printed out with the \texttt{showNetApprovalScores()} method\index{showNetApprovalScores@\texttt{showNetApprovalScores()}}:
@@ -456,14 +456,14 @@ The approval votes of each voter define now on the set of eligible candidates th
      'c10': Decimal('0')}
 \end{lstlisting}
 
-For voter \texttt{v001}, for instance, the best approved candidate \texttt{c12} is strictly preferred to candidates: \texttt{c01}, \texttt{c02}, \texttt{c03}, \texttt{c05}, \texttt{c06}, \texttt{c07}, \texttt{c08}, \texttt{c11}, \texttt{c14} and \texttt{c15}. No candidate is preferred to \texttt{c12} and the comparison with \texttt{c04}, \texttt{c09}, \texttt{c10} and \texttt{c13} is not communicated, hence indeterminate. Mind by the way that the reflexive comparison of \texttt{c12} with itself is, as usual, ignored, i.e. indeterminate. Each voter $v$ defines thus a partially determined transitive strict preference relation denoted $\succ_v$ on the eligible candidates.
+For voter \texttt{v001}, for instance, the best approved Candidate \texttt{c12} is strictly preferred to Candidates: \texttt{c01}, \texttt{c02}, \texttt{c03}, \texttt{c05}, \texttt{c06}, \texttt{c07}, \texttt{c08}, \texttt{c11}, \texttt{c14} and \texttt{c15}. No candidate is preferred to \texttt{c12} and the comparison with \texttt{c04}, \texttt{c09}, \texttt{c10} and \texttt{c13} is not communicated, hence indeterminate. Mind by the way that the reflexive comparison of \texttt{c12} with itself is, as usual, ignored, i.e. indeterminate. Each voter \texttt{v} defines thus a partially determined transitive strict preference relation denoted $\succ_{\mathtt{v}}$ on the eligible candidates.
 
-For each pair of eligible candidates, we aggregate the previous individual voter's preferences into a truth characteristic of the statement: ``candidate $x$ is \emph{better approved than} candidate $y$'', denoted $r(x \succ y)$:
+For each pair of eligible candidates, we aggregate the previous individual voter's preferences into a truth characteristic of the statement: ``Candidate $x$ is \emph{better approved than} Candidate $y$'', denoted $r(x \succ y)$:
 \begin{equation}
-  r(x \succ y)\;=\; \sum_v \big(\,r(x \succ_v y)\, \big)\;.
+  r(x \succ y)\;=\; \sum_{\mathtt{v}} \big(\,r(x \succ_{\mathtt{v}} y)\, \big)\;.
 \end{equation}  
 
-We say that candidate $x$ is \emph{better approved than} Candidate $y$ when $r(x \succ y)\;>\;0$, i.e. there is a majority of voters who approve \emph{more} and disapprove \emph{less} $x$ than $y$. Vice-versa, we say that candidate $x$ is \emph{not} better approved than candidate $y$ when $r(x \succ y)\;<\;0$, i.e. there is a majority of voters who disapprove more and approve less $x$ than $y$. This computation is achieved with the \texttt{MajorityMarginsDigraph} constructor.
+We say that Candidate $x$ is \emph{better approved than} Candidate $y$ when $r(x \succ y)\;>\;0$, i.e. there is a majority of voters who approve \emph{more} and disapprove \emph{less} $x$ than $y$. Vice-versa, we say that Candidate $x$ is \emph{not} better approved than Candidate $y$ when $r(x \succ y)\;<\;0$, i.e. there is a majority of voters who disapprove more and approve less $x$ than $y$. This computation is achieved with the \texttt{MajorityMarginsDigraph} constructor.
 \begin{lstlisting}
 >>> from votingProfiles import MajorityMarginsDigraph
 >>> m = MajorityMarginsDigraph(bavp)
@@ -481,7 +481,7 @@ We say that candidate $x$ is \emph{better approved than} Candidate $y$ when $r(x
                'order', 'gamma', 'notGamma']
 \end{lstlisting}
 
-The resulting digraph \texttt{m} contains 97 positively validated relations (see Line 8 above) and for all pairs $(x,y)$ of eligible candidates, $r(x \succ y)$ takes value in an valuation range from $-100.00$ (all voters opposed) to $+100.00$ (unanimously supported).
+The resulting digraph \texttt{m} contains 97 positively validated relations (see Line 8 above) and for all pairs $(x,y)$ of eligible candidates, $r(x \succ y)$ takes value in an valuation range from $-100.00$ (unanimously rejected) to $+100.00$ (unanimously approved).
 
 We may inspect these pairwise $r(x \succ y)$ values in a browser view: 
 \begin{lstlisting}
@@ -494,7 +494,7 @@ We may inspect these pairwise $r(x \succ y)$ values in a browser view:
 \label{fig:20.3}       % Give a unique label
 \end{figure}
 
-In Figure~\vref{fig:20.3} it gets apparent that candidate \texttt{c12} is a \Condorcet winner, i.e. the candidate who beats all the other candidates and, with the given voting profile \texttt{gavp}, should without doubt win the election. This strongly confirms the first-ranked result obtained with the previous net approval scoring. 
+In Figure~\vref{fig:20.3} it gets apparent that Candidate \texttt{c12} is a \Condorcet winner, i.e. the candidate who beats all the other candidates and, with the given voting profile \texttt{gavp}, should without doubt win the election. This strongly confirms the first-ranked result obtained with the previous net approval scoring. 
 
 Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{See Sec.~\ref{sec:8.3}.}, a linear ranking of the 15 eligible candidates and compare the result with the net approval scores ranking.
 \begin{lstlisting}[caption={Comparing the net approval and the \NetFlows rankings},label=list:20.10]
@@ -525,7 +525,7 @@ Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{
       'c01'	   -126.000	  -5.0
 \end{lstlisting}
 
-In Listing~\vref{list:20.10} we may notice that the \NetFlows rule delivers a ranking that is very similar to the one previously obtained with the corresponding \emph{Net Approval} scores. Only minor inversions do appear, like in the midfield, where candidate \texttt{c09} advances before candidates \texttt{c13} and \texttt{c14} (see Line 16), and \texttt{c06} and \texttt{c07} swap their positions 9 and 10 (see Line 19). The two last-ranked candidates \texttt{c10} and \texttt{c01} also swap their positions.
+In Listing~\vref{list:20.10} we may notice that the \NetFlows rule delivers a ranking that is very similar to the one previously obtained with the corresponding \emph{Net Approval} scores. Only minor inversions do appear, like in the midfield, where Candidate \texttt{c09} advances before Candidates \texttt{c13} and \texttt{c14} (see Line 16), and \texttt{c06} and \texttt{c07} swap their positions 9 and 10 (see Line 19). The two last-ranked Candidates \texttt{c10} and \texttt{c01} also swap their positions.
 
 This confirms again the pertinence of the net approval scoring approach for finding the winner in an approval-disapproval voting system. Yet, voting by approving ($+1$), disapproving ($-1$) or ignoring ($0$) eligible candidates, may also be seen as a performance evaluation of the eligible candidates on a $\{-1, 0, 1\}$-valued ordinal scale.
 
@@ -773,7 +773,7 @@ Figure~\vref{fig:20.4}, showing the \NetFlows ranked relation table of the ``\em
 \label{fig:20.4}       % Give a unique label
 \end{figure}
 
-Candidate \texttt{c02} appears indeed \emph{better approved than} any other candidate (\Condorcet winner); and, the leading candidates of Party-1, \texttt{c05} and \texttt{c14}, are \emph{less approved than} any other candidates (weak \Condorcet losers).
+Candidate \texttt{c02} appears indeed \emph{better approved than} any other candidate (\Condorcet winner); and, the leading Candidates of Party-1, \texttt{c05} and \texttt{c14}, are \emph{less approved than} any other candidates (weak \Condorcet losers).
 \begin{lstlisting}
 >>> m.computeCondorcetWinners()
   ['c02']
