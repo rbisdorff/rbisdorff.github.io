@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  11 SEP 2021 18:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  11 SEP 2021 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -792,33 +792,21 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
-
-Overfull \hbox (4.08014pt too wide) in paragraph at lines 13--13
-[][] [][]\OT1/ptm/b/n/12 Part I In-tro-duc-tion to the \OT1/ptm/m/sc/12 Di-grap
-h3 \OT1/ptm/b/n/12 pro-gram-ming re-sources[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
-[]  
- []
-
-[11] [12] [13]
+ [11] [12]
+[13]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
 56.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-[14] [15])
+) [14]
+[15])
 \tf@toc=\write5
 \openout5 = `book.toc'.
 
- [16]
-(/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+ [16] (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 \openout2 = `02-mainMatters/00-chapterIntroduction.aux'.
-
 
 (./02-mainMatters/00-chapterIntroduction.texpdfTeX warning (ext4): destination 
 with the same identifier (name{page.1}) has been already used, duplicate ignore
@@ -2665,14 +2653,14 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 71355A1403B00F45751AC3A213A50535;43743.
+(rerunfilecheck)             Checksum: 4F9CF13E6F23F6D37CDF55EE407D93AB;43718.
 Package rerunfilecheck Info: File `book.brf' has not changed.
 (rerunfilecheck)             Checksum: F4AF01C9691433EDE73362E9064E77DF;9428.
  ) 
 Here is how much of TeX's memory you used:
  25911 strings out of 478994
  392321 string characters out of 5858184
- 1277558 words of memory out of 5000000
+ 1277557 words of memory out of 5000000
  35323 multiletter control sequences out of 15000+600000
  490676 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2702,7 +2690,7 @@ symbol/usyr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr
 xlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (378 pages, 5413354 bytes).
+Output written on book.pdf (378 pages, 5413238 bytes).
 PDF statistics:
  14753 PDF objects out of 15390 (max. 8388607)
  13576 compressed objects within 136 object streams
