@@ -4,7 +4,7 @@
   \item anti-holes\idxquad \hyperpage{232}
   \item \texttt{AsymmetricPartialDigraph} class\idxquad \hyperpage{22},\,
 		\hyperpage{224}
-  \item \texttt{automorphismGenerators()}\idxquad \hyperpage{316}
+  \item \texttt{automorphismGenerators()}\idxquad \hyperpage{315}
 
   \indexspace
 {\bf B}\nopagebreak%
@@ -25,7 +25,7 @@
   \indexspace
 {\bf C}\nopagebreak%
  \indexspace\nopagebreak%
-  \item \texttt{checkSampling()}\idxquad \hyperpage{313}
+  \item \texttt{checkSampling()}\idxquad \hyperpage{312}
   \item chordless circuits\idxquad \hyperpage{232}
   \item \texttt{cIntegerOutrankingDigraphs} module\idxquad 
 		\hyperpage{147}
@@ -43,7 +43,7 @@
   \item \texttt{computeBordaWinners}()\idxquad \hyperpage{93}
   \item \texttt{computeChordlessCircuits()}\idxquad \hyperpage{54},\,
 		\hyperpage{97},\,\hyperpage{108}
-  \item \texttt{computeChordlessCycles()}\idxquad \hyperpage{332}
+  \item \texttt{computeChordlessCycles()}\idxquad \hyperpage{333}
   \item \texttt{computeCondorcetWinners()}\idxquad \hyperpage{52},\,
 		\hyperpage{95}
   \item \texttt{computeCopelandRanking()}\idxquad \hyperpage{340}
@@ -53,18 +53,18 @@
   \item \texttt{computeInstantRunoffWinner()}\idxquad \hyperpage{93}
   \item \texttt{computeKernelVector()}\idxquad \hyperpage{246}
   \item \texttt{computeMinimalVertexColoring()}\idxquad \hyperpage{334}
-  \item \texttt{computeNetFlowsRanking()}\idxquad \hyperpage{183}
+  \item \texttt{computeNetFlowsRanking()}\idxquad \hyperpage{182}
   \item \texttt{computeOrdinalCorrelation()}\idxquad \hyperpage{220}
   \item \texttt{computePermutation()}\idxquad \hyperpage{341}
   \item \texttt{computeRankAnalysis()}\idxquad \hyperpage{93}
-  \item \texttt{computeRankingByChoosing()}\idxquad \hyperpage{101},\,
+  \item \texttt{computeRankingByChoosing()}\idxquad \hyperpage{102},\,
 		\hyperpage{225}
   \item \texttt{computeRankingCorrelation()}\idxquad \hyperpage{109},\,
 		\hyperpage{131},\,\hyperpage{187}
   \item \texttt{computeSimpleMajorityWinner()}\idxquad \hyperpage{92}
   \item \texttt{computeSize()}\idxquad \hyperpage{16}
   \item \texttt{computeTransitivelyOriented\-Digraph()}\idxquad 
-		\hyperpage{339}
+		\hyperpage{340}
   \item \texttt{computeTransitivityDegree()}\idxquad \hyperpage{16},\,
 		\hyperpage{107}
   \item \texttt{computeUninominalVotes}()\idxquad \hyperpage{92}
@@ -97,7 +97,7 @@
   \item \texttt{digraph2Graph()}\idxquad \hyperpage{305}
   \item \texttt{digraphsTools} module\idxquad \hyperpage{148}
   \item \texttt{domkernelrestrict()}\idxquad \hyperpage{246}
-  \item \texttt{dreadnaut} shell command\idxquad \hyperpage{316}
+  \item \texttt{dreadnaut} shell command\idxquad \hyperpage{315}
   \item \texttt{DualDigraph} class\idxquad \hyperpage{25},\,
 		\hyperpage{232}
 
@@ -106,9 +106,9 @@
  \indexspace\nopagebreak%
   \item \texttt{EmptyDigraph} class\idxquad \hyperpage{30},\,
 		\hyperpage{231}
-  \item \texttt{EquivalenceDigraph} class\idxquad \hyperpage{219}
+  \item \texttt{EquivalenceDigraph} class\idxquad \hyperpage{218}
   \item \texttt{export3DplotOfCriteria\-Correlation()}\idxquad 
-		\hyperpage{189},\,\hyperpage{223}
+		\hyperpage{188},\,\hyperpage{223}
   \item \texttt{exportGraphViz()}\idxquad \hyperpage{15}
   \item \texttt{exportOrientedTreeGraphViz()}\idxquad \hyperpage{322}
   \item \texttt{exportPermutationGraphViz()}\idxquad \hyperpage{335}
@@ -154,7 +154,7 @@
 		\hyperpage{233}
   \item \texttt{IntegerBipolarOutrankingDigraph} class\idxquad 
 		\hyperpage{147}
-  \item \texttt{isComparabilityGraph()}\idxquad \hyperpage{338}
+  \item \texttt{isComparabilityGraph()}\idxquad \hyperpage{337}
   \item \texttt{IsingModel} class\idxquad \hyperpage{311}
   \item \texttt{isIntervalGraph()}\idxquad \hyperpage{330}
   \item \texttt{isPerfectGraph()}\idxquad \hyperpage{330}
@@ -188,8 +188,7 @@
   \item majority margins digraph\idxquad \hyperpage{94}
   \item \texttt{MajorityMarginsDigraph} class\idxquad \hyperpage{94}
   \item \emph{J.-L. Marichal}\idxquad \hyperpage{313}
-  \item \texttt{MetropolisChain} class\idxquad \hyperpage{311},\,
-		\hyperpage{313}
+  \item \texttt{MetropolisChain} class\idxquad \hyperpage{311,\,312}
   \item \texttt{MISModel} class\idxquad \hyperpage{228}
 
   \indexspace
@@ -217,11 +216,11 @@
   \item performance tableau
     \subitem coherent\idxquad \hyperpage{67}
   \item \texttt{PerformanceQuantiles} class\idxquad \hyperpage{134},\,
-		\hyperpage{195}
+		\hyperpage{194}
   \item \texttt{PerformanceTableau} class\idxquad \hyperpage{49}
   \item \texttt{perfTabs} module\idxquad \hyperpage{49}
   \item permutation graph\idxquad \hyperpage{329}
-  \item \texttt{PermutationGraph} class\idxquad \hyperpage{334}
+  \item \texttt{PermutationGraph} class\idxquad \hyperpage{333}
   \item \texttt{perrinMIS} shell command\idxquad \hyperpage{314}
   \item \textsl{M. Pirlot}\idxquad \hyperpage{244}
   \item prekernel\idxquad \hyperpage{230}
@@ -330,19 +329,19 @@
   \item \texttt{showQuantilesRating()}\idxquad \hyperpage{140},\,
 		\hyperpage{198}
   \item \texttt{showRankAnalysisTable()}\idxquad \hyperpage{93}
-  \item \texttt{showRankingByChoosing()}\idxquad \hyperpage{101}
+  \item \texttt{showRankingByChoosing()}\idxquad \hyperpage{102}
   \item \texttt{showRankingConsensusQuality()}\idxquad \hyperpage{113}
   \item \texttt{showRankingConsensusQuality()}\idxquad \hyperpage{88},\,
 		\hyperpage{188}
   \item \texttt{showRankingConsensus\-Quality()}\idxquad 
-		\hyperpage{201}
+		\hyperpage{200}
   \item \texttt{showRelationTable()}\idxquad \hyperpage{20},\,
 		\hyperpage{38},\,\hyperpage{71}
   \item \texttt{showShort()}\idxquad \hyperpage{305}
   \item \texttt{showShort()}\idxquad \hyperpage{14}
   \item \texttt{showSorting()}\idxquad \hyperpage{126}
   \item \texttt{showSortingCharacteristics()}\idxquad \hyperpage{126},\,
-		\hyperpage{203}
+		\hyperpage{202}
   \item \texttt{showStatistics()}\idxquad \hyperpage{16},\,
 		\hyperpage{80}
   \item \texttt{showTransitionMatrix()}\idxquad \hyperpage{313}
@@ -373,7 +372,7 @@
 		\hyperpage{170}
   \item \texttt{transitiveDigraphs} module\idxquad \hyperpage{57},\,
 		\hyperpage{109--111},\,\hyperpage{167}
-  \item \texttt{transitiveOrientation()}\idxquad \hyperpage{336}
+  \item \texttt{transitiveOrientation()}\idxquad \hyperpage{335,\,336}
   \item \texttt{tree2Pruefer()}\idxquad \hyperpage{322}
   \item \texttt{TreeGraph()}\idxquad \hyperpage{322}
   \item triangulated graph\idxquad \hyperpage{329}
