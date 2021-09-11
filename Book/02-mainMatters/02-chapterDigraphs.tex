@@ -296,7 +296,7 @@ Symmetric and transitive closures, by default in-site methods, are also availabl
 
 The \texttt{closeSymmetric()}\index{closeSymmetric@\texttt{closeSymmetric()}} method (see List.~\vref{list:2.9} Line 2), of complexity $O(n^2)$ where $n$ denotes the digraph's order, changes, on the one hand, all single pairwise links it may detect into double links by operating a disjunction of the pairwise relations. On the other hand, the \texttt{closeTransitive()}\index{closeTransitive@\texttt{closeTransitive()}}  method (see Line 3), implements the \emph{Roy-Warshall} transitive closure algorithm of complexity $O(n^3)$ \index{Roy@\textsl{B. Roy}} \index{warshall@\textsl{S. Warshall}} (\citealp{ROY-1959} and \citealp{WAR-1962}).
 
-The same \texttt{closeTransitive()} with a \texttt{Reverse = True} flag may be readily used for eliminating all transitive arcs from a transitive digraph instance. We make usage of this feature when drawing Hasse diagrams of \texttt{TransitiveDigraph}\index{TransitiveDigraph@\texttt{TransitiveDigraph} class} objects.
+The same \texttt{closeTransitive()} with a \texttt{Reverse = True} flag may be readily used for eliminating all transitive arcs from a transitive digraph instance. We make usage of this feature when drawing Hasse diagrams of \texttt{TransitiveDi\-graph}\index{TransitiveDigraph@\texttt{TransitiveDigraph} class} objects.
 
 \section{Strong components}
 \label{sec:2.8}
@@ -361,14 +361,14 @@ It is possible to reload a \texttt{Digraph} instance from its previously saved C
     '7'    |  0.88  0.72  0.82  0.52 -0.84  0.04   -
 \end{lstlisting}
   
-It is as well possible to show a coloured version of the valued relation table in a system browser window tab (see Fig.~\vref{fig:2.5}).
+It is as well possible with the \texttt{showHTMLRelationTable()} method\index{showHTMLRelationTable@showHTMLRelationTable()} to show in Figure~\vref{fig:2.6} a coloured version of the valued relation table in a system browser window. 
 \begin{lstlisting}
 >>> rdgcsv.showHTMLRelationTable(tableTitle="Tutorial random digraph")
 \end{lstlisting}
  \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/2-6-htmlTutorialDigraph.png}
-\caption[The valued relation table shown in a browser window]{The valued relation table shown in a browser window. Positive arcs are shown in green and negative arcs in red. Indeterminate --zero-valued-- links, like the reflexive diagonal ones or the link between node \texttt{'6'} and node \texttt{'2'}, are shown in gray}
+\caption[The valued relation table shown in a browser window]{The valued relation table shown in a browser window. Positive arcs are shown in green and negative arcs in red. Indeterminate --zero-valued-- arcs, like the reflexive diagonal ones or the arc between node \texttt{6} and node \texttt{2}, are shown in gray}
 \label{fig:2.6}       % Give a unique label
 \end{figure}
  
@@ -381,7 +381,7 @@ Let us finally mention some special universal classes of digraphs that are readi
 \item  the \texttt{EmptyDigraph}\index{EmptyDigraph@\texttt{EmptyDigraph} class} and
 \item  the \texttt{IndeterminateDigraph}\index{IndeterminateDigraph@\texttt{IndeterminateDigraph} class} class,
 \end{itemize}
-who put all characteristic values respectively to the \emph{maximum}, the \emph{minimum} or the \emph{median} indeterminate characteristic value.
+which set all pairwise characteristic values respectively to the \emph{maximum}, the \emph{minimum} or the \emph{median} indeterminate value.
 \begin{lstlisting}[caption={Complete, empty and indeterminate digraphs},label=list:2.11]
 >>> from digraphs import CompleteDigraph,EmptyDigraph,\
 ...   			 IndeterminateDigraph
@@ -436,7 +436,7 @@ who put all characteristic values respectively to the \emph{maximum}, the \emph{
     '4': in => set(), out => set()
 \end{lstlisting}
 
-Mind the subtle difference between the neighbourhoods of an \emph{empty} and the neighbourhoods of an \emph{indeterminate} digraph instance. In the first kind, the neighbourhoods are known to be completely \emph{empty}  (see List.~\vref{list:2.11} Lines 22-27) whereas, in the latter, \emph{nothing is known} about the actual neighbourhoods of the nodes  (see Lines 46-51). These two cases illustrate why in the case of \emph{bipolar-valued} digraphs, we may sometimes need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
+Mind the subtle difference between the neighbourhoods of an \emph{empty} and the neighbourhoods of an \emph{indeterminate} \texttt{Digraph} instance. In the first kind, the neighbourhoods are known to be completely \emph{empty}  (see List.~\vref{list:2.11} Lines 22-27) whereas, in the latter, \emph{nothing is known} about the actual neighbourhoods of the nodes  (see Lines 46-51). These two cases illustrate why in the case of \emph{bipolar-valued} digraphs, we may sometimes need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
 
 \vspace{1cm}
 In the following Chapter~\ref{sec:3}  we introduce the main formal object of this book, namely \emph{bipolar-valued outranking} digraphs.
@@ -446,11 +446,11 @@ In the following Chapter~\ref{sec:3}  we introduce the main formal object of thi
 \addcontentsline{toc}{section}{Notes}
 \section*{Notes}
 
-It is \emph{D. Bouyssou} \index{Bouyssou@\emph{D. Bouyssou}} who first suggested us end of the nineties, when we started to work in Prolog on the computation of digraph kernels with finite domain constraint solvers, that the $50\%$ criteria significance majority was a special value to be carefully taken into account. The converging solution vectors of the fixpoint kernel equations confirmed this special status of the $50\%$ majority (see Chap.~\ref{sec:17}). These early insights led to the seminal articles on bipolar-valued epistemic logic where we introduced split truth/falseness semantics for a multi-valued logical processing of fuzzy preference modelling \citep{BIS-2000,BIS-2002}. The characteristic valuation domain remained however the classical fuzzy $[0.0;1.0]$ valuation domain.
+It is \emph{D. Bouyssou} \index{Bouyssou@\emph{D. Bouyssou}} who first suggested us end of the nineties, when we started to work in Prolog on the computation of digraph kernels with finite domain constraint solvers, that the $50\%$ criteria significance majority was a very special value to be carefully taken into account. The converging solution vectors of the fixpoint kernel equations furthermore confirmed this special status of the $50\%$ majority (see Chap.~\ref{sec:17}). These early insights led to the seminal articles on bipolar-valued epistemic logic where we introduced split truth/falseness semantics for a multi-valued logical processing of fuzzy preference modelling \citep{BIS-2000,BIS-2002}. The characteristic valuation domain remained however the classical fuzzy $[0.0;1.0]$ valuation domain.
 
-It is only in 2004, when we succeeded in assessing the stability of the outranking digraph when solely ordinal criteria significance weights are given, that it became clear and evident for us that the characteristic valuation domain had to be shifted to a bipolar $[-1.0;+1.0]$-valued domain \citep{BIS-2004a}. In this bipolar valuation domain, the $50\%$ majority thershold corresponds now to the median $0.0$ value, characterising with the correct zero value an epistemic indetermination --no knowledge-- situation. Furthermore, identifying truth and falseness by the sign of the characteristic values revealed itself to be very efficient not only from a computational point of view, but also from scientific and semiotical perspectives. A positive (resp. negative) characteristic value now attest a logically valid (resp. invalid) statement and a negative affirmation now corresponds to a positive refutation. Furthermore, the median zero value gives way to efficiently handling partial digraphs --like the border or the assymetric part of a digraph-- and, even more important from a practical decision making point of view, any missing data.
+It is only in 2004, when we succeeded in assessing the stability of the outranking digraph when solely ordinal criteria significance weights are given, that it became clear and evident for us that the characteristic valuation domain had to be shifted to a bipolar $[-1.0;+1.0]$-valued domain \citep{BIS-2004a}. In this bipolar valuation domain, the $50\%$ majority thershold corresponds now to the median $0.0$ value, characterising with the correct zero value an epistemic indetermination --no knowledge-- situation. Furthermore, identifying truth and falseness by the sign of the characteristic values revealed itself to be very efficient not only from a computational point of view, but also from scientific and semiotic perspectives. A positive (resp. negative) characteristic value now attest a logically valid (resp. invalid) statement and a negative affirmation now corresponds to a positive refutation. Furthermore, the median zero value gives way to efficiently handling partial digraphs --like the border or the assymetric part of a digraph-- and, even more important from a practical decision making point of view, any missing data.
 
-The bipolar $[-1.0;+1.0]$-valued characteritisc domain opened so the way to important new operations and concepts, like the disjunctive epistemic fusion operation seen in Section~\vref{sec:2.5} that confers the outranking digraph a logically and epistemically sound definition \citep{BIS-2013}. \Kendall 's ordinal correlation index could be extended to a bipolar-valued relational equivalence index between digraphs \citep{BIS-2012a}. Making usage of the bipolar-valued Gaussian error function naturally led to defining a bipolar-valued likelihood function, where a positive (resp. negative) value gives the likelihood of an affirmation (resp. a refutation) \citep{BIS-2014}.      
+The bipolar $[-1.0;+1.0]$-valued characteritisc domain opened so the way to important new operations and concepts, like the disjunctive epistemic fusion operation seen in Section~\vref{sec:2.5} that confers the outranking digraph a logically sound and epistemically correct definition \citep{BIS-2013}. \Kendall 's ordinal correlation index could be extended to a bipolar-valued relational equivalence index between digraphs (see Chap.~\ref{sec:16} and \citealp{BIS-2012a}). Making usage of the bipolar-valued Gaussian error function naturally led to defining a bipolar-valued likelihood function, where a positive, resp. negative, value gives the likelihood of an affirmation, resp. a refutation (see Chap.~\ref{sec:18} and \citealp{BIS-2014}).      
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

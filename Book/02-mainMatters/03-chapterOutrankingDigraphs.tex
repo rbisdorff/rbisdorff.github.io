@@ -124,7 +124,7 @@ Given the previous random performance tableau \texttt{pt}, the \texttt{BipolarOu
 	]
 \end{lstlisting}
 
-The resulting digraph contains 20 positive (valid) outranking relations. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Lines 9-10 in List.~\vref{list:3.4}).
+The resulting digraph contains 20 positive (valid) outranking relations. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Lines 10-11 in List.~\vref{list:3.4}).
 
 We may inspect the complete $[-1.0,+1.0]$-valued adjacency table with the \texttt{showRelationTable()} method().\index{showRelationTable@\texttt{showRelationTable()}}
 \begin{lstlisting}[caption={Inspecting the valued adjacency table.},label=list:3.5]
@@ -142,14 +142,13 @@ We may inspect the complete $[-1.0,+1.0]$-valued adjacency table with the \textt
    Valuation domain: [-1.0; 1.0]
 \end{lstlisting}
 
-The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class constructor computes from the given performance tableau $pt$ the characteristic value $r(x \succsim y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ in a default \emph{valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as \emph{indeterminate} characteristic value\footnote{See Definition~\vref{def:3.1} \citep{BIS-2013}}. 
+The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class constructor computes from the given performance tableau $pt$ the characteristic value $r(x \succsim y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ in a default \emph{valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as \emph{indeterminate} characteristic value. 
 
-\begin{definition}[Semantics of the bipolar-valued characteristic function $r$]\label{def:3.1}
-
-\noindent The semantics of $r(x \succsim y)$ are the following:
+The semantics of $r(x \succsim y)$ are the following:
+\begin{definition}[Semantics of the bipolar-valued characteristic function $r$]\label{def:3.1} 
 \begin{itemize}[nosep]
-\item [a.] When $r(x \succsim y) > 0.0$, it is more {\em True\/} than {\em False\/} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is ``\emph{at least as well evaluated as}'' alternative $y$ on a weighted majority of criteria {\bf and} there is no considerable negative performance difference observed in disfavour of $x$,
-\item [b.] When $r(x \succsim y) < 0.0$, it is more {\em False\/} than {\em True\/} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is {\bf not} ``\emph{at least as well evaluated as} alternative $y$ on a weighted majority of criteria than alternative $y$ {\bf and} there is no considerable positive performance difference observed in favour of $x$,
+\item [a.] When $r(x \succsim y) > 0.0$, it is \emph{True} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is ``\emph{at least as well evaluated as}'' alternative $y$ on a weighted majority of criteria {\bf and} there is no considerable negative performance difference observed in disfavour of $x$,
+\item [b.] When $r(x \succsim y) < 0.0$, it is \emph{False} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is {\bf not} ``\emph{at least as well evaluated as} alternative $y$ on a weighted majority of criteria than alternative $y$ {\bf and} there is no considerable positive performance difference observed in favour of $x$,
 \item [c.] When $r(x \succsim y) = 0.0$, it is {\bf indeterminate} whether $x$ outranks $y$ or not.
 \end{itemize}
 \end{definition}
@@ -273,7 +272,7 @@ Considering thus each performance criterion as a subset of unanimous voters and 
 
 If the concordance argument was always well received, the discordance argument however, very confused in the beginning \citep{ROY-1966}, could only be handled in an epistemically correct and logically sound way by using a bipolar-valued epistemic logic (see Def.~\vref{def:3.1} and \citealp{BIS-2013}). The outranking situation had consequently to receive an explicit negative definition: An alternative $x$ is said to \emph{do not outrank} an alternative $y$ when – a \emph{significant majority} of criteria confirm that alternative $x$ has to be considered as \emph{not at least as well evaluated as} alternative $y$; and – no discordant criterion opens to significant doubt the validity of the previous confirmation by revealing a considerable \emph{better} performance of alternative $x$ compared to $y$.
 
-Furthermore, the initial conjunctive aggregation of the concordance and discordance arguments had to be replaced by a disjunctive epistemic fusion operation, polarising in a logically and epistemically sound way the concordance with the discordance argument. This way, bipolar-valued outranking  digraphs gain two very useful properties from a measure theoretical perspective. They are \emph{weakly complete}; incomparability situations are no longer attested by the absence of positive outranking relations, but instead by epistemic indeterminateness. And they verify the \emph{coduality principle}: the negation of the epistemic ``\emph{at least as well evaluated as}'' situation corresponds formally to the strict converse epistemic ``\emph{less well evaluated than}'' situation.
+Furthermore, the initial conjunctive aggregation of the concordance and discordance arguments had to be replaced by a disjunctive epistemic fusion operation, polarising in a logically sound and epistemically correct way the concordance with the discordance argument. This way, bipolar-valued outranking  digraphs gained two very useful properties from a measure theoretical perspective. They are \emph{weakly complete}; incomparability situations are no longer attested by the absence of positive outranking relations, but instead by epistemic indeterminateness. And they verify the \emph{coduality principle}: the negation of the epistemic ``\emph{at least as well evaluated as}'' situation corresponds formally to the strict converse epistemic ``\emph{less well evaluated than}'' situation.
 
 
 %%%%%%% The chapter bibliography

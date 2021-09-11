@@ -86,7 +86,7 @@
 \contentsline {lstlisting}{\numberline {10.6}Showing the limiting profiles of the rating quantiles}{139}{lstlisting.10.6}%
 \contentsline {lstlisting}{\numberline {10.7}{\sc Copeland}\xspace ranking of new alternatives and historical quartile limits}{139}{lstlisting.10.7}%
 \contentsline {lstlisting}{\numberline {10.8}Absolute quartiles rating result}{140}{lstlisting.10.8}%
-\contentsline {lstlisting}{\numberline {10.9}Absolute deciles rating result}{140}{lstlisting.10.9}%
+\contentsline {lstlisting}{\numberline {10.9}Absolute deciles rating result}{141}{lstlisting.10.9}%
 \contentsline {lstlisting}{\numberline {10.10}From deciles interpolated quartiles rating result}{142}{lstlisting.10.10}%
 \contentsline {lstlisting}{\numberline {11.1}Big data performance tableau format}{146}{lstlisting.11.1}%
 \contentsline {lstlisting}{\numberline {11.2}Constructing big bipolar-valued outranking digraphs}{147}{lstlisting.11.2}%
@@ -124,8 +124,8 @@
 \contentsline {lstlisting}{\numberline {14.2}Estimated quintile limits of the 2004 survey}{196}{lstlisting.14.2}%
 \contentsline {lstlisting}{\numberline {14.3}Showing the quintiling of the enrolment quality of the 5 Universities}{198}{lstlisting.14.3}%
 \contentsline {lstlisting}{\numberline {14.4}Computing the epistemic fusion of two rating-by-rankig results}{200}{lstlisting.14.4}%
-\contentsline {lstlisting}{\numberline {14.5}Checking the consensus quality of {\sc Kemeny}\xspace and {\sc Copeland}\xspace rankings}{200}{lstlisting.14.5}%
-\contentsline {lstlisting}{\numberline {14.6}Showing quantiles sorting characteristics}{202}{lstlisting.14.6}%
+\contentsline {lstlisting}{\numberline {14.5}Checking the consensus quality of {\sc Kemeny}\xspace and {\sc Copeland}\xspace rankings}{201}{lstlisting.14.5}%
+\contentsline {lstlisting}{\numberline {14.6}Showing quantiles sorting characteristics}{203}{lstlisting.14.6}%
 \contentsline {lstlisting}{\numberline {14.7}Showing a quintiles rating-by-sorting result}{203}{lstlisting.14.7}%
 \contentsline {lstlisting}{\numberline {16.1}Computing the average weighted number of stars per movie}{215}{lstlisting.16.1}%
 \contentsline {lstlisting}{\numberline {16.2}Showing the movie from best to worst rated in a heatmap view}{216}{lstlisting.16.2}%
@@ -150,7 +150,7 @@
 \contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{235}{lstlisting.17.10}%
 \contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{236}{lstlisting.17.11}%
 \contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{238}{lstlisting.17.12}%
-\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{239}{lstlisting.17.13}%
+\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{238}{lstlisting.17.13}%
 \contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{239}{lstlisting.17.14}%
 \contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{242}{lstlisting.17.15}%
 \contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{242}{lstlisting.17.16}%
