@@ -194,7 +194,7 @@ To help now the CEO choosing the best office site, we are going to compute pairw
 \end{itemize}
 \end{definition}
 
-The credibility of each pairwise outranking situation, denoted $r(x \succsim y)$, is measured in a bipolar significance valuation $[-1.0, 1.0]$, where \emph{positive} terms $r(x \succsim y)\, >\, 0.0$ indicate a \emph{validated}, and \emph{negative} terms $r(x \succsim y)\, <\, 0.0$ indicate a \emph{non-validated} outranking situation. The \emph{median} value $r(x \succsim y)\, = \,0.0$ represents an \emph{indeterminate} situation (see \citealp{BIS-2004a} and \citealp{BIS-2013}).   
+The credibility of each pairwise outranking situation, denoted $r(x \succsim y)$, is measured in a bipolar significance valuation $[-1.0, 1.0]$, where \emph{positive} terms $r(x \succsim y)\, >\, 0.0$ indicate a \emph{validated outranking}, and \emph{negative} terms $r(x \succsim y)\, <\, 0.0$ indicate an \emph{invalidated outranking}, i.e. a \emph{validated outranked} situation. The \emph{median} value $r(x \succsim y)\, = \,0.0$ represents an \emph{indeterminate} situation (see \citealp{BIS-2004a} and \citealp{BIS-2013}).   
 
 For computing such a bipolar-valued binary outranking relation from the given performance tableau \texttt{pt}, we use the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph} class} class from the \texttt{outrankingDigraphs}\index{outrankingDigraphs@\texttt{outrankingDigraphs} module} module. The corresponding
 \texttt{showHTMLRe\-lation\-Table()}\index{showHTMLRelationTable@\texttt{showHTMLRelationTable()}} method shows here the resulting bipolar-valued adjacency matrix in a system browser window (see Fig.~\vref{fig:4.2}).
@@ -206,7 +206,7 @@ For computing such a bipolar-valued binary outranking relation from the given pe
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/4-2-officeChoiceOutranking.png}
-\caption[Bipolar-valued adjacency matrix]{Bipolar-valued adjacency matrix. In the resulting outranking relation we may notice, on the one hand, that Alternative \texttt{D} is \emph{positively outranking} all other potential office sites. On the other hand, alternatives \texttt{A} (the most expensive) and \texttt{C} (the cheapest) are \emph{not outranked} by any other site}
+\caption[Bipolar-valued adjacency matrix]{\emph{Bipolar-valued adjacency matrix}. In the resulting outranking relation we may notice, on the one hand, that Alternative \texttt{D} is \emph{positively outranking} all other potential office sites. On the other hand, alternatives \texttt{A} (the most expensive) and \texttt{C} (the cheapest) are \emph{not outranked} by any other site}
 \label{fig:4.2}       % Give a unique label
 \end{figure}
 
@@ -238,7 +238,7 @@ From theory, we know that outranking digraphs are \emph{weakly complete}\index{w
 \end{itemize}
 \end{definition}
 
-Following from the coduality principle, the strict outranking digraph \texttt{bodcd} is build from the ooutranking digraph \texttt{bod} with a codual transform\index{codual transform} (see Sec.~\ref{sec:2.6}).
+Following from the coduality principle, the strict outranking digraph \texttt{bodcd} is build from the outranking digraph \texttt{bod} with a codual transform\index{codual transform} (see Sec.~\ref{sec:2.6}).
 \begin{lstlisting} 
 >>> bodcd = ~(-bod)  # codual tranform
 >>> bodcd
@@ -362,7 +362,7 @@ Yet, we must as well acknowledge in Listing~\vref{list:4.6}, that the cheapest a
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/4-3-bestOfficeChoice.pdf}
-\caption[Best office choice recommendation from strict outranking digraph]{Best office choice recommendation from strict outranking digraph. Notice that site \texttt{A} (\emph{Ave}) (the most expensive) is appearing \emph{incomparable} to all the other alternatives}
+\caption[Best office choice recommendation from strict outranking digraph]{\emph{Best office choice recommendation from strict outranking digraph}. Notice that site \texttt{A} (\emph{Ave}) (the most expensive) is appearing \emph{incomparable} to all the other alternatives}
 \label{fig:4.3}       % Give a unique label
 \end{figure}
 
@@ -384,7 +384,7 @@ To get a global insight in the overall strict outranking situations, we may use 
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/4-4-officeChoiceRanking.pdf}
-\caption[Ranking-by-choosing the potentail office sites]{Ranking-by-choosing the potentail office sites. In this \emph{ranking-by-choosing} method, where we operate the \emph{epistemic fusion} of iterated (strict) first and last choices, compromise alternative \texttt{D} is now ranked before compromise alternative \texttt{G}. The overall partial ordering result shows again the important fact that the most expensive site \texttt{A}, and the cheapest site \texttt{C}, due to their contradictory performances, appear both \emph{incomparable} with most of the other alternatives.} 
+\caption[Ranking-by-choosing the potentail office sites]{\emph{Ranking-by-choosing the potentail office sites}. In this \emph{ranking-by-choosing} method, where we operate the \emph{epistemic fusion} of iterated (strict) first and last choices, compromise alternative \texttt{D} is now ranked before compromise alternative \texttt{G}. The overall partial ordering result shows again the important fact that the most expensive site \texttt{A}, and the cheapest site \texttt{C}, due to their contradictory performances, appear both \emph{incomparable} with most of the other alternatives.} 
 \label{fig:4.4}       % Give a unique label
 \end{figure}
 \begin{lstlisting}[caption={Ranking-by-choosing the outranking digraph},label=list:4.7]
@@ -430,7 +430,7 @@ Following a seminar presentation in 2005 at the LAMSADE\footnote{Laboratoires d'
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/4-5-bouyssou11Oct05crisp.pdf}
-\caption[The internal stability of a best choice recommendation in question.]{The internal stability of a best choice recommendation in question. The only kernel of this digraph is the pair $\{\mathtt{a},\mathtt{d}\}$; yet, it is an ambiguous recommendation, as $\{\mathtt{a},\mathtt{d}\}$ is conjointly an outranking and outranked choice. If the instability of the best choice recommendation is, however, not considered a problem then the choice $\{\mathtt{a},\mathtt{b}\}$ shows the most convincing strict outranking quality and could be considered in priority for recommendation as potential best choice candidates}
+\caption[The internal stability of a best choice recommendation in question]{The internal stability of a best choice recommendation in question. The only kernel of this digraph is the pair $\{\mathtt{a},\mathtt{d}\}$; yet, it is an ambiguous recommendation, as $\{\mathtt{a},\mathtt{d}\}$ is conjointly an outranking and outranked choice. If the instability of the best choice recommendation is, however, not considered a problem then the choice $\{\mathtt{a},\mathtt{b}\}$ shows the most convincing strict outranking quality and could be considered in priority for recommendation as potential best choice candidates}
 \label{fig:4.5}       % Give a unique label
 \end{figure}
 
