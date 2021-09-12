@@ -165,7 +165,7 @@ In Listing~\vref{list:8.5}, the \texttt{WeakCopelandOrder} class\index{WeakCopel
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/8-2-weakCopelandRanking.pdf}
-\caption[Drawing of the weak \Copeland ranking]{\emph{Drawing of the weak \Copeland ranking}. The graph show the skeleton of the preorder produced by the corresponding ties of the \Copeland scores}
+\caption[Drawing of the weak \Copeland ranking]{\emph{Drawing of the weak \Copeland ranking}. The drawing shows the skeleton of the preorder produced by the corresponding ties of the \Copeland scores}
 \label{fig:8.2}       % Give a unique label
 \end{figure}
 
@@ -344,7 +344,7 @@ The \Slater ranking rule is identical to the \Kemeny rule, but it is working, in
   7
 \end{lstlisting}
 
-We notice in Listing~\vref{list:8.12} that the \Slater ranking shown in Line 4 represents a rather good fit ($+0.676$), slightly better apparently than the \NetFlows ranking result ($+0.638$). However, there are in fact 7 such optimal \Slater rankings (see Line 12). The corresponding epistemic disjunction gives the partial ordering shown in Figure~\vref{fig:8.4}:
+We notice in Listing~\ref{list:8.12} above that the \Slater ranking shown in Line 4 represents a rather good fit ($+0.676$), slightly better apparently than the \NetFlows ranking result ($+0.638$). However, there are in fact 7 such optimal \Slater rankings (see Line 12). The corresponding epistemic disjunction gives the partial ordering shown in Figure~\vref{fig:8.4}:
 \begin{lstlisting}[caption={Computing the epistemic disjunction of optimal \Slater rankings},label=list:8.13]   
 >>> slw = RankingsFusion(sl,sl.maximalRankings)
 >>> slw.exportGraphViz(fileName='tutorialSlater')

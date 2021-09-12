@@ -22,20 +22,20 @@ We suppose in this rating case study that five German universities: \texttt{U1},
       \noalign{\smallskip}\hline\noalign{\smallskip}
       \texttt{bio}   & NA     & 53.10 & 49.70 & 52.20 & 55.20\\
       \texttt{med}   & NA     & NA    & NA    & 49.50 & 55.50\\
-      \noalign{\smallskip}\hline\noalign{\smallskip}
+      \              & \      & \     & \     & \     & \    \\
       \texttt{math}  & 56.80  & 54.70 & 56.30 & 58.60 & 61.30\\
       \texttt{phys}  & 58.90  & 59.80 & 53.90 & 59.10 & 60.90\\
       \texttt{chem}  & 52.00  & 50.10 & 54.20 & 53.60 & 56.70\\
-      \noalign{\smallskip}\hline\noalign{\smallskip}
+      \              & \      & \     & \     & \     & \    \\
       \texttt{germ}  & 51.40  & 53.50 & 51.40 & 53.30 & 61.40\\
       \texttt{pol}   & NA     & 54.00 & NA    & 50.80 & 59.60\\
       \texttt{soc}   & 59.10  & 51.50 & 55.60 & 51.00 & 52.20\\
       \texttt{psy}   & 57.70  & NA    & 54.40 & 62.70 & 59.80\\
-      \noalign{\smallskip}\hline\noalign{\smallskip}
+      \              & \      & \     & \     & \     & \    \\
       \texttt{law}   & NA     & NA    & 41.90 & NA    & 51.10\\
       \texttt{eco}   & 49.60  & NA    & NA    & NA    & 54.40\\
       \texttt{mgt}   & 54.00  & 53.40 & 50.70 & 49.60 & NA   \\
-      \noalign{\smallskip}\hline\noalign{\smallskip}
+      \              & \      & \     & \     & \     & \    \\
       \texttt{info}  & 55.40  & 52.60 & 55.80 & 54.60 & NA   \\ 
       \texttt{elec}  & 56.10  & 54.50 & NA    & 57.20 & NA   \\
       \texttt{mec}   & 54.30  & 55.20 & NA    & 54.40 & NA   \\
@@ -47,7 +47,7 @@ We suppose in this rating case study that five German universities: \texttt{U1},
 
 In Table~\vref{tab:14.1}, the fifteen popular academic subjects are grouped into topical 'Faculties': - \emph{Humanities}; - \emph{Law, Economics \& Management}; - \emph{Life Sciences \& Medicine}; - \emph{Natural Sciences \& Mathematics}; and - \emph{Technology}. None of the five universities has students enrolled in all the fifteen subjects. University U1 has, for instance, no students in Life Sciences \& Medicine, and in Law and Politology. Whereas the University U5 does not offer any Technology subjects.
 
-The average enrolment quality scores of the five universities, shown in Table~\vref{tab:14.1} are stored in a file named \texttt{ratingCaseStudy.py} of \texttt{PerformanceTableau} format. The \texttt{showHTMLPerformanceTableau()}  method produces in Figure~\vref{fig:14.1} a nice browser view of this data. 
+The average enrolment quality scores of the five universities, shown in Table~\vref{tab:14.1} are stored in a file named \texttt{ratingCaseStudy.py} of \texttt{PerformanceTableau} format. The \texttt{showHTMLPerformanceTableau()}  method produces in Figure~\vref{fig:14.1} a colourful browser view of these performance records. 
 \begin{lstlisting}
 >>> from perfTabs import PerformanceTableau
 >>> pt = PerformanceTableau('ratingCaseStudy')
@@ -157,7 +157,7 @@ We add, now, the estimated quintile limits to the enrolment quality records of t
    Ordinal correlation : +0.97
 \end{lstlisting}
 
-The resulting ranking of the 5 Universities including the lower-closed quintile score limits may be nicely illustrated  with the \texttt{showHTMLRatingHeatmap()} method.\index{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}}
+The resulting ranking of the 5 Universities including the lower-closed quintile score limits may be well illustrated  with the \texttt{showHTMLRatingHeatmap()} method.\index{showHTMLRatingHeatmap@\texttt{showHTMLRatingHeatmap()}}
 \begin{lstlisting}
 >>> lqr.showHTMLRatingHeatmap(colorLevels=5,\
 ...              Correlations=True,\
