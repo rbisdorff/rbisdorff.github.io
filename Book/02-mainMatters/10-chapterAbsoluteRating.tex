@@ -322,7 +322,6 @@ To avoid having to recompute performance deciles from historical data when wishi
 \end{lstlisting}
 
 With the \texttt{quantiles} parameter (see List.~\vref{list:10.10} Line 2), we recover by interpolation the same quartiles rating as obtained directly with historical performance quartiles (see List.~\vref{list:10.8}). Mind that a correct interpolation of quantiles from a given cumulative distribution function requires more or less uniform distributions of observations in each bin. 
-
 More generally, in the case of industrial production monitoring problems, for instance, where large volumes of historical performance data may be available, it can be of interest to estimate even more precisely the marginal cumulative distribution functions, especially when \emph{tail} rating results, i.e. distinguishing \emph{very best}, or \emph{very weak} multiple criteria performances, become a critical issue. Similarly, the \texttt{historySize} parameter may be used for monitoring on the fly \emph{unstable} random multiple criteria performance data \citep{CHAM-2006}.  	
 
 %%%%%%%
@@ -331,6 +330,6 @@ More generally, in the case of industrial production monitoring problems, for in
 %\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{References}
-\input{02-mainMatters/10-chapterAbsoluteRating.bbl} 
-%\bibliographystyle{spbasic}
-%\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/10-chapterAbsoluteRating.bbl} 
+\bibliographystyle{spbasic}
+\bibliography{03-backMatters/reference}

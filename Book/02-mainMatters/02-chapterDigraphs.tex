@@ -361,7 +361,7 @@ It is possible to reload a \texttt{Digraph} instance from its previously saved C
     '7'    |  0.88  0.72  0.82  0.52 -0.84  0.04   -
 \end{lstlisting}
   
-It is as well possible with the \texttt{showHTMLRelationTable()} method\index{showHTMLRelationTable@showHTMLRelationTable()} to show in Figure~\vref{fig:2.6} a coloured version of the valued relation table in a system browser window. 
+It is as well possible with the \texttt{showHTMLRelationTable()} method\index{showHTMLRelationTable@\texttt{showHTMLRelationTable()}} to show in Figure~\vref{fig:2.6} a coloured version of the valued relation table in a system browser window. 
 \begin{lstlisting}
 >>> rdgcsv.showHTMLRelationTable(tableTitle="Tutorial random digraph")
 \end{lstlisting}
@@ -438,7 +438,8 @@ which set all pairwise characteristic values respectively to the \emph{maximum},
 
 Mind the subtle difference between the neighbourhoods of an \emph{empty} and the neighbourhoods of an \emph{indeterminate} \texttt{Digraph} instance. In the first kind, the neighbourhoods are known to be completely \emph{empty}  (see List.~\vref{list:2.11} Lines 22-27) whereas, in the latter, \emph{nothing is known} about the actual neighbourhoods of the nodes  (see Lines 46-51). These two cases illustrate why in the case of \emph{bipolar-valued} digraphs, we may sometimes need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
 
-\vspace{1cm}
+%\vspace{1cm}
+\vspace{\baselineskip}
 In the following Chapter~\ref{sec:3}  we introduce the main formal object of this book, namely \emph{bipolar-valued outranking} digraphs.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -457,6 +458,6 @@ The bipolar $[-1.0;+1.0]$-valued characteritisc domain opened so the way to impo
 %\clearpage
 %\phantomsection
 %\addcontentsline{toc}{section}{Chapter Bibliograhy}
-\input{02-mainMatters/02-chapterDigraphs.bbl}
-%\bibliographystyle{spbasic}
-%\bibliography{03-backMatters/reference}
+%\input{02-mainMatters/02-chapterDigraphs.bbl}
+\bibliographystyle{spbasic}
+\bibliography{03-backMatters/reference}

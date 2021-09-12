@@ -17,7 +17,7 @@ book.pdf:
 	# makes a pdf with chapter bibliography
 	pdflatex book.tex
 	pdflatex book.tex
-	bibtex book.aux
+	#bibtex book.aux
 	bibtex 02-mainMatters/01-chapterIntroDigraph3.aux
 	bibtex 02-mainMatters/02-chapterDigraphs.aux
 	bibtex 02-mainMatters/03-chapterOutrankingDigraphs.aux
