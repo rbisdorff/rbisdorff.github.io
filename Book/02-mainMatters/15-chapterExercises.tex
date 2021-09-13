@@ -103,7 +103,7 @@ The actual evaluation data are gathered in Table~\vref{tab:15.2}.
     \begin{tabular}{l|c|c|c|c}
       \svhline\noalign{\smallskip}
       Criteria & \texttt{Pr} (€) & \texttt{Pq} & \texttt{Sq} & \texttt{Mq} \\
-      Significance & 2  & 1  & 1  & \\
+      Significance & 2  & 1  & 1  & 1\\
       \noalign{\smallskip}\hline\noalign{\smallskip}
       Model \texttt{T1}   &     -1300  &  2  &  2  &   0\\
       Model \texttt{T2}   &     -1200  &  2  &  2  &   1\\
@@ -131,8 +131,101 @@ The \emph{Price} criterion \texttt{Pr} supports furthermore an indifference thre
 \item Assume that the qualitative criteria: \emph{Picture} quality (\texttt{Pq}), \emph{Sound} quality (\texttt{Sq}), and \emph{Maintenance contract} quality (\texttt{Mq}), are all three considered to be equi-significant and that the significance of the \emph{Price} criterion (\texttt{Pr}) equals the significance of these three quality criteria taken together. How stable is your best choice recommendation with respect to thus reviewing the criteria significance weights?
 \end{enumerate}   
 
-\section{What is the best public policy? (§§)}
+\section{Planning the next holiday activity  (§§)}
 \label{sec:15.4}
+
+\paragraph{\textbf{Data}}
+
+\noindent A family, staying during their holidays in Ronda (Andalusia), is planning the next day’s activity \citep{BIS-2008b}. The alternatives shown in Table~\vref{tab:15.3} are considered as potential actions.
+
+\begin{table}[ht]
+\caption{The set of potential holiday activities}
+\label{tab:15.3}       % Give a unique label
+\begin{center}
+\begin{small}
+    \begin{tabular}{l l l}
+      \svhline\noalign{\smallskip}
+      Identifier & Name & Comment \\
+      \noalign{\smallskip}\hline\noalign{\smallskip}
+      \texttt{ant }  & \emph{Antequerra}  & An afternoon excursion to Antequerra and surroundings\\
+      \texttt{ard}  & \emph{Ardales}  & An afternoon excursion to Ardales and El Chorro\\
+      \texttt{be}   & \emph{Beach}  &  Sun, sea, fun and more\\
+      \texttt{crd}  & \emph{Cordoba}  &  A whole day visit by car to Cordoba\\
+      \texttt{dn}   & \emph{Fa niente}   &  Do nothing\\
+      \texttt{lw}   & \emph{Long walk}   &  A whole day hiking\\
+      \texttt{mal}  & \emph{Malaga}   &  A whole day visit to Malaga\\
+      \texttt{sev}  & \emph{Sevilla}   &  A whole day visit to Sevilla\\
+      \texttt{sw}   & \emph{Short walk} &  Less than a half day hiking\\
+      \noalign{\smallskip}\hline
+    \end{tabular}
+\end{small}
+\end{center}
+\end{table}
+
+The family members agree to measure their preferences with respect to a set of seven performance criteria such as the time to attend the place (to be minimised), the required physical investment, the expected quality of the food, touristic interest, relaxation, sun fun \& more (see Tab.~\vref{tab:15.4})
+
+\begin{table}[ht]
+\caption{The set of performance criteria}
+\label{tab:15.4}       % Give a unique label
+\begin{center}
+\begin{small}
+    \begin{tabular}{l l l}
+      \svhline\noalign{\smallskip}
+      Identifier & Name & Comment \\
+      \noalign{\smallskip}\hline\noalign{\smallskip}
+      \texttt{cult}   & \emph{Cultural Interest}  & Andalusian heritage\\
+      \texttt{dis}  & \emph{Distance}  & Minutes by car to go to and return the activity\\
+      \texttt{food}  & \emph{Food}  &  Quality of the expected food opportunities\\
+      \texttt{sun} & \emph{Sun, Fun \& More}  &  No comment\\
+      \texttt{phy}   & \emph{Physical Investment}  &  Contribution to physical health care\\
+      \texttt{rel}  & \emph{Relaxation}   &  Anti-stress support\\
+      \texttt{tour}  & \emph{Tourist Attraction}   &  How many stars in the guide? \\
+      \noalign{\smallskip}\hline
+    \end{tabular}
+\end{small}
+\end{center}
+\end{table}
+
+The evaluation, agreed with all family members, of the nine alternatives on all the criteria resulted in the performance tableau shown in Table~\vref{tab:15.5}.
+
+\begin{table}[ht]
+\caption{The performance tableau}
+\label{tab:15.5}       % Give a unique label
+\begin{center}
+\begin{small}
+    \begin{tabular}{l|c c c c c c c c c}
+      \svhline\noalign{\smallskip}
+      Criteria & \texttt{ant} & \texttt{ard} & \texttt{be} & \texttt{crd} & \texttt{dn} & \texttt{lw} & \texttt{mal} & \texttt{sev} & \texttt{sw} \\
+      \noalign{\smallskip}\hline\noalign{\smallskip}
+      \texttt{cult} & 7    & 3    & 0   & 10   & 0 & 0   & 5    & 10   & 0\\
+      \texttt{dis}  & -120 & -100 & -30 & -360 & 0 & -90 & -240 & -240 & 0\\
+      \texttt{phy}  & 3    & 7    & 0   & 5    & 0 & 10  & 5    & 5    & 5\\
+      \texttt{rel}  & 1    & 5    & 8   & 3    & 10 & 5  & 3    & 3   & 6\\
+      \texttt{food} & 8    & 10   & 4   & 8    & 10 & 1  & 8    & 10  & 1\\
+      \texttt{sun}  & 0    & 3    & 10  & 3    & 1  & 3  & 8    & 5   & 5\\
+      \texttt{tour}  & 5   & 7    & 3   & 10   & 0  & 8  & 10   & 10  & 5\\
+      \noalign{\smallskip}\hline
+    \end{tabular}
+\end{small}
+\end{center}
+\end{table}
+
+All performances on the qualitative criteria are marked on a same ordinal scale going from 0 (lowest) to 10 (highest). On the quantitative Distance criterion (to be minimized), the required travel time to go to and return from the activity is marked in negative minutes. In order to model only effective preferences, an indifference threshold of 1 point and a preference threshold of 2 points is put on the qualitative performance measures. On the Distance criterion, an indifference threshold of 20 min, and a preference threshold of 45 min. is considered. Furthermore, a difference of more than two hours to go to and retun from the activity’s place is considered to raise a veto.
+
+The individual criteria each reflect one or the other family member’s preferential point of view. Therefore they are judged equi-significant for the best action to be eventually chosen.
+
+\paragraph{\textbf{Questions}}
+
+\begin{enumerate}
+\item Edit a new \texttt{PerformanceTableau} instance with the data shown above and illustrate its content by best showing criteria, decision alternatives and performance table. If needed, write adequate python code.
+\item How do the criteria express their preferential view point on the set of alternatives? For instance the Tourist Attraction criterion appears to be in its preferential judgments somehow positively correlated with both the Cultural Interest and the Food criteria. It is also apparent that the Distance criterion is somehow negatively correlated to these latter criteria. How to explore and illustrate these intuitions?
+\item What is the preference modelling effect of the considerable performance difference of 120 minutes assumed for the Distance criterion?
+\item How would you rank the potential holiday activities with the fairest balance of the performance criteria?
+\item What is the first choice you would recommend to the family members?
+\end{enumerate}
+
+\section{What is the best public policy? (§§)}
+\label{sec:15.5}
 
 \paragraph{\textbf{Data files}}
 
@@ -155,7 +248,7 @@ The \emph{Price} criterion \texttt{Pr} supports furthermore an indifference thre
 \end{enumerate}
 
 \section{A fair diploma validation decision (§§§)}
-\label{sec:15.5}
+\label{sec:15.6}
 
 \paragraph{\textbf{Data}}
 

@@ -127,94 +127,94 @@
 \contentsline {lstlisting}{\numberline {14.5}Checking the consensus quality of {\sc Kemeny}\xspace and {\sc Copeland}\xspace rankings}{203}{lstlisting.14.5}%
 \contentsline {lstlisting}{\numberline {14.6}Showing quantiles sorting characteristics}{205}{lstlisting.14.6}%
 \contentsline {lstlisting}{\numberline {14.7}Showing a quintiles rating-by-sorting result}{205}{lstlisting.14.7}%
-\contentsline {lstlisting}{\numberline {16.1}Computing the average weighted number of stars per movie}{217}{lstlisting.16.1}%
-\contentsline {lstlisting}{\numberline {16.2}Showing the movie from best to worst rated in a heatmap view}{218}{lstlisting.16.2}%
-\contentsline {lstlisting}{\numberline {16.3}Computing a relational equivalence digraph}{219}{lstlisting.16.3}%
-\contentsline {lstlisting}{\numberline {16.4}Two random bipolar-valued digraphs}{220}{lstlisting.16.4}%
-\contentsline {lstlisting}{\numberline {16.5}Bipolar-valued Equivalence Digraph}{221}{lstlisting.16.5}%
-\contentsline {lstlisting}{\numberline {16.6}Computing the ordinal correlation index from the equivalence digraph}{222}{lstlisting.16.6}%
-\contentsline {lstlisting}{\numberline {16.7}Computing the valued ordinal correlation index}{222}{lstlisting.16.7}%
-\contentsline {lstlisting}{\numberline {16.8}The bipolar-valued outranking digraph of the star-rated movies}{223}{lstlisting.16.8}%
-\contentsline {lstlisting}{\numberline {16.9}Computing marginal criterion correlations with global {\sc NetFlows}\xspace ranking}{223}{lstlisting.16.9}%
-\contentsline {lstlisting}{\numberline {16.10}Computing the ordinal correlation between {\sc NetFlows}\xspace and global outranking digraph}{224}{lstlisting.16.10}%
-\contentsline {lstlisting}{\numberline {16.11}Bipolar ranking-by-choosing the movies}{228}{lstlisting.16.11}%
-\contentsline {lstlisting}{\numberline {17.1}Generating a random 3-regular graph of order 12}{230}{lstlisting.17.1}%
-\contentsline {lstlisting}{\numberline {17.2}Printing out all maximal independent sets of the random 3-regular graph}{230}{lstlisting.17.2}%
-\contentsline {lstlisting}{\numberline {17.3}The prekernels of a complete digraph}{232}{lstlisting.17.3}%
-\contentsline {lstlisting}{\numberline {17.4}The prekernels of the empty or indeterminate digraph}{233}{lstlisting.17.4}%
-\contentsline {lstlisting}{\numberline {17.5}The prekernels of the 5-circuit digraph}{234}{lstlisting.17.5}%
-\contentsline {lstlisting}{\numberline {17.6}The prekernels of the 6-circuit digraph}{234}{lstlisting.17.6}%
-\contentsline {lstlisting}{\numberline {17.7}The prekernels of the dual of the 6-circuit digraph}{234}{lstlisting.17.7}%
-\contentsline {lstlisting}{\numberline {17.8}The weak 6-circuit digraph}{235}{lstlisting.17.8}%
-\contentsline {lstlisting}{\numberline {17.9}Generating a random digraph \texttt {rd} of order 7 and arc probability 0.3}{237}{lstlisting.17.9}%
-\contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{237}{lstlisting.17.10}%
-\contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{238}{lstlisting.17.11}%
-\contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{240}{lstlisting.17.12}%
-\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{241}{lstlisting.17.13}%
-\contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{241}{lstlisting.17.14}%
-\contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{244}{lstlisting.17.15}%
-\contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{244}{lstlisting.17.16}%
-\contentsline {lstlisting}{\numberline {17.17}Computing dominant and absorbent preKernels}{245}{lstlisting.17.17}%
-\contentsline {lstlisting}{\numberline {17.18}Verifying the kernel equation system on a tiny random digraph}{246}{lstlisting.17.18}%
-\contentsline {lstlisting}{\numberline {17.19}Computing a dominant prekernel restricted adjancecy table}{248}{lstlisting.17.19}%
-\contentsline {lstlisting}{\numberline {17.20}Fixpoint iterations for initial prekernel \texttt {\{a1, a2, a4\}}}{248}{lstlisting.17.20}%
-\contentsline {lstlisting}{\numberline {18.1}$90\%$-confident outranking relation with triangular distributed significance weights}{260}{lstlisting.18.1}%
-\contentsline {lstlisting}{\numberline {18.2}$99\%$-confident outranking relation}{262}{lstlisting.18.2}%
-\contentsline {lstlisting}{\numberline {18.3}$90\%$-confident outranking digraph with uniform variates}{263}{lstlisting.18.3}%
-\contentsline {lstlisting}{\numberline {19.1}Generate a Random 3 Objectives Performance Tableau}{265}{lstlisting.19.1}%
-\contentsline {lstlisting}{\numberline {19.2}The significance weights preorder}{266}{lstlisting.19.2}%
-\contentsline {lstlisting}{\numberline {19.3}Example Bipolar Outranking Digraph}{267}{lstlisting.19.3}%
-\contentsline {lstlisting}{\numberline {19.4}Bipolar-valued outranking relation table with stability denotation}{267}{lstlisting.19.4}%
-\contentsline {lstlisting}{\numberline {19.5}Comparison of alternatives \texttt {p2} and \texttt {p1}}{269}{lstlisting.19.5}%
-\contentsline {lstlisting}{\numberline {19.6}Comparison of alternatives \texttt {p7} and \texttt {p3}}{270}{lstlisting.19.6}%
-\contentsline {lstlisting}{\numberline {19.7}Computing a robust outranking digraph}{272}{lstlisting.19.7}%
-\contentsline {lstlisting}{\numberline {19.8}Comparing alternatives \texttt {p2} and \texttt {p4}}{273}{lstlisting.19.8}%
-\contentsline {lstlisting}{\numberline {19.9}Computing a robust performance heatmap view}{275}{lstlisting.19.9}%
-\contentsline {lstlisting}{\numberline {19.10}Computing unopposed outranking situations}{277}{lstlisting.19.10}%
-\contentsline {lstlisting}{\numberline {19.11}Computing unopposed outranking digraphs}{277}{lstlisting.19.11}%
-\contentsline {lstlisting}{\numberline {19.12}Example of unopposed multiobjective outranking situation}{278}{lstlisting.19.12}%
-\contentsline {lstlisting}{\numberline {19.13}Pareto efficient multiobjective choice}{278}{lstlisting.19.13}%
-\contentsline {lstlisting}{\numberline {20.1}Example of a 3 parties voting profile}{282}{lstlisting.20.1}%
-\contentsline {lstlisting}{\numberline {20.2}Converting a voting profile into a performance tableau}{283}{lstlisting.20.2}%
-\contentsline {lstlisting}{\numberline {20.3}Computing unopposed multiobjective outranking situations}{283}{lstlisting.20.3}%
-\contentsline {lstlisting}{\numberline {20.4}Computing unopposed multiobjective outranking situations}{284}{lstlisting.20.4}%
-\contentsline {lstlisting}{\numberline {20.5}Recommending the secondary election winner}{284}{lstlisting.20.5}%
-\contentsline {lstlisting}{\numberline {20.6}A divisive two-party example of a random linear voting profile}{286}{lstlisting.20.6}%
-\contentsline {lstlisting}{\numberline {20.7}Example of ineffective primary multipartisan selection}{287}{lstlisting.20.7}%
-\contentsline {lstlisting}{\numberline {20.8}Example of non obvious secondary selection}{287}{lstlisting.20.8}%
-\contentsline {lstlisting}{\numberline {20.9}Bipolar approval vonting profiles}{289}{lstlisting.20.9}%
-\contentsline {lstlisting}{\numberline {20.10}Inspecting an approval-disapproval ballot}{289}{lstlisting.20.10}%
-\contentsline {lstlisting}{\numberline {20.11}Comparing the net approval and the {\sc NetFlows}\xspace rankings}{293}{lstlisting.20.11}%
-\contentsline {lstlisting}{\numberline {20.12}Computing the outranking digraph}{295}{lstlisting.20.12}%
-\contentsline {lstlisting}{\numberline {20.13}Comparing the {\sc NetFlows}\xspace and the Net Approval rankings}{295}{lstlisting.20.13}%
-\contentsline {lstlisting}{\numberline {20.14}Computing a best social choice recommendation}{296}{lstlisting.20.14}%
-\contentsline {lstlisting}{\numberline {20.15}A random approval-disapproval voting profile in a divisive political context}{297}{lstlisting.20.15}%
-\contentsline {lstlisting}{\numberline {21.1}Generating a randm graph instance}{306}{lstlisting.21.1}%
-\contentsline {lstlisting}{\numberline {21.2}Stored instance of a random graph}{306}{lstlisting.21.2}%
-\contentsline {lstlisting}{\numberline {21.3}Inspecting a graph instance}{307}{lstlisting.21.3}%
-\contentsline {lstlisting}{\numberline {21.4}Conversion between graphs and digraphs}{307}{lstlisting.21.4}%
-\contentsline {lstlisting}{\numberline {21.5}Computing a 3-coloring of the random graph \texttt {g}}{308}{lstlisting.21.5}%
-\contentsline {lstlisting}{\numberline {21.6}Computing and printing the maximal independent sets of graph \texttt {g}}{309}{lstlisting.21.6}%
-\contentsline {lstlisting}{\numberline {21.7}Computing and printing the maximal independent sets of graph \texttt {g}}{310}{lstlisting.21.7}%
-\contentsline {lstlisting}{\numberline {21.8}Computing the line graph of the 5-cycle graph}{311}{lstlisting.21.8}%
-\contentsline {lstlisting}{\numberline {21.9}Computing the MISs of the line graph of the 8-cycle graph}{312}{lstlisting.21.9}%
-\contentsline {lstlisting}{\numberline {21.10}Computing maximum matchings in the 8-cycle graph}{312}{lstlisting.21.10}%
-\contentsline {lstlisting}{\numberline {21.11}Simulating an Ising model on a the $15 \times 15$ rectangular grid}{313}{lstlisting.21.11}%
-\contentsline {lstlisting}{\numberline {21.12}Simulating random walks on a graph}{313}{lstlisting.21.12}%
-\contentsline {lstlisting}{\numberline {21.13}Checking the quality of the MCMC sampler}{315}{lstlisting.21.13}%
-\contentsline {lstlisting}{\numberline {21.14}Printing the transition probability distribution}{315}{lstlisting.21.14}%
-\contentsline {lstlisting}{\numberline {21.15}Computing the MISs of the 12-cycle graph}{316}{lstlisting.21.15}%
-\contentsline {lstlisting}{\numberline {21.16}Computing the MISs with the \texttt {perrinMIS} shell command}{317}{lstlisting.21.16}%
-\contentsline {lstlisting}{\numberline {21.17}Computing the automorphism group generators}{318}{lstlisting.21.17}%
-\contentsline {lstlisting}{\numberline {21.18}Computing the MISs orbits of the 12-cycle graph}{318}{lstlisting.21.18}%
-\contentsline {lstlisting}{\numberline {22.1}Generating a random tree graph}{321}{lstlisting.22.1}%
-\contentsline {lstlisting}{\numberline {22.2}Generating a tree graph with a random {\sc Prüfer}\xspace code.}{322}{lstlisting.22.2}%
-\contentsline {lstlisting}{\numberline {22.3}Recognizing a tree graph.}{324}{lstlisting.22.3}%
-\contentsline {lstlisting}{\numberline {22.4}Computing the {\sc Prüfer}\xspace code of a tree graph instance.}{324}{lstlisting.22.4}%
-\contentsline {lstlisting}{\numberline {22.5}Computing the centres of a tree and drawing a rooted and oriented tree.}{324}{lstlisting.22.5}%
-\contentsline {lstlisting}{\numberline {22.6}Generating uniform random spanning trees.}{326}{lstlisting.22.6}%
-\contentsline {lstlisting}{\numberline {22.7}Computing spanning forests over disconnected graphs.}{326}{lstlisting.22.7}%
-\contentsline {lstlisting}{\numberline {22.8}Generating randomly bipolar-valued graphs.}{327}{lstlisting.22.8}%
-\contentsline {lstlisting}{\numberline {22.9}Symmetric relation table}{328}{lstlisting.22.9}%
-\contentsline {lstlisting}{\numberline {22.10}Computing best determined spanning forests.}{328}{lstlisting.22.10}%
-\contentsline {lstlisting}{\numberline {23.1}Testing perfect graph categories.}{332}{lstlisting.23.1}%
+\contentsline {lstlisting}{\numberline {16.1}Computing the average weighted number of stars per movie}{219}{lstlisting.16.1}%
+\contentsline {lstlisting}{\numberline {16.2}Showing the movie from best to worst rated in a heatmap view}{220}{lstlisting.16.2}%
+\contentsline {lstlisting}{\numberline {16.3}Computing a relational equivalence digraph}{221}{lstlisting.16.3}%
+\contentsline {lstlisting}{\numberline {16.4}Two random bipolar-valued digraphs}{222}{lstlisting.16.4}%
+\contentsline {lstlisting}{\numberline {16.5}Bipolar-valued Equivalence Digraph}{223}{lstlisting.16.5}%
+\contentsline {lstlisting}{\numberline {16.6}Computing the ordinal correlation index from the equivalence digraph}{224}{lstlisting.16.6}%
+\contentsline {lstlisting}{\numberline {16.7}Computing the valued ordinal correlation index}{224}{lstlisting.16.7}%
+\contentsline {lstlisting}{\numberline {16.8}The bipolar-valued outranking digraph of the star-rated movies}{225}{lstlisting.16.8}%
+\contentsline {lstlisting}{\numberline {16.9}Computing marginal criterion correlations with global {\sc NetFlows}\xspace ranking}{225}{lstlisting.16.9}%
+\contentsline {lstlisting}{\numberline {16.10}Computing the ordinal correlation between {\sc NetFlows}\xspace and global outranking digraph}{226}{lstlisting.16.10}%
+\contentsline {lstlisting}{\numberline {16.11}Bipolar ranking-by-choosing the movies}{230}{lstlisting.16.11}%
+\contentsline {lstlisting}{\numberline {17.1}Generating a random 3-regular graph of order 12}{232}{lstlisting.17.1}%
+\contentsline {lstlisting}{\numberline {17.2}Printing out all maximal independent sets of the random 3-regular graph}{232}{lstlisting.17.2}%
+\contentsline {lstlisting}{\numberline {17.3}The prekernels of a complete digraph}{234}{lstlisting.17.3}%
+\contentsline {lstlisting}{\numberline {17.4}The prekernels of the empty or indeterminate digraph}{235}{lstlisting.17.4}%
+\contentsline {lstlisting}{\numberline {17.5}The prekernels of the 5-circuit digraph}{236}{lstlisting.17.5}%
+\contentsline {lstlisting}{\numberline {17.6}The prekernels of the 6-circuit digraph}{236}{lstlisting.17.6}%
+\contentsline {lstlisting}{\numberline {17.7}The prekernels of the dual of the 6-circuit digraph}{236}{lstlisting.17.7}%
+\contentsline {lstlisting}{\numberline {17.8}The weak 6-circuit digraph}{237}{lstlisting.17.8}%
+\contentsline {lstlisting}{\numberline {17.9}Generating a random digraph \texttt {rd} of order 7 and arc probability 0.3}{239}{lstlisting.17.9}%
+\contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{239}{lstlisting.17.10}%
+\contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{240}{lstlisting.17.11}%
+\contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{242}{lstlisting.17.12}%
+\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{242}{lstlisting.17.13}%
+\contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{243}{lstlisting.17.14}%
+\contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{246}{lstlisting.17.15}%
+\contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{246}{lstlisting.17.16}%
+\contentsline {lstlisting}{\numberline {17.17}Computing dominant and absorbent preKernels}{247}{lstlisting.17.17}%
+\contentsline {lstlisting}{\numberline {17.18}Verifying the kernel equation system on a tiny random digraph}{248}{lstlisting.17.18}%
+\contentsline {lstlisting}{\numberline {17.19}Computing a dominant prekernel restricted adjancecy table}{250}{lstlisting.17.19}%
+\contentsline {lstlisting}{\numberline {17.20}Fixpoint iterations for initial prekernel \texttt {\{a1, a2, a4\}}}{250}{lstlisting.17.20}%
+\contentsline {lstlisting}{\numberline {18.1}$90\%$-confident outranking relation with triangular distributed significance weights}{262}{lstlisting.18.1}%
+\contentsline {lstlisting}{\numberline {18.2}$99\%$-confident outranking relation}{264}{lstlisting.18.2}%
+\contentsline {lstlisting}{\numberline {18.3}$90\%$-confident outranking digraph with uniform variates}{265}{lstlisting.18.3}%
+\contentsline {lstlisting}{\numberline {19.1}Generate a Random 3 Objectives Performance Tableau}{267}{lstlisting.19.1}%
+\contentsline {lstlisting}{\numberline {19.2}The significance weights preorder}{268}{lstlisting.19.2}%
+\contentsline {lstlisting}{\numberline {19.3}Example Bipolar Outranking Digraph}{269}{lstlisting.19.3}%
+\contentsline {lstlisting}{\numberline {19.4}Bipolar-valued outranking relation table with stability denotation}{269}{lstlisting.19.4}%
+\contentsline {lstlisting}{\numberline {19.5}Comparison of alternatives \texttt {p2} and \texttt {p1}}{271}{lstlisting.19.5}%
+\contentsline {lstlisting}{\numberline {19.6}Comparison of alternatives \texttt {p7} and \texttt {p3}}{272}{lstlisting.19.6}%
+\contentsline {lstlisting}{\numberline {19.7}Computing a robust outranking digraph}{274}{lstlisting.19.7}%
+\contentsline {lstlisting}{\numberline {19.8}Comparing alternatives \texttt {p2} and \texttt {p4}}{275}{lstlisting.19.8}%
+\contentsline {lstlisting}{\numberline {19.9}Computing a robust performance heatmap view}{277}{lstlisting.19.9}%
+\contentsline {lstlisting}{\numberline {19.10}Computing unopposed outranking situations}{279}{lstlisting.19.10}%
+\contentsline {lstlisting}{\numberline {19.11}Computing unopposed outranking digraphs}{279}{lstlisting.19.11}%
+\contentsline {lstlisting}{\numberline {19.12}Example of unopposed multiobjective outranking situation}{280}{lstlisting.19.12}%
+\contentsline {lstlisting}{\numberline {19.13}Pareto efficient multiobjective choice}{280}{lstlisting.19.13}%
+\contentsline {lstlisting}{\numberline {20.1}Example of a 3 parties voting profile}{284}{lstlisting.20.1}%
+\contentsline {lstlisting}{\numberline {20.2}Converting a voting profile into a performance tableau}{285}{lstlisting.20.2}%
+\contentsline {lstlisting}{\numberline {20.3}Computing unopposed multiobjective outranking situations}{285}{lstlisting.20.3}%
+\contentsline {lstlisting}{\numberline {20.4}Computing unopposed multiobjective outranking situations}{286}{lstlisting.20.4}%
+\contentsline {lstlisting}{\numberline {20.5}Recommending the secondary election winner}{286}{lstlisting.20.5}%
+\contentsline {lstlisting}{\numberline {20.6}A divisive two-party example of a random linear voting profile}{288}{lstlisting.20.6}%
+\contentsline {lstlisting}{\numberline {20.7}Example of ineffective primary multipartisan selection}{289}{lstlisting.20.7}%
+\contentsline {lstlisting}{\numberline {20.8}Example of non obvious secondary selection}{289}{lstlisting.20.8}%
+\contentsline {lstlisting}{\numberline {20.9}Bipolar approval vonting profiles}{291}{lstlisting.20.9}%
+\contentsline {lstlisting}{\numberline {20.10}Inspecting an approval-disapproval ballot}{291}{lstlisting.20.10}%
+\contentsline {lstlisting}{\numberline {20.11}Comparing the net approval and the {\sc NetFlows}\xspace rankings}{295}{lstlisting.20.11}%
+\contentsline {lstlisting}{\numberline {20.12}Computing the outranking digraph}{297}{lstlisting.20.12}%
+\contentsline {lstlisting}{\numberline {20.13}Comparing the {\sc NetFlows}\xspace and the Net Approval rankings}{297}{lstlisting.20.13}%
+\contentsline {lstlisting}{\numberline {20.14}Computing a best social choice recommendation}{298}{lstlisting.20.14}%
+\contentsline {lstlisting}{\numberline {20.15}A random approval-disapproval voting profile in a divisive political context}{299}{lstlisting.20.15}%
+\contentsline {lstlisting}{\numberline {21.1}Generating a randm graph instance}{308}{lstlisting.21.1}%
+\contentsline {lstlisting}{\numberline {21.2}Stored instance of a random graph}{308}{lstlisting.21.2}%
+\contentsline {lstlisting}{\numberline {21.3}Inspecting a graph instance}{309}{lstlisting.21.3}%
+\contentsline {lstlisting}{\numberline {21.4}Conversion between graphs and digraphs}{309}{lstlisting.21.4}%
+\contentsline {lstlisting}{\numberline {21.5}Computing a 3-coloring of the random graph \texttt {g}}{310}{lstlisting.21.5}%
+\contentsline {lstlisting}{\numberline {21.6}Computing and printing the maximal independent sets of graph \texttt {g}}{311}{lstlisting.21.6}%
+\contentsline {lstlisting}{\numberline {21.7}Computing and printing the maximal independent sets of graph \texttt {g}}{312}{lstlisting.21.7}%
+\contentsline {lstlisting}{\numberline {21.8}Computing the line graph of the 5-cycle graph}{313}{lstlisting.21.8}%
+\contentsline {lstlisting}{\numberline {21.9}Computing the MISs of the line graph of the 8-cycle graph}{314}{lstlisting.21.9}%
+\contentsline {lstlisting}{\numberline {21.10}Computing maximum matchings in the 8-cycle graph}{314}{lstlisting.21.10}%
+\contentsline {lstlisting}{\numberline {21.11}Simulating an Ising model on a the $15 \times 15$ rectangular grid}{315}{lstlisting.21.11}%
+\contentsline {lstlisting}{\numberline {21.12}Simulating random walks on a graph}{315}{lstlisting.21.12}%
+\contentsline {lstlisting}{\numberline {21.13}Checking the quality of the MCMC sampler}{317}{lstlisting.21.13}%
+\contentsline {lstlisting}{\numberline {21.14}Printing the transition probability distribution}{317}{lstlisting.21.14}%
+\contentsline {lstlisting}{\numberline {21.15}Computing the MISs of the 12-cycle graph}{318}{lstlisting.21.15}%
+\contentsline {lstlisting}{\numberline {21.16}Computing the MISs with the \texttt {perrinMIS} shell command}{319}{lstlisting.21.16}%
+\contentsline {lstlisting}{\numberline {21.17}Computing the automorphism group generators}{320}{lstlisting.21.17}%
+\contentsline {lstlisting}{\numberline {21.18}Computing the MISs orbits of the 12-cycle graph}{320}{lstlisting.21.18}%
+\contentsline {lstlisting}{\numberline {22.1}Generating a random tree graph}{323}{lstlisting.22.1}%
+\contentsline {lstlisting}{\numberline {22.2}Generating a tree graph with a random {\sc Prüfer}\xspace code.}{324}{lstlisting.22.2}%
+\contentsline {lstlisting}{\numberline {22.3}Recognizing a tree graph.}{326}{lstlisting.22.3}%
+\contentsline {lstlisting}{\numberline {22.4}Computing the {\sc Prüfer}\xspace code of a tree graph instance.}{326}{lstlisting.22.4}%
+\contentsline {lstlisting}{\numberline {22.5}Computing the centres of a tree and drawing a rooted and oriented tree.}{326}{lstlisting.22.5}%
+\contentsline {lstlisting}{\numberline {22.6}Generating uniform random spanning trees.}{328}{lstlisting.22.6}%
+\contentsline {lstlisting}{\numberline {22.7}Computing spanning forests over disconnected graphs.}{328}{lstlisting.22.7}%
+\contentsline {lstlisting}{\numberline {22.8}Generating randomly bipolar-valued graphs.}{329}{lstlisting.22.8}%
+\contentsline {lstlisting}{\numberline {22.9}Symmetric relation table}{330}{lstlisting.22.9}%
+\contentsline {lstlisting}{\numberline {22.10}Computing best determined spanning forests.}{330}{lstlisting.22.10}%
+\contentsline {lstlisting}{\numberline {23.1}Testing perfect graph categories.}{334}{lstlisting.23.1}%
