@@ -553,7 +553,7 @@ def computePreKernels(self):
     self.abspreKernels = abspreKernels
 \end{lstlisting}
  
-Finally, we use our bipolar-valued epistemic logic framework for computing the credibility that an individual node of the digraph fits with being a member of an initial or terminal prekernel. For this purpose we make use of the kernel equation systems \citep{BER-1958,KIT-1993}.
+Finally, we use our bipolar-valued epistemic logic framework for computing the credibility that an individual node of the digraph fits with being a member of an initial or terminal prekernel. For this purpose we use kernel equation systems \citep*{SCH-1985}.
 
 \section{Solving kernel equation systems}
 \label{sec:17.6}
@@ -561,7 +561,7 @@ Finally, we use our bipolar-valued epistemic logic framework for computing the c
 Let $G(X,R)$ be a crisp irreflexive digraph defined on a finite set $X$ of nodes and where $R$ is the corresponding $\{-1,+1\}$-valued adjacency matrix. Let $Y$ be the $\{-1,+1\}$-valued membership characteristic (row) vector of a choice in $X$.
 
 When $Y$ satisfies the following equation system:
-\begin{equation}
+\begin{equation}\label{eq:17.1}
   Y \circ R \; = \; -Y\;,
 \end{equation}
 where for all $x$ in $X$,
@@ -594,7 +594,7 @@ Let us verify this result in Listing~\vref{list:17.18} on a tiny random digraph.
 
 It is easy to verify by hand that the characteristic vector $[-1, -1, +1]$ satisfies the initial kernel equation system; node \texttt{a3} gives an \emph{initial} kernel. Similarly, the characteristic vector $[-1, +1, -1]$ verifies indeed the terminal kernel equation system and node \texttt{a2} gives hence a \emph{terminal} kernel.
 
-We succeeded now in generalising \Berge's kernel equation systems to genuine bipolar-valued digraphs \citep*{BIS-2006a,BIS-2006b}. The constructive proof, found by \emph{Marc Pirlot}\index{Pirlot@\textsl{M. Pirlot}}, is based on the following \emph{fixpoint equation} that may be used for computing bipolar-valued kernel membership vectors:
+We succeeded now in generalising crisp kernel equation systems to genuine bipolar-valued digraphs \citep*{BIS-2006a,BIS-2006b}. The constructive proof, found by \emph{Marc Pirlot}\index{Pirlot@\textsl{M. Pirlot}}, is based on the following \emph{fixpoint equation} that may be used for computing bipolar-valued kernel membership vectors:
 \begin{equation}\label{eq:17.4}
 T(Y) \; := \; -(Y \circ R) = Y\;.
 \end{equation}
@@ -668,7 +668,7 @@ In Listing~\vref{list:17.19} we now compute, with the \texttt{domkernelrestrict(
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/17-10-k1restricted.png}
-\caption[Initial kernel $\\mathtt{a1}, \mathtt{a2}, \mathtt{a4}\}$ restricted adjacency table]{\emph{Initial kernel} $\\mathtt{a1}, \mathtt{a2}, \mathtt{a4}\}$ \emph{restricted adjacency table}. This initial prekernel is indeed only weakly independent: The outranking situation between alternatives \texttt{a4} and \texttt{a1} is indeed \emph{indeterminate}. }
+\caption[Initial kernel $\{\mathtt{a1}, \mathtt{a2}, \mathtt{a4}\}$ restricted adjacency table]{\emph{Initial kernel} $\mathtt{a1}, \mathtt{a2}, \mathtt{a4}\}$ \emph{restricted adjacency table}. The outranking situation between alternatives \texttt{a4} and \texttt{a1} being \emph{indeterminate}, this initial prekernel is only weakly independent. }
 \label{fig:17.10}       % Give a unique label
 \end{figure}
 
@@ -714,7 +714,7 @@ Let us also compute the restricted adjacency table for the outranked, i.e. the \
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/17-11-k2restricted.png}
-\caption[Terminal prekernel \{\texttt{a3}, \texttt{a7}\} restricted adjacency table]{\emph{Terminal prekernel} \{\texttt{a3}, \texttt{a7}\} \emph{restricted adjacency table}. Again, we notice that this terminal prekernel is indeed only weakly independent.}
+\caption[Terminal prekernel \{\texttt{a3}, \texttt{a7}\} restricted adjacency table]{\emph{Terminal prekernel} \{\texttt{a3}, \texttt{a7}\} \emph{restricted adjacency table}. Again, we notice that this terminal prekernel is only weakly independent.}
 \label{fig:17.11}       % Give a unique label
 \end{figure}
 
@@ -805,9 +805,9 @@ It is worthwhile noticing the essential computational role, the logical indeterm
 \addcontentsline{toc}{section}{Notes}
 \section*{Notes}
 
-Following the observation that an independent absorbent choice in an acyclic digraph corresponds to the kernel of the associated \Grundy function, \citet{RIG-1948} introduced the name ``noyau'' (kernel) for such a choice. Terminal kernels where in the sequel studied by \citet{BER-1958} in the context of Combinatorial Game Theory. Initial kernels --independent and dominating choices-- were introduced under the name game solutions by \citet{NEU-1944}.
+Following the observation that an independent absorbent choice in an acyclic digraph corresponds to the kernel of the associated \Grundy function, \citet{RIG-1948} introduced the name ``noyau'' (kernel) for such a choice. Terminal kernels where in the sequel studied by \citet{BER-1958} in the context of Combinatorial Game Theory. Initial kernels --independent and dominating choices-- were introduced under the name game solutions by \citet{NEU-1944}. The absorbent version of the crisp kernel equation system~\vref{eq:17.1} was first introduced by \citet{SCH-1985}  in the context of their thorough exploration of relational algebra. The dominant fuzzy version was first introduced by \citet{KIT-1993}.
 
-It is M. Roubens\index{Roubens@\textsl{M. Roubens}} who in Spring 1995, by commenting a newly published book on \emph{Fuzzy decision theory with binary relations} by \cite{KIT-1993}, suggested that solving fuzzy kernel equation systems would be very difficult. Triggered by his pessimistic remark and knowing about kernel equation systems and the \Neumann fixpoint theorem \citep{NEU-1944,SCH-1985}, I immediately started to implement in Prolog a solver for the valued version of such equation systems; the kernel equation system serving as constraints for a discrete labelling of all possible rational solution vectors. And in Summer 1995, we luckily obtained the very first valued outranking kernel from a classical example outranking digraph of order 8 (!) well known in the multiple criteria decision aid community. The computation was done with the help of a commercial finite domain solver. It took several seconds on a CRAY 6412 superserver with 12 processors operating in a nowadays ridiculous CPU speed of 90 Mhz. The labelled solution vectors showing up for a digraph with a single kernel were structured in a way that suggested the converging stages of the \Neumann fixpoint algorithm and gave the initial idea for eventually computing all kernels of a bipolar-valued outranking digraph \citep*{BIS-1996,BIS-1997,BIS-2004d}. 
+It is M. Roubens\index{Roubens@\textsl{M. Roubens}} who in Spring 1995, by commenting the newly published book on \emph{Fuzzy decision theory with binary relations} by \citet{KIT-1993}, suggested that solving such fuzzy kernel equation systems would be very difficult. Triggered by his pessimistic remark and knowing about kernel equation systems and the \Neumann fixpoint theorem \citep{NEU-1944,SCH-1985}, I immediately started to implement in Prolog a solver for the valued version of such equation systems; the kernel equation system serving as constraints for a discrete labelling of all possible rational solution vectors. And in Summer 1995, we luckily obtained the very first valued outranking kernel from a classical example outranking digraph of order 8, well known in the multiple criteria decision aid community. The computation was done with the help of a commercial finite domain solver. It took several seconds on a CRAY 6412 superserver with 12 processors operating in a nowadays ridiculous CPU speed of 90 Mhz. The labelled solution vectors showing up for a digraph with a single kernel were structured in a way that suggested the converging stages of the \Neumann fixpoint algorithm and gave the initial idea for eventually computing all kernels of a bipolar-valued outranking digraph \citep*{BIS-1996,BIS-1997,BIS-2004d}. 
 
 In our present Python3.9 implementation, such a tiny problem is solved in less than a thousandth of a second on a common laptop. And this remains practically the same for any relevant example of outranking digraph observed in a real decision aid problem. Several times we wrote in our personal journal that there is certainly now no more potential for any substantial improvement of this computational efficiency; Only to discover, shortly later, that following a new theoretical idea or choosing a more efficient implementation –-using for instance the amazing instrument of iterator generators in Python–-, execution times could well be divided by 20.
 

@@ -262,8 +262,8 @@ In the relation map, shown in Figure~\vref{fig:12.4}, we see in the left lower c
     True
 >>> dgcd.closeTransitive(Reverse=True,InSite=True)
 >>> dgcd.exportGraphViz('aliceBestChoice',\
-...                     bestChoice=['I-FHK'],\
-...                     worstChoice=['S-HKK','C-HKK'])
+...                     firstChoice=['I-FHK'],\
+...                     lastChoice=['S-HKK','C-HKK'])
   *---- exporting a dot file for GraphViz tools ---------*
    Exporting to aliceBestChoice.dot
    dot -Grankdir=BT -Tpng aliceBestChoice.dot -o aliceBestChoice.png
@@ -308,7 +308,7 @@ In a similar way, one may finally compute a \emph{weak ranking} of all the poten
 
 In Listing~\vref{list:12.6}, we find confirmed that the \emph{Interpreter} studies appear all preferred to the \emph{Translator} studies. Furthermore, the \emph{Interpreter} studies in Saarbrücken appear preferred to the same studies in Heidelberg. The Köln alternative is apparently the preferred one of all the \emph{Translater} studies. And, the \emph{Foreign Correspondent} and the \emph{Specialised Secretary} studies appear second-last and last ranked.
 
-Yet, how \emph{robust} are our findings with respect to potential settings of the decision objectives' importance and the performance criteria significance?
+Yet, how \emph{robust} are our findings with respect to potential settings of the decision objectives' importance and the performance criteria significance weights?
 		
 \section{Robustness analysis}
 \label{sec:12.4}

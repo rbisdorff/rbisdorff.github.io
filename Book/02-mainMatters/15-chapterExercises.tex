@@ -174,7 +174,7 @@ The family members agree to measure their preferences with respect to a set of s
       Identifier & Name & Comment \\
       \noalign{\smallskip}\hline\noalign{\smallskip}
       \texttt{cult}   & \emph{Cultural Interest}  & Andalusian heritage\\
-      \texttt{dis}  & \emph{Distance}  & Minutes by car to go to and return the activity\\
+      \texttt{dis}  & \emph{Distance}  & Minutes by car to go to and return from the activity\\
       \texttt{food}  & \emph{Food}  &  Quality of the expected food opportunities\\
       \texttt{sun} & \emph{Sun, Fun \& More}  &  No comment\\
       \texttt{phy}   & \emph{Physical Investment}  &  Contribution to physical health care\\
@@ -193,17 +193,17 @@ The evaluation, agreed with all family members, of the nine alternatives on all 
 \label{tab:15.5}       % Give a unique label
 \begin{center}
 \begin{small}
-    \begin{tabular}{l|c c c c c c c c c}
+    \begin{tabular}{l c|c c c c c c c c c}
       \svhline\noalign{\smallskip}
-      Criteria & \texttt{ant} & \texttt{ard} & \texttt{be} & \texttt{crd} & \texttt{dn} & \texttt{lw} & \texttt{mal} & \texttt{sev} & \texttt{sw} \\
+      Criteria & Weight & \texttt{ant} & \texttt{ard} & \texttt{be} & \texttt{crd} & \texttt{dn} & \texttt{lw} & \texttt{mal} & \texttt{sev} & \texttt{sw} \\
       \noalign{\smallskip}\hline\noalign{\smallskip}
-      \texttt{cult} & 7    & 3    & 0   & 10   & 0 & 0   & 5    & 10   & 0\\
-      \texttt{dis}  & -120 & -100 & -30 & -360 & 0 & -90 & -240 & -240 & 0\\
-      \texttt{phy}  & 3    & 7    & 0   & 5    & 0 & 10  & 5    & 5    & 5\\
-      \texttt{rel}  & 1    & 5    & 8   & 3    & 10 & 5  & 3    & 3   & 6\\
-      \texttt{food} & 8    & 10   & 4   & 8    & 10 & 1  & 8    & 10  & 1\\
-      \texttt{sun}  & 0    & 3    & 10  & 3    & 1  & 3  & 8    & 5   & 5\\
-      \texttt{tour}  & 5   & 7    & 3   & 10   & 0  & 8  & 10   & 10  & 5\\
+      \texttt{cult} & 1 & 7    & 3    & 0   & 10   & 0 & 0   & 5    & 10   & 0\\
+      \texttt{dis}  & 1 & -120 & -100 & -30 & -360 & 0 & -90 & -240 & -240 & 0\\
+      \texttt{phy}  & 1 & 3    & 7    & 0   & 5    & 0 & 10  & 5    & 5    & 5\\
+      \texttt{rel}  & 1 & 1    & 5    & 8   & 3    & 10 & 5  & 3    & 3   & 6\\
+      \texttt{food} & 1 & 8    & 10   & 4   & 8    & 10 & 1  & 8    & 10  & 1\\
+      \texttt{sun}  & 1 & 0    & 3    & 10  & 3    & 1  & 3  & 8    & 5   & 5\\
+      \texttt{tour}  & 1 & 5   & 7    & 3   & 10   & 0  & 8  & 10   & 10  & 5\\
       \noalign{\smallskip}\hline
     \end{tabular}
 \end{small}
@@ -217,7 +217,7 @@ The individual criteria each reflect one or the other family member’s preferen
 \paragraph{\textbf{Questions}}
 
 \begin{enumerate}
-\item Edit a new \texttt{PerformanceTableau} instance with the data shown above and illustrate its content by best showing criteria, decision alternatives and performance table. If needed, write adequate python code.
+\item Edit a new \texttt{PerformanceTableau} instance with the data shown above and illustrate its content.
 \item How do the criteria express their preferential view point on the set of alternatives? For instance the Tourist Attraction criterion appears to be in its preferential judgments somehow positively correlated with both the Cultural Interest and the Food criteria. It is also apparent that the Distance criterion is somehow negatively correlated to these latter criteria. How to explore and illustrate these intuitions?
 \item What is the preference modelling effect of the considerable performance difference of 120 minutes assumed for the Distance criterion?
 \item How would you rank the potential holiday activities with the fairest balance of the performance criteria?

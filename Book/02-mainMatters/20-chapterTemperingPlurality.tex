@@ -366,9 +366,9 @@ Beside the \texttt{candidates} and \texttt{voters} attributes, we discover in Li
     }
 \end{lstlisting}	
 
-Let us denote $A_{\mathtt{v}}$ the set of candidates approved by voter \texttt{v}. In the \texttt{approvalBallot} attribute we hence record in fact the bipolar-valued truth characteristic values $r(\mathtt{c} \in A_{\mathtt{v}})$ of the statements that Candidate \texttt{c} \emph{is approved} by voter \texttt{v}. In Listing~\vref{list:20.9} Line 5, we observe for instance that voter \texttt{v001} positively approves Candidate \texttt{c04}. And, in Line 10, we see that voter \texttt{v002} negatively approves, i.e. positively disapproves Candidate \texttt{c01}.
+Let us denote $A_{\mathtt{v}}$ the set of candidates approved by voter \texttt{v}. In the \texttt{approval\-Ballot} attribute we hence record in fact the bipolar-valued truth characteristic values $r(\mathtt{c} \in A_{\mathtt{v}})$ of the statements that Candidate \texttt{c} \emph{is approved} by voter \texttt{v}. In Listing~\vref{list:20.9} Line 5, we observe for instance that voter \texttt{v001} positively approves Candidate \texttt{c04}. And, in Line 10, we see that voter \texttt{v002} negatively approves, i.e. positively disapproves Candidate \texttt{c01}.
 
-The \texttt{showApprovalResults()} method\index{showApprovalResults@\texttt{showApprovalResults()}} and the \texttt{showDisapprovalResults()} method\index{showDisapprovalResults@\texttt{showDisapprovalResults()}} show how many approvals, respectively disapprovals, each candidate receives.
+The \texttt{showApprovalResults()} method\index{showApprovalResults@\texttt{showApprovalResults()}} and the \texttt{showDisapproval\-Results()} method\index{showDisapprovalResults@\texttt{showDisapprovalResults()}} show how many approvals, respectively disapprovals, each candidate receives.
 \begin{lstlisting}
 >>> bavp.showApprovalResults()
     Approval results
