@@ -436,17 +436,17 @@ With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in 
       - most credible action(s) = { 'a7': 48.84, }
 \end{lstlisting}
 
-Notice in Lines 13 and 21 in Listing~\vref{list:17.14} that solving the valued \Berge kernel equations provides furthermore a positive characterisation of the most credible decision alternatives in each respective choice recommendation. Alternatives \texttt{a2} and \texttt{a4} give equivalent candidates for a unique \emph{first} choice, and alternative \texttt{a7} is clearly confirmed as the \emph{last} choice.
+Notice in Lines 13 and 21 in Listing~\vref{list:17.14} that solving the valued kernel equation system provides furthermore a positive characterisation of the most credible decision alternatives in each respective choice recommendation. Alternatives \texttt{a2} and \texttt{a4} give equivalent candidates for a unique \emph{first} choice, and alternative \texttt{a7} is clearly confirmed as the \emph{last} choice.
 
 In Fig.~\vref{fig:17.8}, we orient the drawing of the strict outranking digraph instance with the help of these first and last choice recommendations. 
 \begin{lstlisting}
->>> gcd.exportGraphViz(fileName='bestWorstOrientation',\
+>>> gcd.exportGraphViz(fileName='firstLastOrientation',\
 ...                    firstChoice=['a2','a4'],\
 ...                    lastChoice=['a7'])
   *---- exporting a dot file for GraphViz tools -----*
-   Exporting to bestWorstOrientation.dot
-   dot -Grankdir=BT -Tpng bestWorstOrientation.dot\
-                    -o bestWorstOrientation.png
+   Exporting to firstLastOrientation.dot
+   dot -Grankdir=BT -Tpng firstLastOrientation.dot\
+                    -o firstLastOrientation.png
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
