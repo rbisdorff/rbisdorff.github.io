@@ -124,7 +124,7 @@ In order to operate now a \emph{primary multipartisan selection} of potential el
 
 From the potential 105 pairwise outranking situations, we keep 34 positively validated outranking situations, leading to a degree of \emph{oppositeness} between political parties of $67.31\%$.
 
-We may visualize the corresponding bipolar-valued relation table by orienting the list of candidates with the help of the initial and terminal prekernels.
+The corresponding bipolar-valued relation table can be shown by orienting the list of candidates with the help of the initial and terminal prekernels.\index{showPreKernels@\texttt{showPreKernels()}}
 \begin{lstlisting}[caption={Computing unopposed multiobjective outranking situations},label=list:20.4]
 >>> uog.showPreKernels()
   *--- Computing preKernels ---*
@@ -301,7 +301,7 @@ Valuation domain: [-500;+500]
 
 But in our example here, we are lucky. When constructing with the pairwise majority margins digraph (Line 6), a \Condorcet winner, namely \texttt{a3}, becomes apparent (Lines 13,20), which is also one of the two \Borda winners (Line 22). More interesting even is to notice that the apparent majority margins digraph models in fact a linear ranking [\texttt{a3}, \texttt{a7}, \texttt{a6}, \texttt{a2}, \texttt{a5}, \texttt{a4}, \texttt{a1}] of all the eligible candidates, as shown with a \Copeland ranking rule (Line 24).
 
-We may eventually visualize in Figure~\vref{fig:20.2} this linear ranking with a graphviz drawing where we drop all transitive arcs (Line 1) and orient the drawing with \Condorcet winner \texttt{a3} and loser \texttt{a1} (Line 2 below).
+In Figure~\vref{fig:20.2}, this linear ranking is shown with a graphviz drawing where all transitive arcs (Line 1) are dropped and the drawing is oriented with the \Condorcet winner \texttt{a3} and loser \texttt{a1} (Line 2 below).
 \begin{lstlisting}
 >>> cg.closeTransitive(Reverse=True)
 >>> cg.exportGraphViz('divGraph',\
@@ -324,7 +324,7 @@ Traditionally, most of the voting systems in use in the World, do only collect a
 
 In the \texttt{votingProfiles} module\index{votingProfiles@\texttt{votingProfiles} module} we provide a \texttt{BipolarApprovalVot\-ingProfile} class\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class} for handling voting results where, for each eligible Candidate \texttt{x}, the voters are invited  to \emph{approve} ($+1$), \emph{disapprove} ($-1$), or \emph{ignore} ($0$) the statement that Candidate \texttt{c} should win the election \citep{BAU-2012}.
 
-File \texttt{bpApVotingProfile.py} contains an example of such a approval-disapproval voting profile concerning 100 voters and 15 eligible candidates \footnote{The file \texttt{bpApVotingProfile.py} may be found in the \texttt{examples} directory of the \Digraph resources.}. We may inspect its content as follows.\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class}
+File \texttt{bpApVotingProfile.py} contains an example of such a approval-disapproval voting profile concerning 100 voters and 15 eligible candidates \footnote{The file \texttt{bpApVotingProfile.py} may be found in the \texttt{examples} directory of the \Digraph resources.}. We can inspect its content with the \texttt{BipolarApprovalVotingProfile} class:\index{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class}
 \begin{lstlisting}[caption={Bipolar approval vonting profiles},label=list:20.9]
 >>> from votingProfiles import \
 ...                 BipolarApprovalVotingProfile
@@ -483,7 +483,7 @@ We say that Candidate $x$ is \emph{better approved than} Candidate $y$ when $r(x
 
 The resulting digraph \texttt{m} contains 97 positively validated relations (see Line 8 above) and for all pairs $(x,y)$ of eligible candidates, $r(x \succ y)$ takes value in an valuation range from $-100.00$ (unanimously rejected) to $+100.00$ (unanimously approved).
 
-We may inspect these pairwise $r(x \succ y)$ values in a browser view: 
+These pairwise $r(x \succ y)$ values can be inspected in a browser view with the \texttt{showHTMLRelationTable()} method: 
 \begin{lstlisting}
 >>> m.showHTMLRelationTable(relationName='r(x > y)')
 \end{lstlisting}

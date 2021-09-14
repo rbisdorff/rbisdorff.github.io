@@ -112,7 +112,7 @@ The \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\textt
 
 With the \texttt{showCriteriaQuantileLimits()}\index{showCriteriaQuantileLimits@\texttt{showCriteriaQuantileLimits()}} and the \texttt{showSorting()}\index{showSorting@\texttt{showSorting()}} methods, we can inspect the quintiles sorting result computed above in Listing~\vref{list:9.1}. Most of the decision alternatives (26) are gathered in the median quintile $]0.40 - 0.60]$ class, whereas the highest quintile $]0.80-1.00]$ and the lowest quintile $]< - 0.20]$ classes gather each one a unique decision alternative (\texttt{a22}, resp. \texttt{a44}) (see Lines 43-56 above).
 
-We may inspect the details of the corresponding sorting characteristics with the \texttt{showSortingCharacteristics()} method\index{showSortingCharacteristics@\texttt{showSortingCharacteristics()}}.
+Inspecting the details of the corresponding sorting characteristics may be done with the \texttt{showSortingCharacteristics()} method\index{showSortingCharacteristics@\texttt{showSortingCharacteristics()}}.
 \begin{lstlisting}[caption={Bipolar-valued sorting characteristics (extract)},label=list:9.2]
 >>> qs.valuationdomain
     {'min': Decimal('-1.0'), 'med': Decimal('0'),
@@ -231,7 +231,7 @@ The ordering of the 5-tiling result is following the \emph{average} lower and up
      c9. ]   <-0.20] : [57, 59]
 \end{lstlisting}
 
-The highest quintile class ($]80\%-100\%]$) contains decision alternatives \texttt{5}, \texttt{42}, \texttt{43} and \texttt{47}. Lowest quintile class ($]-20\%]$) gathers alternatives \texttt{57} and \texttt{59} (see List.~\vref{list:9.5} Lines 3 and 15). We may inspect the resulting sparse outranking relation map in a browser view with the \texttt{showHTMLRelationMap()} method\index{showHTMLRelationMap@\texttt{showHTMLRelationMap()}}.
+The highest quintile class ($]80\%-100\%]$) contains decision alternatives \texttt{5}, \texttt{42}, \texttt{43} and \texttt{47}. Lowest quintile class ($]-20\%]$) gathers alternatives \texttt{57} and \texttt{59} (see List.~\vref{list:9.5} Lines 3 and 15). The resulting sparse outranking relation is shown with the \texttt{showHTMLRelationMap()} method\index{showHTMLRelationMap@\texttt{showHTMLRelationMap()}} in a heatmap browser view.
 \begin{lstlisting}
    >>> prg.showHTMLRelationMap()
 \end{lstlisting}

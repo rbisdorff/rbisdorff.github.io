@@ -72,7 +72,7 @@ With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \em
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/23-1-randomSplitGraph.pdf}
+\includegraphics[width=6cm]{Figures/23-1-randomSplitGraph.pdf}
 \caption[A conjointly triangulated, comparability, interval, permutation and split graph]{\emph{A conjointly triangulated, comparability, interval, permutation and split graph}. In the Figure here one may readily recognise the essential characteristic of split graphs, namely being always splittable into two disjoint sub-graphs: an \emph{independent choice} \{\texttt{v6}\} and a \emph{clique}  --\{\texttt{v1}, \texttt{v2}, \texttt{v3}, \texttt{v4}, \texttt{v5}, \texttt{v7}, \texttt{v8}\}-- which explains their name} 
 \label{fig:23.1}       % Give a unique label
 \end{figure}
@@ -143,7 +143,7 @@ Six professors (labeled \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/23-2-berge1.pdf}
+\includegraphics[width=6cm]{Figures/23-2-berge1.pdf}
 \caption{Graph representation of the testimonies of the professors} 
 \label{fig:23.2}       % Give a unique label
 \end{figure}
@@ -161,6 +161,12 @@ From graph theory we know that time interval intersections graphs must in fact b
 We see in the Listing above three intersection cycles of length 4, which is impossible to occur on the linear time line. Obviously one professor lied!
 
 And it is \emph{Desmond}. If we doubt his testimony that he saw \emph{Abe} (see Line 1 below), we obtain indeed in Figure~\vref{fig:23.3} a triangulated graph instance whose dual is a comparability graph.\index{setEdgeValue@\texttt{setEdgeValue()}}
+\begin{figure}[ht]
+\sidecaption[t]
+\includegraphics[width=6cm]{Figures/23-3-berge2.pdf}
+\caption{The triangulated testimonies graph} 
+\label{fig:23.3}       % Give a unique label
+\end{figure}
 \begin{lstlisting}
 >>> g.setEdgeValue( ('D','A'), 0)
 >>> g.showShort()
@@ -184,12 +190,6 @@ And it is \emph{Desmond}. If we doubt his testimony that he saw \emph{Abe} (see 
    Exporting to berge2.dot
    fdp -Tpng berge2.dot -o berge2.png
 \end{lstlisting}
-\begin{figure}[ht]
-\sidecaption[t]
-\includegraphics[width=7cm]{Figures/23-3-berge2.pdf}
-\caption{The triangulated testimonies graph} 
-\label{fig:23.3}       % Give a unique label
-\end{figure}
 
 \section{Generating permutation graphs}
 \label{sec:23.3}
@@ -472,7 +472,7 @@ The \texttt{computePermutation()} method\index{computePermutation@\texttt{comput
   [2, 3, 4, 8, 6, 1, 7, 5]
 \end{lstlisting}
 
-We may finally check that, for instance, the two permutations [2, 3, 4, 8, 6, 1, 7, 5] and [4, 2, 8, 3, 1, 5, 6, 7] observed above, will generate corresponding \emph{isomorphic} permutation graphs.
+Let us finally check in Figure~\vref{fig:23.11} that the two permutations [2, 3, 4, 8, 6, 1, 7, 5] and [4, 2, 8, 3, 1, 5, 6, 7], observed above, will generate corresponding \emph{isomorphic} permutation graphs.
 \begin{lstlisting}  
 >>> gtesta = PermutationGraph(\
 ...             permutation=[2, 3, 4, 8, 6, 1, 7, 5])
@@ -489,7 +489,8 @@ We may finally check that, for instance, the two permutations [2, 3, 4, 8, 6, 1,
 \caption{Isomorphic permutation graphs} 
 \label{fig:23.11}       % Give a unique label
 \end{figure}
-And, we indeed recover in Figure~\vref{fig:23.11} indeed two isomorphic copies of the original random graph (compare with Fig.~\vref{fig:23.8}).
+
+And, we indeed recover indeed two isomorphic copies of the original random graph (compare with Fig.~\vref{fig:23.8}).
  
 %%%%%%% The chapter bibliography
 %\normallatexbib

@@ -43,7 +43,7 @@
   \item \texttt{computeBordaWinners}()\idxquad \hyperpage{95}
   \item \texttt{computeChordlessCircuits()}\idxquad \hyperpage{56},\,
 		\hyperpage{99},\,\hyperpage{110}
-  \item \texttt{computeChordlessCycles()}\idxquad \hyperpage{336}
+  \item \texttt{computeChordlessCycles()}\idxquad \hyperpage{337}
   \item \texttt{computeCondorcetWinners()}\idxquad \hyperpage{54},\,
 		\hyperpage{97}
   \item \texttt{computeCopelandRanking()}\idxquad \hyperpage{344}
@@ -51,7 +51,8 @@
   \item \texttt{computeDeterminateness()}\idxquad \hyperpage{18}
   \item \texttt{computeGraphCentres()}\idxquad \hyperpage{326}
   \item \texttt{computeInstantRunoffWinner()}\idxquad \hyperpage{95}
-  \item \texttt{computeKernelVector()}\idxquad \hyperpage{250}
+  \item \texttt{computeKernelVector()}\idxquad \hyperpage{250},\,
+		\hyperpage{253}
   \item \texttt{computeMinimalVertexColoring()}\idxquad \hyperpage{338}
   \item \texttt{computeNetFlowsRanking()}\idxquad \hyperpage{185}
   \item \texttt{computeOrdinalCorrelation()}\idxquad \hyperpage{224}
@@ -64,7 +65,7 @@
   \item \texttt{computeSimpleMajorityWinner()}\idxquad \hyperpage{94}
   \item \texttt{computeSize()}\idxquad \hyperpage{18}
   \item \texttt{computeTransitivelyOriented\-Digraph()}\idxquad 
-		\hyperpage{343}
+		\hyperpage{344}
   \item \texttt{computeTransitivityDegree()}\idxquad \hyperpage{18},\,
 		\hyperpage{109}
   \item \texttt{computeUninominalVotes}()\idxquad \hyperpage{94}
@@ -154,7 +155,7 @@
 		\hyperpage{237}
   \item \texttt{IntegerBipolarOutrankingDigraph} class\idxquad 
 		\hyperpage{149}
-  \item \texttt{isComparabilityGraph()}\idxquad \hyperpage{342}
+  \item \texttt{isComparabilityGraph()}\idxquad \hyperpage{341}
   \item \texttt{IsingModel} class\idxquad \hyperpage{315}
   \item \texttt{isIntervalGraph()}\idxquad \hyperpage{334}
   \item \texttt{isPerfectGraph()}\idxquad \hyperpage{334}
@@ -322,6 +323,7 @@
   \item \texttt{showPerformanceTableau()}\idxquad \hyperpage{39},\,
 		\hyperpage{72},\,\hyperpage{140}
   \item \texttt{showPolarisations()}\idxquad \hyperpage{167}
+  \item \texttt{showPreKernels()}\idxquad \hyperpage{286}
   \item \texttt{showPreKernels}()\idxquad \hyperpage{240}
   \item \texttt{showQuantilesRating()}\idxquad \hyperpage{142},\,
 		\hyperpage{200}
@@ -331,7 +333,7 @@
   \item \texttt{showRankingConsensusQuality()}\idxquad \hyperpage{90},\,
 		\hyperpage{190}
   \item \texttt{showRankingConsensus\-Quality()}\idxquad 
-		\hyperpage{202}
+		\hyperpage{203}
   \item \texttt{showRelationTable()}\idxquad \hyperpage{22},\,
 		\hyperpage{40},\,\hyperpage{73}
   \item \texttt{showShort()}\idxquad \hyperpage{309}
@@ -369,7 +371,7 @@
 		\hyperpage{172}
   \item \texttt{transitiveDigraphs} module\idxquad \hyperpage{59},\,
 		\hyperpage{111--113},\,\hyperpage{169}
-  \item \texttt{transitiveOrientation()}\idxquad \hyperpage{340}
+  \item \texttt{transitiveOrientation()}\idxquad \hyperpage{339}
   \item \texttt{tree2Pruefer()}\idxquad \hyperpage{326}
   \item \texttt{TreeGraph()}\idxquad \hyperpage{326}
   \item triangulated graph\idxquad \hyperpage{333}

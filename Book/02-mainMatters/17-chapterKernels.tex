@@ -14,7 +14,7 @@ A first trivial example is immediately given by the maximal independent vertices
 
 In all graphs or symmetric digraphs, the \emph{maximality condition} imposed on the internal stability is equivalent to the \emph{external stability} condition. Indeed, if there would exist a vertex or node not related to any of the elements of a choice, we may safely add this vertex or node to the given choice without violating its internal stability. All kernels must hence be maximal independent choices. In fact, in a topological sense, they correspond to maximal \emph{holes} in the given graph.
 
-We may illustrate in Figure~\vref{fig:17.1} this coincidence between MISs and kernels in graphs and symmetric digraphs with a random 3-regular graph instance generated in Listing~\vref{list:17.1}\index{RandomRegularGraph@\texttt{RandomRegularGraph} class}. A random MIS in this graph may be computed by using the \texttt{MISModel} class\index{MISModel@\texttt{MISModel} class} (see Lines 5-8 below).
+Figure~\vref{fig:17.1} illustrates this coincidence between MISs and kernels in graphs and symmetric digraphs with a random 3-regular graph instance generated in Listing~\vref{list:17.1}\index{RandomRegularGraph@\texttt{RandomRegularGraph} class}. A random MIS in this graph may be computed by using the \texttt{MISModel} class\index{MISModel@\texttt{MISModel} class} (see Lines 5-8 below).
 \begin{lstlisting}[caption={Generating a random 3-regular graph of order 12},label=list:17.1]
 >>> from graphs import RandomRegularGraph
 >>> r3g12 = RandomRegularGraph(order=12,\
@@ -334,7 +334,7 @@ Now, we know that its potential prekernels must be among its set of maximal inde
        covering     :  0.600
 \end{lstlisting}
      
-Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in List.~\vref{list:17.11}) we discover two initial and two terminal kernels (Lines 12, 17, 23, 28). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels}()} method (Lines 16, 21, 27 and 32). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. We may hence redraw the same digraph in Fig.~\vref{fig:17.5} by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{\texttt{a3}, \texttt{a4}\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{\texttt{a1}, \texttt{a6}\} (coloured in blue).
+Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in List.~\vref{list:17.11}) we discover two initial and two terminal kernels (Lines 12, 17, 23, 28). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels}()} method (Lines 16, 21, 27 and 32). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. In Fig.~\vref{fig:17.5}, the same digraph \texttt{rd} is redrawn by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{\texttt{a3}, \texttt{a4}\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{\texttt{a1}, \texttt{a6}\} (coloured in blue).
 \begin{lstlisting}
 >>> rd.exportGraphViz(fileName='orientedLaterality',\
 ...                   firstChoice=set(['a3', 'a4']),\
@@ -753,7 +753,7 @@ A unique stable bipolar-valued high and low fixpoint is attained at the third it
 
 When we reconsider the graphviz drawing of this outranking digraph in Figure~\vref{fig:17.12}, it becomes obvious here why alternative \texttt{a1} is \emph{neither included nor excluded} from the initial prekernel. Same observation is applicable to alternative \texttt{a3} that can \emph{neither be included nor excluded} from the terminal prekernel. it may even happen, in case of more indeterminate outranking situations, that no alternative  is positively included or excluded from a weakly independent prekernel; the corresponding bipolar-valued membership characteristic vector being completely indeterminate.
 
-To illustrate finally why sometimes we need to operate an epistemic disjunctive fusion of unequal stable low and high membership characteristics vectors (see Step 2.c.), let us consider, for instance, the following crisp \texttt{7}-cycle graph.
+To illustrate finally why sometimes it is necessary to operate an epistemic disjunctive fusion of unequal stable low and high membership characteristics vectors (see Step 2.c.), let us consider, for instance, the following crisp \texttt{7}-cycle graph.
 \begin{lstlisting}
 >>> from digraphs import CirculantDigraph
 >>> c7 = CirculantDigraph(order=7,circulants=[-1,1])
@@ -770,7 +770,7 @@ To illustrate finally why sometimes we need to operate an epistemic disjunctive 
                           'relation','gamma','notGamma']
 \end{lstlisting}		       
 
-Digraph \texttt{c7} is a symmetric crisp digraph showing, among others, the maximal independent set \{\texttt{2},\texttt{5},\texttt{7}\}, i.e. an initial as well as terminal kernel. We may compute the corresponding initial kernel characteristic vector.
+Digraph \texttt{c7} is a symmetric crisp digraph showing, among others, the maximal independent set \{\texttt{2},\texttt{5},\texttt{7}\}, i.e. an initial as well as terminal kernel. The \texttt{computeKernelVector()} method\index{computeKernelVector@\texttt{computeKernelVector()}} computes the corresponding initial kernel characteristic vector.
 \begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
 >>> c7.computeKernelVector(['2','5','7'],\
 ...                       Initial=True,Comments=True)

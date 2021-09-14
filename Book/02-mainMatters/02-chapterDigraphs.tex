@@ -96,7 +96,7 @@ An even better insight into the \texttt{Digraph} object \texttt{rdg} is given by
 \section{Asymmetric and symmetric parts}
 \label{sec:2.3}
 
-We may now extract both the \emph{}\emph{symmetric} as well as the \emph{asymmetric} part of digraph \texttt{rdg} with the help of two corresponding classes (see List.~\vref{list:2.3}) \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}\index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}.
+Extracting both the \emph{}\emph{symmetric} part as well as the \emph{asymmetric} part of digraph \texttt{rdg} may be done with the help of two corresponding classes (see List.~\vref{list:2.3}) \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}\index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}.
 \begin{lstlisting}[caption={Computing asymmetric and symmetric Parts},label=list:2.3]
 >>> from digraphs import AsymmetricPartialDigraph,\
 ...                      SymmetricPartialDigraph
@@ -143,7 +143,7 @@ def _constructRelation(self):
 \section{Border and inner parts}
 \label{sec:2.4}
 
-We may also extract the \emph{border} --the part of a digraph induced by the union of its initial and terminal prekernels (see Chap.~\ref{sec:17})--  as well as, the \emph{inner part} --the complement of the border-- with the help of two corresponding classes: \texttt{GraphBorder}\index{GraphBorder@\texttt{GraphBorder} class} and \texttt{GraphInner}\index{GraphInner@\texttt{GraphInner} class} (see List.~\vref{list:2.5}).
+We can also extract the \emph{border} --the part of a digraph induced by the union of its initial and terminal prekernels (see Chap.~\ref{sec:17})--  as well as, the \emph{inner part} --the complement of the border-- with the help of two corresponding classes: \texttt{GraphBorder}\index{GraphBorder@\texttt{GraphBorder} class} and \texttt{GraphInner}\index{GraphInner@\texttt{GraphInner} class} (see List.~\vref{list:2.5}).
 
 \begin{figure}[ht]
 %\sidecaption
@@ -301,7 +301,7 @@ The same \texttt{closeTransitive()} with a \texttt{Reverse = True} flag may be r
 \section{Strong components}
 \label{sec:2.8}
 
-As the original digraph \texttt{rdg} was connected (see above the result of the showShort() command), both the symmetric and the transitive closures operated together, will necessarily produce a single strong component, i.e. a \textbf{complete} digraph. We may sometimes wish to collapse all strong components in a given digraph and construct the so \emph{collapsed} digraph. Using the \texttt{StrongComponentsCollapsedDigraph} constructor \index{StrongComponentsCollapsedDigraph@\texttt{StrongComponentsCollapsedDigraph} class} here will render a single hyper-node gathering all the original nodes (see Line 7 below).
+As the original digraph \texttt{rdg} was connected (see above the result of the showShort() command), both the symmetric and the transitive closures operated together, will necessarily produce a single strong component, i.e. a \textbf{complete} digraph. It is sometimes useful to collapse all strong components in a given digraph and construct the so \emph{collapsed} digraph. Using the \texttt{StrongComponentsCollapsedDigraph} constructor \index{StrongComponentsCollapsedDigraph@\texttt{StrongComponentsCollapsedDigraph} class} here will render a single hyper-node gathering all the original nodes (see Line 7 below).
 \begin{lstlisting}[caption={Computing the strong components in a digraph},label=list:2.10]
 >>> from digraphs import StrongComponentsCollapsedDigraph
 >>> sc = StrongComponentsCollapsedDigraph(rdg)

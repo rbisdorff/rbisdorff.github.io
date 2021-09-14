@@ -270,7 +270,7 @@ Let use denote $-q$ and $-Q$ the reversed versions of the $q$ and the $Q$ lists.
 
 Now, a pairwise outranking situation will be qualified at stability level $+2$, i.e. positively validated with any significance weights that are compatible with the given weights preorder, when for all $i$, we observe $Q[i] \leq -Q[i]$ and there exists one $i$ such that $Q[i] < -Q[i]$. Similarly, a pairwise outranked situation will be qualified at stability level $-2$, when for all $i$, we observe $Q[i] \geq -Q[i]$ and there exists one $i$ such that $Q[i] > -Q[i]$ \citep{BIS-2004c}.
 
-We may verify, for instance, that the outranking situation observed between alternatives \texttt{p2} and \texttt{p1} does indeed verify this \emph{first order distributional dominance} condition. \hfill
+Let us verify that the outranking situation observed, for instance, between alternatives \texttt{p2} and \texttt{p1} does indeed verify this \emph{first order distributional dominance} condition. \hfill
 \begin{center}
 \begin{tabular}{l|r|r|r|r|r|r|r}
  \svhline\noalign{\smallskip}
@@ -360,7 +360,7 @@ The corresponding \emph{robust} outranking digraph can be computed as follows wi
 
 All outranking situations, qualified at stability level $\pm 1$, are now put to an \emph{indeterminate} status (see List.~\ref{list:19.7} Lines 23-24 Column \texttt{p7}). In the example here, three positive outrankings get dropped: between \texttt{p3} and \texttt{p7}, between \texttt{p7} and \texttt{p3}, and between \texttt{p6} and \texttt{p3}, where the last situation is actually already doubtful because of a veto situation (see List.~\vref{list:19.7} Lines 22-35). Three negative outrankings get dropped as well: between \texttt{p1} and \texttt{p7}, between \texttt{p4} and \texttt{p2}, and between \texttt{p7} and \texttt{p4} (see Lines 22-35).
 
-Notice by the way that outranking or outranked situations, although qualified at level $\pm 2$ or $\pm 3$ may nevertheless become doubtful because of considerable performance differences. We may observe such a doubtful situation when comparing, for instance, alternatives \texttt{p2} and \texttt{p4} (see List.~\vref{list:19.7} Lines 24-25).
+Notice by the way that outranking or outranked situations, although qualified at level $\pm 2$ or $\pm 3$ may nevertheless become doubtful because of considerable performance differences. We observe such a doubtful situation when comparing, for instance, alternatives \texttt{p2} and \texttt{p4} (see List.~\vref{list:19.7} Lines 24-25).
 \begin{lstlisting}[caption={Comparing alternatives \texttt{p2} and \texttt{p4}},label=list:19.8,basicstyle=\ttfamily\scriptsize]
 >>> rg.showPairwiseComparison('p2','p4')
    *------------  pairwise comparison ----*
@@ -382,7 +382,7 @@ Notice by the way that outranking or outranked situations, although qualified at
 
 Despite being robust, the apparent positive outranking situation between alternatives \texttt{p2} and \texttt{p4} becomes doubtful because of a considerable counter-performance ($-60.02$) of \texttt{p2} observed on criterion \texttt{en3}, a negative difference which exceeds slightly the assumed veto discrimination threshold $v = 60.00$ (see List.~\vref{list:19.8} Line 9).
 
-We may finally compare in Figure~\vref{fig:19.1} the \emph{standard} and the \emph{robust} version of the corresponding strict outranking digraphs, both oriented by their respective identical initial and terminal prekernels.
+One may finally compare in Figure~\vref{fig:19.1} the \emph{standard} and the \emph{robust} version of the corresponding strict outranking digraphs, both oriented by their respective identical initial and terminal prekernels.
 \begin{lstlisting}
 >>> rg.showPreKernels()
   *--- Computing preKernels ---*
@@ -415,7 +415,7 @@ We may finally compare in Figure~\vref{fig:19.1} the \emph{standard} and the \em
    
 The robust version (right in Fig.~\vref{fig:19.1}) drops two strict outranking situations: between \texttt{p4} and \texttt{p7} and between \texttt{p7} and \texttt{p1}. The remaining 14 strict outranking (resp. outranked) situations are now all verified at a stability level of $+2$ and more (resp. $-2$ and less). They remain valid, hence, with all potential significance weights that are compatible with the given significance weights preordering (see List.~\vref{list:19.2}).
 
-To appreciate the apparent partial ordering of both the standard and the robust strict outranking digraphs shown in Figure~\vref{fig:19.1}, let us have a final heatmap view in Figure~\vref{fig:19.2} on the underlying performance tableau ordered by the \NetFlows ranking rule actually applied to the robust version of the outranking digraph (see the \texttt{outrankingModel='this'} flag in Line 4 below).
+To appreciate the apparent partial ordering of both the standard and the robust strict outranking digraphs shown in Figure~\vref{fig:19.1}, let us have in Figure~\vref{fig:19.2} a final heatmap view on the underlying performance tableau ordered by the \NetFlows ranking rule actually applied to the robust version of the outranking digraph (see the \texttt{outrankingModel='this'} flag in Line 4 below).
 \begin{lstlisting}[caption={Computing a robust performance heatmap view},label=list:19.9]
 >>> rg.showHTMLPerformanceHeatmap(\
 ...           Correlations=True,\
@@ -467,7 +467,7 @@ Let us reconsider, for instance, the performance tableau \texttt{pt} with three 
 
 We notice in this example three decision objectives of equal importance (see Lines 3,13,17). What will be the outranking situations that are positively (resp.  negatively) validated for each one of the decision objectives taken individually ?
 
-We may obtain such unopposed multiobjective outranking situations by operating an epistemic \emph{average fusion} (see the \texttt{symmetricAverage()} method\index{symmetricAverage@\texttt{symmetricAverage()}}) of the marginal outranking digraphs restricted to the coalition of criteria supporting each one of the decision objectives (see List.~\vref{list:19.9}).
+Such unopposed multiobjective outranking situations may be obtained by operating an epistemic \emph{average fusion} (see the \texttt{symmetricAverage()} method\index{symmetricAverage@\texttt{symmetricAverage()}}) of the marginal outranking digraphs restricted to the coalition of criteria supporting each one of the decision objectives (see List.~\vref{list:19.9}).
 \begin{lstlisting}[caption={Computing unopposed outranking situations},label=list:19.9]
 >>> from outrankingDigraphs import\
 ...                     BipolarOutrankingDigraph
@@ -528,7 +528,7 @@ For easily computing this kind of \emph{unopposed multiobjective} outranking dig
 
 The resulting \emph{unopposed} outranking digraph keeps in fact 13 (see List.\vref{list:19.10} Lines 20-22) out of the 23 positively validated \emph{standard} outranking situations, leading to a degree of \emph{oppositeness} --preferential disagreement between decision objectives-- of $(1.0 - 13/23)\,=\,0.4348$.
 
-We may now, for instance, verify the unopposed status of the outranking situation observed between alternatives \texttt{p1} and \texttt{p5}.
+We can now, for instance, verify the unopposed status of the outranking situation observed between alternatives \texttt{p1} and \texttt{p5}.
 \begin{lstlisting}[caption={Example of unopposed multiobjective outranking situation},label=list:19.11]
 >>> uopg.showPairwiseComparison('p1','p5')
  *------------  pairwise comparison ----*

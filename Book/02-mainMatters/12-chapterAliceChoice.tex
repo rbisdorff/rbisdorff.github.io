@@ -226,7 +226,7 @@ We have mentioned that Alice considers a performance difference of $7$ points on
 
 In Listing~\vref{list:12.3}, we see that \emph{considerable} performance differences concerning the \emph{Attractiveness of the studies} (\texttt{AS} criterion) are indeed observed between the \emph{Specialised Secretary} study programm offered in Köln and the \emph{Graduate Interpreter} study programs offered in Köln, Saarbrücken and Heidelberg. They polarise, hence, three \emph{more or less invalid} outranking situations to \emph{certainly invalid} (Lines 8, 13, 18) and corresponding three \emph{more or less valid} converse outranking situations to \emph{certainly valid} ones (Lines 25, 30, 35). 
 
-We may finally notice in the relation map, shown in Figure~\vref{fig:12.4}, that the four best-ranked study programs, \texttt{I-FHK}, \texttt{I-USB}, \texttt{I-UHB} and \texttt{T-FHK},  are in fact \Condorcet winners (see List.~\vref{list:12.4} Line 2), i.e. they are all four \emph{indifferent} one of the other \textbf{and} positively \emph{outranking} all other alternatives, a result confirmed in Listing~\vref{list:12.4} below by our \Rubis best choice recommendation (Chap.~\ref{sec:4} and \citealp*{BIS-2008a}).
+One may finally notice in the relation map, shown in Figure~\vref{fig:12.4}, that the four best-ranked study programs, \texttt{I-FHK}, \texttt{I-USB}, \texttt{I-UHB} and \texttt{T-FHK},  are in fact \Condorcet winners (see List.~\vref{list:12.4} Line 2), i.e. they are all four \emph{indifferent} one of the other \textbf{and} positively \emph{outranking} all other alternatives, a result confirmed in Listing~\vref{list:12.4} below by our \Rubis best choice recommendation (Chap.~\ref{sec:4} and \citealp*{BIS-2008a}).
 \begin{lstlisting}[caption={Alice's best choice recommendation},label=list:12.4]
 >>> dg.computeCondorcetWinners()
   ['I-FHK', 'I-UHB', 'I-USB', 'T-FHK'] 
@@ -315,7 +315,7 @@ Yet, how \emph{robust} are our findings with respect to potential settings of th
 
 Alice considers her four decision objectives as being \emph{more or less} equally important. Here we have, however, allocated \emph{strictly equal} importance weights with \emph{strictly equi-significant} criteria per objective. How robust is the previous best choice recommendation when, now, we would consider the importance of the objectives and, hence, the significance of the respective performance criteria to be \emph{more or less uncertain}?
 
-To answer this question, we consider the respective criteria significance weights $w_j$ for $j=1,...,9$ to be \emph{triangular random variables} in the range 0 to $2w_j$ with mode = $w_j$. We may compute a corresponding $90\%$-\emph{confident} outranking digraph with the help of the \texttt{ConfidentBipolarOutrankingDigraph} constructor\index{ConfidentBipolarOutrankingDigraph@\texttt{ConfidentBipolarOutranking\-Digraph} class} (see Chap.~\ref{sec:18}).
+To answer this question, we consider the respective criteria significance weights $w_j$ for $j=1,...,9$ to be \emph{triangular random variables} in the range 0 to $2w_j$ with mode = $w_j$. Computing a corresponding $90\%$-\emph{confident} outranking digraph may be done with the help of the \texttt{ConfidentBipolarOutrankingDigraph} class\index{ConfidentBipolarOutrankingDigraph@\texttt{ConfidentBipolarOutranking\-Digraph} class} (see Chap.~\ref{sec:18}).
 \begin{lstlisting}[caption={Computing the 90\% confident outranking digraph},label=list:12.7]
 >>> from outrankingDigraphs import\
 ...         ConfidentBipolarOutrankingDigraph
@@ -383,7 +383,7 @@ The \texttt{UnOpposedBipolarOutrankingDigraph} class\index{UnOpposedBipolarOutra
 
 28 out the 67 standard outranking situations remain valid, which leads to an \emph{oppositeness degree}\index{oppositeness degree} of $(1.0 - 28/67) = 58.21\%$ (see Lines 10-11 in List.~\vref{list:12.9}). Remarkable furthermore is that this unopposed outranking digraph \texttt{uop} is actually \emph{transitive}, i.e. modelling a \emph{partial ranking} of the study programs (Lines 14-15).
 
-We may hence make use of the \texttt{exportGraphViz()} method of the \texttt{Transi\-tiveDigraph} class\index{TransitiveDigraph@\texttt{TransitiveDigraph} class} for drawing the corresponding partial ranking.
+The \texttt{exportGraphViz()} method of the \texttt{Transi\-tiveDigraph} class\index{TransitiveDigraph@\texttt{TransitiveDigraph} class} draws the corresponding partial ranking.
 \begin{lstlisting}
 >>> from transitiveDigraphs import TransitiveDigraph
 >>> TransitiveDigraph.exportGraphViz(uop,\

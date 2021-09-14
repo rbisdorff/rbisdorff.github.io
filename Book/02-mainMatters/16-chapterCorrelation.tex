@@ -110,7 +110,7 @@ Noticing that $\frac{Co}{n(n-1)} \;=\; 1 \,-\, \frac{In}{n(n-1)}$, and recalling
 
 \Kendall 's original \emph{tau} definition implemented in fact the bipolar-valued negation of the non equivalence of two linear orders, i.e. the normalised majority margin of equivalently oriented irreflexive pairs.
 
-Let \texttt{r1} and \texttt{r2} be two random crisp relations defined on a same set of 5 alternatives. We may compute \Kendall 's \emph{tau} index as shown in Listing~\vref{list:16.3}.
+Let \texttt{r1} and \texttt{r2} be two random crisp relations defined on a same set of 5 alternatives. Computing \Kendall 's \emph{tau} index may be done as shown in Listing~\vref{list:16.3}.
 \begin{lstlisting}[caption={Computing a relational equivalence digraph},label=list:16.3]
 >>> from randomDigraphs import RandomDigraph
 >>> r1 = RandomDigraph(order=5,Bipolar=True)
@@ -210,7 +210,7 @@ It is worthwhile noticing that the ordinal correlation index $\tau(\mathtt{d1},\
 
 The epistemic determination effect is thus successfully \emph{out-factored} from the ordinal correlation effect. With completely determined relations, $\tau(\mathtt{d1},\mathtt{d2}) \;=\; r(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2})$. The ordinal correlation with a completely indeterminate digraph, i.e. when $D = 0$, is set by convention to the indeterminate correlation value $0.0$. With uniformly chosen random $r$-valued digraphs, the expected $\tau$ index is $0.0$, denoting in fact an indeterminate relational equivalence. The corresponding expected normalised determination $d$ is about $0.333$ (see \citet{BIS-2012a}).
 
-We may below verify Equation~\vref{eq:16.4} with help of the equivalence digraph \texttt{eqd} computed in Listing~\vref{list:16.5}.
+We verify Equation~\vref{eq:16.4} below with help of the equivalence digraph \texttt{eqd} computed in Listing~\vref{list:16.5}.
 \begin{lstlisting}[caption={Computing the ordinal correlation index from the equivalence digraph},label=list:16.6]
 >>> # eqd = EquivalenceDigraph(d1,d2)
 >>> M = Decimal('0'); D = Decimal('0')
@@ -224,7 +224,7 @@ We may below verify Equation~\vref{eq:16.4} with help of the equivalence digraph
   r(rd1<=>rd2) = +0.026, d = 0.356, tau = +0.073  
 \end{lstlisting}
 
-The \Digraph resources directly provide for the preceding computations the \texttt{compute\-OrdinalCorrelation()} method\index{computeOrdinalCorrelation@\texttt{computeOrdinalCorrelation()}} which renders a dictionary with a \texttt{correlation} ($\tau$) and a \texttt{determina\-tion} ($d$) attribute. We may recover $r(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2})$ by multiplying $\tau$ with $d$ (see List.~\vref{list:16.7} Line 4). 
+The \Digraph resources directly provide for the preceding computations the \texttt{compute\-OrdinalCorrelation()} method\index{computeOrdinalCorrelation@\texttt{computeOrdinalCorrelation()}} which renders a dictionary with a \texttt{correlation} ($\tau$) and a \texttt{determina\-tion} ($d$) attribute. $r(\mathtt{d1}\,\Leftrightarrow\, \mathtt{d2})$ is recovered by multiplying $\tau$ with $d$ (see List.~\vref{list:16.7} Line 4). 
 \begin{lstlisting}[caption={Computing the valued ordinal correlation index},label=list:16.7]
 >>> corrd1d2 = d1.computeOrdinalCorrelation(d2)
 >>> tau = corrd1d2['correlation']

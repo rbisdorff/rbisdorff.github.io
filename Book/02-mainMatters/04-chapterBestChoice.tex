@@ -93,7 +93,7 @@ The evaluations of the seven potential new sites on each performance criterion a
     \end{tabular}
   \end{center}
 \end{table}
-All criteria, except the \emph{Costs} Criterion, admit for evaluation a qualitative satisfaction scale from $0\%$ (worst) to $100\%$ (best). We may thus notice that site \texttt{A} (\emph{Ave}) is the most expensive, but also $100\%$ satisfying the \emph{Proximity} as well as the  \emph{Standing} criterion. Whereas site \texttt{C} (\emph{Ces}) is the cheapest one; providing however no satisfaction at all on both the \emph{Standing} and the \emph{Working Space} criteria.
+All criteria, except the \emph{Costs} Criterion, admit for evaluation a qualitative satisfaction scale from $0\%$ (worst) to $100\%$ (best). One may thus notice that site \texttt{A} (\emph{Ave}) is the most expensive, but also $100\%$ satisfying the \emph{Proximity} as well as the  \emph{Standing} criterion. Whereas site \texttt{C} (\emph{Ces}) is the cheapest one; providing however no satisfaction at all on both the \emph{Standing} and the \emph{Working Space} criteria.
 
 Concerning yearly costs, we suppose that the CEO is indifferent up to a performance difference of $1000.00$€, and he actually prefers a site when there is at least a positive difference of $2500.00$€. The evaluations observed on the six qualitative criteria (measured in percentages of satisfaction) are very subjective and rather imprecise. The CEO is hence \emph{indifferent} up to a satisfaction difference of $10\%$, and he claims a significant \emph{preference} when the satisfaction difference is at least of $20\%$.  Furthermore, a satisfaction difference of $80\%$ represents for him a \emph{considerably large} performance difference, triggering the case given a \emph{polarisation} of the preferential situation \citep{BIS-2013}. 
 
@@ -103,7 +103,7 @@ In view of Table~\vref{tab:4.3}, what is now the office site we may recommend to
 \label{sec:4.2}
 
 
-The file \texttt{officeChoice.py}, stored in the \texttt{examples} directory of the \Digraph resources, provides a corresponding \texttt{PerformanceTableau}\index{PerformanceTableau@\texttt{PerformanceTableau} class} object. We may inspect its actual content with the computing resources provided by the \texttt{perfTabs} module \index{perfTabs@\texttt{perfTabs} module}.
+The file \texttt{officeChoice.py}, stored in the \texttt{examples} directory of the \Digraph resources, provides a corresponding \texttt{PerformanceTableau}\index{PerformanceTableau@\texttt{PerformanceTableau} class} object. We can inspect its actual content with the computing resources provided by the \texttt{perfTabs} module \index{perfTabs@\texttt{perfTabs} module}.
 \begin{lstlisting}[caption={Inspecting the \texttt{officeChoice} performance tableau.},label=list:4.1]
 >>> from perfTabs import PerformanceTableau
 >>> pt = PerformanceTableau('officeChoice')
@@ -134,7 +134,7 @@ The file \texttt{officeChoice.py}, stored in the \texttt{examples} directory of 
 
 We thus recover all the input data shown in Section~\ref{sec:4.1}. Notice that the \emph{negative} evaluations of the \emph{Costs} (\texttt{'C'}) criterion indicate a negative preference direction: the \emph{lower} the costs, the \emph{better} it is.
 
-We may use the \texttt{showCriteria()}\index{showCriteria@\texttt{showCriteria()}} method for measuring the actual preference discrimination we observe on each criterion.
+The \texttt{showCriteria()}\index{showCriteria@\texttt{showCriteria()}} method evaluates the actual preference discrimination we observe on each performance criterion.
 \begin{lstlisting}[caption={Inspecting the performance criteria.},label=list:4.2]
 >>> pt.showCriteria(IntegerWeights=True)
  *----  criteria -----*
@@ -260,19 +260,19 @@ Solving a best-choice problem consists traditionally in finding \emph{the} uniqu
 
 The five \emph{pragmatic principles} for computing such a \emph{best-choice recommendation} (BCR) are the following:
 \begin{itemize}[leftmargin=1cm,listparindent=0em]
-\item [P1:] \emph{Elimination for well motivated reasons}; each eliminated alternative has to be strictly outranked by at least one alternative in the BCR.
-\item [P2:] \emph{Minimal size}; the BCR must be as limited in cardinality as possible.
-\item [P3:] \emph{Efficient and informative}; The BCR must not contain a self-contained sub-recommendation.
-\item [P4:] \emph{Effectively better}; the BCR must not be ambiguous in the sense that it may not be both a first choice as well as a last choice recommendation.
-\item [P5:] \emph{Maximally determined}; the BCR is, of all potential best-choice recommendations, the most determined one in the sense of the epistemic characteristics of the bipolar-valued outranking relation.
+\item [\texttt{P1}:] \emph{Elimination for well motivated reasons}; each eliminated alternative has to be strictly outranked by at least one alternative in the BCR.
+\item [\texttt{P2}:] \emph{Minimal size}; the BCR must be as limited in cardinality as possible.
+\item [\texttt{P3}:] \emph{Efficient and informative}; The BCR must not contain a self-contained sub-recommendation.
+\item [\texttt{P4}:] \emph{Effectively better}; the BCR must not be ambiguous in the sense that it may not be both a first choice as well as a last choice recommendation.
+\item [\texttt{P5}:] \emph{Maximally determined}; the BCR is, of all potential best-choice recommendations, the most determined one in the sense of the epistemic characteristics of the bipolar-valued outranking relation.
 \end{itemize}
 
-Let $X$ be the set of potential decision alternatives. Let $Y$ be a non empty subset of $X$, called a \emph{choice} in the strict outranking digraph $G(X,r(\succnsim )$. We may now qualify a BCR $Y$ in the following terms:
+Let $X$ be the set of potential decision alternatives. Let $Y$ be a non empty subset of $X$, called a \emph{choice} in the strict outranking digraph $G(X,r(\succnsim )$. We can now qualify a BCR $Y$ in following terms:
 \begin{itemize}[leftmargin=0.5cm,listparindent=0em]
-\item [-] $Y$ is called strictly \emph{outranking} (resp. \emph{outranked}) when for all not selected alternative $x$ there exists an alternative $y \in X$ retained such that $r(y \succnsim x) > 0.0$ (resp. $r(y \precsim x) > 0.0$). Such a choice verifies principle P1.
-\item [-] $Y$ is called \emph{weakly independent} when for all $x \neq y$ in $Y$ , we observe $r(x \succnsim y) \leq 0.0$. Such a choice verifies principles P3 (\emph{internal stability}).
-\item [-] $Y$ is conjointly a strictly \emph{outranking} (resp. \emph{outranked}) \textbf{and} \emph{weakly independent} choice. Such a choice is called an \emph{initial} (resp. \emph{terminal}) \emph{prekernel} (see Chap.~\ref{sec:17} on computing kernels in digraphs). The initial prekernel now verifies principles P1, P2, P3 and P4. 
-\item [-] To finally verify principle P5, we recommend among all potential initial prekernels, a \emph{most determined} one, i.e. a strictly \emph{outranking} and \emph{weakly independent} choice supported by the highest criteria significance. And in this initial prekernel we eventually retain the alternatives that are included with highest criteria significance (see Sec.~\ref{sec:17.6}).
+\item [-] $Y$ is called strictly \emph{outranking} (resp. \emph{outranked}) when for all not selected alternative $x$ there exists an alternative $y \in X$ retained such that $r(y \succnsim x) > 0.0$ (resp. $r(y \precsim x) > 0.0$). Such a choice verifies principle \texttt{P1}.
+\item [-] $Y$ is called \emph{weakly independent} when for all $x \neq y$ in $Y$ , we observe $r(x \succnsim y) \leq 0.0$. Such a choice verifies principles \texttt{P3} (\emph{internal stability}).
+\item [-] $Y$ is conjointly a strictly \emph{outranking} (resp. \emph{outranked}) \textbf{and} \emph{weakly independent} choice. Such a choice is called an \emph{initial} (resp. \emph{terminal}) \emph{prekernel} (see Chap.~\ref{sec:17} on computing kernels in digraphs). The initial prekernel now verifies principles \texttt{P1}, \texttt{P2}, \texttt{P3} and \texttt{P4}. 
+\item [-] To finally verify principle \texttt{P5}, we recommend among all potential initial prekernels, a \emph{most determined} one, i.e. a strictly \emph{outranking} and \emph{weakly independent} choice supported by the highest criteria significance. And in this initial prekernel we eventually retain the alternatives that are included with highest criteria significance (see Sec.~\ref{sec:17.6}).
 \end{itemize}
 
 Mind that a given strict outranking digraph may not always admit prekernels. This is the case when the digraph contains chordless circuits of odd length (see Chap.~\ref{sec:17}). Luckily, our strict outranking digraph \texttt{bodcd} here does not show any chordless outranking circuits; a fact we can check with the \texttt{computeChordless\-Cir\-cuits()} method\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}} followed by the \texttt{showChordlessCircuits()} method\index{showChordlessCircuits@\texttt{showChordlessCircuits()}}\footnote{The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods are separate because there are various methods available for enumerating the chordless circuits in a digraph \citep{BIS-2010}.}.
@@ -366,7 +366,7 @@ Yet, we must as well acknowledge in Listing~\vref{list:4.6}, that the cheapest a
 \label{fig:4.3}       % Give a unique label
 \end{figure}
 
-We may finally notice in Listing~\vref{list:4.4} (Lines 18) that both alternatives \texttt{A} and \texttt{F} are reported as potential last choice recommendation. Yet, this potential last choice recommendation appears to be globally indeterminate (Lines 25-26). This confirms the \emph{incomparability} status of alternative \texttt{A} (see Fig.~\vref{fig:4.3}).
+Let us finally notice in Listing~\vref{list:4.4} (Lines 18) that both alternatives \texttt{A} and \texttt{F} are reported as potential last choice recommendation. Yet, this potential last choice recommendation appears to be globally indeterminate (Lines 25-26). This confirms the \emph{incomparability} status of alternative \texttt{A} (see Fig.~\vref{fig:4.3}).
 \begin{lstlisting}
 >>> bodcd.exportGraphViz(fileName='bestOfficeChoice',\
 ...                    firstChoice=['C','D'],\
