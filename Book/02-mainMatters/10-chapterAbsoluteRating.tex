@@ -35,7 +35,7 @@ To solve this \emph{absolute} rating problem, first, we need to estimate multi-c
 \section{Incremental learning of historical performance quantiles}
 \label{sec:10.2}
 
-Suppose that we see flying in random multiple criteria performances from a given model of random performance tableau (see Chap.~\ref{sec:5}). The question we address here is to estimate empirical performance quantiles on the basis of so far observed performance vectors. For this task, we are inspired by \citet{CHAM-2006}, who present an efficient algorithm for incrementally updating a quantile-binned cumulative distribution function (CDF) with newly observed CDFs\footnote{We have adapted in Python a C++ implementation published by \citep*[Chapter 5]{NR3-2007}.}. 
+Suppose that we see flying in random multiple criteria performances from a given model of random performance tableau (see Chap.~\ref{sec:5}). The question we address here is to estimate empirical performance quantiles on the basis of so far observed performance vectors. For this task, we are inspired by \citet*{CHAM-2006}, who present an efficient algorithm for incrementally updating a quantile-binned cumulative distribution function (CDF) with newly observed CDFs\footnote{We have adapted in Python a C++ implementation published by \citep*[Chapter 5]{NR3-2007}.}. 
 
 The \texttt{PerformanceQuantiles}\index{PerformanceQuantiles@\texttt{PerformanceQuantiles} class} class, using the \texttt{IncrementalQuan\-tiles\-Estimator} class\index{IncrementalQuantilesEstimator@\texttt{IncrementalQuantilesEstimator} class} from the \texttt{randomNumbers} module \index{randomNumbers@\texttt{randomNumbers} module}, implements such a performance quantiles estimation based on a given performance tableau \citep{BIS-2021b}.
 

@@ -78,7 +78,7 @@
 \contentsline {lstlisting}{\numberline {9.4}Computing a \emph {pre-ranked} sparse outranking digraph}{130}{lstlisting.9.4}%
 \contentsline {lstlisting}{\numberline {9.5}The quantiles decomposition of a pre-ranked outranking digraph}{130}{lstlisting.9.5}%
 \contentsline {lstlisting}{\numberline {9.6}Functional binary relation characteristics}{131}{lstlisting.9.6}%
-\contentsline {lstlisting}{\numberline {10.1}Computing performance quantiles from a given performance tableau}{136}{lstlisting.10.1}%
+\contentsline {lstlisting}{\numberline {10.1}Computing performance quantiles from a given performance tableau}{137}{lstlisting.10.1}%
 \contentsline {lstlisting}{\numberline {10.2}Printing out the estimated quartile limits}{137}{lstlisting.10.2}%
 \contentsline {lstlisting}{\numberline {10.3}Generating 100 new random decision alternatives of the same model}{138}{lstlisting.10.3}%
 \contentsline {lstlisting}{\numberline {10.4}Computing the absolute rating of 10 new decision alternatives}{139}{lstlisting.10.4}%
@@ -150,7 +150,7 @@
 \contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{239}{lstlisting.17.10}%
 \contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{240}{lstlisting.17.11}%
 \contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{242}{lstlisting.17.12}%
-\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{242}{lstlisting.17.13}%
+\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{243}{lstlisting.17.13}%
 \contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{243}{lstlisting.17.14}%
 \contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{246}{lstlisting.17.15}%
 \contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{246}{lstlisting.17.16}%
