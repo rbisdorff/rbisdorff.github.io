@@ -673,7 +673,7 @@ In Listing~\vref{list:17.19} we now compute, with the \texttt{domkernelrestrict(
 \end{figure}
 
 The corresponding initial prekernel membership characteristic vector may be computed with the \texttt{computeKernelVector()} method.\index{computeKernelVector@\texttt{computeKernelVector()}}
-\begin{lstlisting}[caption={Fixpoint iterations for initial prekernel \texttt{\{a1, a2, a4\}}},label=list:17.20]
+\begin{lstlisting}[caption={Fixpoint iterations for initial prekernel \texttt{\{a1, a2, a4\}}},label=list:17.20,basicstyle=\ttfamily\scriptsize]
 >>> gcd.computeKernelVector(['a1','a2','a4'],\
 ...                 Initial=True,Comments=True)
  --> Initial prekernel: {'a1', 'a2', 'a4'}
@@ -707,9 +707,9 @@ Let us also compute the restricted adjacency table for the outranked, i.e. the \
 \begin{lstlisting}
 >>> k2Relation = gcd.abskernelrestrict(['a3','a7'])
 >>> gcd.showHTMLRelationTable(\
-...   actionsList=['a3','a7','a1','a2','a4','a5','a6'],\
-...   relation=k2Relation,\
-...   tableTitle='K2 restricted adjacency table')
+...  actionsList=['a3','a7','a1','a2','a4','a5','a6'],\
+...  relation=k2Relation,\
+...  tableTitle='K2 restricted adjacency table')
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
@@ -719,8 +719,9 @@ Let us also compute the restricted adjacency table for the outranked, i.e. the \
 \end{figure}
 
 The corresponding bipolar-valued characteristic vector $Y_2$ may be computed as follows:
-\begin{lstlisting}
->>> gcd.computeKernelVector(['a3','a7'],Initial=False,Comments=True)
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
+>>> gcd.computeKernelVector(['a3','a7'],\
+...                         Initial=False,Comments=True)
  --> Terminal prekernel: {'a3', 'a7'}
  initial low vector  : [-1.00,-1.00,-1.00,-1.00,-1.00,-1.00,-1.00]
  initial high vector : [+1.00,+1.00,+1.00,+1.00,+1.00,+1.00,+1.00]
@@ -742,7 +743,7 @@ The corresponding bipolar-valued characteristic vector $Y_2$ may be computed as 
     'a4': -0.49
 \end{lstlisting}
 
-A unique stable bipolar-valued high and low fixpoint is attained at the third iteration with alternative \texttt{a7} positively confirmed (about $(1.0+0.49)/2 = 0.75\%$ criteria significance majority, see Line 14) as member of this terminal prekernel, whereas the membership of alternative \texttt{a3} in this prekernel appears indeterminate. All the remaining nodes have negative membership characteristic values and are hence positively excluded from this prekernel.
+A unique stable bipolar-valued high and low fixpoint is attained at the third iteration with alternative \texttt{a7} positively confirmed (about $(1.0+0.49)/2 = 0.75\%$ criteria significance majority, see Line 13) as member of this terminal prekernel, whereas the membership of alternative \texttt{a3} in this prekernel appears indeterminate. All the remaining nodes have negative membership characteristic values and are hence positively excluded from this prekernel.
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/17-12-bestWorstOrientation.pdf}
@@ -752,7 +753,7 @@ A unique stable bipolar-valued high and low fixpoint is attained at the third it
 
 When we reconsider the graphviz drawing of this outranking digraph in Figure~\vref{fig:17.12}, it becomes obvious here why alternative \texttt{a1} is \emph{neither included nor excluded} from the initial prekernel. Same observation is applicable to alternative \texttt{a3} who can \emph{neither be included nor excluded} from the terminal prekernel. it may even happen, in case of more indeterminate outranking situations, that no alternative  is positively included or excluded from a weakly independent prekernel; the corresponding bipolar-valued membership characteristic vector being completely indeterminate.
 
-To illustrate finally why sometimes we need to operate an epistemic disjunctive fusion of unequal stable low and high membership characteristics vectors (see Step 2.c.), let us consider, for instance, the following crisp 7-cycle graph.
+To illustrate finally why sometimes we need to operate an epistemic disjunctive fusion of unequal stable low and high membership characteristics vectors (see Step 2.c.), let us consider, for instance, the following crisp \texttt{7}-cycle graph.
 \begin{lstlisting}
 >>> from digraphs import CirculantDigraph
 >>> c7 = CirculantDigraph(order=7,circulants=[-1,1])
@@ -769,8 +770,8 @@ To illustrate finally why sometimes we need to operate an epistemic disjunctive 
                           'relation','gamma','notGamma']
 \end{lstlisting}		       
 
-Digraph \texttt{c7} is a symmetric crisp digraph showing, among others, the maximal independent set \{'2','5','7'\}, i.e. an initial as well as terminal kernel. We may compute the corresponding initial kernel characteristic vector.
-\begin{lstlisting}
+Digraph \texttt{c7} is a symmetric crisp digraph showing, among others, the maximal independent set \{\texttt{2},\texttt{5},\texttt{7}\}, i.e. an initial as well as terminal kernel. We may compute the corresponding initial kernel characteristic vector.
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
 >>> c7.computeKernelVector(['2','5','7'],\
 ...                       Initial=True,Comments=True)
  --> Initial kernel: {'2', '5', '7'}
@@ -805,13 +806,13 @@ It is worthwhile noticing the essential computational role, the logical indeterm
 \addcontentsline{toc}{section}{Notes}
 \section*{Notes}
 
-Following the observation that an independent absorbent choice in an acyclic digraph corresponds to the kernel of the associated \Grundy function, \citet{RIG-1948} introduced the name ``noyau'' (kernel) for such a choice. Terminal kernels where in the sequel studied by \citet{BER-1958} in the context of Combinatorial Game Theory. Initial kernels --independent and dominating choices-- were introduced under the name game solutions by \citet{NEU-1944}. The absorbent version of the crisp kernel equation system~\vref{eq:17.1} was first introduced by \citet{SCH-1985}  in the context of their thorough exploration of relational algebra. The dominant fuzzy version was first introduced by \citet{KIT-1993}.
+Following the observation that an independent absorbent choice in an acyclic digraph corresponds to the kernel of the associated \Grundy function, \citet{RIG-1948} introduced the name ``noyau'' (kernel) for such a choice. Terminal kernels where in the sequel studied by \citet{BER-1958} in the context of Combinatorial Game Theory. Initial kernels --independent and dominating choices-- were introduced under the name game solutions by \citet{NEU-1944}. The absorbent version of the crisp kernel equation system~\vref{eq:17.1} was first introduced by \citet*{SCH-1985}  in the context of their thorough exploration of relational algebra. The dominant fuzzy version was first introduced by \citet{KIT-1993}.
 
 It is M. Roubens\index{Roubens@\textsl{M. Roubens}} who in Spring 1995, by commenting the newly published book on \emph{Fuzzy decision theory with binary relations} by \citet{KIT-1993}, suggested that solving such fuzzy kernel equation systems would be very difficult. Triggered by his pessimistic remark and knowing about kernel equation systems and the \Neumann fixpoint theorem \citep{NEU-1944,SCH-1985}, I immediately started to implement in Prolog a solver for the valued version of such equation systems; the kernel equation system serving as constraints for a discrete labelling of all possible rational solution vectors. And in Summer 1995, we luckily obtained the very first valued outranking kernel from a classical example outranking digraph of order 8, well known in the multiple criteria decision aid community. The computation was done with the help of a commercial finite domain solver. It took several seconds on a CRAY 6412 superserver with 12 processors operating in a nowadays ridiculous CPU speed of 90 Mhz. The labelled solution vectors showing up for a digraph with a single kernel were structured in a way that suggested the converging stages of the \Neumann fixpoint algorithm and gave the initial idea for eventually computing all kernels of a bipolar-valued outranking digraph \citep*{BIS-1996,BIS-1997,BIS-2004d}. 
 
 In our present Python3.9 implementation, such a tiny problem is solved in less than a thousandth of a second on a common laptop. And this remains practically the same for any relevant example of outranking digraph observed in a real decision aid problem. Several times we wrote in our personal journal that there is certainly now no more potential for any substantial improvement of this computational efficiency; Only to discover, shortly later, that following a new theoretical idea or choosing a more efficient implementation –-using for instance the amazing instrument of iterator generators in Python–-, execution times could well be divided by 20.
 
-This nowadays available computational efficiency confers the bipolar-valued kernel concept a methodological premium for solving specific decision problems on the basis of the bipolar-valued outranking digraph (see Chap.~\ref{sec:4} and Chap.~\ref{sec:12}). But it also opens new opportunities for verifying and implementing kernel extraction algorithms for more graph theoretical purposes. New results, like enumerating the non isomorphic maximal independent sets --the kernels-- of known difficult graph instances like the n-cycle, could be obtained (see Sec.~\ref{sec:21.7} and \citealp*{ISO-2008}).
+This nowadays available computational efficiency confers the bipolar-valued kernel concept a methodological premium for solving specific decision problems on the basis of the bipolar-valued outranking digraph (see Chap.~\ref{sec:4} and Chap.~\ref{sec:12}). But it also opens new opportunities for verifying and implementing kernel extraction algorithms for more graph theoretical purposes. New results, like enumerating the non isomorphic maximal independent sets --the kernels-- of known difficult graph instances like the $n$-cycle, could be obtained (see Sec.~\ref{sec:21.7} and \citealp*{ISO-2008}).
 
 %%%%%%% The chapter bibliography
 %\normallatexbib
