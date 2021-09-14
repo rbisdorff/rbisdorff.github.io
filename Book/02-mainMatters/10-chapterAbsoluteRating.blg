@@ -4,44 +4,46 @@ The top-level auxiliary file: 02-mainMatters/10-chapterAbsoluteRating.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--missing publisher in CPSTAT-L5
 You've used 5 entries,
             3269 wiz_defined-function locations,
-            702 strings with 5889 characters,
-and the built_in function-call counts, 4432 in all, are:
-= -- 390
+            705 strings with 5928 characters,
+and the built_in function-call counts, 4521 in all, are:
+= -- 391
 > -- 115
 < -- 8
 + -- 40
 - -- 35
-* -- 357
-:= -- 620
+* -- 364
+:= -- 626
 add.period$ -- 4
 call.type$ -- 5
-change.case$ -- 39
+change.case$ -- 41
 chr.to.int$ -- 11
-cite$ -- 5
-duplicate$ -- 387
-empty$ -- 407
+cite$ -- 6
+duplicate$ -- 400
+empty$ -- 425
 format.name$ -- 45
-if$ -- 942
+if$ -- 963
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 46
+missing$ -- 48
 newline$ -- 25
 num.names$ -- 22
-pop$ -- 110
+pop$ -- 116
 preamble$ -- 1
 purify$ -- 31
 quote$ -- 0
-skip$ -- 99
+skip$ -- 104
 stack$ -- 0
 substring$ -- 427
-swap$ -- 113
+swap$ -- 118
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 42
-warning$ -- 0
+warning$ -- 1
 while$ -- 36
 width$ -- 0
-write$ -- 65
+write$ -- 66
+(There was 1 warning)

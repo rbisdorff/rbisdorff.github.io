@@ -4,44 +4,46 @@ The top-level auxiliary file: 02-mainMatters/04-chapterBestChoice.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--missing publisher in ADT-L7
 You've used 11 entries,
             3269 wiz_defined-function locations,
-            745 strings with 6926 characters,
-and the built_in function-call counts, 8683 in all, are:
-= -- 794
+            748 strings with 6954 characters,
+and the built_in function-call counts, 8772 in all, are:
+= -- 795
 > -- 165
 < -- 12
 + -- 61
 - -- 50
-* -- 696
-:= -- 1236
+* -- 703
+:= -- 1242
 add.period$ -- 11
 call.type$ -- 11
-change.case$ -- 74
+change.case$ -- 76
 chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 805
-empty$ -- 837
+cite$ -- 12
+duplicate$ -- 818
+empty$ -- 855
 format.name$ -- 70
-if$ -- 1836
+if$ -- 1857
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 90
+missing$ -- 92
 newline$ -- 43
 num.names$ -- 46
-pop$ -- 193
+pop$ -- 199
 preamble$ -- 1
 purify$ -- 60
 quote$ -- 0
-skip$ -- 180
+skip$ -- 185
 stack$ -- 0
 substring$ -- 901
-swap$ -- 191
+swap$ -- 196
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 96
-warning$ -- 0
+warning$ -- 1
 while$ -- 64
 width$ -- 0
-write$ -- 133
+write$ -- 134
+(There was 1 warning)

@@ -4,44 +4,47 @@ The top-level auxiliary file: 02-mainMatters/03-chapterOutrankingDigraphs.aux
 The style file: spbasic.bst
 Database file #1: 03-backMatters/reference.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--missing publisher in ADT-L7
+Warning--empty title in BIS-2015
 You've used 9 entries,
             3269 wiz_defined-function locations,
-            727 strings with 6299 characters,
-and the built_in function-call counts, 6716 in all, are:
-= -- 599
+            730 strings with 6327 characters,
+and the built_in function-call counts, 6798 in all, are:
+= -- 597
 > -- 148
 < -- 8
 + -- 56
 - -- 45
-* -- 536
-:= -- 973
-add.period$ -- 9
+* -- 545
+:= -- 976
+add.period$ -- 8
 call.type$ -- 9
-change.case$ -- 57
+change.case$ -- 59
 chr.to.int$ -- 9
-cite$ -- 9
-duplicate$ -- 617
-empty$ -- 647
+cite$ -- 11
+duplicate$ -- 629
+empty$ -- 664
 format.name$ -- 62
-if$ -- 1405
+if$ -- 1422
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 72
+missing$ -- 74
 newline$ -- 37
 num.names$ -- 37
-pop$ -- 163
+pop$ -- 173
 preamble$ -- 1
 purify$ -- 51
 quote$ -- 0
-skip$ -- 136
+skip$ -- 141
 stack$ -- 0
 substring$ -- 664
-swap$ -- 139
+swap$ -- 143
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 72
-warning$ -- 0
+warning$ -- 2
 while$ -- 48
 width$ -- 0
 write$ -- 104
+(There were 2 warnings)
