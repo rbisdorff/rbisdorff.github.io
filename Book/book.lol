@@ -182,7 +182,7 @@
 \contentsline {lstlisting}{\numberline {20.6}A divisive two-party example of a random linear voting profile}{288}{lstlisting.20.6}%
 \contentsline {lstlisting}{\numberline {20.7}Example of ineffective primary multipartisan selection}{289}{lstlisting.20.7}%
 \contentsline {lstlisting}{\numberline {20.8}Example of non obvious secondary selection}{289}{lstlisting.20.8}%
-\contentsline {lstlisting}{\numberline {20.9}Bipolar approval vonting profiles}{291}{lstlisting.20.9}%
+\contentsline {lstlisting}{\numberline {20.9}Bipolar approval voting profiles}{291}{lstlisting.20.9}%
 \contentsline {lstlisting}{\numberline {20.10}Inspecting an approval-disapproval ballot}{291}{lstlisting.20.10}%
 \contentsline {lstlisting}{\numberline {20.11}Comparing the net approval and the {\sc NetFlows}\xspace rankings}{295}{lstlisting.20.11}%
 \contentsline {lstlisting}{\numberline {20.12}Computing the outranking digraph}{297}{lstlisting.20.12}%

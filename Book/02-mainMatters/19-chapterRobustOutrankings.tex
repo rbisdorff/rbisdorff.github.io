@@ -467,8 +467,8 @@ Let us reconsider, for instance, the performance tableau \texttt{pt} with three 
 
 We notice in this example three decision objectives of equal importance (see Lines 3,13,17). What will be the outranking situations that are positively (resp.  negatively) validated for each one of the decision objectives taken individually ?
 
-Such unopposed multiobjective outranking situations may be obtained by operating an epistemic \emph{average fusion} (see the \texttt{symmetricAverage()} method\index{symmetricAverage@\texttt{symmetricAverage()}}) of the marginal outranking digraphs restricted to the coalition of criteria supporting each one of the decision objectives (see List.~\vref{list:19.9}).
-\begin{lstlisting}[caption={Computing unopposed outranking situations},label=list:19.9]
+Such unopposed multiobjective outranking situations may be obtained by operating an epistemic \emph{average fusion} (see the \texttt{symmetricAverage()} method\index{symmetricAverage@\texttt{symmetricAverage()}}) of the marginal outranking digraphs restricted to the coalition of criteria supporting each one of the decision objectives (see List.~\vref{list:19.10}).
+\begin{lstlisting}[caption={Computing unopposed outranking situations},label=list:19.10]
 >>> from outrankingDigraphs import\
 ...                     BipolarOutrankingDigraph
 >>> geco = BipolarOutrankingDigraph(pt,\
@@ -498,10 +498,10 @@ Such unopposed multiobjective outranking situations may be obtained by operating
   Valuation domain: [-1.0; 1.0]
 \end{lstlisting}
 
-Positive (resp. negative) $r(x \succsim y)$ characteristic values, like $r(p1 \succsim p5) = +0.39$ (see List.~\vref{list:19.9} Line 20), show hence only outranking situations being validated (resp. invalidated) by one or more decision objectives without being invalidated (resp. validated) by any other decision objective.
+Positive (resp. negative) $r(x \succsim y)$ characteristic values, like $r(p1 \succsim p5) = +0.39$ (see List.~\vref{list:19.10} Line 20), show hence only outranking situations being validated (resp. invalidated) by one or more decision objectives without being invalidated (resp. validated) by any other decision objective.
 
 For easily computing this kind of \emph{unopposed multiobjective} outranking digraphs, the \texttt{outrankingDigraphs} module conveniently provides a corresponding\\ \texttt{UnOpposedBipolarOutrankingDigraph} constructor \index{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph} class}.
-\begin{lstlisting}[caption={Computing unopposed outranking digraphs},label=list:19.10]
+\begin{lstlisting}[caption={Computing unopposed outranking digraphs},label=list:19.11]
 >>> from outrankingDigraphs import\
 ...              UnOpposedBipolarOutrankingDigraph
 >>> uopg = UnOpposedBipolarOutrankingDigraph(pt)
@@ -526,10 +526,10 @@ For easily computing this kind of \emph{unopposed multiobjective} outranking dig
    'oppositeness': 43.47826086956522}			   
 \end{lstlisting}
 
-The resulting \emph{unopposed} outranking digraph keeps in fact 13 (see List.\vref{list:19.10} Lines 20-22) out of the 23 positively validated \emph{standard} outranking situations, leading to a degree of \emph{oppositeness} --preferential disagreement between decision objectives-- of $(1.0 - 13/23)\,=\,0.4348$.
+The resulting \emph{unopposed} outranking digraph keeps in fact 13 (see List.\vref{list:19.11} Lines 20-22) out of the 23 positively validated \emph{standard} outranking situations, leading to a degree of \emph{oppositeness} --preferential disagreement between decision objectives-- of $(1.0 - 13/23)\,=\,0.4348$.
 
 We can now, for instance, verify the unopposed status of the outranking situation observed between alternatives \texttt{p1} and \texttt{p5}.
-\begin{lstlisting}[caption={Example of unopposed multiobjective outranking situation},label=list:19.11]
+\begin{lstlisting}[caption={Example of unopposed multiobjective outranking situation},label=list:19.12]
 >>> uopg.showPairwiseComparison('p1','p5')
  *------------  pairwise comparison ----*
   Comparing actions : ('p1', 'p5')
@@ -547,7 +547,7 @@ We can now, for instance, verify the unopposed status of the outranking situatio
                                global concordance: +28.00
 \end{lstlisting}
 
-In Listing~\vref{list:19.11} we see that alternative \texttt{p1} does indeed positively outrank alternative \texttt{p5} from the economic perspective ($r(p1 \succsim_{Eco} p5) = +16/24$) as well as from the environmental perspective ($r(p1 \succsim_{Env} p5) = +12/24$). Whereas, from the societal perspective, both alternatives appear incomparable ($r(p1 \succsim_{Soc} p5) = 0/24$).
+In Listing~\vref{list:19.12} we see that alternative \texttt{p1} does indeed positively outrank alternative \texttt{p5} from the economic perspective ($r(p1 \succsim_{Eco} p5) = +16/24$) as well as from the environmental perspective ($r(p1 \succsim_{Env} p5) = +12/24$). Whereas, from the societal perspective, both alternatives appear incomparable ($r(p1 \succsim_{Soc} p5) = 0/24$).
 
 When proportionally equal criteria significance weights per objective are given, these outranking situations appear hence \emph{stable} with respect to all possible importance weights we could allocate to the decision objectives.
 
@@ -557,7 +557,7 @@ This gives way for computing multiobjective \emph{Pareto efficient} choice recom
 \label{sec:19.6}
 
 Indeed, best choice recommendations, computed from an \emph{unopposed multiobjective} outranking digraph, deliver the case given \emph{Pareto efficient} choices. 
-\begin{lstlisting}[caption={Pareto efficient multiobjective choice},label=list:19.12]
+\begin{lstlisting}[caption={Pareto efficient multiobjective choice},label=list:19.13]
 >>> uopg.showBestChoiceRecommendation()
   Best choice recommendation(s) (BCR)
    (in decreasing order of determinateness)   

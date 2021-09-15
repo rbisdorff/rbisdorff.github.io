@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  14 SEP 2021 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  15 SEP 2021 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -604,47 +604,22 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 (./02-mainMatters/05-chapterNewPerfTab.aux)
 (./02-mainMatters/06-chapterRandomPerfTabs.aux)
 (./02-mainMatters/07-chapterWinnerElection.aux)
-(./02-mainMatters/08-chapterRankings.aux
-
-LaTeX Warning: Label `list:8.14' multiply defined.
-
-) (./02-mainMatters/09-chapterRelativeRating.aux)
+(./02-mainMatters/08-chapterRankings.aux)
+(./02-mainMatters/09-chapterRelativeRating.aux)
 (./02-mainMatters/10-chapterAbsoluteRating.aux)
-(./02-mainMatters/11-chapterHPCRanking.aux
-
-LaTeX Warning: Label `sec:11.4' multiply defined.
-
-) (./02-mainMatters/part3.aux) (./02-mainMatters/12-chapterAliceChoice.aux)
-(./02-mainMatters/13-chapterBestCSDpts.aux
-
-LaTeX Warning: Label `list:13.11' multiply defined.
-
-
-LaTeX Warning: Label `list:13.13' multiply defined.
-
-) (./02-mainMatters/14-chapterBestStudents.aux)
+(./02-mainMatters/11-chapterHPCRanking.aux) (./02-mainMatters/part3.aux)
+(./02-mainMatters/12-chapterAliceChoice.aux)
+(./02-mainMatters/13-chapterBestCSDpts.aux)
+(./02-mainMatters/14-chapterBestStudents.aux)
 (./02-mainMatters/15-chapterExercises.aux) (./02-mainMatters/part4.aux)
-(./02-mainMatters/16-chapterCorrelation.aux
-
-LaTeX Warning: Label `sec:16.3' multiply defined.
-
-) (./02-mainMatters/17-chapterKernels.aux)
+(./02-mainMatters/16-chapterCorrelation.aux)
+(./02-mainMatters/17-chapterKernels.aux)
 (./02-mainMatters/18-chapterConfidentOutrankings.aux)
-(./02-mainMatters/19-chapterRobustOutrankings.aux
-
-LaTeX Warning: Label `list:19.9' multiply defined.
-
-) (./02-mainMatters/20-chapterTemperingPlurality.aux
-
-LaTeX Warning: Label `list:20.9' multiply defined.
-
-) (./02-mainMatters/part5.aux) (./02-mainMatters/21-chapterGraphs.aux)
-(./02-mainMatters/22-chapterTreeGraphs.aux
-
-LaTeX Warning: Label `sec:22.2' multiply defined.
-
-) (./02-mainMatters/23-chapterPerfectGraphs.aux) (./03-backMatters/appendix.aux
-))
+(./02-mainMatters/19-chapterRobustOutrankings.aux)
+(./02-mainMatters/20-chapterTemperingPlurality.aux) (./02-mainMatters/part5.aux
+) (./02-mainMatters/21-chapterGraphs.aux)
+(./02-mainMatters/22-chapterTreeGraphs.aux)
+(./02-mainMatters/23-chapterPerfectGraphs.aux) (./03-backMatters/appendix.aux))
 \openout1 = `book.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 203.
@@ -665,7 +640,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 203.
 LaTeX Font Info:    ... okay on input line 203.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 203.
 LaTeX Font Info:    ... okay on input line 203.
- (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count319
 \scratchdimen=\dimen193
@@ -1073,16 +1048,7 @@ z . org / documentation/$[][]
 
 ]
 Chapter 3.
-[37] [38] [39]
-Overfull \hbox (85.78078pt too wide) in paragraph at lines 129--130
-[]\OT1/ptm/m/n/10 We can in-spect the com-plete $\OT1/ztmcm/m/n/10 [\OMS/ztmcm/
-m/n/10 ^^@\OT1/ztmcm/m/n/10 1\OML/ztmcm/m/it/10 :\OT1/ztmcm/m/n/10 0\OML/ztmcm/
-m/it/10 ; \OT1/ztmcm/m/n/10 +1\OML/ztmcm/m/it/10 :\OT1/ztmcm/m/n/10 0]$\OT1/ptm
-/m/n/10 -valued ad-ja-cency ta-ble with the \OT1/pcr/m/n/10 showRelationTable()
-
- []
-
-[40] [41] [42]
+[37] [38] [39] [40] [41] [42]
 <Figures/3-1-codualOdg.pdf, id=2310, 372.39125pt x 530.98375pt>
 File: Figures/3-1-codualOdg.pdf Graphic file (type pdf)
 <use Figures/3-1-codualOdg.pdf>
@@ -2164,14 +2130,14 @@ vp is first stored in \OT1/pcr/m/n/10 PerformanceTableau
  []
 
 [285]
-<Figures/20-1-unOpposedOutrankings.png, id=9819, 779.91376pt x 528.97626pt>
+<Figures/20-1-unOpposedOutrankings.png, id=9818, 779.91376pt x 528.97626pt>
 File: Figures/20-1-unOpposedOutrankings.png Graphic file (type png)
 <use Figures/20-1-unOpposedOutrankings.png>
 Package pdftex.def Info: Figures/20-1-unOpposedOutrankings.png  used on input l
 ine 153.
 (pdftex.def)             Requested size: 299.60547pt x 203.20851pt.
  [286] [287 <./Figures/20-1-unOpposedOutrankings.png>] [288] [289]
-<Figures/20-2-divGraph.pdf, id=9979, 299.1175pt x 455.7025pt>
+<Figures/20-2-divGraph.pdf, id=9978, 299.1175pt x 455.7025pt>
 File: Figures/20-2-divGraph.pdf Graphic file (type pdf)
 <use Figures/20-2-divGraph.pdf>
 Package pdftex.def Info: Figures/20-2-divGraph.pdf  used on input line 316.
@@ -2184,7 +2150,7 @@ hod[] and the \OT1/pcr/m/n/10 showDisapproval-Results()
  []
 
 [292] [293] [294]
-<Figures/20-3-majMargAV.png, id=10169, 511.9125pt x 455.7025pt>
+<Figures/20-3-majMargAV.png, id=10168, 511.9125pt x 455.7025pt>
 File: Figures/20-3-majMargAV.png Graphic file (type png)
 <use Figures/20-3-majMargAV.png>
 Package pdftex.def Info: Figures/20-3-majMargAV.png  used on input line 492.
@@ -2202,7 +2168,7 @@ com-pare \OT1/ptm/m/it/10 approval-disapproval
  []
 
 [299] [300] [301]
-<Figures/20-4-majMargDAV.png, id=10415, 520.94624pt x 455.7025pt>
+<Figures/20-4-majMargDAV.png, id=10414, 520.94624pt x 455.7025pt>
 File: Figures/20-4-majMargDAV.png Graphic file (type png)
 <use Figures/20-4-majMargDAV.png>
 Package pdftex.def Info: Figures/20-4-majMargDAV.png  used on input line 771.
@@ -2233,20 +2199,20 @@ Chapter 21.
 
 
 ]
-<Figures/21-1-tutorialGraph.pdf, id=10498, 299.1175pt x 261.97874pt>
+<Figures/21-1-tutorialGraph.pdf, id=10497, 299.1175pt x 261.97874pt>
 File: Figures/21-1-tutorialGraph.pdf Graphic file (type pdf)
 <use Figures/21-1-tutorialGraph.pdf>
 Package pdftex.def Info: Figures/21-1-tutorialGraph.pdf  used on input line 83.
 
 (pdftex.def)             Requested size: 199.16928pt x 174.44153pt.
  [308] [309 <./Figures/21-1-tutorialGraph.pdf>] [310]
-<Figures/21-2-tutorial-3-coloring.pdf, id=10650, 299.1175pt x 261.97874pt>
+<Figures/21-2-tutorial-3-coloring.pdf, id=10649, 299.1175pt x 261.97874pt>
 File: Figures/21-2-tutorial-3-coloring.pdf Graphic file (type pdf)
 <use Figures/21-2-tutorial-3-coloring.pdf>
 Package pdftex.def Info: Figures/21-2-tutorial-3-coloring.pdf  used on input li
 ne 180.
 (pdftex.def)             Requested size: 170.71652pt x 149.5213pt.
-<Figures/21-2-tutorial-2-coloring.pdf, id=10651, 299.1175pt x 261.97874pt>
+<Figures/21-2-tutorial-2-coloring.pdf, id=10650, 299.1175pt x 261.97874pt>
 File: Figures/21-2-tutorial-2-coloring.pdf Graphic file (type pdf)
 <use Figures/21-2-tutorial-2-coloring.pdf>
 Package pdftex.def Info: Figures/21-2-tutorial-2-coloring.pdf  used on input li
@@ -2263,14 +2229,14 @@ ng.pdf
 pdfTeX warning: pdflatex (file ./Figures/21-2-tutorial-2-coloring.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >] [312] [313]
-<Figures/21-3-maxMatchingcycleGraph.pdf, id=10823, 403.5075pt x 438.63875pt>
+<Figures/21-3-maxMatchingcycleGraph.pdf, id=10822, 403.5075pt x 438.63875pt>
 File: Figures/21-3-maxMatchingcycleGraph.pdf Graphic file (type pdf)
 <use Figures/21-3-maxMatchingcycleGraph.pdf>
 Package pdftex.def Info: Figures/21-3-maxMatchingcycleGraph.pdf  used on input 
 line 320.
 (pdftex.def)             Requested size: 199.16928pt x 216.50774pt.
  [314 <./Figures/21-3-maxMatchingcycleGraph.pdf>]
-<Figures/21-4-grid-15-15-ising.pdf, id=10885, 569.12625pt x 578.16pt>
+<Figures/21-4-grid-15-15-ising.pdf, id=10884, 569.12625pt x 578.16pt>
 File: Figures/21-4-grid-15-15-ising.pdf Graphic file (type pdf)
 <use Figures/21-4-grid-15-15-ising.pdf>
 Package pdftex.def Info: Figures/21-4-grid-15-15-ising.pdf  used on input line 
@@ -2280,7 +2246,7 @@ Package pdftex.def Info: Figures/21-4-grid-15-15-ising.pdf  used on input line
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <8.5> not available
 (Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 473.
  [319]
-<Figures/21-5-c12.png, id=11110, 372.1905pt x 341.47575pt>
+<Figures/21-5-c12.png, id=11109, 372.1905pt x 341.47575pt>
 File: Figures/21-5-c12.png Graphic file (type png)
 <use Figures/21-5-c12.png>
 Package pdftex.def Info: Figures/21-5-c12.png  used on input line 563.
@@ -2305,26 +2271,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
 
 ]
 Chapter 22.
-<Figures/22-1-tutRandomTree.pdf, id=11161, 361.35pt x 505.89pt>
+<Figures/22-1-tutRandomTree.pdf, id=11160, 361.35pt x 505.89pt>
 File: Figures/22-1-tutRandomTree.pdf Graphic file (type pdf)
 <use Figures/22-1-tutRandomTree.pdf>
 Package pdftex.def Info: Figures/22-1-tutRandomTree.pdf  used on input line 36.
 
 (pdftex.def)             Requested size: 170.71652pt x 239.0034pt.
 [323] [324 <./Figures/22-1-tutRandomTree.pdf>]
-<Figures/22-2-tutPruefTree.pdf, id=11233, 431.6125pt x 388.45125pt>
+<Figures/22-2-tutPruefTree.pdf, id=11232, 431.6125pt x 388.45125pt>
 File: Figures/22-2-tutPruefTree.pdf Graphic file (type pdf)
 <use Figures/22-2-tutPruefTree.pdf>
 Package pdftex.def Info: Figures/22-2-tutPruefTree.pdf  used on input line 76.
 (pdftex.def)             Requested size: 199.16928pt x 179.25282pt.
  [325 <./Figures/22-2-tutPruefTree.pdf>]
-<Figures/22-3-test62.pdf, id=11284, 299.1175pt x 348.30125pt>
+<Figures/22-3-test62.pdf, id=11283, 299.1175pt x 348.30125pt>
 File: Figures/22-3-test62.pdf Graphic file (type pdf)
 <use Figures/22-3-test62.pdf>
 Package pdftex.def Info: Figures/22-3-test62.pdf  used on input line 118.
 (pdftex.def)             Requested size: 199.16928pt x 231.92035pt.
  [326]
-<Figures/22-4-rootedTree.pdf, id=11317, 279.0425pt x 303.1325pt>
+<Figures/22-4-rootedTree.pdf, id=11316, 279.0425pt x 303.1325pt>
 File: Figures/22-4-rootedTree.pdf Graphic file (type pdf)
 <use Figures/22-4-rootedTree.pdf>
 Package pdftex.def Info: Figures/22-4-rootedTree.pdf  used on input line 143.
@@ -2334,14 +2300,14 @@ Package pdftex.def Info: Figures/22-4-rootedTree.pdf  used on input line 143.
 pdfTeX warning: pdflatex (file ./Figures/22-4-rootedTree.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]
-<Figures/22-5-randomSpanningTree.pdf, id=11376, 326.21875pt x 322.20375pt>
+<Figures/22-5-randomSpanningTree.pdf, id=11375, 326.21875pt x 322.20375pt>
 File: Figures/22-5-randomSpanningTree.pdf Graphic file (type pdf)
 <use Figures/22-5-randomSpanningTree.pdf>
 Package pdftex.def Info: Figures/22-5-randomSpanningTree.pdf  used on input lin
 e 185.
 (pdftex.def)             Requested size: 199.16928pt x 196.7259pt.
  [328]
-<Figures/22-6-spanningForest.pdf, id=11421, 512.91624pt x 447.6725pt>
+<Figures/22-6-spanningForest.pdf, id=11420, 512.91624pt x 447.6725pt>
 File: Figures/22-6-spanningForest.pdf Graphic file (type pdf)
 <use Figures/22-6-spanningForest.pdf>
 Package pdftex.def Info: Figures/22-6-spanningForest.pdf  used on input line 21
@@ -2349,7 +2315,7 @@ Package pdftex.def Info: Figures/22-6-spanningForest.pdf  used on input line 21
 (pdftex.def)             Requested size: 199.16928pt x 173.83333pt.
  [329 <./Figures/22-5-randomSpanningTree.pdf>] [330 <./Figures/22-6-spanningFor
 est.pdf>]
-<Figures/22-7-bestDeterminedSpanningTree.pdf, id=11527, 299.1175pt x 282.05376p
+<Figures/22-7-bestDeterminedSpanningTree.pdf, id=11526, 299.1175pt x 282.05376p
 t>
 File: Figures/22-7-bestDeterminedSpanningTree.pdf Graphic file (type pdf)
 <use Figures/22-7-bestDeterminedSpanningTree.pdf>
@@ -2371,39 +2337,39 @@ Chapter 23.
 
 
 ]
-<Figures/23-1-randomSplitGraph.pdf, id=11614, 299.1175pt x 358.33875pt>
+<Figures/23-1-randomSplitGraph.pdf, id=11613, 299.1175pt x 358.33875pt>
 File: Figures/23-1-randomSplitGraph.pdf Graphic file (type pdf)
 <use Figures/23-1-randomSplitGraph.pdf>
 Package pdftex.def Info: Figures/23-1-randomSplitGraph.pdf  used on input line 
 76.
 (pdftex.def)             Requested size: 170.71652pt x 204.51765pt.
  [334] [335 <./Figures/23-1-randomSplitGraph.pdf>]
-<Figures/23-2-berge1.pdf, id=11720, 299.1175pt x 240.9pt>
+<Figures/23-2-berge1.pdf, id=11719, 299.1175pt x 240.9pt>
 File: Figures/23-2-berge1.pdf Graphic file (type pdf)
 <use Figures/23-2-berge1.pdf>
 Package pdftex.def Info: Figures/23-2-berge1.pdf  used on input line 147.
 (pdftex.def)             Requested size: 170.71652pt x 137.49086pt.
  [336 <./Figures/23-2-berge1.pdf>]
-<Figures/23-3-berge2.pdf, id=11776, 299.1175pt x 240.9pt>
+<Figures/23-3-berge2.pdf, id=11775, 299.1175pt x 240.9pt>
 File: Figures/23-3-berge2.pdf Graphic file (type pdf)
 <use Figures/23-3-berge2.pdf>
 Package pdftex.def Info: Figures/23-3-berge2.pdf  used on input line 167.
 (pdftex.def)             Requested size: 170.71652pt x 137.49086pt.
  [337 <./Figures/23-3-berge2.pdf>]
-<Figures/23-4-permutationGraph.pdf, id=11837, 299.1175pt x 266.9975pt>
+<Figures/23-4-permutationGraph.pdf, id=11836, 299.1175pt x 266.9975pt>
 File: Figures/23-4-permutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-4-permutationGraph.pdf>
 Package pdftex.def Info: Figures/23-4-permutationGraph.pdf  used on input line 
 223.
 (pdftex.def)             Requested size: 199.16928pt x 177.78331pt.
-<Figures/23-5-coloredPermutationGraph.pdf, id=11841, 299.1175pt x 266.9975pt>
+<Figures/23-5-coloredPermutationGraph.pdf, id=11840, 299.1175pt x 266.9975pt>
 File: Figures/23-5-coloredPermutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-5-coloredPermutationGraph.pdf>
 Package pdftex.def Info: Figures/23-5-coloredPermutationGraph.pdf  used on inpu
 t line 246.
 (pdftex.def)             Requested size: 170.71652pt x 152.3857pt.
  [338]
-<Figures/23-6-perm_permutationGraph.pdf, id=11888, 417.56pt x 251.94125pt>
+<Figures/23-6-perm_permutationGraph.pdf, id=11887, 417.56pt x 251.94125pt>
 File: Figures/23-6-perm_permutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-6-perm_permutationGraph.pdf>
 Package pdftex.def Info: Figures/23-6-perm_permutationGraph.pdf  used on input 
@@ -2415,14 +2381,14 @@ raph.pdf
 pdfTeX warning: pdflatex (file ./Figures/23-5-coloredPermutationGraph.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >]
-<Figures/23-7-orientedPermGraph.pdf, id=11953, 204.765pt x 303.1325pt>
+<Figures/23-7-orientedPermGraph.pdf, id=11952, 204.765pt x 303.1325pt>
 File: Figures/23-7-orientedPermGraph.pdf Graphic file (type pdf)
 <use Figures/23-7-orientedPermGraph.pdf>
 Package pdftex.def Info: Figures/23-7-orientedPermGraph.pdf  used on input line
  292.
 (pdftex.def)             Requested size: 142.26378pt x 210.61865pt.
  [340 <./Figures/23-6-perm_permutationGraph.pdf>]
-<Figures/23-8-randomGraph4335.pdf, id=12005, 299.1175pt x 319.1925pt>
+<Figures/23-8-randomGraph4335.pdf, id=12004, 299.1175pt x 319.1925pt>
 File: Figures/23-8-randomGraph4335.pdf Graphic file (type pdf)
 <use Figures/23-8-randomGraph4335.pdf>
 Package pdftex.def Info: Figures/23-8-randomGraph4335.pdf  used on input line 3
@@ -2439,14 +2405,14 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <7> not available
  [341 <./Figures/23-7-orientedPermGraph.pdf>]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 345.
-<Figures/23-9-transOrientGraph.pdf, id=12065, 299.1175pt x 319.1925pt>
+<Figures/23-9-transOrientGraph.pdf, id=12064, 299.1175pt x 319.1925pt>
 File: Figures/23-9-transOrientGraph.pdf Graphic file (type pdf)
 <use Figures/23-9-transOrientGraph.pdf>
 Package pdftex.def Info: Figures/23-9-transOrientGraph.pdf  used on input line 
 370.
 (pdftex.def)             Requested size: 199.16928pt x 212.53795pt.
  [342 <./Figures/23-8-randomGraph4335.pdf>]
-<Figures/23-10-transOrientDualGraph.pdf, id=12137, 403.5075pt x 280.04625pt>
+<Figures/23-10-transOrientDualGraph.pdf, id=12136, 403.5075pt x 280.04625pt>
 File: Figures/23-10-transOrientDualGraph.pdf Graphic file (type pdf)
 <use Figures/23-10-transOrientDualGraph.pdf>
 Package pdftex.def Info: Figures/23-10-transOrientDualGraph.pdf  used on input 
@@ -2459,12 +2425,12 @@ h.pdf
 pdfTeX warning: pdflatex (file ./Figures/23-10-transOrientDualGraph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >] [344]
-<Figures/23-11-gtesta.pdf, id=12238, 299.1175pt x 316.18124pt>
+<Figures/23-11-gtesta.pdf, id=12237, 299.1175pt x 316.18124pt>
 File: Figures/23-11-gtesta.pdf Graphic file (type pdf)
 <use Figures/23-11-gtesta.pdf>
 Package pdftex.def Info: Figures/23-11-gtesta.pdf  used on input line 479.
 (pdftex.def)             Requested size: 161.50734pt x 170.71652pt.
-<Figures/23-11-gtestb.pdf, id=12239, 299.1175pt x 307.1475pt>
+<Figures/23-11-gtestb.pdf, id=12238, 299.1175pt x 307.1475pt>
 File: Figures/23-11-gtestb.pdf Graphic file (type pdf)
 <use Figures/23-11-gtestb.pdf>
 Package pdftex.def Info: Figures/23-11-gtestb.pdf  used on input line 480.
@@ -2492,110 +2458,110 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 
 ] [348]
-Underfull \hbox (badness 3333) in paragraph at lines 183--183
+Underfull \hbox (badness 3333) in paragraph at lines 153--153
 []\OT1/ptm/m/n/10 Bisdorff R (2021a) Doc-u-men-ta-tion of the Di-graph3 col-lec
 -tion of Python
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 183--183
+Underfull \hbox (badness 2189) in paragraph at lines 153--153
 \OT1/ptm/m/n/10 mod-ules for Al-go-rith-mic De-ci-sion The-ory. URL [][]$\OT1/p
 cr/m/n/10 https : / / digraph3 .
  []
 
 
-Underfull \hbox (badness 3179) in paragraph at lines 188--188
+Underfull \hbox (badness 3179) in paragraph at lines 158--158
 \OT1/ptm/m/n/10 mod-ules. URL [][]$\OT1/pcr/m/n/10 https : / / digraph3 . readt
 hedocs . io / en / latest /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--193
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
 [][]$\OT1/pcr/m/n/10 https : / / cs . uwaterloo . ca / journals / JIS / VOL11 /
  Marichal /
  []
 
-[349]
-Underfull \hbox (badness 1360) in paragraph at lines 234--234
+
+Underfull \hbox (badness 1360) in paragraph at lines 204--204
 []\OT1/ptm/m/n/10 Brans JP, Vincke P (1985) A pref-er-ence rank-ing or-gan-i-sa
 -tion method: The
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+[349]
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 []\OT1/ptm/m/n/10 DER SPIEGEL (2004) Stu-den-ten-be-fra-gung des SPIEGEL Die Me
 th-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 \OT1/ptm/m/n/10 ode. URL [][]$\OT1/pcr/m/n/10 https : / / www . spiegel . de / 
 lebenundlernen / uni /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 \OT1/pcr/m/n/10 studentenbefragung-[]des-[]spiegel-[]die-[]methode-[]a-[]329082
  .
  []
 
 
-Underfull \hbox (badness 2717) in paragraph at lines 278--278
+Underfull \hbox (badness 2717) in paragraph at lines 248--248
 []\OT1/ptm/m/n/10 Friedmann J, Hack-en-broch V, Hipp D, Klawit-ter N, Koch J, L
 akotta B,
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 278--278
+Underfull \hbox (badness 1859) in paragraph at lines 248--248
 \OT1/ptm/m/n/10 Mohr J, Schmitz C, Thimm K, W[]ust C (2004) Die Elite von mor-g
 en.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--278
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
 \OT1/ptm/m/n/10 DER SPIEGEL 48, URL [][]$\OT1/pcr/m/n/10 https : / / www . spie
 gel . de / politik /
  []
 
 
-Overfull \hbox (35.60278pt too wide) in paragraph at lines 278--278
+Overfull \hbox (35.60278pt too wide) in paragraph at lines 248--248
 \OT1/pcr/m/n/10 die-[]elite-[]von-[]morgen-[]a-[]afd0507a-[]0002-[]0001-[]0000-
 []000037494731$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--278
+Underfull \hbox (badness 10000) in paragraph at lines 248--248
 
  []
 
-[350] [351]
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
+[350]
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 []\OT1/ptm/m/n/10 Times Higher Ed-u-ca-tion (2016) World Uni-ver-sity Rank-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \OT1/ptm/m/n/10 ings by Com-puter Sci-ence Sub-ject. URL [][]$\OT1/pcr/m/n/10 h
 ttps : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \OT1/pcr/m/n/10 timeshighereducation . com / world-[]university-[]rankings /
  []
 
-) [352] (./book.lol [353
+[351]) [352] (./book.lol [353
 
 
 ] [354] [355] [356] [357])
 \tf@lol=\write7
 \openout7 = `book.lol'.
 
- [358] (./book.lof [359
+ [358] (./book.lof
+[359
 
 
-]
-[360] [361])
+] [360] [361])
 \tf@lof=\write8
 \openout8 = `book.lof'.
 
@@ -2615,17 +2581,12 @@ Overfull \hbox (3.17114pt too wide) in paragraph at lines 251--253
  []
 
 [367]
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 357--359
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 353--355
 []\OT1/pcr/m/n/8.5 StrongComponentsCollapsedDigraph 
  []
 
 
-Overfull \hbox (18.47112pt too wide) in paragraph at lines 382--384
-[]\OT1/pcr/m/n/8.5 UnOpposedBipolarOutrankingDigraph() 
- []
-
-
-Overfull \hbox (8.27113pt too wide) in paragraph at lines 384--386
+Overfull \hbox (8.27113pt too wide) in paragraph at lines 378--380
 []\OT1/pcr/m/n/8.5 UnOpposedBipolarOutrankingDigraph 
  []
 
@@ -2659,7 +2620,7 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 7BE68D506E49FD9075B881453F72EBA0;44034.
@@ -2672,10 +2633,10 @@ Package rerunfilecheck Info: Checksums for `book.brf':
 (rerunfilecheck)             After:  4B892C8C4AEB754D93353957C4430BD9;9527.
  ) 
 Here is how much of TeX's memory you used:
- 25959 strings out of 478994
- 392861 string characters out of 5858184
- 1277035 words of memory out of 5000000
- 35352 multiletter control sequences out of 15000+600000
+ 25955 strings out of 478994
+ 392768 string characters out of 5858184
+ 1277402 words of memory out of 5000000
+ 35354 multiletter control sequences out of 15000+600000
  490676 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,19n,102p,1430b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2704,10 +2665,10 @@ symbol/usyr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr
 xlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (382 pages, 5420197 bytes).
+Output written on book.pdf (382 pages, 5419188 bytes).
 PDF statistics:
- 14812 PDF objects out of 15390 (max. 8388607)
- 13630 compressed objects within 137 object streams
- 7341 named destinations out of 7423 (max. 500000)
+ 14797 PDF objects out of 15390 (max. 8388607)
+ 13615 compressed objects within 137 object streams
+ 7335 named destinations out of 7423 (max. 500000)
  2053 words of extra memory for PDF output out of 10000 (max. 10000000)
 

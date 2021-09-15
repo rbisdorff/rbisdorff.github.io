@@ -2,7 +2,7 @@
 \indexentry{randomDigraphs@\texttt{randomDigraphs} module|hyperpage}{14}
 \indexentry{RandomDigraph@\texttt{RandomDigraph} class|hyperpage}{14}
 \indexentry{Digraph@\texttt{Digraph} class|hyperpage}{15}
-\indexentry{showSort@\texttt{showShort()}|hyperpage}{16}
+\indexentry{showShort@\texttt{showShort()}|hyperpage}{16}
 \indexentry{exportGraphViz@\texttt{exportGraphViz()}|hyperpage}{17}
 \indexentry{showStatistics@\texttt{showStatistics()}|hyperpage}{18}
 \indexentry{computeSize@\texttt{computeSize()}|hyperpage}{18}
@@ -45,7 +45,7 @@
 \indexentry{showRelationTable@\texttt{showRelationTable()}|hyperpage}{40}
 \indexentry{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}|hyperpage}{40}
 \indexentry{showPairwiseComparison@\texttt{showPairwiseComparison()}|hyperpage}{41}
-\indexentry{showPairwiseoutrankings@\texttt{showPairwiseOutrankings()}|hyperpage}{41}
+\indexentry{showPairwiseOutrankings@\texttt{showPairwiseOutrankings()}|hyperpage}{41}
 \indexentry{recodeValuation@\emph{recodeValuation()}|hyperpage}{42}
 \indexentry{coduality principle|hyperpage}{43}
 \indexentry{graphviz|hyperpage}{43}
@@ -91,7 +91,7 @@
 \indexentry{showHTMPerformanceTableau@\texttt{showHTMPerformanceTableau()}|hyperpage}{86}
 \indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformance\-Tableau} class|hyperpage}{88}
 \indexentry{showCourseStatistics@\texttt{showCourseStatistics()}|hyperpage}{90}
-\indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}|hyperpage}{90}
+\indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}|hyperpage}{90}
 \indexentry{votingProfiles@\texttt{votingProfiles} module|hyperpage}{93}
 \indexentry{LinearVotingProfile@\texttt{LinearVotingProfile} class|hyperpage}{93}
 \indexentry{RandomLinearVotingProfile@\texttt{RandomLinearVotingProfile} class|hyperpage}{93}
@@ -131,7 +131,7 @@
 \indexentry{Kemeny@\emph{J. Kemeny}|hyperpage}{114}
 \indexentry{KemenyRanking@\texttt{KemenyRanking} class|hyperpage}{114}
 \indexentry{RankingsFusion@\texttt{RankingsFusion} class|hyperpage}{115}
-\indexentry{showRankingConsen\-susQuality@\texttt{showRankingConsensusQuality()}|hyperpage}{115}
+\indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}|hyperpage}{115}
 \indexentry{Slater@\emph{P. Slater}|hyperpage}{117}
 \indexentry{Kohler@\emph{G. Kohler}|hyperpage}{118}
 \indexentry{IteratedNetFlowsRanking@\texttt{IteratedNetFlowsRanking} class|hyperpage}{120}
@@ -179,7 +179,7 @@
 \indexentry{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class|hyperpage}{169}
 \indexentry{transitiveDigraphs@\texttt{transitiveDigraphs} module|hyperpage}{169}
 \indexentry{ConfidentBipolarOutrankingDigraph@\texttt{ConfidentBipolarOutranking\-Digraph} class|hyperpage}{171}
-\indexentry{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph()}|hyperpage}{172}
+\indexentry{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph} class|hyperpage}{172}
 \indexentry{oppositeness degree|hyperpage}{172}
 \indexentry{TransitiveDigraph@\texttt{TransitiveDigraph} class|hyperpage}{172}
 \indexentry{THE University rankings 2016 by CS subject|hyperpage}{175}
@@ -190,7 +190,7 @@
 \indexentry{showPairwiseOutrankings@\texttt{showPairwiseOutrankings()}|hyperpage}{187}
 \indexentry{computeRankingCorrelation@\texttt{computeRankingCorrelation()}|hyperpage}{189}
 \indexentry{showCorrelation@\texttt{showCorrelation()}|hyperpage}{189}
-\indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}|hyperpage}{190}
+\indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}|hyperpage}{190}
 \indexentry{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}|hyperpage}{190}
 \indexentry{export3DplotOfCriteriaCorrelation@\texttt{export3DplotOfCriteria\-Correlation()}|hyperpage}{191}
 \indexentry{PerformanceQuantiles@\texttt{PerformanceQuantiles} class|hyperpage}{197}
@@ -200,7 +200,7 @@
 \indexentry{showQuantilesRating@\texttt{showQuantilesRating()}|hyperpage}{200}
 \indexentry{exportRatingByRankingGraphViz@\texttt{exportRatingByRankingGraphViz()}|hyperpage}{200}
 \indexentry{RankingsFusionDigraph@\texttt{RankingsFusionDigraph} class|hyperpage}{202}
-\indexentry{showRankingConsensusQuality@\texttt{showRankingConsensus\-Quality()}|hyperpage}{203}
+\indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}|hyperpage}{203}
 \indexentry{showSortingCharacteristics@\texttt{showSortingCharacteristics()}|hyperpage}{205}
 \indexentry{showActionsSortingResult@\texttt{showActionsSortingResult()}|hyperpage}{205}
 \indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformance\-Tableau} class|hyperpage}{214}
@@ -230,7 +230,7 @@
 \indexentry{anti-holes|hyperpage}{236}
 \indexentry{DualDigraph@\texttt{DualDigraph} class|hyperpage}{236}
 \indexentry{IndeterminateInnerPart@\texttt{IndeterminateInnerPart} parameter|hyperpage}{237}
-\indexentry{showPreKernels@\texttt{showPreKernels}()|hyperpage}{240}
+\indexentry{showPreKernels@\texttt{showPreKernels()}|hyperpage}{240}
 \indexentry{Hertz@\emph{A. Hertz}|hyperpage}{246}
 \indexentry{showMISAH@\texttt{showMIS\_AH}()|hyperpage}{246}
 \indexentry{independentChoices@\texttt{independentChoices}()|hyperpage}{246}
@@ -246,6 +246,7 @@
 \indexentry{RobustOutrankingDigraph@\texttt{RobustOutrankingDigraph} class|hyperpage}{274}
 \indexentry{symmetricAverage@\texttt{symmetricAverage()}|hyperpage}{278}
 \indexentry{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph} class|hyperpage}{279}
+\indexentry{Roy@\textsl{B. Roy}|hyperpage}{283}
 \indexentry{showPreKernels@\texttt{showPreKernels()}|hyperpage}{286}
 \indexentry{votingProfiles@\texttt{votingProfiles} module|hyperpage}{291}
 \indexentry{BipolarApprovalVotingProfile@\texttt{BipolarApprovalVotingProfile} class|hyperpage}{291}

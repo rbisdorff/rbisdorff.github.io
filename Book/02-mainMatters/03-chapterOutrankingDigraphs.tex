@@ -126,7 +126,7 @@ Given the previous random performance tableau \texttt{pt}, the \texttt{BipolarOu
 
 The resulting digraph contains 20 positive (valid) outranking relations. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Lines 10-11 in List.~\vref{list:3.4}).
 
-We can inspect the complete $[-1.0,+1.0]$-valued adjacency table with the \texttt{showRelationTable()} method().\index{showRelationTable@\texttt{showRelationTable()}}
+We can inspect the complete $[-1.0,+1.0]$-valued adjacency table with the \texttt{show\-RelationTable()} method().\index{showRelationTable@\texttt{showRelationTable()}}
 \begin{lstlisting}[caption={Inspecting the valued adjacency table.},label=list:3.5]
 >>> odg.showRelationTable()
   * ---- Relation Table -----
@@ -176,7 +176,7 @@ From above given semantics, we notice in line 5 in Listing~\vref{list:3.5} that 
 
 The outranking characteristic value $r(a1 \succsim a2)$ represents the relative \emph{majority margin} resulting from the difference between the significance weights of the criteria in favour and the significance weights of the criteria in disfavour of the statement that alternative \texttt{a1} is ``\emph{at least as well evaluated as}'' alternative \texttt{a2}. No considerable performance difference being observed, no polarising situation is triggered in this pairwise comparison.
 
-Such a polarised situation is however observed when we compare the evaluations of alternatives \texttt{a1} and \texttt{a7} with the \texttt{showPairwiseOutrankings()} method. \index{showPairwiseoutrankings@\texttt{showPairwiseOutrankings()}}
+Such a polarised situation is however observed when we compare the evaluations of alternatives \texttt{a1} and \texttt{a7} with the \texttt{showPairwiseOutrankings()} method. \index{showPairwiseOutrankings@\texttt{showPairwiseOutrankings()}}
 \begin{lstlisting}[caption={Pairwise comparison with considerable performance difference},label=list:3.7,basicstyle=\ttfamily\scriptsize]
 >>> odg.showPairwiseoutrankings('a1','a7')
   *------------  pairwise comparison ----*
@@ -265,9 +265,9 @@ In the next methodological Part, we present and discuss multiple criteria evalua
 \addcontentsline{toc}{section}{Notes}
 \section*{Notes}
 
-The seminal work on outranking digraphs goes back to the seventies and eighties when Bernard Roy \index{Roy@\textsl{B. Roy}} joined the just starting University Paris-Dauphine and founded there the '\emph{Laboratoire d’Analyse et de Modélisation de Systèmes pour l’Aide à la Décision}' (LAMSADE). The LAMSADE became the major site in the development of the outranking approach to multiple criteria decision aid. \citep*{ROY-1993}.
+The seminal work on outranking digraphs goes back to the seventies and eighties when \emph{Bernard Roy}\index{Roy@\textsl{B. Roy}} joined the just starting University Paris-Dauphine and founded there the '\emph{Laboratoire d’Analyse et de Modélisation de Systèmes pour l’Aide à la Décision}' (LAMSADE). The LAMSADE became the major site in the development of the outranking approach to multiple criteria decision aid. \citep*{ROY-1993}.
 
-The ongoing success of the original \emph{outranking} concept stems from the fact that it is rooted in a sound pragmatism. The multiple criteria performance tableau, necessarily associated with a given outranking digraph, is indeed convincingly objective and meaningful \citep{ROY-1991}. And, ideas from social choice theory gave initially the insight that a pairwise voting mechanism à la \Condorcet could provide an order-statistical tool for aggregating a set of preference points of view into what M. Barbut\index{Barbut@\emph{M. Barbut}} called the \emph{central} \Condorcet point of view (\citealp{CON-1784} and \citealp{BAR-1980}); in fact the median of the multiple preference points of view, at minimal absolute \Kendall's\index{Kendall@\emph{M.G. Kendall}} ordinal correlation distance from all individual points of view (see Chap.~\ref{sec:16}).
+The ongoing success of the original \emph{outranking} concept stems from the fact that it is rooted in a sound pragmatism. The multiple criteria performance tableau, necessarily associated with a given outranking digraph, is indeed convincingly objective and meaningful \citep{ROY-1991}. And, ideas from social choice theory gave initially the insight that a pairwise voting mechanism à la \Condorcet could provide an order-statistical tool for aggregating a set of preference points of view into what \emph{Marc Barbut}\index{Barbut@\emph{M. Barbut}} called the \emph{central} \Condorcet point of view (\citealp{CON-1784} and \citealp{BAR-1980}); in fact the median of the multiple preference points of view, at minimal absolute \Kendall's\index{Kendall@\emph{M.G. Kendall}} ordinal correlation distance from all individual points of view (see Chap.~\ref{sec:16}).
 
 Considering thus each performance criterion as a subset of unanimous voters and balancing the votes in favour against considerable counter-performances in disfavour gave eventually rise to the concept of \emph{outranking situation}, a distinctive feature of the Multiple Criteria Decision Aid approach \citep{BIS-2015}.  A modern definition would be : An alternative $x$ is said to \emph{outrank} alternative $y$ when – a \emph{significant majority} of criteria confirm that alternative $x$ has to be considered as \emph{at least as well evaluated as} an alternative $y$ (the \emph{concordance} argument); and – no discordant criterion opens to significant doubt the validity of the previous confirmation by revealing a considerable counter-performance of alternative $x$ compared to $y$ (the \emph{discordance} argument).
 

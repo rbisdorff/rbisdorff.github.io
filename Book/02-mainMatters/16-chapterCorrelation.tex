@@ -248,7 +248,7 @@ The \Digraph resources provide for convenience a direct \texttt{showCorrela\-tio
 We are now ready for assessing the quality of the \NetFlows ranking of the movies shown in the heatmap view of Figure~\vref{fig:16.2}. 
 
 \section{Fitness of ranking heuristics}
-\label{sec:16.3}
+\label{sec:16.4}
 
 The \NetFlows ranking of the movies shown in the heatmap view in Figure~\vref{fig:16.2} is based on the bipolar-valued outranking digraph modelling the pairwise global ``\emph{rated at least as well as}'' relation among the $25$ movies from the performance tableau instance \texttt{gt07}.
 \begin{lstlisting}[caption={The bipolar-valued outranking digraph of the star-rated movies},label=list:16.8]
@@ -317,7 +317,7 @@ One may notice in Line 4 that the ordinal correlation $\tau(\mathtt{bod},\mathtt
 It would be interesting to compare similarly the correlations one may obtain with other global ranking heuristics, like the \Copeland ranking rule.
 
 \section{Illustrating preference divergences}
-\label{sec:16.4}
+\label{sec:16.5}
 
 The bipolar-valued relational equivalence indexes gives us, via the \texttt{showCrite\-riaCorrelationTable(ValuedCorrelation=True)} method\index{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}}, a further measure for studying how \emph{divergent} may appear the rating opinions expressed by the movie critics. 
 \begin{figure}[ht]
@@ -344,7 +344,7 @@ To get a picture of the actual divergence of rating opinions concerning jointly 
 The first 3 principal axes support together about $70\%$ of the total inertia. Most eccentric and opposed in their respective rating opinions appear, on the first principal axis with $27.2\%$ inertia, the conservative daily press against labour and public press. On the second principal axis with $23.7.7\%$ inertia, it is the people press versus the cultural critical press. And, on the third axis with still $19.3\%$ inertia, the written media appear most opposed to the radio media.
 
 \section{Exploring the ``\emph{better rated}''  and the ``\emph{as well as rated}'' opinions}
-\label{sec:16.5}
+\label{sec:16.6}
 
 In order to furthermore study the quality of a ranking result, it may be interesting to have a separate view on the asymmetric and symmetric parts of the ``\emph{at least as well rated as}'' opinions (see Sec.~\ref{sec:2.3}).
 

@@ -6,42 +6,42 @@ Database file #1: 03-backMatters/reference.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 9 entries,
             3269 wiz_defined-function locations,
-            735 strings with 6438 characters,
-and the built_in function-call counts, 8529 in all, are:
-= -- 785
-> -- 161
+            735 strings with 6451 characters,
+and the built_in function-call counts, 8618 in all, are:
+= -- 792
+> -- 164
 < -- 8
-+ -- 60
-- -- 49
-* -- 722
-:= -- 1171
++ -- 61
+- -- 50
+* -- 731
+:= -- 1182
 add.period$ -- 9
 call.type$ -- 9
 change.case$ -- 60
 chr.to.int$ -- 9
 cite$ -- 9
-duplicate$ -- 793
-empty$ -- 839
-format.name$ -- 71
-if$ -- 1816
+duplicate$ -- 802
+empty$ -- 848
+format.name$ -- 72
+if$ -- 1835
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 83
+missing$ -- 84
 newline$ -- 37
 num.names$ -- 38
-pop$ -- 168
+pop$ -- 169
 preamble$ -- 1
 purify$ -- 51
 quote$ -- 0
 skip$ -- 154
 stack$ -- 0
-substring$ -- 999
-swap$ -- 181
+substring$ -- 1013
+swap$ -- 183
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 75
 warning$ -- 0
-while$ -- 59
+while$ -- 60
 width$ -- 0
 write$ -- 109

@@ -8,43 +8,43 @@ Warning--missing publisher in ADT-L7
 Warning--empty title in BIS-2015
 You've used 9 entries,
             3269 wiz_defined-function locations,
-            730 strings with 6327 characters,
-and the built_in function-call counts, 6798 in all, are:
-= -- 597
-> -- 148
+            730 strings with 6340 characters,
+and the built_in function-call counts, 6924 in all, are:
+= -- 607
+> -- 157
 < -- 8
-+ -- 56
-- -- 45
-* -- 545
-:= -- 976
++ -- 59
+- -- 48
+* -- 558
+:= -- 993
 add.period$ -- 8
 call.type$ -- 9
-change.case$ -- 59
+change.case$ -- 60
 chr.to.int$ -- 9
 cite$ -- 11
-duplicate$ -- 629
-empty$ -- 664
-format.name$ -- 62
-if$ -- 1422
+duplicate$ -- 638
+empty$ -- 673
+format.name$ -- 65
+if$ -- 1448
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 74
+missing$ -- 75
 newline$ -- 37
 num.names$ -- 37
-pop$ -- 173
+pop$ -- 176
 preamble$ -- 1
-purify$ -- 51
+purify$ -- 52
 quote$ -- 0
-skip$ -- 141
+skip$ -- 142
 stack$ -- 0
-substring$ -- 664
-swap$ -- 143
+substring$ -- 678
+swap$ -- 145
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 72
 warning$ -- 2
-while$ -- 48
+while$ -- 49
 width$ -- 0
 write$ -- 104
 (There were 2 warnings)

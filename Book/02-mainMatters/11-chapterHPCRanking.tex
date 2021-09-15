@@ -292,7 +292,7 @@ For sparse outranking digraphs, the adjacency table is implemented as a dynamic 
 \end{lstlisting}
 
 \section{Quantiles ranking of big performance tableaux}
-\label{sec:11.4}
+\label{sec:11.5}
 
 The \texttt{boostedRanking} attribute of the sparse outranking digraph \texttt{sg} contains the global linear ranking of the 100 decision alternatives. This ranking is computed by locally ranking the individual 6 components with the \Copeland rule (see List.~\vref{list:11.3} Lines 12 and 33).
 \begin{lstlisting}
@@ -409,7 +409,7 @@ The best ranking correlation with the pairwise outranking situations ($+0.747$) 
 In case of \texttt{Random3ObjectivesPerformanceTableau} instances, for instance, we would get in a similar setting an even better standrad outranking correlation of $+0.86$, a sparse 4-tiling correlation of $+0.82$, and an optimised sparse 4-tiling correlation of $+0.81$.
 
 \section{HPC quantiles ranking records}
-\label{sec:11.5}
+\label{sec:11.6}
 
 Following from the separability property of the $q$-tiles sorting of each action into a $q$-tiles class, the $q$-sorting algorithm may be safely split into as much threads as are multiple processing cores available for working in parallel (see Prop.~\ref{prop:9.1}). Furthermore, the ranking procedure being local to each diagonal component, these procedures may as well be safely processed in parallel threads on each component restricted outranking digraph.
 

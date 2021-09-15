@@ -238,7 +238,7 @@ dot -Grankdir=TB -Tpng fusionResult.dot\
 
 The fusion of the three rating-by-ranking results is shown in Figure~\vref{fig:14.5} where we see that they diverge solely in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}. In Listing~\vref{list:14.5} Lines 12-14, one may more precisely notice that the \Kemeny and \Copeland rules rate \texttt{U3} in the first quintile ($[0.00- 0.20[$), whereas the \NetFlows rule puts \texttt{U3} together with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$). And, the \Kemeny rule inverts the position of \texttt{U2} and \texttt{U4}.
 
-In Listing~\vref{list:14.5}, the \texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensus\-Quality()}} reveals finally how fair \Kemeny and \Copeland rules actually balance the fifteen academic subjects. 
+In Listing~\vref{list:14.5}, the \texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}} reveals finally how fair \Kemeny and \Copeland rules actually balance the fifteen academic subjects. 
 \begin{lstlisting}[caption={Checking the consensus quality of \Kemeny and \Copeland rankings},label=list:14.5,basicstyle=\ttfamily\scriptsize]
 >>> lqr.showRankingConsensusQuality(ke.kemenyRanking)
 Consensus quality of ranking:

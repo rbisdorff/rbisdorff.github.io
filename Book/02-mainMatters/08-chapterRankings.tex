@@ -138,7 +138,7 @@ In Listing~\vref{list:8.4}, the \texttt{computeRankingCorrelation()} method\inde
    Epistemic determination   :  0.230
 \end{lstlisting}
 
-With an epistemic determination level of $0.230$ (Line 6), the crisp ordinal correlation --\Kendall $\tau$-- index of $+463$ is in fact supported by $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the criteria significance weights. Furthermore, the bipolar-valued \emph{relational equivalence} characteristics between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the \Copeland ranking (see Chap.~\ref{sec:16}).
+With an epistemic determination level of $0.230$ (Line 6), the crisp ordinal correlation --\Kendall $\tau$-- index of $+463$ is in fact supported by $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the criteria significance weights. Furthermore, the bipolar-valued \emph{relational equivalence} between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the \Copeland ranking (see Chap.~\ref{sec:16}).
 
 The \Copeland scores, shown in Listing~\vref{list:8.3} deliver actually only a \emph{weak ranking}, i.e. a ranking with ties. This weak ranking may be constructed with the \texttt{WeakCopelandOrder} class \index{WeakCopelandOrder@\texttt{WeakCopelandOrder} class} from the \texttt{transitiveDigraphs} module.\index{transitiveDigraphs@\texttt{transitiveDigraphs} module}
 \begin{lstlisting}[caption={Computing a weak \Copeland ranking},label=list:8.5]
@@ -273,7 +273,7 @@ Figure~\vref{fig:8.3} shows the partial order defined by the epistemic disjuncti
 \label{fig:8.3}       % Give a unique label
 \end{figure}
 
-To retain now a specific representative among all the potential rankings with maximal \Kemeny index, we will choose, with the help of the \texttt{showRankingConsensus\-Quality()} method\index{showRankingConsen\-susQuality@\texttt{showRankingConsensusQuality()}}, the one proposing the best criteria consensus.
+To retain now a specific representative among all the potential rankings with maximal \Kemeny index, we will choose, with the help of the \texttt{showRankingConsensus\-Quality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}}, the one proposing the best criteria consensus.
 \begin{lstlisting}[caption={Computing the consensus quality of a ranking},label=list:8.11]   
 >>> g.showRankingConsensusQuality(ke.maximalRankings[0])
  Consensus quality of ranking:
@@ -417,7 +417,7 @@ Noticing that the \NetFlows score of an alternative $x$ represents in fact a bip
 \end{definition}
 
 The \texttt{IteratedNetFlowsRanking}\index{IteratedNetFlowsRanking@\texttt{IteratedNetFlowsRanking} class} class from the \texttt{linearOrders} module computes this ranking result. 
-\begin{lstlisting}[caption={Ranking-by-choosing with iterated maximal \NetFlows scores},label=list:8.14]   
+\begin{lstlisting}[caption={Ranking-by-choosing with iterated maximal \NetFlows scores},label=list:8.15]   
 >>> from linearOrders import IteratedNetFlowsRanking  
 >>> inf = IteratedNetFlowsRanking(g)
 >>> inf
@@ -445,7 +445,7 @@ The \texttt{IteratedNetFlowsRanking}\index{IteratedNetFlowsRanking@\texttt{Itera
     Bipolar-valued equivalence : +0.171
 \end{lstlisting}
 
-Like the \Kohler rule, the iterated \NetFlows rule has also a dual \emph{ordering-by-choosing} version, where instead of selecting at each step $i$ the row with maximal \NetFlows score, we choose the row with the \emph{minimal} \NetFlows score. Both the ranking and ordering result are computed by the \texttt{IteratedNetFlowsRanking} class (see Lines 12 and 13 in List.~\vref{list:8.14}).
+Like the \Kohler rule, the iterated \NetFlows rule has also a dual \emph{ordering-by-choosing} version, where instead of selecting at each step $i$ the row with maximal \NetFlows score, we choose the row with the \emph{minimal} \NetFlows score. Both the ranking and ordering result are computed by the \texttt{IteratedNetFlowsRanking} class (see Lines 12 and 13 in List.~\vref{list:8.15}).
 \begin{lstlisting}
 >>> inf.iteratedNetFlowsOrdering
   ['a2','a9','a1','a4','a3','a8','a7','a6','a5']
@@ -458,7 +458,7 @@ Like the \Kohler rule, the iterated \NetFlows rule has also a dual \emph{orderin
     Bipolar-valued equivalence : +0.173
 \end{lstlisting}
 
-The iterated \NetFlows ranking and its dual, the iterated \NetFlows ordering, do not usually deliver both the same result. In our example outranking digraph $g$ for instance, it is the \emph{ordering-by-choosing} result that obtains a slightly better correlation with the given outranking digraph ($+0.751$), a result that is also slightly better than the original \Kohler ranking result ($+0.747$, see List.~\vref{list:8.13} Line 8).
+The iterated \NetFlows ranking and its dual, the iterated \NetFlows ordering, do not usually deliver both the same result. In our example outranking digraph $g$ for instance, it is the \emph{ordering-by-choosing} result that obtains a slightly better correlation with the given outranking digraph ($+0.751$), a result that is also slightly better than the original \Kohler ranking result ($+0.747$, see List.~\vref{list:8.14} Line 8).
 
 With different \emph{ranking-by-choosing} and \emph{ordering-by-choosing} results, it may be useful to \emph{fuse} now, similar to what we have done before with \Kemeny 's and \Slater 's optimal rankings, both, the iterated \NetFlows ranking and ordering into a partial ranking. But we are hence back to the practical problem of what linear ranking should we eventually retain? 
 
@@ -481,7 +481,7 @@ Let us finally mention another interesting \emph{ranking-by-choosing} approach.
 \end{definition}  
 
 With our didactic outranking digraph $g$, we get the following result.\index{RankedPairsRanking@\texttt{RankedPairsRanking} class}
-\begin{lstlisting}[caption={Computing a \RankedPairs ranking},label=list:8.15]   
+\begin{lstlisting}[caption={Computing a \RankedPairs ranking},label=list:8.16]   
 >>> from linearOrders import RankedPairsRanking
 >>> rp = RankedPairsRanking(g)
 >>> rp.showRanking()

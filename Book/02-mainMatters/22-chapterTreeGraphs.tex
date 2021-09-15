@@ -147,7 +147,7 @@ In Fig.~\vref{fig:22.3}, we noticed that vertex \texttt{v2} is actually situated
 Let us now turn our attention toward a major application of tree graphs, namely \emph{spanning trees} and \emph{forests} related to graph traversals.
 
 \section{Spanning trees and forests}
-\label{sec:22.2}
+\label{sec:22.3}
 
 With the \texttt{RandomSpanningTree} class\index{RandomSpanningTree@\texttt{RandomSpanningTree} class} we may generate, from a given connected graph \texttt{g} instance, \emph{uniform} random instances of a spanning tree by using \Wilson's algorithm (see List.~\vref{list:22.6} and Fig.~\vref{fig:22.5}).
 \begin{lstlisting}[caption={Generating uniform random spanning trees.},label=list:22.6]
@@ -215,7 +215,7 @@ With the \texttt{RandomSpanningTree} class\index{RandomSpanningTree@\texttt{Rand
 \end{figure}
 
 \section{Maximum determined spanning forests}
-\label{sec:22.3}
+\label{sec:22.4}
 
 In case of valued graphs --supporting weighted edges-- we may finally construct a \emph{most determined} spanning tree (or forest if not connected) using \Kruskal's greedy minimum-spanning-tree algorithm on the dual valuation of the graph \citep{KRU-1956}\footnote{\Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest.}.
 

@@ -549,7 +549,7 @@ Yet, how may we now convince the reader, that the outranking based ranking resul
 \label{sec:13.3}
 
 In a multiple criteria based ranking problem, inspecting pairwise marginal performance differences may give objectivity to global preferential statements. That a CS Dept $x$ convincingly outranks Dept $y$ can conveniently be checked with the \texttt{showPairwiseOutrankings()} method.\index{showPairwiseOutrankings@\texttt{showPairwiseOutrankings()}}. The ETH Zürich CS Dept is, for instance, first ranked before Caltech's Dept in both previous rankings. Lest us check the preferential reasons.
-\begin{lstlisting}[caption={Comparing pairwise criteria performances},label=list:13.11,basicstyle=\ttfamily\scriptsize]
+\begin{lstlisting}[caption={Comparing pairwise criteria performances},label=list:13.12,basicstyle=\ttfamily\scriptsize]
 >>> rdg.showPairwiseOutrankings('ethz','calt')
   *------------  pairwise comparisons ----*
   Valuation in range: -100.00 to +100.00
@@ -574,7 +574,7 @@ In a multiple criteria based ranking problem, inspecting pairwise marginal perfo
                                             r(y >= x): +85.00
 \end{lstlisting}
 
-A significant positive performance difference ($+34.50$), concerning the \emph{International outlook} criterion (of $7,5\%$ significance), is observed in Listing~\vref{list:13.11} in favour of the ETH Zürich Dept (Line 9 above). Similarly, a significant positive performance difference ($+21.80$), concerning the \emph{Industry income} criterion (of $5\%$ significance), is observed, this time, in favour of the Caltech Dept (Line 17). The former, larger positive, performance difference, observed on a more significant criterion, gives so far a first convincing argument of $12.5\%$ significance for putting ETH Zürich first, before Caltech. Yet, the slightly positive performance difference ($+2.70$, Line 16) between Caltech and ETH Zürich on the \emph{Citations} criterion (of $27.5\%$ significance) confirms an ``\emph{at least as well evaluated as}'' situation in favour of the Caltech Dept.
+A significant positive performance difference ($+34.50$), concerning the \emph{International outlook} criterion (of $7,5\%$ significance), is observed in Listing~\vref{list:13.12} in favour of the ETH Zürich Dept (Line 9 above). Similarly, a significant positive performance difference ($+21.80$), concerning the \emph{Industry income} criterion (of $5\%$ significance), is observed, this time, in favour of the Caltech Dept (Line 17). The former, larger positive, performance difference, observed on a more significant criterion, gives so far a first convincing argument of $12.5\%$ significance for putting ETH Zürich first, before Caltech. Yet, the slightly positive performance difference ($+2.70$, Line 16) between Caltech and ETH Zürich on the \emph{Citations} criterion (of $27.5\%$ significance) confirms an ``\emph{at least as well evaluated as}'' situation in favour of the Caltech Dept.
 
 The inverse negative performance difference ($-2.70$, Line 7), however, is neither \emph{significant} ($< -5.00$), nor \emph{insignificant} ($> -2.50$), and does hence neither confirm nor infirm a ``\emph{not at least as well evaluated as}'' situation in disfavour of ETH Zürich. We observe here a convincing argument of $27.5\%$ significance for ranking Caltech first, before ETH Zürich.
 
@@ -598,7 +598,7 @@ In Figure~\vref{fig:13.2}, \emph{dark green}, resp. \emph{light green} marked po
 Notice by the way that no certainly valid robust outranking (dark green) and no certainly valid robust outranked situations (dark red) appear in Figure~\vref{fig:13.3} below, resp. above the principal diagonal; none of these robust preferential situations are hence violated by the robust \NetFlows ranking. The non reflexive \emph{white} positions in the relation map, like the one between the Georgia Institute of Technology and the MIT, mark outranking or outranked situations that are not robust with respect to the given significance weight preorder. They become, hence, doubtful and are set to the indeterminate characteristic value $0.0$.
 
 By measuring the ordinal correlation with the underlying pairwise global and marginal robust outranking situations, the quality of the robust \NetFlows ranking result can be formally evaluated with the \texttt{computeRankingCorrelation()} method\index{computeRankingCorrelation@\texttt{computeRankingCorrelation()}} and the \texttt{showCorrelation()} method\index{showCorrelation@\texttt{showCorrelation()}} (see Chap.~\ref{sec:16}).
-\begin{lstlisting}[caption={Measuring the quality of the \NetFlows ranking result},label=list:13.12]
+\begin{lstlisting}[caption={Measuring the quality of the \NetFlows ranking result},label=list:13.13]
 >>> corrnf = rdg.computeRankingCorrelation(nfRanking)
 >>> rdg.showCorrelation(corrnf)   
   Correlation indexes:
@@ -607,10 +607,10 @@ By measuring the ordinal correlation with the underlying pairwise global and mar
     Bipolar-valued equivalence : +0.507
 \end{lstlisting}
 
-Listing~\vref{list:13.12} Line 4 indicates that the \NetFlows ranking result is indeed highly  correlated ($+0.901$, in \Kendall 's tau index sense) with the pairwise global robust outranking relation. Their bipolar-valued \emph{relational equivalence} index ($+0.51$, Line 6) indicates a more than $75\%$ criteria significance support.
+Listing~\vref{list:13.13} Line 4 indicates that the \NetFlows ranking result is indeed highly  correlated ($+0.901$, in \Kendall 's tau index sense) with the pairwise global robust outranking relation. Their bipolar-valued \emph{relational equivalence} index ($+0.51$, Line 6) indicates a more than $75\%$ criteria significance support.
 
-With the \texttt{showRankingConsensusQuality()} method,  we can also check how the \NetFlows ranking rule is actually balancing the five ranking objectives.\index{showRankingConsensusQuality@\texttt{showRankingConsensusQuality()}}
-\begin{lstlisting}[caption={Measuring the consensus quality of the \NetFlows ranking result},label=list:13.13]
+With the \texttt{showRankingConsensusQuality()} method,  we can also check how the \NetFlows ranking rule is actually balancing the five ranking objectives.\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}}
+\begin{lstlisting}[caption={Measuring the consensus quality of the \NetFlows ranking result},label=list:13.14]
 >>> rdg.showRankingConsensusQuality(nfRanking)
   Criterion (weight): correlation
   -------------------------------
@@ -628,7 +628,7 @@ With the \texttt{showRankingConsensusQuality()} method,  we can also check how t
 The ordinal correlation indexes with the marginal performance criterion rankings are nearly respecting the given significance weights preorder: \texttt{gtch} $\approx$ \texttt{gres} $>$ \texttt{gcit} $>$ \texttt{gint} $>$ \texttt{gind} (see Lines 4-8 above). The mean marginal ordinal correlation index is quite high ($+0.51$). Coupled with a low standard deviation ($0.187$), we obtain a quite fairly balanced ranking result (Lines 10-12). 
 
 We can furthermore inspect with the \texttt{showCriteriaCorrelationTable()} method \index{showCriteriaCorrelationTable@\texttt{showCriteriaCorrelationTable()}} the mutual correlation indexes observed between the individual criterion based marginal robust outranking relations. 
-\begin{lstlisting}[caption={Showing the ordinal correlation between the marginal criterion relations},label=list:13.13]
+\begin{lstlisting}[caption={Showing the ordinal correlation between the marginal criterion relations},label=list:13.15]
 >>> rdg.showCriteriaCorrelationTable()
     Criteria ordinal correlation index
 	 |  gcit    gind    gint    gres    gtch   
@@ -640,7 +640,7 @@ We can furthermore inspect with the \texttt{showCriteriaCorrelationTable()} meth
     gtch |                                 +1.00   
 \end{lstlisting}
 
-Slightly contradictory ($-0.11$) appear the \emph{Citations} and \emph{Industrial income} criteria (Line 5 Column 3 in List.~\vref{list:13.13}). Due perhaps to potential confidentiality clauses, it seams perhaps not always possible to publish industrially relevant research results in highly ranked journals. However, criteria \emph{Citations} and \emph{International outlook} show a slightly positive correlation ($+0.24$, Column 4), whereas the \emph{International outlook} criterion shows no apparent correlation with both the major \emph{Teaching} and \emph{Research} criteria. The latter are however highly correlated ($+0.67$. Line 9 Column 6).
+Slightly contradictory ($-0.11$) appear the \emph{Citations} and \emph{Industrial income} criteria (Line 5 Column 3 in List.~\vref{list:13.15}). Due perhaps to potential confidentiality clauses, it seams perhaps not always possible to publish industrially relevant research results in highly ranked journals. However, criteria \emph{Citations} and \emph{International outlook} show a slightly positive correlation ($+0.24$, Column 4), whereas the \emph{International outlook} criterion shows no apparent correlation with both the major \emph{Teaching} and \emph{Research} criteria. The latter are however highly correlated ($+0.67$. Line 9 Column 6).
 
 A Principal Component Analysis may well illustrate with the \texttt{export3Dplot\-OfCriteriaCorrelation()} method the previous findings \citep{CPSTAT-L2}. \index{export3DplotOfCriteriaCorrelation@\texttt{export3DplotOfCriteria\-Correlation()}}
 \begin{lstlisting}
@@ -656,7 +656,7 @@ A Principal Component Analysis may well illustrate with the \texttt{export3Dplot
 In Figure~\vref{fig:13.3}, one may notice first that more than $80\%$ of the total variance of the previous correlation table is explained by the apparent opposition between the marginal outrankings of criteria: \emph{Teaching}, \emph{Research} and \emph{Industry income} on the left side, and the marginal outrankings of criteria: \emph{Citations} and \emph{International outlook} on the right side. Notice also in the left lower corner the nearly identical positions of the marginal outrankings of the major \emph{Teaching} and \emph{Research} criteria. In the factors 2 and 3 plot, about $30\%$ of the total variance is captured by the opposition between the marginal outrankings of the \emph{Teaching} and \emph{Research} criteria and the marginal outrankings of the \emph{Industrial income} criterion. Finally, in the factors 1 and 3 plot, nearly $15\%$ of the total variance is explained by the opposition between the marginal outrankings of the \emph{International outlook} criterion and the marginal outrankings of the \emph{Citations} criterion.
 
 It is, finally, interesting to similarly assess the ordinal correlation between the THE average scores-based ranking and the robust outranking digraph.
-\begin{lstlisting}[caption={Computing the ordinal quality of the THE ranking},label=list:13.14]
+\begin{lstlisting}[caption={Computing the ordinal quality of the THE ranking},label=list:13.16]
 >>> # theScores = [(xScore_1,x_1), (xScore_2,x_2),... ]
 >>> # is sorted in decreasing order of xscores
 >>> theRanking = [item[1] for item in theScores]
@@ -680,7 +680,7 @@ It is, finally, interesting to similarly assess the ordinal correlation between 
      Ranking fairness (a)-(b)              : +0.302
 \end{lstlisting}
 
-The THE ranking result is similarly correlated ($+0.907$, Line 7 in List.~\ref{list:13.14}) with the pairwise global robust outranking situations. By its overall weighted scoring rule, the THE ranking naturally induces marginal criterion correlations that are compatible with the given significance weight preorder (Lines 13-17). Notice that the mean marginal correlation is of a similar value ($+0.51$, Line 19) as the robust \NetFlows ranking. Yet, its standard deviation is slightly higher, which leads to a less fairer balancing of the three major ranking criteria.
+The THE ranking result is similarly correlated ($+0.907$, Line 7 in List.~\ref{list:13.16}) with the pairwise global robust outranking situations. By its overall weighted scoring rule, the THE ranking naturally induces marginal criterion correlations that are compatible with the given significance weight preorder (Lines 13-17). Notice that the mean marginal correlation is of a similar value ($+0.51$, Line 19) as the robust \NetFlows ranking. Yet, its standard deviation is slightly higher, which leads to a less fairer balancing of the three major ranking criteria.
 
 To conclude, let us emphasise, that, without any commensurability hypothesis and by taking, furthermore, into account, first, the always present more or less imprecision of any performance evaluation and, secondly, solely ordinal criteria significance weights, we may obtain here with our robust outranking approach a very similar ranking result with a slightly better preference modelling quality. A convincing heatmap view of the 25 first-ranked Institutions may eventually be generated in the default system browser with following command.
 \begin{lstlisting}
