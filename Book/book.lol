@@ -20,7 +20,7 @@
 \contentsline {lstlisting}{\numberline {3.3}Inspecting the performance evaluations}{39}{lstlisting.3.3}%
 \contentsline {lstlisting}{\numberline {3.4}Example of random bipolar-valued outranking digraph.}{40}{lstlisting.3.4}%
 \contentsline {lstlisting}{\numberline {3.5}Inspecting the valued adjacency table.}{40}{lstlisting.3.5}%
-\contentsline {lstlisting}{\numberline {3.6}Inspecting a pairwise multiple criteria comparison}{41}{lstlisting.3.6}%
+\contentsline {lstlisting}{\numberline {3.6}Inspecting a pairwise multiple-criteria comparison}{41}{lstlisting.3.6}%
 \contentsline {lstlisting}{\numberline {3.7}Pairwise comparison with considerable performance difference}{41}{lstlisting.3.7}%
 \contentsline {lstlisting}{\numberline {3.8}Recoding the digraph valuation}{42}{lstlisting.3.8}%
 \contentsline {lstlisting}{\numberline {4.1}Inspecting the \texttt {officeChoice} performance tableau.}{51}{lstlisting.4.1}%

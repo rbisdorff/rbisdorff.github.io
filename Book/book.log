@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  16 SEP 2021 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.29)  16 SEP 2021 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -814,7 +814,13 @@ l.17 R
 <to be read again> 
                    \relax 
 l.41 
-      [2] [3] [4] [5]) [6] [7]
+      [2]
+Overfull \hbox (3.3092pt too wide) in paragraph at lines 42--43
+\OT1/ptm/m/n/10 criteria per-for-mance tableaux. These ran-dom per-for-mance ta
+bleaux in-stances, mainly
+ []
+
+[3] [4] [5]) [6] [7]
 \openout2 = `02-mainMatters/part1.aux'.
 
  (./02-mainMatters/part1.tex [8
@@ -2623,7 +2629,7 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 7BE68D506E49FD9075B881453F72EBA0;44034.
+(rerunfilecheck)             Checksum: DEF1FF09C819BF0160F1ED09FB7668F4;44031.
 
 Package rerunfilecheck Warning: File `book.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
@@ -2665,7 +2671,7 @@ symbol/usyr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr
 xlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (382 pages, 5419320 bytes).
+Output written on book.pdf (382 pages, 5419271 bytes).
 PDF statistics:
  14795 PDF objects out of 15390 (max. 8388607)
  13613 compressed objects within 137 object streams

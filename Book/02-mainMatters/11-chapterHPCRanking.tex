@@ -1,14 +1,14 @@
 \chapter{HPC ranking of big performance tableaux}
 \label{sec:11}
 
-\abstract*{ The sparse outranking digraph, introduced inn Chapter~\ref{sec:9} is suitable for tackling the ranking of big multiple criteria performance tableaux with thausands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
+\abstract*{ The sparse outranking digraph, introduced inn Chapter~\ref{sec:9} is suitable for tackling the ranking of big multiple-criteria performance tableaux with thausands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
 
-\abstract{ The sparse outranking digraph, introduced inn Chapter~\ref{sec:9} is suitable for tackling the ranking of big multiple criteria performance tableaux with thausands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
+\abstract{ The sparse outranking digraph, introduced inn Chapter~\ref{sec:9} is suitable for tackling the ranking of big multiple-criteria performance tableaux with thausands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
 
 \section{C-compiled Python modules}
 \label{sec:11.1}
 
-The \Digraph collection provides cythonized \footnote{\Cython C-extension for Python, https://cython.org/}, i.e. C-compiled and optimised versions of the main python modules for tackling multiple criteria decision problems facing very large sets of decision alternatives ( $> 10000$ ). Such problems appear usually with a combinatorial organisation of the potential decision alternatives, as is frequently the case in bioinformatics for instance. If HPC facilities with nodes supporting numerous cores ($> 20$) and big RAM ($>$ 50GB) are available, ranking up to several millions of alternatives becomes effectively tractable (see \citep{BIS-2016}).
+The \Digraph collection provides cythonized \footnote{\Cython C-extension for Python, https://cython.org/}, i.e. C-compiled and optimised versions of the main python modules for tackling multiple-criteria decision problems facing very large sets of decision alternatives ( $> 10000$ ). Such problems appear usually with a combinatorial organisation of the potential decision alternatives, as is frequently the case in bioinformatics for instance. If HPC facilities with nodes supporting numerous cores ($> 20$) and big RAM ($>$ 50GB) are available, ranking up to several millions of alternatives becomes effectively tractable (see \citep{BIS-2016}).
 
 Four cythonized \Digraph modules, prefixed with the letter \texttt{c} and taking a \texttt{pyx} extension, are provided with their corresponding setup tools in the \texttt{cython} directory of the \Digraph resources, namely:
 \begin{itemize}[topsep=1pt]
