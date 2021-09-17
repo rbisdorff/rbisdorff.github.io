@@ -367,7 +367,7 @@ More computationally efficient ranking heuristics, like the \Copeland and \NetFl
 \section{The \Kohler ranking-by-choosing rule}
 \label{sec:8.6}
 
-\begin{definition}[The \Kohler \emph{ranking-by-choosing} rule]\label{def:8.4}\index{Kohler@\emph{G. Kohler}}
+\begin{algorithm}\index{Kohler@\emph{G. Kohler}}
   
 \noindent At step $i$ ($i$ goes from 1 to $n$) do the following:
 \begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm,topsep=1pt]
@@ -376,7 +376,10 @@ More computationally efficient ranking heuristics, like the \Copeland and \NetFl
 \item Put the selected decision alternative at rank $i$;
 \item Delete the corresponding row and column from the relation table and restart until the table is empty.
 \end{enumerate}
-\end{definition}
+\caption{The \Kohler \emph{ranking-by-choosing} rule}
+\label{alg:8.1}
+\end{algorithm}
+
 \begin{lstlisting}[caption={Computing a \Kohler ranking},label=list:8.14]   
 >>> from linearOrders import KohlerRanking
 >>> kocd = KohlerRanking(gcd)
@@ -405,16 +408,17 @@ But the \Kohler rule has a \emph{dual} version, the prudent \emph{Arrow-Raynaud}
 
 Noticing that the \NetFlows score of an alternative $x$ represents in fact a bipolar-valued characteristic of the assertion ``\emph{alternative x is ranked first}'', we may enhance the \Kohler rule by replacing the simple \emph{min-max} strategy with an \emph{iterated} maximal \NetFlows score selection.
 
-\begin{definition}[The iterated \NetFlows ranking-by-choosing rule]\label{def:8.5}
-  
-\noindent At step $i$ ($i$ goes from 1 to $n$) do the following:
+\begin{algorithm}
+  \noindent At step $i$ ($i$ goes from 1 to $n$) do the following:
 \begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm,topsep=1pt]
 \item Compute for each row of the bipolar-valued outranking relation table (see List.~\vref{list:8.1}) the corresponding \NetFlows score;
 \item Select the row where this score is \emph{maximal}, ties being resolved by lexicographic order;
 \item Put the corresponding decision alternative at rank $i$;
 \item Delete the corresponding row and column from the relation table and restart until the table is empty.
 \end{enumerate}
-\end{definition}
+\caption{The iterated \NetFlows ranking-by-choosing rule}
+\label{alg:8.2}
+\end{algorithm}
 
 The \texttt{IteratedNetFlowsRanking}\index{IteratedNetFlowsRanking@\texttt{IteratedNetFlowsRanking} class} class from the \texttt{linearOrders} module computes this ranking result. 
 \begin{lstlisting}[caption={Ranking-by-choosing with iterated maximal \NetFlows scores},label=list:8.15]   
@@ -469,7 +473,7 @@ Let us finally mention another interesting \emph{ranking-by-choosing} approach.
 
 \emph{N. Tideman}'s \index{Tideman@\emph{N. Tideman}} ranking-by-choosing heuristic, the \RankedPairs rule, working best this time on the non strict outranking digraph $g$, is based on a \emph{prudent incremental} construction of linear orders that avoids on the fly any cycling outranking situations \citep{TID-1987}.
 
-\begin{definition}[The \RankedPairs ranking rule]\label{def:8.6}
+\begin{algorithm}
 \begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm,topsep=1pt]
  \item Rank the ordered pairs $(x,y)$ of alternatives in decreasing order of $r(x\, \succsim \,y) \,+\, r(y\, \not\succsim \,x)$;
  \item Consider the pairs in that order (ties are resolved by a lexicographic rule):
@@ -477,8 +481,10 @@ Let us finally mention another interesting \emph{ranking-by-choosing} approach.
      \item if the next pair does not create a \emph{circuit} with the pairs already blocked, block this pair;
      \item if the next pair creates a \emph{circuit} with the already blocked pairs, skip it.
     \end{itemize}
-\end{enumerate}
-\end{definition}  
+  \end{enumerate}
+  \caption{The \RankedPairs ranking rule}
+  \label{alg:8.3}
+\end{algorithm}  
 
 With our didactic outranking digraph $g$, we get the following result.\index{RankedPairsRanking@\texttt{RankedPairsRanking} class}
 \begin{lstlisting}[caption={Computing a \RankedPairs ranking},label=list:8.16]   

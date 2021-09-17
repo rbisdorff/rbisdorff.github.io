@@ -608,7 +608,7 @@ Inspired by the crisp double fixpoint equation~\vref{eq:17.5}, we observed that 
 
 Following the \emph{von Neumann} fixpoint algorithm, a similar bipolar-valued extended double fixpoint algorithm, applied to $G(X,R/K_i)$, allows us to compute the associated bipolar-valued kernel characteristic vectors $Y_i$ in polynomial complexity.
 
-\noindent \textbf{Algorithm} 
+\begin{algorithm}[H]
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued digraph $G(X,R)$,
  \item [] \emph{out} : set $\{Y_1, Y_2, .. \}$ of bipolar-valued kernel membership characteristic vectors.
@@ -623,6 +623,9 @@ Following the \emph{von Neumann} fixpoint algorithm, a similar bipolar-valued ex
   \end{enumerate}
 \item Repeat step (2) for each terminal kernel $K_j$ by using the double fixpoint equation $T^2$ with the transpose of the adjacency matrix $R/K_j$.
 \end{enumerate}
+\caption{Computing bipolar-valued kernel characteristic vectors}
+\label{alg:17.1}
+\end{algorithm}
 
 \paragraph{\textbf{Time for a practical illustration}}
 
@@ -810,7 +813,7 @@ Following the observation that an independent absorbent choice in an acyclic dig
 
 The fuzzy version of kernel equation systems was first investigated by \citet{KIT-1993}. Commenting on this work at a meeting in Spring 1995 of the EURO Working Group on Multicriteria Decision Aiding in Lausanne (Switzerland), \emph{Marc Roubens}\index{Roubens@\textsl{M. Roubens}} feared that solving such fuzzy kernel equation systems could be computationally difficult. Triggered by his pessimistic remark and knowing about kernel equation systems and the \Neumann fixpoint theorem \citep{NEU-1944,SCH-1985}, I immediately started to implement in Prolog a solver for the valued version of Equation~\vref{eq:17.1}; the equation system serving as constraints for a discrete labelling of all possible rational solution vectors. And in Summer 1995, we luckily obtained with a commercial finite domain solver the very first valued outranking kernel from a didactical outranking digraph of order 8, well known in the multiple-criteria decision aiding community. The computation took several seconds on a CRAY 6412 superserver with 12 processors operating in a nowadays ridiculous CPU speed of 90 Mhz. The labelled solution vectors, obtained in the sequel for any outranking digraphs with a single initial kernel, were structured in a way that suggested the converging stages of the \Neumann fixpoint algorithm and so gave the initial idea for eventually computing all prekernels of a bipolar-valued outranking digraph \citep*{BIS-1996,BIS-1997,BIS-2004d}. 
 
-In our present Python3.9 implementation, such a tiny problem is solved in less than a thousandth of a second on a common laptop. And this remains practically the same for any relevant example of outranking digraph observed in a real decision aid problem. Several times we wrote in our personal journal that there is certainly now no more potential for any substantial improvement of this computational efficiency; Only to discover, shortly later, that following a new theoretical idea or choosing a more efficient implementation –-using for instance the amazing instrument of iterator generators in Python–-, execution times could well be divided by 20.
+In our present Python3.9 implementation, such a tiny problem is solved in less than a thousandth of a second on a common laptop. And this remains practically the same for any relevant example of outranking digraph observed in a real decision-aiding problem. Several times we wrote in our personal journal that there is certainly now no more potential for any substantial improvement of this computational efficiency; Only to discover, shortly later, that following a new theoretical idea or choosing a more efficient implementation –-using for instance the amazing instrument of iterator generators in Python–-, execution times could well be divided by 20.
 
 This nowadays available computational efficiency confers the bipolar-valued kernel concept a methodological premium for solving specific decision problems on the basis of the bipolar-valued outranking digraph (see Chap.~\ref{sec:4} and Chap.~\ref{sec:12}). But it also opens new opportunities for verifying and implementing kernel extraction algorithms for more graph theoretical purposes. New results, like enumerating the non isomorphic maximal independent sets --the kernels-- of known difficult graph instances like the $n$-cycle, could be obtained (see Sec.~\ref{sec:21.7} and \citealp*{ISO-2008}).
 
