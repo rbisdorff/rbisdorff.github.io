@@ -273,6 +273,12 @@ To compute the most determined spanning tree or forest, we can use the \texttt{B
 \end{lstlisting}
 
 The random graph \texttt{g} is connected and, hence, admits a single spanning tree of maximum mean determination = $(0.47 + 0.91 + 0.90 + 0.34)/4 = 0.655$ (see Lines 9, 6 and 10 in List.~\vref{list:22.8} and Fig.~\vref{fig:22.7}).
+\begin{figure}[ht]
+\sidecaption[t]
+\includegraphics[width=7cm]{Figures/22-7-bestDeterminedSpanningTree.pdf}
+\caption{Best determined spanning tree} 
+\label{fig:22.7}       % Give a unique label
+\end{figure}
 \begin{lstlisting}
 >>> mt.exportGraphViz(\
 ...      fileName='bestDeterminedspanningTree',\
@@ -283,12 +289,6 @@ The random graph \texttt{g} is connected and, hence, admits a single spanning tr
    neato -Tpng bestDeterminedSpanningTree.dot\
          -o bestDeterminedSpanningTree.png
 \end{lstlisting}
-\begin{figure}[ht]
-\sidecaption[t]
-\includegraphics[width=7cm]{Figures/22-7-bestDeterminedSpanningTree.pdf}
-\caption{Best determined spanning tree} 
-\label{fig:22.7}       % Give a unique label
-\end{figure}
 
 One may easily verify that all other potential spanning trees, including instead the edges \{\texttt{v3}, \texttt{v5}\} and/or \{\texttt{v4}, \texttt{v5}\}, will show a lower average determination.
 
