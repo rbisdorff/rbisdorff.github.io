@@ -472,7 +472,7 @@ In the resulting linear ranking (see Fig.~\vref{fig:17.9}), alternative \texttt{
 \section{Tractability of kernel computation}
 \label{sec:17.5}
 
-Let us give some hints on the \emph{tractability} of prekernel computations. Detecting all prekernels in a digraph is a famously NP-hard computational problem. Checking external stability conditions for an independent choice is equivalent to checking its maximality and may be done in the linear complexity of the order of the digraph. However, checking all independent choices contained in a digraph may get hard already for tiny sparse digraphs of order $n > 20$ (see \citealp{BIS-2006b}). Indeed, the worst case is given by an empty or indeterminate digraph where the set of all potential independent choices to check is in fact the power set of the vertices.
+Let us give some hints on the \emph{tractability} of prekernel computations. Detecting all prekernels in a digraph is a computationally difficult problem. Checking external stability conditions for an independent choice is equivalent to checking its maximality and may be done in the linear complexity of the order of the digraph. However, checking all independent choices contained in a digraph may get hard already for tiny sparse digraphs of order $n > 20$ (see \citealp{BIS-2006b}). Indeed, the worst case is given by an empty or indeterminate digraph where the set of all potential independent choices to check is in fact the power set of the vertices.
 \begin{lstlisting}
 >>> from digraphs import EmptyDigraph
 >>> e = EmptyDigraph(order=20)
@@ -507,7 +507,7 @@ Now, there exist more efficient specialised algorithms for directly enumerating 
   iteration history:  1
 \end{lstlisting}
 
-For more or less dense strict outranking digraphs of modest order, as facing usually in MCDA applications, enumerating all independent choices remains however in most cases tractable, especially by using a very efficient Python generator with the \texttt{independentChoices()} method shown in Listing~\vref{list:17.16}\index{independentChoices@\texttt{independentChoices}()}.
+For more or less dense strict outranking digraphs of modest order, as facing usually in MCDA applications, enumerating all independent choices remains however in most cases tractable, especially by using a very efficient iterator generator with the \texttt{independentChoices()} method shown in Listing~\vref{list:17.16}\index{independentChoices@\texttt{independentChoices}()}.
 \begin{lstlisting}[caption={Generating all independent choices in a digraph},label=list:17.16]
 def independentChoices(self,U):
     """
@@ -604,25 +604,27 @@ T^2(Y) \; := \; -\big( -(Y \circ R) \circ R) \; = \; Y\;,
 \end{equation}
 will admit a stable \emph{high} and a stable \emph{low} fixpoint solution that converge both to $Y_k$ \citep{SCH-1985}.
 
-Inspired by the crisp double fixpoint equation~\vref{eq:17.5}, we observed that for a given bipolar-valued digraph $G(X,R)$, each one of its dominant or absorbent prekernels $K_i$ in $X$ determines an induced partial digraph $G(X,R/K_i)$ which is acyclic and admits $K_i$ as unique prekernel \citep{BIS-2006b}.
+Inspired by the crisp double fixpoint equation~\vref{eq:17.5}, we observed that for a given bipolar-valued digraph $G(X,R)$, each one of its dominant or absorbent prekernels $K_i$ in $X$ determines an induced partial digraph $G(X,R/K_i)$ which is acyclic and admits $K_i$ as unique prekernel \citep{BIS-1997}.
 
 Following the \emph{von Neumann} fixpoint algorithm, a similar bipolar-valued extended double fixpoint algorithm, applied to $G(X,R/K_i)$, allows us to compute the associated bipolar-valued kernel characteristic vectors $Y_i$ in polynomial complexity.
 
 \begin{algorithm}[H]
+  {\footnotesize
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued digraph $G(X,R)$,
  \item [] \emph{out} : set $\{Y_1, Y_2, .. \}$ of bipolar-valued kernel membership characteristic vectors.
 \end{itemize}
 \begin{enumerate}
-\item Enumerate all initial and terminal prekernels $K_1$, $K_2$, ... in the given bipolar-valued digraph (see List.~\vref{list:17.1});
+\item Enumerate all initial and terminal prekernels $K_1$, $K_2$, ... in the given bipolar-valued digraph (see List.~\vref{list:17.17});
 \item For each crisp initial kernel $K_i$:
   \begin{enumerate}
   \item Construct a partially determined subgraph $G(X,R/K_i)$ supporting exactly this unique initial kernel $K_i$;
-  \item Use the double fixpoint equation $T^2$ (Eq.~\vref{eq:17.5}) with the partially determined adjacency matrix $R/K_i$ for computing a stable low and a stable high fixpoint;
-   \item Determine the bipolar-valued $K_i$-membership characteristic vector $Y_i$ with an epistemic disjunction of the previous low and high fixpoints;
+  \item Use the double fixpoint equation $T^2$ (Eq.~\ref{eq:17.5}) with the partially determined adjacency matrix $R/K_i$ for computing a stable low and a stable high fixpoint;
+   \item \label{step:2.c} Determine the bipolar-valued $K_i$-membership characteristic vector $Y_i$ with an epistemic disjunction of the previous low and high fixpoints;
   \end{enumerate}
 \item Repeat step (2) for each terminal kernel $K_j$ by using the double fixpoint equation $T^2$ with the transpose of the adjacency matrix $R/K_j$.
 \end{enumerate}
+}
 \caption{Computing bipolar-valued kernel characteristic vectors}
 \label{alg:17.1}
 \end{algorithm}
@@ -756,7 +758,7 @@ A unique stable bipolar-valued high and low fixpoint is attained at the third it
 
 When we reconsider the graphviz drawing of this outranking digraph in Figure~\vref{fig:17.12}, it becomes obvious here why alternative \texttt{a1} is \emph{neither included nor excluded} from the initial prekernel. Same observation is applicable to alternative \texttt{a3} that can \emph{neither be included nor excluded} from the terminal prekernel. it may even happen, in case of more indeterminate outranking situations, that no alternative  is positively included or excluded from a weakly independent prekernel; the corresponding bipolar-valued membership characteristic vector being completely indeterminate.
 
-To illustrate finally why sometimes it is necessary to operate an epistemic disjunctive fusion of unequal stable low and high membership characteristics vectors (see Step 2.c.), let us consider, for instance, the following crisp \texttt{7}-cycle graph.
+To illustrate finally why sometimes it is necessary to operate an epistemic disjunctive fusion of unequal stable low and high membership characteristics vectors (see Alg.~\vref{alg:17.1}, Step~\ref{step:2.c}), let us consider, for instance, the following crisp \texttt{7}-cycle graph.
 \begin{lstlisting}
 >>> from digraphs import CirculantDigraph
 >>> c7 = CirculantDigraph(order=7,circulants=[-1,1])
