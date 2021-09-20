@@ -59,12 +59,12 @@
 \contentsline {lstlisting}{\numberline {7.13}Ranking by iterating choosing the \emph {first} and \emph {last} remaining candidates}{104}{lstlisting.7.13}%
 \contentsline {lstlisting}{\numberline {8.1}Random bipolar-valued strict outranking relation characteristics}{107}{lstlisting.8.1}%
 \contentsline {lstlisting}{\numberline {8.2}Median cut polarised strict outranking relation characteristics}{108}{lstlisting.8.2}%
-\contentsline {lstlisting}{\numberline {8.3}Computing a {\sc Copeland}\xspace Ranking}{110}{lstlisting.8.3}%
+\contentsline {lstlisting}{\numberline {8.3}Computing a {\sc Copeland}\xspace Ranking}{111}{lstlisting.8.3}%
 \contentsline {lstlisting}{\numberline {8.4}Checking the ordinal quality of the {\sc Copeland}\xspace ranking}{111}{lstlisting.8.4}%
 \contentsline {lstlisting}{\numberline {8.5}Computing a weak {\sc Copeland}\xspace ranking}{111}{lstlisting.8.5}%
 \contentsline {lstlisting}{\numberline {8.6}Computing a {\sc NetFlows}\xspace ranking}{113}{lstlisting.8.6}%
-\contentsline {lstlisting}{\numberline {8.7}Checking the quality of the {\sc NetFlows}\xspace Ranking}{113}{lstlisting.8.7}%
-\contentsline {lstlisting}{\numberline {8.8}Computing a {\sc Kemeny}\xspace ranking}{114}{lstlisting.8.8}%
+\contentsline {lstlisting}{\numberline {8.7}Checking the quality of the {\sc NetFlows}\xspace Ranking}{114}{lstlisting.8.7}%
+\contentsline {lstlisting}{\numberline {8.8}Computing a {\sc Kemeny}\xspace ranking}{115}{lstlisting.8.8}%
 \contentsline {lstlisting}{\numberline {8.9}Optimal {\sc Kemeny}\xspace rankings}{115}{lstlisting.8.9}%
 \contentsline {lstlisting}{\numberline {8.10}Computing the epistemic disjunction of all optimal {\sc Kemeny}\xspace rankings}{115}{lstlisting.8.10}%
 \contentsline {lstlisting}{\numberline {8.11}Computing the consensus quality of a ranking}{115}{lstlisting.8.11}%
@@ -72,7 +72,7 @@
 \contentsline {lstlisting}{\numberline {8.13}Computing the epistemic disjunction of optimal {\sc Slater}\xspace rankings}{118}{lstlisting.8.13}%
 \contentsline {lstlisting}{\numberline {8.14}Computing a {\sc Kohler}\xspace ranking}{118}{lstlisting.8.14}%
 \contentsline {lstlisting}{\numberline {8.15}Ranking-by-choosing with iterated maximal {\sc NetFlows}\xspace scores}{120}{lstlisting.8.15}%
-\contentsline {lstlisting}{\numberline {8.16}Computing a {\sc RankedPairs}\xspace ranking}{122}{lstlisting.8.16}%
+\contentsline {lstlisting}{\numberline {8.16}Computing a {\sc RankedPairs}\xspace ranking}{121}{lstlisting.8.16}%
 \contentsline {lstlisting}{\numberline {9.1}Computing a quintiles sorting result}{127}{lstlisting.9.1}%
 \contentsline {lstlisting}{\numberline {9.2}Bipolar-valued sorting characteristics (extract)}{128}{lstlisting.9.2}%
 \contentsline {lstlisting}{\numberline {9.3}Weakly ranking the quintiles sorting result}{129}{lstlisting.9.3}%
