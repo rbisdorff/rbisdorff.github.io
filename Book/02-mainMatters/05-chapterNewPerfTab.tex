@@ -1,15 +1,15 @@
-\chapter{How to create a new performance tableau instance}
+\chapter{How to create a new multiple-criteria performance tableau}
 \label{sec:5}
 
-\abstract*{ The chapter illustrates a way of creating a new \emph{PerformanceTableau} instance by editing a given template with 5 decision alternatives, 3 decision objectives and 6 performance criteria. We discuss in detail editing the decision alternatives, the decision objectives, the family of performance criteria, and finally, the evaluations of the decision alternatives on the performance criteria.}
+\abstract*{ The chapter illustrates a way of creating a new \texttt{PerformanceTableau} instance by editing a given template with 5 decision alternatives, 3 decision objectives and 6 performance criteria. We discuss in detail editing the decision alternatives, the decision objectives, the family of performance criteria, and finally, the evaluations of the decision alternatives on the performance criteria.}
 
-\abstract{ The chapter illustrates a way of creating a new \emph{PerformanceTableau} instance by editing a given template with 5 decision alternatives, 3 decision objectives and 6 performance criteria. We discuss in detail editing the decision alternatives, the decision objectives, the family of performance criteria, and finally, the evaluations of the decision alternatives on the performance criteria.}
+\abstract{ The chapter illustrates a way of creating a new \texttt{PerformanceTableau} instance by editing a given template with 5 decision alternatives, 3 decision objectives and 6 performance criteria. We discuss in detail editing the decision alternatives, the decision objectives, the family of performance criteria, and finally, the evaluations of the decision alternatives on the performance criteria.}
 
 
 \section{Editing a template file}
 \label{sec:5.1}
 
-For easing the creation of a new performance tableau instance, we provide the following \texttt{perfTab\_Template.py} file in the \texttt{examples} directory of the \Digraph resources.
+For easing the editing of a new multiple-criteria performance tableau, we provide the following \texttt{perfTab\_Template.py} file in the \texttt{examples} directory of the \Digraph resources.
 
 \begin{lstlisting}[caption={\texttt{PerformanceTableau} object template},label=list:5.1,basicstyle=\ttfamily\scriptsize]
    ###############################################
@@ -18,17 +18,17 @@ For easing the creation of a new performance tableau instance, we provide the fo
    # (C) R. Bisdorff Mar 2021
    # Digraph3/examples/perfTab_Template.py
    ###############################################
-   from decimal import Decimal
-   from collections import OrderedDict
+   from decimal import Decimal               §\label{line:5.1.7}§
+   from collections import OrderedDict       §\label{line:5.1.8}§
    #####
    # edit the decision actions
    # avoid special characters, like '_', '/' or ':',
    # in action identifiers and short names
    actions = OrderedDict([
     ('a1', {
-     'shortName': 'action1',
-     'name': 'decision alternative a1',
-     'comment': 'some specific features of this alternative',
+     'shortName': 'action1',                        §\label{line:5.1.15}§
+     'name': 'decision alternative a1',             
+     'comment': 'some specific features of this alternative', §\label{line:5.1.17}§
       }),
      ...
      ...
@@ -38,13 +38,13 @@ For easing the creation of a new performance tableau instance, we provide the fo
    # adjust the list of performance criteria
    # and the total weight (sum of the criteria weights)
    # per objective
-   objectives = OrderedDict([
+   objectives = OrderedDict([         §\label{line:5.1.27}§
     ('obj1', {
      'name': 'decision objective obj1',
      'comment': "some specific features of this objective",
      'criteria': ['g1', 'g2'],
      'weight': Decimal('6'),
-     }),
+     }),  §\label{line:5.1.32}§
      ...
      ...
     ])
@@ -106,14 +106,14 @@ For easing the creation of a new performance tableau instance, we provide the fo
    ####################
 \end{lstlisting}
 
-The template file, shown in Listing~\vref{list:5.1}, contains first the instructions to import the required standard Python \texttt{Decimal} and \texttt{OrderedDict} classes (see Lines 7-8). Four main sections are following: the potential decision \emph{actions}, the decision \emph{objectives}, the performance \emph{criteria}, and finally the performance \emph{evaluation}.  
+The template file, shown in Listing~\vref{list:5.1}, contains first the instructions to import the required standard Python \texttt{Decimal} and \texttt{OrderedDict} classes (see Lines~\ref{line:5.1.7}-\ref{line:5.1.8}). Four main sections are following: the potential decision \emph{actions}, the decision \emph{objectives}, the performance \emph{criteria}, and finally the performance \emph{evaluations}.  
 
 \section{Editing the decision alternatives}
 \label{sec:5.2}
 
 Decision alternatives are stored in attribute \texttt{actions} under the \texttt{OrderedDict} format. The \texttt{OrderedDict} object keeps this initial order when iterating over the decision alternatives \footnote{See the \href{https://docs.python.org/3/library/collections.html}{\texttt{OrderedDict} description in the Python documentation \citep{python}}.}.
 
-Required attributes of each decision alternative, besides the object identifier\footnote{Mind that \emph{graphviz} drawings require node identifier strings without any special characters like `\_` or `/`.},  are: \texttt{shortName}, \texttt{name} and \texttt{comment} (see Lines 15-17 in List.~\vref{list:5.1}). The \texttt{shortName} attribute is essentially used when showing the performance tableau or the performance heatmap in a browser view.
+Required attributes of each decision alternative, besides the object identifier\footnote{Mind that \emph{graphviz} drawings require node identifier strings without any special characters like `\_` or `/`.},  are: \texttt{shortName}, \texttt{name} and \texttt{comment} (see Lines~\ref{line:5.1.15}-\ref{line:5.1.17} in List.~\vref{list:5.1}). The \texttt{shortName} attribute is essentially used when showing the performance tableau or the performance heatmap in a browser view.
 
 The random performance tableau models, introduced in Chapter~\ref{sec:6}, use the \texttt{actions} attribute for storing special features of the decision alternatives. The \emph{Cost-Benefit} model, for instance, uses a \texttt{type} attribute for distinguishing between \emph{advantageous}, \emph{neutral} and \emph{cheap} alternatives (see Sec.~\ref{sec:6.3}). The \emph{3-Objectives} model keeps a detailed record of the performance profile per decision objective and the corresponding random generators per performance criteria as shown in Listing~\vref{list:5.2}.
 \begin{lstlisting}[caption={Example of decision alternative description},label=list:5.2]
@@ -121,7 +121,7 @@ The random performance tableau models, introduced in Chapter~\ref{sec:6}, use th
 ...           Random3ObjectivesPerformanceTableau
 >>> t = Random3ObjectivesPerformanceTableau()
 >>> t.actions
-    OrderedDict([
+  OrderedDict([
      ('p01', {'shortName': 'p01',
               'name': 'action p01 Eco~ Soc- Env+',
               'comment': 'random public policy',
@@ -147,7 +147,7 @@ The second section of the template file concerns the decision \emph{objectives}.
 \section{Editing the decision objectives}
 \label{sec:5.3}
 
-The minimal required attributes of the ordered decision \emph{objectives} dictionary, besides the individual objective identifiers, are \texttt{name}, \texttt{comment}, \texttt{criteria}: the list of significant performance criteria, and \texttt{weight}: the importance of the decision objective. The latter attribute contains the sum of the \emph{significance} weights of the objective's criteria list (see Lines 27-33 in List.~\vref{list:5.1}). 
+The minimal required attributes of the ordered decision \emph{objectives} dictionary, besides the individual objective identifiers, are \texttt{name}, \texttt{comment}, \texttt{criteria}: the list of significant performance criteria, and \texttt{weight}: the importance of the decision objective. The latter attribute contains the sum of the \emph{significance} weights of the objective's criteria list (see Lines~\ref{line:5.1.27}-\ref{line:5.1.33} in List.~\vref{list:5.1}). 
 
 The \texttt{objectives} attribute is methodologically useful for specifying the performance criteria significance in building decision recommendations. Mostly, we assume indeed that decision objectives are all equally important and the performance criteria are equi-significant per objective. This is, for instance, the default setting in the random \emph{3-Objectives} performance tableau model.
 \begin{lstlisting}[caption={Example of decision objectives' description},label=list:5.3]
@@ -158,22 +158,22 @@ The \texttt{objectives} attribute is methodologically useful for specifying the 
   {'name': 'Economical aspect',
    'comment': 'Random3ObjectivesPerformanceTableau generated',
    'criteria': ['ec01', 'ec06', 'ec09'],
-   'weight': Decimal('48')}),
+   'weight': Decimal('48')}), §\label{line:5.3.8}§
   ('Soc',
    {'name': 'Societal aspect',
     'comment': 'Random3ObjectivesPerformanceTableau generated',
     'criteria': ['so02', 'so12'],
-    'weight': Decimal('48')}),
+    'weight': Decimal('48')}), §\label{line:5.3.13}§
   ('Env',
    {'name': 'Environmental aspect',
     'comment': 'Random3ObjectivesPerformanceTableau generated',
     'criteria': ['en03', 'en04', 'en05', 'en07',
                  'en08', 'en10', 'en11', 'en13'],
-    'weight': Decimal('48')})
+    'weight': Decimal('48')}) §\label{line:5.3.19}§
  ])
 \end{lstlisting}
 
-The importance weight sums up to 48 for each one of the three example decision objectives shown in Listing~\vref{list:5.3} so that the significance weight of each one of the 3 economic criteria is set to 16, of both societal criteria is set to 24, and of each one of the 6 environmental criteria is set to 8 (see Lines 8, 13 and 19).
+The importance weight sums up to 48 for each one of the three example decision objectives shown in Listing~\vref{list:5.3} so that the significance weight of each one of the 3 economic criteria is set to 16, of both societal criteria is set to 24, and of each one of the 6 environmental criteria is set to 8 (see Lines~\ref{line:5.3.8}, \ref{line:5.3.13} and \ref{line:5.3.19}).
 
 Mind that the \texttt{objectives} attribute is always present in a \texttt{PerformanceTab\-leau} object instance, even when empty. In this case, we consider that each performance criterion canonically represents its own decision objective. The criterion significance weight equals in this case the corresponding decision objective's importance weight.
 
@@ -193,9 +193,9 @@ In order to assess how well each potential decision alternative is satisfying a 
      'weight': Decimal('3'),
      'scale': (Decimal('0.0'), Decimal('100.0'),
      'preferenceDirection': 'max',
-     'thresholds': {'ind':  (Decimal('2.50'), Decimal('0.0')),
+     'thresholds': {'ind':  (Decimal('2.50'), Decimal('0.0')), §\label{line:5.4.10}§
 		    'pref': (Decimal('5.00'), Decimal('0.0')),
-		    'veto': (Decimal('60.00'), Decimal('0.0'))
+		    'veto': (Decimal('60.00'), Decimal('0.0')) §\label{line:5.4.12}§
                    },
      }),
     ...
@@ -208,7 +208,7 @@ In our bipolar-valued outranking approach, all performance criteria implement \e
   \item \emph{Non redundancy}: Each performance criterion is only \emph{significant} for a \emph{single} decision objective.
 \end{enumerate}
 
-For taking into account any, usually \emph{unavoidable}, \emph{imprecision} of the performance evaluation procedures, we may specify three performance \emph{discrimination thresholds}: an \emph{indifference} (\texttt{'ind'}), a \emph{preference} (\texttt{'pref'}) and a \emph{considerable performance difference} (\texttt{'veto'}) threshold (see List.~\vref{list:5.4} Lines 10-12). The left decimal number of a threshold description tuple indicates a \emph{constant part}, whereas the right decimal number indicates a \emph{proportional} part.
+For taking into account any, usually \emph{unavoidable}, \emph{imprecision} of the performance evaluation procedures, we may specify three performance \emph{discrimination thresholds}: an \emph{indifference} (\texttt{ind}), a \emph{preference} (\texttt{pref}) and a \emph{considerable performance difference} (\texttt{veto}) threshold (see List.~\vref{list:5.4} Lines~\ref{line:5.4.10}-\ref{line:5.4.12}). The left decimal number of a threshold description tuple indicates a \emph{constant part}, whereas the right decimal number indicates a \emph{proportional} part.
 
 On the template performance criterion \texttt{g1}, shown in Listing~\vref{list:5.4}, we observe for instance an evaluation scale from $0.0$ to $100.0$ with a constant \emph{indifference} threshold of $2.5$, a constant \emph{preference} threshold of $5.0$, and a constant \emph{considerable performance difference} threshold of $60.0$. The latter threshold  will trigger, the case given, a \emph{polarisation} of the outranking statement \citep{BIS-2013}.
 
@@ -226,7 +226,7 @@ In a random \emph{Cost-Benefit} performance tableau model we may obtain by defau
    ...
 >>> tcb.criteria
  OrderedDict([
-  ('c1', {'preferenceDirection': 'min',
+  ('c1', {'preferenceDirection': 'min', §\label{line:5.5.13}§
           'scaleType': 'cardinal',
 	  'objective': 'C',
 	  'shortName': 'c1',
@@ -246,7 +246,7 @@ In a random \emph{Cost-Benefit} performance tableau model we may obtain by defau
  ])
 \end{lstlisting}
 
-Criterion \texttt{c1} appears here to be a cardinal criterion to be minimised and significant for the \emph{Costs} (\texttt{C}) decision objective (see Line 13 in List.~\vref{list:5.5}). The \texttt{showCriteria()} prints out the corresponding performance discrimination thresholds.
+Criterion \texttt{c1} appears here to be a cardinal criterion to be minimised and significant for the \emph{Costs} (\texttt{C}) decision objective (see Line~\ref{line:5.5.13} in List.~\vref{list:5.5}). The \texttt{showCriteria()} prints out the corresponding performance discrimination thresholds.
 \begin{lstlisting}
 >>> tcb.showCriteria(IntegerWeights=True)
  *----  criteria -----*
@@ -254,9 +254,9 @@ Criterion \texttt{c1} appears here to be a cardinal criterion to be minimised an
     Preference direction: min
     Scale = (0.0, 100.0)
     Weight = 6 
-    Threshold ind : 1.49 + 0.00x ; percentile: 5.13
-    Threshold pref : 3.70 + 0.00x ; percentile: 10.26
-    Threshold veto : 67.71 + 0.00x ; percentile: 96.15
+    Threshold ind : 1.49 + 0.00x ; percentile: 5.13    
+    Threshold pref : 3.70 + 0.00x ; percentile: 10.26 
+    Threshold veto : 67.71 + 0.00x ; percentile: 96.15 
     ...
     ...
 \end{lstlisting}
@@ -268,10 +268,10 @@ After the performance criteria descriptions, we are ready for recording the actu
 \section{Editing the performance evaluations}
 \label{sec:5.5}
 
-The individual evaluations of each decision alternative on each decision criterion are recorded in a double \emph{criterion} $\times$ \emph{action} dictionary called \texttt{evaluation} (see List.~\ref{list:5.5}). As we may encounter cases of missing data, we previously define a \emph{missing data} symbol \texttt{NA} which is set to a value disjoint from all the measurement scales, by default \texttt{Decimal('-999')} (see Line 2 in List.~\vref{list:5.6}).
+The individual evaluations of each decision alternative on each decision criterion are recorded in a double \emph{criterion} $\times$ \emph{action} dictionary called \texttt{evaluation} (see List.~\ref{list:5.5}). As we may encounter cases of missing data, we previously define a \emph{missing data} symbol \texttt{NA} which is set to a value disjoint from all the measurement scales, by default \texttt{Decimal('-999')} (see Line~\ref{line:5.6.2} in List.~\vref{list:5.6}).
 \begin{lstlisting}[caption={Editing performance evaluations},label=list:5.6]
 #----------
-NA = Decimal('-999')
+NA = Decimal('-999')  §\label{line:5.6.2}§
 #----------
 evaluation = {
   'g1': {
@@ -285,7 +285,7 @@ evaluation = {
    ...
   # g3 has preferenceDirection = 'min'
   'g3': {
-     'a1':Decimal("-52.2"), # negative grades
+     'a1':Decimal("-52.2"), # negative grades §\label{line:5.6.16}§
      'a2':NA,
      'a3':Decimal("-47.3"),
      'a4':Decimal('-35.7'),
@@ -296,7 +296,7 @@ evaluation = {
 }
 \end{lstlisting}
 
-Notice in Listing~\vref{list:5.6} that on a criterion with \texttt{preference\-Direction = 'min'} all performance evaluations are recorded as \emph{negative} values (Lines 16 and following).
+Notice in Listing~\vref{list:5.6} that on a criterion with \texttt{preference\-Direction = 'min'} all performance evaluations are recorded as \emph{negative} values (Lines~\ref{line:5.6.16} and following).
 
 We can now inspect below the eventually edited complete template performance tableau \texttt{perfTab\_Template.py} with the \texttt{showPerformanceTableau()} method.\index{showPerformanceTableau@\texttt{showPerformanceTableau()}}
 \begin{lstlisting}
@@ -347,13 +347,13 @@ In Listing~\vref{list:5.7}, the \texttt{showRelationTable()} method\index{showRe
    r   |  'a1'   'a2'   'a3'   'a4'   'a5'   
   -----|-----------------------------------
   'a1' | +1.00  -0.44  -0.22  -0.11  +0.06  
-  'a2' | +0.44  +1.00  +0.33  +1.00  +0.28  
-  'a3' | +0.67  -0.33  +1.00  +0.00  +0.17  
-  'a4' | +0.11  -1.00  +0.00  +1.00  +0.06  
-  'a5' | -0.06  -0.06  -0.17  -0.06  +1.00
+  'a2' | +0.44  +1.00  +0.33  +1.00  +0.28  §\label{line:5.7.6}§
+  'a3' | +0.67  -0.33  +1.00  +0.00  +0.17  §\label{line:5.7.7}§
+  'a4' | +0.11  -1.00  +0.00  +1.00  +0.06  §\label{line:5.7.8}§
+  'a5' | -0.06  -0.06  -0.17  -0.06  +1.00  §\label{line:5.7.9}§
 \end{lstlisting}
 
-One may notice in this outranking relation table above that decision alternative \texttt{a2} positively \emph{outranks} all the other four alternatives  (Line 6). Similarly, alternative \texttt{a5} is positively \emph{outranked} by all the other alternatives (see Line 9). We can orient this way the \emph{graphviz} drawing of the template outranking digraph. 
+One may notice in this outranking relation table above that decision alternative \texttt{a2} positively \emph{outranks} all the other four alternatives  (Line~\ref{line:5.7.6}). Similarly, alternative \texttt{a5} is positively \emph{outranked} by all the other alternatives (see Line~\ref{line:5.7.9}). We can orient this way the \emph{graphviz} drawing of the template outranking digraph. 
 \begin{lstlisting}
 >>> bod.exportGraphViz(fileName= 'template',\
 ...                  firstChoice =['a2'],\
@@ -369,7 +369,7 @@ One may notice in this outranking relation table above that decision alternative
 \label{fig:5.1}       % Give a unique label
 \end{figure}
 
-In Figure~\vref{fig:5.1}, alternatives \emph{action3} (\texttt{a3} ) and \emph{action4} (\texttt{a4}) appear actually \emph{incomparable}. In Listing~\vref{list:5.7}, their pairwise outranking characteristics show indeed the \emph{indeterminate} value $0.00$ (Lines 7-8).
+In Figure~\vref{fig:5.1}, alternatives \emph{action3} (\texttt{a3} ) and \emph{action4} (\texttt{a4}) appear actually \emph{incomparable}. In Listing~\vref{list:5.7}, their pairwise outranking characteristics show indeed the \emph{indeterminate} value $0.00$ (Lines~\ref{line:5.7.7}-\ref{line:5.7.8}).
 
 Checking their pairwise comparison may be done with the \texttt{showPairwiseCompari\-son()} method\index{showPairwiseComparison@\texttt{showPairwiseComparison()}}:
 \begin{lstlisting}
@@ -421,7 +421,8 @@ A slightly \emph{fairer} ranking result may be obtained in Figure~\vref{fig:5.3}
 \caption{\NetFlows ranked heatmap of the template performance tableau}
 \label{fig:5.3}       % Give a unique label
 \end{figure}
-
+%\clearpage
+\vspace{\baselineskip}
 It might be opportune to furthermore study the robustness of the apparent outranking situations when assuming \emph{uncertain} or solely \emph{ordinal} criteria significance weights (see Chap.~\ref{sec:18} and Chap.~\ref{sec:19}). 
  
 %%%%%%% The chapter bibliography

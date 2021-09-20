@@ -26,8 +26,8 @@
 \contentsline {lstlisting}{\numberline {4.1}Inspecting the \texttt {officeChoice} performance tableau.}{51}{lstlisting.4.1}%
 \contentsline {lstlisting}{\numberline {4.2}Inspecting the performance criteria.}{52}{lstlisting.4.2}%
 \contentsline {lstlisting}{\numberline {4.3}Computing a bipolar-valued outranking digraph}{54}{lstlisting.4.3}%
-\contentsline {lstlisting}{\numberline {4.4}Computing the best choice recommendation}{57}{lstlisting.4.4}%
-\contentsline {lstlisting}{\numberline {4.5}Inspecting pairwise comparison between alternatives \texttt {G} and \texttt {D}}{58}{lstlisting.4.5}%
+\contentsline {lstlisting}{\numberline {4.4}Computing the best choice recommendation}{56}{lstlisting.4.4}%
+\contentsline {lstlisting}{\numberline {4.5}Inspecting pairwise comparison between alternatives \texttt {G} and \texttt {D}}{57}{lstlisting.4.5}%
 \contentsline {lstlisting}{\numberline {4.6}Inspecting pairwise comparison between alternatives \texttt {C} and \texttt {G}}{58}{lstlisting.4.6}%
 \contentsline {lstlisting}{\numberline {4.7}Ranking-by-choosing the outranking digraph}{59}{lstlisting.4.7}%
 \contentsline {lstlisting}{\numberline {5.1}\texttt {PerformanceTableau} object template}{65}{lstlisting.5.1}%
@@ -150,7 +150,7 @@
 \contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{239}{lstlisting.17.10}%
 \contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{240}{lstlisting.17.11}%
 \contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{242}{lstlisting.17.12}%
-\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{242}{lstlisting.17.13}%
+\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{243}{lstlisting.17.13}%
 \contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{243}{lstlisting.17.14}%
 \contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{246}{lstlisting.17.15}%
 \contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{246}{lstlisting.17.16}%

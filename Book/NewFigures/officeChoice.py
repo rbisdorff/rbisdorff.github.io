@@ -39,12 +39,12 @@ actions = OrderedDict([
 }),
 ])
 objectives = OrderedDict([
-('Cts', {'weight': Decimal('45'), 'criteria': ['C'], 'name': 'Total Costs', 'comment': 'minimize the yearly costs induced by the moving'}), 
+('Cts', {'weight': Decimal('45'), 'criteria': ['Ct'], 'name': 'Total Costs', 'comment': 'minimize the yearly costs induced by the moving'}), 
 ('Tov', {'weight': Decimal('81'), 'criteria': ['Pr', 'St', 'V'], 'name': 'Business Turnover', 'comment': 'maximise the future turnover'}), 
 ('Wrk', {'weight': Decimal('19'), 'criteria': ['Cf', 'P', 'W'], 'name': 'Working Conditions', 'comment': 'maximize the new working conditions'})
 ])
 criteria = OrderedDict([
-('C', {
+('Ct', {
 'comment': 'Annual rent, charges and cleaning',
 'weight': Decimal('45.00'),
 'scale': (Decimal('0.00'), Decimal('50000.00')),
@@ -116,7 +116,7 @@ criteria = OrderedDict([
 }),
 ])
 evaluation = {
-'C': {
+'Ct': {
 'A':Decimal("-35000.00"),
 'B':Decimal("-17800.00"),
 'C':Decimal("-6700.00"),
