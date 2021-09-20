@@ -38,11 +38,11 @@
 \contentsline {lstlisting}{\numberline {5.6}Editing performance evaluations}{71}{lstlisting.5.6}%
 \contentsline {lstlisting}{\numberline {5.7}The template outranking relation}{73}{lstlisting.5.7}%
 \contentsline {lstlisting}{\numberline {6.1}Generating a random performance tableau}{79}{lstlisting.6.1}%
-\contentsline {lstlisting}{\numberline {6.2}Generating a random Cost-Benefit performance tableau}{82}{lstlisting.6.2}%
-\contentsline {lstlisting}{\numberline {6.3}Generating a random 3 Objectives performance tableau}{85}{lstlisting.6.3}%
+\contentsline {lstlisting}{\numberline {6.2}Generating a random Cost-Benefit performance tableau}{81}{lstlisting.6.2}%
+\contentsline {lstlisting}{\numberline {6.3}Generating a random 3 Objectives performance tableau}{84}{lstlisting.6.3}%
 \contentsline {lstlisting}{\numberline {6.4}What is the public policy to recommend as best choice ?}{86}{lstlisting.6.4}%
-\contentsline {lstlisting}{\numberline {6.5}Generating a random academic performance tableau}{89}{lstlisting.6.5}%
-\contentsline {lstlisting}{\numberline {6.6}Student performance summary statistics per course}{90}{lstlisting.6.6}%
+\contentsline {lstlisting}{\numberline {6.5}Generating a random academic performance tableau}{88}{lstlisting.6.5}%
+\contentsline {lstlisting}{\numberline {6.6}Student performance summary statistics per course}{89}{lstlisting.6.6}%
 \contentsline {lstlisting}{\numberline {6.7}Consensus quality of the students's ranking}{90}{lstlisting.6.7}%
 \contentsline {lstlisting}{\numberline {7.1}Example of random linear voting profile}{93}{lstlisting.7.1}%
 \contentsline {lstlisting}{\numberline {7.2}Showing linear voting profiles}{94}{lstlisting.7.2}%
@@ -52,10 +52,11 @@
 \contentsline {lstlisting}{\numberline {7.6}Example of \emph {Majority Margins} digraph}{96}{lstlisting.7.6}%
 \contentsline {lstlisting}{\numberline {7.7}Example of cyclic social preferences}{98}{lstlisting.7.7}%
 \contentsline {lstlisting}{\numberline {7.8}{\sc NetFlows}\xspace ranked heatmap view on a voting profile}{100}{lstlisting.7.8}%
-\contentsline {lstlisting}{\numberline {7.9}Generating a linear voting profile with random polls}{102}{lstlisting.7.9}%
-\contentsline {lstlisting}{\numberline {7.10}The uninominal and {\sc Borda}\xspace election winner}{103}{lstlisting.7.10}%
-\contentsline {lstlisting}{\numberline {7.11}A majority margins digraph constructed from a linear voting profile}{103}{lstlisting.7.11}%
-\contentsline {lstlisting}{\numberline {7.12}Ranking by iterating choosing the \emph {first} and \emph {last} remaining candidates}{104}{lstlisting.7.12}%
+\contentsline {lstlisting}{\numberline {7.9}Rank analysis table with {\sc Borda}\xspace scores}{101}{lstlisting.7.9}%
+\contentsline {lstlisting}{\numberline {7.10}Generating a linear voting profile with random polls}{101}{lstlisting.7.10}%
+\contentsline {lstlisting}{\numberline {7.11}The uninominal and {\sc Borda}\xspace election winner}{102}{lstlisting.7.11}%
+\contentsline {lstlisting}{\numberline {7.12}A majority margins digraph constructed from a linear voting profile}{103}{lstlisting.7.12}%
+\contentsline {lstlisting}{\numberline {7.13}Ranking by iterating choosing the \emph {first} and \emph {last} remaining candidates}{104}{lstlisting.7.13}%
 \contentsline {lstlisting}{\numberline {8.1}Random bipolar-valued strict outranking relation characteristics}{107}{lstlisting.8.1}%
 \contentsline {lstlisting}{\numberline {8.2}Median cut polarised strict outranking relation characteristics}{108}{lstlisting.8.2}%
 \contentsline {lstlisting}{\numberline {8.3}Computing a {\sc Copeland}\xspace Ranking}{110}{lstlisting.8.3}%
@@ -150,7 +151,7 @@
 \contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{239}{lstlisting.17.10}%
 \contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{240}{lstlisting.17.11}%
 \contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{242}{lstlisting.17.12}%
-\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{243}{lstlisting.17.13}%
+\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{242}{lstlisting.17.13}%
 \contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{243}{lstlisting.17.14}%
 \contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{246}{lstlisting.17.15}%
 \contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{246}{lstlisting.17.16}%
