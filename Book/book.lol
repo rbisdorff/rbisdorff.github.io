@@ -150,7 +150,7 @@
 \contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{239}{lstlisting.17.10}%
 \contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{240}{lstlisting.17.11}%
 \contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{242}{lstlisting.17.12}%
-\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{243}{lstlisting.17.13}%
+\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{242}{lstlisting.17.13}%
 \contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{243}{lstlisting.17.14}%
 \contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{246}{lstlisting.17.15}%
 \contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{246}{lstlisting.17.16}%

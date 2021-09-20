@@ -14,9 +14,7 @@
 \section{The hybrid outranking digraph model}
 \label{sec:3.1}
 
-In the \texttt{outrankingDigraphs} module\index{outrankingDigraphs@\texttt{outrankingDigraphs} module}, the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph} class} class provides our standard \emph{outranking digraph} constructor. Such an instance represents a \emph{hybrid} object of both the \texttt{PerformanceTableau} type \emph{and} the \texttt{Outran\-kingDigraph} type \citep{BIS-2021b}.
-
-A given \texttt{BipolarOutrankingDigraph} object contains hence always at least the following attributes:
+In the \texttt{outrankingDigraphs} module\index{outrankingDigraphs@\texttt{outrankingDigraphs} module}, the \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph} class} class provides our standard \emph{outranking digraph} constructor. Such an instance represents a \emph{hybrid} object of both the \texttt{PerformanceTableau} type \emph{and} the \texttt{Outran\-kingDigraph} type \citep{BIS-2021b}. A given \texttt{BipolarOutrankingDigraph} object contains hence always at least the following attributes:
 \begin{enumerate}[topsep=3pt,partopsep=0pt]
 \item \texttt{actions}: an ordered dictionary describing the potential decision actions or alternatives with \texttt{name} and \texttt{comment} attributes,
 \item \texttt{objectives}: a possibly empty ordered dictionary of decision objectives with \texttt{name} and \texttt{comment} attributes, describing the multiple preference dimensions involved in the decision problem, 
@@ -61,9 +59,9 @@ In this example we consider a family of seven \emph{equisignificant} cardinal \e
    g1 'RandomPerformanceTableau() instance'
      Scale = [0.0, 100.0]
      Weight = 1.0
-     Threshold ind : 2.50 + 0.00x ; percentile: 4.76
+     Threshold ind : 2.50 + 0.00x ; percentile: 4.76 §\label{line:3.2.6}§
      Threshold pref : 5.00 + 0.00x ; percentile: 9.52
-     Threshold veto : 80.00 + 0.00x ; percentile: 95.24
+     Threshold veto : 80.00 + 0.00x ; percentile: 95.24 §\label{line:3.2.8}§
    g2 'RandomPerformanceTableau() instance'
      Scale = [0.0, 100.0]
      Weight = 1.0
@@ -80,16 +78,16 @@ In this example we consider a family of seven \emph{equisignificant} cardinal \e
      Threshold veto : 80.00 + 0.00x ; percentile: 100.00
 \end{lstlisting}
 
-On criteria function \texttt{g1} (see Lines 6-8 in List.~\vref{list:3.2}) we observe, for instance, about $5\%$ of \emph{indifference} situations, about $90\%$ of \emph{preference} situations and about $5\%$ of \emph{considerable} performance difference situations.
+On criteria function \texttt{g1} we observe, for instance, about $5\%$ of \emph{indifference} situations, about $90\%$ of \emph{preference} situations and about $5\%$ of \emph{considerable} performance difference situations (see Lines~\ref{line:3.2.6}-\ref{line:3.2.8} in List.~\vref{list:3.2}).
 
-The individual \emph{performance evaluation} of all decision alternative on each criterion are gathered in a \emph{performance table}.\index{showPerformanceTableau@\texttt{showPerformanceTableau()}}
+The individual \emph{performance evaluation} of all decision alternatives on each criterion are gathered in a \emph{performance table}.\index{showPerformanceTableau@\texttt{showPerformanceTableau()}}
 \begin{lstlisting}[caption={Inspecting the performance evaluations},label=list:3.3]
 >>> pt.showPerformanceTableau()
     *----  performance tableau -----*
      criteria |  'a1'  'a2'  'a3'  'a4'  'a5'  'a6'  'a7'   
      ---------|------------------------------------------
       'g1'    |  15.2  44.5  57.9  58.0  24.2  29.1  96.6  
-      'g2'    |  82.3  43.9   NA   35.8  29.1  34.8  62.2  
+      'g2'    |  82.3  43.9   NA   35.8  29.1  34.8  62.2  §\label{line:3.3.6}§
       'g3'    |  44.2  19.1  27.7  41.5  22.4  21.5  56.9  
       'g4'    |  46.4  16.2  21.5  51.2  77.0  39.4  32.1  
       'g5'    |  47.7  14.8  79.7  67.5   NA   90.7  80.2  
@@ -97,7 +95,7 @@ The individual \emph{performance evaluation} of all decision alternative on each
       'g7'    |  82.9  41.7  12.8  21.9  75.7  15.4   6.0  
 \end{lstlisting}
 
-It is noteworthy to mention the three \emph{missing data} (\texttt{NA}) cases: action \texttt{a3} is missing, for instance, an evaluation on criterion \texttt{g2} (see Line 6 in List.~\vref{list:3.3}).
+It is noteworthy to mention the three \emph{missing data} (\texttt{NA}) cases: action \texttt{a3} is missing, for instance, an evaluation on criterion \texttt{g2} (see Line~\ref{line:3.3.6} in List.~\vref{list:3.3}).
     
 \section{The bipolar-valued outranking digraph}
 \label{sec:3.2}
@@ -113,8 +111,8 @@ Given the previous random performance tableau \texttt{pt}, the \texttt{BipolarOu
    Instance name        : rel_randomperftab
    Actions              : 7
    Criteria             : 7
-   Size                 : 20
-   Determinateness (%)  : 63.27
+   Size                 : 20    §\label{line:3.4.10}§
+   Determinateness (%)  : 63.27 §\label{line:3.4.11}§
    Valuation domain     : [-1.00;1.00]
    Attributes           : [
         'name', 'actions', 
@@ -124,7 +122,7 @@ Given the previous random performance tableau \texttt{pt}, the \texttt{BipolarOu
 	]
 \end{lstlisting}
 
-The resulting digraph contains 20 positive (valid) outranking relations. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Lines 10-11 in List.~\vref{list:3.4}).
+The resulting digraph contains 20 positive (valid) outranking relations. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Lines~\ref{line:3.4.10}-\ref{line:3.4.11} in List.~\vref{list:3.4}).
 
 We can inspect the complete $[-1.0,+1.0]$-valued adjacency table with the \texttt{show\-RelationTable()} method().\index{showRelationTable@\texttt{showRelationTable()}}
 \begin{lstlisting}[caption={Inspecting the valued adjacency table.},label=list:3.5]
@@ -132,7 +130,7 @@ We can inspect the complete $[-1.0,+1.0]$-valued adjacency table with the \textt
   * ---- Relation Table -----
    r(x,y)|  'a1'   'a2'   'a3'   'a4'   'a5'   'a6'   'a7'   
    ------|-------------------------------------------------
-    'a1' | +1.00  +0.71  +0.29  +0.29  +0.29  +0.29  +0.00  
+    'a1' | +1.00  +0.71  +0.29  +0.29  +0.29  +0.29  +0.00  §\label{line:3.5.5}§
     'a2' | -0.71  +1.00  -0.29  -0.14  +0.14  +0.29  -0.57  
     'a3' | -0.29  +0.29  +1.00  -0.29  -0.14  +0.00  -0.29  
     'a4' | +0.00  +0.14  +0.57  +1.00  +0.29  +0.57  -0.43  
@@ -145,10 +143,10 @@ We can inspect the complete $[-1.0,+1.0]$-valued adjacency table with the \textt
 The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class constructor computes from the given performance tableau $pt$ the characteristic value $r(x \succsim y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ in a default \emph{valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as \emph{indeterminate} characteristic value. 
 
 The semantics of $r(x \succsim y)$ are the following:
-\begin{definition}[Semantics of the bipolar-valued characteristic function $r$]\label{def:3.1} 
-\begin{itemize}[nosep]
-\item [a.] When $r(x \succsim y) > 0.0$, it is \emph{True} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is ``\emph{at least as well evaluated as}'' alternative $y$ on a weighted majority of criteria {\bf and} there is no considerable negative performance difference observed in disfavour of $x$,
-\item [b.] When $r(x \succsim y) < 0.0$, it is \emph{False} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is {\bf not} ``\emph{at least as well evaluated as} alternative $y$ on a weighted majority of criteria than alternative $y$ {\bf and} there is no considerable positive performance difference observed in favour of $x$,
+\begin{definition}[Semantics of the outranking characteristic function]\label{def:3.1} 
+\begin{itemize}[topsep=3pt]
+\item [a.] When $r(x \succsim y) > 0.0$, it is \emph{True} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is ``\emph{at least as well evaluated as}'' alternative $y$ on a weighted majority of criteria \textbf{and} there is no considerable negative performance difference observed in disfavour of $x$,
+\item [b.] When $r(x \succsim y) < 0.0$, it is \emph{False} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is {\bf only} ``\emph{evaluated at least as well as} alternative $y$ on a weighted minority of criteria \textbf{and} there is no considerable positive performance difference observed in favour of $x$,
 \item [c.] When $r(x \succsim y) = 0.0$, it is {\bf indeterminate} whether $x$ outranks $y$ or not.
 \end{itemize}
 \end{definition}
@@ -156,7 +154,7 @@ The semantics of $r(x \succsim y)$ are the following:
 \section{Pairwise comparisons}
 \label{sec:3.3}
 
-From above given semantics, we notice in line 5 in Listing~\vref{list:3.5} that \texttt{a1} outranks \texttt{a2}: $r(a1 \succsim a2) + 0.71$), but not \texttt{a7}: $r(a1 \succsim a7) = 0.0$). In order to comprehend the characteristic values shown in the outranking relation table, we can inspect with the \texttt{showPairwiseComparison()} method\index{showPairwiseComparison@\texttt{showPairwiseComparison()}} the details of the pairwise multiple-criteria comparison between, for instance, alternatives \texttt{a1} and \texttt{a2}.
+From above given semantics, we notice in line~\ref{line:3.5.5} in Listing~\vref{list:3.5} that \texttt{a1} outranks \texttt{a2}: $r(a1 \succsim a2) + 0.71$), but not \texttt{a7}: $r(a1 \succsim a7) = 0.0$). In order to comprehend the characteristic values shown in the outranking relation table, we can inspect with the \texttt{showPairwiseComparison()} method\index{showPairwiseComparison@\texttt{showPairwiseComparison()}} the details of the pairwise multiple-criteria comparison between, for instance, alternatives \texttt{a1} and \texttt{a2}.
 \begin{lstlisting}[caption={Inspecting a pairwise multiple-criteria comparison},label=list:3.6]
 >>> odg.showPairwiseComparison('a1','a2')
   *------------  pairwise comparison ----*
@@ -183,7 +181,7 @@ Such a polarised situation is however observed when we compare the evaluations o
    Comparing actions : (a1, a7)
    crit. wght. g(a1)  g(a7)   diff  | ind   pref    r()  |  v     veto
    -------------------------------   ------------------   -----------
-    g1   1.00  15.17  96.58  -81.41 | 2.50  5.00   -1.00 | 80.00 -1.00
+    g1   1.00  15.17  96.58  -81.41 | 2.50  5.00   -1.00 | 80.00 -1.00 §\label{line:3.7.6}§
     g2   1.00  82.29  62.22  +20.07 | 2.50  5.00   +1.00 | 
     g3   1.00  44.23  56.90  -12.67 | 2.50  5.00   -1.00 | 
     g4   1.00  46.37  32.06  +14.31 | 2.50  5.00   +1.00 | 
@@ -196,18 +194,18 @@ Such a polarised situation is however observed when we compare the evaluations o
    Comparing actions : (a1, a7)
    crit. wght. g(a7)  g(a1)   diff  | ind   pref    r()  |  v     veto
    -------------------------------   ------------------   -----------
-    g1   1.00  96.58  15.17  +81.41 | 2.50  5.00   +1.00 | 80.00 +1.00
+    g1   1.00  96.58  15.17  +81.41 | 2.50  5.00   +1.00 | 80.00 +1.00 §\label{line:3.7.19}§
     g2   1.00  62.22  82.29  -20.07 | 2.50  5.00   -1.00 | 
     g3   1.00  56.90  44.23  +12.67 | 2.50  5.00   +1.00 | 
     g4   1.00  32.06  46.37  -14.31 | 2.50  5.00   -1.00 | 
     g5   1.00  80.16  47.67  +32.49 | 2.50  5.00   +1.00 | 
     g6   1.00  48.80  69.62  -20.82 | 2.50  5.00   -1.00 | 
-    g7   1.00   6.05  82.88  -76.83 | 2.50  5.00   -1.00 | 
+    g7   1.00   6.05  82.88  -76.83 | 2.50  5.00   -1.00 | §\label{line:3.7.25}§
    ----------------------------------------
-   Valuation in range: -7.00 to +7.00; r(x,y)= -1/7 => 0.0
+   Valuation in range: -7.00 to +7.00; r(x,y)= -1/7 => 0.0 §\label{line:3.7.27}§
 \end{lstlisting}
 
-This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting a ``\emph{at least as well evaluated as}'' situation between alternative \texttt{a1} and alternative \texttt{a7}. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Line 6 in List.~\vref{list:3.7}). Both contradictory facts trigger eventually in Line 14 an \emph{indeterminate} outranking situation. The inverse polarisation effect appears when considering in Lines 19-25 the converse performance differences between alternative \texttt{a7} and alternative \texttt{a1}. The considerable better performing situation on criterion \texttt{g1} makes doubtful the otherwise ``\emph{not at least as well evaluated as}'' situation (see Lines 19 and 27).
+This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting a ``\emph{at least as well evaluated as}'' situation between alternative \texttt{a1} and alternative \texttt{a7}. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Line~\ref{line:3.7.6} in List.~\vref{list:3.7}). Both contradictory facts trigger eventually in Line 14 an \emph{indeterminate} outranking situation. The inverse polarisation effect appears when considering in Lines~\ref{line:3.7.19}-\ref{line:3.7.25} the converse performance differences between alternative \texttt{a7} and alternative \texttt{a1}. The considerable better performing situation on criterion \texttt{g1} makes doubtful the otherwise ``\emph{not at least as well evaluated as}'' situation (see Lines~\ref{line:3.7.19} and \ref{line:3.7.27}).
 
 Notice that the occurrence in a pairwise comparison of conjointly considerable positive and negative performance differences will also trigger an indeterminate outranking situation. When observing at the same time a positive (resp. negative) ``\emph{at least as well evaluated as}'' situation and one or more considerable positive (resp. negative) performance difference, the outranking situation gets validated (resp. invalidated) for certain \citep{BIS-2013}.
 
@@ -237,7 +235,7 @@ Notice in Listing~\vref{list:3.8} that the self comparison characteristics $r(x 
 \section{The strict outranking digraph}
 \label{sec:3.5}
 
-From theory we know that a bipolar-valued outranking digraph is \emph{weakly complete}, i.e. if $r(x \succsim y) < 0.0$ then $r(y \succsim x) \geq 0.0$. From this property follows that a bipolar-valued outranking digraph verifies the \emph{coduality principle}\index{coduality principle}: the \emph{dual}\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.} --strict negation-- of the \emph{converse} --inverse-- of the outranking relation $(x \succsim y)$ corresponds to its asymmetric \emph{strict outranking} part $(x \succnsim y)$  (\citet{BIS-2013,ADT-L7}).
+From theory we know that a bipolar-valued outranking digraph is \emph{weakly complete}, i.e. if $r(x \succsim y) < 0.0$ then $r(y \succsim x) \geqslant 0.0$. From this property follows that a bipolar-valued outranking digraph verifies the \emph{coduality principle}\index{coduality principle}: the \emph{dual}\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.} --strict negation-- of the \emph{converse} --inverse-- of the outranking relation $(x \succsim y)$ corresponds to its asymmetric \emph{strict outranking} part $(x \succnsim y)$  (\citet{BIS-2013,ADT-L7}).
 
 Visualising the \emph{codual} (\emph{strict}) outranking digraph may be done with a graphviz drawing \footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}.\index{graphviz}
 \begin{lstlisting}
@@ -258,7 +256,7 @@ Many more tools for exploiting bipolar-valued outranking digraphs are available 
 %\vspace{1cm}
 
 \vspace{\baselineskip}
-In the next methodological Part, we present and discuss multiple-criteria evaluation models and decision algorithms, like building a best choice recommendation, determining the winner of an election, computing linear rankings or quantile ratings with multiple incommensurable criteria.
+In the next methodological Part III, we present and discuss multiple-criteria evaluation models and decision algorithms, like building a best choice recommendation, determining the winner of an election, computing linear rankings or quantile ratings with multiple incommensurable criteria.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \phantomsection
