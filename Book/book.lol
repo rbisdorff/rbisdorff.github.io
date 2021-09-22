@@ -87,7 +87,7 @@
 \contentsline {lstlisting}{\numberline {10.3}Generating 100 new random decision alternatives of the same model}{138}{lstlisting.10.3}%
 \contentsline {lstlisting}{\numberline {10.4}Computing the absolute rating of 10 new decision alternatives}{139}{lstlisting.10.4}%
 \contentsline {lstlisting}{\numberline {10.5}Performance tableau of the new incoming decision alternatives}{140}{lstlisting.10.5}%
-\contentsline {lstlisting}{\numberline {10.6}Showing the limiting profiles of the rating quantiles}{141}{lstlisting.10.6}%
+\contentsline {lstlisting}{\numberline {10.6}Showing the limiting profiles of the rating quantiles}{140}{lstlisting.10.6}%
 \contentsline {lstlisting}{\numberline {10.7}{\sc Copeland}\xspace ranking of new alternatives and historical quartile limits}{141}{lstlisting.10.7}%
 \contentsline {lstlisting}{\numberline {10.8}Absolute quartiles rating result}{142}{lstlisting.10.8}%
 \contentsline {lstlisting}{\numberline {10.9}Absolute deciles rating result}{143}{lstlisting.10.9}%
@@ -95,10 +95,11 @@
 \contentsline {lstlisting}{\numberline {11.1}Big data performance tableau format}{148}{lstlisting.11.1}%
 \contentsline {lstlisting}{\numberline {11.2}Constructing big bipolar-valued outranking digraphs}{149}{lstlisting.11.2}%
 \contentsline {lstlisting}{\numberline {11.3}Constructing the sparse integer outranking digraph}{151}{lstlisting.11.3}%
-\contentsline {lstlisting}{\numberline {11.4}The \texttt {relation()} function of a sparse outranking digraph}{152}{lstlisting.11.4}%
-\contentsline {lstlisting}{\numberline {11.5}Ranking the sparse integer outranking digraph}{154}{lstlisting.11.5}%
-\contentsline {lstlisting}{\numberline {11.6}The ordered components of the sparse outranking digraph}{155}{lstlisting.11.6}%
-\contentsline {lstlisting}{\numberline {11.7}Measuring the loss of quality with respect to the standard outranking digraph}{155}{lstlisting.11.7}%
+\contentsline {lstlisting}{\numberline {11.4}The 6 components of a sparse outranking digraph}{152}{lstlisting.11.4}%
+\contentsline {lstlisting}{\numberline {11.5}The \texttt {relation()} function of a sparse outranking digraph}{152}{lstlisting.11.5}%
+\contentsline {lstlisting}{\numberline {11.6}Ranking the sparse integer outranking digraph}{154}{lstlisting.11.6}%
+\contentsline {lstlisting}{\numberline {11.7}The ordered components of the sparse outranking digraph}{155}{lstlisting.11.7}%
+\contentsline {lstlisting}{\numberline {11.8}Measuring the loss of quality with respect to the standard outranking digraph}{156}{lstlisting.11.8}%
 \contentsline {lstlisting}{\numberline {12.1}Alice's performance tableau}{163}{lstlisting.12.1}%
 \contentsline {lstlisting}{\numberline {12.2}Computing Alice's outranking digraph}{166}{lstlisting.12.2}%
 \contentsline {lstlisting}{\numberline {12.3}Inspecting polarised outranking situations}{167}{lstlisting.12.3}%
@@ -154,7 +155,7 @@
 \contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{239}{lstlisting.17.10}%
 \contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{240}{lstlisting.17.11}%
 \contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{242}{lstlisting.17.12}%
-\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{242}{lstlisting.17.13}%
+\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{243}{lstlisting.17.13}%
 \contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{243}{lstlisting.17.14}%
 \contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{246}{lstlisting.17.15}%
 \contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{246}{lstlisting.17.16}%
