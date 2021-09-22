@@ -80,8 +80,8 @@
 \contentsline {lstlisting}{\numberline {9.4}Bipolar-valued sorting characteristics (extract)}{128}{lstlisting.9.4}%
 \contentsline {lstlisting}{\numberline {9.5}Weakly ranking the quintiles sorting result}{129}{lstlisting.9.5}%
 \contentsline {lstlisting}{\numberline {9.6}Computing a \emph {pre-ranked} sparse outranking digraph}{130}{lstlisting.9.6}%
-\contentsline {lstlisting}{\numberline {9.7}The quantiles decomposition of a pre-ranked outranking digraph}{131}{lstlisting.9.7}%
-\contentsline {lstlisting}{\numberline {9.8}Functional binary relation characteristics}{132}{lstlisting.9.8}%
+\contentsline {lstlisting}{\numberline {9.7}The quantiles decomposition of a pre-ranked outranking digraph}{130}{lstlisting.9.7}%
+\contentsline {lstlisting}{\numberline {9.8}Functional binary relation characteristics}{131}{lstlisting.9.8}%
 \contentsline {lstlisting}{\numberline {10.1}Computing performance quantiles from a given performance tableau}{137}{lstlisting.10.1}%
 \contentsline {lstlisting}{\numberline {10.2}Printing out the estimated quartile limits}{137}{lstlisting.10.2}%
 \contentsline {lstlisting}{\numberline {10.3}Generating 100 new random decision alternatives of the same model}{138}{lstlisting.10.3}%
