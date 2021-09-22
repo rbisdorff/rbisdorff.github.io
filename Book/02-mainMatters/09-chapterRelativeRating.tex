@@ -50,8 +50,8 @@ r(x \in \mathbf{q}_k) \; = \; \min \big[ r\big(x \succsim \mathbf{q}(p_{q-1})\bi
 
 The \texttt{min} operator inplements the logical conjunction and, the outranking relation $\succsim$ verifying the coduality principle, $-r\big(\mathbf{q}(p_{q-1}) \succsim x\big) \,=\, r\big(\mathbf{q}(p_{q-1}) \prec x\big)$, resp. $-r\big(x \succsim \mathbf{q}(p_{q}) \,=\, r\big(x \prec \mathbf{q}(p_{q}\big)$.
 
-The \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\texttt{QuantilesSortingDigraph} class} from the \texttt{sortingDigraphs} module\index{sortingDigraphs@\texttt{sortingDigraphs} module} can compute, for instance, such a five-tiling of a given random performance tableau \citep{BIS-2021b}.
-\begin{lstlisting}[caption={Computing a quintiles sorting result},label=list:9.1]
+The \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\texttt{QuantilesSortingDigraph} class} from the \texttt{sortingDigraphs} module\index{sortingDigraphs@\texttt{sortingDigraphs} module} can compute, for instance, such a quintiling of a given random performance tableau \citep{BIS-2021b}.
+\begin{lstlisting}[caption={Computing a quintiles sorting result},label=list:9.1,basicstyle=\ttfamily\scriptsize]
 >>> from randomPerfTabs import RandomPerformanceTableau
 >>> t = RandomPerformanceTableau(numberOfActions=50,seed=5)
 >>> from sortingDigraphs import QuantilesSortingDigraph
@@ -60,9 +60,9 @@ The \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\textt
     *-----  Object instance description -----------*
      Instance class  : QuantilesSortingDigraph
      Instance name   : sorting_with_5-tile_limits
-     # Actions       : 50
-     # Criteria      : 7
-     # Categories    : 5
+     Actions         : 50
+     Criteria        : 7
+     Categories      : 5
      Lowerclosed     : False
      Size            : 841
      Valuation domain  : [-1.00;1.00]
@@ -81,6 +81,12 @@ The \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\textt
      Compute profiles : 0.00075
      Compute relation : 0.02581
      Weak Ordering    : 0.00052
+\end{lstlisting}
+
+5-tiling the 50 decision alternatives results in 5 ordered upper-closed categories of decision alternatives --the quintiles-- supported by a $81.39\%$ majority of criteria significance.
+
+The \texttt{showCriteriaQuantileLimits()}\index{showCriteriaQuantileLimits@\texttt{showCriteriaQuantileLimits()}} method shows in Listing~\vref{list:9.2} the quintile limits separating on each criterion the respective evaluations of the 50 decision alternatives into the 5 quintiles. Highest evaluations are observed on criterion \texttt{g1} (see Line 6 below). 
+\begin{lstlisting}[caption={Inspecting the quantile limits},label=list:9.2]
 >>> qs.showCriteriaQuantileLimits()
      Quantile Class Limits (q = 5)
      Upper-closed classes
@@ -92,7 +98,11 @@ The \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\textt
       g4	 24.61	 37.91	 53.91	 71.02	 89.84	 
       g5	 26.94	 36.43	 52.16	 72.52	 96.25	 
       g6	 23.94	 44.06	 54.92	 67.34	 95.97	 
-      g7	 30.94	 47.40	 55.46	 69.04	 97.10	 
+      g7	 30.94	 47.40	 55.46	 69.04	 97.10
+\end{lstlisting}
+
+And with the \texttt{showSorting()}\index{showSorting@\texttt{showSorting()}} method we can inspect the actual quintiles sorting result.
+\begin{lstlisting}[caption={Computing a quintiles sorting result},label=list:9.3]
 >>> qs.showSorting()
     *--- Sorting results in descending order ---*
      ]0.80 - 1.00]: ['a22']
@@ -110,10 +120,10 @@ The \texttt{QuantilesSortingDigraph} class \index{QuantilesSortingDigraph@\textt
      ]   < - 0.20]: ['a44']
    \end{lstlisting}
 
-With the \texttt{showCriteriaQuantileLimits()}\index{showCriteriaQuantileLimits@\texttt{showCriteriaQuantileLimits()}} and the \texttt{showSorting()}\index{showSorting@\texttt{showSorting()}} methods, we can inspect the quintiles sorting result computed above in Listing~\vref{list:9.1}. Most of the decision alternatives (26) are gathered in the median quintile $]0.40 - 0.60]$ class, whereas the highest quintile $]0.80-1.00]$ and the lowest quintile $]< - 0.20]$ classes gather each one a unique decision alternative (\texttt{a22}, resp. \texttt{a44}) (see Lines 43-56 above).
+Most of the decision alternatives (26) are gathered in the median quintile $]0.40 - 0.60]$ class, whereas the highest quintile $]0.80-1.00]$ and the lowest quintile $]< - 0.20]$ classes gather each one a unique decision alternative (\texttt{a22}, resp. \texttt{a44}).
 
 Inspecting the details of the corresponding sorting characteristics may be done with the \texttt{showSortingCharacteristics()} method\index{showSortingCharacteristics@\texttt{showSortingCharacteristics()}}.
-\begin{lstlisting}[caption={Bipolar-valued sorting characteristics (extract)},label=list:9.2]
+\begin{lstlisting}[caption={Bipolar-valued sorting characteristics (extract)},label=list:9.4,basicstyle=\ttfamily\scriptsize]
 >>> qs.valuationdomain
     {'min': Decimal('-1.0'), 'med': Decimal('0'),
      'max': Decimal('1.0')}
@@ -140,9 +150,9 @@ Inspecting the details of the corresponding sorting characteristics may be done 
     a49 in ]0.80 - 1.00]   -0.57	  0.86	      -0.57
 \end{lstlisting}
 
-In Listing~\vref{list:9.2} Line 10, alternative \texttt{a22} verifies indeed positively both sorting conditions only for the highest quintile $[0.80 - 1.00]$ class. Whereas alternatives \texttt{a44} and \texttt{a49}, for instance, weakly verify both sorting conditions for two, resp. three, adjacent quintile classes (Lines 13-14 and 21-23).  
+In Listing~\vref{list:9.4} Line 10, alternative \texttt{a22} verifies indeed positively both sorting conditions only for the highest quintile $[0.80 - 1.00]$ class. Whereas alternatives \texttt{a44} and \texttt{a49}, for instance, weakly verify both sorting conditions for two, resp. three, adjacent quintile classes (Lines 13-14 and 21-23).  
 
-Quantiles sorting results indeed always verify the following properties \citep{ADT-L10}:
+Quantiles sorting results, indeed, verify always the following properties \citep{ADT-L10}:
 \begin{property}[Formal properties of a quantiles sorting result]\label{prop:9.1}
 \begin{enumerate}[leftmargin=0.5cm,rightmargin=0.5cm,topsep=1pt]
 \item \emph{Coherence}: Each object is sorted into a non-empty subset of \emph{adjacent} $q$-tiles classes. An alternative that would \emph{miss} evaluations on all the criteria will be sorted conjointly in all $q$-tiled classes.
@@ -157,7 +167,7 @@ The $q$-tiles sorting result leaves us hence with more or less \emph{overlapping
 \item \emph{Optimistic}: In decreasing lexicographic order of the upper and lower quantile class limits;
 \item \emph{Pessimistic}: In decreasing lexicographic order of the lower and upper quantile class limits;
 \end{enumerate}
-\begin{lstlisting}[caption={Weakly ranking the quintiles sorting result},label=list:9.3]
+\begin{lstlisting}[caption={Weakly ranking the quintiles sorting result},label=list:9.5]
 >>> qs.showQuantileOrdering(strategy='average')
     ]0.80-1.00] : ['a22']
     ]0.60-0.80] : ['a03','a07','a11','a14','a20','a29',
@@ -174,7 +184,7 @@ The $q$-tiles sorting result leaves us hence with more or less \emph{overlapping
     ]  < -0.40] : ['a44']
 \end{lstlisting}
 
-Following, for instance, the \emph{average} ranking strategy, we find confirmed in the weak ranking shown in Listing~\vref{list:9.3}  that alternative \texttt{a49}  is indeed sorted into three adjacent quintiles classes, namely $]0.20-0.80]$ (see Line 6) and precedes the $]0.40-0.60]$ class, of same average of lower and upper limits.
+Following, for instance, the \emph{average} ranking strategy, we find confirmed in the weak ranking shown in Listing~\vref{list:9.5}  that alternative \texttt{a49}  is indeed sorted into three adjacent quintiles classes, namely $]0.20-0.80]$ (see Line 6) and precedes the $]0.40-0.60]$ class, of same average of lower and upper limits.
 
 The \texttt{QuantilesSortingDigraph} class constructor models hence a linearly ordered decomposition of the corresponding bipolar-valued outranking digraph. This decomposition leads us to a new \emph{sparse pre-ranked} outranking digraph model.
 
@@ -183,8 +193,8 @@ The \texttt{QuantilesSortingDigraph} class constructor models hence a linearly o
 
 Following the methodological requirements of the outranking approach, a given outranking digraph is, necessarily associated with a corresponding performance tableau (see Chap.~\ref{sec:3}). And, we can use this associated performance tableau for linearly decomposing the set of potential decision alternatives into ordered quantiles equivalence classes by using the quantiles sorting algorithm seen in the previous Section. 
 
-In the coding example shown in Listing~\vref{list:9.4} below, we generate, first (Lines 2-3), a simple performance tableau of 75 decision alternatives and, secondly (Lines 4-6), construct with the \texttt{PreRankedOutrankingDigraph} class\index{PreRankedOutrankingDigraph@\texttt{PreRankedOutrankingDigraph} class} from \texttt{sparseOut\-rankingDigraphs} module\index{sparseOutrankingDigraphs@\texttt{sparseOutrankingDigraphs} module} the corresponding sparse outranking digraph called \texttt{prg}. Notice by the way the \texttt{BigData} flag (Line 3) used for generating a parsimoniously commented performance tableau \citep{BIS-2021b}.
-\begin{lstlisting}[caption={Computing a \emph{pre-ranked} sparse outranking digraph},label=list:9.4]
+In the coding example shown in Listing~\vref{list:9.6} below, we generate, first (Lines 2-3), a simple performance tableau of 75 decision alternatives and, secondly (Lines 4-6), construct with the \texttt{PreRankedOutrankingDigraph} class\index{PreRankedOutrankingDigraph@\texttt{PreRankedOutrankingDigraph} class} from \texttt{sparseOut\-rankingDigraphs} module\index{sparseOutrankingDigraphs@\texttt{sparseOutrankingDigraphs} module} the corresponding sparse outranking digraph called \texttt{prg}. Notice by the way the \texttt{BigData} flag (Line 3) used for generating a parsimoniously commented performance tableau \citep{BIS-2021b}.
+\begin{lstlisting}[caption={Computing a \emph{pre-ranked} sparse outranking digraph},label=list:9.6]
 >>> from randomPerfTabs import RandomPerformanceTableau
 >>> tp = RandomPerformanceTableau(numberOfActions=75,\
 ...                               BigData=True,seed=100)
@@ -212,8 +222,8 @@ In the coding example shown in Listing~\vref{list:9.4} below, we generate, first
               ... ]
 \end{lstlisting}
 
-The ordering of the 5-tiling result is following the \emph{average} lower and upper quintile limits strategy (see List.~\vref{list:9.4} Line 14). We obtain here 9 ordered components of minimal order 1 and maximal order 25. The corresponding \emph{pre-ranked decomposition} may be inspected as follows.
-\begin{lstlisting}[caption={The quantiles decomposition of a pre-ranked outranking digraph},label=list:9.5]
+The ordering of the 5-tiling result is following the \emph{average} lower and upper quintile limits strategy (see List.~\vref{list:9.6} Line 14). We obtain here 9 ordered components of minimal order 1 and maximal order 25. The corresponding \emph{pre-ranked decomposition} may be inspected as follows.
+\begin{lstlisting}[caption={The quantiles decomposition of a pre-ranked outranking digraph},label=list:9.7]
 >>> prg.showDecomposition()
     *--- quantiles decomposition in decreasing order---*
      c1. ]0.80-1.00] : [5, 42, 43, 47]
@@ -231,7 +241,7 @@ The ordering of the 5-tiling result is following the \emph{average} lower and up
      c9. ]   <-0.20] : [57, 59]
 \end{lstlisting}
 
-The highest quintile class ($]80\%-100\%]$) contains decision alternatives \texttt{5}, \texttt{42}, \texttt{43} and \texttt{47}. Lowest quintile class ($]-20\%]$) gathers alternatives \texttt{57} and \texttt{59} (see List.~\vref{list:9.5} Lines 3 and 15). The resulting sparse outranking relation is shown with the \texttt{showHTMLRelationMap()} method\index{showHTMLRelationMap@\texttt{showHTMLRelationMap()}} in a heatmap browser view.
+The highest quintile class ($]80\%-100\%]$) contains decision alternatives \texttt{5}, \texttt{42}, \texttt{43} and \texttt{47}. Lowest quintile class ($]-20\%]$) gathers alternatives \texttt{57} and \texttt{59} (see List.~\vref{list:9.7} Lines 3 and 15). The resulting sparse outranking relation is shown with the \texttt{showHTMLRelationMap()} method\index{showHTMLRelationMap@\texttt{showHTMLRelationMap()}} in a heatmap browser view.
 \begin{lstlisting}
    >>> prg.showHTMLRelationMap()
 \end{lstlisting}
@@ -243,7 +253,7 @@ The highest quintile class ($]80\%-100\%]$) contains decision alternatives \text
 \end{figure}
 %\clearpage
 
-In Figure~\vref{fig:9.1} we easily recognize the 9 linearly ordered quantile equivalence classes. \emph{Green} and \emph{light-green} pixels show positive \emph{outranking} situations, whereas positive \emph{outranked} --negative outranking-- situations are shown in \emph{red} and \emph{light-red}. Indeterminate situations appear in white. In each one of the 9 quantile equivalence classes we recover the corresponding bipolar-valued outranking \emph{sub-relation}, which leads to an actual \emph{fill-rate} of $20.4\%$ (see List.~\vref{list:9.4} Line 19).
+In Figure~\vref{fig:9.1} we easily recognise the 9 linearly ordered quantile equivalence classes. \emph{Green} and \emph{light-green} pixels show positive \emph{outranking} situations, whereas positive \emph{outranked} --negative outranking-- situations are shown in \emph{red} and \emph{light-red}. Indeterminate situations appear in white. In each one of the 9 quantile equivalence classes we recover the corresponding bipolar-valued outranking \emph{sub-relation}, which leads to an actual \emph{fill-rate} of $20.4\%$ (see List.~\vref{list:9.4} Line 19).
 
 Computing the ordinal correlation between the sparse and the standard outranking digraph allows to check how faithful the sparse model represents the complete outranking relation.
 \begin{lstlisting}
@@ -258,8 +268,8 @@ Computing the ordinal correlation between the sparse and the standard outranking
 
 The ordinal correlation index between the standard and the sparse outranking digraphs is quite high ($+0.863$) and their bipolar-valued equivalence is supported by a mean criteria significance majority of $(1.0+0.272)/2 = 64\%$.
 
-It is worthwhile noticing in Listing~\vref{list:9.4} (Lines 20- ) that sparse pre-ranked outranking digraphs do not contain a \texttt{relation} attribute. The access to pairwise outranking characteristic values is here provided via a corresponding \texttt{relation()} function.
-\begin{lstlisting}[caption={Functional binary relation characteristics},label=list:9.6]
+It is worthwhile noticing in Listing~\vref{list:9.6} (Lines 20- ) that sparse pre-ranked outranking digraphs do not contain a \texttt{relation} attribute. The access to pairwise outranking characteristic values is here provided via a corresponding \texttt{relation()} function.
+\begin{lstlisting}[caption={Functional binary relation characteristics},label=list:9.8]
 def relation(self,x,y):
     """
     Dynamic construction of the global
@@ -280,7 +290,7 @@ def relation(self,x,y):
         return Max
 \end{lstlisting}
 
-In Listing~\vref{list:9.6} Lines 9-10, all reflexive situations are set to the \emph{indeterminate} value. When two decision alternatives belong to a same component --quantile equivalence class-- we access the relation attribute of the corresponding outranking sub-digraph (Lines 13-14). Otherwise we just check the respective ranks of the components (Lines 15-18).
+In Listing~\vref{list:9.8} Lines 9-10, all reflexive situations are set to the \emph{indeterminate} value. When two decision alternatives belong to a same component --quantile equivalence class-- we access the relation attribute of the corresponding outranking sub-digraph (Lines 13-14). Otherwise we just check the respective ranks of the components (Lines 15-18).
 
 \section{Ranking pre-ranked sparse outranking digraphs}
 \label{sec:9.4}

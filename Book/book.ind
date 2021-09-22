@@ -80,6 +80,7 @@
   \item \texttt{convertEvaluation2Decimal()}\idxquad \hyperpage{149}
   \item \texttt{convertWeight2Decimal()}\idxquad \hyperpage{149}
   \item \emph  {A.H. Copeland}\idxquad \hyperpage{110}
+  \item \texttt{CopelandRanking} class\idxquad \hyperpage{110}
   \item \texttt{cPerformanceTableau} class\idxquad \hyperpage{148}
   \item \texttt{cQuantilesRankingDigraph} class\idxquad \hyperpage{154}
   \item \texttt{cRandomPerformanceTableau} class\idxquad 
@@ -177,7 +178,8 @@
   \item \emph{Cl. Lamboray}\idxquad \hyperpage{122}
   \item \texttt{LearnedQuantilesRatingDigraph} class\idxquad 
 		\hyperpage{138},\,\hyperpage{199}
-  \item \texttt{linearOrders} module\idxquad \hyperpage{225}
+  \item \texttt{linearOrders} module\idxquad \hyperpage{110},\,
+		\hyperpage{225}
   \item \texttt{LinearVotingProfile} class\idxquad \hyperpage{93}
   \item \texttt{LineGraph} class\idxquad \hyperpage{312}
 
@@ -197,7 +199,7 @@
  \indexspace\nopagebreak%
   \item \texttt{NetFlowsOrder} class\idxquad \hyperpage{225}
   \item \texttt{NetFlowsRanking} class\idxquad \hyperpage{113}
-  \item \textsl{J. von Neumann}\idxquad \hyperpage{249}
+  \item \textsl{J. von Neumann}\idxquad \hyperpage{248}
 
   \indexspace
 {\bf O}\nopagebreak%
@@ -240,7 +242,7 @@
   \item \texttt{Random3ObjectivesPerformance\-Tableau} class\idxquad 
 		\hyperpage{84},\,\hyperpage{267}
   \item \texttt{RandomAcademicPerformance\-Tableau} class\idxquad 
-		\hyperpage{87},\,\hyperpage{214}
+		\hyperpage{87},\,\hyperpage{213}
   \item \texttt{RandomCBPerformanceTab\-leau} class\idxquad 
 		\hyperpage{80}
   \item \texttt{RandomDigraph} class\idxquad \hyperpage{14}
@@ -261,7 +263,7 @@
   \item \texttt{RandomTree} class\idxquad \hyperpage{323}
   \item \texttt{RandomValuationDigraph} class\idxquad \hyperpage{21}
   \item \texttt{RandomValuationGraph} class\idxquad \hyperpage{329}
-  \item \texttt{RankedPairsRanking} class\idxquad \hyperpage{121}
+  \item \texttt{RankedPairsRanking} class\idxquad \hyperpage{122}
   \item \texttt{RankingByChoosingDigraph} class\idxquad \hyperpage{59},\,
 		\hyperpage{169}
   \item \texttt{RankingsFusion} class\idxquad \hyperpage{115}
@@ -294,7 +296,7 @@
 		\hyperpage{181}
   \item \texttt{showCriteriaCorrelationTable()}\idxquad \hyperpage{190},\,
 		\hyperpage{227}
-  \item \texttt{showCriteriaQuantileLimits()}\idxquad \hyperpage{128}
+  \item \texttt{showCriteriaQuantileLimits()}\idxquad \hyperpage{127}
   \item \texttt{showDisapprovalResults()}\idxquad \hyperpage{292}
   \item \texttt{showHTMCriteria()}\idxquad \hyperpage{164}
   \item \texttt{showHTMLLimitingQuantiles()}\idxquad \hyperpage{138}
@@ -329,7 +331,7 @@
   \item \texttt{showRankAnalysisTable()}\idxquad \hyperpage{95}
   \item \texttt{showRankingByChoosing()}\idxquad \hyperpage{104}
   \item \texttt{showRankingConsensusQua\-lity()}\idxquad \hyperpage{90},\,
-		\hyperpage{115},\,\hyperpage{190},\,\hyperpage{202}
+		\hyperpage{115},\,\hyperpage{190},\,\hyperpage{203}
   \item \texttt{showRelationTable()}\idxquad \hyperpage{22},\,
 		\hyperpage{40},\,\hyperpage{73}
   \item \texttt{showShort()}\idxquad \hyperpage{16},\,\hyperpage{309}
@@ -340,6 +342,7 @@
 		\hyperpage{82}
   \item \texttt{showTransitionMatrix()}\idxquad \hyperpage{317}
   \item \emph{P. Slater}\idxquad \hyperpage{117}
+  \item \texttt{SlaterRanking} class\idxquad \hyperpage{117}
   \item \texttt{sortingDigraphs} module\idxquad \hyperpage{127},\,
 		\hyperpage{199}
   \item \texttt{SparseIntegerOutrankingDigraph} class\idxquad 

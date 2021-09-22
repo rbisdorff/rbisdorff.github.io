@@ -120,6 +120,8 @@
 \indexentry{computeChordlessCircuits@\texttt{computeChordlessCircuits()}|hyperpage}{110}
 \indexentry{showChordlessCircuits@\texttt{showChordlessCircuits()}|hyperpage}{110}
 \indexentry{Copeland@\emph  {A.H. Copeland}|hyperpage}{110}
+\indexentry{CopelandRanking@\texttt{CopelandRanking} class|hyperpage}{110}
+\indexentry{linearOrders@\texttt{linearOrders} module|hyperpage}{110}
 \indexentry{computeRankingCorrelation@\texttt{computeRankingCorrelation()}|hyperpage}{111}
 \indexentry{WeakCopelandOrder@\texttt{WeakCopelandOrder} class|hyperpage}{111}
 \indexentry{transitiveDigraphs@\texttt{transitiveDigraphs} module|hyperpage}{111}
@@ -130,15 +132,16 @@
 \indexentry{RankingsFusion@\texttt{RankingsFusion} class|hyperpage}{115}
 \indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}|hyperpage}{115}
 \indexentry{Slater@\emph{P. Slater}|hyperpage}{117}
+\indexentry{SlaterRanking@\texttt{SlaterRanking} class|hyperpage}{117}
 \indexentry{Kohler@\emph{G. Kohler}|hyperpage}{118}
 \indexentry{IteratedNetFlowsRanking@\texttt{IteratedNetFlowsRanking} class|hyperpage}{120}
 \indexentry{Tideman@\emph{N. Tideman}|hyperpage}{121}
-\indexentry{RankedPairsRanking@\texttt{RankedPairsRanking} class|hyperpage}{121}
+\indexentry{RankedPairsRanking@\texttt{RankedPairsRanking} class|hyperpage}{122}
 \indexentry{Dias@\emph{L.C. Dias}|hyperpage}{122}
 \indexentry{Lamboray@\emph{Cl. Lamboray}|hyperpage}{122}
 \indexentry{QuantilesSortingDigraph@\texttt{QuantilesSortingDigraph} class|hyperpage}{127}
 \indexentry{sortingDigraphs@\texttt{sortingDigraphs} module|hyperpage}{127}
-\indexentry{showCriteriaQuantileLimits@\texttt{showCriteriaQuantileLimits()}|hyperpage}{128}
+\indexentry{showCriteriaQuantileLimits@\texttt{showCriteriaQuantileLimits()}|hyperpage}{127}
 \indexentry{showSorting@\texttt{showSorting()}|hyperpage}{128}
 \indexentry{showSortingCharacteristics@\texttt{showSortingCharacteristics()}|hyperpage}{128}
 \indexentry{PreRankedOutrankingDigraph@\texttt{PreRankedOutrankingDigraph} class|hyperpage}{130}
@@ -200,7 +203,7 @@
 \indexentry{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}|hyperpage}{203}
 \indexentry{showSortingCharacteristics@\texttt{showSortingCharacteristics()}|hyperpage}{205}
 \indexentry{showActionsSortingResult@\texttt{showActionsSortingResult()}|hyperpage}{205}
-\indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformance\-Tableau} class|hyperpage}{214}
+\indexentry{RandomAcademicPerformanceTableau@\texttt{RandomAcademicPerformance\-Tableau} class|hyperpage}{213}
 \indexentry{showHTMLPerformanceTableau@\texttt{showHTMLPerformanceTableau()}|hyperpage}{217}
 \indexentry{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}|hyperpage}{220}
 \indexentry{Kendall@\emph{M.G. Kendall}|hyperpage}{220}
@@ -232,7 +235,7 @@
 \indexentry{showMISAH@\texttt{showMIS\_AH}()|hyperpage}{246}
 \indexentry{independentChoices@\texttt{independentChoices}()|hyperpage}{246}
 \indexentry{Pirlot@\textsl{M. Pirlot}|hyperpage}{248}
-\indexentry{Neumann@\textsl{J. von Neumann}|hyperpage}{249}
+\indexentry{Neumann@\textsl{J. von Neumann}|hyperpage}{248}
 \indexentry{domkernelrestrict@\texttt{domkernelrestrict()}|hyperpage}{250}
 \indexentry{computeKernelVector@\texttt{computeKernelVector()}|hyperpage}{250}
 \indexentry{computeKernelVector@\texttt{computeKernelVector()}|hyperpage}{253}

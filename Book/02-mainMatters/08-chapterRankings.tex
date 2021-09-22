@@ -87,7 +87,7 @@ The \texttt{computeTransitivityDegree()} method\index{computeTransitivityDegree@
 
 With only $49\%$ of the required transitive arcs, the strict outranking digraph \texttt{gcd} is hence very far from being transitive; a serious problem when a linear ordering of the decision alternatives is looked for.
 
-The \texttt{computeChordlessCircuits()} method\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}} followed by the \texttt{showChord\-lessCircuits()} method\index{showChordlessCircuits@\texttt{showChordlessCircuits()}} can check furthermore whether there appear any cyclic outranking situations.\footnote{The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods are separate because there are various methods available for enumerating the chordless circuits in a digraph \citep{BIS-2010}.}
+The \texttt{computeChordlessCircuits()} method\index{computeChordlessCircuits@\texttt{computeChordlessCircuits()}}, followed by the \texttt{show\-Chord\-lessCircuits()} method\index{showChordlessCircuits@\texttt{showChordlessCircuits()}}, can check furthermore whether there appear any cyclic outranking situations.\footnote{The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods are separate because there are various methods available for enumerating the chordless circuits in a digraph \citep{BIS-2010}.}
 \begin{lstlisting}
 >>> gcd.computeChordlessCircuits()
 >>> gcd.showChordlessCircuits()
@@ -103,7 +103,7 @@ Now, several heuristic ranking rules have been proposed for constructing a linea
 \section{The \Copeland ranking}
 \label{sec:8.2}
 
-\begin{algorithm}
+\begin{algorithm}[H]
     {\footnotesize
 \begin{itemize}
  \item [] \emph{in} : median-cut strict outranking digraph $G(X,\succnsim_{>0})$,
@@ -111,14 +111,14 @@ Now, several heuristic ranking rules have been proposed for constructing a linea
 \end{itemize}
   \begin{enumerate}
     \item The \Copeland ranking rule computes for each alternative a score resulting from the sum for all non-reflexive pairs of alternatives of the differences between the crisp \emph{strict outranking} characteristics $r(x\, \succnsim_{>0} \,y)$ and the crisp \emph{strict outranked} characteristics $r(y\, \succnsim_{>0} \, x)$.
-    \item  The alternatives are ranked in decreasing order of these scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the decision actions. 
+    \item  The alternatives are ranked in decreasing order of these \Copeland scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the decision actions. 
     \end{enumerate}
     }
     \caption{\Copeland ranking rule \citep{COP-1951}\index{Copeland@\emph{A.H. Copeland}}}
 \label{alg:8.1}
 \end{algorithm}
 
-The \Copeland rule works well on any outranking digraph that models a linear (partial) order on the \emph{median cut} strict outranking digraph \texttt{ccd} \citep{DIA-2010}. 
+In Listing~\vref{list:8.3} we show the ranking of the given strict outranking digraph \texttt{gcd} obtained with the \texttt{CopelandRanking} class\index{CopelandRanking@\texttt{CopelandRanking} class} from the \texttt{linearOrders} module\index{linearOrders@\texttt{linearOrders} module}. 
 \begin{lstlisting}[caption={Computing a \Copeland Ranking},label=list:8.3]
 >>> from linearOrders import CopelandRanking
 >>> cop = CopelandRanking(gcd,Comments=True)
@@ -136,9 +136,9 @@ The \Copeland rule works well on any outranking digraph that models a linear (pa
   ['a5','a1','a6','a7','a8','a4','a9','a3','a2'] §\label{line:8.3.14}§
 \end{lstlisting}
 
-Alternative \texttt{a5} obtains here the best \Copeland score ($+12$), followed by alternatives \texttt{a1}, \texttt{a6} and \texttt{a7} with same score ($+2$); following the lexicographic rule, \texttt{a1} is hence ranked before \texttt{a6} and \texttt{a6} before \texttt{a7}. Same situation is observed for \texttt{a4} and \texttt{a9} with a score of $-3$ (see List.~\vref{list:8.3} Lines~\ref{line:8.3.4}-\ref{line:8.3.12}). The \Copeland ranking rule is in fact \emph{invariant} under the \emph{codual} transform (see Sec.~\ref{sec:2.6}) and renders a same linear order indifferently from digraphs \texttt{g} or \texttt{gcd} .
+Alternative \texttt{a5} obtains here the best \Copeland score ($+12$), followed by alternatives \texttt{a1}, \texttt{a6} and \texttt{a7} with same score ($+2$); following the lexicographic rule, \texttt{a1} is hence ranked before \texttt{a6} and \texttt{a6} before \texttt{a7}. Same situation is observed for \texttt{a4} and \texttt{a9} with a score of $-3$ (see List.~\vref{list:8.3} Lines~\ref{line:8.3.4}-\ref{line:8.3.12}). The \Copeland ranking rule is in fact \emph{invariant} under the \emph{codual} transform (see Sec.~\ref{sec:2.6}) and renders a same linear order indifferently from digraphs \texttt{g} or \texttt{gcd}.
 
-In Listing~\vref{list:8.4}, the \texttt{computeRankingCorrelation()} method\index{computeRankingCorrelation@\texttt{computeRankingCorrelation()}}, coupled with the \texttt{showCorrelation()} method, indicate the ordinal correlation of the {\sc Cope\-land} ranking result, shown in Listing~\vref{list:8.3} Line~\ref{line:8.3.14}, with the given outranking digraph \texttt{g} (see Chap.~\ref{sec:16} and \citealp{BIS-2012a}).
+The \Copeland rule works well, furthermore on any strict outranking digraph that models a linear (partial) order on the \emph{median cut} strict outranking digraph \texttt{ccd} \citep{DIA-2010}. In Listing~\vref{list:8.4}, the \texttt{computeRankingCorrela\-tion()} method\index{computeRankingCorrelation@\texttt{computeRankingCorrelation()}}, coupled with the \texttt{showCorrelation()} method, indicate the ordinal correlation of the {\sc Cope\-land} ranking result, shown in Listing~\vref{list:8.3} Line~\ref{line:8.3.14}, with the given outranking digraph \texttt{g} (see Chap.~\ref{sec:16} and \citealp{BIS-2012a}).
 \begin{lstlisting}[caption={Checking the ordinal quality of the \Copeland ranking},label=list:8.4]
 >>> corr = g.computeRankingCorrelation(cop.copelandRanking)
 >>> g.showCorrelation(corr)
@@ -148,7 +148,7 @@ In Listing~\vref{list:8.4}, the \texttt{computeRankingCorrelation()} method\inde
    Epistemic determination   :  0.230 §\label{line:8.4.6}§
 \end{lstlisting}
 
-With an epistemic determination level of $0.230$ (Line~\vref{line:8.4.6}), the crisp ordinal correlation --\Kendall $\tau$-- index of $+463$ is in fact supported by $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the criteria significance weights. Furthermore, the bipolar-valued \emph{relational equivalence} between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the \Copeland ranking (see Chap.~\ref{sec:16}).
+With an epistemic determination level of $0.230$ (Line~\vref{line:8.4.6}), the crisp ordinal correlation --\Kendall $\tau$-- index of $+0.463$ is in fact supported by $61.5\% (100.0 x (1.0 + 0.23)/2)$ of the strict outranking situations. Furthermore, the bipolar-valued \emph{relational equivalence} between the strict outranking relation and the \Copeland ranking equals $+0.107$, i.e. a \emph{majority} of $55.35\%$ of the criteria significance supports the relational equivalence between the given strict outranking relation and the \Copeland ranking (see Chap.~\ref{sec:16}).
 
 The \Copeland scores, shown in Listing~\vref{list:8.3} deliver actually only a \emph{weak ranking}, i.e. a ranking with ties. This weak ranking may be constructed with the \texttt{WeakCopelandOrder} class \index{WeakCopelandOrder@\texttt{WeakCopelandOrder} class} from the \texttt{transitiveDigraphs} module.\index{transitiveDigraphs@\texttt{transitiveDigraphs} module}
 \begin{lstlisting}[caption={Computing a weak \Copeland ranking},label=list:8.5]
@@ -164,11 +164,11 @@ The \Copeland scores, shown in Listing~\vref{list:8.3} deliver actually only a \
    1st last ranked ['a2']
 \end{lstlisting}
 
-In Listing~\vref{list:8.5}, the \texttt{WeakCopelandOrder} class models the preorder actually delivered by the \Copeland scores (see List.~\vref{list:8.3}). We may draw its corresponding skeleton\footnote{The skeleton of a transitive relation drops the transitivity induced arcs.}.
+In Listing~\vref{list:8.5}, the \texttt{WeakCopelandOrder} class models the weak ranking actually delivered by the \Copeland scores (see List.~\vref{list:8.3}). We may draw its corresponding skeleton\footnote{The skeleton of a transitive relation drops the transitivity induced arcs.}.
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=4cm]{Figures/8-2-weakCopelandRanking.pdf}
-\caption[Drawing of the weak \Copeland ranking]{\emph{Drawing of the weak \Copeland ranking}. The drawing shows the skeleton of the preorder produced by the corresponding ties of the \Copeland scores}
+\caption[Drawing of the weak \Copeland ranking]{\emph{Drawing of the weak \Copeland ranking}. The drawing shows the skeleton of the weak ranking produced by the corresponding ties of the \Copeland scores}
 \label{fig:8.2}       % Give a unique label
 \end{figure}
 \begin{lstlisting}
@@ -184,14 +184,16 @@ Let us now consider a similar ranking rule, but working directly on the criteria
 \section{The \NetFlows ranking}
 \label{sec:8.3}
 
-\begin{algorithm}
+The bipolar-valued version of the \Copeland ranking rule, we call \NetFlows \footnote{This ranking rule is also known under the name \Promethee ranking rule \citep*{BRA-1985}.}, computes for each alternative $x \in X$ a \emph{net flow} score.
+
+\begin{algorithm}[H]
   {\footnotesize
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued strict outranking digraph $G(X,\succnsim)$,
  \item [] \emph{out} : linear ranking of the set $X$ of decision aactions.
 \end{itemize}
   \begin{enumerate}
-  \item The bipolar-valued version of the \Copeland ranking rule, we call \NetFlows \footnote{This ranking rule is also known under the name \Promethee ranking rule \citep*{BRA-1985}.}, computes for each alternative $x \in X$ a \emph{net flow} score,  i.e. the sum over all non-reflexive $y \in X$ of the differences between the \emph{strict outranking} characteristics $r(x\, \succnsim \,y)$ and the \emph{strict outranked} characteristics $r(y\, \succnsim \,x)$.
+  \item The \NetFlows rule computes for each alternative $x \in X$ the sum over all non-reflexive $y \in X$ of the differences between the \emph{strict outranking} characteristics $r(x\, \succnsim \,y)$ and the \emph{strict outranked} characteristics $r(y\, \succnsim \,x)$.
   \item  The alternatives are ranked in decreasing order of these \NetFlows scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the decision actions.
   \end{enumerate}
 }
@@ -199,7 +201,7 @@ Let us now consider a similar ranking rule, but working directly on the criteria
 \label{alg:8.2}
 \end{algorithm}
 
-The \texttt{NetFlowsRanking} class\index{NetFlowsRanking@\texttt{NetFlowsRanking} class} from the \texttt{linearOrders} module computes this linear ranking from a given outranking digraph.
+The \texttt{NetFlowsRanking} class\index{NetFlowsRanking@\texttt{NetFlowsRanking} class} from the \texttt{linearOrders} module computes this linear ranking from the given strict outranking digraph \texttt{gcd}.
 \begin{lstlisting}[caption={Computing a \NetFlows ranking},label=list:8.6]
 >>> from linearOrders import NetFlowsRanking
 >>> nf = NetFlowsRanking(gcd,Comments=True)
@@ -336,19 +338,19 @@ The ranking consensus quality of the second \Kemeny ranking is shown in Listing~
 
 The Benefit criterion \texttt{b09} is again highest correlated ($+0.306$, Line~\ref{line:8.12.6}) with this \Kemeny ranking, but the weakest correlated criterion is now Benefit criterion \texttt{b10} ($-0.111$, Line~\ref{line:8.12.12}).
 
-Obtaining the same \Kemeny index, both \Kemeny rankings show the same \emph{weighted mean marginal correlation} ($+0.099$) with all thirteen performance criteria. However, the second ranking shows a slightly lower \emph{standard deviation}: $+0.132$ versus $+0.177$, resulting in a slightly \emph{fairer} ranking result: $-0.033$ versus $-0.079$ (see List.~\vref{list:8.11} Lines~\ref{line:8.11.14}-\ref{line:8.11.16} and List.~\ref{list:8.12} Lines~\ref{line:8.12.14}-\ref{line:8.12.16}) .
+Both \Kemeny rankings show the same \emph{weighted mean marginal correlation} ($+0.099$) with all thirteen performance criteria. However, the second ranking shows a slightly lower \emph{standard deviation}: $+0.132$ versus $+0.177$, resulting in a slightly \emph{fairer} ranking result: $-0.033$ versus $-0.079$ (see List.~\vref{list:8.11} Lines~\ref{line:8.11.14}-\ref{line:8.11.16} and List.~\ref{list:8.12} Lines~\ref{line:8.12.14}-\ref{line:8.12.16}) .
 
 When several rankings with maximal \Kemeny index are given, the \texttt{Kemeny\-Ranking} class constructor instantiates the ranking with \emph{highest} mean marginal correlation and, in case of ties, with \emph{lowest} weighted standard deviation. Here we obtain ranking: [\texttt{a5}, \texttt{a6}, \texttt{a7}, \texttt{a3}, \texttt{a9}, \texttt{a4}, \texttt{a1}, \texttt{a8}, \texttt{a2}] (see Line~\ref{line:8.8.5} in List.~\vref{list:8.8}).
 
 \section{\Slater rankings}
 \label{sec:8.5}
 
-The \Slater ranking rule is identical to the \Kemeny rule, but it is working, instead, on the \Condorcet --\emph{median cut polarised}-- digraph \texttt{ccd} \citep{SLA-1961}.\index{Slater@\emph{P. Slater}} The \Slater rule is again \emph{invariant} under the codual transform and delivers hence indifferently on \texttt{g} or \texttt{gcd} the following results:
+The \Slater ranking rule is identical to the \Kemeny rule, but it is working, instead, on the \Condorcet --\emph{median cut polarised}-- digraph \texttt{ccd} \citep{SLA-1961}\index{Slater@\emph{P. Slater}}. The \Slater rule is again \emph{invariant} under the codual transform and the \texttt{SlaterRanking} class\index{SlaterRanking@\texttt{SlaterRanking} class} from the \texttt{linearOrders} module delivers hence indifferently on \texttt{g} or \texttt{gcd} the following results:
 \begin{lstlisting}[caption={Computing a \Slater ranking},label=list:8.13]   
 >>> from linearOrders import SlaterRanking
 >>> sl = SlaterRanking(gcd,orderLimit=9)
 >>> sl.slaterRanking
-  ['a5','a6','a4','a1','a3','a7','a8','a9','a2']
+  ['a5','a6','a4','a1','a3','a7','a8','a9','a2'] §\label{line:8.13.4}§
 >>> corr = gcd.computeRankingCorrelation(sl.slaterRanking)
 >>> sl.showCorrelation(corr)
   Correlation indexes:
@@ -356,11 +358,12 @@ The \Slater ranking rule is identical to the \Kemeny rule, but it is working, in
    Epistemic determination    :  0.230
    Bipolar-valued equivalence : +0.156
 >>> len(sl.maximalRankings)
-  7
+  7 §\label{line:8.13.12}§
 \end{lstlisting}
 
-We notice in Listing~\ref{list:8.13} above that the \Slater ranking shown in Line 4 represents a rather good fit ($+0.676$), slightly better apparently than the \NetFlows ranking result ($+0.638$). However, there are in fact 7 such optimal \Slater rankings (see Line 12). The corresponding epistemic disjunction gives the partial ordering shown in Figure~\vref{fig:8.4}:
-\begin{lstlisting}[caption={Computing the epistemic disjunction of optimal \Slater rankings},label=list:8.14]   
+We notice in Listing~\ref{list:8.13} above that the \Slater ranking shown in Line~\ref{line:8.13.4} represents a rather good fit ($+0.676$), slightly better apparently than the \NetFlows ranking result ($+0.638$). However, there are in fact 7 such optimal \Slater rankings (see Line~\ref{line:8.13.12}). The corresponding epistemic disjunction, again with the \texttt{RankingsFusion} class from the \texttt{transitiveDigraphs} module, gives the partial ordering shown in Figure~\vref{fig:8.4}:
+\begin{lstlisting}[caption={Computing the epistemic disjunction of optimal \Slater rankings},label=list:8.14]
+>>> from transitiveDigraphs import RankingsFusion
 >>> slw = RankingsFusion(sl,sl.maximalRankings)
 >>> slw.exportGraphViz(fileName='tutorialSlater')
  *---- exporting a dot file for GraphViz tools ----*
@@ -377,12 +380,12 @@ We notice in Listing~\ref{list:8.13} above that the \Slater ranking shown in Lin
        
 The \Kemeny and \Slater ranking rules are furthermore computationally \emph{difficult} problems and effective ranking results are only computable for tiny outranking digraphs ($< 20$ objects) (see Eq.~\vref{eq:8.1}). 
 
-More computationally efficient ranking heuristics, like the \Copeland and \NetFlows rules, are therefore needed in practice. Let us finally, after these \emph{ranking-by-scoring} strategies, also present two popular \emph{ranking-by-choosing} strategies.
+More computationally efficient ranking heuristics, like the \Copeland and \NetFlows rules, are therefore needed in practice. Let us finally, after these \emph{ranking-by-scoring} strategies, also present two popular \emph{ranking-by-choosing} rules.
 
 \section{The \Kohler ranking-by-choosing rule}
 \label{sec:8.6}
 
-\begin{algorithm}\index{Kohler@\emph{G. Kohler}}
+\begin{algorithm}[H]\index{Kohler@\emph{G. Kohler}}
   {\footnotesize
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued digraph $G(X,\succnsim)$,
@@ -428,7 +431,7 @@ But the \Kohler rule has a \emph{dual} version, the prudent \emph{Arrow-Raynaud}
 
 Noticing that the \NetFlows score of an alternative $x$ represents in fact a bipolar-valued characteristic of the assertion ``\emph{alternative x is ranked first}'', we may enhance the \Kohler rule by replacing the simple \emph{min-max} strategy with an \emph{iterated} maximal \NetFlows score selection.
 
-\begin{algorithm}
+\begin{algorithm}[H]
   {\footnotesize
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued digraph $G(X,\succnsim)$,
@@ -499,7 +502,7 @@ Let us finally mention another interesting \emph{ranking-by-choosing} approach.
 
 \emph{N. Tideman}'s \index{Tideman@\emph{N. Tideman}} ranking-by-choosing heuristic, the \RankedPairs rule, working best this time on the non strict outranking digraph $g$, is based on a \emph{prudent incremental} construction of linear orders that avoids on the fly any cycling outranking situations \citep{TID-1987}.
 
-\begin{algorithm}
+\begin{algorithm}[H]
   {\footnotesize
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued digraph $G(X,\succnsim)$,
@@ -541,7 +544,7 @@ The \RankedPairs rule renders in our example here luckily one of the two optimal
 
 Similar to \Kohler 's rule, the \RankedPairs rule has also a prudent dual version, the \emph{Dias-Lamboray} \emph{ordering-by-choosing} rule\index{Dias@\emph{L.C. Dias}}\index{Lamboray@\emph{Cl. Lamboray}}, which produces, when working this time on the dual outranking digraph $-\mathtt{g}$ a similar ranking result (see \citealp*{LAM-2009,DIA-2010}).
 
-Besides of not providing a unique linear ranking, the \emph{ranking-by-choosing} rules, as well as their duals, the \emph{ordering-by-choosing} rules, are unfortunately not scalable to larger outranking digraphs (of orders $> 100$). For such bigger outranking digraphs, with several hundred or thousands of alternatives, only the \Copeland and the \NetFlows \emph{ranking-by-scoring} rules, with a polynomial complexity of $\mathcal{O}(n^2)$, where $n$ is the order of the outranking digraph, remain in fact tractable. Furthermore, as computing the \Copeland and \NetFlows scores may be done separately per alternative, the latter ranking rules can right away be processed in parallel when multiprocessing resources are available.
+Besides of not providing a unique linear ranking, the \emph{ranking-by-choosing} rules, as well as their duals, the \emph{ordering-by-choosing} rules, are unfortunately not scalable to larger outranking digraphs (of orders $> 100$). For such bigger outranking digraphs, with several hundred or thousands of alternatives, only the \Copeland and the \NetFlows \emph{ranking-by-scoring} rules, with a polynomial complexity of $O(n^2)$, where $n$ is the order of the outranking digraph, remain in fact tractable. Furthermore, as computing the \Copeland and \NetFlows scores may be done separately per alternative, the latter ranking rules can right away be processed in parallel when multiprocessing resources are available.
 
 %\vspace{1cm}
 \vspace{\baselineskip}

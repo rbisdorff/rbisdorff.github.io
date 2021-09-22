@@ -68,18 +68,20 @@
 \contentsline {lstlisting}{\numberline {8.9}Optimal {\sc Kemeny}\xspace rankings}{115}{lstlisting.8.9}%
 \contentsline {lstlisting}{\numberline {8.10}Computing the epistemic disjunction of all optimal {\sc Kemeny}\xspace rankings}{115}{lstlisting.8.10}%
 \contentsline {lstlisting}{\numberline {8.11}Computing the consensus quality of the first {\sc Kemeny}\xspace ranking}{115}{lstlisting.8.11}%
-\contentsline {lstlisting}{\numberline {8.12}Computing the consensus quality of the second {\sc Kemeny}\xspace ranking}{116}{lstlisting.8.12}%
+\contentsline {lstlisting}{\numberline {8.12}Computing the consensus quality of the second {\sc Kemeny}\xspace ranking}{117}{lstlisting.8.12}%
 \contentsline {lstlisting}{\numberline {8.13}Computing a {\sc Slater}\xspace ranking}{117}{lstlisting.8.13}%
 \contentsline {lstlisting}{\numberline {8.14}Computing the epistemic disjunction of optimal {\sc Slater}\xspace rankings}{118}{lstlisting.8.14}%
-\contentsline {lstlisting}{\numberline {8.15}Computing a {\sc Kohler}\xspace ranking}{118}{lstlisting.8.15}%
+\contentsline {lstlisting}{\numberline {8.15}Computing a {\sc Kohler}\xspace ranking}{119}{lstlisting.8.15}%
 \contentsline {lstlisting}{\numberline {8.16}Ranking-by-choosing with iterated maximal {\sc NetFlows}\xspace scores}{120}{lstlisting.8.16}%
-\contentsline {lstlisting}{\numberline {8.17}Computing a {\sc RankedPairs}\xspace ranking}{121}{lstlisting.8.17}%
+\contentsline {lstlisting}{\numberline {8.17}Computing a {\sc RankedPairs}\xspace ranking}{122}{lstlisting.8.17}%
 \contentsline {lstlisting}{\numberline {9.1}Computing a quintiles sorting result}{127}{lstlisting.9.1}%
-\contentsline {lstlisting}{\numberline {9.2}Bipolar-valued sorting characteristics (extract)}{128}{lstlisting.9.2}%
-\contentsline {lstlisting}{\numberline {9.3}Weakly ranking the quintiles sorting result}{129}{lstlisting.9.3}%
-\contentsline {lstlisting}{\numberline {9.4}Computing a \emph {pre-ranked} sparse outranking digraph}{130}{lstlisting.9.4}%
-\contentsline {lstlisting}{\numberline {9.5}The quantiles decomposition of a pre-ranked outranking digraph}{130}{lstlisting.9.5}%
-\contentsline {lstlisting}{\numberline {9.6}Functional binary relation characteristics}{131}{lstlisting.9.6}%
+\contentsline {lstlisting}{\numberline {9.2}Inspecting the quantile limits}{127}{lstlisting.9.2}%
+\contentsline {lstlisting}{\numberline {9.3}Computing a quintiles sorting result}{128}{lstlisting.9.3}%
+\contentsline {lstlisting}{\numberline {9.4}Bipolar-valued sorting characteristics (extract)}{128}{lstlisting.9.4}%
+\contentsline {lstlisting}{\numberline {9.5}Weakly ranking the quintiles sorting result}{129}{lstlisting.9.5}%
+\contentsline {lstlisting}{\numberline {9.6}Computing a \emph {pre-ranked} sparse outranking digraph}{130}{lstlisting.9.6}%
+\contentsline {lstlisting}{\numberline {9.7}The quantiles decomposition of a pre-ranked outranking digraph}{131}{lstlisting.9.7}%
+\contentsline {lstlisting}{\numberline {9.8}Functional binary relation characteristics}{132}{lstlisting.9.8}%
 \contentsline {lstlisting}{\numberline {10.1}Computing performance quantiles from a given performance tableau}{137}{lstlisting.10.1}%
 \contentsline {lstlisting}{\numberline {10.2}Printing out the estimated quartile limits}{137}{lstlisting.10.2}%
 \contentsline {lstlisting}{\numberline {10.3}Generating 100 new random decision alternatives of the same model}{138}{lstlisting.10.3}%
@@ -152,7 +154,7 @@
 \contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{239}{lstlisting.17.10}%
 \contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{240}{lstlisting.17.11}%
 \contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{242}{lstlisting.17.12}%
-\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{243}{lstlisting.17.13}%
+\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{242}{lstlisting.17.13}%
 \contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{243}{lstlisting.17.14}%
 \contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{246}{lstlisting.17.15}%
 \contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{246}{lstlisting.17.16}%
