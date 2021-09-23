@@ -1,9 +1,9 @@
 \chapter{The best students, where do they study? A rating case study}
 \label{sec:14}
 
-\abstract*{ In 2004, the German magazine \emph{Der Spiegel}, with the help of \emph{McKinsey \& Company} and \emph{AOL}, conducted an extensive online survey, assessing the apparent quality of German University students \citep{SPI-2004}. The eventually published results by the \emph{Spiegel} magazine concerned nearly 50,000 students, enrolled in one of fifteen popular academic subjects, like \emph{German Studies}, \emph{Life Sciences}, \emph{Psychology}, \emph{Law}  or \emph{CS}. Based on this published data, we present and discuss in this chapter, how to \emph{rate} with the help of our \Digraph software ressources the apparent global \emph{enrolment quality} of new performance records.}
+\abstract*{ In 2004, the German magazine \emph{Der Spiegel}, with the help of \emph{McKinsey \& Company} and \emph{AOL}, conducted an extensive online survey, assessing the apparent quality of German University students \citep{SPI-2004}. The eventually published results by the \emph{Spiegel} magazine concerned nearly 50,000 students, enrolled in one of fifteen popular academic subjects, like \emph{German Studies}, \emph{Life Sciences}, \emph{Psychology}, \emph{Law}  or \emph{CS}. Based on this published data, we present and discuss in this chapter, how to \emph{rate} with the help of our \Digraph software resources the apparent global \emph{enrolment quality} of new performance records.}
 
-\abstract{ In 2004, the German magazine \emph{Der Spiegel}, with the help of \emph{McKinsey \& Company} and \emph{AOL}, conducted an extensive online survey, assessing the apparent quality of German University students. The eventually published results by the \emph{Spiegel} magazine concerned nearly 50,000 students, enrolled in one of fifteen popular academic subjects, like \emph{German Studies}, \emph{Life Sciences}, \emph{Psychology}, \emph{Law}  or \emph{CS}. Based on this published data, we present and discuss in this chapter, how to \emph{rate} with the help of our \Digraph software ressources the apparent global \emph{enrolment quality} of new performance records.}
+\abstract{ In 2004, the German magazine \emph{Der Spiegel}, with the help of \emph{McKinsey \& Company} and \emph{AOL}, conducted an extensive online survey, assessing the apparent quality of German University students. The eventually published results by the \emph{Spiegel} magazine concerned nearly 50,000 students, enrolled in one of fifteen popular academic subjects, like \emph{German Studies}, \emph{Life Sciences}, \emph{Psychology}, \emph{Law}  or \emph{CS}. Based on this published data, we present and discuss in this chapter, how to \emph{rate} with the help of our \Digraph software resources the apparent global \emph{enrolment quality} of new performance records.}
 
 \section{The rating problem}
 \label{sec:14.1}
@@ -238,7 +238,7 @@ dot -Grankdir=TB -Tpng fusionResult.dot\
 
 The fusion of the three rating-by-ranking results is shown in Figure~\vref{fig:14.5} where we see that they diverge solely in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}. In Listing~\vref{list:14.5} Lines 12-14, one may more precisely notice that the \Kemeny and \Copeland rules rate \texttt{U3} in the first quintile ($[0.00- 0.20[$), whereas the \NetFlows rule puts \texttt{U3} together with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$). And, the \Kemeny rule inverts the position of \texttt{U2} and \texttt{U4}.
 
-In Listing~\vref{list:14.5}, the \texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}} reveals finally how fair \Kemeny and \Copeland rules actually balance the fifteen academic subjects. 
+In Listing~\vref{list:14.5}, the \texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}} reveals finally how fairly \Kemeny and \Copeland rules actually balance the fifteen academic subjects. 
 \begin{lstlisting}[caption={Checking the consensus quality of \Kemeny and \Copeland rankings},label=list:14.5,basicstyle=\ttfamily\scriptsize]
 >>> lqr.showRankingConsensusQuality(ke.kemenyRanking)
 Consensus quality of ranking:
@@ -340,7 +340,7 @@ U3 in [0.60 - 0.80[	 -0.53		 0.67		 -0.53
 U3 in [0.80 - <[	 -0.67		 1.00		 -0.67
 \end{lstlisting}
 
-The performance record of University U5 cannot be positively rated into a precise quintile, but both the fourth and the fifth quintile are note positively excluded as rating result. Otherwise, the bipolar-valued sorting characteristics verify the rating-by-ranking result we obtained previously with the \Kemeny and \Copeland rating-by-ranking result. 
+The performance record of University U5 cannot be positively rated into a precise quintile, but both the fourth and the fifth quintile are not positively excluded as rating result. Otherwise, the bipolar-valued sorting characteristics verify the rating-by-ranking result we obtained previously with the \Kemeny and \Copeland rating-by-ranking result. 
 The \texttt{showActionsSortingResult()} method\index{showActionsSortingResult@\texttt{showActionsSortingResult()}} prints the eventual quintiles rating result:
 \begin{lstlisting}[caption={Showing a quintiles rating-by-sorting result},label=list:14.7]
 >>> lqr.showActionsSortingResult()
@@ -356,7 +356,7 @@ The quintiles rating-by-sorting result, shown in Listing~\vref{list:14.7}, confi
 
 %\vspace{1cm}
 \vspace{\baselineskip}
-Let us conclude this hypothetical rating cae study, by saying that we prefer this latter rating-by-sorting approach; perhaps impreciser, due the case given, to missing and contradictory performance data; yet, well grounded in a powerful bipolar-valued logic and epistemic framework. The next Chapter~\ref{sec:15} proposes a series of decision problems suitable for exercises and exam questions.
+Let us conclude this hypothetical rating case study, by saying that we prefer this latter rating-by-sorting approach; perhaps less precise, due the case given, to missing and contradictory performance data; yet, well grounded in a powerful bipolar-valued logic and epistemic framework. The next Chapter~\ref{sec:15} proposes a series of decision problems suitable for exercises and exam questions.
  
 %%%%%%% The chapter bibliography
 %\normallatexbib
