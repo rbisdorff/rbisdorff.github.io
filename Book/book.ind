@@ -80,7 +80,7 @@
   \item \texttt{convertEvaluation2Decimal()}\idxquad \hyperpage{149}
   \item \texttt{convertWeight2Decimal()}\idxquad \hyperpage{149}
   \item \emph  {A.H. Copeland}\idxquad \hyperpage{110}
-  \item \texttt{CopelandRanking} class\idxquad \hyperpage{110}
+  \item \texttt{CopelandRanking} class\idxquad \hyperpage{111}
   \item \texttt{cPerformanceTableau} class\idxquad \hyperpage{148}
   \item \texttt{cQuantilesRankingDigraph} class\idxquad \hyperpage{154}
   \item \texttt{cRandomPerformanceTableau} class\idxquad 
@@ -94,7 +94,7 @@
   \indexspace
 {\bf D}\nopagebreak%
  \indexspace\nopagebreak%
-  \item \emph{L.C. Dias}\idxquad \hyperpage{122}
+  \item \emph{L.C. Dias}\idxquad \hyperpage{123}
   \item \texttt{Digraph} class\idxquad \hyperpage{15}
   \item \texttt{digraph2Graph()}\idxquad \hyperpage{309}
   \item \texttt{digraphsTools} module\idxquad \hyperpage{150}
@@ -163,22 +163,22 @@
   \item \texttt{isPermutationGraph()}\idxquad \hyperpage{334}
   \item \texttt{isSplitGraph()}\idxquad \hyperpage{334}
   \item \texttt{isTree()}\idxquad \hyperpage{326}
-  \item \texttt{IteratedNetFlowsRanking} class\idxquad \hyperpage{120}
+  \item \texttt{IteratedNetFlowsRanking} class\idxquad \hyperpage{121}
 
   \indexspace
 {\bf K}\nopagebreak%
  \indexspace\nopagebreak%
-  \item \texttt{KemenyRanking} class\idxquad \hyperpage{114}
+  \item \texttt{KemenyRanking} class\idxquad \hyperpage{115}
   \item \emph{M.G. Kendall}\idxquad \hyperpage{44},\,\hyperpage{220}
-  \item \emph{G. Kohler}\idxquad \hyperpage{118}
+  \item \emph{G. Kohler}\idxquad \hyperpage{120}
 
   \indexspace
 {\bf L}\nopagebreak%
  \indexspace\nopagebreak%
-  \item \emph{Cl. Lamboray}\idxquad \hyperpage{122}
+  \item \emph{Cl. Lamboray}\idxquad \hyperpage{123}
   \item \texttt{LearnedQuantilesRatingDigraph} class\idxquad 
 		\hyperpage{138},\,\hyperpage{199}
-  \item \texttt{linearOrders} module\idxquad \hyperpage{110},\,
+  \item \texttt{linearOrders} module\idxquad \hyperpage{111},\,
 		\hyperpage{225}
   \item \texttt{LinearVotingProfile} class\idxquad \hyperpage{93}
   \item \texttt{LineGraph} class\idxquad \hyperpage{312}
@@ -264,11 +264,11 @@
   \item \texttt{RandomTree} class\idxquad \hyperpage{323}
   \item \texttt{RandomValuationDigraph} class\idxquad \hyperpage{21}
   \item \texttt{RandomValuationGraph} class\idxquad \hyperpage{329}
-  \item \texttt{RankedPairsRanking} class\idxquad \hyperpage{122}
+  \item \texttt{RankedPairsRanking} class\idxquad \hyperpage{123}
   \item \texttt{RankingByChoosingDigraph} class\idxquad \hyperpage{59},\,
 		\hyperpage{169}
-  \item \texttt{RankingsFusion} class\idxquad \hyperpage{115}
-  \item \texttt{RankingsFusionDigraph} class\idxquad \hyperpage{202}
+  \item \texttt{RankingsFusionDigraph} class\idxquad \hyperpage{115},\,
+		\hyperpage{202}
   \item \texttt{readPerrinMisset()}\idxquad \hyperpage{319}
   \item \emph{recodeValuation()}\idxquad \hyperpage{42}
   \item \texttt{RobustOutrankingDigraph} class\idxquad \hyperpage{182},\,
@@ -325,7 +325,8 @@
 		\hyperpage{187}
   \item \texttt{showPerformanceTableau()}\idxquad \hyperpage{39},\,
 		\hyperpage{72},\,\hyperpage{140}
-  \item \texttt{showPolarisations()}\idxquad \hyperpage{167}
+  \item \texttt{showPolarisations()}\idxquad \hyperpage{167},\,
+		\hyperpage{275}
   \item \texttt{showPreKernels()}\idxquad \hyperpage{240},\,
 		\hyperpage{286}
   \item \texttt{showQuantilesRating()}\idxquad \hyperpage{141},\,
@@ -333,7 +334,7 @@
   \item \texttt{showRankAnalysisTable()}\idxquad \hyperpage{95}
   \item \texttt{showRankingByChoosing()}\idxquad \hyperpage{104}
   \item \texttt{showRankingConsensusQua\-lity()}\idxquad \hyperpage{90},\,
-		\hyperpage{115},\,\hyperpage{190},\,\hyperpage{202}
+		\hyperpage{116},\,\hyperpage{190},\,\hyperpage{202}
   \item \texttt{showRelationMap()}\idxquad \hyperpage{152}
   \item \texttt{showRelationTable()}\idxquad \hyperpage{22},\,
 		\hyperpage{40},\,\hyperpage{73}
@@ -345,7 +346,7 @@
 		\hyperpage{82}
   \item \texttt{showTransitionMatrix()}\idxquad \hyperpage{317}
   \item \emph{P. Slater}\idxquad \hyperpage{117}
-  \item \texttt{SlaterRanking} class\idxquad \hyperpage{117}
+  \item \texttt{SlaterRanking} class\idxquad \hyperpage{118}
   \item \texttt{sortingDigraphs} module\idxquad \hyperpage{127},\,
 		\hyperpage{199}
   \item \texttt{SparseIntegerOutrankingDigraph} class\idxquad 
@@ -366,12 +367,12 @@
  \indexspace\nopagebreak%
   \item THE University rankings 2016 by CS subject\idxquad 
 		\hyperpage{175}
-  \item \emph{N. Tideman}\idxquad \hyperpage{121}
+  \item \emph{N. Tideman}\idxquad \hyperpage{122}
   \item \texttt{total\_size()}\idxquad \hyperpage{150}
   \item \texttt{TransitiveDigraph} class\idxquad \hyperpage{29},\,
 		\hyperpage{172}
   \item \texttt{transitiveDigraphs} module\idxquad \hyperpage{59},\,
-		\hyperpage{111},\,\hyperpage{113},\,\hyperpage{169}
+		\hyperpage{111},\,\hyperpage{114},\,\hyperpage{169}
   \item \texttt{transitiveOrientation()}\idxquad \hyperpage{339}
   \item \texttt{tree2Pruefer()}\idxquad \hyperpage{326}
   \item \texttt{TreeGraph()}\idxquad \hyperpage{326}
@@ -397,6 +398,6 @@
   \item weak tournament\idxquad \hyperpage{97}
   \item \texttt{WeakCopelandOrder} class\idxquad \hyperpage{111}
   \item weakly complete\idxquad \hyperpage{54}
-  \item \texttt{WeakNetFlowsOrder} class\idxquad \hyperpage{113}
+  \item \texttt{WeakNetFlowsOrder} class\idxquad \hyperpage{114}
 
 \end{theindex}

@@ -104,13 +104,13 @@ Now, several heuristic ranking rules have been proposed for constructing a linea
 \label{sec:8.2}
 
 \begin{algorithm}[H]
-    {\footnotesize
+    {\normalsize
 \begin{itemize}
  \item [] \emph{in} : median-cut strict outranking digraph $G(X,\succnsim_{>0})$,
  \item [] \emph{out} : linear ranking of the set $X$ of decision actions.
 \end{itemize}
   \begin{enumerate}
-    \item The \Copeland ranking rule computes for each alternative a score resulting from the sum for all non-reflexive pairs of alternatives of the differences between the crisp \emph{strict outranking} characteristics $r(x\, \succnsim_{>0} \,y)$ and the crisp \emph{strict outranked} characteristics $r(y\, \succnsim_{>0} \, x)$.
+    \item For each alternative$x \in X$, the \Copeland ranking rule computes a score resulting from the sum over all non-reflexive pairs $(x,y)$  of the differences between the crisp \emph{strict outranking} characteristics $r(x\, \succnsim_{>0} \,y)$ and the crisp \emph{strict outranked} characteristics $r(y\, \succnsim_{>0} \, x)$.
     \item  The alternatives are ranked in decreasing order of these \Copeland scores; ties, the case given, being resolved with a lexicographical rule applied to the identifiers of the decision actions. 
     \end{enumerate}
     }
@@ -187,7 +187,7 @@ Let us now consider a similar ranking rule, but working directly on the criteria
 The bipolar-valued version of the \Copeland ranking rule, we call \NetFlows \footnote{This ranking rule is also known under the name \Promethee ranking rule \citep*{BRA-1985}.}, computes for each alternative $x \in X$ a \emph{net flow} score.
 
 \begin{algorithm}[H]
-  {\footnotesize
+  {\normalsize
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued strict outranking digraph $G(X,\succnsim)$,
  \item [] \emph{out} : linear ranking of the set $X$ of decision aactions.
@@ -278,14 +278,15 @@ A \Kemeny ranking may not be unique. In our example here, we obtain in fact two 
   Decimal('12.9166667')
 \end{lstlisting}
 
-Figure~\vref{fig:8.3} shows the partial order defined by the epistemic disjunction of both optimal \Kemeny rankings obtained with the \texttt{RankingsFu\-sion} class\index{RankingsFusion@\texttt{RankingsFusion} class} (see Sec.~\ref{sec:2.5}).
+Figure~\vref{fig:8.3} shows the partial order defined by the epistemic disjunction of both optimal \Kemeny rankings obtained with the \texttt{RankingsFu\-sionDigraph} class\index{RankingsFusionDigraph@\texttt{RankingsFusionDigraph} class} (see Sec.~\ref{sec:2.5}).
 \begin{lstlisting}[caption={Computing the epistemic disjunction of all optimal \Kemeny rankings},label=list:8.10]   
->>> from transitiveDigraphs import RankingsFusion
->>> wke = RankingsFusion(ke,ke.maximalRankings)
+>>> from transitiveDigraphs import RankingsFusionDigraph
+>>> wke = RankingsFusionDigraph(ke,ke.maximalRankings)
 >>> wke.exportGraphViz(fileName='tutorialKemeny')
  *---- exporting a dot file for GraphViz tools ---------*
   Exporting to tutorialKemeny.dot
-  dot -Grankdir=TB -Tpng tutorialKemeny.dot -o tutorialKemeny.png
+  dot -Grankdir=TB -Tpng tutorialKemeny.dot\
+                   -o tutorialKemeny.png
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
@@ -361,10 +362,10 @@ The \Slater ranking rule is identical to the \Kemeny rule, but it is working, in
   7 §\label{line:8.13.12}§
 \end{lstlisting}
 
-We notice in Listing~\ref{list:8.13} above that the \Slater ranking shown in Line~\ref{line:8.13.4} represents a rather good fit ($+0.676$), slightly better apparently than the \NetFlows ranking result ($+0.638$). However, there are in fact 7 such optimal \Slater rankings (see Line~\ref{line:8.13.12}). The corresponding epistemic disjunction, again with the \texttt{RankingsFusion} class from the \texttt{transitiveDigraphs} module, gives the partial ordering shown in Figure~\vref{fig:8.4}:
+We notice in Listing~\ref{list:8.13} above that the \Slater ranking shown in Line~\ref{line:8.13.4} represents a rather good fit ($+0.676$), slightly better apparently than the \NetFlows ranking result ($+0.638$). However, there are in fact 7 such optimal \Slater rankings (see Line~\ref{line:8.13.12}). The corresponding epistemic disjunction, again with the \texttt{RankingsFusionDigraph} class from the \texttt{transitiveDigraphs} module, gives the partial ordering shown in Figure~\vref{fig:8.4}:
 \begin{lstlisting}[caption={Computing the epistemic disjunction of optimal \Slater rankings},label=list:8.14]
->>> from transitiveDigraphs import RankingsFusion
->>> slw = RankingsFusion(sl,sl.maximalRankings)
+>>> from transitiveDigraphs import RankingsFusionDigraph
+>>> slw = RankingsFusionDigraph(sl,sl.maximalRankings)
 >>> slw.exportGraphViz(fileName='tutorialSlater')
  *---- exporting a dot file for GraphViz tools ----*
   Exporting to tutorialSlater.dot
@@ -386,7 +387,7 @@ More computationally efficient ranking heuristics, like the \Copeland and \NetFl
 \label{sec:8.6}
 
 \begin{algorithm}[H]\index{Kohler@\emph{G. Kohler}}
-  {\footnotesize
+  {\normalsize
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued digraph $G(X,\succnsim)$,
  \item [] \emph{out} : linear ranking of the set $X$ of decision actions.
@@ -432,7 +433,7 @@ But the \Kohler rule has a \emph{dual} version, the prudent \emph{Arrow-Raynaud}
 Noticing that the \NetFlows score of an alternative $x$ represents in fact a bipolar-valued characteristic of the assertion ``\emph{alternative x is ranked first}'', we may enhance the \Kohler rule by replacing the simple \emph{min-max} strategy with an \emph{iterated} maximal \NetFlows score selection.
 
 \begin{algorithm}[H]
-  {\footnotesize
+  {\normalsize
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued digraph $G(X,\succnsim)$,
  \item [] \emph{out} : linear ranking of the set $X$ of $n$ decision actions.
@@ -497,13 +498,15 @@ With different \emph{ranking-by-choosing} and \emph{ordering-by-choosing} result
 
 Let us finally mention another interesting \emph{ranking-by-choosing} approach.
 
+\vspace{\baselineskip}
+
 \section{The \RankedPairs ranking rule}
 \label{sec:8.7}
 
 \emph{N. Tideman}'s \index{Tideman@\emph{N. Tideman}} ranking-by-choosing heuristic, the \RankedPairs rule, working best this time on the non strict outranking digraph $g$, is based on a \emph{prudent incremental} construction of linear orders that avoids on the fly any cycling outranking situations \citep{TID-1987}.
 
 \begin{algorithm}[H]
-  {\footnotesize
+  {\normalsize
 \begin{itemize}
  \item [] \emph{in} : bipolar-valued digraph $G(X,\succnsim)$,
  \item [] \emph{out} : linear ranking of the set $X$ of decision actions.

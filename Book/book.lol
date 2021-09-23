@@ -61,19 +61,19 @@
 \contentsline {lstlisting}{\numberline {8.2}Median cut polarised strict outranking relation characteristics}{108}{lstlisting.8.2}%
 \contentsline {lstlisting}{\numberline {8.3}Computing a {\sc Copeland}\xspace Ranking}{111}{lstlisting.8.3}%
 \contentsline {lstlisting}{\numberline {8.4}Checking the ordinal quality of the {\sc Copeland}\xspace ranking}{111}{lstlisting.8.4}%
-\contentsline {lstlisting}{\numberline {8.5}Computing a weak {\sc Copeland}\xspace ranking}{111}{lstlisting.8.5}%
+\contentsline {lstlisting}{\numberline {8.5}Computing a weak {\sc Copeland}\xspace ranking}{112}{lstlisting.8.5}%
 \contentsline {lstlisting}{\numberline {8.6}Computing a {\sc NetFlows}\xspace ranking}{113}{lstlisting.8.6}%
 \contentsline {lstlisting}{\numberline {8.7}Checking the quality of the {\sc NetFlows}\xspace Ranking}{114}{lstlisting.8.7}%
 \contentsline {lstlisting}{\numberline {8.8}Computing a {\sc Kemeny}\xspace ranking}{115}{lstlisting.8.8}%
 \contentsline {lstlisting}{\numberline {8.9}Optimal {\sc Kemeny}\xspace rankings}{115}{lstlisting.8.9}%
 \contentsline {lstlisting}{\numberline {8.10}Computing the epistemic disjunction of all optimal {\sc Kemeny}\xspace rankings}{115}{lstlisting.8.10}%
-\contentsline {lstlisting}{\numberline {8.11}Computing the consensus quality of the first {\sc Kemeny}\xspace ranking}{115}{lstlisting.8.11}%
+\contentsline {lstlisting}{\numberline {8.11}Computing the consensus quality of the first {\sc Kemeny}\xspace ranking}{116}{lstlisting.8.11}%
 \contentsline {lstlisting}{\numberline {8.12}Computing the consensus quality of the second {\sc Kemeny}\xspace ranking}{117}{lstlisting.8.12}%
-\contentsline {lstlisting}{\numberline {8.13}Computing a {\sc Slater}\xspace ranking}{117}{lstlisting.8.13}%
+\contentsline {lstlisting}{\numberline {8.13}Computing a {\sc Slater}\xspace ranking}{118}{lstlisting.8.13}%
 \contentsline {lstlisting}{\numberline {8.14}Computing the epistemic disjunction of optimal {\sc Slater}\xspace rankings}{118}{lstlisting.8.14}%
-\contentsline {lstlisting}{\numberline {8.15}Computing a {\sc Kohler}\xspace ranking}{119}{lstlisting.8.15}%
-\contentsline {lstlisting}{\numberline {8.16}Ranking-by-choosing with iterated maximal {\sc NetFlows}\xspace scores}{120}{lstlisting.8.16}%
-\contentsline {lstlisting}{\numberline {8.17}Computing a {\sc RankedPairs}\xspace ranking}{122}{lstlisting.8.17}%
+\contentsline {lstlisting}{\numberline {8.15}Computing a {\sc Kohler}\xspace ranking}{120}{lstlisting.8.15}%
+\contentsline {lstlisting}{\numberline {8.16}Ranking-by-choosing with iterated maximal {\sc NetFlows}\xspace scores}{121}{lstlisting.8.16}%
+\contentsline {lstlisting}{\numberline {8.17}Computing a {\sc RankedPairs}\xspace ranking}{123}{lstlisting.8.17}%
 \contentsline {lstlisting}{\numberline {9.1}Computing a quintiles sorting result}{127}{lstlisting.9.1}%
 \contentsline {lstlisting}{\numberline {9.2}Inspecting the quantile limits}{127}{lstlisting.9.2}%
 \contentsline {lstlisting}{\numberline {9.3}Computing a quintiles sorting result}{128}{lstlisting.9.3}%
@@ -162,7 +162,7 @@
 \contentsline {lstlisting}{\numberline {17.17}Computing dominant and absorbent preKernels}{247}{lstlisting.17.17}%
 \contentsline {lstlisting}{\numberline {17.18}Verifying the kernel equation system on a tiny random digraph}{248}{lstlisting.17.18}%
 \contentsline {lstlisting}{\numberline {17.19}Computing a dominant prekernel restricted adjancecy table}{250}{lstlisting.17.19}%
-\contentsline {lstlisting}{\numberline {17.20}Fixpoint iterations for initial prekernel \texttt {\{a1, a2, a4\}}}{250}{lstlisting.17.20}%
+\contentsline {lstlisting}{\numberline {17.20}Fixpoint iterations for initial prekernel \texttt {\{a1, a2, a4\}}}{251}{lstlisting.17.20}%
 \contentsline {lstlisting}{\numberline {18.1}$90\%$-confident outranking relation with triangular distributed significance weights}{262}{lstlisting.18.1}%
 \contentsline {lstlisting}{\numberline {18.2}$99\%$-confident outranking relation}{264}{lstlisting.18.2}%
 \contentsline {lstlisting}{\numberline {18.3}$90\%$-confident outranking digraph with uniform variates}{265}{lstlisting.18.3}%
@@ -173,9 +173,9 @@
 \contentsline {lstlisting}{\numberline {19.5}Comparison of alternatives \texttt {p2} and \texttt {p1}}{271}{lstlisting.19.5}%
 \contentsline {lstlisting}{\numberline {19.6}Comparison of alternatives \texttt {p7} and \texttt {p3}}{272}{lstlisting.19.6}%
 \contentsline {lstlisting}{\numberline {19.7}Computing a robust outranking digraph}{274}{lstlisting.19.7}%
-\contentsline {lstlisting}{\numberline {19.8}Comparing alternatives \texttt {p2} and \texttt {p4}}{275}{lstlisting.19.8}%
-\contentsline {lstlisting}{\numberline {19.9}Computing a robust performance heatmap view}{277}{lstlisting.19.9}%
-\contentsline {lstlisting}{\numberline {19.10}Computing unopposed outranking situations}{279}{lstlisting.19.10}%
+\contentsline {lstlisting}{\numberline {19.8}Inspecting polarised outranking situations}{275}{lstlisting.19.8}%
+\contentsline {lstlisting}{\numberline {19.9}Computing a robust performance heatmap view}{276}{lstlisting.19.9}%
+\contentsline {lstlisting}{\numberline {19.10}Computing unopposed outranking situations}{278}{lstlisting.19.10}%
 \contentsline {lstlisting}{\numberline {19.11}Computing unopposed outranking digraphs}{279}{lstlisting.19.11}%
 \contentsline {lstlisting}{\numberline {19.12}Example of unopposed multiobjective outranking situation}{280}{lstlisting.19.12}%
 \contentsline {lstlisting}{\numberline {19.13}Pareto efficient multiobjective choice}{280}{lstlisting.19.13}%

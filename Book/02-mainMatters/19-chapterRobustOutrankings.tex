@@ -99,13 +99,13 @@ Such a \emph{stability denotation}\index{stability denotation} of outranking sit
    r/(stab)  |  'p1'  'p2'  'p3'  'p4'  'p5'  'p6'  'p7'   
    ----------|------------------------------------------
      'p1'    | +1.00 -0.42 +0.00 -0.69 +0.39 +0.11 -0.06  
-             |  (+4)  (-2)  (+0)  (-3)  (+2)  (+2)  (-1)  
+             |  (+4)  (-2)  (+0)  (-3)  (+2)  (+2)  (-1)  §\label{line:19.4.6}§
      'p2'    | +0.58 +1.00 +0.83  0.00 +0.58 +0.58 +0.58  
-             |  (+2)  (+4)  (+3)  (+2)  (+2)  (+2)  (+2)  
+             |  (+2)  (+4)  (+3)  (+2)  (+2)  (+2)  (+2)  §\label{line:19.4.8}§
      'p3'    | +0.25 -0.33 +1.00  0.00 +0.50 +1.00 +0.25  
              |  (+2)  (-2)  (+4)   (0)  (+2)  (+2)  (+1)  
-     'p4'    | +0.78  0.00 +0.61 +1.00 +1.00 +1.00 +0.67  
-             |  (+3)  (-1)  (+3)  (+4)  (+4)  (+4)  (+2)  
+     'p4'    | +0.78  0.00 +0.61 +1.00 +1.00 +1.00 +0.67  §\label{line:19.4.11}§
+             |  (+3)  (-1)  (+3)  (+4)  (+4)  (+4)  (+2)  §\label{line:19.4.12}§
      'p5'    | -0.11 -0.50 -0.25 -0.89 +1.00 +0.11 -0.14  
              |  (-2)  (-2)  (-2)  (-3)  (+4)  (+2)  (-2)  
      'p6'    | +0.22 -0.42  0.00 -1.00 +0.17 +1.00 -0.11
@@ -306,13 +306,13 @@ Using this stability denotation, we may, hence, define the following \emph{robus
 \begin{itemize}
 \item We say that decision alternative \texttt{x} \emph{robustly outranks} decision alternative \texttt{y} when:
 \begin{itemize}[nosep]
-\item \texttt{x} positively outranks \texttt{y} at stability level $+2$ or higher and
-\item we may not observe any considerable counter-performance of \texttt{x} on a discordant criterion.
+\item \texttt{x} is at least as well evaluated as \texttt{y} at stability level $+2$ or higher and
+\item we do not observe any considerable counter-performance of \texttt{x} on a discordant criterion.
 \end{itemize}
 \item Dually, we say that decision alternative \texttt{x} \emph{does not robustly outrank} decision alternative \texttt{y} when:
 \begin{itemize}[nosep]
-\item \texttt{x} is positively outranked by \texttt{y} at stability level $-2$ or lower and
-\item we may not observe any considerable better performance of \texttt{x} on a discordant criterion.
+\item \texttt{x} is not at least as well evaluated as \texttt{y} at stability level $-2$ or lower and
+\item we do not observe any considerable better performance of \texttt{x} on a discordant criterion.
 \end{itemize}
 \item Otherwise the outranking situation is indeterminate.
 \end{itemize}
@@ -342,9 +342,9 @@ The corresponding \emph{robust} outranking digraph can be computed as follows wi
   * ---- Relation Table -----
    r/(stab) |  'p1'  'p2'  'p3'  'p4'  'p5'  'p6'  'p7'   
    ---------|------------------------------------------
-     'p1'   | +1.00 -0.42 +0.00 -0.69 +0.39 +0.11 +0.00  
+     'p1'   | +1.00 -0.42 +0.00 -0.69 +0.39 +0.11 +0.00  §\label{line:19.7.23}§
             |  (+4)  (-2)  (+0)  (-3)  (+2)  (+2)  (-1)  
-     'p2'   | +0.58 +1.00 +0.83 +0.00 +0.58 +0.58 +0.58  
+     'p2'   | +0.58 +1.00 +0.83 +0.00 +0.58 +0.58 +0.58  §\label{line:19.7.25}§
             |  (+2)  (+4)  (+3)  (+2)  (+2)  (+2)  (+2)  
      'p3'   | +0.25 -0.33 +1.00 +0.00 +0.50 +1.00 +0.00  
             |  (+2)  (-2)  (+4)  (+0)  (+2)  (+2)  (+1)  
@@ -355,55 +355,36 @@ The corresponding \emph{robust} outranking digraph can be computed as follows wi
      'p6'   | +0.22 -0.42 +0.00 -1.00 +0.17 +1.00 -0.11  
             |  (+2)  (-2)  (+1)  (-2)  (+2)  (+4)  (-2)  
      'p7'   | +0.22 -0.50 +0.00 +0.00 +0.78 +0.42 +1.00  
-            |  (+2)  (-2)  (+1)  (-1)  (+3)  (+2)  (+4)  
+            |  (+2)  (-2)  (+1)  (-1)  (+3)  (+2)  (+4)  §\label{line:19.7.36}§
 \end{lstlisting}
 
-All outranking situations, qualified at stability level $\pm 1$, are now put to an \emph{indeterminate} status (see List.~\ref{list:19.7} Lines 23-24 Column \texttt{p7}). In the example here, three positive outrankings get dropped: between \texttt{p3} and \texttt{p7}, between \texttt{p7} and \texttt{p3}, and between \texttt{p6} and \texttt{p3}, where the last situation is actually already doubtful because of a veto situation (see List.~\vref{list:19.7} Lines 22-35). Three negative outrankings get dropped as well: between \texttt{p1} and \texttt{p7}, between \texttt{p4} and \texttt{p2}, and between \texttt{p7} and \texttt{p4} (see Lines 22-35).
+All outranking situations, qualified at stability level $\pm 1$, are now put to an \emph{indeterminate} status (see List.~\ref{list:19.7} Lines~\ref{line:19.7.23}-\ref{line:19.7.36} above). In the example here, three positive outrankings get dropped: between \texttt{p3} and \texttt{p7}, between \texttt{p7} and \texttt{p3}, and between \texttt{p6} and \texttt{p3}, where the last situation is actually already doubtful because of a veto situation. Three negative outrankings get dropped as well: between \texttt{p1} and \texttt{p7}, between \texttt{p4} and \texttt{p2}, and between \texttt{p7} and \texttt{p4}.
 
-Notice by the way that outranking or outranked situations, although qualified at level $\pm 2$ or $\pm 3$ may nevertheless become doubtful because of considerable performance differences. We observe such a doubtful situation when comparing, for instance, alternatives \texttt{p2} and \texttt{p4} (see List.~\vref{list:19.7} Lines 24-25).
-\begin{lstlisting}[caption={Comparing alternatives \texttt{p2} and \texttt{p4}},label=list:19.8,basicstyle=\ttfamily\scriptsize]
->>> rg.showPairwiseComparison('p2','p4')
-   *------------  pairwise comparison ----*
-    Comparing actions : (p2, p4)
-    crit. wght.  g(x)  g(y)    diff  	| ind   pref    r() 	|   v    veto
-    -------------------------------------------------------------------------
-    ec1   8.00  89.77  85.19  +4.58 	| 5.00  10.00   +8.00 	| 
-    ec4   8.00  86.00  72.26  +13.74 	| 5.00  10.00   +8.00 	| 
-    ec8   8.00  89.43  44.62  +44.81 	| 5.00  10.00   +8.00 	| 
-    en3   6.00  20.79  80.81  -60.02 	| 5.00  10.00   -6.00 	| 60.00 -1.00
-    en5   6.00  23.83  49.69  -25.86 	| 5.00  10.00   -6.00 	| 
-    en6   6.00  18.66  66.21  -47.55 	| 5.00  10.00   -6.00 	| 
-    en9   6.00  26.65  50.92  -24.27 	| 5.00  10.00   -6.00 	| 
-    so2   12.00  89.12  49.05  +40.07 	| 5.00  10.00  +12.00 	| 
-    so7   12.00  84.73  55.57  +29.16 	| 5.00  10.00  +12.00   |
-    Valuation in range: -72.00 to +72.00;             -------
-                                   global concordance: +24.00      
+Notice by the way that outranking or outranked situations, although qualified at level $\pm 2$ or $\pm 3$ may nevertheless become doubtful because of considerable performance differences. We observe such a doubtful situation when comparing, for instance, alternatives \texttt{p2} and \texttt{p4} (see List.~\vref{list:19.8} Lines~\ref{line:19.8.4}-\ref{line:19.8.8})\index{showPolarisations@\texttt{showPolarisations()}}.
+\begin{lstlisting}[caption={Inspecting polarised outranking situations},label=list:19.8,basicstyle=\ttfamily\scriptsize]
+>>> rg.showPolarisations()
+*----  Negative polarisations ----*
+number of negative polarisations : 3 
+1: r(p2 >= p4) = 0.33                          §\label{line:19.8.4}§
+criterion: en3
+Considerable performance difference : -60.02
+Veto discrimination threshold       : -60.00
+Polarisation: r(p2 >= p4) = 0.33 ==> 0.00      §\label{line:19.8.8}§
+2: r(p6 >= p3) = 0.06
+criterion: ec8
+Considerable performance difference : -62.31
+Veto discrimination threshold       : -60.00
+Polarisation: r(p6 >= p3) = 0.06 ==> 0.00      §\label{line:19.8.13}§
+3: r(p6 >= p4) = -0.36
+criterion: en3
+Considerable performance difference : -68.27
+Veto discrimination threshold       : -60.00
+Polarisation: r(p6 >= p4) = -0.36 ==> -1.00    §\label{line:19.8.18}§
 \end{lstlisting}
 
-Despite being robust, the apparent positive outranking situation between alternatives \texttt{p2} and \texttt{p4} becomes doubtful because of a considerable counter-performance ($-60.02$) of \texttt{p2} observed on criterion \texttt{en3}, a negative difference which exceeds slightly the assumed veto discrimination threshold $v = 60.00$ (see List.~\vref{list:19.8} Line 9).
+Despite being robust, the ``\emph{at least as well evaluated as}'' situation between alternatives \texttt{p2} and \texttt{p4} becomes doubtful because of a considerable counter-performance ($-60.02$) of \texttt{p2} observed on criterion \texttt{en3}, a negative difference which exceeds slightly the assumed veto discrimination threshold $v = 60.00$ . Same polarisation to $0.00$ (indeterminate) happens when comparing alternatives \texttt{p6} and \texttt{p3} (Line~\ref{line:19.8.13}). Notice the polarisation to $-1.0$ (certainly false) of the ``\emph{at least as well evaluated as}'' situation between alternatives \texttt{p6} and \texttt{p4} (Line~\ref{line:19.8.18}).  
 
 One may finally compare in Figure~\vref{fig:19.1} the \emph{standard} and the \emph{robust} version of the corresponding strict outranking digraphs, both oriented by their respective identical initial and terminal prekernels.
-\begin{lstlisting}
->>> rg.showPreKernels()
-  *--- Computing preKernels ---*
-   Dominant preKernels :
-   ['p2', 'p4']
-    independence :  0.00
-    dominance    :  0.667
-    absorbency   :  -0.50
-    covering     :  1.000
-   Absorbent preKernels :
-   ['p5']
-    independence :  1.0
-    dominance    :  -0.889
-    absorbency   :  0.167
-    covered      :  1.000
-   ['p6']
-    independence :  1.0
-    dominance    :  -1.0
-    absorbency   :  0.111
-    covered      :  1.000
-\end{lstlisting}
 \begin{figure}[ht]
   % \sidecaption
   Standard strict outranking digraph \hfill Robust strict outranking digraph \\
@@ -415,12 +396,12 @@ One may finally compare in Figure~\vref{fig:19.1} the \emph{standard} and the \e
    
 The robust version (right in Fig.~\vref{fig:19.1}) drops two strict outranking situations: between \texttt{p4} and \texttt{p7} and between \texttt{p7} and \texttt{p1}. The remaining 14 strict outranking (resp. outranked) situations are now all verified at a stability level of $+2$ and more (resp. $-2$ and less). They remain valid, hence, with all potential significance weights that are compatible with the given significance weights preordering (see List.~\vref{list:19.2}).
 
-To appreciate the apparent partial ordering of both the standard and the robust strict outranking digraphs shown in Figure~\vref{fig:19.1}, let us have in Figure~\vref{fig:19.2} a final heatmap view on the underlying performance tableau ordered by the \NetFlows ranking rule actually applied to the robust version of the outranking digraph (see the \texttt{outrankingModel='this'} flag in Line 4 below).
+To appreciate the apparent partial ordering of both the standard and the robust strict outranking digraphs shown in Figure~\vref{fig:19.1}, let us have in Figure~\vref{fig:19.2} a final heatmap view on the underlying performance tableau ordered by the \NetFlows ranking rule actually applied to the robust version of the outranking digraph (see the \texttt{outrankingModel='this'} flag in Line~\ref{line:19.9.4} below).
 \begin{lstlisting}[caption={Computing a robust performance heatmap view},label=list:19.9]
 >>> rg.showHTMLPerformanceHeatmap(\
 ...           Correlations=True,\
 ...           colorLevels=5,\
-...           outrankingModel='this',\
+...           outrankingModel='this',\  §\label{line:19.9.4}§
 ...           rankingRule='NetFlows')
 \end{lstlisting}
 \begin{figure}[ht]
@@ -435,7 +416,7 @@ As the initial prekernel \{\texttt{p2}, \texttt{p4}\} is in the robust outrankin
 \section{Characterising unopposed multiobjective outranking situations}
 \label{sec:19.5}
 
-When facing a performance tableau involving multiple decision objectives, the robustness level $\pm 3$  may lead to distinguishing what we call \emph{unopposed} outranking situations, like the one shown in the previous section between alternative \texttt{p4} and \texttt{p1} ($r(p4 \succsim p1) = +0.78$, see List.~\vref{list:19.4} Line 11), namely preferential situations that are more or less validated or invalidated by all the decision objectives.  
+When facing a performance tableau involving multiple decision objectives, the robustness level $\pm 3$  may lead to distinguishing what we call \emph{unopposed} outranking situations, like the one shown in the previous section between alternative \texttt{p4} and \texttt{p1} ($r(p4 \succsim p1) = +0.78$, see List.~\vref{list:19.4} Line~\ref{line:19.4.11}), namely preferential situations that are more or less validated or invalidated by all the decision objectives.  
 
 \begin{definition}[Unopposed outranking situation]\label{def:19.2}
 \begin{itemize}
@@ -465,7 +446,7 @@ Let us reconsider, for instance, the performance tableau \texttt{pt} with three 
     Total weight: 24.00 (4 criteria)
 \end{lstlisting}
 
-We notice in this example three decision objectives of equal importance (see Lines 3,13,17). What will be the outranking situations that are positively (resp.  negatively) validated for each one of the decision objectives taken individually ?
+We notice in this example three decision objectives of equal importance (see Lines 3,13,17). What will be the outranking situations that are positively (resp.  negatively) validated for each one of the decision objectives taken individually?
 
 Such unopposed multiobjective outranking situations may be obtained by operating an epistemic \emph{average fusion} (see the \texttt{symmetricAverage()} method\index{symmetricAverage@\texttt{symmetricAverage()}}) of the marginal outranking digraphs restricted to the coalition of criteria supporting each one of the decision objectives (see List.~\vref{list:19.10}).
 \begin{lstlisting}[caption={Computing unopposed outranking situations},label=list:19.10]
@@ -488,7 +469,7 @@ Such unopposed multiobjective outranking situations may be obtained by operating
   * ---- Relation Table -----
    r   |  'p1'   'p2'   'p3'   'p4'   'p5'   'p6'   'p7'   
   -----|------------------------------------------------
-  'p1' |    -   +0.00  +0.00  -0.69  +0.39  +0.11  +0.00  
+  'p1' |    -   +0.00  +0.00  -0.69  +0.39  +0.11  +0.00  §\label{line:19.10.20}§
   'p2' | +0.00    -    +0.83  +0.00  +0.00  +0.00  +0.00  
   'p3' | +0.00  -0.33    -    +0.00  +0.50  +0.00  +0.00  
   'p4' | +0.78  +0.00  +0.61    -    +1.00  +1.00  +0.67  
@@ -498,7 +479,7 @@ Such unopposed multiobjective outranking situations may be obtained by operating
   Valuation domain: [-1.0; 1.0]
 \end{lstlisting}
 
-Positive (resp. negative) $r(x \succsim y)$ characteristic values, like $r(p1 \succsim p5) = +0.39$ (see List.~\vref{list:19.10} Line 20), show hence only outranking situations being validated (resp. invalidated) by one or more decision objectives without being invalidated (resp. validated) by any other decision objective.
+Positive (resp. negative) $r(x \succsim y)$ characteristic values, like $r(p1 \succsim p5) = +0.39$ (see List.~\ref{list:19.10} Line~\ref{line:19.10.20} above), show hence only outranking situations being validated (resp. invalidated) by one or more decision objectives without being invalidated (resp. validated) by any other decision objective.
 
 For easily computing this kind of \emph{unopposed multiobjective} outranking digraphs, the \texttt{outrankingDigraphs} module conveniently provides a corresponding\\ \texttt{UnOpposedBipolarOutrankingDigraph} constructor \index{UnOpposedBipolarOutrankingDigraph@\texttt{UnOpposedBipolarOutrankingDigraph} class}.
 \begin{lstlisting}[caption={Computing unopposed outranking digraphs},label=list:19.11]
@@ -511,8 +492,8 @@ For easily computing this kind of \emph{unopposed multiobjective} outranking dig
    Instance name       : unopposed_outrankings
    Actions           : 7
    Criteria          : 9
-   Size                : 13
-   Oppositeness (%)    : 43.48
+   Size                : 13   §\label{line:19.11.10}§
+   Oppositeness (%)    : 43.48 §\label{line:19.11.11}§
    Determinateness (%) : 61.71
    Valuation domain    : [-1.00;1.00]
    Attributes          : ['name', 'actions',
@@ -526,7 +507,7 @@ For easily computing this kind of \emph{unopposed multiobjective} outranking dig
    'oppositeness': 43.47826086956522}			   
 \end{lstlisting}
 
-The resulting \emph{unopposed} outranking digraph keeps in fact 13 (see List.\vref{list:19.11} Lines 20-22) out of the 23 positively validated \emph{standard} outranking situations, leading to a degree of \emph{oppositeness} --preferential disagreement between decision objectives-- of $(1.0 - 13/23)\,=\,0.4348$.
+The resulting \emph{unopposed} outranking digraph keeps in fact 13 (see List.\vref{list:19.11} Lines~\ref{line:19.11.10}~\ref{line:19.11.11}) out of the 23 positively validated \emph{standard} outranking situations, leading to a degree of \emph{oppositeness} --preferential disagreement between decision objectives-- of $(1.0 - 13/23)\,=\,0.4348$.
 
 We can now, for instance, verify the unopposed status of the outranking situation observed between alternatives \texttt{p1} and \texttt{p5}.
 \begin{lstlisting}[caption={Example of unopposed multiobjective outranking situation},label=list:19.12]
@@ -563,14 +544,14 @@ Indeed, best choice recommendations, computed from an \emph{unopposed multiobjec
    (in decreasing order of determinateness)   
    Credibility domain: [-1.00,1.00]
    === >> potential first choice(s)
-   choice              : ['p2', 'p4', 'p7']
+   choice              : ['p2', 'p4', 'p7'] §\label{line:19.13.6}§
       independence        : 0.00
       dominance           : 0.33
       absorbency          : 0.00
       covering (%)        : 33.33
       determinateness (%) : 50.00
    === >> potential last choice(s) 
-   choice              : ['p3', 'p5', 'p6', 'p7']
+   choice              : ['p3', 'p5', 'p6', 'p7'] §\label{line:19.13.13}§
       independence        : 0.00
       dominance           : -0.61
       absorbency          : 0.11
@@ -578,7 +559,7 @@ Indeed, best choice recommendations, computed from an \emph{unopposed multiobjec
       determinateness (%) : 50.00
 \end{lstlisting}
 
-Our previous \emph{robust} best choice recommendation (\texttt{p2} and \texttt{p4}, see Fig.~\vref{fig:19.1}) remains, in this example here, \emph{stable}. We recover indeed the best choice recommendation [\texttt{p2}, \texttt{p4}, \texttt{p7}] (see List.~\vref{list:19.12} Line 6). Yet, notice that decision alternative \texttt{p7} appears to be at the same time a potential \emph{first} as well as a potential \emph{last} choice recommendation (see Line 13), a consequence of \texttt{p7} being completely \emph{incomparable} to the other decision alternatives when restricting the comparability to only unopposed strict outranking situations. 
+Our previous \emph{robust} best choice recommendation (\texttt{p2} and \texttt{p4}, see Fig.~\vref{fig:19.1}) remains, in this example here, \emph{stable}. We recover indeed the best choice recommendation [\texttt{p2}, \texttt{p4}, \texttt{p7}] (see List.~\vref{list:19.13} Line~\ref{line:19.13.6}). Yet, notice that decision alternative \texttt{p7} appears to be at the same time a potential \emph{first} as well as a potential \emph{last} choice recommendation (see Line~\ref{line:19.13.13}), a consequence of \texttt{p7} being completely \emph{incomparable} to the other decision alternatives when restricting the comparability to only unopposed strict outranking situations. 
 
 This kind of Pareto efficient result is shown in Figure~\vref{fig:19.3}.
 \begin{lstlisting}
