@@ -128,10 +128,11 @@
 \contentsline {lstlisting}{\numberline {14.1}Inspecting stored historical performance quantiles}{197}{lstlisting.14.1}%
 \contentsline {lstlisting}{\numberline {14.2}Estimated quintile limits of the 2004 survey}{198}{lstlisting.14.2}%
 \contentsline {lstlisting}{\numberline {14.3}Showing the quintiling of the enrolment quality of the 5 Universities}{200}{lstlisting.14.3}%
-\contentsline {lstlisting}{\numberline {14.4}Computing the epistemic fusion of two rating-by-rankig results}{202}{lstlisting.14.4}%
-\contentsline {lstlisting}{\numberline {14.5}Checking the consensus quality of {\sc Kemeny}\xspace and {\sc Copeland}\xspace rankings}{203}{lstlisting.14.5}%
-\contentsline {lstlisting}{\numberline {14.6}Showing quantiles sorting characteristics}{205}{lstlisting.14.6}%
-\contentsline {lstlisting}{\numberline {14.7}Showing a quintiles rating-by-sorting result}{205}{lstlisting.14.7}%
+\contentsline {lstlisting}{\numberline {14.4}Computing the epistemic fusion of three rating-by-rankig results}{202}{lstlisting.14.4}%
+\contentsline {lstlisting}{\numberline {14.5}Checking the consensus quality of the {\sc Kemeny}\xspace ranking}{202}{lstlisting.14.5}%
+\contentsline {lstlisting}{\numberline {14.6}Checking the consensus quality of the {\sc Copeland}\xspace ranking}{203}{lstlisting.14.6}%
+\contentsline {lstlisting}{\numberline {14.7}Showing quantiles sorting characteristics}{204}{lstlisting.14.7}%
+\contentsline {lstlisting}{\numberline {14.8}Showing a quintiles rating-by-sorting result}{205}{lstlisting.14.8}%
 \contentsline {lstlisting}{\numberline {16.1}Computing the average weighted number of stars per movie}{219}{lstlisting.16.1}%
 \contentsline {lstlisting}{\numberline {16.2}Showing the movie from best to worst rated in a heatmap view}{220}{lstlisting.16.2}%
 \contentsline {lstlisting}{\numberline {16.3}Computing a relational equivalence digraph}{221}{lstlisting.16.3}%
