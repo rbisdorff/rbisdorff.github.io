@@ -1,7 +1,7 @@
-\chapter{About split, interval and permutation graphs}
+\chapter{About split, comparability, interval and permutation graphs}
 \label{sec:23}
 
-\abstract*{ The last chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, interval, permutation and split graphs. We first generate a random graph instance which models at the same time an interval, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognise that a given graph is in fact a permutation graph.}
+\abstract*{ The last chapter of this book eventually presents some famous classes of \Berge graphs, namely comparability, interval, permutation and split graphs. We first generate a random graph instance which models at the same time an interval, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognise that a given graph is in fact a permutation graph.}
 
 \abstract{ The last chapter of this book eventually presents some famous classes of perfect graphs, namely comparability, interval, permutation and split graphs. We first present an example of a graph which is at the same time a triangulated, a comparability, a split and a permutation graph. The importance to be an interval is illustrated with \Berge 's mystery story. We discuss furthermore the generation of permutation graphs and close with how to recognise that a given graph is in fact a permutation graph.}
 
@@ -20,7 +20,7 @@ A graph \texttt{g} is called:
 \item \emph{Comparability} graph when \texttt{g}  is \emph{transitively orientable};\index{comparability graph}
 \item \emph{Interval} graph when \texttt{g} is \emph{triangulated} and its dual \texttt{-g} is a \emph{comparability} graph;\index{comparability graph}
 \item \emph{Permutation} graph when \texttt{g} and its dual \texttt{-g} both are \emph{comparability} graphs;\index{permutation graph}
-\item \emph{Split} graph when \texttt{g} and its dual \texttt{-g} bothare \emph{triangulated} graphs.\index{split graph}
+\item \emph{Split} graph when \texttt{g} and its dual \texttt{-g} both are \emph{triangulated} graphs.\index{split graph}
 \end{itemize}
 \end{definition}
 
@@ -83,7 +83,7 @@ Notice however that the four properties:
 \item $g$ is a \emph{triangulated} graph;
 \item $g$ is a \emph{co-triangulated} graph, i.e. $-g$ is a comparability graph;
 \end{enumerate}
-are independent of one another \citet[p. 275]{GOL-2004}.
+are all independent one of the other \citet[p. 275]{GOL-2004}.
 
 \section{Who is the liar?}
 \label{sec:23.2}
@@ -120,7 +120,7 @@ Suppose the file \texttt{berge.py} \footnote{The file \texttt{berge.py} is provi
     }
 \end{lstlisting}
 
-Six professors (labeled \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{E} and \texttt{I}) had been to the library on the day that a rare tractate was stolen. Each entered once, stayed for some time, and then left. If two professors were in the library at the same time, then at least one of them saw the other. Detectives questioned the professors and gathered the testimonies that \emph{Abe} saw \emph{Burt} and \emph{Eddie}; \emph{Burt} saw \emph{Abe} and \emph{Ida}; \emph{Charlotte} saw \emph{Desmond} and \emph{Ida}; \emph{Desmond} saw \emph{Abe} and \emph{Ida}; \emph{Eddie} saw \emph{Burt} and \emph{Ida}; and \emph{Ida} saw \emph{Charlotte} and \emph{Eddie}. This data is gathered in the previous file, where each positive edge $\{x,y\}$ models the testimony that, either $x$ saw $y$, or $y$ saw $x$.
+Six professors (labelled \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{E} and \texttt{I}) had been to the library on the day that a precious document was stolen. Each entered once, stayed for some time, and then left. If two professors were in the library at the same time, then at least one of them saw the other. Detectives questioned the professors and gathered the testimonies that \emph{Abe} saw \emph{Burt} and \emph{Eddie}; \emph{Burt} saw \emph{Abe} and \emph{Ida}; \emph{Charlotte} saw \emph{Desmond} and \emph{Ida}; \emph{Desmond} saw \emph{Abe} and \emph{Ida}; \emph{Eddie} saw \emph{Burt} and \emph{Ida}; and \emph{Ida} saw \emph{Charlotte} and \emph{Eddie}. This data is gathered in the previous file, where each positive edge $\{x,y\}$ models the testimony that, either $x$ saw $y$, or $y$ saw $x$.
 \begin{lstlisting}
 >>> from graphs import Graph
 >>> g = Graph('berge')
@@ -148,7 +148,7 @@ Six professors (labeled \texttt{A}, \texttt{B}, \texttt{C}, \texttt{D}, \texttt{
 \label{fig:23.2}       % Give a unique label
 \end{figure}
 
-From graph theory we know that time interval intersections graphs must in fact be interval graph instances, i.e. \emph{triangulated} and \emph{co-comparative} graphs. The testimonies graph shown in Figure~\vref{fig:23.2} should therefore not contain any chordless cycle of four and more vertices. Now, the presence or not of such chordless cycles in the testimonies graph may be checked with the \texttt{computeChordlessCycles()} method \citep{BIS-2010}.\index{computeChordlessCycles@\texttt{computeChordlessCycles()}}
+From graph theory we know that time interval intersections graphs must in fact be interval graph instances, i.e. \emph{triangulated} and \emph{co-comparative} graphs. The testimonies graph shown in Figure~\vref{fig:23.2} should therefore not contain any chordless cycle of four and more vertices. Now, the presence or not of such chordless cycles in the testimonies graph can be checked with the \texttt{computeChordlessCycles()} method \citep{BIS-2010}.\index{computeChordlessCycles@\texttt{computeChordlessCycles()}}
 \begin{lstlisting}
 >>> g.computeChordlessCycles()
   Chordless cycle certificate: ['D','C','E','A','D']
@@ -194,7 +194,7 @@ And it is \emph{Desmond}. If we doubt his testimony that he saw \emph{Abe} (see 
 \section{Generating permutation graphs}
 \label{sec:23.3}
 
-A graph is called a \emph{permutation} or \emph{inversion} graph if there exists a permutation of its list of vertices such that the graph is isomorphic to the inversions operated by the permutation in this list (see \citealp[Chapter 7, pp 157-170]{GOL-2004}). This kind of graphs (see Fig.~\vref{fig:23.4} is also part of the class of perfect graphs.\index{PermutationGraph@\texttt{PermutationGraph} class}
+A graph is called a \emph{permutation} or \emph{inversion} graph if there exists a permutation of its list of vertices such that the graph is isomorphic to the inversions operated by the permutation in this list (see \citealp[Chapter 7, pp 157-170]{GOL-2004}). This kind of graphs (see Fig.~\vref{fig:23.4} is also part of the class of \Berge graphs.\index{PermutationGraph@\texttt{PermutationGraph} class}
 \begin{lstlisting}
 >>> from graphs import PermutationGraph
 >>> g = PermutationGraph(permutation = [4,3,6,1,5,2])
@@ -219,12 +219,12 @@ A graph is called a \emph{permutation} or \emph{inversion} graph if there exists
 \end{lstlisting}
 \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/23-4-permutationGraph.pdf}
-\caption{The default permutation graph} 
+\includegraphics[width=6cm]{Figures/23-4-permutationGraph.pdf}
+\caption{The default [4,3,6,1,5,2] permutation graph} 
 \label{fig:23.4}       % Give a unique label
 \end{figure}
 
-By using color sorting queues, the minimal vertex colouring shown in Figure~\vref{fig:23.5} is computable in $O\big(n log(n)\big)$ \citep{GOL-2004}.\index{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}}
+By using colour sorting queues, the minimal vertex colouring shown in Figure~\vref{fig:23.5} is computable in $O\big(n log(n)\big)$ \citep{GOL-2004}.\index{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}}
 \begin{lstlisting}
 >>> g.computeMinimalVertexColoring(Comments=True)
     vertex 1: lightcoral
@@ -243,7 +243,7 @@ By using color sorting queues, the minimal vertex colouring shown in Figure~\vre
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/23-5-coloredPermutationGraph.pdf}
-\caption{Minimal vertex coloring of the permutation graph} 
+\caption{Minimal vertex colouring of the permutation graph} 
 \label{fig:23.5}       % Give a unique label
 \end{figure}
 
@@ -420,7 +420,7 @@ Let us recheck these facts by explicitly constructing transitively oriented digr
 \end{lstlisting}
 The \texttt{PartiallyDetermined = True} flag (see Lines 2 and 7 above) is required here in order to orient only the actual edges of the graphs. Relations between vertices not linked by an edge are put to the indeterminate characteristic value $0$. This allows us to compute, later on, convenient disjunctive digraph fusions.
 
-As both graphs are indeed transitively orientable (see Lines 5 and 10 above), we may conclude that the given random graph \texttt{g} is actually a permutation graph instance. Yet, we still need to find now its corresponding permutation. We therefore implement a recipee given by Martin Golumbic \citep[p. 159]{GOL-2004}.
+As both graphs are indeed transitively orientable (see Lines 5 and 10 above), we may conclude that the given random graph \texttt{g} is actually a permutation graph instance. Yet, we still need to find now its corresponding permutation. We therefore implement a recipe given by Martin Golumbic \citep[p. 159]{GOL-2004}.
 
 We will first \emph{fuse} both $og$ and $ogd$ orientations above with an \emph{epistemic disjunction} operated with the symmetric \texttt{o-max} operator (see Sec.~\ref{sec:2.5}).
 \begin{lstlisting}

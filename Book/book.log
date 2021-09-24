@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.6)  23 SEP 2021 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.6)  24 SEP 2021 02:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2225,6 +2225,9 @@ File: Figures/21-5-c12.png Graphic file (type png)
 Package pdftex.def Info: Figures/21-5-c12.png  used on input line 563.
 (pdftex.def)             Requested size: 170.71652pt x 156.62743pt.
  [320]
+
+LaTeX Warning: Reference `sc:22' on page 321 undefined on input line 572.
+
 (./02-mainMatters/21-chapterGraphs.bbl (./book.brf)
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
 [][]$\OT1/pcr/m/n/10 https : / / cs . uwaterloo . ca / journals / JIS / VOL11 /
@@ -2332,39 +2335,35 @@ File: Figures/23-4-permutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-4-permutationGraph.pdf>
 Package pdftex.def Info: Figures/23-4-permutationGraph.pdf  used on input line 
 223.
-(pdftex.def)             Requested size: 199.16928pt x 177.78331pt.
-<Figures/23-5-coloredPermutationGraph.pdf, id=12024, 299.1175pt x 266.9975pt>
+(pdftex.def)             Requested size: 170.71652pt x 152.3857pt.
+ [338 <./Figures/23-4-permutationGraph.pdf>]
+<Figures/23-5-coloredPermutationGraph.pdf, id=12076, 299.1175pt x 266.9975pt>
 File: Figures/23-5-coloredPermutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-5-coloredPermutationGraph.pdf>
 Package pdftex.def Info: Figures/23-5-coloredPermutationGraph.pdf  used on inpu
 t line 246.
 (pdftex.def)             Requested size: 170.71652pt x 152.3857pt.
- [338]
-<Figures/23-6-perm_permutationGraph.pdf, id=12071, 417.56pt x 251.94125pt>
+<Figures/23-6-perm_permutationGraph.pdf, id=12078, 417.56pt x 251.94125pt>
 File: Figures/23-6-perm_permutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-6-perm_permutationGraph.pdf>
 Package pdftex.def Info: Figures/23-6-perm_permutationGraph.pdf  used on input 
 line 262.
 (pdftex.def)             Requested size: 199.16928pt x 120.1731pt.
- [339 <./Figures/23-4-permutationGraph.pdf> <./Figures/23-5-coloredPermutationG
-raph.pdf
-
-pdfTeX warning: pdflatex (file ./Figures/23-5-coloredPermutationGraph.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
->]
-<Figures/23-7-orientedPermGraph.pdf, id=12136, 204.765pt x 303.1325pt>
+ [339 <./Figures/23-5-coloredPermutationGraph.pdf>]
+<Figures/23-7-orientedPermGraph.pdf, id=12133, 204.765pt x 303.1325pt>
 File: Figures/23-7-orientedPermGraph.pdf Graphic file (type pdf)
 <use Figures/23-7-orientedPermGraph.pdf>
 Package pdftex.def Info: Figures/23-7-orientedPermGraph.pdf  used on input line
  292.
 (pdftex.def)             Requested size: 142.26378pt x 210.61865pt.
  [340 <./Figures/23-6-perm_permutationGraph.pdf>]
-<Figures/23-8-randomGraph4335.pdf, id=12188, 299.1175pt x 319.1925pt>
+<Figures/23-8-randomGraph4335.pdf, id=12189, 299.1175pt x 319.1925pt>
 File: Figures/23-8-randomGraph4335.pdf Graphic file (type pdf)
 <use Figures/23-8-randomGraph4335.pdf>
 Package pdftex.def Info: Figures/23-8-randomGraph4335.pdf  used on input line 3
 37.
 (pdftex.def)             Requested size: 170.71652pt x 182.17538pt.
+ [341 <./Figures/23-7-orientedPermGraph.pdf>]
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 3
 43.
 
@@ -2373,19 +2372,18 @@ File: omlptm.fd
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <7> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 343.
- [341 <./Figures/23-7-orientedPermGraph.pdf>]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 345.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 345.
-<Figures/23-9-transOrientGraph.pdf, id=12247, 299.1175pt x 319.1925pt>
+<Figures/23-9-transOrientGraph.pdf, id=12248, 299.1175pt x 319.1925pt>
 File: Figures/23-9-transOrientGraph.pdf Graphic file (type pdf)
 <use Figures/23-9-transOrientGraph.pdf>
 Package pdftex.def Info: Figures/23-9-transOrientGraph.pdf  used on input line 
 370.
 (pdftex.def)             Requested size: 199.16928pt x 212.53795pt.
  [342 <./Figures/23-8-randomGraph4335.pdf>]
-<Figures/23-10-transOrientDualGraph.pdf, id=12319, 403.5075pt x 280.04625pt>
+<Figures/23-10-transOrientDualGraph.pdf, id=12316, 403.5075pt x 280.04625pt>
 File: Figures/23-10-transOrientDualGraph.pdf Graphic file (type pdf)
 <use Figures/23-10-transOrientDualGraph.pdf>
 Package pdftex.def Info: Figures/23-10-transOrientDualGraph.pdf  used on input 
@@ -2397,12 +2395,12 @@ ph.pdf
 pdfTeX warning: pdflatex (file ./Figures/23-10-transOrientDualGraph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >] [344]
-<Figures/23-11-gtesta.pdf, id=12420, 299.1175pt x 316.18124pt>
+<Figures/23-11-gtesta.pdf, id=12421, 299.1175pt x 316.18124pt>
 File: Figures/23-11-gtesta.pdf Graphic file (type pdf)
 <use Figures/23-11-gtesta.pdf>
 Package pdftex.def Info: Figures/23-11-gtesta.pdf  used on input line 479.
 (pdftex.def)             Requested size: 161.50734pt x 170.71652pt.
-<Figures/23-11-gtestb.pdf, id=12421, 299.1175pt x 307.1475pt>
+<Figures/23-11-gtestb.pdf, id=12422, 299.1175pt x 307.1475pt>
 File: Figures/23-11-gtestb.pdf Graphic file (type pdf)
 <use Figures/23-11-gtestb.pdf>
 Package pdftex.def Info: Figures/23-11-gtestb.pdf  used on input line 480.
@@ -2592,14 +2590,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 299.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 132267E930C4EB7AB4C2B66E038E00FC;15086.
+(rerunfilecheck)             Checksum: 292200B5EB47CA3C3FEB1A0F33467F89;15101.
 
 Package rerunfilecheck Warning: File `book.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
 
 Package rerunfilecheck Info: Checksums for `book.brf':
-(rerunfilecheck)             Before: A2C86BE9763EEE323CF43CCFB7DDFE99;9528
-(rerunfilecheck)             After:  A4CDB30481CED1031A5D654D51D009BC;9528.
+(rerunfilecheck)             Before: AA79DFACF32F2281229221205DFDFEEA;9528
+(rerunfilecheck)             After:  14CA946185CFE5D4DBD2EAE8AF7F4579;9528.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -2613,38 +2611,40 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
  ) 
 Here is how much of TeX's memory you used:
- 23692 strings out of 482504
- 360813 string characters out of 5947331
- 965988 words of memory out of 5000000
- 30695 multiletter control sequences out of 15000+600000
+ 23694 strings out of 482504
+ 360877 string characters out of 5947331
+ 966002 words of memory out of 5000000
+ 30696 multiletter control sequences out of 15000+600000
  622161 words of font info for 212 fonts, out of 8000000 for 9000
  395 hyphenation exceptions out of 8191
  47i,19n,47p,1518b,1957s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symb
-ol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on book.pdf (382 pages, 5436046 bytes).
+pdfTeX warning (dest): name{page.339,\\relax\040\\hskip\0400.2em\\ignorespace
+s\040340} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol
+/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on book.pdf (382 pages, 5436652 bytes).
 PDF statistics:
- 14986 PDF objects out of 15390 (max. 8388607)
- 13802 compressed objects within 139 object streams
- 7303 named destinations out of 7423 (max. 500000)
+ 14989 PDF objects out of 15390 (max. 8388607)
+ 13805 compressed objects within 139 object streams
+ 7304 named destinations out of 7423 (max. 500000)
  2053 words of extra memory for PDF output out of 10000 (max. 10000000)
 
