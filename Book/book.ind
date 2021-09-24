@@ -58,8 +58,7 @@
   \item \texttt{computeOrdinalCorrelation()}\idxquad \hyperpage{224}
   \item \texttt{computePermutation()}\idxquad \hyperpage{345}
   \item \texttt{computeRankAnalysis()}\idxquad \hyperpage{95}
-  \item \texttt{computeRankingByChoosing()}\idxquad \hyperpage{104},\,
-		\hyperpage{230}
+  \item \texttt{computeRankingByChoosing()}\idxquad \hyperpage{104}
   \item \texttt{computeRankingCorrelation()}\idxquad \hyperpage{111},\,
 		\hyperpage{133},\,\hyperpage{189}
   \item \texttt{computeSimpleMajorityWinner()}\idxquad \hyperpage{94}
@@ -108,7 +107,7 @@
  \indexspace\nopagebreak%
   \item \texttt{EmptyDigraph} class\idxquad \hyperpage{32},\,
 		\hyperpage{235}
-  \item \texttt{EquivalenceDigraph} class\idxquad \hyperpage{223}
+  \item \texttt{EquivalenceDigraph} class\idxquad \hyperpage{222}
   \item \texttt{export3DplotOfCriteria\-Correlation()}\idxquad 
 		\hyperpage{191},\,\hyperpage{227}
   \item \texttt{exportGraphViz()}\idxquad \hyperpage{17}
@@ -266,7 +265,7 @@
   \item \texttt{RandomValuationGraph} class\idxquad \hyperpage{329}
   \item \texttt{RankedPairsRanking} class\idxquad \hyperpage{123}
   \item \texttt{RankingByChoosingDigraph} class\idxquad \hyperpage{59},\,
-		\hyperpage{169}
+		\hyperpage{169},\,\hyperpage{229}
   \item \texttt{RankingsFusionDigraph} class\idxquad \hyperpage{115},\,
 		\hyperpage{202}
   \item \texttt{readPerrinMisset()}\idxquad \hyperpage{319}
@@ -373,7 +372,8 @@
   \item \texttt{TransitiveDigraph} class\idxquad \hyperpage{29},\,
 		\hyperpage{172}
   \item \texttt{transitiveDigraphs} module\idxquad \hyperpage{59},\,
-		\hyperpage{111},\,\hyperpage{114},\,\hyperpage{169}
+		\hyperpage{111},\,\hyperpage{114},\,\hyperpage{169},\,
+		\hyperpage{230}
   \item \texttt{transitiveOrientation()}\idxquad \hyperpage{339,\,340}
   \item \texttt{tree2Pruefer()}\idxquad \hyperpage{326}
   \item \texttt{TreeGraph()}\idxquad \hyperpage{326}

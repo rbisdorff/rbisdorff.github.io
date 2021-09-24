@@ -137,7 +137,7 @@
 \contentsline {lstlisting}{\numberline {16.2}Showing the movie from best to worst rated in a heatmap view}{220}{lstlisting.16.2}%
 \contentsline {lstlisting}{\numberline {16.3}Computing a relational equivalence digraph}{221}{lstlisting.16.3}%
 \contentsline {lstlisting}{\numberline {16.4}Two random bipolar-valued digraphs}{222}{lstlisting.16.4}%
-\contentsline {lstlisting}{\numberline {16.5}Bipolar-valued Equivalence Digraph}{223}{lstlisting.16.5}%
+\contentsline {lstlisting}{\numberline {16.5}Bipolar-valued Equivalence Digraph}{222}{lstlisting.16.5}%
 \contentsline {lstlisting}{\numberline {16.6}Computing the ordinal correlation index from the equivalence digraph}{224}{lstlisting.16.6}%
 \contentsline {lstlisting}{\numberline {16.7}Computing the valued ordinal correlation index}{224}{lstlisting.16.7}%
 \contentsline {lstlisting}{\numberline {16.8}The bipolar-valued outranking digraph of the star-rated movies}{225}{lstlisting.16.8}%
@@ -156,14 +156,14 @@
 \contentsline {lstlisting}{\numberline {17.10}Inspecting the properties of random digraph \texttt {rd}}{239}{lstlisting.17.10}%
 \contentsline {lstlisting}{\numberline {17.11}Inspecting the prekernels of random digraph \texttt {rd}}{240}{lstlisting.17.11}%
 \contentsline {lstlisting}{\numberline {17.12}Generating a random bipolar-valued outranking digraph}{242}{lstlisting.17.12}%
-\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{243}{lstlisting.17.13}%
+\contentsline {lstlisting}{\numberline {17.13}Computing the prekernels of the strict outranking digraph \texttt {gcd}}{242}{lstlisting.17.13}%
 \contentsline {lstlisting}{\numberline {17.14}Computing a first and last choice recommendation from digraph \texttt {gcd}}{243}{lstlisting.17.14}%
 \contentsline {lstlisting}{\numberline {17.15}Enumerating MISs by visiting only maximal independent choices (\emph {A. Hertz})}{246}{lstlisting.17.15}%
 \contentsline {lstlisting}{\numberline {17.16}Generating all independent choices in a digraph}{246}{lstlisting.17.16}%
 \contentsline {lstlisting}{\numberline {17.17}Computing dominant and absorbent preKernels}{247}{lstlisting.17.17}%
 \contentsline {lstlisting}{\numberline {17.18}Verifying the kernel equation system on a tiny random digraph}{248}{lstlisting.17.18}%
 \contentsline {lstlisting}{\numberline {17.19}Computing a dominant prekernel restricted adjancecy table}{250}{lstlisting.17.19}%
-\contentsline {lstlisting}{\numberline {17.20}Fixpoint iterations for initial prekernel \texttt {\{a1, a2, a4\}}}{251}{lstlisting.17.20}%
+\contentsline {lstlisting}{\numberline {17.20}Fixpoint iterations for initial prekernel \texttt {\{a1, a2, a4\}}}{250}{lstlisting.17.20}%
 \contentsline {lstlisting}{\numberline {18.1}$90\%$-confident outranking relation with triangular distributed significance weights}{262}{lstlisting.18.1}%
 \contentsline {lstlisting}{\numberline {18.2}$99\%$-confident outranking relation}{264}{lstlisting.18.2}%
 \contentsline {lstlisting}{\numberline {18.3}$90\%$-confident outranking digraph with uniform variates}{265}{lstlisting.18.3}%
