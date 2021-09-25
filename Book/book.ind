@@ -117,6 +117,7 @@
 		\hyperpage{200}
   \item \texttt  {ExtendedTriangularRandom\-Variable} class\idxquad 
 		\hyperpage{79}
+  \item external stability\idxquad \hyperpage{231}
 
   \indexspace
 {\bf F}\nopagebreak%
@@ -142,6 +143,7 @@
 {\bf H}\nopagebreak%
  \indexspace\nopagebreak%
   \item \emph{A. Hertz}\idxquad \hyperpage{246}
+  \item holes\idxquad \hyperpage{231}
 
   \indexspace
 {\bf I}\nopagebreak%
@@ -155,6 +157,7 @@
 		\hyperpage{237}
   \item \texttt{IntegerBipolarOutrankingDigraph} class\idxquad 
 		\hyperpage{149}
+  \item internal stability\idxquad \hyperpage{231}
   \item \texttt{isComparabilityGraph()}\idxquad \hyperpage{341}
   \item \texttt{IsingModel} class\idxquad \hyperpage{315}
   \item \texttt{isIntervalGraph()}\idxquad \hyperpage{334}
@@ -169,6 +172,10 @@
  \indexspace\nopagebreak%
   \item \texttt{KemenyRanking} class\idxquad \hyperpage{115}
   \item \emph{M.G. Kendall}\idxquad \hyperpage{44},\,\hyperpage{220}
+  \item kernel\idxquad \hyperpage{231}
+    \subitem initial\idxquad \hyperpage{234}
+    \subitem prekernel\idxquad \hyperpage{234}
+    \subitem terminal\idxquad \hyperpage{234}
   \item \emph{G. Kohler}\idxquad \hyperpage{120}
 
   \indexspace
@@ -189,8 +196,10 @@
   \item majority margins digraph\idxquad \hyperpage{96}
   \item \texttt{MajorityMarginsDigraph} class\idxquad \hyperpage{96}
   \item \emph{J.-L. Marichal}\idxquad \hyperpage{317}
+  \item maximal independent choice\idxquad \hyperpage{231}
   \item \texttt{MetropolisChain} class\idxquad \hyperpage{315},\,
 		\hyperpage{317}
+  \item MIS\idxquad \hyperpage{231}
   \item \texttt{MISModel} class\idxquad \hyperpage{232}
 
   \indexspace
@@ -198,7 +207,7 @@
  \indexspace\nopagebreak%
   \item \texttt{NetFlowsOrder} class\idxquad \hyperpage{225}
   \item \texttt{NetFlowsRanking} class\idxquad \hyperpage{113}
-  \item \textsl{J. von Neumann}\idxquad \hyperpage{249}
+  \item \textsl{J. von Neumann}\idxquad \hyperpage{248}
   \item \texttt{numberOfBins} parameter\idxquad \hyperpage{137}
 
   \indexspace
@@ -226,7 +235,6 @@
   \item \texttt{PermutationGraph} class\idxquad \hyperpage{338}
   \item \texttt{perrinMIS} shell command\idxquad \hyperpage{318}
   \item \textsl{M. Pirlot}\idxquad \hyperpage{248}
-  \item prekernel\idxquad \hyperpage{234}
   \item \texttt{PreRankedOutrankingDigraph} class\idxquad 
 		\hyperpage{130}
 
@@ -374,7 +382,7 @@
   \item \texttt{transitiveDigraphs} module\idxquad \hyperpage{59},\,
 		\hyperpage{111},\,\hyperpage{114},\,\hyperpage{169},\,
 		\hyperpage{230}
-  \item \texttt{transitiveOrientation()}\idxquad \hyperpage{339,\,340}
+  \item \texttt{transitiveOrientation()}\idxquad \hyperpage{339}
   \item \texttt{tree2Pruefer()}\idxquad \hyperpage{326}
   \item \texttt{TreeGraph()}\idxquad \hyperpage{326}
   \item triangulated graph\idxquad \hyperpage{333}

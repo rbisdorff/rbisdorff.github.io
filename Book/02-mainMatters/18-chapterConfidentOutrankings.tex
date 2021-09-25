@@ -105,7 +105,7 @@ Otherwise, the situation is indeterminate.
 \noindent \textbf{Time for a coded example}
 
 \noindent Let us consider the following random performance tableau.
-\begin{lstlisting}[label=list:18.1,basicstyle=\ttfamily\scriptsize]
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
 >>> from randomPerfTabs import RandomPerformanceTableau
 >>> t = RandomPerformanceTableau(\
 ...          numberOfActions=7,\
@@ -124,7 +124,7 @@ Otherwise, the situation is indeterminate.
 \end{lstlisting}
 
 For the corresponding confident outranking digraph, we assume uncertain criteria significance weights of \emph{triangular} distribution and require a confidence level of $\alpha = 90\%$. The \texttt{ConfidentBipolarOutrankingDigraph} class provides such a construction.
-\begin{lstlisting}[label=list:18.2]
+\begin{lstlisting}[caption={Computing a 90\% confident outranking dugraph},label=list:18.1]
 >>> from outrankingDigraphs import\
 ...        ConfidentBipolarOutrankingDigraph   
 >>> g90 = ConfidentBipolarOutrankingDigraph(t,\
@@ -153,7 +153,7 @@ For the corresponding confident outranking digraph, we assume uncertain criteria
 \end{lstlisting}
 
 The resulting $90\%$-confident expected outranking relation is shown below.
-\begin{lstlisting}[caption={$90\%$-confident outranking relation with triangular distributed significance weights},label=list:18.3,basicstyle=\ttfamily\scriptsize]
+\begin{lstlisting}[caption={$90\%$-confident outranking relation with triangular distributed significance weights},label=list:18.2,basicstyle=\ttfamily\scriptsize]
 >>> g90.showRelationTable(LikelihoodDenotation=True)
   * ---- Outranking Relation Table -----
     r/(lh) |  'a1'    'a2'    'a3'    'a4'    'a5'    'a6'    'a7'	 
@@ -175,14 +175,14 @@ The resulting $90\%$-confident expected outranking relation is shown below.
     Valuation domain   : [-1.000; +1.000] 
     Uncertainty model  : triangular(a=2.0,b=2.0) 
     Likelihood domain  : [-1.0;+1.0] 
-    Confidence level   : 0.80 (90.0%) 
-    Confident majority : 0.14 (57.1%) 
+    Confidence level   : 0.80 (90.0%) §\label{line:18.2.22}§
+    Confident majority : 0.14 (57.1%) §\label{line:18.2.23}§
     Determinateness    : 0.24 (62.1%)
 \end{lstlisting}
 
-The ($lh$) figures, indicated in Listing~\ref{list:18.3} above, correspond to bipolar likelihoods and the required bipolar confidence level equals $(0.90+1.0)/2 = 0.80$ (see Line 22 above). Action \texttt{a1} thus confidently outranks all other actions, except \texttt{a7} where the actual likelihood ($+0.65$) is lower than the required one ($+0.80$) and we furthermore observe a considerable counter-performance on criterion \texttt{g1}.
+The ($lh$) figures, indicated in Listing~\ref{list:18.2} above, correspond to bipolar likelihoods and the required bipolar confidence level equals $(0.90+1.0)/2 = 0.80$ (see Line~\ref{line:18.2.22} above). Action \texttt{a1} thus confidently outranks all other actions, except \texttt{a7} where the actual likelihood ($+0.65$) is lower than the required one ($+0.80$) and we furthermore observe a considerable counter-performance on criterion \texttt{g1}.
 
-Notice also the lack of confidence in the outranking situations we observe between action \texttt{a2} and actions \texttt{a4} and \texttt{a5}. In the deterministic case we would have $r(a2 \geqslant a4) \,=\, -0.143$ and $r(a2 \geqslant a5) \,=\, +0.143$ . All outranking situations with a characteristic value lower or equal to $abs(0.143)$, i.e. a majority support of $1.143/2 = 57.1\%$ and less, appear indeed to be \emph{not confident} at $\alpha$ level $90\%$ (see Line 23 above).
+Notice also the lack of confidence in the outranking situations we observe between action \texttt{a2} and actions \texttt{a4} and \texttt{a5}. In the deterministic case we would have $r(a2 \geqslant a4) \,=\, -0.143$ and $r(a2 \geqslant a5) \,=\, +0.143$ . All outranking situations with a characteristic value lower or equal to $abs(0.143)$, i.e. a majority support of $1.143/2 = 57.1\%$ and less, appear indeed to be \emph{not confident} at $\alpha$ level $90\%$ (see Line~\ref{line:18.2.23} above).
 
 Figure~\vref{fig:18.4} shows the corresponding strict $90\%$-confident outranking digraph, oriented by its initial and terminal strict prekernels.
 \begin{lstlisting}
@@ -217,7 +217,7 @@ Figure~\vref{fig:18.4} shows the corresponding strict $90\%$-confident outrankin
 \end{figure}
 
 Now, what becomes this $90\%$-confident outranking digraph when we require a stronger confidence level of, say $99\%$?
-\begin{lstlisting}[caption={$99\%$-confident outranking relation},label=list:18.4,basicstyle=\ttfamily\scriptsize]
+\begin{lstlisting}[caption={$99\%$-confident outranking relation},label=list:18.3,basicstyle=\ttfamily\scriptsize]
 >>> g99 = ConfidentBipolarOutrankingDigraph(t,\
 ...      distribution='trinagular',confidence=99)
 >>> g99.showRelationTable()
@@ -242,16 +242,16 @@ Now, what becomes this $90\%$-confident outranking digraph when we require a str
     Uncertainty model  : triangular(a=0.0,b=2.0) 
     Likelihood domain  : [-1.0;+1.0] 
     Confidence level   : 0.98 (99.0%) 
-    Confident majority : 0.29 (64.3%) 
-    Determinateness    : 0.13 (56.6%)
+    Confident majority : 0.29 (64.3%) §\label{line:18.3.25}§
+    Determinateness    : 0.13 (56.6%) §\label{line:18.3.26}§
 \end{lstlisting}
 
-At $99\%$ confidence, the minimal required significance majority support amounts to $64.3\%$ (see List.~\ref{list:18.4} Line 25 above). As a result, most outranking situations don't get anymore validated, like the outranking situations between action \texttt{a1} and actions \texttt{a3}, \texttt{a4}, \texttt{a5} and \texttt{a6} (see Line 5 above). The overall epistemic determination of the digraph consequently drops from $62.1\%$ to $56.6\%$ (see Line 26).
+At $99\%$ confidence, the minimal required significance majority support amounts to $64.3\%$ (see List.~\ref{list:18.3} Line~\ref{line:18.3.25} above). As a result, most outranking situations don't get anymore validated, like the outranking situations between action \texttt{a1} and actions \texttt{a3}, \texttt{a4}, \texttt{a5} and \texttt{a6} (see Line 5 above). The overall epistemic determination of the digraph consequently drops from $62.1\%$ to $56.6\%$ (see Line~\ref{line:18.3.26}).
 
-Finally, what becomes the previous $90\%$-confident outranking digraph when the uncertainty concerning the criteria significance weights is modelled with a larger variance, like \emph{uniform} variates (see Line 2 below).
-\begin{lstlisting}[caption={$90\%$-confident outranking digraph with uniform variates},label=list:18.5, basicstyle=\ttfamily\scriptsize]
+Finally, what becomes the previous $90\%$-confident outranking digraph when the uncertainty concerning the criteria significance weights is modelled with a larger variance, like \emph{uniform} variates (see Line~\ref{line:18.4.2} below).
+\begin{lstlisting}[caption={$90\%$-confident outranking digraph with uniform variates},label=list:18.4, basicstyle=\ttfamily\scriptsize]
 >>> gu90 = ConfidentBipolarOutrankingDigraph(t,\
-...           confidence=90,distribution='uniform')
+...           confidence=90,distribution='uniform') §\label{line:18.4.2}§
 >>> gu90.showRelationTable()
   * ---- Outranking Relation Table -----
   r/(lh) |   'a1'    'a2'    'a3'    'a4'    'a5'    'a6'    'a7'	 
@@ -274,11 +274,11 @@ Finally, what becomes the previous $90\%$-confident outranking digraph when the 
     Uncertainty model  : uniform(a=0.0,b=2.0) 
     Likelihood domain  : [-1.0;+1.0] 
     Confidence level   : 0.80 (90.0%) 
-    Confident majority : 0.14 (57.1%) 
+    Confident majority : 0.14 (57.1%) §\label{line:18.4.25}§
     Determinateness    : 0.24 (62.1%)
 \end{lstlisting}
 
-Despite lower likelihood values (see the $g90$ digraph in List.~\vref{list:18.5}), we keep here the same confident majority level of $57.1\%$ (Line 25) and, hence, also the same $90\%$-confident outranking digraph.
+Despite lower likelihood values (see the \texttt{g90} digraph in List.~\vref{list:18.2}), we keep here the same confident majority level of $57.1\%$ (Line~\ref{line:18.4.25}) and, hence, also the same $90\%$-confident outranking digraph.
 
 For concluding, it is worthwhile noticing again that it is the \emph{neutral} value of the bipolar-valued epistemic logic that allows to easily handle $\alpha\%$ confidence or not of outranking situations when confronted with uncertain criteria significance weights. Remarkable furthermore is the usage, the standard Gaussian error function (erf) provides by delivering \emph{signed} likelihood values immediately concerning either a positive relational statement, or when negative, its negated version \citep{NR3-2007-6}. 
 

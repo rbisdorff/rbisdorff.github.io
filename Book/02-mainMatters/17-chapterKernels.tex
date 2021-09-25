@@ -8,19 +8,19 @@
 \section{What is a graph kernel ?}
 \label{sec:17.1}
 
-We call \emph{choice} in a graph, respectively a digraph, a subset of its vertices, resp. of its nodes or actions. A choice $Y$ is called \emph{internally stable} or \emph{independent} when there exist no links --(edges) or relations (arcs)-- between its members. Furthermore, a choice $Y$ is called \emph{externally stable} when for each vertex, node or action $x$ not in $Y$, there exists at least a member $y$ of $Y$ such that $x$ is linked or related to $y$. Now, an internally \emph{and} externally stable choice is called a \emph{kernel}.  
+We call \emph{choice} in a graph, respectively a digraph, a subset of its vertices, resp. of its nodes or actions. A choice $Y$ is called \emph{internally stable}\index{internal stability} or \emph{independent} when there exist no links --(edges) or relations (arcs)-- between its members. Furthermore, a choice $Y$ is called \emph{externally stable}\index{external stability} when for each vertex, node or action $x$ not in $Y$, there exists at least a member $y$ of $Y$ such that $x$ is linked or related to $y$. Now, an internally \emph{and} externally stable choice is called a \emph{kernel}\index{kernel}.  
 
-A first trivial example is immediately given by the maximal independent vertices sets (MISs) of the $n$-cycle graph (see Fig.~\vref{fig:21.5}). Indeed, each MIS in the $n$-cycle graph is by definition independent, i.e. \emph{internally stable}, and each non selected vertex in the $n$-cycle graph is in relation with either one or even two members of the MIS.
+A first trivial example is immediately given by the maximal independent vertices sets (MISs) of the $n$-cycle graph (see Fig.~\vref{fig:21.5})\index{MIS}. Indeed, each MIS in the $n$-cycle graph is by definition independent, i.e. \emph{internally stable}, and each non selected vertex in the $n$-cycle graph is in relation with either one or even two members of the MIS.
 
-In all graphs or symmetric digraphs, the \emph{maximality condition} imposed on the internal stability is equivalent to the \emph{external stability} condition. Indeed, if there would exist a vertex or node not related to any of the elements of a choice, we may safely add this vertex or node to the given choice without violating its internal stability. All kernels must hence be maximal independent choices. In fact, in a topological sense, they correspond to maximal \emph{holes} in the given graph.
+In all graphs or symmetric digraphs, the \emph{maximality condition} imposed on the internal stability is equivalent to the \emph{external stability} condition. Indeed, if there would exist a vertex or node not related to any of the elements of a choice, we may safely add this vertex or node to the given choice without violating its internal stability. All kernels must hence be maximal independent choices\index{maximal independent choice}. In fact, in a topological sense, they correspond to maximal \emph{holes} in the given graph\index{holes}.
 
-Figure~\vref{fig:17.1} illustrates this coincidence between MISs and kernels in graphs and symmetric digraphs with a random 3-regular graph instance generated in Listing~\vref{list:17.1}\index{RandomRegularGraph@\texttt{RandomRegularGraph} class}. A random MIS in this graph may be computed by using the \texttt{MISModel} class\index{MISModel@\texttt{MISModel} class} (see Lines 5-8 below).
+Figure~\vref{fig:17.1} illustrates this coincidence between MISs and kernels in graphs and symmetric digraphs with a random 3-regular graph instance generated in Listing~\vref{list:17.1}\index{RandomRegularGraph@\texttt{RandomRegularGraph} class}. A random MIS in this graph may be computed by using the \texttt{MISModel} class\index{MISModel@\texttt{MISModel} class} (see Line~\ref{line:17.1.5} below).
 \begin{lstlisting}[caption={Generating a random 3-regular graph of order 12},label=list:17.1]
 >>> from graphs import RandomRegularGraph
 >>> r3g12 = RandomRegularGraph(order=12,\
 ...                        degree=3,seed=4)
 >>> from graphs import MISModel
->>> mg = MISModel(r3g12)
+>>> mg = MISModel(r3g12)   §\label{line:17.1.5}§
   Iteration:  1
     Running a Gibbs Sampler for 660 step !
     {'a05', 'a07', 'a12'}  is maximal !
@@ -99,11 +99,11 @@ In an oriented graph context, the internal stability condition of the kernel con
 \item An \emph{absorbent} stability condition, where each non selected node is absorbed by at least one member of the kernel.
 \end{enumerate}
 
-A both internally stable \textbf{and} dominant, resp. absorbent choice is called a dominant or \emph{initial}, resp. an absorbent or \emph{terminal} kernel. From a topological perspective, the initial kernel concept looks from the outside of the digraph into its interior, whereas the terminal kernel looks from the interior of a digraph toward its outside. From an algebraic perspective, the initial kernel is a prefix operand, and the terminal kernel is a postfix operand in the kernel equation systems (see Sec.~\vref{sec:17.6}).
+A both internally stable \textbf{and} dominant, resp. absorbent choice is called a dominant or \emph{initial}\index{kernel!initial}, resp. an absorbent or \emph{terminal} kernel\index{kernel!terminal}. From a topological perspective, the initial kernel concept looks from the outside of the digraph into its interior, whereas the terminal kernel looks from the interior of a digraph toward its outside. From an algebraic perspective, the initial kernel is a prefix operand, and the terminal kernel is a postfix operand in the kernel equation systems (see Sec.~\vref{sec:17.6}).
 
 Furthermore, as the kernel concept involves conjointly a positive logical refutation (the internal stability) and a positive logical affirmation (the external stability), it appeared rather quickly necessary in our operational developments to adopt a bipolar characteristic $[-1.0,1.0]$ valuation domain, modelling logical negation by a change of numerical sign and including explicitly a third median value ($0.0$), expressing logical \emph{indeterminateness} --neither positive, nor negative \citep{BIS-2000,BIS-2002,BIS-2004a}.
 
-In such a  bipolar-valued context, we call \emph{prekernel}\index{prekernel} a choice which is \emph{externally stable} and for which the internal stability condition is \emph{valid or indeterminate}. We say that the independence condition is in this case only \emph{weakly validated}. Notice that all kernels are hence prekernels, but not vice-versa.
+In such a  bipolar-valued context, we call \emph{prekernel}\index{kernel!prekernel} a choice which is \emph{externally stable} and for which the internal stability condition is \emph{valid or indeterminate}. We say that the independence condition is in this case only \emph{weakly validated}. Notice that all kernels are hence prekernels, but not vice-versa.
 
 In graphs or symmetric digraphs, where there is essentially no apparent \emph{laterality}; all prekernels are initial and terminal at the same time. A universal example is given by the \emph{complete} digraph \index{CompleteDigraph@\texttt{CompleteDigraph} class}.
 \begin{lstlisting}[caption={The prekernels of a complete digraph},label=list:17.3]
@@ -154,12 +154,12 @@ The same absence of laterality is apparent (see List.~\vref{list:17.4}) in two o
 >>> ed.showPreKernels()
   *--- Computing preKernels ---*
    Dominant kernel :
-    ['1', '2', '3', '4', '5']
+    ['1', '2', '3', '4', '5'] §\label{line:17.4.6}§
        independence :  1.0 
        dominance    :  1.0
        absorbency   :  1.0
    Absorbent kernel :
-    ['1', '2', '3', '4', '5']
+    ['1', '2', '3', '4', '5'] §\label{line:17.4.11}§
        independence :  1.0 
        dominance    :  1.0
        absorbency   :  1.0
@@ -168,20 +168,20 @@ The same absence of laterality is apparent (see List.~\vref{list:17.4}) in two o
 >>> id.showPreKernels()
   *--- Computing preKernels ---*
     Dominant prekernel :
-    ['1', '2', '3', '4', '5']
-       independence :  0.0
+    ['1', '2', '3', '4', '5'] §\label{line:17.4.20}§
+       independence :  0.0    §\label{line:17.4.21}§
        dominance    :  1.0
        absorbency   :  1.0
     Absorbent prekernel :
-    ['1', '2', '3', '4', '5']
-       independence :  0.0
+    ['1', '2', '3', '4', '5'] §\label{line:17.4.25}§
+       independence :  0.0    §\label{line:17.4.26}§
        dominance    :  1.0
        absorbency   :  1.0
 \end{lstlisting}
 
-In the empty digraph, the whole set of nodes gives indeed at the same time the unique initial and terminal prekernel (see Lines 6 and 11). Similarly, for the \emph{indeterminate} digraph (see Lines 20 and 25).
+In the empty digraph, the whole set of nodes gives indeed at the same time the unique initial and terminal prekernel (see Lines~\ref{line:17.4.6} and \ref{line:17.4.11}). Similarly, for the \emph{indeterminate} digraph (see Lines~\ref{line:17.4.20} and \ref{line:17.4.25}).
 
-Both these results make sense, as in a completely empty or indeterminate digraph, there is no \emph{interior} of the digraph defined, only a \emph{border} which is hence at the same time an initial and terminal prekernel (see Section~\vref{sec:2.4}).  Notice however, that in the latter indeterminate case, the complete set of nodes verifies only weakly the internal stability condition (see Lines 21 and 26).
+Both these results make sense, as in a completely empty or indeterminate digraph, there is no \emph{interior} of the digraph defined, only a \emph{border} which is hence at the same time an initial and terminal prekernel (see Sec.~\ref{sec:2.4}).  Notice however, that in the latter indeterminate case, the complete set of nodes verifies only weakly the internal stability condition (see Lines~\ref{line:17.4.21} and \ref{line:17.4.26}).
 
 Other common digraph models, although being clearly oriented, may show nevertheless no apparent laterality, like \emph{chordless circuits}\index{chordless circuits}, i.e. holes surrounded by an oriented cycle -a circuit- of odd length. They do not admit in fact any initial or terminal prekernel.\index{CirculantDigraph@\texttt{CirculantDigraph} class}
 \begin{lstlisting}[caption={The prekernels of the 5-circuit digraph},label=list:17.5]
@@ -279,24 +279,24 @@ In genuine random digraphs, however, we may need to check for each of its MISs, 
 \label{fig:17.4}       % Give a unique label
 \end{figure}
 
-The random digraph shown in Figure~\vref{fig:17.4} has no apparent special properties, except from being connected (see Line 3 in List.~\vref{list:17.10}).
+The random digraph shown in Figure~\vref{fig:17.4} has no apparent special properties, except from being connected (see Line~\ref{line:17.10.3} in List.~\vref{list:17.10}).
 \begin{lstlisting}[caption={Inspecting the properties of random digraph \texttt{rd}},label=list:17.10]
 >>> rd.showComponents()
   *--- Connected Components ---*
-  1: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7']
->>> rd.computeSymmetryDegree(Comments=True,InPercents=True)
+  1: ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7'] §\label{line:17.10.3}§
+>>> rd.computeSymmetryDegree(Comments=True)
   Symmetry degree (%) of digraph <randomDigraph>:
    arcs x>y: 14, symmetric: 1, asymmetric: 13
-   symmetric/arcs =  7.1
+   symmetric/arcs =  0.071
 >>> rd.computeChordlessCircuits()
-  []  # no chordless circuits detected
->>> rd.computeTransitivityDegree(Comments=True,InPercents=True)
+  []  # no chordless circuits detected §\label{line:17.10.9}§
+>>> rd.computeTransitivityDegree(Comments=True)
   Transitivity degree (%) of graph <randomDigraph>:
    triples x>y>z: 23, closed: 11, open: 12
-   closed/triples =  47.8
+   closed/triples =  0.478 §\label{line:17.10.13}§
 \end{lstlisting}
 
-There are no chordless circuits (see Line 9 above) and more than half of the required transitive closure is missing (see Line 12 above).
+There are no chordless circuits (see Line~\ref{line:17.10.9} above) and more than half of the required transitive closure is missing (see Line~\ref{line:17.10.13} above).
 
 Now, we know that its potential prekernels must be among its set of maximal independent choices. 
 \begin{lstlisting}[caption={Inspecting the prekernels of random digraph \texttt{rd}},label=list:17.11]
@@ -315,26 +315,26 @@ Now, we know that its potential prekernels must be among its set of maximal inde
        independence :  1.0
        dominance    :  1.0
        absorbency   :  -1.0
-       covering     :  0.500
+       covering     :  0.500 §\label{line:17.11.16}§
     ['a4', 'a3']
        independence :  1.0
        dominance    :  1.0
        absorbency   :  -1.0
-       covering     :  0.600
+       covering     :  0.600 §\label{line:17.11.21}§
    Absorbent preKernels :
     ['a3', 'a1']
        independence :  1.0
        dominance    :  -1.0
        absorbency   :  1.0
-       covering     :  0.500
+       covering     :  0.500 §\label{line:17.11.27}§
     ['a6', 'a1']
        independence :  1.0
        dominance    :  -1.0
        absorbency   :  1.0
-       covering     :  0.600
+       covering     :  0.600 §\label{line:17.11.32}§
 \end{lstlisting}
      
-Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in List.~\vref{list:17.11}) we discover two initial and two terminal kernels (Lines 12, 17, 23, 28). Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels()}} method (Lines 16, 21, 27 and 32). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. In Fig.~\vref{fig:17.5}, the same digraph \texttt{rd} is redrawn by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{\texttt{a3}, \texttt{a4}\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{\texttt{a1}, \texttt{a6}\} (coloured in blue).
+Among the six MISs contained in random digraph \texttt{rd} we discover in Listing~\vref{list:17.11} two initial and two terminal prekernels. Notice by the way the covering values (between $0.0$ and $1.0$) shown by the \texttt{showPreKernels()}\index{showPreKernels@\texttt{showPreKernels()}} method (Lines \ref{line:17.11.16}, \ref{line:17.11.21}, \ref{line:17.11.27} and \ref{line:17.11.32}). The higher this value, the more the corresponding prekernel candidate makes apparent the digraph's laterality. In Fig.~\vref{fig:17.5}, the same digraph \texttt{rd} is redrawn by looking into its interior via the best covering initial prekernel candidate: the dominant choice \{\texttt{a3}, \texttt{a4}\} (coloured in yellow), and looking out of it via the best covered terminal prekernel candidate: the absorbent choice \{\texttt{a1}, \texttt{a6}\} (coloured in blue).
 \begin{lstlisting}
 >>> rd.exportGraphViz(fileName='orientedLaterality',\
 ...                   firstChoice=set(['a3', 'a4']),\
@@ -351,7 +351,7 @@ Among the six MISs contained in random digraph \texttt{rd} (see Lines 3-8 in Lis
 \label{fig:17.5}       % Give a unique label
 \end{figure}
 
-As all reasonable bipolar-valued outranking digraph usually show some laterality --the marginal criteria preferences being not all totally contradictory-- initial and terminal prekernels provide convincing fist, resp. last, choice recommendations as illustrated in Chapter~\vref{sec:4}.
+As all reasonable bipolar-valued outranking digraph usually show some laterality --the marginal criteria preferences being not all totally contradictory-- initial and terminal prekernels provide convincing first, resp. last, choice recommendations as illustrated in Chapter~\vref{sec:4}.
 
 \section{Computing first and last choice recommendations}
 \label{sec:17.4}
@@ -398,20 +398,20 @@ The associated random performance tableau shown in Fig.~\vref{fig:17.6} reveals 
 >>> gcd.showPreKernels()
   *--- Computing preKernels ---*
    Dominant preKernels :
-    ['a1', 'a2', 'a4']
+    ['a1', 'a2', 'a4']   §\label{line:17.13.4}§
        independence :  0.00
        dominance    :  6.98
        absorbency   :  -48.84
        covering     :  0.667
    Absorbent preKernels :
-    ['a3', 'a7']
+    ['a3', 'a7']   §\label{line:17.13.10}§
        independence :  0.00
        dominance    :  -74.42
        absorbency   :  16.28
        covered      :  0.800
 \end{lstlisting}
 
-With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in List.~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralised. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \emph{first}, resp. \emph{last}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
+With such unique disjoint initial and terminal prekernels (see Line~\ref{line:17.13.4} and ~\ref{line:17.13.10} in List.~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralised. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \emph{first}, resp. \emph{last}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
 \begin{lstlisting}[caption={Computing a first and last choice recommendation from digraph \texttt{gcd}},label=list:17.14]
 >>> g.showBestChoiceRecommendation()
   Rubis best choice recommendation(s) (BCR)
@@ -425,7 +425,7 @@ With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in 
       covering (%)        : 66.67
       determinateness (%) : 57.97
       - most credible action(s) =
-                      {'a4': 20.93,'a2': 20.93}
+                      {'a4': 20.93,'a2': 20.93}  §\label{line:17.14.13}§
    === >> potential last choice(s) 
     * choice              : ['a3', 'a7']
       independence        : 0.00
@@ -433,10 +433,10 @@ With such unique disjoint initial and terminal prekernels (see Line 4 and 10 in 
       absorbency          : 16.28
       covered (%)         : 80.00
       determinateness (%) : 64.62
-      - most credible action(s) = { 'a7': 48.84, }
+      - most credible action(s) = { 'a7': 48.84, } §\label{line:17.14.21}§
 \end{lstlisting}
 
-Notice in Lines 13 and 21 in Listing~\vref{list:17.14} that solving the valued kernel equation system provides furthermore a positive characterisation of the most credible decision alternatives in each respective choice recommendation. Alternatives \texttt{a2} and \texttt{a4} give equivalent candidates for a unique \emph{first} choice, and alternative \texttt{a7} is clearly confirmed as the \emph{last} choice.
+Notice in Lines~\ref{line:17.14.13} and \ref{line:17.14.21} in Listing~\vref{list:17.14} that solving the valued kernel equation system provides furthermore a positive characterisation of the most credible decision alternatives in each respective choice recommendation. Alternatives \texttt{a2} and \texttt{a4} give equivalent candidates for a unique \emph{first} choice, and alternative \texttt{a7} is clearly confirmed as the \emph{last} choice.
 
 In Fig.~\vref{fig:17.8}, we orient the drawing of the strict outranking digraph instance with the help of these first and last choice recommendations. 
 \begin{lstlisting}
@@ -455,7 +455,7 @@ In Fig.~\vref{fig:17.8}, we orient the drawing of the strict outranking digraph 
 \label{fig:17.8}       % Give a unique label
 \end{figure}
 
-It may be interesting to compare this result with a \Copeland ranking of the underlying performance tableau (see Section~\vref{sec:8.2} on ranking with incommensurable criteria).
+It may be interesting to compare this result with a \Copeland ranking of the underlying performance tableau (see Sec.~\ref{sec:8.2} on ranking with incommensurable criteria).
 \begin{lstlisting}
 >>> g.showHTMLPerformanceHeatmap(colorLevels=5, ndigits=0,\
 ...             Correlations=True, rankingRule='Copeland')
@@ -472,7 +472,7 @@ In the resulting linear ranking (see Fig.~\vref{fig:17.9}), alternative \texttt{
 \section{Tractability of kernel computation}
 \label{sec:17.5}
 
-Let us give some hints on the \emph{tractability} of prekernel computations. Detecting all prekernels in a digraph is a computationally difficult problem. Checking external stability conditions for an independent choice is equivalent to checking its maximality and may be done in the linear complexity of the order of the digraph. However, checking all independent choices contained in a digraph may get hard already for tiny sparse digraphs of order $n > 20$ (see \citealp{BIS-2006b}). Indeed, the worst case is given by an empty or indeterminate digraph where the set of all potential independent choices to check is in fact the power set of the vertices.
+Let us give some hints on the \emph{tractability} of prekernel computations. Detecting all prekernels in a digraph is a computationally difficult problem. Checking external stability conditions for an independent choice is equivalent to checking its maximality and may be done in the linear complexity of the order of the digraph. However, checking all independent choices contained in a digraph may get hard already for tiny sparse digraphs of order $n > 20$ \citep{BIS-2006b}. Indeed, the worst case is given by an empty or indeterminate digraph where the set of all potential independent choices to check is in fact the power set of the vertices.
 \begin{lstlisting}
 >>> from digraphs import EmptyDigraph
 >>> e = EmptyDigraph(order=20)
@@ -481,12 +481,12 @@ Let us give some hints on the \emph{tractability} of prekernel computations. Det
     [ '1', '2', '3', '4', '5', '6', '7', '8', '9','10',
      '11','12','13','14','15','16','17','18','19','20']
     number of solutions:  1
-    execution time: 1.47640 sec.  # <-----
+    execution time: 1.47640 sec.  # <----- 
 >>> 2**20
   1048576
 \end{lstlisting}
 
-Now, there exist more efficient specialised algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices (see \citealp{BIS-2006b}). \emph{Alain Hertz}\index{Hertz@\emph{A. Hertz}} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method)\index{showMISAH@\texttt{showMIS\_AH}()}. When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 7 above and Line 15 below).
+Now, there exist more efficient specialised algorithms for directly enumerating MISs and dominant or absorbent kernels contained in specific digraph models without visiting all independent choices \citep{BIS-2006b}. \emph{Alain Hertz}\index{Hertz@\emph{A. Hertz}} provided kindly such a MISs enumeration algorithm for the \Digraph project (the \texttt{showMIS\_AH()} method)\index{showMISAH@\texttt{showMIS\_AH}()}. When the number of independent choices is big compared to the actual number of MISs, like in very sparse or empty digraphs, the performance difference may be dramatic (see Line 8 above and Line~\ref{line:17.15.16} below).
 \begin{lstlisting}[caption={Enumerating MISs by visiting only maximal independent choices (\emph{A. Hertz}) },label=list:17.15]
 >>> e.showMIS_AH()
   # by visiting only maximal independent choices
@@ -503,7 +503,7 @@ Now, there exist more efficient specialised algorithms for directly enumerating 
     '12','13','14','15','16','17','18','19','20']
   *---- statistics ----*
   MIS solutions    :  1
-  execution time   : 0.00026 sec. # <----
+  execution time   : 0.00026 sec. # <---- §\label{line:17.15.16}§
   iteration history:  1
 \end{lstlisting}
 
@@ -532,7 +532,7 @@ def independentChoices(self,U):
                 yield Sx
 \end{lstlisting}
 
-And, checking maximality of independent choices via the external stability conditions during their enumeration with the \texttt{computePreKernels()} method shown in Listing~\vref{list:17.17} provides the effective advantage of computing all initial and terminal prekernels in a single loop (see Line 10 and \citealp{BIS-2006b}).
+And, checking maximality of independent choices via the external stability conditions during their enumeration with the \texttt{computePreKernels()} method shown in Listing~\vref{list:17.17} provides the effective advantage of computing all initial and terminal prekernels in a single loop (see Line~\ref{line:17.17.10} and \citealp{BIS-2006b}).
 \begin{lstlisting}[caption={Computing dominant and absorbent preKernels},label=list:17.17]
 def computePreKernels(self):
     """
@@ -543,7 +543,7 @@ def computePreKernels(self):
     n = len(actions)
     dompreKernels = set()
     abspreKernels = set()
-    for choice in self.independentChoices(self.singletons()):
+    for choice in self.independentChoices(self.singletons()): §\label{line:17.17.10}§
         restactions = actions - choice[0][0]
         if restactions <= choice[0][1]:
             dompreKernels.add(choice[0][0])
@@ -739,7 +739,7 @@ The corresponding bipolar-valued characteristic vector $Y_2$ may be computed as 
  Iterations          : 3
  high & low fusion   : [-0.16,-0.49, 0.00,-0.49,-0.16,-0.26,+0.49]
  Choice vector for terminal prekernel: {'a3','a7'}
-    'a7': +0.49
+    'a7': +0.49 
     'a3':  0.00
     'a1': -0.16
     'a5': -0.16
@@ -748,7 +748,7 @@ The corresponding bipolar-valued characteristic vector $Y_2$ may be computed as 
     'a4': -0.49
 \end{lstlisting}
 
-A unique stable bipolar-valued high and low fixpoint is attained at the third iteration with alternative \texttt{a7} positively confirmed (about $(1.0+0.49)/2 = 0.75\%$ criteria significance majority, see Line 13) as member of this terminal prekernel, whereas the membership of alternative \texttt{a3} in this prekernel appears indeterminate. All the remaining nodes have negative membership characteristic values and are hence positively excluded from this prekernel.
+A unique stable bipolar-valued high and low fixpoint is attained at the third iteration with alternative \texttt{a7} positively confirmed (about $(1.0+0.49)/2 = 0.75\%$ criteria significance majority, see Line 15 above) as member of this terminal prekernel, whereas the membership of alternative \texttt{a3} in this prekernel appears indeterminate. All the remaining nodes have negative membership characteristic values and are hence positively excluded from this prekernel.
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/17-12-bestWorstOrientation.pdf}

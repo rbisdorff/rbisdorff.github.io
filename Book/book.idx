@@ -224,9 +224,17 @@
 \indexentry{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class|hyperpage}{229}
 \indexentry{RankingByChoosingDigraph@\texttt{RankingByChoosingDigraph} class|hyperpage}{229}
 \indexentry{transitiveDigraphs@\texttt{transitiveDigraphs} module|hyperpage}{230}
+\indexentry{internal stability|hyperpage}{231}
+\indexentry{external stability|hyperpage}{231}
+\indexentry{kernel|hyperpage}{231}
+\indexentry{MIS|hyperpage}{231}
+\indexentry{maximal independent choice|hyperpage}{231}
+\indexentry{holes|hyperpage}{231}
 \indexentry{RandomRegularGraph@\texttt{RandomRegularGraph} class|hyperpage}{232}
 \indexentry{MISModel@\texttt{MISModel} class|hyperpage}{232}
-\indexentry{prekernel|hyperpage}{234}
+\indexentry{kernel!initial|hyperpage}{234}
+\indexentry{kernel!terminal|hyperpage}{234}
+\indexentry{kernel!prekernel|hyperpage}{234}
 \indexentry{CompleteDigraph@\texttt{CompleteDigraph} class|hyperpage}{234}
 \indexentry{EmptyDigraph@\texttt{EmptyDigraph} class|hyperpage}{235}
 \indexentry{IndeterminateDigraph@\texttt{IndeterminateDigraph} class|hyperpage}{235}
@@ -314,7 +322,7 @@
 \indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{339}
 \indexentry{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}|hyperpage}{339}
 \indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{339}
-\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{340}
+\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{339}
 \indexentry{isComparabilityGraph@\texttt{isComparabilityGraph()}|hyperpage}{341}
 \indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOriented\-Digraph()}|hyperpage}{344}
 \indexentry{computeCopelandRanking@\texttt{computeCopelandRanking()}|hyperpage}{344}

@@ -164,9 +164,10 @@
 \contentsline {lstlisting}{\numberline {17.18}Verifying the kernel equation system on a tiny random digraph}{248}{lstlisting.17.18}%
 \contentsline {lstlisting}{\numberline {17.19}Computing a dominant prekernel restricted adjancecy table}{250}{lstlisting.17.19}%
 \contentsline {lstlisting}{\numberline {17.20}Fixpoint iterations for initial prekernel \texttt {\{a1, a2, a4\}}}{250}{lstlisting.17.20}%
-\contentsline {lstlisting}{\numberline {18.1}$90\%$-confident outranking relation with triangular distributed significance weights}{262}{lstlisting.18.1}%
-\contentsline {lstlisting}{\numberline {18.2}$99\%$-confident outranking relation}{264}{lstlisting.18.2}%
-\contentsline {lstlisting}{\numberline {18.3}$90\%$-confident outranking digraph with uniform variates}{265}{lstlisting.18.3}%
+\contentsline {lstlisting}{\numberline {18.1}Computing a 90\% confident outranking dugraph}{262}{lstlisting.18.1}%
+\contentsline {lstlisting}{\numberline {18.2}$90\%$-confident outranking relation with triangular distributed significance weights}{262}{lstlisting.18.2}%
+\contentsline {lstlisting}{\numberline {18.3}$99\%$-confident outranking relation}{264}{lstlisting.18.3}%
+\contentsline {lstlisting}{\numberline {18.4}$90\%$-confident outranking digraph with uniform variates}{265}{lstlisting.18.4}%
 \contentsline {lstlisting}{\numberline {19.1}Generate a Random 3 Objectives Performance Tableau}{267}{lstlisting.19.1}%
 \contentsline {lstlisting}{\numberline {19.2}The significance weights preorder}{268}{lstlisting.19.2}%
 \contentsline {lstlisting}{\numberline {19.3}Example Bipolar Outranking Digraph}{269}{lstlisting.19.3}%
