@@ -21,7 +21,7 @@ In the \Digraph \texttt{graphs} module\index{graphs@\texttt{graphs} module}, the
 
 \paragraph{\textbf{Example Python terminal session}}
 
-\noindent A random crisp graph instance can be generated with the \texttt{RandomGraph} class (see Lines 1-2 in List.~\vref{list:21.1} below).\index{RandomGraph@\texttt{RandomGraph} class} 
+\noindent A random crisp graph instance can be generated with the \texttt{RandomGraph} class from the \texttt{graphs} module (see below).\index{RandomGraph@\texttt{RandomGraph} class} 
 \begin{lstlisting}[caption={Generating a randm graph instance},label=list:21.1]
 >>> from graphs import RandomGraph
 >>> g = RandomGraph(order=7,edgeProbability=0.5)
@@ -303,10 +303,10 @@ Notice in Listing~\vref{list:21.9} that the MISs in a line graph provide \emph{m
     [frozenset({'v2', 'v1'}), frozenset({'v8', 'v7'}), frozenset({'v4', 'v5'})]
     [frozenset({'v2', 'v1'}), frozenset({'v7', 'v6'}), frozenset({'v4', 'v5'})]
     [frozenset({'v2', 'v1'}), frozenset({'v7', 'v6'}), frozenset({'v3', 'v4'})]
-    [frozenset({'v7', 'v6'}), frozenset({'v2', 'v3'}), frozenset({'v1', 'v8'}),
+    [frozenset({'v7', 'v6'}), frozenset({'v2', 'v3'}), frozenset({'v1', 'v8'}), §\label{line:21.9.13}§
      frozenset({'v4', 'v5'})]
     [frozenset({'v2', 'v1'}), frozenset({'v8', 'v7'}), frozenset({'v3', 'v4'}),
-     frozenset({'v5', 'v6'})]
+     frozenset({'v5', 'v6'})] §\label{line:21.9.16}§
     number of solutions:  10
     cardinality distribution
     card.:  [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -321,7 +321,7 @@ Notice in Listing~\vref{list:21.9} that the MISs in a line graph provide \emph{m
 \label{fig:21.3}       % Give a unique label
 \end{figure}
 
-The two last MISs of cardinality 4 (see Lines 13-16 in List.~\vref{list:21.9}) give perfect maximum matchings of the 8-cycle graph as shown in Figure~\vref{fig:21.3}. 
+The two last MISs of cardinality 4 (see Lines~\ref{line:21.9.13}-\ref{line:21.9.16} 13-16 in List.~\vref{list:21.9}) give perfect maximum matchings of the 8-cycle graph as shown in Figure~\vref{fig:21.3}. 
 \begin{lstlisting}[caption={Computing maximum matchings in the 8-cycle graph},label=list:21.10]
 >>> maxMatching = c8.computeMaximumMatching()
 >>> c8.exportGraphViz(fileName='maxMatchingcycleGraph',\
@@ -539,7 +539,7 @@ For computing the corresponding non-isomorphic MISs, we actually need the automo
 
 The 12-cycle graph's automorphism group, of size 24, is generated with both the permutations shown in Listing~\vref{list:21.17}.
 
-The \texttt{showOrbits()} method renders now the labelled representatives of each of the four orbits of isomorphic MISs observed in the 12-cycle graph (see Lines 7-10 below).
+The \texttt{showOrbits()} method renders now the labelled representatives of each of the four orbits of isomorphic MISs observed in the 12-cycle graph (see Lines~\ref{line:21.18.7}-\ref{line:21.18.10} below).
 \begin{lstlisting}[caption={Computing the MISs orbits of the 12-cycle graph},label=list:21.18]
 >>> c12.showOrbits(c12.misset,withListing=False)
     ...
@@ -547,16 +547,16 @@ The \texttt{showOrbits()} method renders now the labelled representatives of eac
    Number of MIS:  29
    Number of orbits :  4
    Labelled representatives and cardinality:
-   1: ['2','4','6','8','10','12'], 2
+   1: ['2','4','6','8','10','12'], 2          §\label{line:21.18.7}§
    2: ['2','5','8','11'], 3
    3: ['2','4','6','9','11'], 12
-   4: ['1','4','7','9','11'], 12
+   4: ['1','4','7','9','11'], 12              §\label{line:21.18.10}§
    Symmetry vector
-   stabilizer size: [1, 2, 3, ..., 8, 9, ..., 12, 13, ...]
-   frequency      : [0, 2, 0, ..., 1, 0, ...,  1,  0, ...]
+   stabilizer size: [1, 2, 3, ..., 8, 9, ..., 12, 13, ...]§\label{line:21.18.12}§
+   frequency      : [0, 2, 0, ..., 1, 0, ...,  1,  0, ...]§\label{line:21.18.13}§
 \end{lstlisting}
 
-The corresponding group stabilisers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines 12-13 in List.~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Figure~\vref{fig:21.5}.
+The corresponding group stabilisers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines~\ref{line:21.18.12}-\ref{line:21.18.13} in List.~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Figure~\vref{fig:21.5}.
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/21-5-c12.png}
@@ -569,7 +569,7 @@ The non isomorphic MISs in the 12-cycle graph represent in fact all the ways one
 %\vspace{1cm}
 \vspace{\baselineskip}
 
-\noindent The next Chapter~\ref{sc:22} is devoted more specifically to tree graphs and graph forests.
+\noindent The next Chapter~\ref{sec:22} is devoted more specifically to tree graphs and graph forests.
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

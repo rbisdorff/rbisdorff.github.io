@@ -297,7 +297,7 @@
 \indexentry{RandomTree@\texttt{RandomTree} class|hyperpage}{323}
 \indexentry{isTree@\texttt{isTree()}|hyperpage}{326}
 \indexentry{tree2Pruefer@\texttt{tree2Pruefer()}|hyperpage}{326}
-\indexentry{TreeGraph@\texttt{TreeGraph()}|hyperpage}{326}
+\indexentry{TreeGraph@\texttt{TreeGraph} class|hyperpage}{326}
 \indexentry{computeGraphCentres@\texttt{computeGraphCentres()}|hyperpage}{326}
 \indexentry{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}|hyperpage}{326}
 \indexentry{RandomSpanningTree@\texttt{RandomSpanningTree} class|hyperpage}{328}
@@ -316,14 +316,16 @@
 \indexentry{isSpliGraph@\texttt{isSplitGraph()}|hyperpage}{334}
 \indexentry{isIntervalGraph@\texttt{isIntervalGraph()}|hyperpage}{334}
 \indexentry{isPermutationGraph@\texttt{isPermutationGraph()}|hyperpage}{334}
-\indexentry{computeChordlessCycles@\texttt{computeChordlessCycles()}|hyperpage}{337}
+\indexentry{computeChordlessCycles@\texttt{computeChordlessCycles()}|hyperpage}{336}
 \indexentry{setEdgeValue@\texttt{setEdgeValue()}|hyperpage}{337}
 \indexentry{PermutationGraph@\texttt{PermutationGraph} class|hyperpage}{338}
-\indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{339}
+\indexentry{computeMinimalVertexColoring@\texttt{computeMinimalVertexColoring()}|hyperpage}{338}
 \indexentry{exportPermutationGraphViz@\texttt{exportPermutationGraphViz()}|hyperpage}{339}
 \indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{339}
-\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{340}
+\indexentry{transitiveOrientation@\texttt{transitiveOrientation()}|hyperpage}{339}
 \indexentry{isComparabilityGraph@\texttt{isComparabilityGraph()}|hyperpage}{341}
-\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOriented\-Digraph()}|hyperpage}{344}
+\indexentry{computeTransitivelyOrientedDigraph@\texttt{computeTransitivelyOriented\-Digraph()}|hyperpage}{343}
+\indexentry{FusionDigraph@\texttt{FusionDigraph} class|hyperpage}{344}
+\indexentry{o-max@\texttt{o-max}()|hyperpage}{344}
 \indexentry{computeCopelandRanking@\texttt{computeCopelandRanking()}|hyperpage}{344}
 \indexentry{computePermutation@\texttt{computePermutation()}|hyperpage}{345}

@@ -45,26 +45,22 @@ To illustrate these \emph{perfect} graph classes, we will generate from $8$ inte
   [(2,7), (2,7), (5,6), (6,8), (1,8), (1,1), (4,7), (0,10)]
 \end{lstlisting}
 
-With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \emph{perfect graph}, which is \emph{conjointly} a \emph{triangulated}, a \emph{comparability}, a \emph{split} and a \emph{permutation} graph (see List.~\vref{list:23.1} Lines 6, 10, 14 and Fig.~\vref{fig:23.1}).\index{isPerfectGraph@\texttt{isPerfectGraph()}}\index{isSpliGraph@\texttt{isSplitGraph()}}\index{isIntervalGraph@\texttt{isIntervalGraph()}}\index{isPermutationGraph@\texttt{isPermutationGraph()}}
-\begin{lstlisting}[caption={Testing perfect graph categories.},label=list:23.1,basicstyle=\ttfamily\scriptsize]
+With \texttt{seed = 100}, we obtain here an \emph{interval graph}, in fact a \emph{perfect graph}, which is \emph{conjointly} a \emph{triangulated}, a \emph{comparability}, a \emph{split} and a \emph{permutation} graph (see List.~\vref{list:23.1} Lines~\ref{line:23.1.2}, \ref{line:23.1.6}, \ref{line:23.1.10}, \ref{line:23.1.14} and Fig.~\vref{fig:23.1}).\index{isPerfectGraph@\texttt{isPerfectGraph()}}\index{isSpliGraph@\texttt{isSplitGraph()}}\index{isIntervalGraph@\texttt{isIntervalGraph()}}\index{isPermutationGraph@\texttt{isPermutationGraph()}}
+\begin{lstlisting}[caption={Testing perfect graph categories},label=list:23.1,basicstyle=\ttfamily\scriptsize]
 >>> g.isPerfectGraph(Comments=True)
-  Graph randIntervalIntersections is perfect !
+  Graph randIntervalIntersections is perfect !  §\label{line:23.1.2}§
 >>> g.isIntervalGraph(Comments=True)
   Graph 'randIntervalIntersections' is triangulated.
   Graph 'dual_randIntervalIntersections' is transitively orientable.
-  => Graph 'randIntervalIntersections' is an interval graph.
+  => Graph 'randIntervalIntersections' is an interval graph. §\label{line:23.1.6}§
 >>> g.isSplitGraph(Comments=True)
   Graph 'randIntervalIntersections' is triangulated.
   Graph 'dual_randIntervalIntersections' is triangulated.
-  => Graph 'randIntervalIntersections' is a split graph.
+  => Graph 'randIntervalIntersections' is a split graph. §\label{line:23.1.10}§
 >>> g.isPermutationGraph(Comments=True)
   Graph 'randIntervalIntersections' is transitively orientable.
   Graph 'dual_randIntervalIntersections' is transitively orientable.
-  => Graph 'randIntervalIntersections' is a permutation graph.
->>> print(g.computePermutation())
-  ['v5', 'v6', 'v4', 'v2', 'v1', 'v3', 'v7', 'v8']
-  ['v8', 'v6', 'v1', 'v2', 'v3', 'v4', 'v7', 'v5']
-  [8, 2, 6, 5, 7, 4, 3, 1]
+  => Graph 'randIntervalIntersections' is a permutation graph. §\label{line:23.1.14}§
 >>> g.exportGraphViz('randomSplitGraph')
   *---- exporting a dot file for GraphViz tools ---------*
    Exporting to randomSplitGraph.dot
@@ -88,7 +84,7 @@ are all independent one of the other \citet[p. 275]{GOL-2004}.
 \section{Who is the liar?}
 \label{sec:23.2}
 
-Claude Berge's famous mystery story related by \citet[p. 20]{GOL-2004} may well illustrate the importance of being an \emph{interval} graph.
+\emph{Claude Berge}'s famous mystery story related by \citet[p. 20]{GOL-2004} may well illustrate the importance of being an \emph{interval} graph.
 
 Suppose the file \texttt{berge.py} \footnote{The file \texttt{berge.py} is provided in the \texttt{examples} directory of the \Digraph resources.} contains the following \texttt{Graph} instance data:
 \begin{lstlisting}
@@ -194,7 +190,7 @@ And it is \emph{Desmond}. If we doubt his testimony that he saw \emph{Abe} (see 
 \section{Generating permutation graphs}
 \label{sec:23.3}
 
-A graph is called a \emph{permutation} or \emph{inversion} graph if there exists a permutation of its list of vertices such that the graph is isomorphic to the inversions operated by the permutation in this list (see \citealp[Chapter 7, pp 157-170]{GOL-2004}). This kind of graphs (see Fig.~\vref{fig:23.4} is also part of the class of \Berge graphs.\index{PermutationGraph@\texttt{PermutationGraph} class}
+A graph is called a \emph{permutation} or \emph{inversion} graph if there exists a permutation of its list of vertices, like \texttt{[4,3,6,1,5,2]}, such that the graph is isomorphic to the inversions operated by the permutation in this list (see \citealp[Chapter 7, pp 157-170]{GOL-2004}). This kind of graphs  is also part of the class of \Berge graphs\index{PermutationGraph@\texttt{PermutationGraph} class}.
 \begin{lstlisting}
 >>> from graphs import PermutationGraph
 >>> g = PermutationGraph(permutation = [4,3,6,1,5,2])
@@ -220,7 +216,7 @@ A graph is called a \emph{permutation} or \emph{inversion} graph if there exists
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/23-4-permutationGraph.pdf}
-\caption{The default [4,3,6,1,5,2] permutation graph} 
+\caption{The [4,3,6,1,5,2] permutation graph} 
 \label{fig:23.4}       % Give a unique label
 \end{figure}
 
@@ -371,7 +367,7 @@ If the random perfect graph instance \texttt{g}, shown in Figure~\vref{fig:23.8}
 \label{fig:23.9}       % Give a unique label
 \end{figure}
 
-The resulting orientation of the edges of \texttt{g}, shown in Figure~\vref{fig:23.9}, is indeed transitive. The same procedure applied to the dual graph \texttt{gd} = \texttt{-g} gives as well a transitive orientation to the edges of \texttt{-g} shown in Figure~\vref{fig:23.10}.
+The resulting orientation of the edges of \texttt{g}, shown in Figure~\vref{fig:23.9}, is indeed transitive. The same procedure applied to the dual graph \texttt{-g} gives as well a transitive orientation of its edges shown in Figure~\vref{fig:23.10}.
 \begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
 >>> gd = -g
 >>> if gd.isComparabilityGraph():
@@ -411,18 +407,18 @@ Let us recheck these facts by explicitly constructing transitively oriented digr
 ...                      PartiallyDetermined = True)
 >>> print('Transitivity degree: %.3f' %\
 ...                      (og.transitivityDegree)) 
-  Transitivity degree: 1.000
+  Transitivity degree: 1.000 
 >>> ogd = (-g).computeTransitivelyOrientedDigraph(\
 ...                      PartiallyDetermined = True)
 >>> print('Transitivity degree: %.3f' %\
 ...                      (ogd.transitivityDegree)) 
   Transitivity degree: 1.000
 \end{lstlisting}
-The \texttt{PartiallyDetermined = True} flag (see Lines 2 and 7 above) is required here in order to orient only the actual edges of the graphs. Relations between vertices not linked by an edge are put to the indeterminate characteristic value $0$. This allows us to compute, later on, convenient disjunctive digraph fusions.
+The \texttt{PartiallyDetermined = True} flag in Lines 2 and 7 above is required here in order to orient only the actual edges of the graphs. Relations between vertices not linked by an edge are put to the indeterminate characteristic value $0$. This allows us to compute, later on, convenient disjunctive digraph fusions.
 
-As both graphs are indeed transitively orientable (see Lines 5 and 10 above), we may conclude that the given random graph \texttt{g} is actually a permutation graph instance. Yet, we still need to find now its corresponding permutation. We therefore implement a recipe given by Martin Golumbic \citep[p. 159]{GOL-2004}.
+As both graphs are indeed transitively orientable, we conclude that the given random graph \texttt{g} is actually a permutation graph instance. Yet, we still need to find now its corresponding permutation. We therefore implement a recipe given by Martin Golumbic \citep[p. 159]{GOL-2004}.
 
-We will first \emph{fuse} both $og$ and $ogd$ orientations above with an \emph{epistemic disjunction} operated with the symmetric \texttt{o-max} operator (see Sec.~\ref{sec:2.5}).
+We will first \emph{fuse}\index{FusionDigraph@\texttt{FusionDigraph} class} both $og$ and $ogd$ orientations above with an \emph{epistemic disjunction} operated with the symmetric \texttt{o-max} operator\index{o-max@\texttt{o-max}()} (see Sec.~\ref{sec:2.5}).
 \begin{lstlisting}
 >>> from digraphs import FusionDigraph
 >>> f1 = FusionDigraph(og,ogd,operator='o-max')
@@ -432,9 +428,7 @@ We will first \emph{fuse} both $og$ and $ogd$ orientations above with an \emph{e
 \end{lstlisting}
 With the \texttt{computeCopelandRanking()} method\index{computeCopelandRanking@\texttt{computeCopelandRanking()}}, we obtain the linear ordering [\texttt{v5}, \texttt{v7}, \texttt{v1}, \texttt{v6}, \texttt{v8}, \texttt{v4}, \texttt{v3}, \texttt{v2} of the vertices (see Line 5 above).
 
-We reverse now the orientation of the edges in \texttt{og} (see \texttt{-og} in Line 1 below) in order to generate, again by disjunctive fusion, the \emph{inversions} that are produced by the permutation we are looking for.
-
-Computing again a ranking with the \Copeland rule, reveals the permuted list of vertices we are looking for (see Line 4 below).
+We reverse now the orientation of the edges in \texttt{og}  in order to generate, again by disjunctive fusion, the \emph{inversions} that are produced by the permutation we are looking for (see \texttt{-og} in Line 1 below). Computing again a ranking with the \Copeland rule, reveals the permuted list of vertices we are looking for (see Line 4 below).
 \begin{lstlisting}
 >>> f2 = FusionDigraph((-og),ogd,operator='o-max')
 >>> s2 = f2.computeCopelandRanking()

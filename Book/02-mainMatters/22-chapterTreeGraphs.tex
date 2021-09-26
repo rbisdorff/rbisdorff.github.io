@@ -16,15 +16,15 @@ Using the \texttt{RandomTree} class\index{RandomTree@\texttt{RandomTree} class} 
   *------- Graph instance description ----*
    Instance class   : RandomTree
    Instance name    : randomTree
-   Graph Order      : 9
-   Graph Size       : 8
+   Graph Order      : 9    §\label{line:22.1.7}§
+   Graph Size       : 8    §\label{line:22.1.8}§
    Valuation domain : [-1.00; 1.00]
    Attributes   : ['name', 'order',
                    'vertices', 'valuationDomain',
                    'edges', 'prueferCode',
                    'size', 'gamma']
    *---- RandomTree specific data ----*
-   Pruefer code  : ['v3','v8','v8','v3','v7','v6','v7']
+   Pruefer code  : ['v3','v8','v8','v3','v7','v6','v7'] §\label{line:22.1.8}§
 >>> rt.exportGraphViz('tutRandomTree')
   *---- exporting a dot file for GraphViz tools --*
    Exporting to tutRandomTree.dot
@@ -37,11 +37,11 @@ Using the \texttt{RandomTree} class\index{RandomTree@\texttt{RandomTree} class} 
 \label{fig:22.1}       % Give a unique label
 \end{figure}
 
-In Fig.~\vref{fig:22.1} one may notice that a tree graph of order $n > 2$ always contains $n-1$ edges (see Lines 7 and 8 in List.~\vref{list:22.1}) and its structure is entirely characterised by a corresponding \Pruefer \emph{code}, i.e. a list of vertices keys of length $n-2$. See, for instance in Line 15 the code \texttt{['v3'}, \texttt{'v8',} \texttt{'v8',} \texttt{'v3',} \texttt{'v7',} \texttt{'v6',} \texttt{'v7']} corresponding to our sample tree graph \texttt{rt}.
+In Fig.~\vref{fig:22.1} one may notice that a tree graph of order $n > 2$ always contains $n-1$ edges (see Lines~\ref{line:22.1.7} and~\ref{line:22.1.8} in List.~\vref{list:22.1}) and its structure is entirely characterised by a corresponding \Pruefer \emph{code}, i.e. a list of vertices keys of length $n-2$. See, for instance in Line~\ref{line:22.1.15} the code \texttt{['v3'}, \texttt{'v8',} \texttt{'v8',} \texttt{'v3',} \texttt{'v7',} \texttt{'v6',} \texttt{'v7']} corresponding to our sample tree graph \texttt{rt}.
 
 Each position of the code indicates the parent of the remaining leaf with the smallest vertex label. Vertex \texttt{v3} is thus the parent of \texttt{v1} and we drop leaf \texttt{v1}, \texttt{v8} is now the parent of leaf \texttt{v2} and we drop \texttt{v2}, vertex \texttt{v8} is again the parent of leaf \texttt{v4} and we drop \texttt{v4}, vertex \texttt{v3} is the parent of leaf \texttt{v5} and we drop \texttt{v5}, \texttt{v7} is now the parent of leaf \texttt{v3} and we may drop \texttt{v3}, \texttt{v6} becomes the parent of leaf \texttt{v8} and we drop \texttt{v8}, \texttt{v7} becomes the parent of leaf \texttt{v6} and we may drop \texttt{v6}. The two eventually remaining vertices, \texttt{v7} and \texttt{v9}, give the last link in the reconstructed tree \citep{JPB-1991}.  
 
-It is, as well possible to, first, generate a random \Pruefer code of length $n-2$ from a set of $n$ vertices  (see List.~\vref{list:22.2} Lines 1-9 ) and then, construct the corresponding tree of order $n$ by reversing the procedure illustrated above. The resulting tree graph is shown in Fig.~\vref{fig:22.2}.
+It is, as well possible to, first, generate a random \Pruefer code of length $n-2$ from a set of $n$ vertices and then, construct the corresponding tree of order $n$ by reversing the procedure illustrated above (see List.~\vref{list:22.2}) . The resulting tree graph is shown in Fig.~\vref{fig:22.2}.
 \begin{lstlisting}[caption={Generating a tree graph with a random \Pruefer code.},label=list:22.2]
 >>> verticesList = ['v1','v2','v3','v4','v5','v6','v7']
 >>> n = len(verticesList)
@@ -73,7 +73,7 @@ It is, as well possible to, first, generate a random \Pruefer code of length $n-
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/22-2-tutPruefTree.pdf}
-\caption[Tree graph generated with a random \Pruefer code]{Tree graph instance generated with a random \Pruefer code \texttt{['v5',} \texttt{'v7',} \texttt{'v2',} \texttt{'v5',} \texttt{'v3']}} 
+\caption[Tree graph generated with a random \Pruefer code]{Tree graph instance generated with the random \Pruefer code \texttt{['v5',} \texttt{'v7',} \texttt{'v2',} \texttt{'v5',} \texttt{'v3']}} 
 \label{fig:22.2}       % Give a unique label
 \end{figure}
 
@@ -84,25 +84,25 @@ Given a genuine graph, how can we recognise that it is in fact a tree instance ?
 \section{Recognising tree graphs}
 \label{sec:22.2}
 
-Given a graph \texttt{g} of order $n$ and size $s$, the following 5 assertions A1, A2, A3, A4 and A5 are all equivalent (see \citep{JPB-1991}):
+Given a graph \texttt{g} of order $n$ and size $s$, the following 5 assertions \texttt{A1}, \texttt{A2}, \texttt{A3}, \texttt{A4} and \texttt{A5} are all equivalent (see \citep{JPB-1991}):
 \begin{itemize}
-\item [A1] \texttt{g} is a tree;
-\item [A2] \texttt{g} is without (chordless) cycles and $n \,=\, s + 1$;
-\item [A3] \texttt{g} is connected and $n \,=\, s + 1$;
-\item [A4] Any two vertices of \texttt{g} are always connected by a unique path;
-\item [A5] \texttt{g} is connected and dropping any single edge will always disconnect \texttt{g}.
+\item [\texttt{A1}:] \texttt{g} is a tree;
+\item [\texttt{A2}:] \texttt{g} is without (chordless) cycles and $n \,=\, s + 1$;
+\item [\texttt{A3}:] \texttt{g} is connected and $n \,=\, s + 1$;
+\item [\texttt{A4}:] Any two vertices of \texttt{g} are always connected by a unique path;
+\item [\texttt{A5}:] \texttt{g} is connected and dropping any single edge will always disconnect \texttt{g}.
 \end{itemize}
 
-Assertion A3, for instance, gives a simple test for recognising a tree graph. In case of a \emph{lazy evaluation} of the test in Listing~\vref{list:22.3} Line 3 below, it is opportune, from a computational complexity perspective, to first, check the order and size of the graph, before checking its potential connectedness. We provide the \texttt{isTree()} method\index{isTree@\texttt{isTree()}} for computing both these tests (see Line 8 in List.~\vref{list:22.3}).
+Assertion \texttt{A3}, for instance, gives a simple test for recognising a tree graph. In case of a \emph{lazy evaluation} of the test in Listing~\vref{list:22.3} Line~\ref{line:22.3.3} below, it is opportune, from a computational complexity perspective, to first, check the order and size of the graph, before checking its potential connectedness. We provide the \texttt{isTree()} method\index{isTree@\texttt{isTree()}} for computing both these tests (see Line~\ref{line:22.3.8}).
 \begin{lstlisting}[caption={Recognizing a tree graph.},label=list:22.3]
 >>> from graphs import RandomGraph
 >>> g = RandomGraph(order=8,edgeProbability=0.3,seed=62)
->>> if g.order == (g.size +1) and g.isConnected():
+>>> if g.order == (g.size +1) and g.isConnected(): §\label{line:22.3.3}§
 ...     print('The graph is a tree ?', True)
 ... else:
 ...     print('The graph is a tree ?',False)   
   The graph is a tree ? True
->>> g.isTree()
+>>> g.isTree() §\label{line:22.3.3}§
   True  
 \end{lstlisting}
 The random graph of order $8$ and edge probability $30\%$, generated with seed $62$, is actually a tree graph instance, as confirmed by its graphviz drawing shown in Fig.~\vref{fig:22.3}.
@@ -115,21 +115,21 @@ The random graph of order $8$ and edge probability $30\%$, generated with seed $
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/22-3-test62.pdf}
-\caption[Recognising a tree graph]{\emph{Recognising a tree graph}. We may notice that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighbourhood depth of 2} 
+\caption[Recognising a tree graph]{\emph{Recognising a tree graph}. One may notice that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighbourhood depth of 2} 
 \label{fig:22.3}       % Give a unique label
 \end{figure}
 
-Yet, we still have to recover its corresponding \Pruefer code. Therefore, we may use the \texttt{tree2Pruefer()} method \index{tree2Pruefer@\texttt{tree2Pruefer()}} from the \texttt{TreeGraph} class. But, first, the instance class of graph \texttt{g} is changed to the \texttt{TreeGraph} type (see Line 2 in List.~\vref{list:22.4}). \index{TreeGraph@\texttt{TreeGraph()}}
+Yet, we still have to recover its corresponding \Pruefer code. Therefore, we can use the \texttt{tree2Pruefer()} method \index{tree2Pruefer@\texttt{tree2Pruefer()}} from the \texttt{TreeGraph} class\index{TreeGraph@\texttt{TreeGraph} class}. But, first, the instance class of graph \texttt{g} is changed to the \texttt{TreeGraph} type (see Line~\ref{line:22.4.2} below). 
 \begin{lstlisting}[caption={Computing the \Pruefer code of a tree graph instance.},label=list:22.4]
 >>> from graphs import TreeGraph
->>> g.__class__ = TreeGraph  
+>>> g.__class__ = TreeGraph  §\label{line:22.4.2}§
 >>> g.tree2Pruefer()
   ['v6', 'v1', 'v2', 'v1', 'v2', 'v5']
 \end{lstlisting}
 
-In Fig.~\vref{fig:22.3}, we noticed that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighbourhood depth of 2. Centres of a graph are the vertices with minimal neighbourhood depth. For finding such centre(s), the \texttt{Graph} class provides the \texttt{computeGraphCentres()} method.\index{computeGraphCentres@\texttt{computeGraphCentres()}} (see Lines 1-2 in List.~\vref{list:22.4}). Knowing now the centre of graph \texttt{g}, we may draw a correspondingly rooted and oriented tree with the \texttt{exportOrientedTreeGraphViz()} method from the \texttt{TreeGraph} class (see Fig.~\vref{fig:22.4}.\index{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}}  
+In Fig.~\vref{fig:22.3}, we noticed that vertex \texttt{v2} is actually situated in the \emph{centre} of the tree with a neighbourhood depth of 2. Centres of a graph are the vertices with minimal neighbourhood depth. For finding such centre(s), the \texttt{Graph} class provides the \texttt{computeGraphCentres()} method.\index{computeGraphCentres@\texttt{computeGraphCentres()}} (see Line~\ref{line:22.5.1} in List.~\vref{list:22.5}). Knowing now the centre of graph \texttt{g}, we may draw a correspondingly rooted and oriented tree with the \texttt{exportOrientedTreeGraphViz()} method from the \texttt{TreeGraph} class (see Fig.~\vref{fig:22.4}.\index{exportOrientedTreeGraphViz@\texttt{exportOrientedTreeGraphViz()}}  
 \begin{lstlisting}[caption={Computing the centres of a tree and drawing a rooted and oriented tree.},label=list:22.5]
->>> g.computeGraphCentres()
+>>> g.computeGraphCentres() §\label{line:22.5.1}§
   {'v2': 2}
 >>> g.exportOrientedTreeGraphViz(\
 ...       fileName='rootedTree', root='v2')
@@ -234,22 +234,22 @@ In Listing~\vref{list:22.8} we generate, for instance, a randomly valued graph w
                  'vertices', 'valuationDomain',
                  'edges', 'size', 'gamma']
 \end{lstlisting}
-To inspect the edges' actual weights, we first transform the graph into a corresponding digraph (see Line 1 in List.~\vref{list:22.9}) and use the \texttt{showRelationTable()} method (see Line 2) for printing its symmetric adjacency matrix. 
+To inspect the edges' actual weights, we transform in Listing~\vref{list:22.9} the random graph \texttt{g} into a corresponding digraph \texttt{dg} and use the \texttt{showRelationTable()} method for printing its symmetric adjacency matrix. 
 \begin{lstlisting}[caption={Symmetric relation table},label=list:22.9]
 >>> dg = g.graph2Digraph()
 >>> dg.showRelationTable()
   *---- Relation Table -----
     S   |  'v1'	 'v2'  'v3'  'v4'  'v5'	  
    -----|------------------------------
-   'v1' |  0.00	 0.91  0.90 -0.89 -0.83	 
+   'v1' |  0.00	 0.91  0.90 -0.89 -0.83	 §\label{line:22.9.6}§
    'v2' |  0.91	 0.00  0.67  0.47  0.34	 
    'v3' |  0.90	 0.67  0.00 -0.38  0.21	 
-   'v4' | -0.89	 0.47 -0.38  0.00  0.21	 
-   'v5' | -0.83	 0.34  0.21  0.21  0.00	 
+   'v4' | -0.89	 0.47 -0.38  0.00  0.21	 §\label{line:22.9.9}§
+   'v5' | -0.83	 0.34  0.21  0.21  0.00	 §\label{line:22.9.10}§
    Valuation domain: [-1.00;1.00]
 \end{lstlisting}
 
-To compute the most determined spanning tree or forest, we can use the \texttt{Best\-DeterminedSpanningForest} constructor.\index{BestDeterminedSpanningForest@\texttt{BestDeterminedSpanningForest} class}
+To compute the most determined spanning tree or forest, we can use the \texttt{Best\-DeterminedSpanningForest} class constructor.\index{BestDeterminedSpanningForest@\texttt{BestDeterminedSpanningForest} class}
 \begin{lstlisting}[caption={Computing best determined spanning forests.},label=list:22.10]
 >>> from graphs import\
                 BestDeterminedSpanningForest
@@ -272,10 +272,10 @@ To compute the most determined spanning tree or forest, we can use the \texttt{B
    Average determination(s) : [Decimal('0.655')]
 \end{lstlisting}
 
-The random graph \texttt{g} is connected and, hence, admits a single spanning tree of maximum mean determination = $(0.47 + 0.91 + 0.90 + 0.34)/4 = 0.655$ (see Lines 9, 6 and 10 in List.~\vref{list:22.8} and Fig.~\vref{fig:22.7}).
+The random graph \texttt{g} is connected and, hence, admits a single spanning tree of maximum mean determination = $(0.47 + 0.91 + 0.90 + 0.34)/4 = 0.655$ (see Lines~\ref{line:22.9.9}, \ref{line:22.9.6} and \ref{line:22.9.10} in List.~\vref{list:22.9}).
 \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/22-7-bestDeterminedSpanningTree.pdf}
+\includegraphics[width=5cm]{Figures/22-7-bestDeterminedSpanningTree.pdf}
 \caption{Best determined spanning tree} 
 \label{fig:22.7}       % Give a unique label
 \end{figure}
@@ -295,7 +295,7 @@ One may easily verify that all other potential spanning trees, including instead
 %\vspace{1cm}
 \vspace{\baselineskip}
 
-Chapter~\ref{sec:23}, the last on undirected graphs, is devoted to different models of perfect graphs, namely split, interval, comparability and permutation graphs. 
+Chapter~\ref{sec:23}, the last on undirected graphs, is devoted to different models of \Berge or perfect graphs, namely split, interval, comparability and permutation graphs. 
  
 %%%%%%% The chapter bibliography
 %\normallatexbib

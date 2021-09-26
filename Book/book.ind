@@ -43,7 +43,7 @@
   \item \texttt{computeBordaWinners}()\idxquad \hyperpage{95}
   \item \texttt{computeChordlessCircuits()}\idxquad \hyperpage{56},\,
 		\hyperpage{99},\,\hyperpage{110}
-  \item \texttt{computeChordlessCycles()}\idxquad \hyperpage{337}
+  \item \texttt{computeChordlessCycles()}\idxquad \hyperpage{336}
   \item \texttt{computeCondorcetWinners()}\idxquad \hyperpage{54},\,
 		\hyperpage{97}
   \item \texttt{computeCopelandRanking()}\idxquad \hyperpage{344}
@@ -53,7 +53,7 @@
   \item \texttt{computeInstantRunoffWinner()}\idxquad \hyperpage{95}
   \item \texttt{computeKernelVector()}\idxquad \hyperpage{250},\,
 		\hyperpage{253}
-  \item \texttt{computeMinimalVertexColoring()}\idxquad \hyperpage{339}
+  \item \texttt{computeMinimalVertexColoring()}\idxquad \hyperpage{338}
   \item \texttt{computeNetFlowsRanking()}\idxquad \hyperpage{185}
   \item \texttt{computeOrdinalCorrelation()}\idxquad \hyperpage{224}
   \item \texttt{computePermutation()}\idxquad \hyperpage{345}
@@ -64,7 +64,7 @@
   \item \texttt{computeSimpleMajorityWinner()}\idxquad \hyperpage{94}
   \item \texttt{computeSize()}\idxquad \hyperpage{18}
   \item \texttt{computeTransitivelyOriented\-Digraph()}\idxquad 
-		\hyperpage{344}
+		\hyperpage{343}
   \item \texttt{computeTransitivityDegree()}\idxquad \hyperpage{18},\,
 		\hyperpage{109}
   \item \texttt{computeUninominalVotes}()\idxquad \hyperpage{94}
@@ -123,7 +123,8 @@
 {\bf F}\nopagebreak%
  \indexspace\nopagebreak%
   \item filled circuits\idxquad \hyperpage{236}
-  \item \texttt{FusionDigraph} class\idxquad \hyperpage{26}
+  \item \texttt{FusionDigraph} class\idxquad \hyperpage{26},\,
+		\hyperpage{344}
 
   \indexspace
 {\bf G}\nopagebreak%
@@ -213,6 +214,7 @@
   \indexspace
 {\bf O}\nopagebreak%
  \indexspace\nopagebreak%
+  \item \texttt{o-max}()\idxquad \hyperpage{344}
   \item oppositeness degree\idxquad \hyperpage{172}
   \item outranking
     \subitem situation\idxquad \hyperpage{53}
@@ -382,9 +384,9 @@
   \item \texttt{transitiveDigraphs} module\idxquad \hyperpage{59},\,
 		\hyperpage{111},\,\hyperpage{114},\,\hyperpage{169},\,
 		\hyperpage{230}
-  \item \texttt{transitiveOrientation()}\idxquad \hyperpage{339,\,340}
+  \item \texttt{transitiveOrientation()}\idxquad \hyperpage{339}
   \item \texttt{tree2Pruefer()}\idxquad \hyperpage{326}
-  \item \texttt{TreeGraph()}\idxquad \hyperpage{326}
+  \item \texttt{TreeGraph} class\idxquad \hyperpage{326}
   \item triangulated graph\idxquad \hyperpage{333}
 
   \indexspace

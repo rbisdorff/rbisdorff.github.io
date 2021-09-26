@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.6)  26 SEP 2021 04:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.6)  26 SEP 2021 10:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -622,8 +622,15 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 (./02-mainMatters/19-chapterRobustOutrankings.aux)
 (./02-mainMatters/20-chapterTemperingPlurality.aux) (./02-mainMatters/part5.aux
 ) (./02-mainMatters/21-chapterGraphs.aux)
-(./02-mainMatters/22-chapterTreeGraphs.aux)
-(./02-mainMatters/23-chapterPerfectGraphs.aux) (./03-backMatters/appendix.aux))
+(./02-mainMatters/22-chapterTreeGraphs.aux
+
+LaTeX Warning: Label `line:22.1.8' multiply defined.
+
+
+LaTeX Warning: Label `line:22.3.3' multiply defined.
+
+) (./02-mainMatters/23-chapterPerfectGraphs.aux) (./03-backMatters/appendix.aux
+))
 \openout1 = `book.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 205.
@@ -644,7 +651,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 205.
 LaTeX Font Info:    ... okay on input line 205.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
 05.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -2167,20 +2174,20 @@ Chapter 21.
 
 
 ]
-<Figures/21-1-tutorialGraph.pdf, id=10742, 299.1175pt x 261.97874pt>
+<Figures/21-1-tutorialGraph.pdf, id=10740, 299.1175pt x 261.97874pt>
 File: Figures/21-1-tutorialGraph.pdf Graphic file (type pdf)
 <use Figures/21-1-tutorialGraph.pdf>
 Package pdftex.def Info: Figures/21-1-tutorialGraph.pdf  used on input line 83.
 
 (pdftex.def)             Requested size: 199.16928pt x 174.44153pt.
  [308] [309 <./Figures/21-1-tutorialGraph.pdf>] [310]
-<Figures/21-2-tutorial-3-coloring.pdf, id=10895, 299.1175pt x 261.97874pt>
+<Figures/21-2-tutorial-3-coloring.pdf, id=10894, 299.1175pt x 261.97874pt>
 File: Figures/21-2-tutorial-3-coloring.pdf Graphic file (type pdf)
 <use Figures/21-2-tutorial-3-coloring.pdf>
 Package pdftex.def Info: Figures/21-2-tutorial-3-coloring.pdf  used on input li
 ne 180.
 (pdftex.def)             Requested size: 170.71652pt x 149.5213pt.
-<Figures/21-2-tutorial-2-coloring.pdf, id=10896, 299.1175pt x 261.97874pt>
+<Figures/21-2-tutorial-2-coloring.pdf, id=10895, 299.1175pt x 261.97874pt>
 File: Figures/21-2-tutorial-2-coloring.pdf Graphic file (type pdf)
 <use Figures/21-2-tutorial-2-coloring.pdf>
 Package pdftex.def Info: Figures/21-2-tutorial-2-coloring.pdf  used on input li
@@ -2197,7 +2204,7 @@ ng.pdf
 pdfTeX warning: pdflatex (file ./Figures/21-2-tutorial-2-coloring.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >] [312] [313]
-<Figures/21-3-maxMatchingcycleGraph.pdf, id=11067, 403.5075pt x 438.63875pt>
+<Figures/21-3-maxMatchingcycleGraph.pdf, id=11066, 403.5075pt x 438.63875pt>
 File: Figures/21-3-maxMatchingcycleGraph.pdf Graphic file (type pdf)
 <use Figures/21-3-maxMatchingcycleGraph.pdf>
 Package pdftex.def Info: Figures/21-3-maxMatchingcycleGraph.pdf  used on input 
@@ -2214,15 +2221,12 @@ Package pdftex.def Info: Figures/21-4-grid-15-15-ising.pdf  used on input line
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <8.5> not available
 (Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 473.
  [319]
-<Figures/21-5-c12.png, id=11354, 372.1905pt x 341.47575pt>
+<Figures/21-5-c12.png, id=11358, 372.1905pt x 341.47575pt>
 File: Figures/21-5-c12.png Graphic file (type png)
 <use Figures/21-5-c12.png>
 Package pdftex.def Info: Figures/21-5-c12.png  used on input line 563.
 (pdftex.def)             Requested size: 170.71652pt x 156.62743pt.
  [320]
-
-LaTeX Warning: Reference `sc:22' on page 321 undefined on input line 572.
-
 (./02-mainMatters/21-chapterGraphs.bbl (./book.brf)
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
 [][]$\OT1/pcr/m/n/10 https : / / cs . uwaterloo . ca / journals / JIS / VOL11 /
@@ -2241,26 +2245,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
 
 ]
 Chapter 22.
-<Figures/22-1-tutRandomTree.pdf, id=11406, 361.35pt x 505.89pt>
+<Figures/22-1-tutRandomTree.pdf, id=11412, 361.35pt x 505.89pt>
 File: Figures/22-1-tutRandomTree.pdf Graphic file (type pdf)
 <use Figures/22-1-tutRandomTree.pdf>
 Package pdftex.def Info: Figures/22-1-tutRandomTree.pdf  used on input line 36.
 
 (pdftex.def)             Requested size: 170.71652pt x 239.0034pt.
+
+LaTeX Warning: Reference `line:22.1.15' on page 323 undefined on input line 40.
+
+
 [323] [324 <./Figures/22-1-tutRandomTree.pdf>]
-<Figures/22-2-tutPruefTree.pdf, id=11477, 431.6125pt x 388.45125pt>
+<Figures/22-2-tutPruefTree.pdf, id=11485, 431.6125pt x 388.45125pt>
 File: Figures/22-2-tutPruefTree.pdf Graphic file (type pdf)
 <use Figures/22-2-tutPruefTree.pdf>
 Package pdftex.def Info: Figures/22-2-tutPruefTree.pdf  used on input line 76.
 (pdftex.def)             Requested size: 199.16928pt x 179.25282pt.
  [325 <./Figures/22-2-tutPruefTree.pdf>]
-<Figures/22-3-test62.pdf, id=11529, 299.1175pt x 348.30125pt>
+
+LaTeX Warning: Reference `line:22.3.8' on page 326 undefined on input line 96.
+
+<Figures/22-3-test62.pdf, id=11537, 299.1175pt x 348.30125pt>
 File: Figures/22-3-test62.pdf Graphic file (type pdf)
 <use Figures/22-3-test62.pdf>
 Package pdftex.def Info: Figures/22-3-test62.pdf  used on input line 118.
 (pdftex.def)             Requested size: 199.16928pt x 231.92035pt.
- [326]
-<Figures/22-4-rootedTree.pdf, id=11562, 279.0425pt x 303.1325pt>
+[326]
+<Figures/22-4-rootedTree.pdf, id=11571, 279.0425pt x 303.1325pt>
 File: Figures/22-4-rootedTree.pdf Graphic file (type pdf)
 <use Figures/22-4-rootedTree.pdf>
 Package pdftex.def Info: Figures/22-4-rootedTree.pdf  used on input line 143.
@@ -2270,14 +2281,14 @@ Package pdftex.def Info: Figures/22-4-rootedTree.pdf  used on input line 143.
 pdfTeX warning: pdflatex (file ./Figures/22-4-rootedTree.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]
-<Figures/22-5-randomSpanningTree.pdf, id=11620, 326.21875pt x 322.20375pt>
+<Figures/22-5-randomSpanningTree.pdf, id=11629, 326.21875pt x 322.20375pt>
 File: Figures/22-5-randomSpanningTree.pdf Graphic file (type pdf)
 <use Figures/22-5-randomSpanningTree.pdf>
 Package pdftex.def Info: Figures/22-5-randomSpanningTree.pdf  used on input lin
 e 185.
 (pdftex.def)             Requested size: 199.16928pt x 196.7259pt.
  [328]
-<Figures/22-6-spanningForest.pdf, id=11666, 512.91624pt x 447.6725pt>
+<Figures/22-6-spanningForest.pdf, id=11675, 512.91624pt x 447.6725pt>
 File: Figures/22-6-spanningForest.pdf Graphic file (type pdf)
 <use Figures/22-6-spanningForest.pdf>
 Package pdftex.def Info: Figures/22-6-spanningForest.pdf  used on input line 21
@@ -2285,15 +2296,15 @@ Package pdftex.def Info: Figures/22-6-spanningForest.pdf  used on input line 21
 (pdftex.def)             Requested size: 199.16928pt x 173.83333pt.
  [329 <./Figures/22-5-randomSpanningTree.pdf>] [330 <./Figures/22-6-spanningFor
 est.pdf>]
-<Figures/22-7-bestDeterminedSpanningTree.pdf, id=11772, 299.1175pt x 282.05376p
+<Figures/22-7-bestDeterminedSpanningTree.pdf, id=11783, 299.1175pt x 282.05376p
 t>
 File: Figures/22-7-bestDeterminedSpanningTree.pdf Graphic file (type pdf)
 <use Figures/22-7-bestDeterminedSpanningTree.pdf>
 Package pdftex.def Info: Figures/22-7-bestDeterminedSpanningTree.pdf  used on i
 nput line 279.
-(pdftex.def)             Requested size: 199.16928pt x 187.8087pt.
- [331 <./Figures/22-7-bestDeterminedspanningTree.pdf>]
-(./02-mainMatters/22-chapterTreeGraphs.bbl (./book.brf))) [332]
+(pdftex.def)             Requested size: 142.26378pt x 134.14906pt.
+ (./02-mainMatters/22-chapterTreeGraphs.bbl (./book.brf)
+[331 <./Figures/22-7-bestDeterminedspanningTree.pdf>])) [332]
 \openout2 = `02-mainMatters/23-chapterPerfectGraphs.aux'.
 
 
@@ -2306,83 +2317,83 @@ Chapter 23.
 
 
 ]
-<Figures/23-1-randomSplitGraph.pdf, id=11858, 299.1175pt x 358.33875pt>
+<Figures/23-1-randomSplitGraph.pdf, id=11873, 299.1175pt x 358.33875pt>
 File: Figures/23-1-randomSplitGraph.pdf Graphic file (type pdf)
 <use Figures/23-1-randomSplitGraph.pdf>
 Package pdftex.def Info: Figures/23-1-randomSplitGraph.pdf  used on input line 
-76.
+72.
 (pdftex.def)             Requested size: 170.71652pt x 204.51765pt.
  [334] [335 <./Figures/23-1-randomSplitGraph.pdf>]
-<Figures/23-2-berge1.pdf, id=11964, 299.1175pt x 240.9pt>
+<Figures/23-2-berge1.pdf, id=11979, 299.1175pt x 240.9pt>
 File: Figures/23-2-berge1.pdf Graphic file (type pdf)
 <use Figures/23-2-berge1.pdf>
-Package pdftex.def Info: Figures/23-2-berge1.pdf  used on input line 147.
+Package pdftex.def Info: Figures/23-2-berge1.pdf  used on input line 143.
 (pdftex.def)             Requested size: 170.71652pt x 137.49086pt.
  [336 <./Figures/23-2-berge1.pdf>]
-<Figures/23-3-berge2.pdf, id=12021, 299.1175pt x 240.9pt>
+<Figures/23-3-berge2.pdf, id=12033, 299.1175pt x 240.9pt>
 File: Figures/23-3-berge2.pdf Graphic file (type pdf)
 <use Figures/23-3-berge2.pdf>
-Package pdftex.def Info: Figures/23-3-berge2.pdf  used on input line 167.
+Package pdftex.def Info: Figures/23-3-berge2.pdf  used on input line 163.
 (pdftex.def)             Requested size: 170.71652pt x 137.49086pt.
  [337 <./Figures/23-3-berge2.pdf>]
-<Figures/23-4-permutationGraph.pdf, id=12081, 299.1175pt x 266.9975pt>
+<Figures/23-4-permutationGraph.pdf, id=12094, 299.1175pt x 266.9975pt>
 File: Figures/23-4-permutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-4-permutationGraph.pdf>
 Package pdftex.def Info: Figures/23-4-permutationGraph.pdf  used on input line 
-223.
+219.
 (pdftex.def)             Requested size: 170.71652pt x 152.3857pt.
  [338 <./Figures/23-4-permutationGraph.pdf>]
-<Figures/23-5-coloredPermutationGraph.pdf, id=12138, 299.1175pt x 266.9975pt>
+<Figures/23-5-coloredPermutationGraph.pdf, id=12153, 299.1175pt x 266.9975pt>
 File: Figures/23-5-coloredPermutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-5-coloredPermutationGraph.pdf>
 Package pdftex.def Info: Figures/23-5-coloredPermutationGraph.pdf  used on inpu
-t line 246.
+t line 242.
 (pdftex.def)             Requested size: 170.71652pt x 152.3857pt.
-<Figures/23-6-perm_permutationGraph.pdf, id=12140, 417.56pt x 251.94125pt>
+<Figures/23-6-perm_permutationGraph.pdf, id=12155, 417.56pt x 251.94125pt>
 File: Figures/23-6-perm_permutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-6-perm_permutationGraph.pdf>
 Package pdftex.def Info: Figures/23-6-perm_permutationGraph.pdf  used on input 
-line 262.
+line 258.
 (pdftex.def)             Requested size: 199.16928pt x 120.1731pt.
  [339 <./Figures/23-5-coloredPermutationGraph.pdf>]
-<Figures/23-7-orientedPermGraph.pdf, id=12194, 204.765pt x 303.1325pt>
+<Figures/23-7-orientedPermGraph.pdf, id=12210, 204.765pt x 303.1325pt>
 File: Figures/23-7-orientedPermGraph.pdf Graphic file (type pdf)
 <use Figures/23-7-orientedPermGraph.pdf>
 Package pdftex.def Info: Figures/23-7-orientedPermGraph.pdf  used on input line
- 292.
+ 288.
 (pdftex.def)             Requested size: 142.26378pt x 210.61865pt.
  [340 <./Figures/23-6-perm_permutationGraph.pdf>]
-<Figures/23-8-randomGraph4335.pdf, id=12251, 299.1175pt x 319.1925pt>
+<Figures/23-8-randomGraph4335.pdf, id=12264, 299.1175pt x 319.1925pt>
 File: Figures/23-8-randomGraph4335.pdf Graphic file (type pdf)
 <use Figures/23-8-randomGraph4335.pdf>
 Package pdftex.def Info: Figures/23-8-randomGraph4335.pdf  used on input line 3
-37.
+33.
 (pdftex.def)             Requested size: 170.71652pt x 182.17538pt.
- [341 <./Figures/23-7-orientedPermGraph.pdf>]
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 3
-43.
+39.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <7> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 343.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 339.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 345.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 341.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 345.
-<Figures/23-9-transOrientGraph.pdf, id=12309, 299.1175pt x 319.1925pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 341.
+ [341 <./Figures/23-7-orientedPermGraph.pdf>]
+<Figures/23-9-transOrientGraph.pdf, id=12324, 299.1175pt x 319.1925pt>
 File: Figures/23-9-transOrientGraph.pdf Graphic file (type pdf)
 <use Figures/23-9-transOrientGraph.pdf>
 Package pdftex.def Info: Figures/23-9-transOrientGraph.pdf  used on input line 
-370.
+366.
 (pdftex.def)             Requested size: 199.16928pt x 212.53795pt.
  [342 <./Figures/23-8-randomGraph4335.pdf>]
-<Figures/23-10-transOrientDualGraph.pdf, id=12378, 403.5075pt x 280.04625pt>
+<Figures/23-10-transOrientDualGraph.pdf, id=12396, 403.5075pt x 280.04625pt>
 File: Figures/23-10-transOrientDualGraph.pdf Graphic file (type pdf)
 <use Figures/23-10-transOrientDualGraph.pdf>
 Package pdftex.def Info: Figures/23-10-transOrientDualGraph.pdf  used on input 
-line 404.
+line 400.
 (pdftex.def)             Requested size: 199.16928pt x 138.22804pt.
  [343 <./Figures/23-9-transOrientGraph.pdf> <./Figures/23-10-transOrientDualGra
 ph.pdf
@@ -2390,25 +2401,25 @@ ph.pdf
 pdfTeX warning: pdflatex (file ./Figures/23-10-transOrientDualGraph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >] [344]
-<Figures/23-11-gtesta.pdf, id=12483, 299.1175pt x 316.18124pt>
+<Figures/23-11-gtesta.pdf, id=12494, 299.1175pt x 316.18124pt>
 File: Figures/23-11-gtesta.pdf Graphic file (type pdf)
 <use Figures/23-11-gtesta.pdf>
-Package pdftex.def Info: Figures/23-11-gtesta.pdf  used on input line 479.
+Package pdftex.def Info: Figures/23-11-gtesta.pdf  used on input line 473.
 (pdftex.def)             Requested size: 161.50734pt x 170.71652pt.
-<Figures/23-11-gtestb.pdf, id=12484, 299.1175pt x 307.1475pt>
+<Figures/23-11-gtestb.pdf, id=12495, 299.1175pt x 307.1475pt>
 File: Figures/23-11-gtestb.pdf Graphic file (type pdf)
 <use Figures/23-11-gtestb.pdf>
-Package pdftex.def Info: Figures/23-11-gtestb.pdf  used on input line 480.
+Package pdftex.def Info: Figures/23-11-gtestb.pdf  used on input line 474.
 (pdftex.def)             Requested size: 166.25407pt x 170.71652pt.
- [345 <./Figures/23-11-gtesta.pdf> <./Figures/23-11-gtestb.pdf
+ (./02-mainMatters/23-chapterPerfectGraphs.bbl (./book.brf) [345 <./Figures/23-
+11-gtesta.pdf> <./Figures/23-11-gtestb.pdf
 
 pdfTeX warning: pdflatex (file ./Figures/23-11-gtestb.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
->] (./02-mainMatters/23-chapterPerfectGraphs.bbl (./book.brf))) [346]
+>])) [346]
 \openout2 = `03-backMatters/appendix.aux'.
 
-
-(./03-backMatters/appendix.tex (./book.bbl.gen (./book.brf)
+ (./03-backMatters/appendix.tex (./book.bbl.gen (./book.brf)
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 1.
@@ -2540,17 +2551,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 367--367
 
 
 ] [365] [366]
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 260--262
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 262--264
 []\OT1/pcr/m/n/8.5 RandomIntervalIntersectionsGraph 
  []
 
 [367]
-Overfull \hbox (3.17114pt too wide) in paragraph at lines 367--369
+Overfull \hbox (3.17114pt too wide) in paragraph at lines 369--371
 []\OT1/pcr/m/n/8.5 StrongComponentsCollapsedDigraph 
  []
 
 
-Overfull \hbox (8.27113pt too wide) in paragraph at lines 393--395
+Overfull \hbox (8.27113pt too wide) in paragraph at lines 395--397
 []\OT1/pcr/m/n/8.5 UnOpposedBipolarOutrankingDigraph 
  []
 
@@ -2587,7 +2598,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 292200B5EB47CA3C3FEB1A0F33467F89;15101.
 Package rerunfilecheck Info: File `book.brf' has not changed.
-(rerunfilecheck)             Checksum: 7A248EE414447786A209D10032751C13;9528.
+(rerunfilecheck)             Checksum: F998152AE99A6A29C46662F0E41AFFE4;9528.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -2595,43 +2606,44 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
  ) 
 Here is how much of TeX's memory you used:
- 23738 strings out of 482504
- 361463 string characters out of 5947331
- 970278 words of memory out of 5000000
- 30739 multiletter control sequences out of 15000+600000
+ 23742 strings out of 482504
+ 361519 string characters out of 5947331
+ 971526 words of memory out of 5000000
+ 30748 multiletter control sequences out of 15000+600000
  622161 words of font info for 212 fonts, out of 8000000 for 9000
  395 hyphenation exceptions out of 8191
  47i,19n,47p,1518b,1957s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{page.339,\\relax\040\\hskip\0400.2em\\ignorespace
-s\040340} has been referenced but does not exist, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol
-/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
-es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on book.pdf (382 pages, 5440371 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symb
+ol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on book.pdf (382 pages, 5440489 bytes).
 PDF statistics:
- 15060 PDF objects out of 15390 (max. 8388607)
- 13876 compressed objects within 139 object streams
- 7305 named destinations out of 7423 (max. 500000)
+ 15067 PDF objects out of 15390 (max. 8388607)
+ 13883 compressed objects within 139 object streams
+ 7300 named destinations out of 7423 (max. 500000)
  2053 words of extra memory for PDF output out of 10000 (max. 10000000)
 

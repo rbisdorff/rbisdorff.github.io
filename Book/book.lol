@@ -224,4 +224,4 @@
 \contentsline {lstlisting}{\numberline {22.8}Generating randomly bipolar-valued graphs.}{329}{lstlisting.22.8}%
 \contentsline {lstlisting}{\numberline {22.9}Symmetric relation table}{330}{lstlisting.22.9}%
 \contentsline {lstlisting}{\numberline {22.10}Computing best determined spanning forests.}{330}{lstlisting.22.10}%
-\contentsline {lstlisting}{\numberline {23.1}Testing perfect graph categories.}{334}{lstlisting.23.1}%
+\contentsline {lstlisting}{\numberline {23.1}Testing perfect graph categories}{334}{lstlisting.23.1}%
