@@ -103,9 +103,9 @@
 \contentsline {lstlisting}{\numberline {11.8}Measuring the loss of quality with respect to the standard outranking digraph}{156}{lstlisting.11.8}%
 \contentsline {lstlisting}{\numberline {12.1}Alice's performance tableau}{163}{lstlisting.12.1}%
 \contentsline {lstlisting}{\numberline {12.2}Computing Alice's outranking digraph}{166}{lstlisting.12.2}%
-\contentsline {lstlisting}{\numberline {12.3}Inspecting polarised outranking situations}{167}{lstlisting.12.3}%
+\contentsline {lstlisting}{\numberline {12.3}Inspecting polarised outranking situations}{166}{lstlisting.12.3}%
 \contentsline {lstlisting}{\numberline {12.4}Alice's best choice recommendation}{168}{lstlisting.12.4}%
-\contentsline {lstlisting}{\numberline {12.5}Alice's strict best choice recommendation}{168}{lstlisting.12.5}%
+\contentsline {lstlisting}{\numberline {12.5}Alice's strict best choice recommendation}{169}{lstlisting.12.5}%
 \contentsline {lstlisting}{\numberline {12.6}Weakly ranking by bipolar best-choosing and last-rejecting}{170}{lstlisting.12.6}%
 \contentsline {lstlisting}{\numberline {12.7}Computing the 90\% confident outranking digraph}{171}{lstlisting.12.7}%
 \contentsline {lstlisting}{\numberline {12.8}Computing the $90\%$-confident best choice recommendation.}{171}{lstlisting.12.8}%
