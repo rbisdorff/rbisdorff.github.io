@@ -1,9 +1,9 @@
 \chapter{On computing digraph kernels}
 \label{sec:17}
 
-\abstract*{ We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralised outranking digraphs, initial and terminal kernels become separate and may deliver suitable first resp. last choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued kernel equation systems.}
+\abstract*{ We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralized outranking digraphs, initial and terminal kernels become separate and may deliver suitable first resp. last choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued kernel equation systems.}
 
-\abstract{We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralised outranking digraphs, initial and terminal kernels become separate and may deliver suitable first resp. last choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued kernel equation systems.}
+\abstract{We illustrate in this chapter, first, the concept of graph kernel, i.e. maximal independent set of vertices. In non-symmetric digraphs the kernel concept becomes richer and separates into initial and terminal kernels. In, furthermore, lateralized outranking digraphs, initial and terminal kernels become separate and may deliver suitable first resp. last choice recommendations. After commenting the tractability of kernel computations, we close the chapter with the solving of bipolar-valued kernel equation systems.}
 
 \section{What is a graph kernel ?}
 \label{sec:17.1}
@@ -232,7 +232,7 @@ Chordless circuits of even length may thus be indifferently oriented along two o
 
 We call \emph{weak}, a chordless circuit with indeterminate inner part.
 
-In Listing~\vref{list:17.8} we use the \texttt{IndeterminateInnerPart} parameter\index{IndeterminateInnerPart@\texttt{IndeterminateInnerPart} parameter} of the \texttt{Cir\-culantDigraph} class for constructing such a weak chordless 6-circuit digraph. It is worth noticing in Fig.~\vref{fig:17.3} that the \emph{dual} version of a weak circuit corresponds to its \emph{converse} version \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the l\emph{ess than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict converse) \emph{greater than} relation.}.
+In Listing~\vref{list:17.8} we use the \texttt{IndeterminateInnerPart} parameter\index{IndeterminateInnerPart@\texttt{IndeterminateInnerPart} parameter} of the \texttt{Cir\-culantDigraph} class for constructing such a weak chordless 6-circuit digraph. It is worth noticing in Fig.~\vref{fig:17.3} that the \emph{dual} version of a weak circuit corresponds to its \emph{converse} version \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict converse) \emph{greater than} relation.}.
 \begin{lstlisting}[caption={The weak 6-circuit digraph},label=list:17.8]
 >>> from digraphs import CirculantDigraph
 >>> c6 = CirculantDigraph(order=6,circulants=[1],\
@@ -257,12 +257,12 @@ In Listing~\vref{list:17.8} we use the \texttt{IndeterminateInnerPart} parameter
 
 Weak chordless circuits of length $n$ are in fact part of the class of digraphs that are invariant under the \emph{codual} transform, $cn = - (\sim cn) = \sim (-cn )$ \footnote{The class of \emph{self-codual} bipolar-valued digraphs consists of all weakly asymmetric digraphs, i.e. digraphs containing only asymmetric and/or indeterminate links. Limit cases consists of, on the one side, full tournaments with indeterminate reflexive links, and, on the other side, fully indeterminate digraphs. In this class, the converse (inverse $\sim$) operator is indeed identical to the dual (negation $-$ ) one.}. When digraph $cn$ is a weak chordless n-circuit, $cn$, $-cn$, $\sim cn$ and $\sim (-cn)$ will all admit the same set of prekernels.  
 
-\section{Kernels in lateralised digraphs}
+\section{Kernels in lateralized digraphs}
 \label{sec:17.3}
 
 Humans do live in an apparent physical space of plain transitive lateral orientation, fully empowered in finite geometrical 3D models with linear orders, where first, resp. last ranked, nodes deliver unique initial, resp. terminal, kernels. Similarly, in finite preorders, the first, resp. last, equivalence classes deliver the unique initial, resp. unique terminal, kernels. More generally, in finite partial orders, i.e. asymmetric and transitive digraphs, topological sort algorithms will easily reveal on the first, resp. last, level all unique initial, resp. terminal, kernels.
 
-In genuine random digraphs, however, we may need to check for each of its MISs, whether one, both, or none of the lateralised external stability conditions may be satisfied. Consider, for instance in Listing~\vref{list:17.9}, the following random digraph instance of order 7 and generated with an arc probability of $30\%$. 
+In genuine random digraphs, however, we may need to check for each of its MISs, whether one, both, or none of the lateralized external stability conditions may be satisfied. Consider, for instance in Listing~\vref{list:17.9}, the following random digraph instance of order 7 and generated with an arc probability of $30\%$. 
 \begin{lstlisting}[caption={Generating a random digraph \texttt{rd} of order 7 and arc probability 0.3},label=list:17.9]
 >>> from randomDigraphs import RandomDigraph
 >>> rd = RandomDigraph(order=7,arcProbability=0.3,seed=5)
@@ -411,7 +411,7 @@ The associated random performance tableau shown in Fig.~\vref{fig:17.6} reveals 
        covered      :  0.800
 \end{lstlisting}
 
-With such unique disjoint initial and terminal prekernels (see Line~\ref{line:17.13.4} and ~\ref{line:17.13.10} in List.~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralised. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \emph{first}, resp. \emph{last}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
+With such unique disjoint initial and terminal prekernels (see Line~\ref{line:17.13.4} and ~\ref{line:17.13.10} in List.~\vref{list:17.13}), the random digraph \texttt{gcd} is hence clearly lateralized. Indeed, these initial and terminal prekernels of the codual outranking digraph reveal \emph{first}, resp. \emph{last}, choice recommendations one may formulate on the basis of a given outranking digraph instance.
 \begin{lstlisting}[caption={Computing a first and last choice recommendation from digraph \texttt{gcd}},label=list:17.14]
 >>> g.showBestChoiceRecommendation()
   Rubis best choice recommendation(s) (BCR)
@@ -451,7 +451,7 @@ In Fig.~\vref{fig:17.8}, we orient the drawing of the strict outranking digraph 
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/17-8-bestWorstOrientation.pdf}
-\caption[The strict outranking digraph oriented by its first and last choice recommendations]{\emph{The strict outranking digraph oriented by its first and last choice recommendations}. The gray arrows, like the one between alternatives \texttt{a4} and \texttt{a1}, represent indeterminate preferential situations. Alternative \texttt{a1} appears hence to be rather incomparable to all the other, except alternative \texttt{a7}}
+\caption[The strict outranking digraph oriented by its first and last choice recommendations]{\emph{The strict outranking digraph oriented by its first and last choice recommendations}. The grey arrows, like the one between alternatives \texttt{a4} and \texttt{a1}, represent indeterminate preferential situations. Alternative \texttt{a1} appears hence to be rather incomparable to all the other, except alternative \texttt{a7}}
 \label{fig:17.8}       % Give a unique label
 \end{figure}
 
@@ -822,8 +822,8 @@ This nowadays available computational efficiency confers the bipolar-valued kern
 %%%%%%% The chapter bibliography
 %\normallatexbib
 %\clearpage
-%\phantomsection
-%\addcontentsline{toc}{section}{Chapter Bibliography}
-%\input{02-mainMatters/17-chapterKernels.bbl}
-\bibliographystyle{spbasic}
-\bibliography{03-backMatters/reference}
+\phantomsection
+\addcontentsline{toc}{section}{Chapter Bibliography}
+\input{02-mainMatters/17-chapterKernels.bbl}
+%\bibliographystyle{spbasic}
+%\bibliography{03-backMatters/reference}

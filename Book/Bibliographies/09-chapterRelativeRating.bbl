@@ -1,0 +1,29 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Bisdorff(2016)}]{BIS-2016}
+Bisdorff R (2016) Computing linear rankings from trillions of pairwise
+  outranking situations. In: Busa-Fekete R, Hüllermeier E, Mousseau V,
+  Pfannschmidt K (eds) {From Multiple Criteria Decision Aid to Preference
+  Learning , DAP'2016, University of Paderborn (Germany)}, pp 1--16,
+  \urlprefix\url{http://hdl.handle.net/10993/28613}
+
+\bibitem[{Bisdorff(2020)}]{ADT-L10}
+Bisdorff R (2020) {Lecture 10: On quantiles rating with multiple
+  incommensurable criteria}. In: {Lectures of the Algorithmic Decision Theory
+  Course, University of Luxembourg},
+  \urlprefix\url{http://hdl.handle.net/10993/37933}
+
+\bibitem[{Bisdorff(2021)}]{BIS-2021b}
+Bisdorff R (2021) {Technical documentation of the Digraph3 collection of Python
+  modules}.
+  \urlprefix\url{https://digraph3.readthedocs.io/en/latest/techDoc.html}
+
+\end{thebibliography}

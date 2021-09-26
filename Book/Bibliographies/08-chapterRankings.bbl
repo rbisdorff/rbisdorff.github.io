@@ -1,0 +1,73 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Arrow and Raynaud(1986)}]{ARR-1986}
+Arrow KJ, Raynaud H (1986) {Social Choice and Multicriterion Decision-Making}.
+  MIT Press Books, {The MIT Press}
+
+\bibitem[{Bisdorff(2010)}]{BIS-2010}
+Bisdorff R (2010) Enumerating chordless circuits in directed graphs. In:
+  {ORBEL24-2010, 24th Annual Conference of the Belgian Operational Research
+  Society (ORBEL aka Sogesci-B.V.W.B.), January 28-29, Liège (BE)},
+  {Université de Liège (BE)}, pp 1--12,
+  \urlprefix\url{http://hdl.handle.net/10993/23926}
+
+\bibitem[{Bisdorff(2012)}]{BIS-2012a}
+Bisdorff R (2012) On measuring and testing the ordinal correlation between
+  bipolar outranking relations. In: Mousseau V, Pirlot M (eds) DAP'2012 From
+  Multiple Criteria Decision Aid to Preference Learning, {University of Mons
+  (Belgium)}, pp 91--100, \urlprefix\url{http://hdl.handle.net/10993/23909}
+
+\bibitem[{Bisdorff(2013)}]{BIS-2013}
+Bisdorff R (2013) On polarizing outranking relations with large performance
+  differences. Journal of Multi-Criteria Decision Analysis, Wiley 20:3--12,
+  \urlprefix\url{http://hdl.handle.net/10993/245}
+
+\bibitem[{Bisdorff(2021)}]{BIS-2021b}
+Bisdorff R (2021) {Technical documentation of the Digraph3 collection of Python
+  modules}.
+  \urlprefix\url{https://digraph3.readthedocs.io/en/latest/techDoc.html}
+
+\bibitem[{Brans and Vincke(1985)}]{BRA-1985}
+Brans JP, Vincke P (1985) {A preference ranking organisation method: The
+  PROMETHEE method for MCDM}. Management Science
+
+\bibitem[{Copeland(1951)}]{COP-1951}
+Copeland A (1951) A reasonable social welfare function, {Seminar on Mathematics
+  in Social Sciences, University of Michigan}
+
+\bibitem[{Dias and Lamboray(2010)}]{DIA-2010}
+Dias L, Lamboray C (2010) Extensions of the prudence principle to exploit a
+  valued outranking relation. European Journal of Operational Research
+  201:3:828--837
+
+\bibitem[{Kemeny(1959)}]{KEM-1959}
+Kemeny J (1959) Mathematics without numbers. Daedalus 88:577--591
+
+\bibitem[{Kohler(1978)}]{KOH-1978}
+Kohler G (1978) {Choix multicritère et analyse algébrique de données
+  ordinales}. PhD thesis, {Université scientifique et médicale de Grenoble}
+
+\bibitem[{Lamboray(2009)}]{LAM-2009}
+Lamboray C (2009) {A prudent characterization of the Ranked-Pairs rule}. Social
+  Choice and Welfare 32:129--155
+
+\bibitem[{Sen(2009)}]{SEN-2009}
+Sen A (2009) Idea of Justice. Allen Lane London
+
+\bibitem[{Slater(1961)}]{SLA-1961}
+Slater P (1961) Inconsistencies in a schedule of paired comparisons. Biometrica
+  48:303--312
+
+\bibitem[{Tideman(1987)}]{TID-1987}
+Tideman N (1987) Independence of clones as a criterion for voting rules.
+  {Social Choice and Welfare} 4(3):185--206
+
+\end{thebibliography}

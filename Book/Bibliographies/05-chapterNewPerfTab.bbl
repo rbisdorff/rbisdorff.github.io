@@ -1,0 +1,20 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Bisdorff(2013)}]{BIS-2013}
+Bisdorff R (2013) On polarizing outranking relations with large performance
+  differences. Journal of Multi-Criteria Decision Analysis, Wiley 20:3--12,
+  \urlprefix\url{http://hdl.handle.net/10993/245}
+
+\bibitem[{{Python Software Foundation}(2021)}]{python}
+{Python Software Foundation} (2021) Python documentation.
+  \urlprefix\url{https://docs.python.org/3/}
+
+\end{thebibliography}
