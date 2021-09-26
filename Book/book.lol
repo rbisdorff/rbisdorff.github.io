@@ -40,10 +40,11 @@
 \contentsline {lstlisting}{\numberline {6.1}Generating a random performance tableau}{79}{lstlisting.6.1}%
 \contentsline {lstlisting}{\numberline {6.2}Generating a random Cost-Benefit performance tableau}{81}{lstlisting.6.2}%
 \contentsline {lstlisting}{\numberline {6.3}Generating a random 3 Objectives performance tableau}{84}{lstlisting.6.3}%
-\contentsline {lstlisting}{\numberline {6.4}What is the public policy to recommend as best choice ?}{86}{lstlisting.6.4}%
-\contentsline {lstlisting}{\numberline {6.5}Generating a random academic performance tableau}{88}{lstlisting.6.5}%
-\contentsline {lstlisting}{\numberline {6.6}Student performance summary statistics per course}{89}{lstlisting.6.6}%
-\contentsline {lstlisting}{\numberline {6.7}Consensus quality of the students's ranking}{90}{lstlisting.6.7}%
+\contentsline {lstlisting}{\numberline {6.4}Inspecting the three objectives}{85}{lstlisting.6.4}%
+\contentsline {lstlisting}{\numberline {6.5}What is the public policy to recommend as best choice ?}{86}{lstlisting.6.5}%
+\contentsline {lstlisting}{\numberline {6.6}Generating a random academic performance tableau}{89}{lstlisting.6.6}%
+\contentsline {lstlisting}{\numberline {6.7}Student performance summary statistics per course}{90}{lstlisting.6.7}%
+\contentsline {lstlisting}{\numberline {6.8}Consensus quality of the students's ranking}{90}{lstlisting.6.8}%
 \contentsline {lstlisting}{\numberline {7.1}Example of random linear voting profile}{93}{lstlisting.7.1}%
 \contentsline {lstlisting}{\numberline {7.2}Showing linear voting profiles}{94}{lstlisting.7.2}%
 \contentsline {lstlisting}{\numberline {7.3}Example Instant Run Off Winner}{95}{lstlisting.7.3}%

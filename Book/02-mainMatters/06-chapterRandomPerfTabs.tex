@@ -14,9 +14,9 @@ The simplest generic class, called \texttt{RandomPerformanceTableau}, generates 
 
 One of the most useful models, called \texttt{RandomCBPerformanceTableau}\index{}, proposes a performance tableau involving two decision objectives, named \emph{Costs} (to be minimised) respectively \emph{Benefits} (to be maximised); its purpose being to generate more or less contradictory performances on these two, usually conflicting, objectives. \emph{Low costs} will randomly be correlated with \emph{low benefits}, whereas \emph{high costs} will randomly be correlated with \emph{high benefits}.
 
-Many public policy decision problems involve three often conflicting decision objectives taking into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. For this type of performance tableau model, we provide a specific class, called \texttt{Random3ObjectivesPerformanceTableau}.
+Many public policy decision problems involve three often conflicting decision objectives taking into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. For this type of performance tableau model, the \texttt{randomPerfTabs} module provides a specific class, called \texttt{Random3ObjectivesPerformanceTableau}.
 
-Deciding which students, based on the grades obtained in a number of examinations, validate or not their academic studies, is the genuine decision practice of universities and academies. To thoroughly study these kind of decision problems, we provide a corresponding performance tableau model, called \texttt{RandomAcademic\-PerformanceTableau}, which gathers grades obtained by a given number of students in a given number of weighted courses.    
+Deciding which students, based on their grades obtained in a number of examinations, validate or not their academic studies, is the genuine decision practice of universities and academies. To thoroughly study these kind of decision problems, the \texttt{randomPerfTabs} module provides a corresponding performance tableau model, called \texttt{RandomAcademic\-PerformanceTableau}, which gathers grades obtained by a given number of students in a given number of weighted courses.    
  
 \section{Random standard performance tableaux}
 \label{sec:6.2}
@@ -89,7 +89,7 @@ The \texttt{RandomPerformanceTableau} class\index{RandomPerformanceTableau@\text
 \end{lstlisting}
 \begin{figure}[ht]
 %\sidecaption
-\includegraphics[width=\hsize]{Figures/6-1-randomPerfTab1.png}
+\includegraphics[width=0.9\hsize]{Figures/6-1-randomPerfTab1.png}
 \caption{Browser view on random performance tableau instance}
 \label{fig:6.1}       % Give a unique label
 \end{figure}
@@ -99,7 +99,7 @@ Best and worst evaluation on each criterion are marked in \emph{light green}, re
 \section{Random Cost-Benefit performance tableaux}
 \label{sec:6.3}
 
-The \texttt{randomPerfTabs} module provides a \texttt{RandomCBPerformanceTableau} class\index{RandomCBPerformanceTableau@\texttt{RandomCBPerformanceTab\-leau} class} for generating random \emph{Costs} versus \emph{Benefits} organised performance tableaux. The random generator is following the directives below:
+The \texttt{randomPerfTabs} module provides a \texttt{RandomCBPerformanceTableau} class\index{RandomCBPerformanceTableau@\texttt{RandomCBPerformanceTab\-leau} class} for generating \emph{Costs} versus \emph{Benefits} organised performance tableaux. The random generator is following by default the directives below:
 \begin{itemize}[leftmargin=0.5cm,rightmargin=0.25cm]
 \item Three types of decision actions are distinguished: \emph{cheap}, \emph{neutral} and \emph{expensive} ones with an equal proportion of 1/3. Two types of weighted criteria are also distinguished: \emph{Costs} criteria to be \emph{minimised}, and \emph{Benefits} criteria to be \emph{maximised}, in the proportions 1/3 respectively 2/3;
 \item  Random performances on each type of criteria  are drawn, either from an ordinal scale $[0;10]$, or from a cardinal scale $[0.0;100.0]$, following a parametric triangular law of mode: $30\%$ performance for cheap, $50\%$ for neutral, and $70\%$ performance for expensive decision actions, with constant probability repartition $0.5$ on each side of the respective mode;
@@ -132,8 +132,8 @@ The \texttt{randomPerfTabs} module provides a \texttt{RandomCBPerformanceTableau
 ...          weightDistribution='equiobjectives',\
 ...          commonPercentiles={'ind':0.05,
 ...                             'pref':0.10,\
-                                'veto':0.95},\
-...          seed=100)
+...                             'veto':0.95},\
+...          seed=100)                             
 >>> t.showActions()
   *----- show decision action --------------*  §\label{line:6.2.12}§
     key:  a1
@@ -163,7 +163,7 @@ The \texttt{randomPerfTabs} module provides a \texttt{RandomCBPerformanceTableau
     ...}
 \end{lstlisting}
 
-In Listing~\vref{list:6.2} one may notice the three types of decision actions (see Lines~\ref{line:6.2.12}-\ref{line:6.2.22}), as well as the two types (Lines~\ref{line:6.2.24}-\ref{line:6.2.35}) of criteria with either an \emph{ordinal} or a \emph{cardinal} performance measuring scale. In the latter case, by default about $5\%$ of the random performance differences will be below the \emph{indifference} and $10\%$ below the \emph{preference} discriminating threshold. About $5\%$ will be \emph{considerably large}. More statistics about the generated performance evaluations can be inspected with the \texttt{showStatistics()} method.\index{showStatistics@\texttt{showStatistics()}}
+In Listing~\vref{list:6.2} one may notice the three types of decision actions (see Lines~\ref{line:6.2.12}-\ref{line:6.2.22}), as well as the two types  of criteria with either an \emph{ordinal} or a \emph{cardinal} performance measuring scale (Lines~\ref{line:6.2.24}-\ref{line:6.2.35}). In the latter case, by default about $5\%$ of the random performance differences will be below the \emph{indifference} and $10\%$ below the \emph{preference} discriminating threshold. About $5\%$ will be \emph{considerably large}. More statistics about the generated performance evaluations can be inspected with the \texttt{showStatistics()} method.\index{showStatistics@\texttt{showStatistics()}}
 \begin{lstlisting}
 >>> t.showStatistics()
     *-------- Performance tableau summary statistics -------*
@@ -211,7 +211,7 @@ A heatmap view with 5 color levels gives the result shown in Figure~\vref{fig:6.
 \label{fig:6.2}       % Give a unique label
 \end{figure}
  
-Such a performance tableau may be stored and re-accessed as follows.
+Such a performance tableau may be stored with the \texttt{save()} method and reloaded with the \texttt{PerformanceTableau} class:
 \begin{lstlisting}
 >>> t.save('temp')
     *----- saving performance tableau in XMCDA 2.0 format  -------------*
@@ -249,32 +249,52 @@ The randomPerfTabs module provides a \texttt{Random3ObjectivesPerformance\-Table
 >>> t = Random3ObjectivesPerformanceTableau(\
 ...           numberOfActions=7,\
 ...           numberOfCriteria=13,\
-...           weightDistribution='equiobjectives',\
+...           weightDistribution='equiobjectives',\ §\label{line:6.3.6}§
 ...           seed=120)
+>>> t
+  *------- PerformanceTableau instance description ------*
+   Instance class     : Random3ObjectivesPerformanceTableau
+   Seed               : 120
+   Instance name      : random3ObjectivesPerfTab
+   Actions            : 7
+   Objectives         : 3
+   Criteria           : 13
+   NaN proportion (%) : 2.2 §\label{line:6.3.16}§
+   Attributes         : ['name', 'valueDigits', 'BigData',
+      'OrdinalScales', 'missingDataProbability',
+      'negativeWeightProbability', 'randomSeed',
+      'sumWeights', 'valuationPrecision', 'commonScale',
+      'objectiveSupportingTypes', 'actions', 'objectives',
+      'criteriaWeightMode', 'criteria',
+      'weightPreorder', 'evaluation', 'NA']
+\end{lstlisting}
+
+The default missing data probablity is $5\%$. In our random instance here we observe $2.2\%$ of missing evaluations (see Line~\ref{line:6.3.16}). The '\texttt{equiobjectives}' directive results hence in a balanced total weight ($72.00$) for each decision objective (see Line~\ref{line:6.3.6}) as is made apparent below with the \texttt{showObjectives()} method\index{showObjectives@\texttt{showObjectives()}}.
+\begin{lstlisting}[caption={Inspecting the three objectives},label=list:6.4]
 >>> t.showObjectives()
   *------ show objectives -------"
-   Eco: Economical aspect                §\label{line:6.3.10}§
+   Eco: Economical aspect                §\label{line:6.4.3}§
     ec01 criterion of objective Eco 18
     ec05 criterion of objective Eco 18
     ec06 criterion of objective Eco 18
     ec12 criterion of objective Eco 18  
-    Total weight: 72.00 (4 criteria)    §\label{line:6.3.15}§
-   Soc: Societal aspect                 §\label{line:6.3.16}§
+    Total weight: 72.00 (4 criteria)    §\label{line:6.4.8}§
+   Soc: Societal aspect                 §\label{line:6.4.9}§
     so02 criterion of objective Soc 24
     so11 criterion of objective Soc 24
     so13 criterion of objective Soc 24
-    Total weight: 72.00 (3 criteria)    §\label{line:6.3.20}§
-   Env: Environmental aspect            §\label{line:6.3.21}§
+    Total weight: 72.00 (3 criteria)    §\label{line:6.4.13}§
+   Env: Environmental aspect            §\label{line:6.4.14}§
     en03 criterion of objective Env 12
     en04 criterion of objective Env 12
     en07 criterion of objective Env 12
     en08 criterion of objective Env 12
     en09 criterion of objective Env 12
     en10 criterion of objective Env 12
-    Total weight: 72.00 (6 criteria)    §\label{line:6.3.28}§
+    Total weight: 72.00 (6 criteria)    §\label{line:6.4.21}§
 \end{lstlisting}
 
-In Listing~\vref{list:6.3}, we notice that four \emph{equisignificant} criteria (\texttt{ec01}, \texttt{ec05}, \texttt{ec06}, and \texttt{ec12}) assess, for instance, the performance of the public policies from an \emph{economic} point of view (Lines~\ref{line:6.3.10}-\ref{line:6.3.15}). Three \emph{equisignificant} criteria do the same from a \emph{societal} (Lines~\ref{line:6.3.16}-\ref{line:6.3.20}), and six from an \emph{environmental} point of view (Lines~\ref{line:6.3.21}-\ref{line:6.3.28}). The '\texttt{equiobjectives}' directive results hence in a balanced total weight ($72.00$) for each decision objective (see Line 6). 
+In Listing~\vref{list:6.4}, we notice that four \emph{equisignificant} criteria (\texttt{ec01}, \texttt{ec05}, \texttt{ec06}, and \texttt{ec12}) of significance weight 18 assess, for instance, the performance of the public policies from an \emph{economic} point of view (Lines~\ref{line:6.4.3}-\ref{line:6.4.8}). Three \emph{equisignificant} criteria of weight 24 do the same from a \emph{societal} (Lines~\ref{line:6.4.9}-\ref{line:6.4.13}), and six of weight 12 from an \emph{environmental} point of view (Lines~\ref{line:6.4.14}-\ref{line:6.4.21}). 
 
 Variable \emph{triangular} modes: $0.3$, $0.5$ or $0.7$ of the span of the measure scale, give a different performance status for each public policy with respect to the three decision objectives.
 \begin{lstlisting}
@@ -310,7 +330,7 @@ We may inspect in Figure~\vref{fig:6.3} the given random three-objectives perfor
 Light green cells show the highest and light red the lowest evaluations. Policy \texttt{p1} shows thus the weakest performance ($17.09/100.00$) on the environmental criterion \texttt{en09}, whereas policy \texttt{p3} shows the best performances on four out of the six \emph{environmental} criteria.
 
 No trivial best choice becomes apparent when looking at the performance tableau shown in Figure~\vref{fig:6.3}. Let us therefore compute a \Rubis best choice recommendation (see Chapter~\vref{sec:4}).
-\begin{lstlisting}[caption={What is the public policy to recommend as best choice ?},label=list:6.4]
+\begin{lstlisting}[caption={What is the public policy to recommend as best choice ?},label=list:6.5]
 >>> from outrankingDigraphs import\
 ...       BipolarOutrankingDigraph
 >>> g = BipolarOutrankingDigraph(t)
@@ -391,12 +411,12 @@ The \texttt{RandomAcademicPerformanceTableau} class\index{RandomAcademicPerforma
 \end{itemize}      
 
 When Parameter \texttt{WithTypes} is set to \texttt{True}, the students are randomly allocated to one of the following four categories --\texttt{weak} (1/6), \texttt{fair} (1/3), \texttt{good} (1/3), and \texttt{excellent} (1/3)-- in the bracketed proportions. In a default $0-20$ grading range, the random range of a weak student is $0-10$, of a fair student $4-16$, of a good student $8-20$, and of an excellent student $12-20$. The random grading generator follows in this case a double triangular probability law with \emph{mode} ($xm$) equal to the middle of the random range and median repartition ($r = 0.5$) of probability each side of the mode.
-\begin{lstlisting}[caption={Generating a random academic performance tableau},label=list:6.5]
+\begin{lstlisting}[caption={Generating a random academic performance tableau},label=list:6.6]
 >>> from randomPerfTabs import RandomAcademicPerformanceTableau
->>> t = RandomAcademicPerformanceTableau(\   §\label{line:6.5.2}§
+>>> t = RandomAcademicPerformanceTableau(\   §\label{line:6.6.2}§
 ...        numberOfStudents=11,\
 ...        numberOfCourses=7, missingDataProbability=0.03,\
-...        WithTypes=True, seed=100)  §\label{line:6.5.5}§
+...        WithTypes=True, seed=100)  §\label{line:6.6.5}§
 >>> t
   *------- PerformanceTableau instance description ------*
    Instance class   : RandomAcademicPerformanceTableau
@@ -412,7 +432,7 @@ When Parameter \texttt{WithTypes} is set to \texttt{True}, the students are rand
    Courses |   'm1'  'm2'  'm3'  'm4'  'm5'  'm6'  'm7' 
      ECTS  |    2     1     3     4     1     1     5    
   ---------|------------------------------------------
-    's01f' |    12    13    15    08    16    06    15   §\label{line:6.5.21}§
+    's01f' |    12    13    15    08    16    06    15   §\label{line:6.6.21}§
     's02g' |    10    15    20    11    14    15    18   
     's03g' |    14    12    19    11    15    13    11   
     's04f' |    13    15    12    13    13    10    06   
@@ -422,15 +442,15 @@ When Parameter \texttt{WithTypes} is set to \texttt{True}, the students are rand
     's08f' |    14    12    09    13    13    15    12   
     's09g' |    19    14    15    13    09    13    16   
     's10g' |    10    12    14    17    12    16    09   
-    's11w' |    10    10    NA    10    10    NA    08   §\label{line:6.5.31}§
+    's11w' |    10    10    NA    10    10    NA    08   §\label{line:6.6.31}§
 >>> t.weightPreorder
   [['m2', 'm5', 'm6'], ['m1'], ['m3'], ['m4'], ['m7']]
 \end{lstlisting}
   
-The example random tableau, generated for instance above with \texttt{missingData\-Proba\-bility} = $0.03$, \texttt{WithTypes} = \texttt{True} and \texttt{seed} = 100 (see List.~\vref{list:6.5} Lines~\ref{line:6.5.2}-\ref{line:6.5.5}), results in a set of two excellent (\texttt{s05e} and \texttt{s07e}), five good (\texttt{s02g}, \texttt{s03g}, \texttt{s06g}, \texttt{s09g} and \texttt{s10g}), three fair (\texttt{s01f}, \texttt{s04f} and \texttt{s08f}) and one weak (\texttt{s11w}) students. Notice that six students get a grade below the course validating threshold of $10$ and we observe four missing grades (\texttt{NA}), two in course \texttt{m5} and, one in courses \texttt{m3} and \texttt{m6} (see Lines~\ref{line:6.5.21}-\ref{line:6.5.31}).
+The example random tableau, generated for instance above with \texttt{missingData\-Proba\-bility} = $0.03$, \texttt{WithTypes} = \texttt{True} and \texttt{seed} = 100 (see List.~\vref{list:6.6} Lines~\ref{line:6.6.2}-\ref{line:6.6.5}), results in a set of two excellent (\texttt{s05e} and \texttt{s07e}), five good (\texttt{s02g}, \texttt{s03g}, \texttt{s06g}, \texttt{s09g} and \texttt{s10g}), three fair (\texttt{s01f}, \texttt{s04f} and \texttt{s08f}) and one weak (\texttt{s11w}) students. Notice that six students get a grade below the course validating threshold of $10$ and we observe four missing grades (\texttt{NA}), two in course \texttt{m5} and, one in courses \texttt{m3} and \texttt{m6} (see Lines~\ref{line:6.6.21}-\ref{line:6.6.31}).
 
 A statistical summary of the students' grades obtained in the highest weighted course, namely \texttt{m7}, is shown with the \texttt{showCourseStatistics()} method. \index{showCourseStatistics@\texttt{showCourseStatistics()}}
-\begin{lstlisting}[caption={Student performance summary statistics per course},label=list:6.6]
+\begin{lstlisting}[caption={Student performance summary statistics per course},label=list:6.7]
 >>> t.showCourseStatistics('m7')
   *----- Summary performance statistics ------*
    Course name    : m7
@@ -449,7 +469,7 @@ A statistical summary of the students' grades obtained in the highest weighted c
    Standard difference deviation : 5.35
 \end{lstlisting}
 
-In Listing~\vref{list:6.6}, the Course \texttt{m7} evaluation statistics show a mean grade of $12.82$ and a median grade of $14$. Maximal (resp. minimal) grade is $18$ (resp. $6$).
+In Listing~\vref{list:6.7}, the Course \texttt{m7} evaluation statistics show a mean grade of $12.82$ and a median grade of $14$. Maximal (resp. minimal) grade is $18$ (resp. $6$).
 
 \begin{figure}[ht]
 %\sidecaption[t]
@@ -459,8 +479,8 @@ In Listing~\vref{list:6.6}, the Course \texttt{m7} evaluation statistics show a 
 \end{figure}
 With a ranked heatmap view on all the grades we now get in Figure~\vref{fig:6.6} a global pictures of the performance of all the eleven students. The ranking shown here, produced with the \NetFlows ranking rule (see Sec.~\ref{sec:8.3}), reports a high correlation of $+0.887$ with the corresponding bipolar-valued outranking digraph (see Chap.~\ref{sec:16}).
 
-The \NetFlows ranking represents also a rather \emph{fair weighted consensus} between the individual courses' marginal rankings as is made apparent with the \texttt{showRankingConsensusQuality()} method in Listing~\vref{list:6.7}.\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}}
-\begin{lstlisting}[caption={Consensus quality of the students's ranking},label=list:6.7]
+The \NetFlows ranking represents also a rather \emph{fair weighted consensus} between the individual courses' marginal rankings as is made apparent with the \texttt{showRankingConsensusQuality()} method in Listing~\vref{list:6.8}.\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}}
+\begin{lstlisting}[caption={Consensus quality of the students's ranking},label=list:6.8]
 >>> from outrankingDigraphs import\
 ...                  BipolarOutrankingDigraph
 >>> g = BipolarOutrankingDigraph(t)
