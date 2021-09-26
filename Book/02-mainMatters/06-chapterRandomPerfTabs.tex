@@ -223,7 +223,7 @@ Such a performance tableau may be stored with the \texttt{save()} method and rel
 \section{Random three objectives performance tableaux}
 \label{sec:6.4}
 
-The randomPerfTabs module provides a \texttt{Random3ObjectivesPerformance\-Tableau} class\index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tableau} class} for generating random tableaux concerning public policies evaluated with respect to three decision objectives taking respectively into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. Each potential public policy is qualified randomly as performing \emph{weakly} ($-$), \emph{fairly} ($\sim$) or \emph{well} ($+$) with respect to to each one of the three objectives. 
+The \texttt{randomPerfTabs} module provides a \texttt{Random3ObjectivesPerfor\-mance\-Tableau} class\index{Random3ObjectivesPerformanceTableau@\texttt{Random3ObjectivesPerformance\-Tableau} class} for generating random tableaux concerning public policies evaluated with respect to three decision objectives taking respectively into account \emph{economical}, \emph{societal} as well as \emph{environmental} aspects. Each potential public policy is qualified randomly as performing \emph{weakly} ($-$), \emph{fairly} ($\sim$) or \emph{well} ($+$) with respect to to each one of the three objectives. 
 
 \noindent \textbf{Generator directives are the following:}
 
@@ -357,7 +357,9 @@ No trivial best choice becomes apparent when looking at the performance tableau 
    - most credible action(s) = { 'p7': 0.06, }
 \end{lstlisting}
 
-Policy \texttt{p3} gives the most credible first choice recommendation with the support of a $57.5\%$ majority of significance, whereas policy \texttt{p7} gives a credible last choice recommendation . Policy \texttt{p5} represents an ambiguous first as well as last choice candidate. A drawing of the strict outranking digraph oriented by first and last recommendations shows in Figure~\vref{fig:6.4} the complete preferential picture.
+Policy \texttt{p3} gives the most credible first choice recommendation with the support of a $57.5\%$ majority of significance, whereas policy \texttt{p7} gives a credible last choice recommendation .
+
+Policy \texttt{p5} represents an ambiguous first as well as last choice candidate. A drawing of the strict outranking digraph oriented by first and last recommendations shows in Figure~\vref{fig:6.4} the complete preferential picture.
 \begin{lstlisting}
 >>> (~(-g)).exportGraphViz(\
 ...             fileName='3ObjPerfTabBestChoice',\
@@ -374,7 +376,7 @@ Policy \texttt{p3} gives the most credible first choice recommendation with the 
 \label{fig:6.4}       % Give a unique label
 \end{figure}
 
-A heatmap view in Figure~\vref{fig:6.5} on the \Copeland ranked performance tableau confirms the best choice recommendation (see Section~\vref{sec:8.2}).
+A heatmap view in Figure~\vref{fig:6.5} on the \Copeland ranked performance tableau confirms the best choice recommendation (see Sec.~\ref{sec:8.2}).
 \begin{figure}[ht]
 %\sidecaption[t]
 \includegraphics[width=0.9\hsize]{Figures/6-5-random3ObjHeatmap.png}
@@ -382,12 +384,13 @@ A heatmap view in Figure~\vref{fig:6.5} on the \Copeland ranked performance tabl
 \label{fig:6.5}       % Give a unique label
 \end{figure}
 \begin{lstlisting}
->>> t.showHTMLPerformanceHeatmap(Correlations=True,\
+>>> t.showHTMLPerformanceHeatmap(\
+...                        Correlations=True,\
 ...                        colorLevels=5,ndigits=1,\
 ...                        rankingRule='Copeland')
 \end{lstlisting}
 
-The heatmap view with its \Copeland ranking based on the bipolar outranking digraph confirms policy's \texttt{p3} as first-ranked. Notice also that the three strict outranked policies do effectively appear in the last positions.
+The \Copeland ranking, based on the bipolar outranking digraph, confirms policy \texttt{p3} as first-ranked. Notice also that the three strict outranked policies do effectively appear in the last positions.
 
 \section{Random academic performance tableaux}
 \label{sec:6.5}

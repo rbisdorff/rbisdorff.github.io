@@ -19,39 +19,21 @@
                              % when including figure files
 \usepackage{multicol}        % used for the two-column index
 \usepackage[bottom]{footmisc}% places footnotes at page bottom
-
-%\usepackage{newtxtext}       % 
-%\usepackage{newtxmath}       % selects Times Roman as basic font
-
 \usepackage{mathptmx}
 \usepackage{helvet}
 \usepackage{courier}
-% %
 \usepackage{type1cm}         
 
-% \usepackage{makeidx}         % allows index generation
-% \usepackage{graphicx}        % standard LaTeX graphics tool
-%                              % when including figure files
-% \usepackage{multicol}        % used for the two-column index
-% \usepackage[bottom]{footmisc}% places footnotes at page bottom
 
 % % see the list of further useful packages
 % % in the Reference Guide
 \usepackage{amsmath,stmaryrd,amssymb,bbm}
-% \usepackage{tabularx}
 \usepackage[sectionbib]{natbib}
-%\usepackage{natbib}
 \usepackage{chapterbib}
-%\usepackage{minitoc}
-% \usepackage{pst-all}
-% \usepackage{latexsym}
-% \usepackage{euscript}
 \usepackage{enumitem}
-% \usepackage{ifthen}
 \usepackage{xspace}
 \usepackage[official,right]{eurosym}
 \usepackage{url}
-% \usepackage{epstopdf}
 \usepackage{listings}
 
 \makeatletter
@@ -65,19 +47,11 @@
 \makeatother
 
 \usepackage[chapter]{algorithm}
-
 \usepackage[usenames]{color}
-% \usepackage{ascii}
-\usepackage{array}
-% \usepackage{pifont}
-% %\usepackage{colortbl}
-% \usepackage{multirow}
-% % \usepackage{dcolumn}
 \usepackage{varioref}
 \usepackage[titles]{tocloft}
 \cftsetindents{figure}{0em}{3em}
 \cftsetindents{table}{0em}{3em}
-
 
 \usepackage[pdftex,
 	draft = false,				% Mettre true pour ne pas générer les liens! 
@@ -98,15 +72,6 @@
 	pdfpagelabels = false
 %	hypertexnames=false
 	]{hyperref}
-
-% to set the bookmarks in the pdf right
-%\usepackage{bookmark}
-%\makeatletter
-%\providecommand*{\toclevel@titlech}{0} 
-%\edef\toclevel@authorch{\the\numexpr\toclevel@titlech+1} 
-%\edef\toclevel@authorch{1000} 
-%\makeatother
-
 
 \newcommand{\Berge}{{\sc Berge}\xspace}
 \newcommand{\Borda}{{\sc Borda}\xspace}    
@@ -135,28 +100,6 @@
 
 \definecolor{LightGray}{rgb}{0.92,0.92,0.92}
 \definecolor{White}{rgb}{1.0,1.0,1.0}
-% \definecolor{codegreen}{rgb}{0,0.6,0}
-% \definecolor{codegray}{rgb}{0.5,0.5,0.5}
-% \definecolor{codepurple}{rgb}{0.58,0,0.82}
-% \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-% \lstdefinestyle{mystyle}{
-%     backgroundcolor=\color{backcolour},   
-%     commentstyle=\color{codegreen},
-%     keywordstyle=\color{magenta},
-%     numberstyle=\tiny\color{codegray},
-%     stringstyle=\color{codepurple},
-%     basicstyle=\ttfamily\footnotesize,
-%     breakatwhitespace=false,         
-%     breaklines=true,                 
-%     captionpos=b,                    
-%     keepspaces=true,                 
-%     numbers=left,                    
-%     numbersep=5pt,                  
-%     showspaces=false,                
-%     showstringspaces=false,
-%     showtabs=false,                  
-%     tabsize=2
-%   }
 \lstdefinestyle{pythonstyle}{
        language=Python,
        backgroundcolor=\color{LightGray},
