@@ -595,16 +595,16 @@ Let us verify this result in Listing~\vref{list:17.18} on a tiny random digraph.
 It is easy to verify by hand that the characteristic vector $[-1, -1, +1]$ satisfies the initial kernel equation system; node \texttt{a3} gives an \emph{initial} kernel. Similarly, the characteristic vector $[-1, +1, -1]$ verifies indeed the terminal kernel equation system and node \texttt{a2} gives hence a \emph{terminal} kernel.
 
 We succeeded now in generalising crisp kernel equation systems to genuine bipolar-valued digraphs \citep*{BIS-2006a,BIS-2006b}. The constructive proof, found by \emph{Marc Pirlot}\index{Pirlot@\textsl{M. Pirlot}}, is based on the following \emph{fixpoint equation} that may be used for computing bipolar-valued kernel membership vectors:
-\begin{equation}\label{eq:17.4}
+\begin{equation}\label{eq:17.3}
 T(Y) \; := \; -(Y \circ R) = Y\;.
 \end{equation}
 \emph{John von Neumann}\index{Neumann@\textsl{J. von Neumann}} showed indeed that, when a digraph $G(X,R)$ is acyclic with a unique initial kernel $K$ characterised by its membership characteristics vector $Y_k$, then the following double fixpoint equation:
-\begin{equation}\label{eq:17.5}
+\begin{equation}\label{eq:17.4}
 T^2(Y) \; := \; -\big( -(Y \circ R) \circ R) \; = \; Y\;,
 \end{equation}
 will admit a stable \emph{high} and a stable \emph{low} fixpoint solution that converge both to $Y_k$ \citep{SCH-1985}.
 
-Inspired by the crisp double fixpoint equation~\vref{eq:17.5}, we observed that for a given bipolar-valued digraph $G(X,R)$, each one of its dominant or absorbent prekernels $K_i$ in $X$ determines an induced partial digraph $G(X,R/K_i)$ which is acyclic and admits $K_i$ as unique prekernel \citep{BIS-1997}.
+Inspired by the crisp double fixpoint equation~\vref{eq:17.4}, we observed that for a given bipolar-valued digraph $G(X,R)$, each one of its dominant or absorbent prekernels $K_i$ in $X$ determines an induced partial digraph $G(X,R/K_i)$ which is acyclic and admits $K_i$ as unique prekernel \citep{BIS-1997}.
 
 Following the \emph{von Neumann} fixpoint algorithm, a similar bipolar-valued extended double fixpoint algorithm, applied to $G(X,R/K_i)$, allows us to compute the associated bipolar-valued kernel characteristic vectors $Y_i$ in polynomial complexity.
 
@@ -619,7 +619,7 @@ Following the \emph{von Neumann} fixpoint algorithm, a similar bipolar-valued ex
 \item For each crisp initial kernel $K_i$:
   \begin{enumerate}
   \item Construct a partially determined subgraph $G(X,R/K_i)$ supporting exactly this unique initial kernel $K_i$;
-  \item Use the double fixpoint equation $T^2$ (Eq.~\ref{eq:17.5}) with the partially determined adjacency matrix $R/K_i$ for computing a stable low and a stable high fixpoint;
+  \item Use the double fixpoint equation $T^2$~(\ref{eq:17.4}) with the partially determined adjacency matrix $R/K_i$ for computing a stable low and a stable high fixpoint;
    \item \label{step:2.c} Determine the bipolar-valued $K_i$-membership characteristic vector $Y_i$ with an epistemic disjunction of the previous low and high fixpoints;
   \end{enumerate}
 \item Repeat step (2) for each terminal kernel $K_j$ by using the double fixpoint equation $T^2$ with the transpose of the adjacency matrix $R/K_j$.
@@ -813,7 +813,7 @@ It is worthwhile noticing the essential computational role, the logical indeterm
 
 Following the observation that an independent absorbent choice in an acyclic digraph corresponds to the zero values of the associated \Grundy function, \citet{RIG-1948} introduced the name ``noyau'' (kernel) for such a choice. Terminal kernels where in the sequel studied by \citet{BER-1958} in the context of Combinatorial Game Theory. Initial kernels --independent and dominating choices-- were introduced under the name game solutions by \citet{NEU-1944}. The absorbent version of the crisp kernel equation system~\vref{eq:17.1} was first introduced by \citet*{SCH-1985} in the context of their thorough exploration of relational algebra.
 
-The fuzzy version of kernel equation systems was first investigated by \citet{KIT-1993}. Commenting on this work at a meeting in Spring 1995 of the EURO Working Group on Multicriteria Decision Aiding in Lausanne (Switzerland), \emph{Marc Roubens}\index{Roubens@\textsl{M. Roubens}} feared that solving such fuzzy kernel equation systems could be computationally difficult. Triggered by his pessimistic remark and knowing about kernel equation systems and the \Neumann fixpoint theorem \citep{NEU-1944,SCH-1985}, I immediately started to implement in Prolog a solver for the valued version of Equation~\vref{eq:17.1}; the equation system serving as constraints for a discrete labelling of all possible rational solution vectors. And in Summer 1995, we luckily obtained with a commercial finite domain solver the very first valued initial and terminal kernels from a didactic outranking digraph of order 8, well known in the multiple-criteria decision aiding community. The computation took several seconds on a CRAY 6412 superserver with 12 processors operating in a nowadays ridiculous CPU speed of 90 Mhz. The labelled solution vectors, obtained in the sequel for any outranking digraph with a single initial or terminal kernel, were structured in a way that suggested the converging stages of the \Neumann fixpoint algorithm and so gave the initial hint for Algorithm~\ref{alg:17.1} \citep*{BIS-1996,BIS-1997,BIS-2004d}. 
+The fuzzy version of kernel equation systems was first investigated by \citet{KIT-1993}. Commenting on this work at a meeting in Spring 1995 of the EURO Working Group on Multicriteria Decision Aiding in Lausanne (Switzerland), \emph{Marc Roubens}\index{Roubens@\textsl{M. Roubens}} feared that solving such fuzzy kernel equation systems could be computationally difficult. Triggered by his pessimistic remark and knowing about kernel equation systems and the \Neumann fixpoint theorem \citep{NEU-1944,SCH-1985}, I immediately started to implement in Prolog a solver for the valued version of Equation~\vref{eq:17.4}; the equation system serving as constraints for a discrete labelling of all possible rational solution vectors. And in Summer 1995, we luckily obtained with a commercial finite domain solver the very first valued initial and terminal kernels from a didactic outranking digraph of order 8, well known in the multiple-criteria decision aiding community. The computation took several seconds on a CRAY 6412 superserver with 12 processors operating in a nowadays ridiculous CPU speed of 90 Mhz. The labelled solution vectors, obtained in the sequel for any outranking digraph with a single initial or terminal kernel, were structured in a way that suggested the converging stages of the \Neumann fixpoint algorithm and so gave the initial hint for Algorithm~\ref{alg:17.1} \citep*{BIS-1996,BIS-1997,BIS-2004d}. 
 
 In our present Python3.9 implementation, such a tiny problem is solved in less than a thousandth of a second on a common laptop. And this remains practically the same for any relevant example of outranking digraph observed in a real decision-aiding problem. Several times we wrote in our personal journal that there is certainly now no more potential for any substantial improvement of this computational efficiency; Only to discover, shortly later, that following a new theoretical idea or choosing a more efficient implementation –-using for instance the amazing instrument of iterator generators in Python–-, execution times could well be divided by 20.
 
@@ -822,8 +822,8 @@ This nowadays available computational efficiency confers the bipolar-valued kern
 %%%%%%% The chapter bibliography
 %\normallatexbib
 %\clearpage
-\phantomsection
-\addcontentsline{toc}{section}{Chapter Bibliography}
-\input{02-mainMatters/17-chapterKernels.bbl}
+%\phantomsection
+%\addcontentsline{toc}{section}{Chapter Bibliography}
+\input{Bibliographies/17-chapterKernels.bbl}
 %\bibliographystyle{spbasic}
 %\bibliography{03-backMatters/reference}

@@ -8,200 +8,177 @@
 \BOOKMARK [1][-]{section.1.2}{1.2 Organisation of the Digraph3 Python modules}{chapter.1}% 8
 \BOOKMARK [1][-]{section.1.3}{1.3 Starting a Digraph3 terminal session}{chapter.1}% 9
 \BOOKMARK [1][-]{section.1.4}{1.4 Inspecting a digraph object}{chapter.1}% 10
-\BOOKMARK [1][-]{section*.12}{Chapter Bibliography}{chapter.1}% 11
-\BOOKMARK [1][-]{section*.13}{References}{chapter.1}% 12
-\BOOKMARK [0][-]{chapter.2}{2 Working with bipolar-valued digraphs}{part.1}% 13
-\BOOKMARK [1][-]{section.2.1}{2.1 Random bipolar-valued digraphs}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.2}{2.2 Graphviz drawings}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.3}{2.3 Asymmetric and symmetric parts}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.4}{2.4 Border and inner parts}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.5}{2.5 Fusion by epistemic disjunction}{chapter.2}% 18
-\BOOKMARK [1][-]{section.2.6}{2.6 Dual, converse and codual digraphs}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.7}{2.7 Symmetric and transitive closures}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.8}{2.8 Strong components}{chapter.2}% 21
-\BOOKMARK [1][-]{section.2.9}{2.9 CSV storage}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.10}{2.10 Complete, empty and indeterminate digraphs}{chapter.2}% 23
-\BOOKMARK [1][-]{section*.14}{Notes}{chapter.2}% 24
-\BOOKMARK [1][-]{section*.16}{Chapter Bibliograhy}{chapter.2}% 25
-\BOOKMARK [1][-]{section*.17}{References}{chapter.2}% 26
-\BOOKMARK [0][-]{chapter.3}{3 Working with outranking digraphs}{part.1}% 27
-\BOOKMARK [1][-]{section.3.1}{3.1 The hybrid outranking digraph model}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.2}{3.2 The bipolar-valued outranking digraph}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.3}{3.3 Pairwise comparisons}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.4}{3.4 Recoding the characteristic valuation domain}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.5}{3.5 The strict outranking digraph}{chapter.3}% 32
-\BOOKMARK [1][-]{section*.18}{Notes}{chapter.3}% 33
-\BOOKMARK [1][-]{section*.20}{Chapter Bibliography}{chapter.3}% 34
-\BOOKMARK [1][-]{section*.21}{References}{chapter.3}% 35
-\BOOKMARK [-1][-]{part.2}{Part II Evaluation models and decision algorithms}{}% 36
-\BOOKMARK [0][-]{chapter.4}{4 Building a best choice recommendation}{part.2}% 37
-\BOOKMARK [1][-]{section.4.1}{4.1 What office-location to choose?}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.2}{4.2 The given performance tableau}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.3}{4.3 Computing the outranking digraph}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.4}{4.4 Designing a best choice recommender system}{chapter.4}% 41
-\BOOKMARK [1][-]{section.4.5}{4.5 Computing the Rubis best choice recommendation}{chapter.4}% 42
-\BOOKMARK [1][-]{section.4.6}{4.6 Weakly ordering the outranking digraph}{chapter.4}% 43
-\BOOKMARK [1][-]{section*.22}{Notes}{chapter.4}% 44
-\BOOKMARK [1][-]{section*.24}{Chapter Bibliography}{chapter.4}% 45
-\BOOKMARK [1][-]{section*.25}{References}{chapter.4}% 46
-\BOOKMARK [0][-]{chapter.5}{5 How to create a new multiple-criteria performance tableau}{part.2}% 47
-\BOOKMARK [1][-]{section.5.1}{5.1 Editing a template file}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.2}{5.2 Editing the decision alternatives}{chapter.5}% 49
-\BOOKMARK [1][-]{section.5.3}{5.3 Editing the decision objectives}{chapter.5}% 50
-\BOOKMARK [1][-]{section.5.4}{5.4 Editing the family of performance criteria}{chapter.5}% 51
-\BOOKMARK [1][-]{section.5.5}{5.5 Editing the performance evaluations}{chapter.5}% 52
-\BOOKMARK [1][-]{section.5.6}{5.6 Inspecting the template outranking relation}{chapter.5}% 53
-\BOOKMARK [1][-]{section*.26}{Chapter Bibliography}{chapter.5}% 54
-\BOOKMARK [1][-]{section*.27}{References}{chapter.5}% 55
-\BOOKMARK [0][-]{chapter.6}{6 Generating random performance tableaux}{part.2}% 56
-\BOOKMARK [1][-]{section.6.1}{6.1 Introduction}{chapter.6}% 57
-\BOOKMARK [1][-]{section.6.2}{6.2 Random standard performance tableaux}{chapter.6}% 58
-\BOOKMARK [1][-]{section.6.3}{6.3 Random Cost-Benefit performance tableaux}{chapter.6}% 59
-\BOOKMARK [1][-]{section.6.4}{6.4 Random three objectives performance tableaux}{chapter.6}% 60
-\BOOKMARK [1][-]{section.6.5}{6.5 Random academic performance tableaux}{chapter.6}% 61
-\BOOKMARK [1][-]{section*.28}{Chapter Bibliography}{chapter.6}% 62
-\BOOKMARK [1][-]{section*.29}{References}{chapter.6}% 63
-\BOOKMARK [0][-]{chapter.7}{7 Who wins the election ?}{part.2}% 64
-\BOOKMARK [1][-]{section.7.1}{7.1 Linear voting profiles}{chapter.7}% 65
-\BOOKMARK [1][-]{section.7.2}{7.2 Computing the winner}{chapter.7}% 66
-\BOOKMARK [1][-]{section.7.3}{7.3 The majority margins digraph}{chapter.7}% 67
-\BOOKMARK [1][-]{section.7.4}{7.4 Cyclic social preferences}{chapter.7}% 68
-\BOOKMARK [1][-]{section.7.5}{7.5 On generating realistic random linear voting profiles}{chapter.7}% 69
-\BOOKMARK [1][-]{section*.30}{Chapter Bibliography}{chapter.7}% 70
-\BOOKMARK [1][-]{section*.31}{References}{chapter.7}% 71
-\BOOKMARK [0][-]{chapter.8}{8 Ranking with multiple incommensurable criteria}{part.2}% 72
-\BOOKMARK [1][-]{section.8.1}{8.1 The ranking problem}{chapter.8}% 73
-\BOOKMARK [1][-]{section.8.2}{8.2 The Copeland ranking}{chapter.8}% 74
-\BOOKMARK [1][-]{section.8.3}{8.3 The NetFlows ranking}{chapter.8}% 75
-\BOOKMARK [1][-]{section.8.4}{8.4 Kemeny rankings}{chapter.8}% 76
-\BOOKMARK [1][-]{section.8.5}{8.5 Slater rankings}{chapter.8}% 77
-\BOOKMARK [1][-]{section.8.6}{8.6 The Kohler ranking-by-choosing rule}{chapter.8}% 78
-\BOOKMARK [1][-]{section.8.7}{8.7 The RankedPairs ranking rule}{chapter.8}% 79
-\BOOKMARK [1][-]{section*.32}{References}{chapter.8}% 80
-\BOOKMARK [1][-]{section*.33}{References}{chapter.8}% 81
-\BOOKMARK [0][-]{chapter.9}{9 Rating by sorting into relative performance quantiles}{part.2}% 82
-\BOOKMARK [1][-]{section.9.1}{9.1 Quantile sorting on a single performance criterion}{chapter.9}% 83
-\BOOKMARK [1][-]{section.9.2}{9.2 Sorting into quantiles with multiple performance criteria}{chapter.9}% 84
-\BOOKMARK [1][-]{section.9.3}{9.3 The sparse pre-ranked outranking digraph model}{chapter.9}% 85
-\BOOKMARK [1][-]{section.9.4}{9.4 Ranking pre-ranked sparse outranking digraphs}{chapter.9}% 86
-\BOOKMARK [1][-]{section*.34}{References}{chapter.9}% 87
-\BOOKMARK [1][-]{section*.35}{References}{chapter.9}% 88
-\BOOKMARK [0][-]{chapter.10}{10 Rating by ranking with learned performance quantile norms}{part.2}% 89
-\BOOKMARK [1][-]{section.10.1}{10.1 The absolute rating problem}{chapter.10}% 90
-\BOOKMARK [1][-]{section.10.2}{10.2 Incremental learning of historical performance quantiles}{chapter.10}% 91
-\BOOKMARK [1][-]{section.10.3}{10.3 Rating-by-ranking new performances with quantile norms}{chapter.10}% 92
-\BOOKMARK [1][-]{section*.36}{References}{chapter.10}% 93
-\BOOKMARK [1][-]{section*.37}{References}{chapter.10}% 94
-\BOOKMARK [0][-]{chapter.11}{11 HPC ranking of big performance tableaux}{part.2}% 95
-\BOOKMARK [1][-]{section.11.1}{11.1 C-compiled Python modules}{chapter.11}% 96
-\BOOKMARK [1][-]{section.11.2}{11.2 Big Data performance tableaux}{chapter.11}% 97
-\BOOKMARK [1][-]{section.11.3}{11.3 C-implemented integer-valued outranking digraphs}{chapter.11}% 98
-\BOOKMARK [1][-]{section.11.4}{11.4 The sparse implementation of big outranking digraphs}{chapter.11}% 99
-\BOOKMARK [1][-]{section.11.5}{11.5 Quantiles ranking of big performance tableaux}{chapter.11}% 100
-\BOOKMARK [1][-]{section.11.6}{11.6 HPC quantiles ranking records}{chapter.11}% 101
-\BOOKMARK [0][-]{section*.38}{Chapter Bibliography}{part.2}% 102
-\BOOKMARK [1][-]{section*.39}{References}{section*.38}% 103
-\BOOKMARK [-1][-]{part.3}{Part III Evaluation and decision case studies}{}% 104
-\BOOKMARK [0][-]{chapter.12}{12 Alice's best choice: A selection case study}{part.3}% 105
-\BOOKMARK [1][-]{section.12.1}{12.1 The decision problem}{chapter.12}% 106
-\BOOKMARK [1][-]{section.12.2}{12.2 The performance tableau}{chapter.12}% 107
-\BOOKMARK [1][-]{section.12.3}{12.3 Building a best choice recommendation}{chapter.12}% 108
-\BOOKMARK [1][-]{section.12.4}{12.4 Robustness analysis}{chapter.12}% 109
-\BOOKMARK [1][-]{section*.40}{Chapter Bibliography}{chapter.12}% 110
-\BOOKMARK [1][-]{section*.41}{References}{chapter.12}% 111
-\BOOKMARK [0][-]{chapter.13}{13 The best academic Computer Science Depts: A ranking case study}{part.3}% 112
-\BOOKMARK [1][-]{section.13.1}{13.1 The THE performance tableau}{chapter.13}% 113
-\BOOKMARK [1][-]{section.13.2}{13.2 Ranking with multiple criteria of ordinal significance}{chapter.13}% 114
-\BOOKMARK [1][-]{section.13.3}{13.3 How to judge the quality of a ranking result?}{chapter.13}% 115
-\BOOKMARK [1][-]{section*.42}{Chapter Bibliography}{chapter.13}% 116
-\BOOKMARK [1][-]{section*.43}{References}{chapter.13}% 117
-\BOOKMARK [0][-]{chapter.14}{14 The best students, where do they study? A rating case study}{part.3}% 118
-\BOOKMARK [1][-]{section.14.1}{14.1 The rating problem}{chapter.14}% 119
-\BOOKMARK [1][-]{section.14.2}{14.2 The 2004 performance quintiles}{chapter.14}% 120
-\BOOKMARK [1][-]{section.14.3}{14.3 Rating-by-ranking with lower-closed quintile limits}{chapter.14}% 121
-\BOOKMARK [1][-]{section.14.4}{14.4 Rating by quintiles sorting}{chapter.14}% 122
-\BOOKMARK [1][-]{section*.44}{Chapter Bibliography}{chapter.14}% 123
-\BOOKMARK [1][-]{section*.45}{References}{chapter.14}% 124
-\BOOKMARK [0][-]{chapter.15}{15 Exercises}{part.3}% 125
-\BOOKMARK [1][-]{section.15.1}{15.1 Who will receive the best student award? \(\247\)}{chapter.15}% 126
-\BOOKMARK [1][-]{section.15.2}{15.2 How to fairly rank movies? \(\247\)}{chapter.15}% 127
-\BOOKMARK [1][-]{section.15.3}{15.3 What is your best choice recommendation? \(\247\247\)}{chapter.15}% 128
-\BOOKMARK [1][-]{section.15.4}{15.4 Planning the next holiday activity \(\247\247\)}{chapter.15}% 129
-\BOOKMARK [1][-]{section.15.5}{15.5 What is the best public policy? \(\247\247\)}{chapter.15}% 130
-\BOOKMARK [1][-]{section.15.6}{15.6 A fair diploma validation decision \(\247\247\247\)}{chapter.15}% 131
-\BOOKMARK [1][-]{section*.59}{Chapter Bibliography}{chapter.15}% 132
-\BOOKMARK [1][-]{section*.60}{References}{chapter.15}% 133
-\BOOKMARK [-1][-]{part.4}{Part IV Advanced topics}{}% 134
-\BOOKMARK [0][-]{chapter.16}{16 On measuring the fitness of a multiple-criteria ranking}{part.4}% 135
-\BOOKMARK [1][-]{section.16.1}{16.1 Listing movies from best star-rated to worst}{chapter.16}% 136
-\BOOKMARK [1][-]{section.16.2}{16.2 Kendall's ordinal correlation tau index}{chapter.16}% 137
-\BOOKMARK [1][-]{section.16.3}{16.3 Bipolar-valued relational equivalence}{chapter.16}% 138
-\BOOKMARK [1][-]{section.16.4}{16.4 Fitness of ranking heuristics}{chapter.16}% 139
-\BOOKMARK [1][-]{section.16.5}{16.5 Illustrating preference divergences}{chapter.16}% 140
-\BOOKMARK [1][-]{section.16.6}{16.6 Exploring the ``better rated'' and the ``as well as rated'' opinions}{chapter.16}% 141
-\BOOKMARK [1][-]{section*.61}{Chapter Bibliography}{chapter.16}% 142
-\BOOKMARK [1][-]{section*.62}{References}{chapter.16}% 143
-\BOOKMARK [0][-]{chapter.17}{17 On computing digraph kernels}{part.4}% 144
-\BOOKMARK [1][-]{section.17.1}{17.1 What is a graph kernel ?}{chapter.17}% 145
-\BOOKMARK [1][-]{section.17.2}{17.2 Initial and terminal kernels}{chapter.17}% 146
-\BOOKMARK [1][-]{section.17.3}{17.3 Kernels in lateralized digraphs}{chapter.17}% 147
-\BOOKMARK [1][-]{section.17.4}{17.4 Computing first and last choice recommendations}{chapter.17}% 148
-\BOOKMARK [1][-]{section.17.5}{17.5 Tractability of kernel computation}{chapter.17}% 149
-\BOOKMARK [1][-]{section.17.6}{17.6 Solving kernel equation systems}{chapter.17}% 150
-\BOOKMARK [1][-]{section*.64}{Notes}{chapter.17}% 151
-\BOOKMARK [1][-]{section*.66}{Chapter Bibliography}{chapter.17}% 152
-\BOOKMARK [1][-]{section*.67}{References}{chapter.17}% 153
-\BOOKMARK [0][-]{chapter.18}{18 On confident outrankings with uncertain criteria significance weights}{part.4}% 154
-\BOOKMARK [1][-]{section.18.1}{18.1 Modelling uncertain criteria significance weights}{chapter.18}% 155
-\BOOKMARK [1][-]{section.18.2}{18.2 Bipolar-valued likelihood of outranking situations}{chapter.18}% 156
-\BOOKMARK [1][-]{section.18.3}{18.3 Confidence level of outranking digraphs}{chapter.18}% 157
-\BOOKMARK [1][-]{section*.68}{Chapter Bibliography}{chapter.18}% 158
-\BOOKMARK [1][-]{section*.69}{References}{chapter.18}% 159
-\BOOKMARK [0][-]{chapter.19}{19 Robustness analysis of outranking digraphs}{part.4}% 160
-\BOOKMARK [1][-]{section.19.1}{19.1 Cardinal or ordinal criteria significance weights?}{chapter.19}% 161
-\BOOKMARK [1][-]{section.19.2}{19.2 Qualifying the stability of outranking situations}{chapter.19}% 162
-\BOOKMARK [1][-]{section.19.3}{19.3 Computing the stability denotation of outranking situations}{chapter.19}% 163
-\BOOKMARK [1][-]{section.19.4}{19.4 Robust bipolar-valued outranking digraphs}{chapter.19}% 164
-\BOOKMARK [1][-]{section.19.5}{19.5 Characterising unopposed multiobjective outranking situations}{chapter.19}% 165
-\BOOKMARK [1][-]{section.19.6}{19.6 Computing Pareto efficient multiobjective choices}{chapter.19}% 166
-\BOOKMARK [1][-]{section*.70}{Chapter Bibliography}{chapter.19}% 167
-\BOOKMARK [1][-]{section*.71}{References}{chapter.19}% 168
-\BOOKMARK [0][-]{chapter.20}{20 Tempering plurality tyranny effects in social choice}{part.4}% 169
-\BOOKMARK [1][-]{section.20.1}{20.1 Two-stage elections with multipartisan primary selection}{chapter.20}% 170
-\BOOKMARK [1][-]{section.20.2}{20.2 Bipolar approval-disapproval voting systems}{chapter.20}% 171
-\BOOKMARK [1][-]{section.20.3}{20.3 Pairwise comparison of approval-disapproval votes}{chapter.20}% 172
-\BOOKMARK [1][-]{section.20.4}{20.4 Three-valued evaluative voting systems}{chapter.20}% 173
-\BOOKMARK [1][-]{section.20.5}{20.5 Favouring multipartisan candidates}{chapter.20}% 174
-\BOOKMARK [1][-]{section*.73}{Chapter Bibliography}{chapter.20}% 175
-\BOOKMARK [1][-]{section*.74}{References}{chapter.20}% 176
-\BOOKMARK [-1][-]{part.5}{Part V Working with undirected graphs}{}% 177
-\BOOKMARK [0][-]{chapter.21}{21 Bipolar-valued undirected graphs}{part.5}% 178
-\BOOKMARK [1][-]{section.21.1}{21.1 Implementing simple graphs}{chapter.21}% 179
-\BOOKMARK [1][-]{section.21.2}{21.2 Q-coloring of a graph}{chapter.21}% 180
-\BOOKMARK [1][-]{section.21.3}{21.3 MIS and clique enumeration}{chapter.21}% 181
-\BOOKMARK [1][-]{section.21.4}{21.4 Line graphs and maximal matchings}{chapter.21}% 182
-\BOOKMARK [1][-]{section.21.5}{21.5 Grids and the Ising model}{chapter.21}% 183
-\BOOKMARK [1][-]{section.21.6}{21.6 Simulating Metropolis random walks}{chapter.21}% 184
-\BOOKMARK [1][-]{section.21.7}{21.7 Computing the non isomorphic MISs of the n-cycle graph}{chapter.21}% 185
-\BOOKMARK [1][-]{section*.76}{Chapter Bibliography}{chapter.21}% 186
-\BOOKMARK [1][-]{section*.77}{References}{chapter.21}% 187
-\BOOKMARK [0][-]{chapter.22}{22 On tree graphs and graph forests}{part.5}% 188
-\BOOKMARK [1][-]{section.22.1}{22.1 Generating random tree graphs}{chapter.22}% 189
-\BOOKMARK [1][-]{section.22.2}{22.2 Recognising tree graphs}{chapter.22}% 190
-\BOOKMARK [1][-]{section.22.3}{22.3 Spanning trees and forests}{chapter.22}% 191
-\BOOKMARK [1][-]{section.22.4}{22.4 Maximum determined spanning forests}{chapter.22}% 192
-\BOOKMARK [1][-]{section*.78}{Chapter Bibliography}{chapter.22}% 193
-\BOOKMARK [1][-]{section*.79}{References}{chapter.22}% 194
-\BOOKMARK [0][-]{chapter.23}{23 About split, comparability, interval and permutation graphs}{part.5}% 195
-\BOOKMARK [1][-]{section.23.1}{23.1 A 'multiply' perfect graph}{chapter.23}% 196
-\BOOKMARK [1][-]{section.23.2}{23.2 Who is the liar?}{chapter.23}% 197
-\BOOKMARK [1][-]{section.23.3}{23.3 Generating permutation graphs}{chapter.23}% 198
-\BOOKMARK [1][-]{section.23.4}{23.4 Recognising permutation graphs}{chapter.23}% 199
-\BOOKMARK [1][-]{section*.80}{Chapter Bibliography}{chapter.23}% 200
-\BOOKMARK [1][-]{section*.81}{References}{chapter.23}% 201
-\BOOKMARK [-1][-]{section*.82}{Appendix}{}% 202
-\BOOKMARK [0][-]{section*.84}{References}{section*.82}% 203
-\BOOKMARK [1][-]{section*.85}{List of listings}{section*.84}% 204
-\BOOKMARK [1][-]{section*.87}{List of figures}{section*.84}% 205
-\BOOKMARK [1][-]{section*.89}{List of tables}{section*.84}% 206
-\BOOKMARK [0][-]{appendix*.91}{Index}{section*.82}% 207
+\BOOKMARK [1][-]{section*.12}{References}{chapter.1}% 11
+\BOOKMARK [0][-]{chapter.2}{2 Working with bipolar-valued digraphs}{part.1}% 12
+\BOOKMARK [1][-]{section.2.1}{2.1 Random bipolar-valued digraphs}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.2}{2.2 Graphviz drawings}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.3}{2.3 Asymmetric and symmetric parts}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.4}{2.4 Border and inner parts}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.5}{2.5 Fusion by epistemic disjunction}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.6}{2.6 Dual, converse and codual digraphs}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.7}{2.7 Symmetric and transitive closures}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.8}{2.8 Strong components}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.9}{2.9 CSV storage}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.10}{2.10 Complete, empty and indeterminate digraphs}{chapter.2}% 22
+\BOOKMARK [1][-]{section*.13}{Notes}{chapter.2}% 23
+\BOOKMARK [1][-]{section*.15}{References}{chapter.2}% 24
+\BOOKMARK [0][-]{chapter.3}{3 Working with outranking digraphs}{part.1}% 25
+\BOOKMARK [1][-]{section.3.1}{3.1 The hybrid outranking digraph model}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.2}{3.2 The bipolar-valued outranking digraph}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.3}{3.3 Pairwise comparisons}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.4}{3.4 Recoding the characteristic valuation domain}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.5}{3.5 The strict outranking digraph}{chapter.3}% 30
+\BOOKMARK [1][-]{section*.16}{Notes}{chapter.3}% 31
+\BOOKMARK [1][-]{section*.18}{References}{chapter.3}% 32
+\BOOKMARK [-1][-]{part.2}{Part II Evaluation models and decision algorithms}{}% 33
+\BOOKMARK [0][-]{chapter.4}{4 Building a best choice recommendation}{part.2}% 34
+\BOOKMARK [1][-]{section.4.1}{4.1 What office-location to choose?}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.2}{4.2 The given performance tableau}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{4.3 Computing the outranking digraph}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.4}{4.4 Designing a best choice recommender system}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.5}{4.5 Computing the Rubis best choice recommendation}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.6}{4.6 Weakly ordering the outranking digraph}{chapter.4}% 40
+\BOOKMARK [1][-]{section*.19}{Notes}{chapter.4}% 41
+\BOOKMARK [1][-]{section*.21}{References}{chapter.4}% 42
+\BOOKMARK [0][-]{chapter.5}{5 How to create a new multiple-criteria performance tableau}{part.2}% 43
+\BOOKMARK [1][-]{section.5.1}{5.1 Editing a template file}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.2}{5.2 Editing the decision alternatives}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.3}{5.3 Editing the decision objectives}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.4}{5.4 Editing the family of performance criteria}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.5}{5.5 Editing the performance evaluations}{chapter.5}% 48
+\BOOKMARK [1][-]{section.5.6}{5.6 Inspecting the template outranking relation}{chapter.5}% 49
+\BOOKMARK [1][-]{section*.22}{References}{chapter.5}% 50
+\BOOKMARK [0][-]{chapter.6}{6 Generating random performance tableaux}{part.2}% 51
+\BOOKMARK [1][-]{section.6.1}{6.1 Introduction}{chapter.6}% 52
+\BOOKMARK [1][-]{section.6.2}{6.2 Random standard performance tableaux}{chapter.6}% 53
+\BOOKMARK [1][-]{section.6.3}{6.3 Random Cost-Benefit performance tableaux}{chapter.6}% 54
+\BOOKMARK [1][-]{section.6.4}{6.4 Random three objectives performance tableaux}{chapter.6}% 55
+\BOOKMARK [1][-]{section.6.5}{6.5 Random academic performance tableaux}{chapter.6}% 56
+\BOOKMARK [1][-]{section*.23}{References}{chapter.6}% 57
+\BOOKMARK [0][-]{chapter.7}{7 Who wins the election ?}{part.2}% 58
+\BOOKMARK [1][-]{section.7.1}{7.1 Linear voting profiles}{chapter.7}% 59
+\BOOKMARK [1][-]{section.7.2}{7.2 Computing the winner}{chapter.7}% 60
+\BOOKMARK [1][-]{section.7.3}{7.3 The majority margins digraph}{chapter.7}% 61
+\BOOKMARK [1][-]{section.7.4}{7.4 Cyclic social preferences}{chapter.7}% 62
+\BOOKMARK [1][-]{section.7.5}{7.5 On generating realistic random linear voting profiles}{chapter.7}% 63
+\BOOKMARK [1][-]{section*.24}{References}{chapter.7}% 64
+\BOOKMARK [0][-]{chapter.8}{8 Ranking with multiple incommensurable criteria}{part.2}% 65
+\BOOKMARK [1][-]{section.8.1}{8.1 The ranking problem}{chapter.8}% 66
+\BOOKMARK [1][-]{section.8.2}{8.2 The Copeland ranking}{chapter.8}% 67
+\BOOKMARK [1][-]{section.8.3}{8.3 The NetFlows ranking}{chapter.8}% 68
+\BOOKMARK [1][-]{section.8.4}{8.4 Kemeny rankings}{chapter.8}% 69
+\BOOKMARK [1][-]{section.8.5}{8.5 Slater rankings}{chapter.8}% 70
+\BOOKMARK [1][-]{section.8.6}{8.6 The Kohler ranking-by-choosing rule}{chapter.8}% 71
+\BOOKMARK [1][-]{section.8.7}{8.7 The RankedPairs ranking rule}{chapter.8}% 72
+\BOOKMARK [1][-]{section*.25}{References}{chapter.8}% 73
+\BOOKMARK [0][-]{chapter.9}{9 Rating by sorting into relative performance quantiles}{part.2}% 74
+\BOOKMARK [1][-]{section.9.1}{9.1 Quantile sorting on a single performance criterion}{chapter.9}% 75
+\BOOKMARK [1][-]{section.9.2}{9.2 Sorting into quantiles with multiple performance criteria}{chapter.9}% 76
+\BOOKMARK [1][-]{section.9.3}{9.3 The sparse pre-ranked outranking digraph model}{chapter.9}% 77
+\BOOKMARK [1][-]{section.9.4}{9.4 Ranking pre-ranked sparse outranking digraphs}{chapter.9}% 78
+\BOOKMARK [1][-]{section*.26}{References}{chapter.9}% 79
+\BOOKMARK [0][-]{chapter.10}{10 Rating by ranking with learned performance quantile norms}{part.2}% 80
+\BOOKMARK [1][-]{section.10.1}{10.1 The absolute rating problem}{chapter.10}% 81
+\BOOKMARK [1][-]{section.10.2}{10.2 Incremental learning of historical performance quantiles}{chapter.10}% 82
+\BOOKMARK [1][-]{section.10.3}{10.3 Rating-by-ranking new performances with quantile norms}{chapter.10}% 83
+\BOOKMARK [1][-]{section*.27}{References}{chapter.10}% 84
+\BOOKMARK [0][-]{chapter.11}{11 HPC ranking of big performance tableaux}{part.2}% 85
+\BOOKMARK [1][-]{section.11.1}{11.1 C-compiled Python modules}{chapter.11}% 86
+\BOOKMARK [1][-]{section.11.2}{11.2 Big Data performance tableaux}{chapter.11}% 87
+\BOOKMARK [1][-]{section.11.3}{11.3 C-implemented integer-valued outranking digraphs}{chapter.11}% 88
+\BOOKMARK [1][-]{section.11.4}{11.4 The sparse implementation of big outranking digraphs}{chapter.11}% 89
+\BOOKMARK [1][-]{section.11.5}{11.5 Quantiles ranking of big performance tableaux}{chapter.11}% 90
+\BOOKMARK [1][-]{section.11.6}{11.6 HPC quantiles ranking records}{chapter.11}% 91
+\BOOKMARK [1][-]{section*.28}{References}{chapter.11}% 92
+\BOOKMARK [-1][-]{part.3}{Part III Evaluation and decision case studies}{}% 93
+\BOOKMARK [0][-]{chapter.12}{12 Alice's best choice: A selection case study}{part.3}% 94
+\BOOKMARK [1][-]{section.12.1}{12.1 The decision problem}{chapter.12}% 95
+\BOOKMARK [1][-]{section.12.2}{12.2 The performance tableau}{chapter.12}% 96
+\BOOKMARK [1][-]{section.12.3}{12.3 Building a best choice recommendation}{chapter.12}% 97
+\BOOKMARK [1][-]{section.12.4}{12.4 Robustness analysis}{chapter.12}% 98
+\BOOKMARK [1][-]{section*.29}{References}{chapter.12}% 99
+\BOOKMARK [0][-]{chapter.13}{13 The best academic Computer Science Depts: A ranking case study}{part.3}% 100
+\BOOKMARK [1][-]{section.13.1}{13.1 The THE performance tableau}{chapter.13}% 101
+\BOOKMARK [1][-]{section.13.2}{13.2 Ranking with multiple criteria of ordinal significance}{chapter.13}% 102
+\BOOKMARK [1][-]{section.13.3}{13.3 How to judge the quality of a ranking result?}{chapter.13}% 103
+\BOOKMARK [1][-]{section*.30}{References}{chapter.13}% 104
+\BOOKMARK [0][-]{chapter.14}{14 The best students, where do they study? A rating case study}{part.3}% 105
+\BOOKMARK [1][-]{section.14.1}{14.1 The rating problem}{chapter.14}% 106
+\BOOKMARK [1][-]{section.14.2}{14.2 The 2004 performance quintiles}{chapter.14}% 107
+\BOOKMARK [1][-]{section.14.3}{14.3 Rating-by-ranking with lower-closed quintile limits}{chapter.14}% 108
+\BOOKMARK [1][-]{section.14.4}{14.4 Rating by quintiles sorting}{chapter.14}% 109
+\BOOKMARK [1][-]{section*.31}{References}{chapter.14}% 110
+\BOOKMARK [0][-]{chapter.15}{15 Exercises}{part.3}% 111
+\BOOKMARK [1][-]{section.15.1}{15.1 Who will receive the best student award? \(\247\)}{chapter.15}% 112
+\BOOKMARK [1][-]{section.15.2}{15.2 How to fairly rank movies? \(\247\)}{chapter.15}% 113
+\BOOKMARK [1][-]{section.15.3}{15.3 What is your best choice recommendation? \(\247\247\)}{chapter.15}% 114
+\BOOKMARK [1][-]{section.15.4}{15.4 Planning the next holiday activity \(\247\247\)}{chapter.15}% 115
+\BOOKMARK [1][-]{section.15.5}{15.5 What is the best public policy? \(\247\247\)}{chapter.15}% 116
+\BOOKMARK [1][-]{section.15.6}{15.6 A fair diploma validation decision \(\247\247\247\)}{chapter.15}% 117
+\BOOKMARK [1][-]{section*.45}{References}{chapter.15}% 118
+\BOOKMARK [-1][-]{part.4}{Part IV Advanced topics}{}% 119
+\BOOKMARK [0][-]{chapter.16}{16 On measuring the fitness of a multiple-criteria ranking}{part.4}% 120
+\BOOKMARK [1][-]{section.16.1}{16.1 Listing movies from best star-rated to worst}{chapter.16}% 121
+\BOOKMARK [1][-]{section.16.2}{16.2 Kendall's ordinal correlation tau index}{chapter.16}% 122
+\BOOKMARK [1][-]{section.16.3}{16.3 Bipolar-valued relational equivalence}{chapter.16}% 123
+\BOOKMARK [1][-]{section.16.4}{16.4 Fitness of ranking heuristics}{chapter.16}% 124
+\BOOKMARK [1][-]{section.16.5}{16.5 Illustrating preference divergences}{chapter.16}% 125
+\BOOKMARK [1][-]{section.16.6}{16.6 Exploring the ``better rated'' and the ``as well as rated'' opinions}{chapter.16}% 126
+\BOOKMARK [1][-]{section*.46}{References}{chapter.16}% 127
+\BOOKMARK [0][-]{chapter.17}{17 On computing digraph kernels}{part.4}% 128
+\BOOKMARK [1][-]{section.17.1}{17.1 What is a graph kernel ?}{chapter.17}% 129
+\BOOKMARK [1][-]{section.17.2}{17.2 Initial and terminal kernels}{chapter.17}% 130
+\BOOKMARK [1][-]{section.17.3}{17.3 Kernels in lateralized digraphs}{chapter.17}% 131
+\BOOKMARK [1][-]{section.17.4}{17.4 Computing first and last choice recommendations}{chapter.17}% 132
+\BOOKMARK [1][-]{section.17.5}{17.5 Tractability of kernel computation}{chapter.17}% 133
+\BOOKMARK [1][-]{section.17.6}{17.6 Solving kernel equation systems}{chapter.17}% 134
+\BOOKMARK [1][-]{section*.48}{Notes}{chapter.17}% 135
+\BOOKMARK [1][-]{section*.50}{References}{chapter.17}% 136
+\BOOKMARK [0][-]{chapter.18}{18 On confident outrankings with uncertain criteria significance weights}{part.4}% 137
+\BOOKMARK [1][-]{section.18.1}{18.1 Modelling uncertain criteria significance weights}{chapter.18}% 138
+\BOOKMARK [1][-]{section.18.2}{18.2 Bipolar-valued likelihood of outranking situations}{chapter.18}% 139
+\BOOKMARK [1][-]{section.18.3}{18.3 Confidence level of outranking digraphs}{chapter.18}% 140
+\BOOKMARK [1][-]{section*.51}{References}{chapter.18}% 141
+\BOOKMARK [0][-]{chapter.19}{19 Robustness analysis of outranking digraphs}{part.4}% 142
+\BOOKMARK [1][-]{section.19.1}{19.1 Cardinal or ordinal criteria significance weights?}{chapter.19}% 143
+\BOOKMARK [1][-]{section.19.2}{19.2 Qualifying the stability of outranking situations}{chapter.19}% 144
+\BOOKMARK [1][-]{section.19.3}{19.3 Computing the stability denotation of outranking situations}{chapter.19}% 145
+\BOOKMARK [1][-]{section.19.4}{19.4 Robust bipolar-valued outranking digraphs}{chapter.19}% 146
+\BOOKMARK [1][-]{section.19.5}{19.5 Characterising unopposed multiobjective outranking situations}{chapter.19}% 147
+\BOOKMARK [1][-]{section.19.6}{19.6 Computing Pareto efficient multiobjective choices}{chapter.19}% 148
+\BOOKMARK [1][-]{section*.52}{References}{chapter.19}% 149
+\BOOKMARK [0][-]{chapter.20}{20 Tempering plurality tyranny effects in social choice}{part.4}% 150
+\BOOKMARK [1][-]{section.20.1}{20.1 Two-stage elections with multipartisan primary selection}{chapter.20}% 151
+\BOOKMARK [1][-]{section.20.2}{20.2 Bipolar approval-disapproval voting systems}{chapter.20}% 152
+\BOOKMARK [1][-]{section.20.3}{20.3 Pairwise comparison of approval-disapproval votes}{chapter.20}% 153
+\BOOKMARK [1][-]{section.20.4}{20.4 Three-valued evaluative voting systems}{chapter.20}% 154
+\BOOKMARK [1][-]{section.20.5}{20.5 Favouring multipartisan candidates}{chapter.20}% 155
+\BOOKMARK [1][-]{section*.54}{References}{chapter.20}% 156
+\BOOKMARK [-1][-]{part.5}{Part V Working with undirected graphs}{}% 157
+\BOOKMARK [0][-]{chapter.21}{21 Bipolar-valued undirected graphs}{part.5}% 158
+\BOOKMARK [1][-]{section.21.1}{21.1 Implementing simple graphs}{chapter.21}% 159
+\BOOKMARK [1][-]{section.21.2}{21.2 Q-coloring of a graph}{chapter.21}% 160
+\BOOKMARK [1][-]{section.21.3}{21.3 MIS and clique enumeration}{chapter.21}% 161
+\BOOKMARK [1][-]{section.21.4}{21.4 Line graphs and maximal matchings}{chapter.21}% 162
+\BOOKMARK [1][-]{section.21.5}{21.5 Grids and the Ising model}{chapter.21}% 163
+\BOOKMARK [1][-]{section.21.6}{21.6 Simulating Metropolis random walks}{chapter.21}% 164
+\BOOKMARK [1][-]{section.21.7}{21.7 Computing the non isomorphic MISs of the n-cycle graph}{chapter.21}% 165
+\BOOKMARK [1][-]{section*.56}{References}{chapter.21}% 166
+\BOOKMARK [0][-]{chapter.22}{22 On tree graphs and graph forests}{part.5}% 167
+\BOOKMARK [1][-]{section.22.1}{22.1 Generating random tree graphs}{chapter.22}% 168
+\BOOKMARK [1][-]{section.22.2}{22.2 Recognising tree graphs}{chapter.22}% 169
+\BOOKMARK [1][-]{section.22.3}{22.3 Spanning trees and forests}{chapter.22}% 170
+\BOOKMARK [1][-]{section.22.4}{22.4 Maximum determined spanning forests}{chapter.22}% 171
+\BOOKMARK [1][-]{section*.57}{References}{chapter.22}% 172
+\BOOKMARK [0][-]{chapter.23}{23 About split, comparability, interval and permutation graphs}{part.5}% 173
+\BOOKMARK [1][-]{section.23.1}{23.1 A 'multiply' perfect graph}{chapter.23}% 174
+\BOOKMARK [1][-]{section.23.2}{23.2 Who is the liar?}{chapter.23}% 175
+\BOOKMARK [1][-]{section.23.3}{23.3 Generating permutation graphs}{chapter.23}% 176
+\BOOKMARK [1][-]{section.23.4}{23.4 Recognising permutation graphs}{chapter.23}% 177
+\BOOKMARK [1][-]{section*.58}{References}{chapter.23}% 178
+\BOOKMARK [-1][-]{section*.59}{Appendix}{}% 179
+\BOOKMARK [0][-]{section*.61}{References}{section*.59}% 180
+\BOOKMARK [1][-]{section*.62}{List of listings}{section*.61}% 181
+\BOOKMARK [1][-]{section*.64}{List of figures}{section*.61}% 182
+\BOOKMARK [1][-]{section*.66}{List of tables}{section*.61}% 183
+\BOOKMARK [0][-]{appendix*.68}{Index}{section*.59}% 184
