@@ -29,7 +29,7 @@ In Listing~\vref{list:2.1}, we generate a uniformly random $[-1.0; +1.0]$-valued
 
 With the \texttt{save()} \index{save@\texttt{save()}} method (see List.~\vref{list:2.1} Line~\ref{line:2.1.3}) we keep for future use a backup version of \texttt{rdg} which is saved into a file named \texttt{tutRandValDi\-graph.py} in the current working directory. The genuine \texttt{Di\-graph} class constructor can reload the \texttt{rdg} object from the stored file (Line~\ref{line:2.1.5}). One can easily inspect the content of a \texttt{Digraph} object with its name \texttt{rdg} (Line~\ref{line:2.1.6}). The digraph size 22 indicates the number of positively valued arcs (Line~\ref{line:2.1.11}). The valuation domain is uniformly distributed in the interval $[-1.0; 1.0]$, the mean absolute arc valuation being $(0.7524 \times 2)\, -\, 1.0 \;=\; 0.5048$ (Line~\ref{line:2.1.13}). 
 
-As mentioned in the previous Chapter~\ref{sec:1}, all objects of \texttt{Digraph} type contain at least the list of attributes shown here in Lines 14-16:
+As mentioned in the previous Chap.~\ref{sec:1}, all objects of \texttt{Digraph} type contain at least the list of attributes shown here in Lines 14-16:
 \begin{itemize}[nosep]
 \item A \texttt{name} (string) and a dictionary of \texttt{actions} (digraph nodes),
 \item An \texttt{order} (integer) attribute containing the number of nodes,
@@ -78,7 +78,7 @@ Positive characteristic values indicate the presence of an arc whereas negative 
 \section{Graphviz drawings}
 \label{sec:2.2}
 
-An even better insight into the \texttt{Digraph} object \texttt{rdg} is given by looking in Figure~\vref{fig:2.1} at its \href{https://graphviz.org/}{graphviz} drawing \citep{graphviz}\footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}\index{graphviz}.
+An even better insight into the \texttt{Digraph} object \texttt{rdg} is given by looking in Fig.~\vref{fig:2.1} at its \href{https://graphviz.org/}{graphviz} drawing \citep{graphviz}\footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}\index{graphviz}.
 \begin{lstlisting}
 >>> rdg.exportGraphViz('tutRandValDigraph')
  *---- exporting a dot file for GraphViz tools ------*
@@ -89,7 +89,7 @@ An even better insight into the \texttt{Digraph} object \texttt{rdg} is given by
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/2-1-tutRandValDigraph.pdf}
-\caption[The tutorial random valuation digraph]{\emph{The tutorial random valuation digraph}. Double links are drawn in bold black with an arrowhead at each end, whereas single asymmetric links are drawn in black with an arrowhead showing the direction of the link. Notice the undetermined relational situation ($r(\mathtt{6}\,S\,\mathtt{}2) = 0.00$) observed between nodes \texttt{6} and \texttt{2}. The corresponding link is marked in grey with an open arrowhead in the drawing}
+\caption[The tutorial random valuation digraph]{\emph{The tutorial random valuation digraph}\\ Double links are drawn in bold black with an arrowhead at each end, whereas single asymmetric links are drawn in black with an arrowhead showing the direction of the link. Notice the undetermined relational situation ($r(\mathtt{6}\,S\,\mathtt{}2) = 0.00$) observed between nodes \texttt{6} and \texttt{2}. The corresponding link is marked in grey with an open arrowhead in the drawing.}
 \label{fig:2.1}       % Give a unique label
 \end{figure}
   
@@ -153,7 +153,7 @@ We can also extract the \emph{border} --the part of a digraph induced by the uni
 \caption{\emph{Border} and \emph{inner} part of a linear order oriented by \emph{terminal} and \emph{initial} kernels}
 \label{fig:2.3}       % Give a unique label
 \end{figure}
-Figure~\vref{fig:2.3} shows the border and inner parts of the linear ordering obtained from the tutorial random valuation digraph \texttt{rdg}  with the \NetFlows ranking rule  (see Sec.~\ref{sec:8.3}).  
+Figure~\vref{fig:2.3} shows the border and inner parts of the linear ordering obtained from the tutorial random valuation digraph \texttt{rdg}  with the \NetFlows ranking rule  (see Sect.~\ref{sec:8.3}).  
 \begin{lstlisting}[caption={Border and inner part of a linear order},label=list:2.5]
 >>> from digraphs import GraphBorder, GraphInner
 >>> from linearOrders import NetFlowsOrder
@@ -166,7 +166,7 @@ Figure~\vref{fig:2.3} shows the border and inner parts of the linear ordering ob
 >>> inf.exportGraphViz(lastChoice=['6'],firstChoice=['7']) §\label{line:2.5.9}§
 \end{lstlisting}
 
-The drawings in Figure~\vref{fig:2.3} are oriented with the terminal node \texttt{6} (\texttt{lastChoice} parameter) and initial node \texttt{7} (\texttt{firstChoice} parameter) (see List.~\vref{list:2.5} Lines~\ref{line:2.5.7} and ~\ref{line:2.5.9}).
+The drawings in Fig.~\vref{fig:2.3} are oriented with the terminal node \texttt{6} (\texttt{lastChoice} parameter) and initial node \texttt{7} (\texttt{firstChoice} parameter) (see List.~\vref{list:2.5} Lines~\ref{line:2.5.7} and ~\ref{line:2.5.9}).
 
 The class constructors of the partial digraphs \texttt{bnf} and \texttt{inf}  (see Lines 3 and 6) set to the \emph{indeterminate} characteristic value all links not in the \emph{border}, respectively \emph{not} in the \emph{inner} part (see Fig.~\vref{fig:2.3}). Being much \emph{denser} than a linear order, the actual inner part of our tutorial random valuation digraph \texttt{rdg} is reduced to a single arc between nodes \texttt{3} and \texttt{4} (see Fig.~\vref{fig:2.4}). Indeed, a complete digraph on the limit has no inner part (privacy!) at all, whereas empty and indeterminate digraphs admit both, an empty border and an empty inner part.
 \begin{figure}[h]
@@ -280,7 +280,7 @@ Computing the \emph{dual}, respectively the \emph{converse} of a digraph, may al
 \section{Symmetric and transitive closures}
 \label{sec:2.7}
 
-Symmetric and transitive closures, by default in-site methods, are also available (see Fig.~\vref{fig:2.5})\index{closeSymmetric@\texttt{closeSymmetric()}}\index{closeTransitive@\texttt{closeTransitive()}}. Note that it is a good idea, before going ahead with these in-site operations, that irreversibly modify the original \texttt{rdg} object, to previously make a backup version of \texttt{rdg}. The simplest storage method, always provided by the generic \texttt{Digraph.save()} method, writes out in a named file the Python content of the \texttt{Digraph} object in string representation (see Sec.~\vref{sec:1.3}).
+Symmetric and transitive closures, by default in-site methods, are also available (see Fig.~\vref{fig:2.5})\index{closeSymmetric@\texttt{closeSymmetric()}}\index{closeTransitive@\texttt{closeTransitive()}}. Note that it is a good idea, before going ahead with these in-site operations, that irreversibly modify the original \texttt{rdg} object, to previously make a backup version of \texttt{rdg}. The simplest storage method, always provided by the generic \texttt{Digraph.save()} method, writes out in a named file the Python content of the \texttt{Digraph} object in string representation (see Sect.~\vref{sec:1.3}).
 \begin{lstlisting}[caption={Symmeric and transitive closures},label=list:2.9]
 >>> rdg.save('tutRandValDigraph')
 >>> rdg.closeSymmetric(InSite=True) §\label{line:2.9.2}§
@@ -368,7 +368,7 @@ It is as well possible with the \texttt{showHTMLRelationTable()} method\index{sh
  \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/2-6-htmlTutorialDigraph.png}
-\caption[The valued relation table shown in a browser window]{\emph{The valued relation table shown in a browser window}. Positive arcs are shown in green and negative arcs in red. Indeterminate --zero-valued-- arcs, like the reflexive diagonal ones or the arc between node \texttt{6} and node \texttt{2}, are shown in grey}
+\caption[The valued relation table shown in a browser window]{\emph{The valued relation table shown in a browser window}\\ Positive arcs are shown in green and negative arcs in red. Indeterminate --zero-valued-- arcs, like the reflexive diagonal ones or the arc between node \texttt{6} and node \texttt{2}, are shown in grey.}
 \label{fig:2.6}       % Give a unique label
 \end{figure}
  
@@ -448,11 +448,11 @@ It was \emph{Denis Bouyssou} \index{Bouyssou@\emph{D. Bouyssou}} who first sugge
 
 It is only in 2004, when we succeeded in assessing the stability of the outranking digraph when solely ordinal criteria significance weights are given, that it became clear and evident for us that the characteristic valuation domain had to be shifted to a $[-1.0;+1.0]$-valued domain (see Chap.~\ref{sec:19} and \citet{BIS-2004a}). In this bipolar valuation, the $50\%$ majority threshold corresponds now to the median $0.0$ value, characterising with the correct zero value an epistemic indeterminateness --no knowledge-- situation. Furthermore, identifying truth and falseness directly by the sign of the characteristic value revealed itself to be very efficient not only from a computational point of view, but also from scientific and semiotic perspectives. A positive (resp. negative) characteristic value now attest a logically valid (resp. invalid) statement and a negative affirmation now means a positive refutation and vice versa. Furthermore, the median zero value gives way to efficiently handling partial objects --like the border or the assymetric part of a digraph-- and, even more important from a practical decision making point of view, any missing data.
 
-The bipolar $[-1.0;+1.0]$-valued characteristic domain opened so the way to important new operations and concepts, like the disjunctive epistemic fusion operation seen in Section~\vref{sec:2.5} that confers the outranking digraph a logically sound and epistemically correct definition \citep{BIS-2013}. \Kendall 's ordinal correlation index could be extended to a bipolar-valued relational equivalence index between digraphs (see Chap.~\ref{sec:16} and \citealp{BIS-2012a}). Making usage of the bipolar-valued Gaussian error function naturally led to defining a bipolar-valued likelihood function, where a positive, resp. negative, value gives the likelihood of an affirmation, resp. a refutation (see Chap.~\ref{sec:18} and \citealp{BIS-2014}).      
+The bipolar $[-1.0;+1.0]$-valued characteristic domain opened so the way to important new operations and concepts, like the disjunctive epistemic fusion operation seen in Sect.~\vref{sec:2.5} that confers the outranking digraph a logically sound and epistemically correct definition \citep{BIS-2013}. \Kendall 's ordinal correlation index could be extended to a bipolar-valued relational equivalence index between digraphs (see Chap.~\ref{sec:16} and \citealp{BIS-2012a}). Making usage of the bipolar-valued Gaussian error function naturally led to defining a bipolar-valued likelihood function, where a positive, resp. negative, value gives the likelihood of an affirmation, resp. a refutation (see Chap.~\ref{sec:18} and \citealp{BIS-2014}).      
 
 %\vspace{1cm}
 \vspace{\baselineskip}
-In the following Chapter~\ref{sec:3}  we introduce the main formal object of this book, namely \emph{bipolar-valued outranking} digraphs.
+In the following Chap.~\ref{sec:3}  we introduce the main formal object of this book, namely \emph{bipolar-valued outranking} digraphs.
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

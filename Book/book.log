@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.6)  27 SEP 2021 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.6)  27 SEP 2021 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,7 +6,7 @@ entering extended mode
 (./book.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (./svmono.cls
-Document Class: svmono 2009/12/17 v5.5 
+Document Class: svmono 2018/06/25 v5.6 
 Springer Verlag global LaTeX document class for monographs
 
 Class Springer-SVMono Warning: Specified option or subpackage "english" 
@@ -39,17 +39,17 @@ File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \mottowidth=\dimen138
 \svitemindent=\dimen139
 \verbatimindent=\dimen140
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 832.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 833.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 834.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 835.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 836.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 837.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 838.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 839.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 840.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 841.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 842.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 839.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 840.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 841.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 842.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 843.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 844.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 845.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 846.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 847.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 848.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 849.
 \tocchpnum=\dimen141
 \tocsecnum=\dimen142
 \tocsectotal=\dimen143
@@ -84,7 +84,91 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 842.
 \figcapgap=\dimen155
 \tabcapgap=\dimen156
 \c@merk=\count192
-LaTeX Info: Redefining \abstract on input line 1894.
+LaTeX Info: Redefining \abstract on input line 1902.
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/x11nam.def
+File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\theorem@style=\toks14
+\theorem@@style=\toks15
+\theorembodyfont=\toks16
+\theoremnumbering=\toks17
+\theorempreskipamount=\skip49
+\theorempostskipamount=\skip50
+\theoremframepreskipamount=\skip51
+\theoremframepostskipamount=\skip52
+\theoreminframepreskipamount=\skip53
+\theoreminframepostskipamount=\skip54
+\theorem@preskip=\toks18
+\theorem@postskip=\toks19
+\theorem@framepreskip=\toks20
+\theorem@framepostskip=\toks21
+\theorem@inframepreskip=\toks22
+\theorem@inframepostskip=\toks23
+\theoremindent=\dimen157
+\theorem@indent=\dimen158
+\theoremrightindent=\dimen159
+\theorem@rightindent=\dimen160
+\theoremheaderfont=\toks24
+\theoremseparator=\toks25
+\theoremprework=\toks26
+\theorempostwork=\toks27
+\theoremsymbol=\toks28
+\qedsymbol=\toks29
+\theoremkeyword=\toks30
+\qedsymbol=\toks31
+\thm@topsep=\skip55
+\thm@topsepadd=\skip56
+Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
+\c@endNonectr=\count193
+\c@currNonectr=\count194
+\mysavskip=\skip57
+Package ntheorem Info: Option `thref' loaded on input line 1175.
+\mysavskip=\skip58
+)
+\c@currproofctr=\count195
+\c@endproofctr=\count196
+\c@proof=\count197
+\minitoc=\write3
+\c@minitocdepth=\count198
+\c@@inst=\count199
+\c@@auth=\count266
+\c@auco=\count267
+\instindent=\dimen161
+\authrun=\box46
+\authorrunning=\toks32
+\tocauthor=\toks33
+\titrun=\box47
+\titlerunning=\toks34
+\toctitle=\toks35
+\c@contribution=\count268
 )
 (/usr/share/texlive/texmf-dist/tex/latex/type1cm/type1cm.sty
 Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
@@ -98,7 +182,7 @@ Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks36
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
@@ -110,38 +194,33 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen157
-\Gin@req@width=\dimen158
+)
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count193
-\mult@box=\box46
-\multicol@leftmargin=\dimen159
-\c@unbalance=\count194
-\c@collectmore=\count195
-\doublecol@number=\count196
-\multicoltolerance=\count197
-\multicolpretolerance=\count198
-\full@width=\dimen160
-\page@free=\dimen161
-\premulticols=\dimen162
-\postmulticols=\dimen163
-\multicolsep=\skip49
-\multicolbaselineskip=\skip50
-\partial@page=\box47
-\last@line=\box48
-\maxbalancingoverflow=\dimen164
-\mult@rightbox=\box49
-\mult@grightbox=\box50
-\mult@gfirstbox=\box51
-\mult@firstbox=\box52
-\@tempa=\box53
-\@tempa=\box54
+\c@tracingmulticols=\count269
+\mult@box=\box48
+\multicol@leftmargin=\dimen164
+\c@unbalance=\count270
+\c@collectmore=\count271
+\doublecol@number=\count272
+\multicoltolerance=\count273
+\multicolpretolerance=\count274
+\full@width=\dimen165
+\page@free=\dimen166
+\premulticols=\dimen167
+\postmulticols=\dimen168
+\multicolsep=\skip59
+\multicolbaselineskip=\skip60
+\partial@page=\box49
+\last@line=\box50
+\maxbalancingoverflow=\dimen169
+\mult@rightbox=\box51
+\mult@grightbox=\box52
+\mult@gfirstbox=\box53
+\mult@firstbox=\box54
 \@tempa=\box55
 \@tempa=\box56
 \@tempa=\box57
@@ -177,21 +256,23 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box87
 \@tempa=\box88
 \@tempa=\box89
-\c@minrows=\count199
-\c@columnbadness=\count266
-\c@finalcolumnbadness=\count267
-\last@try=\dimen165
-\multicolovershoot=\dimen166
-\multicolundershoot=\dimen167
-\mult@nat@firstbox=\box90
-\colbreak@box=\box91
-\mc@col@check@num=\count268
+\@tempa=\box90
+\@tempa=\box91
+\c@minrows=\count275
+\c@columnbadness=\count276
+\c@finalcolumnbadness=\count277
+\last@try=\dimen170
+\multicolovershoot=\dimen171
+\multicolundershoot=\dimen172
+\mult@nat@firstbox=\box92
+\colbreak@box=\box93
+\mc@col@check@num=\count278
 )
 (/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks15
-\footnotemargin=\dimen168
-\c@pp@next@reset=\count269
+\FN@temptoken=\toks37
+\footnotemargin=\dimen173
+\c@pp@next@reset=\count279
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -245,7 +326,7 @@ Package: courier 2005/04/12 PSNFSS-v9.2a (WaS)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip51
+\@mathmargin=\skip61
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -253,51 +334,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen169
+\@emptytoks=\toks38
+\ex@=\dimen174
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen170
+\pmbraise@=\dimen175
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count270
+\inf@bad=\count280
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count271
-\leftroot@=\count272
+\uproot@=\count281
+\leftroot@=\count282
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count273
-\DOTSCASE@=\count274
+\classnum@=\count283
+\DOTSCASE@=\count284
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box92
-\strutbox@=\box93
-\big@size=\dimen171
+\Mathstrutbox@=\box94
+\strutbox@=\box95
+\big@size=\dimen176
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count275
-\c@MaxMatrixCols=\count276
+\macc@depth=\count285
+\c@MaxMatrixCols=\count286
 \dotsspace@=\muskip16
-\c@parentequation=\count277
-\dspbrk@lvl=\count278
-\tag@help=\toks17
-\row@=\count279
-\column@=\count280
-\maxfields@=\count281
-\andhelp@=\toks18
-\eqnshift@=\dimen172
-\alignsep@=\dimen173
-\tagshift@=\dimen174
-\tagwidth@=\dimen175
-\totwidth@=\dimen176
-\lineht@=\dimen177
-\@envbody=\toks19
-\multlinegap=\skip52
-\multlinetaggap=\skip53
-\mathdisplay@stack=\toks20
+\c@parentequation=\count287
+\dspbrk@lvl=\count288
+\tag@help=\toks39
+\row@=\count289
+\column@=\count290
+\maxfields@=\count291
+\andhelp@=\toks40
+\eqnshift@=\dimen177
+\alignsep@=\dimen178
+\tagshift@=\dimen179
+\tagwidth@=\dimen180
+\totwidth@=\dimen181
+\lineht@=\dimen182
+\@envbody=\toks41
+\multlinegap=\skip62
+\multlinetaggap=\skip63
+\mathdisplay@stack=\toks42
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
@@ -328,54 +409,54 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip54
-\bibsep=\skip55
+\bibhang=\skip64
+\bibsep=\skip65
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count282
+\c@NAT@ctr=\count292
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cite/chapterbib.sty
-\c@inputfile=\count283
+\c@inputfile=\count293
 Package: chapterbib 2010/09/18  v 1.17
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip56
-\enit@outerparindent=\dimen178
-\enit@toks=\toks21
-\enit@inbox=\box94
-\enit@count@id=\count284
-\enitdp@description=\count285
+\labelindent=\skip66
+\enit@outerparindent=\dimen183
+\enit@toks=\toks43
+\enit@inbox=\box96
+\enit@count@id=\count294
+\enitdp@description=\count295
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box95
+\@eurobox=\box97
 )
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count286
-\lst@gtempboxa=\box96
-\lst@token=\toks22
-\lst@length=\count287
-\lst@currlwidth=\dimen179
-\lst@column=\count288
-\lst@pos=\count289
-\lst@lostspace=\dimen180
-\lst@width=\dimen181
-\lst@newlines=\count290
-\lst@lineno=\count291
-\lst@maxwidth=\dimen182
+\lst@mode=\count296
+\lst@gtempboxa=\box98
+\lst@token=\toks44
+\lst@length=\count297
+\lst@currlwidth=\dimen184
+\lst@column=\count298
+\lst@pos=\count299
+\lst@lostspace=\dimen185
+\lst@width=\dimen186
+\lst@newlines=\count300
+\lst@lineno=\count301
+\lst@maxwidth=\dimen187
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count292
-\lst@skipnumbers=\count293
-\lst@framebox=\box97
+\c@lstnumber=\count302
+\lst@skipnumbers=\count303
+\lst@framebox=\box99
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/09/10 1.8c listings configuration
@@ -388,69 +469,58 @@ nment
 
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count294
-\float@exts=\toks23
-\float@box=\box98
-\@float@everytoks=\toks24
-\@floatcapt=\box99
+\c@float@type=\count304
+\float@exts=\toks45
+\float@box=\box100
+\@float@everytoks=\toks46
+\@floatcapt=\box101
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\@float@every@algorithm=\toks25
-\c@algorithm=\count295
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 147.
+\@float@every@algorithm=\toks47
+\c@algorithm=\count305
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/varioref.sty
 Package: varioref 2020/01/23 v1.6c package for extended references (FMi)
-\c@vrcnt=\count296
+\c@vrcnt=\count306
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
-\cftparskip=\skip57
-\cftbeforetoctitleskip=\skip58
-\cftaftertoctitleskip=\skip59
-\cftbeforepartskip=\skip60
-\cftpartnumwidth=\skip61
-\cftpartindent=\skip62
-\cftbeforechapskip=\skip63
-\cftchapindent=\skip64
-\cftchapnumwidth=\skip65
-\cftbeforesecskip=\skip66
-\cftsecindent=\skip67
-\cftsecnumwidth=\skip68
-\cftbeforesubsecskip=\skip69
-\cftsubsecindent=\skip70
-\cftsubsecnumwidth=\skip71
-\cftbeforesubsubsecskip=\skip72
-\cftsubsubsecindent=\skip73
-\cftsubsubsecnumwidth=\skip74
-\cftbeforeparaskip=\skip75
-\cftparaindent=\skip76
-\cftparanumwidth=\skip77
-\cftbeforesubparaskip=\skip78
-\cftsubparaindent=\skip79
-\cftsubparanumwidth=\skip80
-\cftbeforeloftitleskip=\skip81
-\cftafterloftitleskip=\skip82
-\cftbeforefigskip=\skip83
-\cftfigindent=\skip84
-\cftfignumwidth=\skip85
-\c@lofdepth=\count297
-\c@lotdepth=\count298
-\cftbeforelottitleskip=\skip86
-\cftafterlottitleskip=\skip87
-\cftbeforetabskip=\skip88
-\cfttabindent=\skip89
-\cfttabnumwidth=\skip90
+\cftparskip=\skip67
+\cftbeforetoctitleskip=\skip68
+\cftaftertoctitleskip=\skip69
+\cftbeforepartskip=\skip70
+\cftpartnumwidth=\skip71
+\cftpartindent=\skip72
+\cftbeforechapskip=\skip73
+\cftchapindent=\skip74
+\cftchapnumwidth=\skip75
+\cftbeforesecskip=\skip76
+\cftsecindent=\skip77
+\cftsecnumwidth=\skip78
+\cftbeforesubsecskip=\skip79
+\cftsubsecindent=\skip80
+\cftsubsecnumwidth=\skip81
+\cftbeforesubsubsecskip=\skip82
+\cftsubsubsecindent=\skip83
+\cftsubsubsecnumwidth=\skip84
+\cftbeforeparaskip=\skip85
+\cftparaindent=\skip86
+\cftparanumwidth=\skip87
+\cftbeforesubparaskip=\skip88
+\cftsubparaindent=\skip89
+\cftsubparanumwidth=\skip90
+\cftbeforeloftitleskip=\skip91
+\cftafterloftitleskip=\skip92
+\cftbeforefigskip=\skip93
+\cftfigindent=\skip94
+\cftfignumwidth=\skip95
+\c@lofdepth=\count307
+\c@lotdepth=\count308
+\cftbeforelottitleskip=\skip96
+\cftafterlottitleskip=\skip97
+\cftbeforetabskip=\skip98
+\cfttabindent=\skip99
+\cfttabnumwidth=\skip100
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
@@ -493,9 +563,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-\@linkdim=\dimen183
-\Hy@linkcounter=\count299
-\Hy@pagecounter=\count300
+\@linkdim=\dimen188
+\Hy@linkcounter=\count309
+\Hy@pagecounter=\count310
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
@@ -508,8 +578,8 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count301
-\pdfmajorversion=\count302
+\Hy@SavedSpaceFactor=\count311
+\pdfmajorversion=\count312
 Package hyperref Info: Option `draft' set `false' on input line 4421.
 Package hyperref Info: Option `bookmarks' set `true' on input line 4421.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4421
@@ -545,16 +615,16 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 ))
-\c@Hy@tempcnt=\count303
+\c@Hy@tempcnt=\count313
 LaTeX Info: Redefining \url on input line 5159.
-\XeTeXLinkMargin=\dimen184
+\XeTeXLinkMargin=\dimen189
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count304
-\Field@Width=\dimen185
-\Fld@charsize=\dimen186
+\Fld@menulength=\count314
+\Field@Width=\dimen190
+\Fld@charsize=\dimen191
 Package hyperref Info: Hyper figures OFF on input line 6430.
 Package hyperref Info: Link nesting OFF on input line 6435.
 Package hyperref Info: Hyper index ON on input line 6438.
@@ -568,26 +638,26 @@ LaTeX Info: Redefining \pageref on input line 6504.
 (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\c@Item=\count305
-\c@Hfootnote=\count306
+\c@Item=\count315
+\c@Hfootnote=\count316
 )
 Package hyperref Info: Driver: hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
-\Fld@listcount=\count307
-\c@bookmark@seq@number=\count308
-\Hy@SectionHShift=\skip91
+\Fld@listcount=\count317
+\c@bookmark@seq@number=\count318
+\Hy@SectionHShift=\skip101
 )
-\@indexfile=\write3
-\openout3 = `book.idx'.
+\@indexfile=\write4
+\openout4 = `book.idx'.
 
 
 Writing index file book.idx
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count309
-\l__pdf_internal_box=\box100
+\l__kernel_color_stack_int=\count319
+\l__pdf_internal_box=\box102
 )
 (./book.aux (./01-frontMatters/dedic.aux) (./01-frontMatters/preface.aux)
 (./02-mainMatters/00-chapterIntroduction.aux) (./02-mainMatters/part1.aux)
@@ -623,40 +693,40 @@ LaTeX Warning: Label `line:22.3.3' multiply defined.
 ))
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-48.
+47.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count310
-\scratchdimen=\dimen187
-\scratchbox=\box101
-\nofMPsegments=\count311
-\nofMParguments=\count312
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count313
-\MPscratchDim=\dimen188
-\MPnumerator=\count314
-\makeMPintoPDFobject=\count315
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count320
+\scratchdimen=\dimen192
+\scratchbox=\box103
+\nofMPsegments=\count321
+\nofMParguments=\count322
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count323
+\MPscratchDim=\dimen193
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
+\everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -666,10 +736,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count316
-Package backref Info: ** backref set up for natbib ** on input line 148.
-\AtBeginShipoutBox=\box102
-Package hyperref Info: Link coloring ON on input line 148.
+\c@lstlisting=\count326
+Package backref Info: ** backref set up for natbib ** on input line 147.
+\AtBeginShipoutBox=\box104
+Package hyperref Info: Link coloring ON on input line 147.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -680,18 +750,18 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count317
+\c@section@level=\count327
 LaTeX Info: Redefining \Ref on input line 520.
 )
-LaTeX Info: Redefining \ref on input line 148.
-LaTeX Info: Redefining \pageref on input line 148.
-LaTeX Info: Redefining \nameref on input line 148.
+LaTeX Info: Redefining \ref on input line 147.
+LaTeX Info: Redefining \pageref on input line 147.
+LaTeX Info: Redefining \nameref on input line 147.
 
 (./book.out) (./book.out)
-\@outlinefile=\write4
-\openout4 = `book.out'.
+\@outlinefile=\write5
+\openout5 = `book.out'.
 
-LaTeX Info: Redefining \Ref on input line 148.
+LaTeX Info: Redefining \Ref on input line 147.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
@@ -775,8 +845,8 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [14] [15])
-\tf@toc=\write5
-\openout5 = `book.toc'.
+\tf@toc=\write6
+\openout6 = `book.toc'.
 
  [16]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -822,7 +892,7 @@ Overfull \hbox (3.3092pt too wide) in paragraph at lines 43--44
 bleaux in-stances, mainly
  []
 
-[3] [4] [5] [6]) [7]
+[3] [4] [5]) [6] [7]
 \openout2 = `02-mainMatters/part1.aux'.
 
  (./02-mainMatters/part1.tex [8
@@ -911,8 +981,8 @@ d3.pdf
 pdfTeX warning: pdflatex (file ./Figures/1-3-grid3.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
 >] (./Bibliographies/01-chapterIntroDigraph3.bbl (./book.brf)
-\tf@brf=\write6
-\openout6 = `book.brf'.
+\tf@brf=\write7
+\openout7 = `book.brf'.
 
 
 Underfull \hbox (badness 3179) in paragraph at lines 15--15
@@ -1145,7 +1215,13 @@ hedocs . io / en / latest /
 
 ]
 Chapter 5.
-[65] [66] [67]
+[65] [66]
+Overfull \hbox (6.11055pt too wide) in paragraph at lines 118--119
+[]\OT1/ptm/m/n/10 The ran-dom per-for-mance tableau mod-els, in-tro-duced in Ch
+ap. [][]6[][], use the \OT1/pcr/m/n/10 actions
+ []
+
+[67]
 Overfull \hbox (5.46071pt too wide) in paragraph at lines 178--179
 []\OT1/ptm/m/n/10 Mind that the \OT1/pcr/m/n/10 objectives \OT1/ptm/m/n/10 at-t
 ribute is al-ways present in a \OT1/pcr/m/n/10 PerformanceTab-
@@ -1183,15 +1259,9 @@ File: Figures/5-3-templateHeatmapNF.png Graphic file (type png)
 Package pdftex.def Info: Figures/5-3-templateHeatmapNF.png  used on input line 
 420.
 (pdftex.def)             Requested size: 332.89723pt x 192.61427pt.
-
-Overfull \hbox (9.39958pt too wide) in paragraph at lines 429--430
-[]\OT1/ptm/m/n/10 The next Chap-ter [][]6[][] de-scribes \OT1/ptm/m/sc/10 Di-gr
-aph3 \OT1/ptm/m/n/10 re-sources for gen-er-at-ing ran-dom multiple-
- []
-
-(./Bibliographies/05-chapterNewPerfTab.bbl (./book.brf) [74 <./Figures/5-1-temp
-late.pdf>] [75 <./Figures/5-2-templateHeatmapCop.png> <./Figures/5-3-templateHe
-atmapNF.png>])) [76]
+ (./Bibliographies/05-chapterNewPerfTab.bbl (./book.brf) [74 <./Figures/5-1-tem
+plate.pdf>] [75 <./Figures/5-2-templateHeatmapCop.png> <./Figures/5-3-templateH
+eatmapNF.png>])) [76]
 \openout2 = `02-mainMatters/06-chapterRandomPerfTabs.aux'.
 
  (./02-mainMatters/06-chapterRandomPerfTabs.tex
@@ -1321,9 +1391,9 @@ m/n/10 , or-
 ]
 Chapter 8.
 
-Overfull \hbox (7.05101pt too wide) in paragraph at lines 19--20
-\OT1/ptm/m/n/10 na-tives eval-u-ated on 13 per-for-mance cri-te-ria. The \OT1/p
-cr/m/n/10 BipolarOutrankingDigraph
+Overfull \hbox (17.6008pt too wide) in paragraph at lines 19--20
+\OT1/ptm/m/n/10 ter-na-tives eval-u-ated on 13 per-for-mance cri-te-ria. The \O
+T1/pcr/m/n/10 BipolarOutrankingDigraph
  []
 
 [107] [108]
@@ -1521,13 +1591,7 @@ Chapter 11.
 
 
 
-] [148] [149]
-Overfull \hbox (76.57043pt too wide) in paragraph at lines 132--133
-[]\OT1/ptm/m/n/10 On a com-mon PC with four sin-gle threaded cores, the \OT1/pc
-r/m/n/10 Inte-ger-BipolarOutrankingDigraph
- []
-
-[150]
+] [148] [149] [150]
 Overfull \hbox (2.66216pt too wide) in paragraph at lines 184--185
 []\OT1/ptm/m/n/10 The \OT1/pcr/m/n/10 cSparseIntegerOutrankingDigraphs \OT1/ptm
 /m/n/10 mod-ule[] pro-vides the \OT1/pcr/m/n/10 Spar-
@@ -1565,11 +1629,17 @@ File: Figures/11-2-rankingRecords.png Graphic file (type png)
 Package pdftex.def Info: Figures/11-2-rankingRecords.png  used on input line 42
 7.
 (pdftex.def)             Requested size: 199.16928pt x 93.4458pt.
- (./Bibliographies/11-chapterHPCRanking.bbl (./book.brf))) [157 <./Figures/11-2
--rankingRecords.png>]
+ (./Bibliographies/11-chapterHPCRanking.bbl (./book.brf
+Overfull \hbox (7.08931pt too wide) in paragraph at lines 432--1
+\OT1/ptm/m/n/10 recommendation---Chap. [][]12[][], rank-ing in-com-men-su-rable
+ multiple-criteria per-for-mance
+ []
+
+))) [157 <./Figures/11-2-rankingRecords.png>]
 \openout2 = `02-mainMatters/part3.aux'.
 
- (./02-mainMatters/part3.tex [158
+ (./02-mainMatters/part3.tex
+[158
 
 
 
@@ -1578,8 +1648,7 @@ Package pdftex.def Info: Figures/11-2-rankingRecords.png  used on input line 42
 ] [159] [160])
 \openout2 = `02-mainMatters/12-chapterAliceChoice.aux'.
 
-
-(./02-mainMatters/12-chapterAliceChoice.tex
+ (./02-mainMatters/12-chapterAliceChoice.tex
 Chapter 12.
 <Figures/12-1-AliceF.png, id=5980, 315.1775pt x 461.725pt>
 File: Figures/12-1-AliceF.png Graphic file (type png)
@@ -1614,13 +1683,13 @@ Package pdftex.def Info: Figures/12-4-aliceRelationmap.png  used on input line
 178.
 (pdftex.def)             Requested size: 284.52756pt x 217.21935pt.
  [166 <./Figures/12-4-aliceRelationMap.png>] [167] [168]
-<Figures/12-5-aliceBestChoice.pdf, id=6192, 422.57875pt x 578.16pt>
+<Figures/12-5-aliceBestChoice.pdf, id=6193, 422.57875pt x 578.16pt>
 File: Figures/12-5-aliceBestChoice.pdf Graphic file (type pdf)
 <use Figures/12-5-aliceBestChoice.pdf>
 Package pdftex.def Info: Figures/12-5-aliceBestChoice.pdf  used on input line 2
 74.
 (pdftex.def)             Requested size: 199.16928pt x 272.50275pt.
-<Figures/12-6-pairwiseComparison.png, id=6196, 656.4525pt x 803.0pt>
+<Figures/12-6-pairwiseComparison.png, id=6197, 656.4525pt x 803.0pt>
 File: Figures/12-6-pairwiseComparison.png Graphic file (type png)
 <use Figures/12-6-pairwiseComparison.png>
 Package pdftex.def Info: Figures/12-6-pairwiseComparison.png  used on input lin
@@ -1628,7 +1697,7 @@ e 285.
 (pdftex.def)             Requested size: 199.16928pt x 243.63423pt.
  [169 <./Figures/12-5-aliceBestChoice.pdf>] [170 <./Figures/12-6-pairwiseCompar
 ison.png>] [171]
-<Figures/12-7-choiceUnopposed.pdf, id=6303, 259.97125pt x 578.16pt>
+<Figures/12-7-choiceUnopposed.pdf, id=6304, 259.97125pt x 578.16pt>
 File: Figures/12-7-choiceUnopposed.pdf Graphic file (type pdf)
 <use Figures/12-7-choiceUnopposed.pdf>
 Package pdftex.def Info: Figures/12-7-choiceUnopposed.pdf  used on input line 3
@@ -1648,7 +1717,7 @@ Chapter 13.
 
 
 ] [176] [177] [178] [179]
-<Figures/13-1-the_cs_2016Criteria.png, id=6637, 966.61125pt x 351.3125pt>
+<Figures/13-1-the_cs_2016Criteria.png, id=6638, 966.61125pt x 351.3125pt>
 File: Figures/13-1-the_cs_2016Criteria.png Graphic file (type png)
 <use Figures/13-1-the_cs_2016Criteria.png>
 Package pdftex.def Info: Figures/13-1-the_cs_2016Criteria.png  used on input li
@@ -1656,7 +1725,7 @@ ne 273.
 (pdftex.def)             Requested size: 332.89723pt x 120.98851pt.
  [180] [181 <./Figures/13-1-the_cs_2016Criteria.png>] [182] [183] [184] [185] [
 186] [187]
-<Figures/13-2-the_cs_RelationMap.png, id=6959, 1101.11375pt x 950.55125pt>
+<Figures/13-2-the_cs_RelationMap.png, id=6960, 1101.11375pt x 950.55125pt>
 File: Figures/13-2-the_cs_RelationMap.png Graphic file (type png)
 <use Figures/13-2-the_cs_RelationMap.png>
 Package pdftex.def Info: Figures/13-2-the_cs_RelationMap.png  used on input lin
@@ -1711,28 +1780,33 @@ Chapter 14.
 
 
 ]
-<Figures/14-1-enrolmentScores.png, id=7135, 407.5225pt x 487.8225pt>
+Overfull \hbox (4.53168pt too wide) in paragraph at lines 50--51
+\OT1/ptm/m/n/10 for-mat[][][][][]. The \OT1/pcr/m/n/10 showHTMLPerformanceTable
+au() \OT1/ptm/m/n/10 method pro-duces in Fig. [][]14.1[][]
+ []
+
+<Figures/14-1-enrolmentScores.png, id=7136, 407.5225pt x 487.8225pt>
 File: Figures/14-1-enrolmentScores.png Graphic file (type png)
 <use Figures/14-1-enrolmentScores.png>
 Package pdftex.def Info: Figures/14-1-enrolmentScores.png  used on input line 6
 0.
 (pdftex.def)             Requested size: 170.71652pt x 204.35556pt.
- [196] [197 <./Figures/14-1-enrolmentScores.png>]
-<Figures/14-2-spiegelCriteria.png, id=7180, 1157.32375pt x 463.7325pt>
+[196] [197 <./Figures/14-1-enrolmentScores.png>]
+<Figures/14-2-spiegelCriteria.png, id=7182, 1157.32375pt x 463.7325pt>
 File: Figures/14-2-spiegelCriteria.png Graphic file (type png)
 <use Figures/14-2-spiegelCriteria.png>
 Package pdftex.def Info: Figures/14-2-spiegelCriteria.png  used on input line 1
 01.
 (pdftex.def)             Requested size: 332.89723pt x 133.38927pt.
  [198 <./Figures/14-2-spiegelCriteria.png>]
-<Figures/14-3-quintilingResult.png, id=7203, 786.94pt x 512.91624pt>
+<Figures/14-3-quintilingResult.png, id=7205, 786.94pt x 512.91624pt>
 File: Figures/14-3-quintilingResult.png Graphic file (type png)
 <use Figures/14-3-quintilingResult.png>
 Package pdftex.def Info: Figures/14-3-quintilingResult.png  used on input line 
 168.
 (pdftex.def)             Requested size: 332.89723pt x 216.97299pt.
  [199]
-<Figures/14-4-ratingResult.pdf, id=7243, 202.7575pt x 578.16pt>
+<Figures/14-4-ratingResult.pdf, id=7245, 202.7575pt x 578.16pt>
 File: Figures/14-4-ratingResult.pdf Graphic file (type pdf)
 <use Figures/14-4-ratingResult.pdf>
 Package pdftex.def Info: Figures/14-4-ratingResult.pdf  used on input line 194.
@@ -1740,14 +1814,14 @@ Package pdftex.def Info: Figures/14-4-ratingResult.pdf  used on input line 194.
 (pdftex.def)             Requested size: 113.81102pt x 324.5349pt.
  [200 <./Figures/14-3-quintilingResult.png>] [201 <./Figures/14-4-ratingResult.
 pdf>]
-<Figures/14-5-fusionResult.pdf, id=7313, 171.64125pt x 578.16pt>
+<Figures/14-5-fusionResult.pdf, id=7315, 171.64125pt x 578.16pt>
 File: Figures/14-5-fusionResult.pdf Graphic file (type pdf)
 <use Figures/14-5-fusionResult.pdf>
 Package pdftex.def Info: Figures/14-5-fusionResult.pdf  used on input line 235.
 
 (pdftex.def)             Requested size: 113.81102pt x 383.36pt.
- [202] [203 <./Figures/14-5-fusionResult.pdf>]
-[204] (./Bibliographies/14-chapterBestStudents.bbl (./book.brf) [205]
+ [202] [203 <./Figures/14-5-fusionResult.pdf>] [204]
+(./Bibliographies/14-chapterBestStudents.bbl (./book.brf) [205]
 Underfull \hbox (badness 10000) in paragraph at lines 22--22
 []\OT1/ptm/m/n/10 DER SPIEGEL (2004) Stu-den-ten-be-fra-gung des SPIEGEL Die Me
 th-
@@ -1801,7 +1875,7 @@ Chapter 15.
 
 
 ]
-<Figures/15-1-moviesRatingData.png, id=7527, 562.1pt x 561.09625pt>
+<Figures/15-1-moviesRatingData.png, id=7528, 562.1pt x 561.09625pt>
 File: Figures/15-1-moviesRatingData.png Graphic file (type png)
 <use Figures/15-1-moviesRatingData.png>
 Package pdftex.def Info: Figures/15-1-moviesRatingData.png  used on input line 
@@ -1836,13 +1910,13 @@ Chapter 16.
 
 
 ]
-<Figures/16-1-graffiti07_1.png, id=7671, 767.86874pt x 783.92876pt>
+<Figures/16-1-graffiti07_1.png, id=7672, 767.86874pt x 783.92876pt>
 File: Figures/16-1-graffiti07_1.png Graphic file (type png)
 <use Figures/16-1-graffiti07_1.png>
 Package pdftex.def Info: Figures/16-1-graffiti07_1.png  used on input line 26.
 (pdftex.def)             Requested size: 299.60547pt x 305.87453pt.
  [218 <./Figures/16-1-graffiti07_1.png>] [219]
-<Figures/16-2-graffiti07_2.png, id=7735, 925.4575pt x 966.61125pt>
+<Figures/16-2-graffiti07_2.png, id=7736, 925.4575pt x 966.61125pt>
 File: Figures/16-2-graffiti07_2.png Graphic file (type png)
 <use Figures/16-2-graffiti07_2.png>
 Package pdftex.def Info: Figures/16-2-graffiti07_2.png  used on input line 90.
@@ -1855,21 +1929,21 @@ ptm/m/n/10 and \OT1/pcr/m/n/10 d2\OT1/ptm/m/n/10 , 9 pairs, like \OT1/pcr/m/n/1
  []
 
 [222] [223] [224] [225]
-<Figures/16-3-correlationTable.png, id=7921, 847.165pt x 355.3275pt>
+<Figures/16-3-correlationTable.png, id=7923, 847.165pt x 355.3275pt>
 File: Figures/16-3-correlationTable.png Graphic file (type png)
 <use Figures/16-3-correlationTable.png>
 Package pdftex.def Info: Figures/16-3-correlationTable.png  used on input line 
 325.
 (pdftex.def)             Requested size: 332.89723pt x 139.62357pt.
  [226]
-<Figures/16-4-correlationPCA.pdf, id=7954, 433.62pt x 433.62pt>
+<Figures/16-4-correlationPCA.pdf, id=7955, 433.62pt x 433.62pt>
 File: Figures/16-4-correlationPCA.pdf Graphic file (type pdf)
 <use Figures/16-4-correlationPCA.pdf>
 Package pdftex.def Info: Figures/16-4-correlationPCA.pdf  used on input line 33
 9.
 (pdftex.def)             Requested size: 299.60547pt x 299.62158pt.
  [227 <./Figures/16-3-correlationTable.png>]
-<Figures/16-5-asymmetricPart.png, id=7967, 1210.5225pt x 600.2425pt>
+<Figures/16-5-asymmetricPart.png, id=7968, 1210.5225pt x 600.2425pt>
 File: Figures/16-5-asymmetricPart.png Graphic file (type png)
 <use Figures/16-5-asymmetricPart.png>
 Package pdftex.def Info: Figures/16-5-asymmetricPart.png  used on input line 36
@@ -1877,7 +1951,7 @@ Package pdftex.def Info: Figures/16-5-asymmetricPart.png  used on input line 36
 (pdftex.def)             Requested size: 332.89723pt x 165.0626pt.
 
 [228 <./Figures/16-4-correlationPCA.pdf>]
-<Figures/16-6-symmetricPart.png, id=7989, 1209.51875pt x 602.25pt>
+<Figures/16-6-symmetricPart.png, id=7990, 1209.51875pt x 602.25pt>
 File: Figures/16-6-symmetricPart.png Graphic file (type png)
 <use Figures/16-6-symmetricPart.png>
 Package pdftex.def Info: Figures/16-6-symmetricPart.png  used on input line 375
@@ -1897,7 +1971,7 @@ Chapter 17.
 
 
 ]
-<Figures/17-1-random3RegularGraph-mis.pdf, id=8040, 384.43625pt x 482.80376pt>
+<Figures/17-1-random3RegularGraph-mis.pdf, id=8041, 384.43625pt x 482.80376pt>
 File: Figures/17-1-random3RegularGraph-mis.pdf Graphic file (type pdf)
 <use Figures/17-1-random3RegularGraph-mis.pdf>
 Package pdftex.def Info: Figures/17-1-random3RegularGraph-mis.pdf  used on inpu
@@ -1905,19 +1979,19 @@ t line 36.
 (pdftex.def)             Requested size: 170.71652pt x 214.40129pt.
  [232 <./Figures/17-1-random3RegularGraph-mis.pdf>] [233] [234] [235]
 [236]
-<Figures/17-2-dualChordlessCircuit.pdf, id=8260, 323.2075pt x 331.2375pt>
+<Figures/17-2-dualChordlessCircuit.pdf, id=8261, 323.2075pt x 331.2375pt>
 File: Figures/17-2-dualChordlessCircuit.pdf Graphic file (type pdf)
 <use Figures/17-2-dualChordlessCircuit.pdf>
 Package pdftex.def Info: Figures/17-2-dualChordlessCircuit.pdf  used on input l
 ine 229.
 (pdftex.def)             Requested size: 199.16928pt x 204.11671pt.
  [237 <./Figures/17-2-dualChordlessCircuit.pdf>]
-<Figures/17-3-dual-c6.pdf, id=8310, 323.2075pt x 331.2375pt>
+<Figures/17-3-dual-c6.pdf, id=8311, 323.2075pt x 331.2375pt>
 File: Figures/17-3-dual-c6.pdf Graphic file (type pdf)
 <use Figures/17-3-dual-c6.pdf>
 Package pdftex.def Info: Figures/17-3-dual-c6.pdf  used on input line 252.
 (pdftex.def)             Requested size: 166.57454pt x 170.71652pt.
-<Figures/17-3-converse-c6.pdf, id=8311, 323.2075pt x 331.2375pt>
+<Figures/17-3-converse-c6.pdf, id=8312, 323.2075pt x 331.2375pt>
 File: Figures/17-3-converse-c6.pdf Graphic file (type pdf)
 <use Figures/17-3-converse-c6.pdf>
 Package pdftex.def Info: Figures/17-3-converse-c6.pdf  used on input line 253.
@@ -1927,27 +2001,27 @@ Package pdftex.def Info: Figures/17-3-converse-c6.pdf  used on input line 253.
 pdfTeX warning: pdflatex (file ./Figures/17-3-converse-c6.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-<Figures/17-4-randomLaterality.pdf, id=8369, 299.1175pt x 530.98375pt>
+<Figures/17-4-randomLaterality.pdf, id=8370, 299.1175pt x 530.98375pt>
 File: Figures/17-4-randomLaterality.pdf Graphic file (type pdf)
 <use Figures/17-4-randomLaterality.pdf>
 Package pdftex.def Info: Figures/17-4-randomLaterality.pdf  used on input line 
 278.
 (pdftex.def)             Requested size: 142.26378pt x 252.54398pt.
  [239 <./Figures/17-4-randomLaterality.pdf>] [240]
-<Figures/17-5-orientedLaterality.pdf, id=8471, 299.1175pt x 455.7025pt>
+<Figures/17-5-orientedLaterality.pdf, id=8472, 299.1175pt x 455.7025pt>
 File: Figures/17-5-orientedLaterality.pdf Graphic file (type pdf)
 <use Figures/17-5-orientedLaterality.pdf>
 Package pdftex.def Info: Figures/17-5-orientedLaterality.pdf  used on input lin
 e 350.
 (pdftex.def)             Requested size: 170.71652pt x 260.08688pt.
  [241 <./Figures/17-5-orientedLaterality.pdf>]
-<Figures/17-6-randomOutranking.png, id=8510, 945.5325pt x 389.455pt>
+<Figures/17-6-randomOutranking.png, id=8511, 945.5325pt x 389.455pt>
 File: Figures/17-6-randomOutranking.png Graphic file (type png)
 <use Figures/17-6-randomOutranking.png>
 Package pdftex.def Info: Figures/17-6-randomOutranking.png  used on input line 
 377.
 (pdftex.def)             Requested size: 284.52756pt x 117.19395pt.
-<Figures/17-7-tutOutranking.pdf, id=8513, 393.47pt x 530.98375pt>
+<Figures/17-7-tutOutranking.pdf, id=8514, 393.47pt x 530.98375pt>
 File: Figures/17-7-tutOutranking.pdf Graphic file (type pdf)
 <use Figures/17-7-tutOutranking.pdf>
 Package pdftex.def Info: Figures/17-7-tutOutranking.pdf  used on input line 393
@@ -1955,13 +2029,13 @@ Package pdftex.def Info: Figures/17-7-tutOutranking.pdf  used on input line 393
 (pdftex.def)             Requested size: 199.16928pt x 268.77258pt.
  [242 <./Figures/17-6-randomOutranking.png>] [243 <./Figures/17-7-tutOutranking
 .pdf>]
-<Figures/17-8-bestWorstOrientation.pdf, id=8594, 361.35pt x 380.42125pt>
+<Figures/17-8-bestWorstOrientation.pdf, id=8595, 361.35pt x 380.42125pt>
 File: Figures/17-8-bestWorstOrientation.pdf Graphic file (type pdf)
 <use Figures/17-8-bestWorstOrientation.pdf>
 Package pdftex.def Info: Figures/17-8-bestWorstOrientation.pdf  used on input l
 ine 454.
 (pdftex.def)             Requested size: 199.16928pt x 209.67929pt.
-<Figures/17-9-outRankingResult.png, id=8596, 850.17625pt x 486.81876pt>
+<Figures/17-9-outRankingResult.png, id=8597, 850.17625pt x 486.81876pt>
 File: Figures/17-9-outRankingResult.png Graphic file (type png)
 <use Figures/17-9-outRankingResult.png>
 Package pdftex.def Info: Figures/17-9-outRankingResult.png  used on input line 
@@ -1969,7 +2043,7 @@ Package pdftex.def Info: Figures/17-9-outRankingResult.png  used on input line
 (pdftex.def)             Requested size: 284.52756pt x 162.92372pt.
  [244] [245 <./Figures/17-8-bestWorstOrientation.pdf> <./Figures/17-9-outrankin
 gResult.png>] [246] [247] [248] [249]
-<Figures/17-10-k1restricted.png, id=8821, 644.4075pt x 375.4025pt>
+<Figures/17-10-k1restricted.png, id=8822, 644.4075pt x 375.4025pt>
 File: Figures/17-10-k1restricted.png Graphic file (type png)
 <use Figures/17-10-k1restricted.png>
 Package pdftex.def Info: Figures/17-10-k1restricted.png  used on input line 676
@@ -1978,7 +2052,7 @@ Package pdftex.def Info: Figures/17-10-k1restricted.png  used on input line 676
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <8.5> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 681.
  [250 <./Figures/17-10-k1restricted.png>]
-<Figures/17-11-k2restricted.png, id=8858, 648.4225pt x 372.39125pt>
+<Figures/17-11-k2restricted.png, id=8859, 648.4225pt x 372.39125pt>
 File: Figures/17-11-k2restricted.png Graphic file (type png)
 <use Figures/17-11-k2restricted.png>
 Package pdftex.def Info: Figures/17-11-k2restricted.png  used on input line 722
@@ -1987,13 +2061,19 @@ Package pdftex.def Info: Figures/17-11-k2restricted.png  used on input line 722
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8.5> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 722.
  [251 <./Figures/17-11-k2restricted.png>]
-<Figures/17-12-bestWorstOrientation.pdf, id=8897, 361.35pt x 380.42125pt>
+<Figures/17-12-bestWorstOrientation.pdf, id=8898, 361.35pt x 380.42125pt>
 File: Figures/17-12-bestWorstOrientation.pdf Graphic file (type pdf)
 <use Figures/17-12-bestWorstOrientation.pdf>
 Package pdftex.def Info: Figures/17-12-bestWorstOrientation.pdf  used on input 
 line 755.
 (pdftex.def)             Requested size: 170.71652pt x 179.72676pt.
- [252 <./Figures/17-12-bestWorstOrientation.pdf>] [253] [254]
+
+Overfull \hbox (4.20062pt too wide) in paragraph at lines 759--760
+[]\OT1/ptm/m/n/10 When we re-con-sider the graphviz draw-ing of this out-rank-i
+ng di-graph in Fig. [][]17.12[][][][][],
+ []
+
+[252 <./Figures/17-12-bestWorstOrientation.pdf>] [253] [254]
 (./Bibliographies/17-chapterKernels.bbl (./book.brf)
 Underfull \hbox (badness 10000) in paragraph at lines 54--54
 [][]$\OT1/pcr/m/n/10 https : / / cs . uwaterloo . ca / journals / JIS / VOL11 /
@@ -2012,7 +2092,7 @@ Chapter 18.
 
 
 ]
-<Figures/18-1-weightDistributions.png, id=9079, 738.76pt x 669.50125pt>
+<Figures/18-1-weightDistributions.png, id=9080, 738.76pt x 669.50125pt>
 File: Figures/18-1-weightDistributions.png Graphic file (type png)
 <use Figures/18-1-weightDistributions.png>
 Package pdftex.def Info: Figures/18-1-weightDistributions.png  used on input li
@@ -2022,27 +2102,31 @@ ne 24.
 
 pdfTeX warning: pdflatex (file ./Figures/18-2-rCharacteristic.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/18-2-rCharacteristic.pdf, id=9090, 845.1575pt x 597.23125pt>
+<Figures/18-2-rCharacteristic.pdf, id=9091, 845.1575pt x 597.23125pt>
 File: Figures/18-2-rCharacteristic.pdf Graphic file (type pdf)
 <use Figures/18-2-rCharacteristic.pdf>
 Package pdftex.def Info: Figures/18-2-rCharacteristic.pdf  used on input line 4
 7.
 (pdftex.def)             Requested size: 332.89723pt x 235.24306pt.
 [259 <./Figures/18-2-rCharacteristic.pdf>]
-<Figures/18-3-simulLikelihood.pdf, id=9112, 361.35pt x 252.945pt>
+Overfull \hbox (3.0pt too wide) detected at line 72
+ [] 
+ []
+
+<Figures/18-3-simulLikelihood.pdf, id=9113, 361.35pt x 252.945pt>
 File: Figures/18-3-simulLikelihood.pdf Graphic file (type pdf)
 <use Figures/18-3-simulLikelihood.pdf>
 Package pdftex.def Info: Figures/18-3-simulLikelihood.pdf  used on input line 7
 9.
 (pdftex.def)             Requested size: 332.89723pt x 233.0287pt.
- [260] [261 <./Figures/18-3-simulLikelihood.pdf>] [262]
-<Figures/18-4-confidentOutranking.pdf, id=9197, 332.24126pt x 403.5075pt>
+[260] [261 <./Figures/18-3-simulLikelihood.pdf>] [262] [263]
+<Figures/18-4-confidentOutranking.pdf, id=9238, 332.24126pt x 403.5075pt>
 File: Figures/18-4-confidentOutranking.pdf Graphic file (type pdf)
 <use Figures/18-4-confidentOutranking.pdf>
 Package pdftex.def Info: Figures/18-4-confidentOutranking.pdf  used on input li
 ne 215.
 (pdftex.def)             Requested size: 199.16928pt x 241.89087pt.
- [263] [264 <./Figures/18-4-confidentOutranking.pdf>]
+ [264 <./Figures/18-4-confidentOutranking.pdf>]
 (./Bibliographies/18-chapterConfidentOutrankings.bbl (./book.brf) [265]))
 [266]
 \openout2 = `02-mainMatters/19-chapterRobustOutrankings.aux'.
@@ -2056,12 +2140,12 @@ Chapter 19.
 
 
 ] [268] [269] [270] [271] [272] [273] [274] [275]
-<Figures/19-1-stdg.pdf, id=9681, 393.47pt x 380.42125pt>
+<Figures/19-1-stdg.pdf, id=9680, 393.47pt x 380.42125pt>
 File: Figures/19-1-stdg.pdf Graphic file (type pdf)
 <use Figures/19-1-stdg.pdf>
 Package pdftex.def Info: Figures/19-1-stdg.pdf  used on input line 391.
 (pdftex.def)             Requested size: 176.57355pt x 170.71652pt.
-<Figures/19-1-robg.pdf, id=9682, 381.425pt x 455.7025pt>
+<Figures/19-1-robg.pdf, id=9681, 381.425pt x 455.7025pt>
 File: Figures/19-1-robg.pdf Graphic file (type pdf)
 <use Figures/19-1-robg.pdf>
 Package pdftex.def Info: Figures/19-1-robg.pdf  used on input line 392.
@@ -2071,7 +2155,7 @@ Package pdftex.def Info: Figures/19-1-robg.pdf  used on input line 392.
 pdfTeX warning: pdflatex (file ./Figures/19-1-robg.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
 >]
-<Figures/19-2-robustHeatmap.png, id=9746, 743.77875pt x 489.83pt>
+<Figures/19-2-robustHeatmap.png, id=9745, 743.77875pt x 489.83pt>
 File: Figures/19-2-robustHeatmap.png Graphic file (type png)
 <use Figures/19-2-robustHeatmap.png>
 Package pdftex.def Info: Figures/19-2-robustHeatmap.png  used on input line 409
@@ -2082,7 +2166,7 @@ File: Figures/19-1-stdg.pdf Graphic file (type pdf)
 <use Figures/19-1-stdg.pdf>
 Package pdftex.def Info: Figures/19-1-stdg.pdf  used on input line 576.
 (pdftex.def)             Requested size: 176.57355pt x 170.71652pt.
-<Figures/19-3-unopDigraph.pdf, id=9883, 341.275pt x 402.50375pt>
+<Figures/19-3-unopDigraph.pdf, id=9882, 341.275pt x 402.50375pt>
 File: Figures/19-3-unopDigraph.pdf Graphic file (type pdf)
 <use Figures/19-3-unopDigraph.pdf>
 Package pdftex.def Info: Figures/19-3-unopDigraph.pdf  used on input line 577.
@@ -2101,7 +2185,7 @@ Chapter 20.
 
 
 ] [284] [285]
-<Figures/20-1-unOpposedOutrankings.png, id=10059, 779.91376pt x 528.97626pt>
+<Figures/20-1-unOpposedOutrankings.png, id=10058, 779.91376pt x 528.97626pt>
 File: Figures/20-1-unOpposedOutrankings.png Graphic file (type png)
 <use Figures/20-1-unOpposedOutrankings.png>
 Package pdftex.def Info: Figures/20-1-unOpposedOutrankings.png  used on input l
@@ -2109,13 +2193,13 @@ ine 145.
 (pdftex.def)             Requested size: 299.60547pt x 203.20851pt.
  [286] [287 <./Figures/20-1-unOpposedOutrankings.png>]
 [288] [289]
-<Figures/20-2-divGraph.pdf, id=10235, 299.1175pt x 455.7025pt>
+<Figures/20-2-divGraph.pdf, id=10234, 299.1175pt x 455.7025pt>
 File: Figures/20-2-divGraph.pdf Graphic file (type pdf)
 <use Figures/20-2-divGraph.pdf>
 Package pdftex.def Info: Figures/20-2-divGraph.pdf  used on input line 305.
 (pdftex.def)             Requested size: 142.26378pt x 216.73906pt.
  [290 <./Figures/20-2-divGraph.pdf>] [291] [292] [293] [294]
-<Figures/20-3-majMargAV.png, id=10430, 511.9125pt x 455.7025pt>
+<Figures/20-3-majMargAV.png, id=10429, 511.9125pt x 455.7025pt>
 File: Figures/20-3-majMargAV.png Graphic file (type png)
 <use Figures/20-3-majMargAV.png>
 Package pdftex.def Info: Figures/20-3-majMargAV.png  used on input line 481.
@@ -2134,7 +2218,7 @@ com-pare \OT1/ptm/m/it/10 approval-disapproval
  []
 
 [299] [300] [301]
-<Figures/20-4-majMargDAV.png, id=10685, 520.94624pt x 455.7025pt>
+<Figures/20-4-majMargDAV.png, id=10684, 520.94624pt x 455.7025pt>
 File: Figures/20-4-majMargDAV.png Graphic file (type png)
 <use Figures/20-4-majMargDAV.png>
 Package pdftex.def Info: Figures/20-4-majMargDAV.png  used on input line 760.
@@ -2163,20 +2247,20 @@ Chapter 21.
 
 
 ]
-<Figures/21-1-tutorialGraph.pdf, id=10765, 299.1175pt x 261.97874pt>
+<Figures/21-1-tutorialGraph.pdf, id=10764, 299.1175pt x 261.97874pt>
 File: Figures/21-1-tutorialGraph.pdf Graphic file (type pdf)
 <use Figures/21-1-tutorialGraph.pdf>
 Package pdftex.def Info: Figures/21-1-tutorialGraph.pdf  used on input line 83.
 
 (pdftex.def)             Requested size: 199.16928pt x 174.44153pt.
  [308] [309 <./Figures/21-1-tutorialGraph.pdf>] [310]
-<Figures/21-2-tutorial-3-coloring.pdf, id=10918, 299.1175pt x 261.97874pt>
+<Figures/21-2-tutorial-3-coloring.pdf, id=10917, 299.1175pt x 261.97874pt>
 File: Figures/21-2-tutorial-3-coloring.pdf Graphic file (type pdf)
 <use Figures/21-2-tutorial-3-coloring.pdf>
 Package pdftex.def Info: Figures/21-2-tutorial-3-coloring.pdf  used on input li
 ne 180.
 (pdftex.def)             Requested size: 170.71652pt x 149.5213pt.
-<Figures/21-2-tutorial-2-coloring.pdf, id=10919, 299.1175pt x 261.97874pt>
+<Figures/21-2-tutorial-2-coloring.pdf, id=10918, 299.1175pt x 261.97874pt>
 File: Figures/21-2-tutorial-2-coloring.pdf Graphic file (type pdf)
 <use Figures/21-2-tutorial-2-coloring.pdf>
 Package pdftex.def Info: Figures/21-2-tutorial-2-coloring.pdf  used on input li
@@ -2193,14 +2277,14 @@ ng.pdf
 pdfTeX warning: pdflatex (file ./Figures/21-2-tutorial-2-coloring.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >] [312] [313]
-<Figures/21-3-maxMatchingcycleGraph.pdf, id=11091, 403.5075pt x 438.63875pt>
+<Figures/21-3-maxMatchingcycleGraph.pdf, id=11090, 403.5075pt x 438.63875pt>
 File: Figures/21-3-maxMatchingcycleGraph.pdf Graphic file (type pdf)
 <use Figures/21-3-maxMatchingcycleGraph.pdf>
 Package pdftex.def Info: Figures/21-3-maxMatchingcycleGraph.pdf  used on input 
 line 320.
 (pdftex.def)             Requested size: 199.16928pt x 216.50774pt.
  [314 <./Figures/21-3-maxMatchingcycleGraph.pdf>]
-<Figures/21-4-grid-15-15-ising.pdf, id=11154, 569.12625pt x 578.16pt>
+<Figures/21-4-grid-15-15-ising.pdf, id=11153, 569.12625pt x 578.16pt>
 File: Figures/21-4-grid-15-15-ising.pdf Graphic file (type pdf)
 <use Figures/21-4-grid-15-15-ising.pdf>
 Package pdftex.def Info: Figures/21-4-grid-15-15-ising.pdf  used on input line 
@@ -2210,7 +2294,7 @@ Package pdftex.def Info: Figures/21-4-grid-15-15-ising.pdf  used on input line
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <8.5> not available
 (Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 473.
  [319]
-<Figures/21-5-c12.png, id=11382, 372.1905pt x 341.47575pt>
+<Figures/21-5-c12.png, id=11381, 372.1905pt x 341.47575pt>
 File: Figures/21-5-c12.png Graphic file (type png)
 <use Figures/21-5-c12.png>
 Package pdftex.def Info: Figures/21-5-c12.png  used on input line 563.
@@ -2234,7 +2318,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
 
 ]
 Chapter 22.
-<Figures/22-1-tutRandomTree.pdf, id=11436, 361.35pt x 505.89pt>
+<Figures/22-1-tutRandomTree.pdf, id=11435, 361.35pt x 505.89pt>
 File: Figures/22-1-tutRandomTree.pdf Graphic file (type pdf)
 <use Figures/22-1-tutRandomTree.pdf>
 Package pdftex.def Info: Figures/22-1-tutRandomTree.pdf  used on input line 36.
@@ -2245,7 +2329,7 @@ LaTeX Warning: Reference `line:22.1.15' on page 323 undefined on input line 40.
 
 
 [323] [324 <./Figures/22-1-tutRandomTree.pdf>]
-<Figures/22-2-tutPruefTree.pdf, id=11509, 431.6125pt x 388.45125pt>
+<Figures/22-2-tutPruefTree.pdf, id=11508, 431.6125pt x 388.45125pt>
 File: Figures/22-2-tutPruefTree.pdf Graphic file (type pdf)
 <use Figures/22-2-tutPruefTree.pdf>
 Package pdftex.def Info: Figures/22-2-tutPruefTree.pdf  used on input line 76.
@@ -2254,13 +2338,13 @@ Package pdftex.def Info: Figures/22-2-tutPruefTree.pdf  used on input line 76.
 
 LaTeX Warning: Reference `line:22.3.8' on page 326 undefined on input line 96.
 
-<Figures/22-3-test62.pdf, id=11561, 299.1175pt x 348.30125pt>
+<Figures/22-3-test62.pdf, id=11560, 299.1175pt x 348.30125pt>
 File: Figures/22-3-test62.pdf Graphic file (type pdf)
 <use Figures/22-3-test62.pdf>
 Package pdftex.def Info: Figures/22-3-test62.pdf  used on input line 118.
 (pdftex.def)             Requested size: 199.16928pt x 231.92035pt.
 [326]
-<Figures/22-4-rootedTree.pdf, id=11595, 279.0425pt x 303.1325pt>
+<Figures/22-4-rootedTree.pdf, id=11594, 279.0425pt x 303.1325pt>
 File: Figures/22-4-rootedTree.pdf Graphic file (type pdf)
 <use Figures/22-4-rootedTree.pdf>
 Package pdftex.def Info: Figures/22-4-rootedTree.pdf  used on input line 143.
@@ -2270,14 +2354,14 @@ Package pdftex.def Info: Figures/22-4-rootedTree.pdf  used on input line 143.
 pdfTeX warning: pdflatex (file ./Figures/22-4-rootedTree.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]
-<Figures/22-5-randomSpanningTree.pdf, id=11654, 326.21875pt x 322.20375pt>
+<Figures/22-5-randomSpanningTree.pdf, id=11653, 326.21875pt x 322.20375pt>
 File: Figures/22-5-randomSpanningTree.pdf Graphic file (type pdf)
 <use Figures/22-5-randomSpanningTree.pdf>
 Package pdftex.def Info: Figures/22-5-randomSpanningTree.pdf  used on input lin
 e 185.
 (pdftex.def)             Requested size: 199.16928pt x 196.7259pt.
  [328]
-<Figures/22-6-spanningForest.pdf, id=11699, 512.91624pt x 447.6725pt>
+<Figures/22-6-spanningForest.pdf, id=11698, 512.91624pt x 447.6725pt>
 File: Figures/22-6-spanningForest.pdf Graphic file (type pdf)
 <use Figures/22-6-spanningForest.pdf>
 Package pdftex.def Info: Figures/22-6-spanningForest.pdf  used on input line 21
@@ -2285,7 +2369,7 @@ Package pdftex.def Info: Figures/22-6-spanningForest.pdf  used on input line 21
 (pdftex.def)             Requested size: 199.16928pt x 173.83333pt.
  [329 <./Figures/22-5-randomSpanningTree.pdf>] [330 <./Figures/22-6-spanningFor
 est.pdf>]
-<Figures/22-7-bestDeterminedSpanningTree.pdf, id=11807, 299.1175pt x 282.05376p
+<Figures/22-7-bestDeterminedSpanningTree.pdf, id=11806, 299.1175pt x 282.05376p
 t>
 File: Figures/22-7-bestDeterminedSpanningTree.pdf Graphic file (type pdf)
 <use Figures/22-7-bestDeterminedSpanningTree.pdf>
@@ -2306,26 +2390,26 @@ Chapter 23.
 
 
 ]
-<Figures/23-1-randomSplitGraph.pdf, id=11898, 299.1175pt x 358.33875pt>
+<Figures/23-1-randomSplitGraph.pdf, id=11897, 299.1175pt x 358.33875pt>
 File: Figures/23-1-randomSplitGraph.pdf Graphic file (type pdf)
 <use Figures/23-1-randomSplitGraph.pdf>
 Package pdftex.def Info: Figures/23-1-randomSplitGraph.pdf  used on input line 
 72.
 (pdftex.def)             Requested size: 170.71652pt x 204.51765pt.
  [334] [335 <./Figures/23-1-randomSplitGraph.pdf>]
-<Figures/23-2-berge1.pdf, id=12004, 299.1175pt x 240.9pt>
+<Figures/23-2-berge1.pdf, id=12003, 299.1175pt x 240.9pt>
 File: Figures/23-2-berge1.pdf Graphic file (type pdf)
 <use Figures/23-2-berge1.pdf>
 Package pdftex.def Info: Figures/23-2-berge1.pdf  used on input line 143.
 (pdftex.def)             Requested size: 170.71652pt x 137.49086pt.
  [336 <./Figures/23-2-berge1.pdf>]
-<Figures/23-3-berge2.pdf, id=12057, 299.1175pt x 240.9pt>
+<Figures/23-3-berge2.pdf, id=12056, 299.1175pt x 240.9pt>
 File: Figures/23-3-berge2.pdf Graphic file (type pdf)
 <use Figures/23-3-berge2.pdf>
 Package pdftex.def Info: Figures/23-3-berge2.pdf  used on input line 163.
 (pdftex.def)             Requested size: 170.71652pt x 137.49086pt.
  [337 <./Figures/23-3-berge2.pdf>]
-<Figures/23-4-permutationGraph.pdf, id=12119, 299.1175pt x 266.9975pt>
+<Figures/23-4-permutationGraph.pdf, id=12118, 299.1175pt x 266.9975pt>
 File: Figures/23-4-permutationGraph.pdf Graphic file (type pdf)
 <use Figures/23-4-permutationGraph.pdf>
 Package pdftex.def Info: Figures/23-4-permutationGraph.pdf  used on input line 
@@ -2378,7 +2462,7 @@ Package pdftex.def Info: Figures/23-9-transOrientGraph.pdf  used on input line
 366.
 (pdftex.def)             Requested size: 199.16928pt x 212.53795pt.
  [342 <./Figures/23-8-randomGraph4335.pdf>]
-<Figures/23-10-transOrientDualGraph.pdf, id=12419, 403.5075pt x 280.04625pt>
+<Figures/23-10-transOrientDualGraph.pdf, id=12418, 403.5075pt x 280.04625pt>
 File: Figures/23-10-transOrientDualGraph.pdf Graphic file (type pdf)
 <use Figures/23-10-transOrientDualGraph.pdf>
 Package pdftex.def Info: Figures/23-10-transOrientDualGraph.pdf  used on input 
@@ -2390,12 +2474,12 @@ ph.pdf
 pdfTeX warning: pdflatex (file ./Figures/23-10-transOrientDualGraph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >] [344]
-<Figures/23-11-gtesta.pdf, id=12517, 299.1175pt x 316.18124pt>
+<Figures/23-11-gtesta.pdf, id=12516, 299.1175pt x 316.18124pt>
 File: Figures/23-11-gtesta.pdf Graphic file (type pdf)
 <use Figures/23-11-gtesta.pdf>
 Package pdftex.def Info: Figures/23-11-gtesta.pdf  used on input line 473.
 (pdftex.def)             Requested size: 161.50734pt x 170.71652pt.
-<Figures/23-11-gtestb.pdf, id=12518, 299.1175pt x 307.1475pt>
+<Figures/23-11-gtestb.pdf, id=12517, 299.1175pt x 307.1475pt>
 File: Figures/23-11-gtestb.pdf Graphic file (type pdf)
 <use Figures/23-11-gtestb.pdf>
 Package pdftex.def Info: Figures/23-11-gtestb.pdf  used on input line 474.
@@ -2519,20 +2603,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 375--375
 
 
 ] [354] [355] [356] [357])
-\tf@lol=\write7
-\openout7 = `book.lol'.
+\tf@lol=\write8
+\openout8 = `book.lol'.
 
  [358] (./book.lof
 [359
 
 
 ] [360] [361])
-\tf@lof=\write8
-\openout8 = `book.lof'.
+\tf@lof=\write9
+\openout9 = `book.lof'.
 
  [362] (./book.lot)
-\tf@lot=\write9
-\openout9 = `book.lot'.
+\tf@lot=\write10
+\openout10 = `book.lot'.
 
  (./book.ind [363
 
@@ -2556,8 +2640,11 @@ Overfull \hbox (8.27113pt too wide) in paragraph at lines 396--398
  []
 
 [368]))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 242.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 242.
+\tf@thm=\write11
+\openout11 = `book.thm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
  (./book.aux (./01-frontMatters/dedic.aux)
 (./01-frontMatters/preface.aux) (./02-mainMatters/00-chapterIntroduction.aux)
 (./02-mainMatters/part1.aux) (./02-mainMatters/01-chapterIntroDigraph3.aux)
@@ -2583,8 +2670,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 242.
 ) (./02-mainMatters/21-chapterGraphs.aux)
 (./02-mainMatters/22-chapterTreeGraphs.aux)
 (./02-mainMatters/23-chapterPerfectGraphs.aux) (./03-backMatters/appendix.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 242.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 242.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 07F21024B77D5CD23B7EFA1A80BED555;15101.
 
@@ -2604,16 +2691,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 242.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 23706 strings out of 482504
- 361213 string characters out of 5947331
- 970710 words of memory out of 5000000
- 30696 multiletter control sequences out of 15000+600000
+ 24755 strings out of 482504
+ 375359 string characters out of 5947331
+ 1013915 words of memory out of 5000000
+ 31736 multiletter control sequences out of 15000+600000
  622161 words of font info for 212 fonts, out of 8000000 for 9000
  395 hyphenation exceptions out of 8191
- 47i,19n,47p,1518b,1957s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,19n,47p,1519b,1957s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -2635,10 +2722,10 @@ r/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive
 nts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on book.pdf (382 pages, 5442967 bytes).
+Output written on book.pdf (382 pages, 5442724 bytes).
 PDF statistics:
- 15104 PDF objects out of 15390 (max. 8388607)
- 13919 compressed objects within 140 object streams
- 7319 named destinations out of 7423 (max. 500000)
+ 15103 PDF objects out of 15390 (max. 8388607)
+ 13918 compressed objects within 140 object streams
+ 7318 named destinations out of 7423 (max. 500000)
  2053 words of extra memory for PDF output out of 10000 (max. 10000000)
 

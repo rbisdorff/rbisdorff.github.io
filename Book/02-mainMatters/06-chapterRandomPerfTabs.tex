@@ -198,7 +198,7 @@ In Listing~\vref{list:6.2} one may notice the three types of decision actions (s
      ...
 \end{lstlisting}
 
-A heatmap view with 5 color levels gives the result shown in Figure~\vref{fig:6.2}.
+A heatmap view with 5 color levels gives the result shown in Fig.~\vref{fig:6.2}.
 \begin{lstlisting}
 >>> t.showHTMLPerformanceHeatmap(colorLevels=5,\
 ...        rankingRule=None,\
@@ -316,7 +316,7 @@ Variable \emph{triangular} modes: $0.3$, $0.5$ or $0.7$ of the span of the measu
 
 Policy \texttt{p1}, for instance, will probably show \emph{good} performances with respect to the \emph{societal} and \emph{environmental} aspects, and \emph{weak} performances with respect to the \emph{economical} aspect, whereas policy \texttt{p2}, being weak with respect to to all the three objectives, will probably appear among the last recommended policies.
 
-We may inspect in Figure~\vref{fig:6.3} the given random three-objectives performance tableau with the \texttt{showHTMPerformanceTableau()} method\index{showHTMPerformanceTableau@\texttt{showHTMPerformanceTableau()}}.
+We may inspect in Fig.~\vref{fig:6.3} the given random three-objectives performance tableau with the \texttt{showHTMPerformanceTableau()} method\index{showHTMPerformanceTableau@\texttt{showHTMPerformanceTableau()}}.
 \begin{lstlisting}
 >>> t.showHTMLPerformanceTableau()
 \end{lstlisting}
@@ -329,7 +329,7 @@ We may inspect in Figure~\vref{fig:6.3} the given random three-objectives perfor
 
 Light green cells show the highest and light red the lowest evaluations. Policy \texttt{p1} obtains thus the lowest evaluation ($17.09/100.00$) on the environmental criterion \texttt{en09}, whereas policy \texttt{p3} obtains the highest evaluations on four out of the six \emph{environmental} criteria.
 
-No trivial best choice becomes apparent when looking at the performance tableau shown in Figure~\vref{fig:6.3}. Let us therefore compute a \Rubis best choice recommendation (see Chapter~\ref{sec:4}).
+No trivial best choice becomes apparent when looking at the performance tableau shown in Fig.~\vref{fig:6.3}. Let us therefore compute a \Rubis best choice recommendation (see Chap.~\ref{sec:4}).
 \begin{lstlisting}[caption={What is the public policy to recommend as best choice ?},label=list:6.5]
 >>> from outrankingDigraphs import\
 ...       BipolarOutrankingDigraph
@@ -359,7 +359,7 @@ No trivial best choice becomes apparent when looking at the performance tableau 
 
 Policy \texttt{p3} gives the most credible first choice recommendation with the support of a $57.5\%$ majority of significance, whereas policy \texttt{p7} gives a credible last choice recommendation .
 
-Policy \texttt{p5} represents an ambiguous first as well as last choice candidate. A drawing of the strict outranking digraph oriented by first and last recommendations shows in Figure~\vref{fig:6.4} the complete preferential picture.
+Policy \texttt{p5} represents an ambiguous first as well as last choice candidate. A drawing of the strict outranking digraph oriented by first and last recommendations shows in Fig.~\vref{fig:6.4} the complete preferential picture.
 \begin{lstlisting}
 >>> (~(-g)).exportGraphViz(\
 ...             fileName='3ObjPerfTabBestChoice',\
@@ -372,11 +372,11 @@ Policy \texttt{p5} represents an ambiguous first as well as last choice candidat
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/6-4-3ObjPerfTabBestChoice.pdf}
-\caption[The strict outranking digraph oriented by first and last choices]{\emph{The strict outranking digraph oriented by first and last choice recommendations}. Policy \texttt{p5} appears incomparable --in a strict outranking sense-- to all the other six policies, whereas policies \texttt{p1}, \texttt{p2} and \texttt{p7} appear strictly outranked}
+\caption[The strict outranking digraph oriented by first and last choices]{\emph{The strict outranking digraph oriented by first and last choice recommendations}\\ Policy \texttt{p5} appears incomparable --in a strict outranking sense-- to all the other six policies, whereas policies \texttt{p1}, \texttt{p2} and \texttt{p7} appear strictly outranked.}
 \label{fig:6.4}       % Give a unique label
 \end{figure}
 
-A heatmap view in Figure~\vref{fig:6.5} on the \Copeland ranked performance tableau confirms the best choice recommendation (see Sec.~\ref{sec:8.2}).
+A heatmap view in Fig.~\vref{fig:6.5} on the \Copeland ranked performance tableau confirms the best choice recommendation (see Sect.~\ref{sec:8.2}).
 \begin{figure}[ht]
 %\sidecaption[t]
 \includegraphics[width=0.9\hsize]{Figures/6-5-random3ObjHeatmap.png}
@@ -480,7 +480,7 @@ In Listing~\vref{list:6.7}, the Course \texttt{m7} evaluation statistics show a 
 \caption{Ranking the students in a performance heatmap view}
 \label{fig:6.6}       % Give a unique label
 \end{figure}
-With a ranked heatmap view on all the grades we now get in Figure~\vref{fig:6.6} a global pictures of the performance of all the eleven students. The ranking shown here, produced with the \NetFlows ranking rule (see Sec.~\ref{sec:8.3}), reports a high correlation of $+0.887$ with the corresponding bipolar-valued outranking digraph (see Chap.~\ref{sec:16}).
+With a ranked heatmap view on all the grades we now get in Fig.~\vref{fig:6.6} a global pictures of the performance of all the eleven students. The ranking shown here, produced with the \NetFlows ranking rule (see Sect.~\ref{sec:8.3}), reports a high correlation of $+0.887$ with the corresponding bipolar-valued outranking digraph (see Chap.~\ref{sec:16}).
 
 The \NetFlows ranking represents also a rather \emph{fair weighted consensus} between the individual courses' marginal rankings as is made apparent with the \texttt{showRankingConsensusQuality()} method in Listing~\vref{list:6.8}.\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}}
 \begin{lstlisting}[caption={Consensus quality of the students's ranking},label=list:6.8]
@@ -511,7 +511,7 @@ The correlation with the marginal course rankings follows, except for course m2,
 
 %\vspace{1cm}
 \vspace{\baselineskip}
-Useful multiple-criteria ranking rules are presented and discussed in detail in Chapter~\ref{sec:8}. The next Chapter~\ref{sec:7} is concerned with yet another kind of performance evaluation models which is discussed in social choice theory, namely \emph{linear voting profiles}.
+Useful multiple-criteria ranking rules are presented and discussed in detail in Chap.~\ref{sec:8}. The next Chap.~\ref{sec:7} is concerned with yet another kind of performance evaluation models which is discussed in social choice theory, namely \emph{linear voting profiles}.
 
 %%%%%%%
 %The chapter bibliography

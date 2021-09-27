@@ -1,4 +1,4 @@
-% SVMONO DOCUMENT CLASS -- version 5.5 (17-Dec-09)
+% SVMONO DOCUMENT CLASS -- version 5.6 (25-June-18)
 % Springer Verlag global LaTeX2e support for monographs
 %%
 %%
@@ -19,7 +19,7 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{svmono}[2009/12/17 v5.5
+\ProvidesClass{svmono}[2018/06/25 v5.6
 ^^JSpringer Verlag global LaTeX document class for monographs]
 %
 % Options
@@ -319,8 +319,9 @@ passing it to article class \MessageBreak
 \newcommand{\mottostyle}{\itshape\unboldmath\raggedright}
 \newcommand{\secsize}{\large}
 \newcommand{\secstyle}{\bfseries\boldmath}
-\newcommand{\subsecsize}{\large}
-\newcommand{\subsecstyle}{\bfseries\itshape\boldmath}
+%\newcommand{\subsecsize}{\large}
+\newcommand{\subsecsize}{\fontsize{11}{13}\selectfont}
+\newcommand{\subsecstyle}{\bfseries\boldmath}
 \newcommand{\subsubsecstyle}{\bfseries\boldmath}
 %
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
@@ -591,7 +592,13 @@ passing it to article class \MessageBreak
 \newcommand\subruninhead{\@startsection{paragraph}{4}{\z@}%
                        {-6\p@}% \p@lus -4\p@ \@minus -4\p@}%
                        {-6\p@}%
-                       {\normalfont\normalsize\itshape
+                       {\normalfont\normalsize\bfseries\itshape
+                        \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
+
+\newcommand\subsubruninhead{\@startsection{paragraph}{4}{\z@}%
+                       {-6\p@}% \p@lus -4\p@ \@minus -4\p@}%
+                       {0.1\p@}%
+                       {\normalfont\normalsize\bfseries
                         \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
 
 % Appendix
@@ -873,8 +880,8 @@ passing it to article class \MessageBreak
 \newcommand{\upi}{\allmodesymb{\greeksym}{p}}
 \newcommand{\utau}{\allmodesymb{\greeksym}{t}}
 % redefines the \vec accent to a bold character - if desired
-\def\fig@type{arrow}% temporarily abused
-\ifx\vec@style\fig@type\else
+\def\vec@type{arrow}% temporarily abused
+\AtBeginDocument{\ifx\vec@style\vec@type\else
 \@ifundefined{vec@style}{%
  \def\vec#1{\ensuremath{\mathchoice
                      {\mbox{\boldmath$\displaystyle\mathbf{#1}$}}
@@ -888,7 +895,7 @@ passing it to article class \MessageBreak
                      {\mbox{\boldmath$\scriptstyle#1$}}
                      {\mbox{\boldmath$\scriptscriptstyle#1$}}}}%
 }
-\fi
+\fi}
 % tensor
 \def\tens#1{\relax\ifmmode\mathsf{#1}\else\textsf{#1}\fi}
 
@@ -1362,7 +1369,8 @@ to\z@{\kern0.55\wd0\vrule\@height0.45\ht0\hss}\box0}}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\@thmcountersep{.}
-\def\@thmcounterend{.}
+%\def\@thmcounterend{.}
+\def\@thmcounterend{}%%As per request email dated 27 Feb 2018%%
 \newcommand\nocaption{\noexpand\@gobble}
 \newdimen\spthmsep \spthmsep=3pt
 
@@ -1459,7 +1467,7 @@ to\z@{\kern0.55\wd0\vrule\@height0.45\ht0\hss}\box0}}}}
 
 %definition of divers theorem environments
 \spnewtheorem*{claim}{Claim}{\itshape}{\rmfamily}
-\spnewtheorem*{proof}{Proof}{\itshape}{\rmfamily}
+%\spnewtheorem*{proof}{Proof}{\itshape}{\rmfamily}
 %
 \if@envcntsame % all environments like "Theorem" - using its counter
    \def\spn@wtheorem#1#2#3#4{\@spothm{#1}[theorem]{#2}{#3}{#4}}
@@ -1874,7 +1882,7 @@ to\z@{\kern0.55\wd0\vrule\@height0.45\ht0\hss}\box0}}}}
     \vskip 1.5em               % Vertical space after date.
   \fi
  \vfill
- {\Large Springer\par}
+ {\Large Springer Nature\par}
 %\vskip 5\p@
 %\large
 %  Berlin\enspace Heidelberg\enspace New\kern0.1em York\\
@@ -1938,6 +1946,320 @@ to\z@{\kern0.55\wd0\vrule\@height0.45\ht0\hss}\box0}}}}
 
 
 \ps@headings
+
+%%%SOPHIE TEMPLATE BEGIN%%%
+
+\RequirePackage[x11names]{xcolor}
+
+\definecolor{trailer}{gray}{0.9}
+\definecolor{example}{gray}{0.85}
+\definecolor{question}{gray}{0.8}
+\definecolor{important}{gray}{0.75}
+\definecolor{warning}{gray}{0.7}
+\definecolor{programcode}{gray}{0.65}
+\definecolor{tips}{gray}{0.6}
+\definecolor{overview}{gray}{0.55}
+\definecolor{backgroundinformation}{gray}{0.5}
+\definecolor{legaltext}{gray}{0.45}
+
+\newcommand\circledmark[2][white]{%
+  \ooalign{%
+    \hidewidth
+    \kern0.65ex\raisebox{-1.3ex}{\scalebox{3}{\textcolor{#1}{\textbullet}}}
+    \hidewidth\cr
+    #2\cr
+  }%
+}
+
+\def\formtmp#1#2{{\vskip12pt\noindent\fboxsep=0pt\colorbox{#1}{\vbox{\vskip3pt\hbox to \textwidth{\hskip3pt\vbox{\raggedright\noindent\textbf{#2\vphantom{Qy}}}\hfill}\vspace*{3pt}}}\par\vskip2pt%
+\noindent\kern0pt}}
+
+\newenvironment{trailer}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{trailer}{#1}}{\par\noindent\textcolor{trailer}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+
+\renewenvironment{example}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{example}{#1}}{\par\noindent\textcolor{example}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+
+\renewenvironment{question}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{question}{\ \circledmark[white]{\textcolor{black}{\sf\bfseries?}}{\kern6pt}#1}}{\par\noindent\textcolor{question}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+
+\newenvironment{important}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{important}{\ \circledmark{\textcolor{black}{$\ >$}}{\kern6pt}#1}}{\par\noindent\textcolor{important}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+
+\newenvironment{warning}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{warning}{\ \circledmark[white]{\textcolor{black}{!}}{\kern6pt}#1}}{\par\noindent\textcolor{warning}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+
+\newenvironment{programcode}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{programcode}{#1}}{\noindent\textcolor{programcode}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+
+\newenvironment{tips}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{tips}{#1}}{\par\noindent\textcolor{tips}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+
+\newenvironment{overview}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{overview}{#1}}{\par\noindent\textcolor{overview}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+ 
+\newenvironment{backgroundinformation}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{backgroundinformation}{#1}}{\par\noindent\textcolor{backgroundinformation}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+
+\newenvironment{legaltext}[1]{\ignorespaces\def\stmtopen##1{##1}%
+\formtmp{legaltext}{#1}}{\par\noindent\textcolor{legaltext}{\rule{\columnwidth}{1pt}}\vskip2pt\par\addvspace{\baselineskip}}%
+
+\newenvironment{newshaded}{%
+  \def\FrameCommand{\fboxsep=0pt \colorbox{shadecolor}}%
+  \MakeFramed
+{\FrameRestore}}%
+{\endMakeFramed}
+\AtBeginDocument{\renewenvironment{svgraybox}%
+       {\fboxsep=12pt\relax
+        \begin{newshaded}\vspace*{10pt}%
+        \list{}{\leftmargin=12pt\rightmargin=12pt\topsep=\z@\relax}%
+        \expandafter\item\parindent=\svparindent
+        \hskip-\listparindent}%
+       {\vspace*{10pt}\endlist\end{newshaded}}}%
+
+\def\boxtext#1{\vskip\baselineskip\moveleft26pt\vbox{\fboxsep3pt\fbox{#1}}}%
+
+\newcommand\guisection{\@startsection{section}{1}{\z@}%
+                       {-18\p@}% \p@lus -4\p@ \@minus -4\p@}%
+                       {4\p@}% \p@lus 4\p@ \@minus 4\p@}%
+                       {\normalfont\secsize\secstyle
+                        \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
+\newcommand\guisubsection{\@startsection{subsection}{2}{\z@}%
+                       {-18\p@}% \p@lus -4\p@ \@minus -4\p@}%
+                       {4\p@}% \p@lus 4\p@ \@minus 4\p@}%
+                       {\normalfont\subsecsize\subsecstyle
+                        \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
+
+\newenvironment{refguide}
+{\let\section\guisection%
+\let\subsection\guisubsection}
+{}
+
+                        %%%SOPHIE TEMPLATE END%%%
+
+\usepackage[thmmarks,thref]{ntheorem} 
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\bfseries\itshape}
+\theorembodyfont{\upshape}
+\theoremsymbol{\ensuremath{\square}}
+\newtheorem{proof}{Proof} 
+\gdef\NoneSymbol{}
+
+\makeatletter
+
+% MiniTOC
+% one outputstream for all minitocs
+\newwrite\minitoc
+\let\MiniTOC=N % switch for MT processing in .aux files
+\newcounter{minitocdepth}
+\setcounter{minitocdepth}{0}
+% LaTeX does not provide a command to enter the authors institute
+% addresses. The \institute command is defined here.
+\newcounter{@inst}
+\newcounter{@auth}
+\newcounter{auco}
+\newdimen\instindent
+\newbox\authrun
+\newtoks\authorrunning
+\newtoks\tocauthor
+\newbox\titrun
+\newtoks\titlerunning
+\newtoks\toctitle
+\def\clearheadinfo{\gdef\@author{No Author Given}%
+                   \gdef\@title{No Title Given}%
+                   \gdef\@subtitle{}%
+                   \gdef\@institute{}%
+                   \gdef\@thanks{}%
+                   \global\titlerunning={}\global\authorrunning={}%
+                   \global\toctitle={}\global\tocauthor={}}
+\def\institute#1{\gdef\@institute{#1}}
+\def\guidetitle{\@ifstar\s@title\n@title}
+\def\s@title#1{\gdef\@title{#1}\ds@numart}
+\def\n@title#1{\gdef\@title{#1}\ds@book}
+\def\institutename
+ {\begingroup
+ \if!\@institute!\else
+ \def\thanks##1{\unskip{}}%
+ \def\iand{\\[5pt]\let\and=\nand}%
+ \def\nand{\ifhmode\unskip\nobreak\fi\ $\cdot$ }%
+ \let\and=\nand
+ \def\at{\\\let\and=\iand}%
+ \footnotetext[0]{\kern-\bibindent
+ \ignorespaces\@institute}\vspace{5dd}\fi
+ \endgroup
+ }%
+\clearheadinfo
+\newcounter{contribution}
+\def\chap@hangfrom#1{\if!#1!\else
+\@chapapp\ #1\vskip2pt\fi}%
+\newcommand\guidemaketitle{\par\startnewpage
+  \stepcounter{section}%
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \setcounter{figure}{0}
+  \setcounter{table}{0}
+  \setcounter{equation}{0}
+  \setcounter{footnote}{0}%
+  \if@numart
+     \stepcounter{chapter}%
+     \addtocounter{chapter}{-1}%
+  \else
+     \refstepcounter{chapter}%
+  \fi
+  \stepcounter{contribution}%
+  \immediate\write\@auxout{\string\immediate\string\closeout\string\minitoc}%
+  \immediate\write\@auxout{\let\MiniTOC=N}%
+% try to be hyperref-compatible
+  \csname phantomsection\endcsname
+  \begingroup
+    \parindent=\z@
+%%%%%%%%%    \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+%
+    \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+    \def\@makefnmark{$^{\@thefnmark}$}%
+    \renewcommand\@makefntext[1]{%
+    \noindent
+    \hb@xt@\bibindent{\hss\@makefnmark\enspace}##1\vrule height0pt
+    width0pt depth8pt}
+%
+    \if@twocolumn
+      \ifnum \col@number=\@ne
+        \@maketitle
+      \else
+        \twocolumn[\@maketitle]%
+      \fi
+    \else
+      \newpage
+      \global\@topnum\z@   % Prevents figures from going at top of page.
+      \@maketitle
+    \fi
+    \@ifundefined{thispagecropped}{}{\thispagecropped}
+    \thispagestyle{bchap}\@thanks
+%
+    \def\\{\unskip\ \ignorespaces}\def\inst##1{\unskip{}}%
+    \def\thanks##1{\unskip{}}\def\fnmsep{\unskip}%
+    \instindent=\hsize
+    \advance\instindent by-\headlineindent
+    \if@numart % keine Nummer
+        \if!\the\toctitle!\addcontentsline{toc}{title}{\@title}\else
+        \addcontentsline{toc}{title}{\the\toctitle}\fi
+    \else
+        \if!\the\toctitle!\addcontentsline{toc}{titlech}{\protect\numberline{\thechapter\thechapterend}\@title}\else
+        \addcontentsline{toc}{titlech}{\protect\numberline{\thechapter\thechapterend}\the\toctitle}\fi
+    \fi
+    \if@runhead
+       \if!\the\titlerunning!\else
+         \edef\@title{\the\titlerunning}%
+       \fi
+       \global\setbox\titrun=\hbox{\small\rm\unboldmath\if@numart\else
+                                   \@seccntformat{chapter}\fi
+                                   \ignorespaces\@title}%
+       \ifdim\wd\titrun>\instindent
+          \typeout{Title too long for running head. Please supply}%
+          \typeout{a shorter form with \string\titlerunning\space prior to
+                   \string\maketitle}%
+          \global\setbox\titrun=\hbox{\small\rm
+          Title Suppressed Due to Excessive Length}%
+       \fi
+       \xdef\@title{\copy\titrun}%
+    \fi
+%
+    \if!\the\tocauthor!\relax
+      {\def\and{\noexpand\protect\noexpand\and}%
+      \protected@xdef\toc@uthor{\@author}}%
+    \else
+      \def\\{\noexpand\protect\noexpand\newline}%
+      \protected@xdef\scratch{\the\tocauthor}%
+      \protected@xdef\toc@uthor{\scratch}%
+    \fi
+    \addtocontents{toc}{\noexpand\protect\noexpand\authcount{\the\c@auco}}%
+    \if@numart
+       \addcontentsline{toc}{author}{\toc@uthor}%
+    \else
+       \addcontentsline{toc}{authorch}{\toc@uthor}%
+    \fi
+    \if@runhead
+       \if!\the\authorrunning!
+         \value{@inst}=\value{@auth}%
+         \setcounter{@auth}{1}%
+       \else
+         \edef\@author{\the\authorrunning}%
+       \fi
+       \global\setbox\authrun=\hbox{\small\unboldmath\@author\unskip}%
+       \ifdim\wd\authrun>\instindent
+          \typeout{Names of authors too long for running head. Please supply}%
+          \typeout{a shorter form with \string\authorrunning\space prior to
+                   \string\maketitle}%
+          \global\setbox\authrun=\hbox{\small\rm
+          Authors Suppressed Due to Excessive Length}%
+       \fi
+       \xdef\scratch{\copy\authrun}%
+       \markboth{\scratch}{\@title}%
+     \fi
+  \endgroup
+% \setcounter{footnote}{0}% footnote starts at (\inst+1)
+  \@afterindentfalse\@afterheading
+  \clearheadinfo}
+%
+\def\@guidemaketitle{\newpage
+ \markboth{}{}%
+ \def\lastand{\ifnum\value{@inst}=2\relax
+                 \unskip{} \andname\
+              \else
+                 \unskip \lastandname\
+              \fi}%
+ \def\and{\stepcounter{@auth}\relax
+          \ifnum\value{@auth}=\value{@inst}%
+             \lastand
+          \else
+             \unskip,
+          \fi}%
+  \raggedright
+ {\chapnumsize
+%  \chapnumstyle
+  \pretolerance=10000
+  \let\\=\newline
+% \@hangfrom{\@svsec}%
+%%%  \@svsec
+  \raggedright
+  \hyphenpenalty \@M
+  \interlinepenalty \@M
+  \if@numart
+     \chap@hangfrom{}%!!!
+  \else
+%     \chap@hangfrom{\thechapter\thechapterend\hskip\betweenumberspace}%!!!
+  \fi
+  \ignorespaces
+  \chapsize
+%  \chapstyle
+  \@title \par}\vskip .8cm
+\if!\@subtitle!\else {\chapnumsize\chapnumstyle
+  \vskip -.65cm
+  \pretolerance=10000
+  \@subtitle \par}\vskip .8cm\fi
+ \setbox0=\vbox{\setcounter{@auth}{1}\def\and{\stepcounter{@auth}}%
+ \def\thanks##1{}\@author}%
+ \global\value{@inst}=\value{@auth}%
+ \global\value{auco}=\value{@auth}%
+ \setcounter{@auth}{1}%
+{\lineskip .5em
+ \noindent\ignorespaces
+ \@author\vskip.35cm}
+ \processmotto % {\small\institutename\par}
+ \institutename
+ \ifdim\pagetotal>157\p@
+     \vskip 11\p@
+ \else
+     \@tempdima=168\p@\advance\@tempdima by-\pagetotal
+     \vskip\@tempdima
+ \fi
+}%
+
+\def\guidelinedefn{\let\title\guidetitle%
+\let\maketitle\guidemaketitle%
+\let\@maketitle\@guidemaketitle}%
+
+\makeatother
 
 \endinput
 %end of file svmono.cls

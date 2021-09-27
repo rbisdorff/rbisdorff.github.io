@@ -106,7 +106,7 @@
 \contentsline {lstlisting}{\numberline {12.3}Inspecting polarised outranking situations}{167}{lstlisting.12.3}%
 \contentsline {lstlisting}{\numberline {12.4}Alice's best choice recommendation}{168}{lstlisting.12.4}%
 \contentsline {lstlisting}{\numberline {12.5}Alice's strict best choice recommendation}{168}{lstlisting.12.5}%
-\contentsline {lstlisting}{\numberline {12.6}Weakly ranking by bipolar best-choosing and last-rejecting}{170}{lstlisting.12.6}%
+\contentsline {lstlisting}{\numberline {12.6}Weakly ranking by bipolar best-choosing and last-rejecting}{169}{lstlisting.12.6}%
 \contentsline {lstlisting}{\numberline {12.7}Computing the 90\% confident outranking digraph}{171}{lstlisting.12.7}%
 \contentsline {lstlisting}{\numberline {12.8}Computing the $90\%$-confident best choice recommendation.}{171}{lstlisting.12.8}%
 \contentsline {lstlisting}{\numberline {12.9}Computing the unopposed outranking situations}{172}{lstlisting.12.9}%
@@ -166,7 +166,7 @@
 \contentsline {lstlisting}{\numberline {17.19}Computing a dominant prekernel restricted adjancecy table}{250}{lstlisting.17.19}%
 \contentsline {lstlisting}{\numberline {17.20}Fixpoint iterations for initial prekernel \texttt {\{a1, a2, a4\}}}{251}{lstlisting.17.20}%
 \contentsline {lstlisting}{\numberline {18.1}Computing a 90\% confident outranking dugraph}{262}{lstlisting.18.1}%
-\contentsline {lstlisting}{\numberline {18.2}$90\%$-confident outranking relation with triangular distributed significance weights}{262}{lstlisting.18.2}%
+\contentsline {lstlisting}{\numberline {18.2}$90\%$-confident outranking relation with triangular distributed significance weights}{263}{lstlisting.18.2}%
 \contentsline {lstlisting}{\numberline {18.3}$99\%$-confident outranking relation}{264}{lstlisting.18.3}%
 \contentsline {lstlisting}{\numberline {18.4}$90\%$-confident outranking digraph with uniform variates}{265}{lstlisting.18.4}%
 \contentsline {lstlisting}{\numberline {19.1}Generate a Random 3 Objectives Performance Tableau}{267}{lstlisting.19.1}%

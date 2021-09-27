@@ -47,7 +47,7 @@ We suppose in this rating case study that five German universities: \texttt{U1},
 
 In Table~\vref{tab:14.1}, the fifteen popular academic subjects are grouped into topical 'Faculties': - \emph{Humanities}; - \emph{Law, Economics \& Management}; - \emph{Life Sciences \& Medicine}; - \emph{Natural Sciences \& Mathematics}; and - \emph{Technology}. None of the five universities has students enrolled in all the fifteen subjects. University U1 has, for instance, no students in Life Sciences \& Medicine, and in Law and Politology. Whereas the University U5 does not offer any Technology subjects.
 
-The average enrolment quality scores of the five universities, shown in Table~\vref{tab:14.1} are stored in a file named \texttt{ratingCaseStudy.py} of \texttt{PerformanceTableau} format\footnote{The file may be found in the \texttt{examples} directory of the \Digraph resources.}. The \texttt{showHTMLPerformanceTableau()}  method produces in Figure~\vref{fig:14.1} a colourful browser view of these performance records. 
+The average enrolment quality scores of the five universities, shown in Table~\vref{tab:14.1} are stored in a file named \texttt{ratingCaseStudy.py} of \texttt{PerformanceTableau} format\footnote{The file may be found in the \texttt{examples} directory of the \Digraph resources.}. The \texttt{showHTMLPerformanceTableau()}  method produces in Fig.~\vref{fig:14.1} a colourful browser view of these performance records. 
 \begin{lstlisting}
 >>> from perfTabs import PerformanceTableau
 >>> pt = PerformanceTableau('ratingCaseStudy')
@@ -57,7 +57,7 @@ The average enrolment quality scores of the five universities, shown in Table~\v
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/14-1-enrolmentScores.png}
-\caption[Student enrolment quality scores per subject]{Student enrolment quality scores per subject. The light green, resp. light red, figures indicate highest, resp. lowest, score among the five universities.}
+\caption[Student enrolment quality scores per subject]{\emph{Student enrolment quality scores per subject}\\ The light green, resp. light red, figures indicate highest, resp. lowest, score among the five universities.}
 \label{fig:14.1}       % Give a unique label
 \end{figure}
 
@@ -181,7 +181,7 @@ From the actual ranking position of the lower 5-tiling limits, we may now immedi
    [0.00 - 0.20[ ['U3']
 \end{lstlisting}
 
-A corresponding \emph{graphviz} drawing with the special \texttt{exportRatingByRan\-kingGraphViz()} method\index{exportRatingByRankingGraphViz@\texttt{exportRatingByRankingGraphViz()}} may well illustrate in Figure~\vref{fig:14.4} these enrolment quality equivalence classes.
+A corresponding \emph{graphviz} drawing with the special \texttt{exportRatingByRan\-kingGraphViz()} method\index{exportRatingByRankingGraphViz@\texttt{exportRatingByRankingGraphViz()}} may well illustrate in Fig.~\vref{fig:14.4} these enrolment quality equivalence classes.
 \begin{lstlisting}
 >>> lqr.exportRatingByRankingGraphViz('ratingResult')
   *---- exporting a dot file for GraphViz tools ---------*
@@ -196,7 +196,7 @@ A corresponding \emph{graphviz} drawing with the special \texttt{exportRatingByR
 \end{figure}
 % \clearpage 
 
-We have noticed in Chapter~\ref{sec:8}, that there is not a unique optimal rule for ranking from a given outranking digraph like digraph \texttt{lqr} here. The \Copeland rule, for instance, has the advantage of being \Condorcet consistent, i.e. when the outranking digraph models a linear ranking, this ranking will necessarily be the result of the \Copeland rule. When this is not the case, and especially when the outranking digraph shows chordless circuits, all potential ranking rules may give very divergent ranking results, and sometimes substantially divergent rating-by-ranking results. The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods allow to check this issue \footnote{The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods are separate because there are various methods available for enumerating the chordless circuits in a digraph \citep{BIS-2010}.}.
+We have noticed in Chap.~\ref{sec:8}, that there is not a unique optimal rule for ranking from a given outranking digraph like digraph \texttt{lqr} here. The \Copeland rule, for instance, has the advantage of being \Condorcet consistent, i.e. when the outranking digraph models a linear ranking, this ranking will necessarily be the result of the \Copeland rule. When this is not the case, and especially when the outranking digraph shows chordless circuits, all potential ranking rules may give very divergent ranking results, and sometimes substantially divergent rating-by-ranking results. The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods allow to check this issue \footnote{The \texttt{computeChordlessCircuits()} and \texttt{showChordlessCircuits()} methods are separate because there are various methods available for enumerating the chordless circuits in a digraph \citep{BIS-2010}.}.
 \begin{lstlisting}
 >>> lqr.computeChordlessCircuits()
 >>> lqr.showChordlessCircuits()
@@ -205,7 +205,7 @@ We have noticed in Chapter~\ref{sec:8}, that there is not a unique optimal rule 
 1:  ['U1', 'U2', 'U4'] , credibility : 0.200
 \end{lstlisting}
 
-Indeed, there appears an outranking circuit among the three universities \texttt{U1}, \texttt{U2} and \texttt{U4} rated into the 2nd quintile. It is, hence, interesting, to verify if the epistemic fusion of the rating-by-ranking results, one may obtain when applying three different ranking rules, like the \Kemeny, \Copeland and \NetFlows rules, does actually confirm our rating-by-ranking result shown in Figure~\vref{fig:14.4}. For this purpose we make use in Listing~\vref{list:14.4} of the \texttt{RankingsFusionDigraph} class \index{RankingsFusionDigraph@\texttt{RankingsFusionDigraph} class}.
+Indeed, there appears an outranking circuit among the three universities \texttt{U1}, \texttt{U2} and \texttt{U4} rated into the 2nd quintile. It is, hence, interesting, to verify if the epistemic fusion of the rating-by-ranking results, one may obtain when applying three different ranking rules, like the \Kemeny, \Copeland and \NetFlows rules, does actually confirm our rating-by-ranking result shown in Fig.~\vref{fig:14.4}. For this purpose we make use in Listing~\vref{list:14.4} of the \texttt{RankingsFusionDigraph} class \index{RankingsFusionDigraph@\texttt{RankingsFusionDigraph} class}.
 \begin{lstlisting}[caption={Computing the epistemic fusion of three rating-by-rankig results},label=list:14.4]
 >>> # lqr.actionsRanking is Copeland ranked
 >>> from linearOrders import KemenyOrder,\
@@ -232,11 +232,11 @@ dot -Grankdir=TB -Tpng fusionResult.dot\
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=4cm]{Figures/14-5-fusionResult.pdf}
-\caption[Disjunctive fusion of the \Kemeny, \Copeland and \NetFlows rankings]{\emph{Disjunctive fusion of the \Kemeny, \Copeland and \NetFlows rankings}. They diverge in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}}
+\caption[Disjunctive fusion of the \Kemeny, \Copeland and \NetFlows rankings]{\emph{Disjunctive fusion of the \Kemeny, \Copeland and \NetFlows rankings}\\ They diverge in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}.}
 \label{fig:14.5}       % Give a unique label
 \end{figure}
 
-The fusion of the three rating-by-ranking results is shown in Figure~\vref{fig:14.5} where we see that they diverge solely in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}. In Listing~\vref{list:14.4} Lines~\ref{line:14.4.12}-\ref{line:14.4.14}, one may more precisely notice that the \Kemeny and \Copeland rules rate \texttt{U3} in the first quintile ($[0.00- 0.20[$), whereas the \NetFlows rule puts \texttt{U3} together with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$). And, the \Kemeny rule inverts the position of \texttt{U2} and \texttt{U4}.
+The fusion of the three rating-by-ranking results is shown in Fig.~\vref{fig:14.5} where we see that they diverge solely in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}. In Listing~\vref{list:14.4} Lines~\ref{line:14.4.12}-\ref{line:14.4.14}, one may more precisely notice that the \Kemeny and \Copeland rules rate \texttt{U3} in the first quintile ($[0.00- 0.20[$), whereas the \NetFlows rule puts \texttt{U3} together with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$). And, the \Kemeny rule inverts the position of \texttt{U2} and \texttt{U4}.
 
 In Listing~\vref{list:14.5}, the \texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}} reveals finally how fairly \Kemeny and \Copeland rules actually balance the fifteen academic subjects. 
 \begin{lstlisting}[caption={Checking the consensus quality of the \Kemeny ranking},label=list:14.5,basicstyle=\ttfamily\scriptsize]
@@ -306,7 +306,7 @@ With the help of the bipolar-valued characteristic of the outranking relation $r
 \begin{equation}\label{eq:14.1}
 r(x \in \mathbf{q}_k) \; = \; \min \big[ r\big(x \succsim \mathbf{q}(p_{k-1})\big),\, r\big(x \not\succsim \mathbf{q}(p_{k})\big)\big]
 \end{equation}
-where $k = 1,...5$ and $(p_{k})$ denote the respective quintile proportions: $0.20$, $0.40$, $0.60$, $0.80$ and $1.00$. As bipolar-valued outranking digraphs verify the coduality principle, $r\big(x \not\succsim \mathbf{q}(p_{k}) \big) = r\big(x precnsim \mathbf{q}(p_{k})$ (see Sec.~\ref{sec:9.2}).
+where $k = 1,...5$ and $(p_{k})$ denote the respective quintile proportions: $0.20$, $0.40$, $0.60$, $0.80$ and $1.00$. As bipolar-valued outranking digraphs verify the coduality principle, $r\big(x \not\succsim \mathbf{q}(p_{k}) \big) = r\big(x precnsim \mathbf{q}(p_{k})$ (see Sect.~\ref{sec:9.2}).
 
 The \texttt{showSortingCharacteristics()} method\index{showSortingCharacteristics@\texttt{showSortingCharacteristics()}} gives a precise look in Listing~\vref{list:14.7} on these quintiles sorting characteristics.
 \begin{lstlisting}[caption={Showing quantiles sorting characteristics},label=list:14.7,basicstyle=\ttfamily\scriptsize]
@@ -355,12 +355,12 @@ The \texttt{showActionsSortingResult()} method\index{showActionsSortingResult@\t
   [0.60 - <[: U5 with credibility: 0.60 = min(0.60,1.00)
 \end{lstlisting}
 
-The quintiles rating-by-sorting result, shown in Listing~\vref{list:14.8}, confirms the previous \Copeland rating-by-ranking result. However, University \texttt{U5} is here sorted conjointly into the fourth and the fifth quintile, and as such is part of the top rated institutions. A result already convincingly illustrated in the ranked heatmap shown in Figure~\vref{fig:14.3}.
+The quintiles rating-by-sorting result, shown in Listing~\vref{list:14.8}, confirms the previous \Copeland rating-by-ranking result. However, University \texttt{U5} is here sorted conjointly into the fourth and the fifth quintile, and as such is part of the top rated institutions. A result already convincingly illustrated in the ranked heatmap shown in Fig.~\vref{fig:14.3}.
 
 Let us conclude this hypothetical rating case study, by saying that we prefer this latter rating-by-sorting approach; perhaps less precise, due the case given, to missing and contradictory performance data; yet, well grounded in a powerful bipolar-valued logic and epistemic framework.
 
 \vspace{\baselineskip}
- The next Chapter~\ref{sec:15} proposes a series of decision problems suitable for exercises and exam questions.
+ The next Chap.~\ref{sec:15} proposes a series of decision problems suitable for exercises and exam questions.
  
 %%%%%%% The chapter bibliography
 %\normallatexbib

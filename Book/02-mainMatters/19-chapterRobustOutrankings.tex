@@ -58,7 +58,7 @@ In Listing~\ref{list:19.1} above one may notice a performance tableau \texttt{pt
 \item An \emph{environmental} aspect with a coalition of four performance criteria of significance weight 6 (Line~\ref{line:19.1.33}).
 \end{enumerate}
 
-The question we tackle in this chapter is the following: How \emph{dependent} on the actual values of the significance weights appears to be the corresponding bipolar-valued outranking digraph? In the previous Chapter~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights.
+The question we tackle in this chapter is the following: How \emph{dependent} on the actual values of the significance weights appears to be the corresponding bipolar-valued outranking digraph? In the previous Chap.~\ref{sec:18} we assumed that the criteria significance weights were random variables. Here, we shall assume that we know for sure only the preordering of the significance weights.
 
 In the random performance tableau \texttt{pt} we observe three increasing weight equivalence classes.
 \begin{lstlisting}[caption={The significance weights preorder},label=list:19.2]
@@ -384,7 +384,7 @@ Polarisation: r(p6 >= p4) = -0.36 ==> -1.00    §\label{line:19.8.18}§
 
 Despite being robust, the ``\emph{at least as well evaluated as}'' situation between alternatives \texttt{p2} and \texttt{p4} becomes doubtful because of a considerable counter-performance ($-60.02$) of \texttt{p2} observed on criterion \texttt{en3}, a negative difference which exceeds slightly the assumed veto discrimination threshold $v = 60.00$ . Same polarisation to $0.00$ (indeterminate) happens when comparing alternatives \texttt{p6} and \texttt{p3} (Line~\ref{line:19.8.13}). Notice the polarisation to $-1.0$ (certainly false) of the ``\emph{at least as well evaluated as}'' situation between alternatives \texttt{p6} and \texttt{p4} (Line~\ref{line:19.8.18}).  
 
-One may finally compare in Figure~\vref{fig:19.1} the \emph{standard} and the \emph{robust} version of the corresponding strict outranking digraphs, both oriented by their respective identical initial and terminal prekernels.
+One may finally compare in Fig.~\vref{fig:19.1} the \emph{standard} and the \emph{robust} version of the corresponding strict outranking digraphs, both oriented by their respective identical initial and terminal prekernels.
 \begin{figure}[ht]
   % \sidecaption
   Standard strict outranking digraph \hfill Robust strict outranking digraph \\
@@ -396,7 +396,7 @@ One may finally compare in Figure~\vref{fig:19.1} the \emph{standard} and the \e
    
 The robust version (right in Fig.~\vref{fig:19.1}) drops two strict outranking situations: between \texttt{p4} and \texttt{p7} and between \texttt{p7} and \texttt{p1}. The remaining 14 strict outranking (resp. outranked) situations are now all verified at a stability level of $+2$ and more (resp. $-2$ and less). They remain valid, hence, with all potential significance weights that are compatible with the given significance weights preordering (see List.~\vref{list:19.2}).
 
-To appreciate the apparent partial ordering of both the standard and the robust strict outranking digraphs shown in Figure~\vref{fig:19.1}, let us have in Figure~\vref{fig:19.2} a final heatmap view on the underlying performance tableau ordered by the \NetFlows ranking rule actually applied to the robust version of the outranking digraph (see the \texttt{outrankingModel='this'} flag in Line~\ref{line:19.9.4} below).
+To appreciate the apparent partial ordering of both the standard and the robust strict outranking digraphs shown in Fig.~\vref{fig:19.1}, let us have in Fig.~\vref{fig:19.2} a final heatmap view on the underlying performance tableau ordered by the \NetFlows ranking rule actually applied to the robust version of the outranking digraph (see the \texttt{outrankingModel='this'} flag in Line~\ref{line:19.9.4} below).
 \begin{lstlisting}[caption={Computing a robust performance heatmap view},label=list:19.9]
 >>> rg.showHTMLPerformanceHeatmap(\
 ...           Correlations=True,\
@@ -561,7 +561,7 @@ Indeed, best choice recommendations, computed from an \emph{unopposed multiobjec
 
 Our previous \emph{robust} best choice recommendation (\texttt{p2} and \texttt{p4}, see Fig.~\vref{fig:19.1}) remains, in this example here, \emph{stable}. We recover indeed the best choice recommendation [\texttt{p2}, \texttt{p4}, \texttt{p7}] (see List.~\vref{list:19.13} Line~\ref{line:19.13.6}). Yet, notice that decision alternative \texttt{p7} appears to be at the same time a potential \emph{first} as well as a potential \emph{last} choice recommendation (see Line~\ref{line:19.13.13}), a consequence of \texttt{p7} being completely \emph{incomparable} to the other decision alternatives when restricting the comparability to only unopposed strict outranking situations. 
 
-This kind of Pareto efficient result is shown in Figure~\vref{fig:19.3}.
+This kind of Pareto efficient result is shown in Fig.~\vref{fig:19.3}.
 \begin{lstlisting}
 >>> (~(-uopg)).exportGraphViz(fileName = 'unopDigraph',\
 ...                           firstChoice = ['p2','p4'],\
@@ -584,7 +584,7 @@ In order to make now an eventual best unique choice, a decision maker will neces
 For concluding, let us mention that it is precisely again our bipolar-valued logical characteristic framework that provides us here with a first order distributional dominance test for effectively qualifying the stability level $\pm 2$ robustness of an outranking digraph when facing performance tableaux with criteria of only ordinal-valued significance. A real-world application of our stability analysis with such a kind of performance tableau may be consulted in \citep{BIS-2015bestPoster}.
 
 \vspace{\baselineskip}
-In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient best choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously temper plurality tyranny effects. This idea is developed in the following Chapter~\ref{sec:20}.
+In a \emph{social choice} context, where decision objectives would match different political parties, Pareto efficient best choice recommendations represent in fact \emph{multipartisan} social choices that may judiciously temper plurality tyranny effects. This idea is developed in the following Chap.~\ref{sec:20}.
 
 %\vspace{1cm}
 

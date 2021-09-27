@@ -252,7 +252,7 @@ The resulting sparse outranking relation is shown with the \texttt{showHTMLRela\
 \end{figure}
 %\clearpage
 
-In Figure~\vref{fig:9.1} we easily recognise the 9 linearly ordered quantile equivalence classes. \emph{Green} and \emph{light-green} pixels show positive \emph{outranking} situations, whereas positive \emph{outranked} --negative outranking-- situations are shown in \emph{red} and \emph{light-red}. Indeterminate situations appear in white. In each one of the 9 quantile equivalence classes we recover the corresponding bipolar-valued outranking \emph{sub-relation}, which leads to an actual \emph{fill-rate} of $20.4\%$ (see List.~\vref{list:9.6} Line~\ref{line:9.6.19}).
+In Fig.~\vref{fig:9.1} we easily recognise the 9 linearly ordered quantile equivalence classes. \emph{Green} and \emph{light-green} pixels show positive \emph{outranking} situations, whereas positive \emph{outranked} --negative outranking-- situations are shown in \emph{red} and \emph{light-red}. Indeterminate situations appear in white. In each one of the 9 quantile equivalence classes we recover the corresponding bipolar-valued outranking \emph{sub-relation}, which leads to an actual \emph{fill-rate} of $20.4\%$ (see List.~\vref{list:9.6} Line~\ref{line:9.6.19}).
 
 Computing the ordinal correlation between the sparse and the standard outranking digraph allows to check how faithful the sparse model represents the complete outranking relation.
 \begin{lstlisting}
@@ -294,7 +294,7 @@ In Listing~\vref{list:9.8} Lines~\ref{line:9.8.9}-\ref{line:9.8.10}, all reflexi
 \section{Ranking pre-ranked sparse outranking digraphs}
 \label{sec:9.4}
 
-Each one of these nine ordered components is locally ranked by using a suitable ranking rule. Best operational results, both in run times and quality, are more or less equally obtained with the \Copeland and the \NetFlows rules (see Sec.~\ref{sec:8.2} and Sec.~\ref{sec:8.3}). The eventually obtained linear ordering (from the worst to best) is stored in a \texttt{prg.boostedOrder} attribute. A reversed linear order (from the best to the worst) is stored in a \texttt{prg.boostedRanking} attribute.
+Each one of these nine ordered components is locally ranked by using a suitable ranking rule. Best operational results, both in run times and quality, are more or less equally obtained with the \Copeland and the \NetFlows rules (see Sect.~\ref{sec:8.2} and Sect.~\ref{sec:8.3}). The eventually obtained linear ordering (from the worst to best) is stored in a \texttt{prg.boostedOrder} attribute. A reversed linear order (from the best to the worst) is stored in a \texttt{prg.boostedRanking} attribute.
   \begin{lstlisting}
 >>> prg.boostedRanking
   [43, 47, 42, 5, 73, 65, 68, 32, 62, 70, 35, 22, 75, 45, 1,
@@ -325,7 +325,7 @@ One may also verify below that the \Copeland ranking obtained, for instance, fro
 \end{lstlisting}
 
 \vspace{\baselineskip}
-Noticing the computational efficiency of the quantiles sorting construction, coupled with the separability property of the quantile class membership characteristics computation, we will make usage of the \texttt{PreRankedOutrankingDigraph} constructor in Chapter~\ref{sec:11} for HPC ranking big and even huge performance tableaux \citep{BIS-2016}. The next Chapter~\ref{sec:10} addresses now the problem of absolute rating into learned quantile performance norms.
+Noticing the computational efficiency of the quantiles sorting construction, coupled with the separability property of the quantile class membership characteristics computation, we will make usage of the \texttt{PreRankedOutrankingDigraph} constructor in Chap.~\ref{sec:11} for HPC ranking big and even huge performance tableaux \citep{BIS-2016}. The next Chap.~\ref{sec:10} addresses now the problem of absolute rating into learned quantile performance norms.
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

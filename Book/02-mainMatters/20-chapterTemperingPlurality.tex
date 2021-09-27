@@ -13,12 +13,12 @@
 
 \paragraph{\textbf{Introduction}}
 
-From the seminal work by \emph{Bernard Roy}\index{Roy@\textsl{B. Roy}} on, tempering plurality tyranny effects is achieved in the outranking approach by taking into account considerable negative performance differences that render doubtful otherwise positive ``\emph{at least as well evaluated as}'' situations \citep*{ROY-1966}. In the social choice context of general elections, such a polarisation is not feasible as the genuine uninominal voting ballots do not contain a rich enough preferential information. Yet, when matching decision objectives with political parties, the Pareto efficient outranking situations seen in Section~\ref{sec:19.6}, correspond to multipartisan ``\emph{at least as well approved as}'' situations when pairwisely comparing the eligible candidates. A best choice recommendation based of the corresponding multipartisan strict ``\emph{better approved as}'' situations may, the case given, deliver a convincing primary selection in a two-stage election. 
+From the seminal work by \emph{Bernard Roy}\index{Roy@\textsl{B. Roy}} on, tempering plurality tyranny effects is achieved in the outranking approach by taking into account considerable negative performance differences that render doubtful otherwise positive ``\emph{at least as well evaluated as}'' situations \citep*{ROY-1966}. In the social choice context of general elections, such a polarisation is not feasible as the genuine uninominal voting ballots do not contain a rich enough preferential information. Yet, when matching decision objectives with political parties, the Pareto efficient outranking situations seen in Sect.~\ref{sec:19.6}, correspond to multipartisan ``\emph{at least as well approved as}'' situations when pairwisely comparing the eligible candidates. A best choice recommendation based of the corresponding multipartisan strict ``\emph{better approved as}'' situations may, the case given, deliver a convincing primary selection in a two-stage election. 
 
 \section{Two-stage elections with multipartisan primary selection}
 \label{sec:20.1}
 
-To compute multipartisan social choices we need to, first, convert a given linear voting profile with pre-election polls into a corresponding performance tableau. We shall illustrate this point with a voting profile we discussed already in Chapter~\ref{sec:7}.
+To compute multipartisan social choices we need to, first, convert a given linear voting profile with pre-election polls into a corresponding performance tableau. We shall illustrate this point with a voting profile we discussed already in Chap.~\ref{sec:7}.
 \begin{lstlisting}[caption={Example of a 3 parties voting profile},label=list:20.1]
 >>> from votingProfiles import RandomLinearVotingProfile
 >>> lvp = RandomLinearVotingProfile(numberOfCandidates=15,
@@ -92,7 +92,7 @@ We can convert this linear voting profile into a \texttt{PerformanceTableau} obj
 
 In Listing~\vref{list:20.2} the linear voting profile lvp is first stored in \texttt{Performance\-Tableau} format (see Line~\ref{line:20.2.1}). In Line~\ref{line:20.2.3}, the PerformanceTableau class reloads this stored performance tableau data. The three parties of the linear voting profile represent three decision objectives and the 1000 voters are distributed as 1000 performance criteria according to the party they support.
 
-In order to operate now a \emph{primary multipartisan selection} of potential election winners, we compute the corresponding unopposed multiobjective outranking digraph (see Sec.~\ref{sec:19.5}).
+In order to operate now a \emph{primary multipartisan selection} of potential election winners, we compute the corresponding unopposed multiobjective outranking digraph (see Sect.~\ref{sec:19.5}).
 \begin{lstlisting}[caption={Computing unopposed multiobjective outranking situations},label=list:20.3]
 >>> from outrankingDigraphs import \
 ...       UnOpposedBipolarOutrankingDigraph
@@ -147,7 +147,7 @@ The corresponding bipolar-valued relation table can be shown by orienting the li
 \label{fig:20.1}       % Give a unique label
 \end{figure}
 
-In Figure~\vref{fig:20.1}, we may notice that the dominating outranking prekernel \{\texttt{c06}, \texttt{c11}, \texttt{c13}, \texttt{c15}\} gathers in fact a multipartisan selection of potential election winners. It is worthwhile noticing that the majority margins obtained from a linear voting profile do verify the zero-sum rule: $\big(\,r(x \succsim y) \,+\, r(y \succsim x) \;=\; 0.0\,\big)$. To each positive outranking situation corresponds an equivalent negative converse situation and the resulting outranking and strict outranking digraphs are the same.
+In Fig.~\vref{fig:20.1}, we may notice that the dominating outranking prekernel \{\texttt{c06}, \texttt{c11}, \texttt{c13}, \texttt{c15}\} gathers in fact a multipartisan selection of potential election winners. It is worthwhile noticing that the majority margins obtained from a linear voting profile do verify the zero-sum rule: $\big(\,r(x \succsim y) \,+\, r(y \succsim x) \;=\; 0.0\,\big)$. To each positive outranking situation corresponds an equivalent negative converse situation and the resulting outranking and strict outranking digraphs are the same.
 
 When restricting now, in a secondary election stage, the set of eligible candidates to this dominating prekernel, we may compute the actual best social choice.
 \begin{lstlisting}[caption={Recommending the secondary election winner},label=list:20.5]
@@ -290,7 +290,7 @@ Valuation domain: [-500;+500]
 
 But in our example here, we are lucky. When constructing with the pairwise majority margins digraph (Line~\ref{line:20.8.6}), a \Condorcet winner, namely \texttt{a3}, becomes apparent (Lines~\ref{line:20.8.13} and \ref{line:20.8.20}), which is also one of the two \Borda winners (Line~\ref{line:20.8.22}). More interesting even is to notice that the apparent majority margins digraph models in fact a linear ranking [\texttt{a3}, \texttt{a7}, \texttt{a6}, \texttt{a2}, \texttt{a5}, \texttt{a4}, \texttt{a1}] of all the eligible candidates, as shown with a \Copeland ranking rule (Line~\ref{line:20.8.24}).
 
-In Figure~\vref{fig:20.2}, this linear ranking is shown with a graphviz drawing where all transitive arcs are dropped and the drawing is oriented with the \Condorcet winner \texttt{a3} and loser \texttt{a1} (Line~\ref{line:fl.3} below).
+In Fig.~\vref{fig:20.2}, this linear ranking is shown with a graphviz drawing where all transitive arcs are dropped and the drawing is oriented with the \Condorcet winner \texttt{a3} and loser \texttt{a1} (Line~\ref{line:fl.3} below).
 \begin{lstlisting}
 >>> cg.closeTransitive(Reverse=True)
 >>> cg.exportGraphViz('divGraph',\
@@ -483,9 +483,9 @@ These pairwise $r(x \succ y)$ values can be inspected in a browser view with the
 \label{fig:20.3}       % Give a unique label
 \end{figure}
 
-In Figure~\vref{fig:20.3} it gets apparent that Candidate \texttt{c12} is a \Condorcet winner, i.e. the candidate who beats all the other candidates and, with the given voting profile \texttt{gavp}, should without doubt win the election. This strongly confirms the first-ranked result obtained with the previous net approval scoring. 
+In Fig.~\vref{fig:20.3} it gets apparent that Candidate \texttt{c12} is a \Condorcet winner, i.e. the candidate who beats all the other candidates and, with the given voting profile \texttt{gavp}, should without doubt win the election. This strongly confirms the first-ranked result obtained with the previous net approval scoring. 
 
-Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{See Sec.~\ref{sec:8.3}.}, a linear ranking of the 15 eligible candidates and compare the result with the net approval scores ranking.
+Let us eventually compute, with the help of the \NetFlows ranking rule\footnote{See Sect.~\ref{sec:8.3}.}, a linear ranking of the 15 eligible candidates and compare the result with the net approval scores ranking.
 \begin{lstlisting}[caption={Comparing the net approval and the \NetFlows rankings},label=list:20.11]
 >>> from linearOrders import NetFlowsOrder
 >>> nf = NetFlowsOrder(m,Comments=True)

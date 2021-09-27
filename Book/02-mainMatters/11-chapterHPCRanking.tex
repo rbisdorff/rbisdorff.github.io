@@ -1,9 +1,9 @@
 \chapter{HPC ranking of big performance tableaux}
 \label{sec:11}
 
-\abstract*{ The sparse outranking digraph, introduced in Chapter~\ref{sec:9} is suitable for tackling the ranking of big multiple-criteria performance tableaux with thousands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
+\abstract*{ The sparse outranking digraph, introduced in Chap.~\ref{sec:9} is suitable for tackling the ranking of big multiple-criteria performance tableaux with thousands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipement as available, for instance at the University of Luxembourg.}
 
-\abstract{ The sparse outranking digraph, introduced in Chapter~\ref{sec:9} is suitable for tackling the ranking of big multiple-criteria performance tableaux with thousands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipment as available, for instance at the University of Luxembourg.}
+\abstract{ The sparse outranking digraph, introduced in Chap.~\ref{sec:9} is suitable for tackling the ranking of big multiple-criteria performance tableaux with thousands or millions of records. To effectively compute rankings from performance tableaux of these sizes, we propose in this chapter a collection of C-compiled and optimised \Digraph modules that may be run on HPC equipment as available, for instance at the University of Luxembourg.}
 
 \section{C-compiled Python modules}
 \label{sec:11.1}
@@ -129,7 +129,7 @@ The C compiled version of the \texttt{BipolarOutrankingDigraph} class takes inte
    Threads          : 4
 \end{lstlisting}
 
-On a common PC with four single threaded cores, the \texttt{Inte\-ger\-BipolarOutrankingDigraph} class constructor takes about 2.3 seconds for computing a \emph{million} pairwise outranking characteristic values (see List.~\vref{list:11.2}). In a similar setting, the standard \texttt{BipolarOutranking\-Digraph} constructor operates more than three times slower.
+On a common PC with four single threaded cores, the \texttt{IntegerBipolarOut\-rankingDigraph} class constructor takes about 2.3 seconds for computing a \emph{million} pairwise outranking characteristic values (see List.~\vref{list:11.2}). In a similar setting, the standard \texttt{BipolarOutranking\-Digraph} constructor operates more than three times slower.
 \begin{lstlisting}
 >>> from outrankingDigraphs import BipolarOutrankingDigraph
 >>> t1 = t.convert2Standard()
@@ -242,7 +242,7 @@ A restricted outranking relation is stored for each component with more than one
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/11-1-sparseRelationMap.png}
-\caption[Sparse quartiles-sorting decomposed outranking relation]{\emph{Sparse quartiles-sorting decomposed outranking relation} (extract). Legend: \emph{outranking} for certain ($\top$); \emph{outranked} for certain ($\bot$); more or less \emph{outranking} ($+$); more or less \emph{outranked} ($-$); \emph{indeterminate} (\ \ )}
+\caption[Sparse quartiles-sorting decomposed outranking relation]{\emph{Sparse quartiles-sorting decomposed outranking relation} (extract)\\ Legend: \emph{outranking} for certain ($\top$); \emph{outranked} for certain ($\bot$); more or less \emph{outranking} ($+$); more or less \emph{outranked} ($-$); \emph{indeterminate} (\ \ ).}
 \label{fig:11.1}       % Give a unique label
 \end{figure}
 %\clearpage
@@ -412,7 +412,7 @@ In case of \texttt{Random3ObjectivesPerformanceTableau} instances we would get i
 
 Following from the separability property of the $q$-tiles sorting of each action into a $q$-tiles class, the $q$-sorting algorithm may be safely split into as much threads as are multiple processing cores available for working in parallel (see Prop.~\ref{prop:9.1}). Furthermore, the ranking procedure being local to each diagonal component, these procedures may as well be safely processed in parallel threads on each component restricted outranking digraph.
 
-Using the HPC platform of the University of Luxembourg -- https://hpc-docs.uni.lu/ \citep{UNI-2014}-- the run times shown in Figure~\vref{fig:11.2} for very big ranking problems could be achieved both on:
+Using the HPC platform of the University of Luxembourg -- https://hpc-docs.uni.lu/ \citep{UNI-2014}-- the run times shown in Fig.~\vref{fig:11.2} for very big ranking problems could be achieved both on:
 \begin{itemize}[topsep=2pt]
 \item \emph{Iris -skylake} nodes with 28 cores:\\
   (see \href{https://hpc-docs.uni.lu/systems/iris/}{https://hpc-docs.uni.lu/systems/iris}), and
@@ -424,12 +424,12 @@ by running the cythonized Python modules in an Intel compiled virtual Python 3.6
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/11-2-rankingRecords.png}
-\caption[HPC-UL Ranking Performance Records (Spring 2018)]{\emph{HPC-UL Ranking Performance Records (Spring 2018)}. On the big memory equipped Gaia-183 node with 64 cores we were able to rank one million, resp. 6 million decision alternatives in about 2 minutes, resp. 41 minutes}
+\caption[HPC-UL Ranking Performance Records (Spring 2018)]{\emph{HPC-UL Ranking Performance Records (Spring 2018)}\\ On the big memory equipped Gaia-183 node with 64 cores we were able to rank one million, resp. 6 million decision alternatives in about 2 minutes, resp. 41 minutes.}
 \label{fig:11.2}       % Give a unique label
 \end{figure}
 
 \vspace{\baselineskip}
-The next Part III presents three real case studies of building a best choice recommendation (Chapter~\ref{sec:12}), ranking incommensurable multiple-criteria performance records(Chapter~\ref{sec:13}) and rating student enrolment qualities (Chapter~\ref{sec:14}). Chapter~\ref{sec:15} eventually list some exercises for home work and exam questions.
+The next Part III presents three real case studies of building a best choice recommendation---Chap.~\ref{sec:12}, ranking incommensurable multiple-criteria performance records---Chap.~\ref{sec:13}, and rating student enrolment qualities---Chap.~\ref{sec:14}. Chapter~\ref{sec:15} eventually list some exercises for home work and exam questions.
 %%%%%%% The chapter bibliography
 %\normallatexbib
 %\clearpage

@@ -153,7 +153,7 @@ Candidate \texttt{c1}, for instance, is ranked four times before and once behind
     Valuation domain: [-15;+15]
 \end{lstlisting}
 
-Notice in Listing~\ref{list:7.6} Lines~\ref{line:7.6.29}-\ref{line:7.6.31} that, in the case of linear voting profiles, majority margins always verify a \emph{zero sum property}: $M(x,y) + M(y,x) = 0$ for all candidates $x$ and $y$. This is not true in general for arbitrary voting profiles. The \emph{majority margins} digraph of linear voting profiles defines in fact a \emph{weak tournament}\index{weak tournament} and belongs, hence, to the class of \emph{self-codual}\footnote{The class of self-codual bipolar-valued digraphs consists of all weakly asymmetric digraphs, i.e. digraphs containing only asymmetric and/or indeterminate links. Limit cases consists of, on the one side, full tournaments with indeterminate reflexive links, and, on the other side, fully indeterminate digraphs. In this class, the converse (inverse $\sim$) operator is indeed identical to the dual (negation $-$ ) one.} bipolar-valued digraphs (see Sec.~\ref{sec:2.6}).
+Notice in Listing~\ref{list:7.6} Lines~\ref{line:7.6.29}-\ref{line:7.6.31} that, in the case of linear voting profiles, majority margins always verify a \emph{zero sum property}: $M(x,y) + M(y,x) = 0$ for all candidates $x$ and $y$. This is not true in general for arbitrary voting profiles. The \emph{majority margins} digraph of linear voting profiles defines in fact a \emph{weak tournament}\index{weak tournament} and belongs, hence, to the class of \emph{self-codual}\footnote{The class of self-codual bipolar-valued digraphs consists of all weakly asymmetric digraphs, i.e. digraphs containing only asymmetric and/or indeterminate links. Limit cases consists of, on the one side, full tournaments with indeterminate reflexive links, and, on the other side, fully indeterminate digraphs. In this class, the converse (inverse $\sim$) operator is indeed identical to the dual (negation $-$ ) one.} bipolar-valued digraphs (see Sect.~\ref{sec:2.6}).
     
 A candidate $x$, showing a positive majority margin $M(x,y)$, is beating candidate $y$  with an absolute majority in a pairwise voting. Hence, a candidate showing only positive terms in their row in the \emph{majority margins} digraph relation table, beats all other candidates with absolute majority of votes. \Condorcet recommends to declare this candidate (is always unique, why?) the winner of the election. Here we are lucky, it is again candidate \texttt{c1} who is the \Condorcet winner\index{Condorcet@\Condorcet!winner} (see Line~\ref{line:7.6.29} in List.~\vref{list:7.6}). This result is confirmed below by the \texttt{computeCondorcetWinners()} method.\index{computeCondorcetWinners@\texttt{computeCondorcetWinners()}} 
 \begin{lstlisting}
@@ -161,7 +161,7 @@ A candidate $x$, showing a positive majority margin $M(x,y)$, is beating candida
  ['c1']  
 \end{lstlisting}    
 
-By seeing the majority margins like a \emph{bipolar-valued characteristic function} of a global voters' preference relation defined on the set of eligible candidates, we may reuse all operational resources of the generic \texttt{Digraph} class \footnote{See Chap.~\ref{sec:2}}, and especially its \texttt{exportGraphViz()} method for visualising in Figure~\vref{fig:7.1} the election result.
+By seeing the majority margins like a \emph{bipolar-valued characteristic function} of a global voters' preference relation defined on the set of eligible candidates, we may reuse all operational resources of the generic \texttt{Digraph} class \footnote{See Chap.~\ref{sec:2}}, and especially its \texttt{exportGraphViz()} method for visualising in Fig.~\vref{fig:7.1} the election result.
 \begin{lstlisting}
 >>> mmdg.exportGraphViz(\
 ...            fileName='tutorialLinearBallots',\
@@ -174,11 +174,11 @@ By seeing the majority margins like a \emph{bipolar-valued characteristic functi
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/7-1-tutorialBallots.pdf}
-\caption[Visualising an election result]{\emph{Visualising an election result}. In the Figure we notice that the \emph{majority margins} digraph from our example linear voting profile models in fact a linear ranking of the candidates: \texttt{c1} $>$ \texttt{c3} $>$ \texttt{c2}, the same actually as modelled by the \Borda scores (see List.~\vref{list:7.4})}
+\caption[Visualising an election result]{\emph{Visualising an election result}\\ In the Figure we notice that the \emph{majority margins} digraph from our example linear voting profile models in fact a linear ranking of the candidates: \texttt{c1} $>$ \texttt{c3} $>$ \texttt{c2}, the same actually as modelled by the \Borda scores (see List.~\vref{list:7.4}).}
 \label{fig:7.1}       % Give a unique label
 \end{figure}
 
-That a majority margins digraph models a linear ranking of the eligible candidates, as shown in Figure~\vref{fig:7.1}, represents a very unlikely event. Usually, when aggregating linear ballots, there appear cyclic social preferences.
+That a majority margins digraph models a linear ranking of the eligible candidates, as shown in Fig.~\vref{fig:7.1}, represents a very unlikely event. Usually, when aggregating linear ballots, there appear cyclic social preferences.
 
 \section{Cyclic social preferences}
 \label{sec:7.4}
@@ -209,7 +209,7 @@ Let us consider for instance in Listing~\vref{list:7.7} the following linear vot
     Valuation domain: [-9;+9]
 \end{lstlisting}    
 
-Now there doesn't exist anymore a completely positive row in the relation table (see Lines~\ref{line:7.7.17}-\ref{line:7.7.21} in List.~\ref{list:7.7}). No one of the five candidates is beating all the others with an absolute majority of votes. There is no \Condorcet winner anymore. In fact, when looking in Figure~\vref{fig:7.2} at a \texttt{graphviz} drawing of this \emph{majority margins} digraph, we may observe \emph{cyclic} voters's preferences, like \texttt{c1} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}.
+Now there doesn't exist anymore a completely positive row in the relation table (see Lines~\ref{line:7.7.17}-\ref{line:7.7.21} in List.~\ref{list:7.7}). No one of the five candidates is beating all the others with an absolute majority of votes. There is no \Condorcet winner anymore. In fact, when looking in Fig.~\vref{fig:7.2} at a \texttt{graphviz} drawing of this \emph{majority margins} digraph, we may observe \emph{cyclic} voters's preferences, like \texttt{c1} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}.
 \begin{lstlisting}
 >>> mmdg.exportGraphViz('cycles',graphType='pdf')
  *---- exporting a dot file for GraphViz tools ----*
@@ -219,7 +219,7 @@ Now there doesn't exist anymore a completely positive row in the relation table 
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/7-2-cycles.pdf}
-\caption[Cyclic social preferences]{\emph{Cyclic social preferences}. \texttt{c1} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1} for instance}
+\caption[Cyclic social preferences]{\emph{Cyclic social preferences}\\ \texttt{c1} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1} for instance.}
 \label{fig:7.2}       % Give a unique label
 \end{figure}
 	   
@@ -258,7 +258,7 @@ Half of the Votes =  4.50
 
 \Condorcet 's approach for determining the winner of an election is \emph{not decisive} in this example voting profile. One needs therefore, the case given, exploiting more sophisticated approaches for finding the winner of the election on the basis of the given linear ballots (see Chap.~\ref{sec:8} and \citealp{BIS-2008a}). 
 
-The \NetFlows ranked heatmap view on voting profiles\index{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}} with the \texttt{showHTML\-VotingHeatmap()} method is one such tool for showing convincing voting results (see Sec.~\ref{sec:8.3}).
+The \NetFlows ranked heatmap view on voting profiles\index{showHTMLVotingHeatmap@\texttt{showHTMLVotingHeatmap()}} with the \texttt{showHTML\-VotingHeatmap()} method is one such tool for showing convincing voting results (see Sect.~\ref{sec:8.3}).
 \begin{lstlisting}[caption={\NetFlows ranked heatmap view on a voting profile},label=list:7.8]
 >>> v.showHTMLVotingHeatmap(rankingRule='Netflows',\
 ...                  colorLevels=3,Correlations=True)
@@ -266,11 +266,11 @@ The \NetFlows ranked heatmap view on voting profiles\index{showHTMLVotingHeatmap
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/7-3-votingHeatmap.png}
-\caption[Visualising a linear voting profile in a \NetFlows ranked heatmap]{\emph{Visualising a linear voting profile in a \NetFlows ranked heatmap}. As the number of voters is usually much larger than the number of eligible candidates, the voting heatmap is by default transposed into a voters $\times$ candidates view. Notice that the importance weights of the voters are \emph{negative}, which means that the preference direction of the criteria (in this case the individual voters) is \emph{decreasing} (\texttt{min}), i.e. goes from lowest (best) rank to highest (worst) rank}
+\caption[Visualising a linear voting profile in a \NetFlows ranked heatmap]{\emph{Visualising a linear voting profile in a \NetFlows ranked heatmap}\\ As the number of voters is usually much larger than the number of eligible candidates, the voting heatmap is by default transposed into a voters $\times$ candidates view. Notice that the importance weights of the voters are \emph{negative}, which means that the preference direction of the criteria (in this case the individual voters) is \emph{decreasing} (\texttt{min}), i.e. goes from lowest (best) rank to highest (worst) rank.}
 \label{fig:7.3}       % Give a unique label
 \end{figure}
 
-It is worthwhile noticing in Figure~\vref{fig:7.3} that the compromise \NetFlows ranking \texttt{c4} $>$ \texttt{c5} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}, shown in this heatmap, results in the highest possible \emph{ordinal correlation} index of $+0.778$ with the majority margins digraph (see Chap.~\ref{sec:16}). This \NetFlows ranking result corresponds also to the \Borda scores ranking\footnote{Mind that \Borda scores require the unrealistic working hypothesis that one knows how to precisely code in numbers the marginal linear ranks per voter.}.
+It is worthwhile noticing in Fig.~\vref{fig:7.3} that the compromise \NetFlows ranking \texttt{c4} $>$ \texttt{c5} $>$ \texttt{c2} $>$ \texttt{c3} $>$ \texttt{c1}, shown in this heatmap, results in the highest possible \emph{ordinal correlation} index of $+0.778$ with the majority margins digraph (see Chap.~\ref{sec:16}). This \NetFlows ranking result corresponds also to the \Borda scores ranking\footnote{Mind that \Borda scores require the unrealistic working hypothesis that one knows how to precisely code in numbers the marginal linear ranks per voter.}.
 \begin{lstlisting}[caption={Rank analysis table with \Borda scores},label=list:7.9]
 >>> v.showRankAnalysisTable()
   *----  Borda rank analysis tableau -----*
@@ -379,11 +379,11 @@ The \texttt{showHTMLRelationTable()} method visualise the resulting pairwise maj
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/7-4-majorityMargins.png}
-\caption[Browsing the majority margins]{\emph{Browsing the majority margins}. \emph{Light green} cells contain the positive majority margins, whereas \emph{light red} cells contain the negative majority margins}
+\caption[Browsing the majority margins]{\emph{Browsing the majority margins}\\ \emph{Light green} cells contain the positive majority margins, whereas \emph{light red} cells contain the negative majority margins.}
 \label{fig:7.4}       % Give a unique label
 \end{figure}
 
-A complete light green \emph{row} in Figure~\vref{fig:7.4} reveals a \Condorcet winner, whereas a complete light green \emph{column} reveals a \Condorcet loser. We recover again candidate \texttt{c06} as \Condorcet winner\footnote{The concept of \Condorcet winner --a generalisation of absolute majority winners-- proposed by \Condorcet in 1784, is an early historical example of initial digraph kernel (see Chap.~\ref{sec:17}).}, whereas the obvious \Condorcet loser is here candidate \texttt{c02}, the candidate with the lowest support in both parties (see List.~\vref{list:7.10} Line~\ref{line:7.10.43}).
+A complete light green \emph{row} in Fig.~\vref{fig:7.4} reveals a \Condorcet winner, whereas a complete light green \emph{column} reveals a \Condorcet loser. We recover again candidate \texttt{c06} as \Condorcet winner\footnote{The concept of \Condorcet winner --a generalisation of absolute majority winners-- proposed by \Condorcet in 1784, is an early historical example of initial digraph kernel (see Chap.~\ref{sec:17}).}, whereas the obvious \Condorcet loser is here candidate \texttt{c02}, the candidate with the lowest support in both parties (see List.~\vref{list:7.10} Line~\ref{line:7.10.43}).
 
 With a same bipolar \emph{first-ranked} and \emph{last-ranked} selection procedure\index{computeRankingByChoosing@\texttt{computeRankingByChoosing()}}, we may weakly rank the candidates (with possible ties) by iterating these \emph{first-ranked} and \emph{last-ranked} choices among the remaining candidates \citep{BIS-1999}.
 
@@ -419,7 +419,7 @@ Mind that the specific \emph{ranking-by-choosing} procedure, we use here on the 
 
 \vspace{\baselineskip}
 
-Next Chapter~\ref{sec:8} on multiple incommensurable criteria ranking methods presents more methods and tools for ranking from pairwise majority margins when a larger number of potential candidates or decision alternatives is given.  
+Next Chap.~\ref{sec:8} on multiple incommensurable criteria ranking methods presents more methods and tools for ranking from pairwise majority margins when a larger number of potential candidates or decision alternatives is given.  
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

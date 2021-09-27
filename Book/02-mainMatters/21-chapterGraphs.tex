@@ -317,11 +317,11 @@ Notice in Listing~\vref{list:21.9} that the MISs in a line graph provide \emph{m
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/21-3-maxMatchingcycleGraph.pdf}
-\caption[A perfect maximum matching of the 8-cycle graph]{A perfect maximum matching of the 8-cycle graph. Every vertex of the 8-cycle is adjacent to a matching edge. Odd cycle graphs do not admit any perfect matching} 
+\caption[A perfect maximum matching of the 8-cycle graph]{\emph{A perfect maximum matching of the 8-cycle graph}\\ Every vertex of the 8-cycle is adjacent to a matching edge. Odd cycle graphs do not admit any perfect matching.} 
 \label{fig:21.3}       % Give a unique label
 \end{figure}
 
-The two last MISs of cardinality 4 (see Lines~\ref{line:21.9.13}-\ref{line:21.9.16} 13-16 in List.~\vref{list:21.9}) give perfect maximum matchings of the 8-cycle graph as shown in Figure~\vref{fig:21.3}. 
+The two last MISs of cardinality 4 (see Lines~\ref{line:21.9.13}-\ref{line:21.9.16} 13-16 in List.~\vref{list:21.9}) give perfect maximum matchings of the 8-cycle graph as shown in Fig.~\vref{fig:21.3}. 
 \begin{lstlisting}[caption={Computing maximum matchings in the 8-cycle graph},label=list:21.10]
 >>> maxMatching = c8.computeMaximumMatching()
 >>> c8.exportGraphViz(fileName='maxMatchingcycleGraph',\
@@ -339,7 +339,7 @@ The two last MISs of cardinality 4 (see Lines~\ref{line:21.9.13}-\ref{line:21.9.
 \section{Grids and the \Ising model}
 \label{sec:21.5}
 
-Special classes of graphs, like the \texttt{GridGraph}\index{GridGraph@\texttt{GridGraph} class} class provide $n \times m$ rectangular or triangular grids. With a \emph{Gibbs} sampler\footnote{\citet{GEM-1984}} the \texttt{IsingModel} class\index{IsingModel@\texttt{IsingModel} class} can simulate in Figure~\vref{fig:21.4} an \Ising model on, for instance, a $15 \times 15$ grid \citep{ISI-1925}.
+Special classes of graphs, like the \texttt{GridGraph}\index{GridGraph@\texttt{GridGraph} class} class provide $n \times m$ rectangular or triangular grids. With a \emph{Gibbs} sampler\footnote{\citet{GEM-1984}} the \texttt{IsingModel} class\index{IsingModel@\texttt{IsingModel} class} can simulate in Fig.~\vref{fig:21.4} an \Ising model on, for instance, a $15 \times 15$ grid \citep{ISI-1925}.
 \begin{lstlisting}[caption={Simulating an Ising model on a the $15 \times 15$ rectangular grid},label=list:21.11]
 >>> from graphs import GridGraph, IsingModel
 >>> g = GridGraph(n=15,m=15)
@@ -440,7 +440,7 @@ Due to the public success of our common work with Jean-Luc Marichal \citep{ISO-2
                        'relation', 'gamma', 'notGamma']
 \end{lstlisting}
 
-Such $n$-cycle graphs -- see the 12-cycle graph in Figure~\vref{fig:21.5}-- are also provided as undirected graph instances by the \texttt{CycleGraph} class.\index{CycleGraph@\texttt{CycleGraph} class}
+Such $n$-cycle graphs -- see the 12-cycle graph in Fig.~\vref{fig:21.5}-- are also provided as undirected graph instances by the \texttt{CycleGraph} class.\index{CycleGraph@\texttt{CycleGraph} class}
 \begin{lstlisting}
 >>> from graphs import CycleGraph
 >>> cg12 = CycleGraph(order=12)
@@ -556,7 +556,7 @@ The \texttt{showOrbits()} method renders now the labelled representatives of eac
    frequency      : [0, 2, 0, ..., 1, 0, ...,  1,  0, ...]§\label{line:21.18.13}§
 \end{lstlisting}
 
-The corresponding group stabilisers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines~\ref{line:21.18.12}-\ref{line:21.18.13} in List.~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Figure~\vref{fig:21.5}.
+The corresponding group stabilisers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines~\ref{line:21.18.12}-\ref{line:21.18.13} in List.~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Fig.~\vref{fig:21.5}.
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/21-5-c12.png}
@@ -569,7 +569,7 @@ The non isomorphic MISs in the 12-cycle graph represent in fact all the ways one
 %\vspace{1cm}
 \vspace{\baselineskip}
 
-\noindent The next Chapter~\ref{sec:22} is devoted more specifically to tree graphs and graph forests.
+\noindent The next Chap.~\ref{sec:22} is devoted more specifically to tree graphs and graph forests.
 
 %%%%%%% The chapter bibliography
 %\normallatexbib

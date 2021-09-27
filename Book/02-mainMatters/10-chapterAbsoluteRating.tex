@@ -1,9 +1,9 @@
 \chapter{Rating by ranking with learned performance quantile norms}
 \label{sec:10}
 
-\abstract*{ We address in Chapter~\ref{sec:10} the problem of rating multiple-criteria performances of a set of potential decision alternatives with respect to performance quantiles learned from historical performance data gathered from similar decision alternatives observed in the past. We show how to learn performance quantiles from such historical performance tableaux. New performance records may now be rated with respect to these quantile norms.}
+\abstract*{ We address in Chap.~\ref{sec:10} the problem of rating multiple-criteria performances of a set of potential decision alternatives with respect to performance quantiles learned from historical performance data gathered from similar decision alternatives observed in the past. We show how to learn performance quantiles from such historical performance tableaux. New performance records may now be rated with respect to these quantile norms.}
 
-\abstract{ We address in Chapter~\ref{sec:10} the problem of rating multiple-criteria performances of a set of potential decision alternatives with respect to performance quantiles learned from historical performance data gathered from similar decision alternatives observed in the past. We show how to learn performance quantiles from such historical performance tableaux. New performance records may now be rated with respect to these quantile norms.}
+\abstract{ We address in Chap.~\ref{sec:10} the problem of rating multiple-criteria performances of a set of potential decision alternatives with respect to performance quantiles learned from historical performance data gathered from similar decision alternatives observed in the past. We show how to learn performance quantiles from such historical performance tableaux. New performance records may now be rated with respect to these quantile norms.}
 
 \section{The absolute rating problem}
 \label{sec:10.1}
@@ -35,7 +35,7 @@ To solve this \emph{absolute} rating problem, first, we need to estimate multi-c
 \section{Incremental learning of historical performance quantiles}
 \label{sec:10.2}
 
-Suppose that we see flying in random multiple-criteria performances from a given model of random performance tableau (see Chap.~\ref{sec:5}). The question we address here is to estimate empirical performance quantiles on the basis of so far observed performance vectors. For this task, we are inspired by \citet*{CHAM-2006}, who present an efficient algorithm for incrementally updating a quantile-binned cumulative distribution function (CDF) with newly observed CDFs\footnote{We have adapted in Python a C++ implementation published by \citep*[Chapter 5]{NR3-2007}.}. 
+Suppose that we see flying in random multiple-criteria performances from a given model of random performance tableau (see Chap.~\ref{sec:5}). The question we address here is to estimate empirical performance quantiles on the basis of so far observed performance vectors. For this task, we are inspired by \citet*{CHAM-2006}, who present an efficient algorithm for incrementally updating a quantile-binned cumulative distribution function (CDF) with newly observed CDFs\footnote{We have adapted in Python a C++ implementation published by \citep*[Chap.~5]{NR3-2007}.}. 
 
 The \texttt{PerformanceQuantiles}\index{PerformanceQuantiles@\texttt{PerformanceQuantiles} class} class, using the \texttt{IncrementalQuan\-tiles\-Estimator} class\index{IncrementalQuantilesEstimator@\texttt{IncrementalQuantilesEstimator} class} from the \texttt{randomNumbers} module\index{randomNumbers@\texttt{randomNumbers} module}, implements such a performance quantiles estimation based on a given performance tableau \citep{BIS-2021b}.
 
@@ -52,7 +52,7 @@ Its main attributes are:
 \item An ordered dictionary \texttt{historySizes} for keeping track of the number of evaluations seen so far per criterion. Missing data, the case given, make these sizes vary from criterion to criterion.
 \end{itemize}
 
-Below, we show an example Python session concerning 900 decision alternatives randomly generated with a \emph{Cost-Benefit} performance tableau model (see Sec.~\ref{sec:5.3}) from which are also drawn the performances of alternatives \texttt{a1001} and \texttt{a1010} shown in Table~\vref{tab:10.1} above.
+Below, we show an example Python session concerning 900 decision alternatives randomly generated with a \emph{Cost-Benefit} performance tableau model (see Sect.~\ref{sec:5.3}) from which are also drawn the performances of alternatives \texttt{a1001} and \texttt{a1010} shown in Table~\vref{tab:10.1} above.
 \begin{lstlisting}[caption={Computing performance quantiles from a given performance tableau},label=list:10.1]
 >>> from performanceQuantiles import PerformanceQuantiles
 >>> from randomPerfTabs import RandomCBPerformanceTableau
@@ -104,7 +104,7 @@ Inspecting the estimated quartile limits may be operated with the \texttt{showLi
 \end{lstlisting}
 Both objectives are \emph{equally important}; the sum of weights (10) of the \emph{Costs} criteria balance the sum of weights (10) of the \emph{Benefits} criteria (see List.~\vref{list:10.2} column 2). The preference direction of the \emph{Costs} criteria \texttt{c1} and \texttt{c2} is \emph{negative}; the lesser the costs, the better it is, whereas all the \emph{Benefits} criteria \texttt{b1} to \texttt{b5} show \emph{positive} preference directions, i.e. the higher the benefits, the better it is. The columns entitled \texttt{0.00}, resp. \texttt{1.00} show the \emph{quartile} \texttt{Q0}, resp. \texttt{Q4}, i.e. the \emph{worst}, resp. \emph{best} performance observed so far on each criterion. Column \texttt{0.50} shows the \emph{median} (\texttt{Q2}) performance observed on the criteria.  
 
-New  decision alternatives with random multiple-criteria performance vectors from the same random performance tableau model as \texttt{pt} (see List.~\vref{list:10.1}) may now be generated with a generic \texttt{RandomPerformanceGene\-rator} class\index{RandomPerformanceGenerator@\texttt{RandomPerformanceGenerator()}} from the \texttt{randomPerfTabs} module \citep{BIS-2021b}.\footnote{The \texttt{RandomPerformanceGenerator} class works for the \emph{standard} performance tableau model (see Sec.~\ref{sec:5.2}), the \emph{Cost-Benefit} model (see Sec.~\ref{sec:5.3}), and the 3-objectives model (see Sec.~\ref{sec:5.4}).}
+New  decision alternatives with random multiple-criteria performance vectors from the same random performance tableau model as \texttt{pt} (see List.~\vref{list:10.1}) may now be generated with a generic \texttt{RandomPerformanceGene\-rator} class\index{RandomPerformanceGenerator@\texttt{RandomPerformanceGenerator()}} from the \texttt{randomPerfTabs} module \citep{BIS-2021b}.\footnote{The \texttt{RandomPerformanceGenerator} class works for the \emph{standard} performance tableau model (see Sect.~\ref{sec:5.2}), the \emph{Cost-Benefit} model (see Sect.~\ref{sec:5.3}), and the 3-objectives model (see Sect.~\ref{sec:5.4}).}
 \begin{lstlisting}[caption={Generating 100 new random decision alternatives of the same model},label=list:10.3]
 >>> from randomPerfTabs import RandomPerformanceGenerator
 >>> rpg = RandomPerformanceGenerator(pt,seed=seed)
@@ -126,7 +126,7 @@ With \texttt{historySize = None} (the default setting), the balance in the examp
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/10-1-examplePerfQuantiles.png}
-\caption[Showing updated quartiles limits per criterion]{\emph{Showing updated quartiles limits per criterion}. The $0.25$ column shows the first quartile (\texttt{Q1}) limits, the $0.50$ column shows the second quartile (\texttt{Q2}) limits and the $0.75$ column shows the third quartile (\texttt{Q3}) limits. Column $0.00$ (resp. $1.00$) shows the minimum (resp. maximum) performance on each criterion}
+\caption[Showing updated quartiles limits per criterion]{\emph{Showing updated quartiles limits per criterion}\\ The $0.25$ column shows the first quartile (\texttt{Q1}) limits, the $0.50$ column shows the second quartile (\texttt{Q2}) limits and the $0.75$ column shows the third quartile (\texttt{Q3}) limits. Column $0.00$ (resp. $1.00$) shows the minimum (resp. maximum) performance on each criterion.}
 \label{fig:10.1}       % Give a unique label
 \end{figure}
     
@@ -253,11 +253,11 @@ The same result may also be shown in a browser view with the \texttt{showHTMLRa\
 \begin{figure}[ht]
 \sidecaption[t]
  \includegraphics[width=7cm]{Figures/10-2-heatMap1.png}
-\caption[Heatmap of absolute quartiles ranking]{\emph{Heatmap of absolute quartiles ranking}. The quartile equivalence classes appear lower-closed. No alternative is rated into the \texttt{Q1} class ($[0.00 - 0.25[$) and no alternative is rated into the Q4 class ($[0.75 - 1.00]$)}
+\caption[Heatmap of absolute quartiles ranking]{\emph{Heatmap of absolute quartiles ranking}\\ The quartile equivalence classes appear lower-closed. No alternative is rated into the \texttt{Q1} class ($[0.00 - 0.25[$) and no alternative is rated into the Q4 class ($[0.75 - 1.00]$).}
 \label{fig:10.2}       % Give a unique label
 \end{figure}
 	    
-Using furthermore a specialised version of the \texttt{exportGraphViz()} method allows drawing in Figure~\vref{fig:10.3} the same rating result in a Hasse diagram format.\footnote{Note that the graphviz dot file was post-edited in order to mark in blue alternatives \texttt{a1001} and \texttt{a1010}.}
+Using furthermore a specialised version of the \texttt{exportGraphViz()} method allows drawing in Fig.~\vref{fig:10.3} the same rating result in a Hasse diagram format.\footnote{Note that the graphviz dot file was post-edited in order to mark in blue alternatives \texttt{a1001} and \texttt{a1010}.}
 \begin{lstlisting}
 >>> lqr.exportRatingGraphViz('quartileRatingDigraph')
  *---- exporting a dot file for GraphViz tools ---------*
@@ -290,7 +290,7 @@ A \emph{preciser} rating result may indeed be achieved when using \emph{deciles}
 
 Compared with the quartiles rating result, we notice in Listing~\vref{list:10.9} that the seven alternatives (\texttt{a1001}, \texttt{a1002}, \texttt{a1003}, \texttt{a1005}, \texttt{a1006}, \texttt{a1008} and \texttt{a1010}), rated before into the third quartile class $[0.50-0.75[$, are now divided up: alternatives \texttt{a1002}, \texttt{a1005}, \texttt{a1008} and \texttt{a1010} attain now the 7th decile class $[0.60-0.70[$, whereas alternatives \texttt{a1001}, \texttt{a1003} and \texttt{a1006} attain only the 6th decile class $[0.50-0.60[$. Of the three \texttt{Q2} $[0.25-0.50[$ rated alternatives (\texttt{a1004}, \texttt{a1007} and \texttt{a1009}), alternatives \texttt{a1004} and \texttt{a1007} are now rated into the 5th decile class $[0.40-0.50[$ and \texttt{a1009} is lowest rated into the 4th decile class $[0.30-0.40[$.
 
-A browser heatmap view in Figure~\vref{fig:10.4} more conveniently illustrates this refined rating result.
+A browser heatmap view in Fig.~\vref{fig:10.4} more conveniently illustrates this refined rating result.
 \begin{lstlisting}
 >>> lqr1.showHTMLRatingHeatmap(\
 ...       pageTitle='Heatmap of Deciles rating',\
@@ -299,7 +299,7 @@ A browser heatmap view in Figure~\vref{fig:10.4} more conveniently illustrates t
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/10-4-heatMap2.png}
-\caption[Heatmap of absolute deciles rating]{\emph{Absolute deciles rating}. Decision alternatives \texttt{a1001} and \texttt{a1010} are now, as expected, rated in the $6^{th}$ decile (\texttt{D6}), respectively in the $7^{th}$ decile (\texttt{D7})}
+\caption[Heatmap of absolute deciles rating]{\emph{Absolute deciles rating}\\ Decision alternatives \texttt{a1001} and \texttt{a1010} are now, as expected, rated in the $6^{th}$ decile (\texttt{D6}), respectively in the $7^{th}$ decile (\texttt{D7}).}
 \label{fig:10.4}       % Give a unique label
 \end{figure}
 
@@ -319,7 +319,7 @@ With the \texttt{quantiles} parameter (see List.~\vref{list:10.10} Line~\ref{lin
 More generally, in the case of industrial production monitoring problems, for instance, where large volumes of historical performance data may be available, it can be of interest to estimate even more precisely the marginal cumulative distribution functions, especially when \emph{tail} rating results, i.e. distinguishing \emph{very best}, or \emph{very weak} multiple-criteria performances, become a critical issue. Similarly, the \texttt{historySize} parameter may be used for monitoring on the fly \emph{unstable} random multiple-criteria performance data \citep{CHAM-2006}.  	
 
 \vspace{\baselineskip}
-The next Chapter~\ref{sec:11} is tackling the challenging problem of ranking big performance tableaux with thousands and millions of multiple-criteria records on HPC clusters. 
+The next Chap.~\ref{sec:11} is tackling the challenging problem of ranking big performance tableaux with thousands and millions of multiple-criteria records on HPC clusters. 
 %%%%%%%
 %The chapter bibliography
 %\normallatexbib
