@@ -29,7 +29,7 @@ In Listing~\vref{list:2.1}, we generate a uniformly random $[-1.0; +1.0]$-valued
 
 With the \texttt{save()} \index{save@\texttt{save()}} method (see List.~\vref{list:2.1} Line~\ref{line:2.1.3}) we keep for future use a backup version of \texttt{rdg} which is saved into a file named \texttt{tutRandValDi\-graph.py} in the current working directory. The genuine \texttt{Di\-graph} class constructor can reload the \texttt{rdg} object from the stored file (Line~\ref{line:2.1.5}). One can easily inspect the content of a \texttt{Digraph} object with its name \texttt{rdg} (Line~\ref{line:2.1.6}). The digraph size 22 indicates the number of positively valued arcs (Line~\ref{line:2.1.11}). The valuation domain is uniformly distributed in the interval $[-1.0; 1.0]$, the mean absolute arc valuation being $(0.7524 \times 2)\, -\, 1.0 \;=\; 0.5048$ (Line~\ref{line:2.1.13}). 
 
-As mentioned in the previous Chap.~\ref{sec:1}, all objects of \texttt{Digraph} type contain at least the list of attributes shown here in Lines 14-16:
+As mentioned in the previous Chapter~\ref{sec:1}, all objects of \texttt{Digraph} type contain at least the list of attributes shown here in Lines 14-16:
 \begin{itemize}[nosep]
 \item A \texttt{name} (string) and a dictionary of \texttt{actions} (digraph nodes),
 \item An \texttt{order} (integer) attribute containing the number of nodes,
@@ -78,7 +78,7 @@ Positive characteristic values indicate the presence of an arc whereas negative 
 \section{Graphviz drawings}
 \label{sec:2.2}
 
-An even better insight into the \texttt{Digraph} object \texttt{rdg} is given by looking in Fig.~\vref{fig:2.1} at its \href{https://graphviz.org/}{graphviz} drawing \citep{graphviz}\footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (https://graphviz.org/). On Linux Ubuntu or Debian you may try \texttt{sudo apt-get install graphviz} to install them. There are ready \emph{dmg} installers for Mac OSX.}\index{graphviz}.
+An even better insight into the \texttt{Digraph} object \texttt{rdg} is given by looking in Fig.~\vref{fig:2.1} at its \href{https://graphviz.org/}{graphviz} drawing \citep{graphviz}\footnote{The \texttt{exportGraphViz()} method is depending on drawing tools from the graphviz software (\url{https://graphviz.org/}). On Linux Ubuntu or Debian you may try to install them with \texttt{...\$ sudo apt-get install graphviz}. There are ready \texttt{dmg} installers for MacOS.}\index{graphviz}.
 \begin{lstlisting}
 >>> rdg.exportGraphViz('tutRandValDigraph')
  *---- exporting a dot file for GraphViz tools ------*
@@ -89,14 +89,14 @@ An even better insight into the \texttt{Digraph} object \texttt{rdg} is given by
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=5cm]{Figures/2-1-tutRandValDigraph.pdf}
-\caption[The tutorial random valuation digraph]{\emph{The tutorial random valuation digraph}\\ Double links are drawn in bold black with an arrowhead at each end, whereas single asymmetric links are drawn in black with an arrowhead showing the direction of the link. Notice the undetermined relational situation ($r(\mathtt{6}\,S\,\mathtt{}2) = 0.00$) observed between nodes \texttt{6} and \texttt{2}. The corresponding link is marked in grey with an open arrowhead in the drawing.}
+\caption[The tutorial random valuation digraph]{\emph{The tutorial random valuation digraph}\\ Double links are drawn in bold black with an arrowhead at each end, whereas single asymmetric links are drawn in black with an arrowhead showing the direction of the link. Notice the undetermined relational situation ($r(\mathtt{6}\,S\,\mathtt{2}) = 0.00$) observed between nodes \texttt{6} and \texttt{2}. The corresponding link is marked in grey with an open arrowhead in the drawing.}
 \label{fig:2.1}       % Give a unique label
 \end{figure}
   
 \section{Asymmetric and symmetric parts}
 \label{sec:2.3}
 
-Extracting both the \emph{}\emph{symmetric} part as well as the \emph{asymmetric} part of digraph \texttt{rdg} may be done with the help of two corresponding classes (see List.~\vref{list:2.3}) \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}\index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}.
+Extracting both the \emph{}\emph{symmetric} as well as the \emph{asymmetric} part of digraph \texttt{rdg} may be done with the help of two corresponding classes (see List.~\vref{list:2.3}) \index{AsymmetricPartialDigraph@\texttt{AsymmetricPartialDigraph} class}\index{SymmetricPartialDigraph@\texttt{SymmetricPartialDigraph} class}.
 \begin{lstlisting}[caption={Computing asymmetric and symmetric Parts},label=list:2.3]
 >>> from digraphs import AsymmetricPartialDigraph,\
 ...                      SymmetricPartialDigraph
@@ -114,9 +114,9 @@ Extracting both the \emph{}\emph{symmetric} part as well as the \emph{asymmetric
 \label{fig:2.2}       % Give a unique label
 \end{figure}
 
-The class constructors of the partial objects \texttt{asymDg} and \texttt{symDg} set to the indeterminate characteristic value all non-asymmetric, respectively non-symmetric links between nodes (see Fig.~\vref{fig:2.2}).
+The relation constructors of the partial objects \texttt{asymDg} and \texttt{symDg} set to the indeterminate characteristic value $0.0$ all non-asymmetric, respectively non-symmetric links between nodes (see Fig.~\vref{fig:2.2}).
 
-Here below, for illustration the source code of the \texttt{ relation} constructor of the \texttt{AsymmetricPartialDigraph} class:
+In Listing~\vref{list:2.4} below is shown, for instance, the source code of the \texttt{ relation} constructor of the \texttt{AsymmetricPartialDigraph} class:
 \begin{lstlisting}[caption={Computing the asymmetric part of a bipolar-valued relation},label=list:2.4,basicstyle=\ttfamily\scriptsize]
 def _constructRelation(self):
     actions = self.actions
@@ -134,11 +134,13 @@ def _constructRelation(self):
 		elif relationIn[a][b] <= Med and relationIn[b][a] >= Med:
 		    relationOut[a][b] = relationIn[a][b]
 		else:
-		    relationOut[a][b] = Med
-	    else: # reflexive links are ignored
-		relationOut[a][b] = Med
+		    relationOut[a][b] = Med §\label{line:2.4.17}§
+	    else: # reflexive links are ignored 
+		relationOut[a][b] = Med §\label{line:2.4.19}§
     return relationOut
 \end{lstlisting}
+
+In Line~\ref{line:2.4.17} above all non-asymmetric situations are set to the \emph{indeterminate} ---median--- characteristic value. Mind by the way that all reflexive relation are similarly set to this indeterminate value (see Line~\ref{line:2.4.19}).
 
 \section{Border and inner parts}
 \label{sec:2.4}
@@ -160,15 +162,15 @@ Figure~\vref{fig:2.3} shows the border and inner parts of the linear ordering ob
 >>> nf = NetFlowsOrder(rdg)
 >>> nf.netFlowsOrder
    ['6', '4', '5', '3', '2', '1', '7']
->>> bnf = GraphBorder(nf)
+>>> bnf = GraphBorder(nf) §\label{line:2.5.6}§
 >>> bnf.exportGraphViz(lastChoice=['6'],firstChoice=['7']) §\label{line:2.5.7}§
->>> inf = GraphInner(nf)
+>>> inf = GraphInner(nf) §\label{line:2.5.8}§
 >>> inf.exportGraphViz(lastChoice=['6'],firstChoice=['7']) §\label{line:2.5.9}§
 \end{lstlisting}
 
 The drawings in Fig.~\vref{fig:2.3} are oriented with the terminal node \texttt{6} (\texttt{lastChoice} parameter) and initial node \texttt{7} (\texttt{firstChoice} parameter) (see List.~\vref{list:2.5} Lines~\ref{line:2.5.7} and ~\ref{line:2.5.9}).
 
-The class constructors of the partial digraphs \texttt{bnf} and \texttt{inf}  (see Lines 3 and 6) set to the \emph{indeterminate} characteristic value all links not in the \emph{border}, respectively \emph{not} in the \emph{inner} part (see Fig.~\vref{fig:2.3}). Being much \emph{denser} than a linear order, the actual inner part of our tutorial random valuation digraph \texttt{rdg} is reduced to a single arc between nodes \texttt{3} and \texttt{4} (see Fig.~\vref{fig:2.4}). Indeed, a complete digraph on the limit has no inner part (privacy!) at all, whereas empty and indeterminate digraphs admit both, an empty border and an empty inner part.
+The class constructors of the partial digraphs \texttt{bnf} and \texttt{inf}  (see Lines~\ref{line:2.5.6} and ~\ref{line:2.5.8}) set to the \emph{indeterminate} characteristic value all links not in the \emph{border}, respectively \emph{not} in the \emph{inner} part (see Fig.~\vref{fig:2.3}). Being much \emph{denser} than a linear order, the actual inner part of our tutorial random valuation digraph \texttt{rdg} is reduced to a single arc between nodes \texttt{3} and \texttt{4} (see Fig.~\vref{fig:2.4} right side). Indeed, a complete digraph on the limit has no inner part (privacy!) at all, whereas empty and indeterminate digraphs admit both, an empty border and an empty inner part.
 \begin{figure}[h]
 %\sidecaption
   Border Part \hfill Inner Part \\
@@ -199,14 +201,14 @@ The \texttt{Digraph} object \texttt{rdg} can be restored from both partial objec
     '7'   |  0.88  0.72  0.82  0.52 -0.84  0.04  0.00
 \end{lstlisting}
 
-The epistemic fusion operator \texttt{o-max} (see List.~\vref{list:2.6} Line~\ref{line:2.6.2}) is defined as follows:
+The epistemic fusion operator \texttt{o-max} (see List.~\ref{list:2.6} Line~\ref{line:2.6.2}) is defined as follows:
 \begin{definition}[Disjunctive epistemic fusion operator \texttt{o-max}]\label{def:disjunctiveFusion}
 
 \noindent Let $r$ and $r'$ characterise two bipolar-valued epistemic situations:
-\begin{itemize}[leftmargin=0.5cm,rightmargin=0.5cm,nosep]
-\item \texttt{o-max}$(r, r')$ = $\max(r, r' )$ when both $r \geqslant 0.0$ and $r' \geqslant 0.0$, i.e. $r$ and $r'$ are positively valid or indeterminate;;
+\begin{itemize}[leftmargin=0.5cm,rightmargin=0.5cm,topsep=3pt]
+\item \texttt{o-max}$(r, r')$ = $\max(r, r' )$ when both $r \geqslant 0.0$ and $r' \geqslant 0.0$, i.e. $r$ and $r'$ are positively valid or indeterminate;
 \item \texttt{o-max}$(r, r')$ = $\min(r, r' )$ when both $r \leqslant 0.0$ and $r' \leqslant 0.0$, i.e. $r$ and $r'$ are postively invalid or indeterminate;
-\item \texttt{o-max}$(r, r')$ = $0.0$, i.e. indeterminate otherwise.
+\item otherwise \texttt{o-max}$(r, r')$ = $0.0$, i.e. indeterminate.
 \end{itemize}
 \end{definition}
 
@@ -215,7 +217,7 @@ Mind that the \texttt{o-max} operator, like a mean operator, is \emph{not associ
 \section{Dual, converse and codual digraphs}
 \label{sec:2.6}
 
-The \texttt{digraphs} module provides class constructors for computing the \emph{dual}\index{DualDigraph@\texttt{DualDigraph} class} (negated relation \footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.}), the \emph{converse}\index{ConverseDigraph@\texttt{ConverseDigraph} class} (transposed relation) and the \emph{codual}\index{CoDualDigraph@\texttt{CoDualDigraph} class} (transposed and negated relation) of the \texttt{Digraph} instance \texttt{rdg} (see List.~\vref{list:2.7} Lines~\ref{line:2.7.4}, ~\ref{line:2.7.16}, ~\ref{line:2.7.29}). 
+The \texttt{digraphs} module provides class constructors for computing the \emph{dual}\index{DualDigraph@\texttt{DualDigraph} class}\footnote{Not to be confused with the dual graph of a plane graph $g$ that has a vertex for each face of $g$. Here we mean the \emph{less than} (strict converse) relation corresponding to a \emph{greater or equal} relation, or the \emph{less than or equal} relation corresponding to a (strict) \emph{better than} relation.} (negated relation), the \emph{converse}\index{ConverseDigraph@\texttt{ConverseDigraph} class} (transposed relation) and the \emph{codual}\index{CoDualDigraph@\texttt{CoDualDigraph} class} (transposed and negated relation) of the \texttt{Digraph} instance \texttt{rdg} (see List.~\vref{list:2.7} Lines~\ref{line:2.7.4}, ~\ref{line:2.7.16}, ~\ref{line:2.7.29}). 
 \begin{lstlisting}[caption={Computing associated dual, converse and codual digraphs},label=list:2.7]
 >>> from digraphs import\
 ...          DualDigraph, ConverseDigraph, CoDualDigraph
@@ -259,7 +261,7 @@ The \texttt{digraphs} module provides class constructors for computing the \emph
     '7'     | -0.44 -0.02  1.00 -0.76  0.52  0.22  0.00	 
 \end{lstlisting}
 
-Computing the \emph{dual}, respectively the \emph{converse} of a digraph, may also be done with prefixing the \texttt{\_\_neg\_\_} ($-$) or the \texttt{\_\_invert\_\_} ($\sim$) operator. The \emph{codual} of a \texttt{Digraph} object may, hence, as well be computed with a \emph{composition} (in either order) of both operations (see Line~\ref{line:2.8.3} below).
+Computing the \emph{dual}, respectively the \emph{converse} of a digraph, may also be done with prefixing the \texttt{\_\_neg\_\_} ($-$) or the \texttt{\_\_invert\_\_} ($\sim$) operator. The \emph{codual} of a \texttt{Digraph} object can, hence, as well be computed with a \emph{composition} (in either order) of both operations (see Line~\ref{line:2.8.3} below).
 \begin{lstlisting}[caption={Computing the dual, the converse and the codual of a digraph},label=list:2.8]
 >>> ddg = -rdg   # dual of rdg
 >>> cdg = ~rdg   # converse of rdg
@@ -280,12 +282,12 @@ Computing the \emph{dual}, respectively the \emph{converse} of a digraph, may al
 \section{Symmetric and transitive closures}
 \label{sec:2.7}
 
-Symmetric and transitive closures, by default in-site methods, are also available (see Fig.~\vref{fig:2.5})\index{closeSymmetric@\texttt{closeSymmetric()}}\index{closeTransitive@\texttt{closeTransitive()}}. Note that it is a good idea, before going ahead with these in-site operations, that irreversibly modify the original \texttt{rdg} object, to previously make a backup version of \texttt{rdg}. The simplest storage method, always provided by the generic \texttt{Digraph.save()} method, writes out in a named file the Python content of the \texttt{Digraph} object in string representation (see Sect.~\vref{sec:1.3}).
+Symmetric and transitive closures, by default in-site methods, are also available (see Fig.~\vref{fig:2.5})\index{closeSymmetric@\texttt{closeSymmetric()}}\index{closeTransitive@\texttt{closeTransitive()}}. Note that it is a good idea, before going ahead with these in-site operations, that irreversibly modify the original \texttt{rdg} object, to previously make a backup version of \texttt{rdg}. The simplest storage method, always provided by the generic \texttt{Digraph.save()} method, writes out in a named file the Python content of the \texttt{Digraph} object in string representation (see Sect.~\ref{sec:1.3}).
 \begin{lstlisting}[caption={Symmeric and transitive closures},label=list:2.9]
 >>> rdg.save('tutRandValDigraph')
 >>> rdg.closeSymmetric(InSite=True) §\label{line:2.9.2}§
 >>> rdg.closeTransitive(InSite=True) §\label{line:2.9.3}§
->>> rdg.exportGraphViz('strongComponents')
+>>> rdg.exportGraphViz('symTransClosure')
 \end{lstlisting}
 \begin{figure}[h]
 \sidecaption[t]
@@ -296,7 +298,7 @@ Symmetric and transitive closures, by default in-site methods, are also availabl
 
 The \texttt{closeSymmetric()}\index{closeSymmetric@\texttt{closeSymmetric()}} method (see List.~\vref{list:2.9} Line~\ref{line:2.9.2}), of complexity $O(n^2)$ where $n$ denotes the digraph's order, changes, on the one hand, all single pairwise links it may detect into double links by operating a disjunction of the pairwise relations. On the other hand, the \texttt{closeTransitive()}\index{closeTransitive@\texttt{closeTransitive()}}  method (see Line~\ref{line:2.9.3}), implements the \emph{Roy-Warshall} transitive closure algorithm of complexity $O(n^3)$ \index{Roy@\textsl{B. Roy}} \index{warshall@\textsl{S. Warshall}} (\citealp{ROY-1959} and \citealp{WAR-1962}).
 
-The same \texttt{closeTransitive()} with a \texttt{Reverse = True} flag may be readily used for eliminating all transitive arcs from a transitive digraph instance. We make usage of this feature when drawing Hasse diagrams of \texttt{TransitiveDi\-graph}\index{TransitiveDigraph@\texttt{TransitiveDigraph} class} objects.
+The same \texttt{closeTransitive()} with a \texttt{Reverse = True} flag may be readily used for eliminating all transitive arcs from a transitive digraph instance. We make usage of this feature when drawing \Hasse diagrams of \texttt{TransitiveDi\-graph}\index{TransitiveDigraph@\texttt{TransitiveDigraph} class} objects.
 
 \section{Strong components}
 \label{sec:2.8}
@@ -329,7 +331,7 @@ As the original digraph \texttt{rdg} was connected (see above the result of the 
 \section{CSV storage}
 \label{sec:2.9}
 
-Sometimes it is required to exchange the graph valuation data in CSV format with a statistical package like \textbf{R}\footnote{\url{https://www.r-project.org/}}. For this purpose it is possible to export the digraph data into a CSV file. The valuation domain is hereby normalised by default to the range $[-1.0,1.0]$ and the diagonal is put by default to the minimal value $-1.0$.
+Sometimes it is required to exchange the graph valuation data in CSV format with statistical software like \textbf{R}\footnote{\url{https://www.r-project.org/}} or \texttt{gretl}\footnote{The Gnu Regression, Econometrics and Time-series Library \url{http://gretl.sourceforge.net/}}. For this purpose it is possible to export the digraph adjacency table into a CSV file. The characteristic valuation domain is hereby normalised by default to the range $[-1.0,1.0]$ and the diagonal is put by default to the minimal value $-1.0$.
 \begin{lstlisting}
 >>> rdg = Digraph('tutRandValDigraph')
 >>> rdg.saveCSV('tutRandValDigraph')
@@ -361,14 +363,14 @@ It is possible to reload a \texttt{Digraph} instance from its previously saved C
     '7'    |  0.88  0.72  0.82  0.52 -0.84  0.04   -
 \end{lstlisting}
   
-It is as well possible with the \texttt{showHTMLRelationTable()} method\index{showHTMLRelationTable@\texttt{showHTMLRelationTable()}} to show in Figure~\vref{fig:2.6} a coloured version of the valued relation table in a system browser window. 
+It is as well possible with the \texttt{showHTMLRelationTable()} method\index{showHTMLRelationTable@\texttt{showHTMLRelationTable()}} to show a coloured version of the valued relation table in a system browser window (see Fig.~\vref{fig:2.6}). 
 \begin{lstlisting}
 >>> rdgcsv.showHTMLRelationTable(tableTitle="Tutorial random digraph")
 \end{lstlisting}
  \begin{figure}[ht]
 \sidecaption[t]
-\includegraphics[width=7cm]{Figures/2-6-htmlTutorialDigraph.png}
-\caption[The valued relation table shown in a browser window]{\emph{The valued relation table shown in a browser window}\\ Positive arcs are shown in green and negative arcs in red. Indeterminate --zero-valued-- arcs, like the reflexive diagonal ones or the arc between node \texttt{6} and node \texttt{2}, are shown in grey.}
+\includegraphics[width=6cm]{Figures/2-6-htmlTutorialDigraph.png}
+\caption[The valued relation table shown in a browser window]{\emph{The valued relation table shown in a browser window}\\ Positive arcs are shown in green and negative arcs in red. Indeterminate ---zero-valued--- arcs, like the reflexive diagonal ones or the arc between nodes \texttt{6} and \texttt{2}, are shown in grey.}
 \label{fig:2.6}       % Give a unique label
 \end{figure}
  
@@ -381,7 +383,7 @@ Let us finally mention some special universal classes of digraphs that are readi
 \item  the \texttt{EmptyDigraph}\index{EmptyDigraph@\texttt{EmptyDigraph} class} class and
 \item  the \texttt{IndeterminateDigraph}\index{IndeterminateDigraph@\texttt{IndeterminateDigraph} class} class,
 \end{itemize}
-which set all pairwise characteristic values respectively to the \emph{maximum}, the \emph{minimum}, respectively to the \emph{median} indeterminate value.
+which set all pairwise characteristic values respectively to the \emph{maximum}, the \emph{minimum}, respectively to the \emph{median} ---indeterminate--- value.
 \begin{lstlisting}[caption={Complete, empty and indeterminate digraphs},label=list:2.11]
 >>> from digraphs import CompleteDigraph,EmptyDigraph,\
 ...   			 IndeterminateDigraph
@@ -436,7 +438,7 @@ which set all pairwise characteristic values respectively to the \emph{maximum},
     '4': in => set(), out => set() §\label{line:2.11.51}§
 \end{lstlisting}
 
-Mind the subtle difference between the neighbourhoods of an \emph{empty} and the neighbourhoods of an \emph{indeterminate} \texttt{Digraph} instance. In the first kind, the neighbourhoods are known to be completely \emph{empty}  (see List.~\vref{list:2.11} Lines~\ref{line:2.11.22}--\ref{line:2.11.27}) whereas, in the latter, \emph{nothing is known} about the actual neighbourhoods of the nodes  (see Lines~\ref{line:2.11.46}--\ref{line:2.11.51}). These two cases illustrate why in the case of \emph{bipolar-valued} digraphs, we may sometimes need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
+Mind the subtle difference between the neighbourhoods of an \emph{empty} and the neighbourhoods of an \emph{indeterminate} \texttt{Digraph} instance. In the first kind, the neighbourhoods are known to be completely \emph{empty}  (see List.~\vref{list:2.11} Lines~\ref{line:2.11.22}--\ref{line:2.11.27}) whereas, in the latter, \emph{nothing is known} about the actual neighbourhoods of the nodes  (see Lines~\ref{line:2.11.46}--\ref{line:2.11.51}). These two cases illustrate why in \emph{bipolar-valued} digraphs, we may sometimes need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

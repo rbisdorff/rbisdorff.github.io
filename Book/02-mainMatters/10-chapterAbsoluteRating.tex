@@ -257,7 +257,7 @@ The same result may also be shown in a browser view with the \texttt{showHTMLRa\
 \label{fig:10.2}       % Give a unique label
 \end{figure}
 	    
-Using furthermore a specialised version of the \texttt{exportGraphViz()} method allows drawing in Fig.~\vref{fig:10.3} the same rating result in a Hasse diagram format.\footnote{Note that the graphviz dot file was post-edited in order to mark in blue alternatives \texttt{a1001} and \texttt{a1010}.}
+Using furthermore a specialised version of the \texttt{exportGraphViz()} method allows drawing in Fig.~\vref{fig:10.3} the same rating result in a \Hasse diagram format.\footnote{Note that the graphviz dot file was post-edited in order to mark in blue alternatives \texttt{a1001} and \texttt{a1010}.}
 \begin{lstlisting}
 >>> lqr.exportRatingGraphViz('quartileRatingDigraph')
  *---- exporting a dot file for GraphViz tools ---------*
@@ -271,7 +271,7 @@ Using furthermore a specialised version of the \texttt{exportGraphViz()} method 
 \label{fig:10.3}       % Give a unique label
 \end{figure}
 
-We have actually solved now the \emph{absolute rating} problem stated at the beginning. Decision alternatives \texttt{a1001} and \texttt{a1010} (see Tab.~\vref{tab:10.1}) are both rated into the same third quartile \texttt{Q3} class (see Fig.~\vref{fig:10.3}), even if the \Copeland ranking, obtained from the underlying strict outranking digraph (see Fig.~\vref{fig:10.2}), suggests that alternative \texttt{a1010} is effectively \emph{better performing than} alternative \texttt{a1001}. 
+We have actually solved now the \emph{absolute rating} problem stated at the beginning. Decision alternatives \texttt{a1001} and \texttt{a1010} (see Table~\vref{tab:10.1}) are both rated into the same third quartile \texttt{Q3} class (see Fig.~\vref{fig:10.3}), even if the \Copeland ranking, obtained from the underlying strict outranking digraph (see Fig.~\vref{fig:10.2}), suggests that alternative \texttt{a1010} is effectively \emph{better performing than} alternative \texttt{a1001}. 
 
 A \emph{preciser} rating result may indeed be achieved when using \emph{deciles} instead of \emph{quartiles} for estimating the historical marginal cumulative distribution functions.
 \begin{lstlisting}[caption={Absolute deciles rating result},label=list:10.9]

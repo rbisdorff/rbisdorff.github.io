@@ -18,9 +18,9 @@
 \section{Installing the \Digraph resources}
 \label{sec:1.1}
 
-Using the \Digraph Python modules is simple\footnote{See the technical description of the \Digraph programming resources, \citet{BIS-2021b}.}. You only need to have installed on your system the Python programming language of version 3 (by default available under Linux and MacOS). Notice that, from Version 3.3 on, the Python standard \texttt{decimal} module implements very efficiently in C its \texttt{Decimal} class. Now, \texttt{Decimal} numbers are mainly used in the \Digraph characteristic valuation functions, which makes the recent \texttt{Python-3.7+} versions much faster (more than twice as fast) when extensive digraph operations are performed.
-%\lstset{style=shstyle}
-Several download options (easiest under Linux or MacOS) are given; either, by using a git client and clone a working copy from the \texttt{github.com} directory:
+Using the \Digraph Python modules is simple\footnote{See the technical description of the \Digraph programming resources, \citet{BIS-2021b}.}. You only need to have installed on your system the Python programming language of version 3 (by default available under Linux and MacOS).
+
+Several download options (easiest under Linux or MacOS) are given; either, by using a \texttt{git} client and \texttt{clone} a working copy from the \texttt{github.com} directory:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   ...$ git clone https://github.com/rbisdorff/Digraph3
 \end{lstlisting}
@@ -28,23 +28,26 @@ or from the \texttt{sourceforge.net} directory:
 \begin{lstlisting}[language=sh,backgroundcolor=\color{White},numbers=none]
   ...$ git clone https://git.code.sf.net/p/digraph3/code Digraph3
 \end{lstlisting}
+It is also possible, with a browser access, to download either,
+\begin{itemize}[nosep]
+\item from the \texttt{github.\-com} link or,
+\item from the \texttt{sourceforge.net} link,
+\end{itemize}
+the latest distribution \texttt{zip} archive and extract it.
 
-It is also possible with a browser access, to download either, from the \texttt{github.\-com} link or, from the \texttt{sourceforge.net} link above the latest distribution zip archive and extract it.
-
-On Linux or MacOS, \texttt{..\$ cd} to the cloned or extracted \texttt{Digraph3} directory. The following shell command installs (with \emph{sudo} !) the \Digraph modules in the current running python environment:
+On Linux or MacOS, \texttt{..\$ cd} to the cloned or extracted \texttt{Digraph3} directory. The following shell command installs (with \emph{sudo} !) the \Digraph modules in the system-wide python environment :
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White},numbers=none]
   .../Digraph3$ make install
 \end{lstlisting}
 
 Python-3.8 (or later) environment is recommended (see the \texttt{makefile} for adapting the \texttt{make install} command to your running python environment).
 
-Whereas the following shell command installs the \Digraph modules in an activated virtual python environment:
+Whereas the following shell command installs the \Digraph modules locally in an activated virtual python user environment:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   .../Digraph3$ make installVenv
 \end{lstlisting}
 
-
-If the \texttt{cython} \footnote{\href{https://cython.org}{https://cython.org}} C-compiled modules for Big Data applications are required, it is necessary to previously install the \texttt{Cython} package in the running Python environment:
+If the C-compiled modules for Big Data applications are required, it is necessary to previously install the \texttt{cython} compiler\footnote{\href{https://cython.org}{https://cython.org}} package in the running Python environment:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   ...$ python3 -m pip install cython
 \end{lstlisting}
@@ -64,7 +67,7 @@ A verbose (with \texttt{stdout} not captured) \texttt{pytest} suite may be run a
   .../Digraph3$ make verboseTests
 \end{lstlisting}
 
-When the GNU \texttt{parallel} shell tool\index{parallel@\texttt{parallel} shell tool}\footnote{\href{https://www.gnu.org/software/parallel}{https://www.gnu.org/software/parallel}} is installed and multiple cores are detected, the tests may be executed in multiprocessing mode:
+When the GNU \texttt{parallel} shell tool\index{parallel@\texttt{parallel} shell tool}\footnote{\href{https://www.gnu.org/software/parallel}{https://www.gnu.org/software/parallel}} is installed and multiple cores are detected, the tests will be executed in multiprocessing mode:
 \begin{lstlisting}[language=sh, backgroundcolor=\color{White}, numbers=none]
   ../Digraph3$ make pTests
 \end{lstlisting}
@@ -74,13 +77,13 @@ Individual module \texttt{pytest} suites are also provided (see the \texttt{make
 ../Digraph3$ make outrankingDigraphsTests
 \end{lstlisting}
 
-\noindent \textbf{Dependencies:}
+\paragraph{\textbf{Dependencies:}}
 
 \noindent To be fully functional, the \Digraph resources mainly need:
 \begin{itemize}[leftmargin=0.5cm,listparindent=0em,rightmargin=0.2cm,topsep=3pt]
 \item The \texttt{graphviz} tools \citep{graphviz}\footnote{\href{https://graphviz.org}{https://graphviz.org}}, and 
 \item The \textbf{R} statistics resources \footnote{\href{https://www.r-project.org}{https://www.r-project.org}} to be installed;
-\item When exploring digraph isomorphisms, the \texttt{nauty} isomorphism testing program is required \citep*{nauty}. On linux you may try: \texttt{sudo apt install nauty}. For MacOS, corresponding \texttt{dmg} installers are available for downloading;
+\item When exploring digraph isomorphisms, the \texttt{nauty} isomorphism testing program is required \citep*{nauty}. On Linux you may try: \texttt{sudo apt install nauty}. For MacOS, corresponding \texttt{dmg} installers are available for downloading;
 \item Two specific methods of the \texttt{OutrankingDigraph} class for clustering performance criteria or decision alternatives require furthermore the \texttt{calmat} matrix computing resource to be installed (see the \texttt{calmat} directory in the \Digraph resources).
 \end{itemize}
 
@@ -268,7 +271,7 @@ The \texttt{exportGraphViz()}\index{exportGraphViz@\texttt{exportGraphViz()}} me
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=7cm]{Figures/1-1-tutorialDigraph.pdf}
-\caption[The tutorial crisp digraph]{\emph{The tutorial crisp digraph}\\ The \texttt{exportGraphViz()} method is depending on drawing tools from \texttt{https://graphviz.org}. On Linux Ubuntu or Debian you may try '\texttt{sudo apt-get install graphviz}’ to install them. For Mac OSX There are ready $dmg$ installers available.}
+\caption[The tutorial crisp digraph]{\emph{The tutorial crisp digraph}\\ The \texttt{exportGraphViz()} method is depending on drawing tools from \texttt{https://graphviz.org}. On Linux Ubuntu or Debian you may try '\texttt{sudo apt-get install graphviz}’ to install them. Under MacOS there are ready \texttt{dmg} installers available.}
 \label{fig:1.1}       % Give a unique label
 \end{figure}
 
@@ -324,7 +327,7 @@ The preceding \texttt{show...()} methods usually rely upon corresponding compute
  Decimal('60.00')
 \end{lstlisting}
 
-Mind that \texttt{show...()} methods output their results in the \emph{Python} console. We provide also some \texttt{showHTML...()} methods which output their results in a system browser’s tab or window.
+Mind that \texttt{show...()} methods output their results in the Python terminal console. We provide also some \texttt{showHTML...()} methods which output their results in a system browser’s tab or window.
 \begin{lstlisting}
 >>> dg.showHTMLRelationMap(relationName='r(x,y)',\
 ...                        rankingRule=None)
@@ -364,7 +367,7 @@ Some special types of digraph instances, like the \texttt{CirculantDigraph}\inde
 
 %\vspace{1cm}
 \vspace{\baselineskip}
-The next Chap.~\ref{sec:2} will introduce the fondamental \emph{bipolar-valued digraph} model which is \emph{root object type} to all the digraph models implemented in the \Digraph modules \citep{BIS-2021b}.    
+The next Chapter~\ref{sec:2} introduces the fondamental \emph{bipolar-valued digraph} model which is \emph{root object type} to all the digraph models implemented in the \Digraph modules \citep{BIS-2021b}.    
 
 %%%%%%% The chapter bibliography
 % % \normallatexbib

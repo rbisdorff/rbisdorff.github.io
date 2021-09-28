@@ -140,13 +140,13 @@ We can inspect the complete $[-1.0,+1.0]$-valued adjacency table with the \textt
    Valuation domain: [-1.0; 1.0]
 \end{lstlisting}
 
-The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class constructor computes from the given performance tableau $pt$ the characteristic value $r(x \succsim y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ in a default \emph{valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as \emph{indeterminate} characteristic value. 
+The \texttt{BipolarOutrankingDigraph}\index{BipolarOutrankingDigraph@\texttt{BipolarOutrankingDigraph}} class constructor computes from the given performance tableau \texttt{pt} the characteristic value $r(x \succsim y)$ of a \emph{pairwise outranking} relation $x\, \succsim \,y$ in a default \emph{valuation domain} $[-1.0,+1.0]$ with the {\em median\/} value $0.0$ acting as \emph{indeterminate} characteristic value. 
 
 The semantics of $r(x \succsim y)$ are the following:
 \begin{definition}[Semantics of the outranking characteristic function]\label{def:3.1} 
 \begin{itemize}[topsep=3pt]
-\item [a.] When $r(x \succsim y) > 0.0$, it is \emph{True} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is ``\emph{at least as well evaluated as}'' alternative $y$ on a weighted majority of criteria \textbf{and} there is no considerable negative performance difference observed in disfavour of $x$,
-\item [b.] When $r(x \succsim y) < 0.0$, it is \emph{False} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is {\bf only} ``\emph{evaluated at least as well as} alternative $y$ on a weighted minority of criteria \textbf{and} there is no considerable positive performance difference observed in favour of $x$,
+\item [a.] When $r(x \succsim y) > 0.0$, it is \emph{True} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is ``\emph{at least as well evaluated as}'' alternative $y$ on a majority of criteria significance \textbf{and} there is no considerable negative performance difference observed in disfavour of $x$,
+\item [b.] When $r(x \succsim y) < 0.0$, it is \emph{False} that $x$ \emph{outranks} $y$, i.e. alternative $x$ is {\bf only} ``\emph{evaluated at least as well as}'' alternative $y$ on a minority of criteria significance \textbf{and} there is no considerable positive performance difference observed in favour of $x$,
 \item [c.] When $r(x \succsim y) = 0.0$, it is {\bf indeterminate} whether $x$ outranks $y$ or not.
 \end{itemize}
 \end{definition}
@@ -205,7 +205,7 @@ Such a polarised situation is however observed when we compare the evaluations o
    Valuation in range: -7.00 to +7.00; r(x,y)= -1/7 => 0.0 §\label{line:3.7.27}§
 \end{lstlisting}
 
-This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting a ``\emph{at least as well evaluated as}'' situation between alternative \texttt{a1} and alternative \texttt{a7}. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Line~\ref{line:3.7.6} in List.~\vref{list:3.7}). Both contradictory facts trigger eventually in Line 14 an \emph{indeterminate} outranking situation. The inverse polarisation effect appears when considering in Lines~\ref{line:3.7.19}--\ref{line:3.7.25} the converse performance differences between alternative \texttt{a7} and alternative \texttt{a1}. The considerable better performing situation on criterion \texttt{g1} makes doubtful the otherwise ``\emph{not at least as well evaluated as}'' situation (see Lines~\ref{line:3.7.19} and \ref{line:3.7.27}).
+This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting an ``\emph{at least as well evaluated as}'' situation between alternative \texttt{a1} and alternative \texttt{a7}. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Line~\ref{line:3.7.6} in List.~\vref{list:3.7}). Both contradictory facts trigger eventually in Line 14 an \emph{indeterminate} outranking situation. The inverse polarisation effect appears when considering in Lines~\ref{line:3.7.19}--\ref{line:3.7.25} the converse performance differences between alternative \texttt{a7} and alternative \texttt{a1}. The considerable better performing situation on criterion \texttt{g1} makes doubtful the otherwise ``\emph{not at least as well evaluated as}'' situation (see Lines~\ref{line:3.7.19} and \ref{line:3.7.27}).
 
 Notice that the occurrence in a pairwise comparison of conjointly considerable positive and negative performance differences will also trigger an indeterminate outranking situation. When observing at the same time a positive (resp. negative) ``\emph{at least as well evaluated as}'' situation and one or more considerable positive (resp. negative) performance difference, the outranking situation gets validated (resp. invalidated) for certain \citep{BIS-2013}.
 
@@ -230,7 +230,7 @@ All outranking digraphs, being of root \texttt{Digraph} type, inherit the method
     Valuation domain: [-7;+7]
 \end{lstlisting}
 
-Notice in Listing~\vref{list:3.8} that the self comparison characteristics $r(x \succsim x)$ may be ignored by setting the \texttt{ReflexiveTerms} Boolean parameter to \texttt{False}. Mind that the trivial reflexive terms of outranking relations are ignored in some of the \Digraph methods. 
+Notice in Listing~\vref{list:3.8} that the self comparison characteristics $r(x \succsim x)$ may be ignored by setting the \texttt{ReflexiveTerms} parameter to \texttt{False}. Mind that the trivial reflexive terms of outranking relations are ignored in some of the \Digraph methods. 
 
 \section{The strict outranking digraph}
 \label{sec:3.5}
@@ -271,7 +271,7 @@ If the concordance argument was always well received, the discordance argument h
 Furthermore, the initial conjunctive aggregation of the concordance and discordance arguments had to be replaced by a disjunctive epistemic fusion operation, polarising in a logically sound and epistemically correct way the concordance with the discordance argument. This way, bipolar-valued outranking  digraphs gained two very useful properties from a measure theoretical perspective. They are \emph{weakly complete}; incomparability situations are no longer attested by the absence of positive outranking relations, but instead by epistemic indeterminateness. And they verify the \emph{coduality principle}: the negation of the epistemic ``\emph{at least as well evaluated as}'' situation corresponds formally to the strict converse epistemic ``\emph{less well evaluated than}'' situation.
 
 \vspace{\baselineskip}
-In the next methodological Part II, we present and discuss multiple-criteria evaluation models and decision algorithms, like building a best choice recommendation, determining the winner of an election, computing linear rankings or quantile ratings with multiple incommensurable criteria.
+In the next methodological Part II, we present and discuss multiple-criteria evaluation models and decision algorithms, like building a best choice recommendation, determining the winner of an election and, computing linear rankings or quantile ratings with multiple incommensurable criteria.
 
 %%%%%%% The chapter bibliography
 %\normallatexbib
