@@ -33,7 +33,7 @@ The \texttt{votingProfiles}\index{votingProfiles@\texttt{votingProfiles} module}
      'v5': ['c3', 'c1', 'c2',]} §\label{line:7.1.21}§
  \end{lstlisting}
 
-The \texttt{LinearVotingProfile} data concerning the eligible candidates and the voters is internally stored in two ordered dictionaries: attribute \texttt{candidates} (Line~\ref{line:7.1.6}) and attribute \texttt{voters} (Line~\ref{line:7.1.19}). Notice that in this random example, the five voters are weighted. The linear voting ballots are stored in a standard dictionary: attribute \texttt{linearBallot} (Line~\ref{line:7.1.16}). These ballots can be inspected with the \texttt{showLinearBallots()}\index{showLinearBallots@\texttt{showLinearBallots()}} method.
+The \texttt{LinearVotingProfile} data concerning the eligible candidates and the voters is internally stored in two ordered dictionaries: attribute \texttt{candidates} (Line~\ref{line:7.1.6}) and attribute \texttt{voters} (Line~\ref{line:7.1.10}). Notice that in this random example, the five voters are weighted. The linear voting ballots are stored in a standard dictionary: attribute \texttt{linearBallot} (Line~\ref{line:7.1.16}). These ballots can be inspected with the \texttt{showLinearBallots()}\index{showLinearBallots@\texttt{showLinearBallots()}} method.
 \begin{lstlisting}[caption={Showing linear voting profiles},label=list:7.2]
 >>> lvp.showLinearBallots()
     voters(weight)	 candidates rankings

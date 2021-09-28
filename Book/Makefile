@@ -12,8 +12,9 @@ book:
 	$(MAKE) clean
 	pdflatex book.tex
 	pdflatex book.tex
-	$(MAKE) reIndex
-
+	makeindex -s svind.ist book.idx
+	pdflatex book.tex
+	pdflatex book.tex
 
 reIndex:
 	pdflatex book.tex
