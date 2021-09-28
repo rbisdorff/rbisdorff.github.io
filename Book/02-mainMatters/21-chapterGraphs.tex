@@ -321,7 +321,7 @@ Notice in Listing~\vref{list:21.9} that the MISs in a line graph provide \emph{m
 \label{fig:21.3}       % Give a unique label
 \end{figure}
 
-The two last MISs of cardinality 4 (see Lines~\ref{line:21.9.13}-\ref{line:21.9.16} 13-16 in List.~\vref{list:21.9}) give perfect maximum matchings of the 8-cycle graph as shown in Fig.~\vref{fig:21.3}. 
+The two last MISs of cardinality 4 (see Lines~\ref{line:21.9.13}--\ref{line:21.9.16} 13-16 in List.~\vref{list:21.9}) give perfect maximum matchings of the 8-cycle graph as shown in Fig.~\vref{fig:21.3}. 
 \begin{lstlisting}[caption={Computing maximum matchings in the 8-cycle graph},label=list:21.10]
 >>> maxMatching = c8.computeMaximumMatching()
 >>> c8.exportGraphViz(fileName='maxMatchingcycleGraph',\
@@ -539,7 +539,7 @@ For computing the corresponding non-isomorphic MISs, we actually need the automo
 
 The 12-cycle graph's automorphism group, of size 24, is generated with both the permutations shown in Listing~\vref{list:21.17}.
 
-The \texttt{showOrbits()} method renders now the labelled representatives of each of the four orbits of isomorphic MISs observed in the 12-cycle graph (see Lines~\ref{line:21.18.7}-\ref{line:21.18.10} below).
+The \texttt{showOrbits()} method renders now the labelled representatives of each of the four orbits of isomorphic MISs observed in the 12-cycle graph (see Lines~\ref{line:21.18.7}--\ref{line:21.18.10} below).
 \begin{lstlisting}[caption={Computing the MISs orbits of the 12-cycle graph},label=list:21.18]
 >>> c12.showOrbits(c12.misset,withListing=False)
     ...
@@ -556,7 +556,7 @@ The \texttt{showOrbits()} method renders now the labelled representatives of eac
    frequency      : [0, 2, 0, ..., 1, 0, ...,  1,  0, ...]§\label{line:21.18.13}§
 \end{lstlisting}
 
-The corresponding group stabilisers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines~\ref{line:21.18.12}-\ref{line:21.18.13} in List.~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Fig.~\vref{fig:21.5}.
+The corresponding group stabilisers' sizes and frequencies: orbit 1 with 6 symmetry axes, orbit 2 with 4 symmetry axes, and orbits 3 and 4 both with one symmetry axis (see Lines~\ref{line:21.18.12}--\ref{line:21.18.13} in List.~\vref{list:21.18}), are illustrated in the corresponding unlabelled graphs of Fig.~\vref{fig:21.5}.
 \begin{figure}[ht]
 \sidecaption[t]
 \includegraphics[width=6cm]{Figures/21-5-c12.png}

@@ -78,7 +78,7 @@ In this example we consider a family of seven \emph{equisignificant} cardinal \e
      Threshold veto : 80.00 + 0.00x ; percentile: 100.00
 \end{lstlisting}
 
-On criteria function \texttt{g1} we observe, for instance, about $5\%$ of \emph{indifference} situations, about $90\%$ of \emph{preference} situations and about $5\%$ of \emph{considerable} performance difference situations (see Lines~\ref{line:3.2.6}-\ref{line:3.2.8} in List.~\vref{list:3.2}).
+On criteria function \texttt{g1} we observe, for instance, about $5\%$ of \emph{indifference} situations, about $90\%$ of \emph{preference} situations and about $5\%$ of \emph{considerable} performance difference situations (see Lines~\ref{line:3.2.6}--\ref{line:3.2.8} in List.~\vref{list:3.2}).
 
 The individual \emph{performance evaluation} of all decision alternatives on each criterion are gathered in a \emph{performance table}.\index{showPerformanceTableau@\texttt{showPerformanceTableau()}}
 \begin{lstlisting}[caption={Inspecting the performance evaluations},label=list:3.3]
@@ -122,7 +122,7 @@ Given the previous random performance tableau \texttt{pt}, the \texttt{BipolarOu
 	]
 \end{lstlisting}
 
-The resulting digraph contains 20 positive (valid) outranking relations. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Lines~\ref{line:3.4.10}-\ref{line:3.4.11} in List.~\vref{list:3.4}).
+The resulting digraph contains 20 positive (valid) outranking relations. And, the mean majority criteria significance support of all the pairwise outranking situations is $63.3\%$ (see Lines~\ref{line:3.4.10}--\ref{line:3.4.11} in List.~\vref{list:3.4}).
 
 We can inspect the complete $[-1.0,+1.0]$-valued adjacency table with the \texttt{show\-RelationTable()} method().\index{showRelationTable@\texttt{showRelationTable()}}
 \begin{lstlisting}[caption={Inspecting the valued adjacency table.},label=list:3.5]
@@ -205,7 +205,7 @@ Such a polarised situation is however observed when we compare the evaluations o
    Valuation in range: -7.00 to +7.00; r(x,y)= -1/7 => 0.0 §\label{line:3.7.27}§
 \end{lstlisting}
 
-This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting a ``\emph{at least as well evaluated as}'' situation between alternative \texttt{a1} and alternative \texttt{a7}. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Line~\ref{line:3.7.6} in List.~\vref{list:3.7}). Both contradictory facts trigger eventually in Line 14 an \emph{indeterminate} outranking situation. The inverse polarisation effect appears when considering in Lines~\ref{line:3.7.19}-\ref{line:3.7.25} the converse performance differences between alternative \texttt{a7} and alternative \texttt{a1}. The considerable better performing situation on criterion \texttt{g1} makes doubtful the otherwise ``\emph{not at least as well evaluated as}'' situation (see Lines~\ref{line:3.7.19} and \ref{line:3.7.27}).
+This time, we observe a $(1/7 + 1)/2 = 57.1\%$ majority of criteria significance warranting a ``\emph{at least as well evaluated as}'' situation between alternative \texttt{a1} and alternative \texttt{a7}. Yet, we also observe a considerable \emph{negative} performance difference on criterion \texttt{g1} (see Line~\ref{line:3.7.6} in List.~\vref{list:3.7}). Both contradictory facts trigger eventually in Line 14 an \emph{indeterminate} outranking situation. The inverse polarisation effect appears when considering in Lines~\ref{line:3.7.19}--\ref{line:3.7.25} the converse performance differences between alternative \texttt{a7} and alternative \texttt{a1}. The considerable better performing situation on criterion \texttt{g1} makes doubtful the otherwise ``\emph{not at least as well evaluated as}'' situation (see Lines~\ref{line:3.7.19} and \ref{line:3.7.27}).
 
 Notice that the occurrence in a pairwise comparison of conjointly considerable positive and negative performance differences will also trigger an indeterminate outranking situation. When observing at the same time a positive (resp. negative) ``\emph{at least as well evaluated as}'' situation and one or more considerable positive (resp. negative) performance difference, the outranking situation gets validated (resp. invalidated) for certain \citep{BIS-2013}.
 

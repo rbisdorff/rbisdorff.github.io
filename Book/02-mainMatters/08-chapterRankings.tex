@@ -136,7 +136,7 @@ In Listing~\vref{list:8.3} we show the ranking of the given strict outranking di
   ['a5','a1','a6','a7','a8','a4','a9','a3','a2'] §\label{line:8.3.14}§
 \end{lstlisting}
 
-Alternative \texttt{a5} obtains here the best \Copeland score ($+12$), followed by alternatives \texttt{a1}, \texttt{a6} and \texttt{a7} with same score ($+2$); following the lexicographic rule, \texttt{a1} is hence ranked before \texttt{a6} and \texttt{a6} before \texttt{a7}. Same situation is observed for \texttt{a4} and \texttt{a9} with a score of $-3$ (see List.~\vref{list:8.3} Lines~\ref{line:8.3.4}-\ref{line:8.3.12}). The \Copeland ranking rule is in fact \emph{invariant} under the \emph{codual} transform (see Sect.~\ref{sec:2.6}) and renders a same linear order indifferently from digraphs \texttt{g} or \texttt{gcd}.
+Alternative \texttt{a5} obtains here the best \Copeland score ($+12$), followed by alternatives \texttt{a1}, \texttt{a6} and \texttt{a7} with same score ($+2$); following the lexicographic rule, \texttt{a1} is hence ranked before \texttt{a6} and \texttt{a6} before \texttt{a7}. Same situation is observed for \texttt{a4} and \texttt{a9} with a score of $-3$ (see List.~\vref{list:8.3} Lines~\ref{line:8.3.4}--\ref{line:8.3.12}). The \Copeland ranking rule is in fact \emph{invariant} under the \emph{codual} transform (see Sect.~\ref{sec:2.6}) and renders a same linear order indifferently from digraphs \texttt{g} or \texttt{gcd}.
 
 The \Copeland rule works well, furthermore on any strict outranking digraph that models a linear (partial) order on the \emph{median cut} strict outranking digraph \texttt{ccd} \citep{DIA-2010}. In Listing~\vref{list:8.4}, the \texttt{computeRankingCorrela\-tion()} method\index{computeRankingCorrelation@\texttt{computeRankingCorrelation()}}, coupled with the \texttt{showCorrelation()} method, indicate the ordinal correlation of the {\sc Cope\-land} ranking result, shown in Listing~\vref{list:8.3} Line~\ref{line:8.3.14}, with the given outranking digraph \texttt{g} (see Chap.~\ref{sec:16} and \citealp{BIS-2012a}).
 \begin{lstlisting}[caption={Checking the ordinal quality of the \Copeland ranking},label=list:8.4]
@@ -315,7 +315,7 @@ To retain now a specific representative among all the potential rankings with ma
     Ranking fairness (a)-(b)              : -0.079 §\label{line:8.11.16}§
   \end{lstlisting}
 
-In Listing~\vref{list:8.11}  are shown the ordinal correlation of the first Kemeny ranking  with all the marginal strict outranking relations per performance criterion (see Lines~\ref{line:8.11.6}-\ref{line:8.11.12}). The Benefit criterion \texttt{b09} is highest correlated ($+0.361$, Line~\ref{line:8.11.6}), whereas the Costs criterion \texttt{c03} is lowest correlated ($-167$, Line~\ref{line:8.11.12}) with this \Kemeny ranking.
+In Listing~\vref{list:8.11}  are shown the ordinal correlation of the first Kemeny ranking  with all the marginal strict outranking relations per performance criterion (see Lines~\ref{line:8.11.6}--\ref{line:8.11.12}). The Benefit criterion \texttt{b09} is highest correlated ($+0.361$, Line~\ref{line:8.11.6}), whereas the Costs criterion \texttt{c03} is lowest correlated ($-167$, Line~\ref{line:8.11.12}) with this \Kemeny ranking.
 
 The ranking consensus quality of the second \Kemeny ranking is shown in Listing~\ref{list:8.12} below.  
 \begin{lstlisting}[caption={Computing the consensus quality of the second \Kemeny ranking},label=list:8.12,basicstyle=\ttfamily\scriptsize]
@@ -339,7 +339,7 @@ The ranking consensus quality of the second \Kemeny ranking is shown in Listing~
 
 The Benefit criterion \texttt{b09} is again highest correlated ($+0.306$, Line~\ref{line:8.12.6}) with this \Kemeny ranking, but the weakest correlated criterion is now Benefit criterion \texttt{b10} ($-0.111$, Line~\ref{line:8.12.12}).
 
-Both \Kemeny rankings show the same \emph{weighted mean marginal correlation} ($+0.099$) with all thirteen performance criteria. However, the second ranking shows a slightly lower \emph{standard deviation}: $+0.132$ versus $+0.177$, resulting in a slightly \emph{fairer} ranking result: $-0.033$ versus $-0.079$ (see List.~\vref{list:8.11} Lines~\ref{line:8.11.14}-\ref{line:8.11.16} and List.~\ref{list:8.12} Lines~\ref{line:8.12.14}-\ref{line:8.12.16}) .
+Both \Kemeny rankings show the same \emph{weighted mean marginal correlation} ($+0.099$) with all thirteen performance criteria. However, the second ranking shows a slightly lower \emph{standard deviation}: $+0.132$ versus $+0.177$, resulting in a slightly \emph{fairer} ranking result: $-0.033$ versus $-0.079$ (see List.~\vref{list:8.11} Lines~\ref{line:8.11.14}--\ref{line:8.11.16} and List.~\ref{list:8.12} Lines~\ref{line:8.12.14}--\ref{line:8.12.16}) .
 
 When several rankings with maximal \Kemeny index are given, the \texttt{Kemeny\-Ranking} class constructor instantiates the ranking with \emph{highest} mean marginal correlation and, in case of ties, with \emph{lowest} weighted standard deviation. Here we obtain ranking: [\texttt{a5}, \texttt{a6}, \texttt{a7}, \texttt{a3}, \texttt{a9}, \texttt{a4}, \texttt{a1}, \texttt{a8}, \texttt{a2}] (see Line~\ref{line:8.8.5} in List.~\vref{list:8.8}).
 

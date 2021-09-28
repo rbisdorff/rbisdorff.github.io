@@ -94,7 +94,7 @@ The \texttt{RandomPerformanceTableau} class\index{RandomPerformanceTableau@\text
 \label{fig:6.1}       % Give a unique label
 \end{figure}
 
-Highest and lowest evaluations on each criterion are marked in \emph{light green}, respectively in \emph{light red}. Notice that missing (\texttt{NA}) evaluations are recorded in a performance tableau by default as \texttt{Decimal('-999')} value (see List.~\vref{list:6.1} Lines~\ref{line:6.1.28}-\ref{line:6.1.29}).
+Highest and lowest evaluations on each criterion are marked in \emph{light green}, respectively in \emph{light red}. Notice that missing (\texttt{NA}) evaluations are recorded in a performance tableau by default as \texttt{Decimal('-999')} value (see List.~\vref{list:6.1} Lines~\ref{line:6.1.28}--\ref{line:6.1.29}).
 
 \section{Random Cost-Benefit performance tableaux}
 \label{sec:6.3}
@@ -163,7 +163,7 @@ The \texttt{randomPerfTabs} module provides a \texttt{RandomCBPerformanceTableau
     ...}
 \end{lstlisting}
 
-In Listing~\vref{list:6.2} one may notice the three types of decision actions (see Lines~\ref{line:6.2.12}-\ref{line:6.2.22}), as well as the two types  of criteria with either an \emph{ordinal} or a \emph{cardinal} performance measuring scale (Lines~\ref{line:6.2.24}-\ref{line:6.2.35}). In the latter case, by default about $5\%$ of the random performance differences will be below the \emph{indifference} and $10\%$ below the \emph{preference} discriminating threshold. About $5\%$ will be \emph{considerably large}. More statistics about the generated performance evaluations can be inspected with the \texttt{showStatistics()} method.\index{showStatistics@\texttt{showStatistics()}}
+In Listing~\vref{list:6.2} one may notice the three types of decision actions (see Lines~\ref{line:6.2.12}--\ref{line:6.2.22}), as well as the two types  of criteria with either an \emph{ordinal} or a \emph{cardinal} performance measuring scale (Lines~\ref{line:6.2.24}--\ref{line:6.2.35}). In the latter case, by default about $5\%$ of the random performance differences will be below the \emph{indifference} and $10\%$ below the \emph{preference} discriminating threshold. About $5\%$ will be \emph{considerably large}. More statistics about the generated performance evaluations can be inspected with the \texttt{showStatistics()} method.\index{showStatistics@\texttt{showStatistics()}}
 \begin{lstlisting}
 >>> t.showStatistics()
     *-------- Performance tableau summary statistics -------*
@@ -294,7 +294,7 @@ The default missing data probablity is $5\%$. In our random instance here we obs
     Total weight: 72.00 (6 criteria)    §\label{line:6.4.21}§
 \end{lstlisting}
 
-In Listing~\vref{list:6.4}, we notice that four \emph{equisignificant} criteria (\texttt{ec01}, \texttt{ec05}, \texttt{ec06}, and \texttt{ec12}) of significance weight 18 assess, for instance, the performance of the public policies from an \emph{economic} point of view (Lines~\ref{line:6.4.3}-\ref{line:6.4.8}). Three \emph{equisignificant} criteria of weight 24 do the same from a \emph{societal} (Lines~\ref{line:6.4.9}-\ref{line:6.4.13}), and six of weight 12 from an \emph{environmental} point of view (Lines~\ref{line:6.4.14}-\ref{line:6.4.21}). 
+In Listing~\vref{list:6.4}, we notice that four \emph{equisignificant} criteria (\texttt{ec01}, \texttt{ec05}, \texttt{ec06}, and \texttt{ec12}) of significance weight 18 assess, for instance, the performance of the public policies from an \emph{economic} point of view (Lines~\ref{line:6.4.3}--\ref{line:6.4.8}). Three \emph{equisignificant} criteria of weight 24 do the same from a \emph{societal} (Lines~\ref{line:6.4.9}--\ref{line:6.4.13}), and six of weight 12 from an \emph{environmental} point of view (Lines~\ref{line:6.4.14}--\ref{line:6.4.21}). 
 
 Variable \emph{triangular} modes: $0.3$, $0.5$ or $0.7$ of the span of the measure scale, give a different performance status for each public policy with respect to the three decision objectives.
 \begin{lstlisting}
@@ -450,7 +450,7 @@ When Parameter \texttt{WithTypes} is set to \texttt{True}, the students are rand
   [['m2', 'm5', 'm6'], ['m1'], ['m3'], ['m4'], ['m7']]
 \end{lstlisting}
   
-The example random tableau, generated for instance above with \texttt{missingData\-Proba\-bility} = $0.03$, \texttt{WithTypes} = \texttt{True} and \texttt{seed} = 100 (see List.~\vref{list:6.6} Lines~\ref{line:6.6.2}-\ref{line:6.6.5}), results in a set of two excellent (\texttt{s05e} and \texttt{s07e}), five good (\texttt{s02g}, \texttt{s03g}, \texttt{s06g}, \texttt{s09g} and \texttt{s10g}), three fair (\texttt{s01f}, \texttt{s04f} and \texttt{s08f}) and one weak (\texttt{s11w}) student. Notice that six students get a grade below the course validating threshold of $10$ and we observe four missing grades (\texttt{NA}), two in course \texttt{m5} and, one in courses \texttt{m3} and \texttt{m6} (see Lines~\ref{line:6.6.21}-\ref{line:6.6.31}).
+The example random tableau, generated for instance above with \texttt{missingData\-Proba\-bility} = $0.03$, \texttt{WithTypes} = \texttt{True} and \texttt{seed} = 100 (see List.~\vref{list:6.6} Lines~\ref{line:6.6.2}--\ref{line:6.6.5}), results in a set of two excellent (\texttt{s05e} and \texttt{s07e}), five good (\texttt{s02g}, \texttt{s03g}, \texttt{s06g}, \texttt{s09g} and \texttt{s10g}), three fair (\texttt{s01f}, \texttt{s04f} and \texttt{s08f}) and one weak (\texttt{s11w}) student. Notice that six students get a grade below the course validating threshold of $10$ and we observe four missing grades (\texttt{NA}), two in course \texttt{m5} and, one in courses \texttt{m3} and \texttt{m6} (see Lines~\ref{line:6.6.21}--\ref{line:6.6.31}).
 
 A statistical summary of the students' grades obtained in the highest weighted course, namely \texttt{m7}, is shown with the \texttt{showCourseStatistics()} method. \index{showCourseStatistics@\texttt{showCourseStatistics()}}
 \begin{lstlisting}[caption={Student performance summary statistics per course},label=list:6.7]

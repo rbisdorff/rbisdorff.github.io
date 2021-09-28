@@ -147,7 +147,7 @@ Inspecting the details of the corresponding sorting characteristics may be done 
     a49 in ]0.80 - 1.00]   -0.57	  0.86	      -0.57
 \end{lstlisting}
 
-In Listing~\vref{list:9.4} Line~\ref{line:9.4.7}, alternative \texttt{a22} verifies indeed positively both sorting conditions only for the highest quintile $[0.80 - 1.00]$ class. Whereas alternatives \texttt{a44} and \texttt{a49}, for instance, weakly verify both sorting conditions for two, resp. three, adjacent quintile classes (Lines~\ref{line:9.4.10}~-\ref{line:9.4.11} and \ref{line:9.4.18}-\ref{line:9.4.20}).  
+In Listing~\vref{list:9.4} Line~\ref{line:9.4.7}, alternative \texttt{a22} verifies indeed positively both sorting conditions only for the highest quintile $[0.80 - 1.00]$ class. Whereas alternatives \texttt{a44} and \texttt{a49}, for instance, weakly verify both sorting conditions for two, resp. three, adjacent quintile classes (Lines~\ref{line:9.4.10}--\ref{line:9.4.11} and \ref{line:9.4.18}--\ref{line:9.4.20}).  
 
 Quantiles sorting results, indeed, verify always the following properties \citep{ADT-L10}:
 \begin{property}[Formal properties of a quantiles sorting result]\label{prop:9.1}
@@ -289,7 +289,7 @@ def relation(self,x,y):
         return Max
 \end{lstlisting}
 
-In Listing~\vref{list:9.8} Lines~\ref{line:9.8.9}-\ref{line:9.8.10}, all reflexive situations are set to the \emph{indeterminate} value. When two decision alternatives belong to a same component --quantile equivalence class-- we access the relation attribute of the corresponding outranking sub-digraph (Lines~\ref{line:9.8.13}-\ref{line:9.8.14}). Otherwise we just check the respective ranks of the components.
+In Listing~\vref{list:9.8} Lines~\ref{line:9.8.9}--\ref{line:9.8.10}, all reflexive situations are set to the \emph{indeterminate} value. When two decision alternatives belong to a same component --quantile equivalence class-- we access the relation attribute of the corresponding outranking sub-digraph (Lines~\ref{line:9.8.13}--\ref{line:9.8.14}). Otherwise we just check the respective ranks of the components.
 
 \section{Ranking pre-ranked sparse outranking digraphs}
 \label{sec:9.4}

@@ -73,7 +73,7 @@ The \texttt{Digraph} class provides some generic \texttt{show...()} methods for 
      '7': in => {'5','6','3'}, out => {'5'}
 \end{lstlisting}   
 
-Positive characteristic values indicate the presence of an arc whereas negative ones indicate their absence. $0.0$ values indicate an indeterminate situation: there may be or not be an arc (see List.~\vref{list:2.2} Lines~\ref{line:2.2.5}-\ref{line:2.2.11}). Mind that some \texttt{Digraph} class methods will ignore the \emph{reflexive} links by considering that they are \emph{indeterminate}, i.e. the characteristic value $r(x\,S\,x)$ for all action $x$ is set to the \emph{median}, i.e. \emph{indeterminate} value $0.0$ in this case \citep{BIS-2004a}.
+Positive characteristic values indicate the presence of an arc whereas negative ones indicate their absence. $0.0$ values indicate an indeterminate situation: there may be or not be an arc (see List.~\vref{list:2.2} Lines~\ref{line:2.2.5}--\ref{line:2.2.11}). Mind that some \texttt{Digraph} class methods will ignore the \emph{reflexive} links by considering that they are \emph{indeterminate}, i.e. the characteristic value $r(x\,S\,x)$ for all action $x$ is set to the \emph{median}, i.e. \emph{indeterminate} value $0.0$ in this case \citep{BIS-2004a}.
 
 \section{Graphviz drawings}
 \label{sec:2.2}
@@ -436,7 +436,7 @@ which set all pairwise characteristic values respectively to the \emph{maximum},
     '4': in => set(), out => set() §\label{line:2.11.51}§
 \end{lstlisting}
 
-Mind the subtle difference between the neighbourhoods of an \emph{empty} and the neighbourhoods of an \emph{indeterminate} \texttt{Digraph} instance. In the first kind, the neighbourhoods are known to be completely \emph{empty}  (see List.~\vref{list:2.11} Lines~\ref{line:2.11.22}-\ref{line:2.11.27}) whereas, in the latter, \emph{nothing is known} about the actual neighbourhoods of the nodes  (see Lines~\ref{line:2.11.46}-\ref{line:2.11.51}). These two cases illustrate why in the case of \emph{bipolar-valued} digraphs, we may sometimes need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
+Mind the subtle difference between the neighbourhoods of an \emph{empty} and the neighbourhoods of an \emph{indeterminate} \texttt{Digraph} instance. In the first kind, the neighbourhoods are known to be completely \emph{empty}  (see List.~\vref{list:2.11} Lines~\ref{line:2.11.22}--\ref{line:2.11.27}) whereas, in the latter, \emph{nothing is known} about the actual neighbourhoods of the nodes  (see Lines~\ref{line:2.11.46}--\ref{line:2.11.51}). These two cases illustrate why in the case of \emph{bipolar-valued} digraphs, we may sometimes need both a \texttt{gamma} \textbf{and} a \texttt{notGamma} attribute.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

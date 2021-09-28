@@ -236,7 +236,7 @@ dot -Grankdir=TB -Tpng fusionResult.dot\
 \label{fig:14.5}       % Give a unique label
 \end{figure}
 
-The fusion of the three rating-by-ranking results is shown in Fig.~\vref{fig:14.5} where we see that they diverge solely in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}. In Listing~\vref{list:14.4} Lines~\ref{line:14.4.12}-\ref{line:14.4.14}, one may more precisely notice that the \Kemeny and \Copeland rules rate \texttt{U3} in the first quintile ($[0.00- 0.20[$), whereas the \NetFlows rule puts \texttt{U3} together with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$). And, the \Kemeny rule inverts the position of \texttt{U2} and \texttt{U4}.
+The fusion of the three rating-by-ranking results is shown in Fig.~\vref{fig:14.5} where we see that they diverge solely in their rating-by-ranking of Universities \texttt{U2}, \texttt{U3} and \texttt{U4}. In Listing~\vref{list:14.4} Lines~\ref{line:14.4.12}--\ref{line:14.4.14}, one may more precisely notice that the \Kemeny and \Copeland rules rate \texttt{U3} in the first quintile ($[0.00- 0.20[$), whereas the \NetFlows rule puts \texttt{U3} together with \texttt{U1}, \texttt{U2} and \texttt{U4} into the second quintile ($[0.20- 0.40[$). And, the \Kemeny rule inverts the position of \texttt{U2} and \texttt{U4}.
 
 In Listing~\vref{list:14.5}, the \texttt{showRankingConsensusQuality()} method\index{showRankingConsensusQuality@\texttt{showRankingConsensusQua\-lity()}} reveals finally how fairly \Kemeny and \Copeland rules actually balance the fifteen academic subjects. 
 \begin{lstlisting}[caption={Checking the consensus quality of the \Kemeny ranking},label=list:14.5,basicstyle=\ttfamily\scriptsize]

@@ -106,14 +106,14 @@ For easing the editing of a new multiple-criteria performance tableau, we provid
    ####################
 \end{lstlisting}
 
-The template file, shown in Listing~\vref{list:5.1}, contains first the instructions to import the required standard Python \texttt{Decimal} and \texttt{OrderedDict} classes (see Lines~\ref{line:5.1.7}-\ref{line:5.1.8}). Four main sections are following: the potential decision \emph{actions}, the decision \emph{objectives}, the performance \emph{criteria}, and finally the performance \emph{evaluations}.  
+The template file, shown in Listing~\vref{list:5.1}, contains first the instructions to import the required standard Python \texttt{Decimal} and \texttt{OrderedDict} classes (see Lines~\ref{line:5.1.7}--\ref{line:5.1.8}). Four main sections are following: the potential decision \emph{actions}, the decision \emph{objectives}, the performance \emph{criteria}, and finally the performance \emph{evaluations}.  
 
 \section{Editing the decision alternatives}
 \label{sec:5.2}
 
 Decision alternatives are stored in attribute \texttt{actions} under the \texttt{OrderedDict} format. The \texttt{OrderedDict} object keeps this initial order when iterating over the decision alternatives \footnote{See the \href{https://docs.python.org/3/library/collections.html}{\texttt{OrderedDict} description in the Python documentation \citep{python}}.}.
 
-Required attributes of each decision alternative, besides the object identifier\footnote{Mind that \emph{graphviz} drawings require node identifier strings without any special characters like `\_` or `/`.},  are: \texttt{shortName}, \texttt{name} and \texttt{comment} (see Lines~\ref{line:5.1.15}-\ref{line:5.1.17} in List.~\vref{list:5.1}). The \texttt{shortName} attribute is essentially used when showing the performance tableau or the performance heatmap in a browser view.
+Required attributes of each decision alternative, besides the object identifier\footnote{Mind that \emph{graphviz} drawings require node identifier strings without any special characters like `\_` or `/`.},  are: \texttt{shortName}, \texttt{name} and \texttt{comment} (see Lines~\ref{line:5.1.15}--\ref{line:5.1.17} in List.~\vref{list:5.1}). The \texttt{shortName} attribute is essentially used when showing the performance tableau or the performance heatmap in a browser view.
 
 The random performance tableau models, introduced in Chap.~\ref{sec:6}, use the \texttt{actions} attribute for storing special features of the decision alternatives. The \emph{Cost-Benefit} model, for instance, uses a \texttt{type} attribute for distinguishing between \emph{advantageous}, \emph{neutral} and \emph{cheap} alternatives (see Sect.~\ref{sec:6.3}). The \emph{3-Objectives} model keeps a detailed record of the performance profile per decision objective and the corresponding random generators per performance criteria as shown in Listing~\vref{list:5.2}.
 \begin{lstlisting}[caption={Example of decision alternative description},label=list:5.2]
@@ -147,7 +147,7 @@ The second section of the template file concerns the decision \emph{objectives}.
 \section{Editing the decision objectives}
 \label{sec:5.3}
 
-The minimal required attributes of the ordered decision \emph{objectives} dictionary, besides the individual objective identifiers, are \texttt{name}, \texttt{comment}, \texttt{criteria}: the list of significant performance criteria, and \texttt{weight}: the importance of the decision objective. The latter attribute contains the sum of the \emph{significance} weights of the objective's criteria list (see Lines~\ref{line:5.1.27}-\ref{line:5.1.33} in List.~\vref{list:5.1}). 
+The minimal required attributes of the ordered decision \emph{objectives} dictionary, besides the individual objective identifiers, are \texttt{name}, \texttt{comment}, \texttt{criteria}: the list of significant performance criteria, and \texttt{weight}: the importance of the decision objective. The latter attribute contains the sum of the \emph{significance} weights of the objective's criteria list (see Lines~\ref{line:5.1.27}--\ref{line:5.1.33} in List.~\vref{list:5.1}). 
 
 The \texttt{objectives} attribute is methodologically useful for specifying the performance criteria significance in building decision recommendations. Mostly, we assume indeed that decision objectives are all equally important and the performance criteria are equi-significant per objective. This is, for instance, the default setting in the random \emph{3-Objectives} performance tableau model.
 \begin{lstlisting}[caption={Example of decision objectives' description},label=list:5.3]
@@ -208,7 +208,7 @@ In our bipolar-valued outranking approach, all performance criteria implement \e
   \item \emph{Non redundancy}: Each performance criterion is only \emph{significant} for a \emph{single} decision objective.
 \end{enumerate}
 
-For taking into account any, usually \emph{unavoidable}, \emph{imprecision} of the performance evaluation procedures, we may specify three performance \emph{discrimination thresholds}: an \emph{indifference} (\texttt{ind}), a \emph{preference} (\texttt{pref}) and a \emph{considerable performance difference} (\texttt{veto}) threshold (see List.~\vref{list:5.4} Lines~\ref{line:5.4.10}-\ref{line:5.4.12}). The left decimal number of a threshold description tuple indicates a \emph{constant part}, whereas the right decimal number indicates a \emph{proportional} part.
+For taking into account any, usually \emph{unavoidable}, \emph{imprecision} of the performance evaluation procedures, we may specify three performance \emph{discrimination thresholds}: an \emph{indifference} (\texttt{ind}), a \emph{preference} (\texttt{pref}) and a \emph{considerable performance difference} (\texttt{veto}) threshold (see List.~\vref{list:5.4} Lines~\ref{line:5.4.10}--\ref{line:5.4.12}). The left decimal number of a threshold description tuple indicates a \emph{constant part}, whereas the right decimal number indicates a \emph{proportional} part.
 
 On the template performance criterion \texttt{g1}, shown in Listing~\vref{list:5.4}, we observe for instance an evaluation scale from $0.0$ to $100.0$ with a constant \emph{indifference} threshold of $2.5$, a constant \emph{preference} threshold of $5.0$, and a constant \emph{considerable performance difference} threshold of $60.0$. The latter threshold  will trigger, the case given, a \emph{polarisation} of the outranking statement \citep{BIS-2013}.
 
@@ -369,7 +369,7 @@ One may notice in this outranking relation table above that decision alternative
 \label{fig:5.1}       % Give a unique label
 \end{figure}
 
-In Fig.~\vref{fig:5.1}, alternatives \emph{action3} (\texttt{a3} ) and \emph{action4} (\texttt{a4}) appear actually \emph{incomparable}. In Listing~\vref{list:5.7}, their pairwise outranking characteristics show indeed the \emph{indeterminate} value $0.00$ (Lines~\ref{line:5.7.7}-\ref{line:5.7.8}).
+In Fig.~\vref{fig:5.1}, alternatives \emph{action3} (\texttt{a3} ) and \emph{action4} (\texttt{a4}) appear actually \emph{incomparable}. In Listing~\vref{list:5.7}, their pairwise outranking characteristics show indeed the \emph{indeterminate} value $0.00$ (Lines~\ref{line:5.7.7}--\ref{line:5.7.8}).
 
 Checking their pairwise comparison may be done with the \texttt{showPairwiseCompari\-son()} method\index{showPairwiseComparison@\texttt{showPairwiseComparison()}}:
 \begin{lstlisting}

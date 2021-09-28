@@ -155,7 +155,7 @@ The \texttt{showCriteria()}\index{showCriteria@\texttt{showCriteria()}} method e
    ...
 \end{lstlisting}
 
-On the \emph{Costs} criterion, $9.5\%$ of the performance differences are considered insignificant and $14.3\%$ below the preference discrimination threshold (see Lines~\ref{line:4.2.7}-\ref{line:4.2.8} in List.~\vref{list:4.2}). On the qualitative \emph{Comfort} criterion, we observe again $9.5\%$ of insignificant performance differences (line~\ref{line:4.2.13}). Due to the imprecision in the subjective evaluations, we notice here $28.6\%$ of performance differences below the preference discrimination threshold (Line~\ref{line:4.2.14}). Furthermore, $100.0 - 90.5 = 9.5\%$ of the performance differences are judged \emph{considerably large} (Line~\ref{line:4.2.15}) and will trigger hence a polarisation of the concerned outranking situations \citep{BIS-2013}. Same information is available for all the other criteria. 
+On the \emph{Costs} criterion, $9.5\%$ of the performance differences are considered insignificant and $14.3\%$ below the preference discrimination threshold (see Lines~\ref{line:4.2.7}--\ref{line:4.2.8} in List.~\vref{list:4.2}). On the qualitative \emph{Comfort} criterion, we observe again $9.5\%$ of insignificant performance differences (line~\ref{line:4.2.13}). Due to the imprecision in the subjective evaluations, we notice here $28.6\%$ of performance differences below the preference discrimination threshold (Line~\ref{line:4.2.14}). Furthermore, $100.0 - 90.5 = 9.5\%$ of the performance differences are judged \emph{considerably large} (Line~\ref{line:4.2.15}) and will trigger hence a polarisation of the concerned outranking situations \citep{BIS-2013}. Same information is available for all the other criteria. 
  
 A colourful comparison of all the evaluations is shown in Fig.~\vref{fig:4.1} by the \emph{heatmap}\index{showHTMLPerformanceHeatmap@\texttt{showHTMLPerformanceHeatmap()}} statistics, illustrating the respective quantile class of each evaluation. As the set of potential alternatives is tiny, we choose here a classification into performance quintiles.
 \begin{lstlisting}
@@ -353,7 +353,7 @@ Yet, we must as well acknowledge in Listing~\vref{list:4.6}, that the cheapest a
 \label{fig:4.3}       % Give a unique label
 \end{figure}
 
-Let us finally notice in Listing~\vref{list:4.4} Line~\ref{line:4.4.18} that both alternatives \texttt{A} and \texttt{F} are reported as potential last choice recommendation. Yet, this last choice recommendation appears to be globally indeterminate (Lines~\ref{line:4.4.25}-\ref{line:4.4.26}). This confirms the \emph{incomparability} status of alternative \texttt{A} (see Fig.~\vref{fig:4.3}).
+Let us finally notice in Listing~\vref{list:4.4} Line~\ref{line:4.4.18} that both alternatives \texttt{A} and \texttt{F} are reported as potential last choice recommendation. Yet, this last choice recommendation appears to be globally indeterminate (Lines~\ref{line:4.4.25}--\ref{line:4.4.26}). This confirms the \emph{incomparability} status of alternative \texttt{A} (see Fig.~\vref{fig:4.3}).
 \begin{lstlisting}
 >>> bodcd.exportGraphViz(fileName='bestOfficeChoice',\
 ...                    firstChoice=['C','D'],\

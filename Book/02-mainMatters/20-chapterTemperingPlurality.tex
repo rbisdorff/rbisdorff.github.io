@@ -63,7 +63,7 @@ To compute multipartisan social choices we need to, first, convert a given linea
     c02 : 00.90%  | c02 : 00.21%  | c02 : 00.51% §\label{line:20.1.end}§
 \end{lstlisting}
 
-In this example (see List.~\vref{list:20.1} Lines~\ref{line:20.1.20}-\ref{line:20.1.end}), we observe 460 Party-1 supporters ($46\%$), 436 Party-2 supporters ($43.6\%$) and 104 other voters ($10.4\%$). Favorite candidates of Party-1 supporters, with more than $10\%$, are \texttt{c06} ($19.91\%$), \texttt{c07} ($14.27\%$) and \texttt{c03} ($10.02\%$). Whereas for Party-2 supporters, favorite candidates are \texttt{c11} ($22.94\%$), followed by \texttt{c08} ($15.65\%$), \texttt{c04} ($15.07\%$) and \texttt{c06} ($13.4\%$).
+In this example (see List.~\vref{list:20.1} Lines~\ref{line:20.1.20}--\ref{line:20.1.end}), we observe 460 Party-1 supporters ($46\%$), 436 Party-2 supporters ($43.6\%$) and 104 other voters ($10.4\%$). Favorite candidates of Party-1 supporters, with more than $10\%$, are \texttt{c06} ($19.91\%$), \texttt{c07} ($14.27\%$) and \texttt{c03} ($10.02\%$). Whereas for Party-2 supporters, favorite candidates are \texttt{c11} ($22.94\%$), followed by \texttt{c08} ($15.65\%$), \texttt{c04} ($15.07\%$) and \texttt{c06} ($13.4\%$).
 
 We can convert this linear voting profile into a \texttt{PerformanceTableau} object where each political party matches a decision objective.
 \begin{lstlisting}[caption={Converting a voting profile into a performance tableau},label=list:20.2]
@@ -169,7 +169,7 @@ When restricting now, in a secondary election stage, the set of eligible candida
   ['c06', 'c11', 'c13', 'c15']
 \end{lstlisting}
 
-Candidate \texttt{c06} appears clearly to be the winner of this election. Notice by the way that the restricted pairwise outranking relation, shown in Listing~\ref{list:20.5} Lines~\ref{line:20.5.8}-\ref{line:20.5.11}, models a linear ordering of the preselected candidates.
+Candidate \texttt{c06} appears clearly to be the winner of this election. Notice by the way that the restricted pairwise outranking relation, shown in Listing~\ref{list:20.5} Lines~\ref{line:20.5.8}--\ref{line:20.5.11}, models a linear ordering of the preselected candidates.
 
 We can eventually check the quality of this best choice by noticing that Candidate \texttt{c06} represents indeed the \emph{simple majority}, the \emph{instant runoff}, the \Borda, as well as the \Condorcet winner of the initially given linear voting profile \texttt{lvp}.
 \begin{lstlisting}
@@ -189,7 +189,7 @@ In our example voting profile here, the multipartisan primary selection stage ap
 
 However, in a very \emph{divisive} two major parties system, like in the US, where preferences of the supporters of one major party are opposite to the preferences of the supporters of the other major party, the multipartisan outranking digraph will become nearly indeterminate.
 
-In Listing~\vref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag (see Lines~\ref{line:20.6.4} and \ref{line:20.6.14}-\ref{line:20.6.20}). When now converting the voting profile into a performance tableau (Lines 20-21), we can compute the corresponding unopposed outranking digraph.
+In Listing~\vref{list:20.6} below we generate such a divisive kind of linear voting profile with the help of the \texttt{DivisivePolitics} flag (see Lines~\ref{line:20.6.4} and \ref{line:20.6.14}--\ref{line:20.6.20}). When now converting the voting profile into a performance tableau (Lines 20-21), we can compute the corresponding unopposed outranking digraph.
 \begin{lstlisting}[caption={A divisive two-party example of a random linear voting profile},label=list:20.6]
 >>> from votingProfiles import RandomLinearVotingProfile		     
 >>> lvp = RandomLinearVotingProfile(\
@@ -228,7 +228,7 @@ In Listing~\vref{list:20.6} below we generate such a divisive kind of linear vot
    Valuation domain    : [-1.00;1.00]
 \end{lstlisting}
 
-With an oppositeness degree of $100.0\%$ (see List.~\vref{list:20.6} Lines~\ref{line:20.6.32}-\ref{line:20.6.33}), the preferential disagreement between the political parties is complete, and the unopposed outranking digraph \texttt{uodg} becomes completely indeterminate as shown in the relation table below.
+With an oppositeness degree of $100.0\%$ (see List.~\vref{list:20.6} Lines~\ref{line:20.6.32}--\ref{line:20.6.33}), the preferential disagreement between the political parties is complete, and the unopposed outranking digraph \texttt{uodg} becomes completely indeterminate as shown in the relation table below.
 \begin{lstlisting}
 >>> uodg.showRelationTable(ReflexiveTerms=False)
   * ---- Relation Table -----
@@ -623,7 +623,7 @@ Encouraged by this positive result, we may furthermore compute a \Rubis best cho
          'c05': 0.20, 'c03': 0.20, 'c12': 0.06, }
 \end{lstlisting}
 
-The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --first as well as last-- choice recommendation which trivially retains all fifteen candidates (see List.~\vref{list:20.14} Lines~\ref{line:20.14.6}-\ref{line:20.14.8} above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate \texttt{c12} the most credible one with a $72\%$ majority of voters' support (see Line~\ref{line:20.14.15}, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate \texttt{c03} ($67\%$) and Candidate \texttt{c04} ($65\%$). Similarly, Candidates \texttt{c13} and \texttt{c06} represent the most credible losers with a $68\%$ majority voters' support (Line~\ref{line:20.14.30}).
+The strict outranking digraph $(\sim (-odg))$ being actually $empty$, we obtain a unique \emph{ambiguous} --first as well as last-- choice recommendation which trivially retains all fifteen candidates (see List.~\vref{list:20.14} Lines~\ref{line:20.14.6}--\ref{line:20.14.8} above). Yet, the bipolar-valued best choice membership characteristic vector reveals that, among all the fifteen potential winners, it is indeed Candidate \texttt{c12} the most credible one with a $72\%$ majority of voters' support (see Line~\ref{line:20.14.15}, $(0.44 + 1.0)/2\;=\; 0.72$); followed by Candidate \texttt{c03} ($67\%$) and Candidate \texttt{c04} ($65\%$). Similarly, Candidates \texttt{c13} and \texttt{c06} represent the most credible losers with a $68\%$ majority voters' support (Line~\ref{line:20.14.30}).
 
 We observe here empirically that \emph{evaluative} voting systems, using three-valued ordinal performance scales, match closely corresponding approval-disapproval voting systems. The latter systems model, however, more faithfully the very preferential information that is expressed with \emph{approved}, \emph{disapproved} and \emph{ignored} statements. The corresponding evaluation on a three-level scale, being value (numbers) based, cannot express the fact that in approval-disapproval voting system there is no preferential information given concerning the pairwise comparison of all approved, respectively disapproved or ignored candidates.
 
