@@ -49,7 +49,8 @@ html, body, #content
 .contentText
 {
 	position : absolute;
-	margin-top : 95px;
+/*	margin-top : 95px; */
+	margin-top : 0.5em;
 	margin-left : 12em;
 	padding : 1em;
 	/*margin-right : 10%;*/
