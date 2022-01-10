@@ -1,0 +1,175 @@
+% SpringerBWF: 520078_1_En,  978-3-030-90927-7, Bisdorff
+% Algorithmic Decision Making with Python Resources
+% Review of proofs RB January 2022
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{soul}
+\usepackage{xcolor}
+
+\makeatletter
+\usepackage{babel}
+\makeatother
+\begin{document}
+
+\author{R. Bisdorff}
+
+\title{Review of proofs 520078-1-En}
+
+\date{January 2022}
+
+\maketitle
+\setstcolor{red}
+
+\begin{quotation} \noindent Thank you very much for inspecting carefully the submitted manuscript. All AQs appear indeed justified and I propose below the necessary corrective actions. I have inserted some suggestions for minor corrections from my side. 
+\end{quotation}
+
+\section*{Answers to questions and update proposals}
+\begin{itemize}
+%-------
+\item [TitlePages] Line 31: \emph{Please remove the reference to the University of Luxembourg as I am retired by now and no more a member of the University staff:}
+  
+  Raymond Bisdorff\hfill\\
+  Luxembourg, EU
+
+ \emph{ Similarly, please change as follows the} Corresponding Author \emph{information in all the metada that will be visualized online:}
+
+ \begin{tabular}{l l l}
+   Family Name  & Bisdorff\\
+   Particle     & \\
+   Given Name & Raymond\\
+   Suffix     & \\
+   Organisation & \\
+   Address  & Luxembourg, EU\\
+   Email    & raymond.bisdorff\@@uni.lu\\
+ \end{tabular}
+ % --------
+\item [Preface AQ1] \emph{Drop the entire sentence:} \st{The required backward comptibility ... programming technique replaces.}
+\item [Preface AQ2] \emph{Please change to:} The purpose of this book is to present in a single monograph the methodological and scientific contributions the author made over the past two decades to the multiple-criteria decision aiding field and that are either left unpublished or solely published in very specialised media difficult to access.
+%---------
+\item [Intro AQ3] Sentence OK
+\item [Intro AQ4] \emph{Please change to:} We first notice its hybrid type: 
+it is conjointly a multiple-criteria performance tableau and a bipolar-valued relation modelling outranking situations between the given performance records. Pairwise comparisons of decision alternatives and the recoding of the digraph characteristic valuation are then illustrated. 
+\item [Intro AQ5] \emph{Please change to:} ... may deliver first, respectively last, choice recommendations.
+% -------
+\item [Figs List] Pages xxv - xxxii: \emph{Please list only the short versions (in square bracket) of the figures' captions}.
+\item [Lists] Pages xxv - xl1: \emph{Including the long lists of figures and listings in the front matters of the book does not IMO seam suitable. This makes obvious sense in open access front matters for book promotion, yet appear cumbersome in the printed version.}
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap1 AQ1] OK \emph{for changing} List.\emph{ to} Listing \emph{all over the pages}.
+\item [Chap1 AQ2] OK
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap2 AQ1] OK
+
+  % -------
+\vspace{\baselineskip}
+\item [Chap3 AQ1] \emph{Please change to:}  From this property follows that a bipolar-valued outranking digraph verifies the \emph{coduality principle}\index{coduality principle}: the \emph{dual} (negation) of the \emph{converse} (transposition) of the outranking relation $(x \succsim y)$ corresponds to its asymmetric \emph{strict outranking} part $(x \succnsim y)$.
+\item [Chap3 AQ2] OK
+\item [Chap3 AQ3] OK
+
+  % --------
+\vspace{\baselineskip}
+\item [Chap4 AQ1] OK
+\item [Fig4.5 P53] \emph{I would prefer the caption set left of figure 4.5 as initially proposed in the manuscript.}   
+
+  % -------
+\vspace{\baselineskip}
+\item [Chap5 AQ1] \emph{Please revert P59 L189 to:} ..., of both societal criteria is set to 24, ...
+\item [Chap5 AQ2] OK
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap6 AQ1] \emph{Please change to:} Based on their grades obtained in a number of examinations, deciding which students validate or not their academic studies is the genuine decision practice of universities and academies. 
+\item [Chap6 AQ2] OK
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap12 AQ1] \emph{Please move citation} (Fig. 12.1) \emph{in Line 16 on page} 151 \emph{to Line} 19 \emph{on page} 152: Alice ... wants to start her further studies thereafter (Fig. 12.1). She ...
+\item [Chap12 P152] \emph{Please move heading} 12.1 \emph{to the beginning of the chapter after the abstract}.
+
+  % ----
+\vspace{\baselineskip}
+\item [Chap13 AQ1] \emph{Listing 13.1 caption} = \{Performance tableau of the 75 first-ranked academic Institutions\} 
+\item [Chap13 AQ1] \emph{Please change to:} Showing many incomparabilities and indifferences, not being transitive and containing many robust outranking circuits make that no ranking algorithm, applied to digraph \texttt{rdg}, does exist that would produce a unique optimal linear ranking result.
+\item [Chap13 AQ3] OK
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap14 AQ1] \emph{Please change to:} Let us conclude this hypothetical rating case study, by saying that we prefer this latter rating-by-sorting approach. It is perhaps providing a less preciser rating result, due the case given, to missing and contradictory performance data. Yet, the rating-by-sorting algorithm is better grounded in a powerful bipolar-valued logic and epistemic framework.
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap15 AQ1] \emph{Please drop heading} \st{15.1 Introduction}.  
+\item [Chap15 AQ2] OK
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap16 AQ1] \emph{Please change to:} Listing 16.9 Line 2 illustrates first how to compute, with the \texttt{NetFlowsOrder} class from the \texttt{linearOrders} module, the global \textsc{Netflows} ranking \texttt{nf}, as shown in the ordered heatmap of Fig. 16.2 on page 213. In Lines 8-27 we compute subsequently the bipolar-valued relational equivalence index between each one of the individual critic’s star-ratings and the \texttt{nf} ranking. 
+\item [Chap16 AQ2] OK
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap17 AQ1] OK 
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap18 AQ1] \emph{Sentence is correct as it is}. 
+\item [Chap18 AQ2] OK
+\item [Chap18 AQ3] OK
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap19 AQ1] OK 
+\item [Chap19 AQ2] \emph{Please change to:} Let us compare with the \texttt{showPairwiseComparison()} method the multicriteria performance records of alternatives \texttt{p4} and \texttt{p5}.
+\item [Chap19 AQ3] OK 
+\item [Chap19 AQ4] OK 
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap20 P279] \emph{Please drop heading} \st{20.1 Introduction} \emph{and move heading} 20.2 (P280 Line 37) \emph{at the beginning of the chapter after the abstract}
+\item [Chap20 AQ1] OK 
+\item [Chap20 AQ2] OK 
+\item [Chap20 AQ3] OK 
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap21 AQ1] OK \emph{for changinging} 3-coloring \emph{to} 3-colouring on P306 L131, and P307 caption Fig.21.2. \emph{Mind to change also} 2-coloring \emph{to} 2-colouring \emph{in the caption of} Fig. 21.2 \emph{and in Lines} 151 \emph{and} 169 \emph{on page} 307.
+\item [Chap21 AQ2] OK  
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap22 AQ1] OK 
+
+  % ------
+\vspace{\baselineskip}
+\item [Chap23 AQ1] \emph{Please change paragraph to:}
+  
+  Notice however that the following four properties of a given graph \texttt{g}:
+  \begin{enumerate}
+    \item $g$ is a \emph{comparability} graph,
+    \item $-g$ is a comparability graph,
+    \item $g$ is a \emph{triangulated} graph,
+    \item $-g$ is a triangulated graph,
+  \end{enumerate}
+  are all \emph{independent} of one another ...
+
+\item [Chap23 AQ2] OK
+\item [Chap23 P337] Lines 289-311: \emph{Incorrect font family !}
+
+    \emph{Please edit the latex source in} \texttt{23-chapterPerfectGraphs.tex} \emph{file Line} 371 \emph{as follows}:
+  
+  \verb+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]+
+%---------------
+\end{itemize}
+
+% \section{Particular remarks}
+% \begin{enumerate}
+% \item
+% \end{enumerate}
+
+\end{document}
