@@ -12,7 +12,7 @@ In the 2004 \Spiegel survey, more than 80,000 students, by participating, were q
 
 We suppose in this rating case study that five German universities: \texttt{U1}, \texttt{U2}, \texttt{U3}, \texttt{U4} and \texttt{U5} conducted in 2005 a similar survey among their enrolled students which gave the following enrolment quality scores per academic subject:
 \begin{table}[ht]
-\caption{Enrolment quality scores per academic scores}
+\caption{Enrolment quality scores per academic subject}
 \label{tab:14.1}       % Give a unique label
 \begin{center}
   %\begin{small}
@@ -306,7 +306,7 @@ With the help of the bipolar-valued characteristic of the outranking relation $r
 \begin{equation}\label{eq:14.1}
 r(x \in \mathbf{q}_k) \; = \; \min \big[ r\big(x \succsim \mathbf{q}(p_{k-1})\big),\, r\big(x \not\succsim \mathbf{q}(p_{k})\big)\big]
 \end{equation}
-where $k = 1,...5$ and $(p_{k})$ denote the respective quintile proportions: $0.20$, $0.40$, $0.60$, $0.80$ and $1.00$. As bipolar-valued outranking digraphs verify the coduality principle, $r\big(x \not\succsim \mathbf{q}(p_{k}) \big) = r\big(x precnsim \mathbf{q}(p_{k})$ (see Sect.~\ref{sec:9.2}).
+where $k = 1,...5$ and $(p_{k})$ denote the respective quintile proportions: $0.20$, $0.40$, $0.60$, $0.80$ and $1.00$. As bipolar-valued outranking digraphs verify the coduality principle, $r\big(x \not\succsim \mathbf{q}(p_{k}) \big) = r\big(x \precnsim \mathbf{q}(p_{k})$ (see Sect.~\ref{sec:9.2}).
 
 The \texttt{showSortingCharacteristics()} method\index{showSortingCharacteristics@\texttt{showSortingCharacteristics()}} gives a precise look in Listing~\vref{list:14.7} on these quintiles sorting characteristics.
 \begin{lstlisting}[caption={Showing quantiles sorting characteristics},label=list:14.7,basicstyle=\ttfamily\scriptsize]
