@@ -4,6 +4,7 @@
     | Pxiv L35: for 'become separate may deliver' read 'become separate and may deliver'
     | P39 L3: for 'decision alternative' read 'decision alternatives'
     | P91 L3: for 'BORDA ranked candidate *c1*' read 'BORDA ranked candidate *c4*'
+    | P168 L5: for 'each one of performance criteria' read 'each one of the performance criteria'
     | P182 L2: for 'on the preceding page' read 'above'
     | P188 Tab.14.1 caption: for 'per academic scores' read 'per academic subject'
     | P188 last Line: for 'in view the results' read 'in view of the results'
